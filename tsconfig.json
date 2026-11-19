@@ -13,7 +13,8 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"],
+    "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src", "scripts"]
 }

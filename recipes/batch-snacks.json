@@ -1,0 +1,281 @@
+[
+  {
+    "id": "honey-nut-granola", "title": "Honey nut granola",
+    "description": "Crunchy oven-baked granola with oats, nuts, seeds and honey. A big jar lasts two weeks.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 12, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "oats", "quantity": 300, "unit": "g" }, { "id": "almonds", "quantity": 80, "unit": "g" },
+      { "id": "walnuts", "quantity": 50, "unit": "g" }, { "id": "pumpkin-seeds", "quantity": 50, "unit": "g" },
+      { "id": "sunflower-seeds", "quantity": 40, "unit": "g" }, { "id": "honey", "quantity": 100, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" },
+      { "id": "dried-cranberries", "quantity": 60, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 160 °C. Warm the honey and oil together.", "Mix with the oats, chopped nuts, seeds and cinnamon and spread on a lined tray.", "Bake 25 minutes, stirring halfway, until golden. Stir in the cranberries and cool completely before putting in a jar."],
+    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray", "big jar"], "illustration": "🫙"
+  },
+  {
+    "id": "oat-granola-bars", "title": "Chewy oat granola bars",
+    "description": "No-fuss bars of oats, peanut butter, honey, raisins and seeds. Cut into 12 and wrap for lunch boxes.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "oats", "quantity": 250, "unit": "g" }, { "id": "peanut-butter", "quantity": 120, "unit": "g" },
+      { "id": "honey", "quantity": 100, "unit": "g" }, { "id": "butter", "quantity": 40, "unit": "g" },
+      { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "sunflower-seeds", "quantity": 40, "unit": "g" },
+      { "id": "chocolate-chips", "quantity": 40, "unit": "g", "optional": true }
+    ],
+    "steps": ["Heat the oven to 175 °C and line a 20 x 20 cm tin.", "Melt the peanut butter, honey and butter together. Stir in the oats, raisins and seeds (and chocolate when cool).", "Press firmly into the tin and bake 18 to 20 minutes. Cool fully, then cut into 12 bars."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🍫"
+  },
+  {
+    "id": "date-cocoa-energy-balls", "title": "Date and cocoa energy balls",
+    "description": "Blended dates, nuts, oats and cocoa rolled into bite-size balls. No baking, no added sugar.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "dates", "quantity": 200, "unit": "g" }, { "id": "walnuts", "quantity": 80, "unit": "g" },
+      { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "cocoa", "quantity": 2, "unit": "tbsp" },
+      { "id": "coconut-flakes", "quantity": 30, "unit": "g" }
+    ],
+    "steps": ["Soak the dates in hot water for 5 minutes if they are dry, then drain.", "Blend the dates, walnuts, oats and cocoa into a sticky dough.", "Roll into 20 balls, roll in coconut and chill. Two balls make a portion."],
+    "tags": ["batch", "vegan", "vegetarian", "no-cook", "freezer-friendly"], "keepsDays": 10, "equipment": ["food processor"], "illustration": "🟤"
+  },
+  {
+    "id": "peanut-butter-energy-balls", "title": "Peanut butter oat bites",
+    "description": "Oats, peanut butter, honey, chia and a few chocolate chips rolled into balls. Kids love making them.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "oats", "quantity": 120, "unit": "g" }, { "id": "peanut-butter", "quantity": 120, "unit": "g" },
+      { "id": "honey", "quantity": 60, "unit": "g" }, { "id": "chia", "quantity": 20, "unit": "g" },
+      { "id": "chocolate-chips", "quantity": 40, "unit": "g" }
+    ],
+    "steps": ["Mix everything in a bowl until it holds together.", "Chill 20 minutes, then roll into 20 balls.", "Keep in a box in the fridge. Two balls make a portion."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "no-cook", "freezer-friendly"], "keepsDays": 7, "equipment": ["bowl"], "illustration": "🥜"
+  },
+  {
+    "id": "banana-oat-muffins", "title": "Banana oat muffins",
+    "description": "Soft muffins sweetened mostly with ripe bananas, with oats and a little honey. 12 muffins.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "banana", "quantity": 3, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "yogurt", "quantity": 150, "unit": "g" }, { "id": "honey", "quantity": 50, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 60, "unit": "ml" }, { "id": "oats", "quantity": 100, "unit": "g" },
+      { "id": "flour", "quantity": 150, "unit": "g" }, { "id": "baking-powder", "quantity": 10, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Heat the oven to 180 °C and line a 12-hole muffin tin.", "Mash the bananas and whisk in the eggs, yogurt, honey and oil.", "Fold in the oats, flour, baking powder and cinnamon. Fill the cases and bake 20 to 22 minutes."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🧁"
+  },
+  {
+    "id": "berry-yogurt-muffins", "title": "Berry yogurt muffins",
+    "description": "Light muffins with yogurt and frozen berries straight from the freezer. 12 muffins.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "flour", "quantity": 250, "unit": "g" }, { "id": "sugar", "quantity": 100, "unit": "g" },
+      { "id": "baking-powder", "quantity": 12, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }, { "id": "sunflower-oil", "quantity": 80, "unit": "ml" },
+      { "id": "frozen-berries", "quantity": 200, "unit": "g" }, { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "zest" }
+    ],
+    "steps": ["Heat the oven to 190 °C and line a muffin tin.", "Mix the dry ingredients in one bowl and the eggs, yogurt, oil and zest in another.", "Stir together briefly, fold in the frozen berries, fill the cases and bake 20 to 22 minutes."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🫐"
+  },
+  {
+    "id": "homemade-hummus", "title": "Homemade hummus with veg sticks",
+    "description": "Smooth chickpea hummus with tahini, lemon and garlic, with carrot, cucumber and pepper sticks.",
+    "mealTypes": ["snack"], "cuisine": "middle-eastern", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "chickpeas", "quantity": 800, "unit": "g" }, { "id": "tahini", "quantity": 60, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "olive-oil", "quantity": 3, "unit": "tbsp" }, { "id": "cumin", "quantity": 0.5, "unit": "tsp" },
+      { "id": "carrot", "quantity": 3, "unit": "piece" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "bell-pepper", "quantity": 1, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": ["Drain the chickpeas, keeping a little of the liquid.", "Blend with the tahini, lemon juice, garlic, cumin, salt, 2 tbsp oil and 3 to 4 tbsp liquid until very smooth.", "Drizzle with the rest of the oil and serve with vegetable sticks. Keep in a closed box in the fridge."],
+    "tags": ["batch", "vegan", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🥕"
+  },
+  {
+    "id": "beetroot-hummus", "title": "Beetroot hummus",
+    "description": "Bright pink hummus with cooked beetroot, chickpeas and tahini. Great on crackers.",
+    "mealTypes": ["snack"], "cuisine": "middle-eastern", "servings": 6, "prepMinutes": 10, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "beetroot", "quantity": 250, "unit": "g", "note": "cooked" }, { "id": "chickpeas", "quantity": 400, "unit": "g" },
+      { "id": "tahini", "quantity": 40, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "crackers", "quantity": 150, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": ["Blend the beetroot, drained chickpeas, tahini, lemon juice, garlic, salt and oil until smooth.", "Taste and add more lemon or salt.", "Serve with crackers. Keeps 5 days in the fridge."],
+    "tags": ["batch", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🩷"
+  },
+  {
+    "id": "roasted-chickpeas", "title": "Crunchy roasted chickpeas",
+    "description": "Chickpeas roasted until crisp with smoked paprika and garlic. A salty snack with lots of protein.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 6, "prepMinutes": 5, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "chickpeas", "quantity": 800, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "paprika-powder", "quantity": 1.5, "unit": "tsp" }, { "id": "garlic-powder", "quantity": 0.5, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": ["Heat the oven to 200 °C. Drain the chickpeas and dry them well on a towel.", "Toss with the oil, spices and salt and spread on a tray.", "Roast 30 to 35 minutes, shaking twice, until crunchy. Cool and keep in a jar."],
+    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray"], "illustration": "🫘"
+  },
+  {
+    "id": "overnight-oats-jars", "title": "Overnight oats jars with berries",
+    "description": "Four jars of oats soaked in milk and yogurt with chia and berries, ready to grab all week.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
+      { "id": "yogurt", "quantity": 300, "unit": "g" }, { "id": "chia", "quantity": 30, "unit": "g" },
+      { "id": "honey", "quantity": 2, "unit": "tbsp" }, { "id": "frozen-berries", "quantity": 300, "unit": "g" }
+    ],
+    "steps": ["Divide the oats and chia between 4 jars.", "Mix the milk, yogurt and honey, pour over and stir.", "Top with the frozen berries, close and keep in the fridge. They are ready the next morning."],
+    "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars"], "illustration": "🫙"
+  },
+  {
+    "id": "apple-peanut-overnight-oats", "title": "Apple pie overnight oats",
+    "description": "Overnight oats with grated apple, cinnamon, peanut butter and raisins. Four jars for the week.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },
+      { "id": "kefir", "quantity": 200, "unit": "g" }, { "id": "apple", "quantity": 2, "unit": "piece" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "raisins", "quantity": 40, "unit": "g" },
+      { "id": "peanut-butter", "quantity": 60, "unit": "g" }
+    ],
+    "steps": ["Grate the apples and mix with the oats, cinnamon and raisins.", "Stir in the milk and kefir and divide between 4 jars.", "Top each with a spoon of peanut butter and chill overnight."],
+    "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars", "grater"], "illustration": "🍏"
+  },
+  {
+    "id": "flapjacks", "title": "Golden oat flapjacks",
+    "description": "Buttery, chewy oat squares with honey and a few dried apricots. 16 small pieces.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 16, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "oats", "quantity": 300, "unit": "g" }, { "id": "butter", "quantity": 120, "unit": "g" },
+      { "id": "honey", "quantity": 120, "unit": "g" }, { "id": "sugar", "quantity": 40, "unit": "g" },
+      { "id": "dried-apricots", "quantity": 80, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 170 °C and line a 20 x 20 cm tin.", "Melt the butter, honey and sugar together. Stir in the oats and chopped apricots.", "Press into the tin and bake 22 to 25 minutes until golden. Cut while warm, cool in the tin."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🟨"
+  },
+  {
+    "id": "oat-raisin-cookies", "title": "Oat and raisin cookies",
+    "description": "Chewy cookies with oats, raisins and cinnamon. Makes about 20.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "oats", "quantity": 150, "unit": "g" }, { "id": "flour", "quantity": 120, "unit": "g" },
+      { "id": "butter", "quantity": 100, "unit": "g" }, { "id": "sugar", "quantity": 90, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "raisins", "quantity": 80, "unit": "g" },
+      { "id": "baking-soda", "quantity": 0.5, "unit": "tsp" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Heat the oven to 180 °C. Beat the soft butter and sugar, then the egg.", "Mix in the flour, oats, soda, cinnamon and raisins.", "Put walnut-size balls on lined trays, flatten a little and bake 10 to 12 minutes. Two cookies make a portion."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "2 baking trays"], "illustration": "🍪"
+  },
+  {
+    "id": "ham-cheese-muffins", "title": "Ham and cheese savoury muffins",
+    "description": "Savoury muffins with ham, cheese, spring onion and a little sweetcorn. Great cold in lunch boxes.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "flour", "quantity": 250, "unit": "g" }, { "id": "baking-powder", "quantity": 12, "unit": "g" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "milk", "quantity": 200, "unit": "ml" },
+      { "id": "sunflower-oil", "quantity": 60, "unit": "ml" }, { "id": "ham", "quantity": 120, "unit": "g" },
+      { "id": "hard-cheese", "quantity": 120, "unit": "g" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "sweetcorn", "quantity": 150, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 190 °C and line a muffin tin.", "Mix the flour and baking powder. Whisk the eggs, milk and oil and stir in.", "Fold in the diced ham, grated cheese, spring onion and drained corn. Fill the cases and bake 20 to 22 minutes."],
+    "tags": ["batch", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["oven", "muffin tin"], "illustration": "🧀"
+  },
+  {
+    "id": "tzatziki-veg-sticks", "title": "Tzatziki with vegetable sticks",
+    "description": "Thick garlic and cucumber yogurt dip with carrot, pepper and kohlrabi sticks. Make a big box.",
+    "mealTypes": ["snack"], "cuisine": "greek", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "greek-yogurt", "quantity": 500, "unit": "g" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "dill", "quantity": 1, "unit": "tsp" }, { "id": "carrot", "quantity": 3, "unit": "piece" },
+      { "id": "bell-pepper", "quantity": 1, "unit": "piece" }, { "id": "kohlrabi", "quantity": 1, "unit": "piece" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": ["Grate the cucumber, salt it and squeeze out the water after 5 minutes.", "Mix with the yogurt, crushed garlic, dill and oil.", "Cut the vegetables into sticks and keep them in a box of cold water in the fridge."],
+    "tags": ["batch", "vegetarian", "no-cook", "light", "make-ahead"], "keepsDays": 4, "equipment": ["grater", "boxes"], "illustration": "🥒"
+  },
+  {
+    "id": "trail-mix", "title": "Homemade trail mix",
+    "description": "A jar of mixed nuts, seeds, raisins and a few chocolate drops. Portion into 30 g bags.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "almonds", "quantity": 100, "unit": "g" }, { "id": "walnuts", "quantity": 60, "unit": "g" },
+      { "id": "hazelnuts", "quantity": 60, "unit": "g" }, { "id": "pumpkin-seeds", "quantity": 40, "unit": "g" },
+      { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "chocolate-chips", "quantity": 40, "unit": "g" }
+    ],
+    "steps": ["Toast the nuts and seeds in a dry pan for 4 minutes and cool.", "Mix with the raisins and chocolate and keep in a jar."],
+    "tags": ["batch", "vegetarian", "no-cook"], "keepsDays": 14, "equipment": ["pan", "jar"], "illustration": "🥜"
+  },
+  {
+    "id": "banana-bread", "title": "Banana bread",
+    "description": "Moist loaf made with very ripe bananas, a little sugar and walnuts. Cut into 10 slices.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 55,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "banana", "quantity": 4, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "butter", "quantity": 80, "unit": "g" }, { "id": "sugar", "quantity": 80, "unit": "g" },
+      { "id": "flour", "quantity": 220, "unit": "g" }, { "id": "baking-soda", "quantity": 1, "unit": "tsp" },
+      { "id": "walnuts", "quantity": 50, "unit": "g" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Heat the oven to 175 °C and line a loaf tin.", "Mash the bananas and mix in the melted butter, sugar and eggs.", "Fold in the flour, soda, cinnamon and chopped walnuts, pour into the tin and bake 50 to 55 minutes until a skewer comes out clean."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "loaf tin"], "illustration": "🍌"
+  },
+  {
+    "id": "carrot-zucchini-muffins", "title": "Carrot and zucchini muffins",
+    "description": "Lightly sweet muffins hiding grated carrot and zucchini, with oats and cinnamon. 12 muffins.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "carrot", "quantity": 2, "unit": "piece" }, { "id": "zucchini", "quantity": 1, "unit": "piece" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 80, "unit": "ml" },
+      { "id": "honey", "quantity": 70, "unit": "g" }, { "id": "flour", "quantity": 180, "unit": "g" },
+      { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "baking-powder", "quantity": 12, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Heat the oven to 180 °C and line a muffin tin.", "Grate the carrot and zucchini and squeeze the zucchini dry.", "Whisk the eggs, oil and honey, stir in the dry ingredients and the vegetables. Fill the cases and bake 20 to 22 minutes."],
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin", "grater"], "illustration": "🥕"
+  },
+  {
+    "id": "seed-crackers", "title": "Seed crackers",
+    "description": "Thin, crisp crackers made only from seeds, oats and water, baked low and slow. Keep for two weeks.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "sunflower-seeds", "quantity": 80, "unit": "g" }, { "id": "pumpkin-seeds", "quantity": 80, "unit": "g" },
+      { "id": "flaxseed", "quantity": 60, "unit": "g" }, { "id": "sesame", "quantity": 40, "unit": "g" },
+      { "id": "chia", "quantity": 30, "unit": "g" }, { "id": "oats", "quantity": 60, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "cottage-cheese", "quantity": 250, "unit": "g", "note": "to serve" }
+    ],
+    "steps": ["Heat the oven to 160 °C. Mix everything except the cottage cheese with 250 ml water and leave 15 minutes to thicken.", "Spread very thinly on a lined tray and bake 30 minutes. Cut into squares and bake 25 to 30 minutes more until crisp.", "Cool and keep in a tin. Serve with cottage cheese."],
+    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray"], "illustration": "🌻"
+  },
+  {
+    "id": "paprika-popcorn", "title": "Smoky paprika popcorn",
+    "description": "Popcorn popped in a pot with a little oil, tossed with smoked paprika and salt. A big bowl for movie night.",
+    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 6, "prepMinutes": 2, "cookMinutes": 6,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "popcorn", "quantity": 120, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "butter", "quantity": 15, "unit": "g", "optional": true }
+    ],
+    "steps": ["Heat the oil in a large pot with 3 kernels. When they pop, add the rest and cover.", "Shake the pot until the popping slows, about 3 minutes.", "Toss with paprika, salt and melted butter if you like. Keep leftovers in a closed bag."],
+    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["large pot with lid"], "illustration": "🍿"
+  }
+]

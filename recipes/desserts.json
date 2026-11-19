@@ -1,0 +1,277 @@
+[
+  {
+    "id": "rice-pudding", "title": "Rice pudding with cinnamon",
+    "description": "Creamy rice slowly cooked in milk with vanilla and lemon peel, dusted with cinnamon.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "servings": 6, "prepMinutes": 5, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "rice", "quantity": 150, "unit": "g", "note": "short grain is best" }, { "id": "milk", "quantity": 1000, "unit": "ml" },
+      { "id": "sugar", "quantity": 70, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "peel only" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Simmer the rice in 300 ml water for 8 minutes until absorbed.", "Add the milk, sugars and a strip of lemon peel and cook on low heat for 30 minutes, stirring often, until creamy.", "Serve warm or cold, dusted with cinnamon."],
+    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 3, "equipment": ["heavy saucepan"], "illustration": "🍚"
+  },
+  {
+    "id": "apple-crumble", "title": "Apple and walnut crumble",
+    "description": "Soft cinnamon apples under a crunchy oat, walnut and butter crumble. Lovely with yogurt.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 6, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "apple", "quantity": 6, "unit": "piece" }, { "id": "sugar", "quantity": 60, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "flour", "quantity": 80, "unit": "g" },
+      { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "butter", "quantity": 80, "unit": "g" },
+      { "id": "walnuts", "quantity": 40, "unit": "g" }, { "id": "greek-yogurt", "quantity": 300, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 190 °C. Slice the apples into a dish with 20 g sugar and the cinnamon.", "Rub the flour, oats, butter and remaining sugar together, then stir in the chopped walnuts.", "Scatter over the apples and bake 35 minutes until golden. Serve with yogurt."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["oven", "baking dish"], "illustration": "🍎"
+  },
+  {
+    "id": "chocolate-mousse", "title": "Dark chocolate mousse",
+    "description": "Airy, rich mousse made with dark chocolate, eggs and a little whipped cream.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 6, "prepMinutes": 20, "cookMinutes": 5,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "dark-chocolate", "quantity": 150, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "whipping-cream", "quantity": 150, "unit": "ml" }, { "id": "sugar", "quantity": 25, "unit": "g" }
+    ],
+    "steps": ["Melt the chocolate over hot water and cool a little. Stir in the egg yolks.", "Whip the cream softly. Whisk the whites with the sugar to soft peaks.", "Fold the cream, then the whites, into the chocolate. Spoon into glasses and chill at least 3 hours."],
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["bowls", "whisk"], "illustration": "🍫"
+  },
+  {
+    "id": "panna-cotta-berries", "title": "Panna cotta with berry sauce",
+    "description": "Silky vanilla cream set with a little gelatine, with a quick sauce of warm berries.",
+    "mealTypes": ["dessert"], "cuisine": "italian", "servings": 6, "prepMinutes": 15, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "whipping-cream", "quantity": 400, "unit": "ml" }, { "id": "milk", "quantity": 200, "unit": "ml" },
+      { "id": "sugar", "quantity": 60, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" },
+      { "id": "gelatin", "quantity": 8, "unit": "g" }, { "id": "frozen-berries", "quantity": 300, "unit": "g" },
+      { "id": "honey", "quantity": 1, "unit": "tbsp" }
+    ],
+    "steps": ["Soak the gelatine in cold water for 5 minutes.", "Heat the cream, milk and sugars until steaming, take off the heat and stir in the squeezed gelatine.", "Pour into 6 glasses and chill for 4 hours.", "Simmer the berries with the honey for 5 minutes, cool and spoon over."],
+    "tags": ["make-ahead"], "keepsDays": 3, "equipment": ["saucepan", "6 glasses"], "illustration": "🍮"
+  },
+  {
+    "id": "baked-apples-walnuts", "title": "Baked apples with walnuts and honey",
+    "description": "Whole apples stuffed with walnuts, raisins and cinnamon and baked until soft. Simple autumn dessert.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "apple", "quantity": 4, "unit": "piece" }, { "id": "walnuts", "quantity": 60, "unit": "g" },
+      { "id": "raisins", "quantity": 30, "unit": "g" }, { "id": "honey", "quantity": 2, "unit": "tbsp" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "butter", "quantity": 15, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 180 °C. Core the apples, leaving the bottoms whole.", "Mix the chopped walnuts, raisins, honey and cinnamon and fill the apples. Top each with a little butter.", "Bake 30 to 35 minutes until soft."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🍏"
+  },
+  {
+    "id": "palacinke", "title": "Palačinke with jam and walnuts",
+    "description": "Thin Croatian crepes rolled with jam or ground walnuts and sugar.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "flour", "quantity": 200, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "milk", "quantity": 450, "unit": "ml" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "jam", "quantity": 120, "unit": "g" }, { "id": "walnuts", "quantity": 50, "unit": "g" },
+      { "id": "sugar", "quantity": 20, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Whisk the flour, eggs, milk, salt and 1 tbsp oil into a smooth thin batter and rest 10 minutes.", "Wipe a hot pan with a little oil and fry thin crepes, about 1 minute a side.", "Spread with jam or sprinkle with ground walnuts and sugar, and roll up."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["frying pan", "bowl"], "illustration": "🥞"
+  },
+  {
+    "id": "rozata", "title": "Rožata (Dubrovnik caramel custard)",
+    "description": "Baked custard with a thin caramel layer, flavoured with lemon zest. Dubrovnik's favourite dessert.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-dalmatian", "servings": 6, "prepMinutes": 15, "cookMinutes": 50,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 5, "unit": "piece" }, { "id": "milk", "quantity": 700, "unit": "ml" },
+      { "id": "sugar", "quantity": 160, "unit": "g", "note": "100 g for the caramel" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "zest only" }
+    ],
+    "steps": ["Melt 100 g sugar in a pan until golden and pour into a baking dish or 6 small moulds.", "Warm the milk with the lemon zest. Whisk the eggs with the rest of the sugar and vanilla sugar, then whisk in the milk.", "Pour over the caramel, set the dish in a tray of hot water and bake at 160 °C for 45 to 50 minutes until just set.", "Chill overnight and turn out onto a plate."],
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["oven", "baking dish", "roasting tray"], "illustration": "🍮"
+  },
+  {
+    "id": "fritule", "title": "Fritule (little Christmas doughnuts)",
+    "description": "Small fried dough balls with raisins, lemon and a splash of rum flavour, rolled in icing sugar.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-dalmatian", "servings": 8, "prepMinutes": 20, "cookMinutes": 70,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "flour", "quantity": 400, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "yogurt", "quantity": 180, "unit": "g" }, { "id": "milk", "quantity": 150, "unit": "ml" },
+      { "id": "dry-yeast", "quantity": 7, "unit": "g" }, { "id": "sugar", "quantity": 50, "unit": "g" },
+      { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece", "note": "zest" },
+      { "id": "sunflower-oil", "quantity": 150, "unit": "ml", "note": "for frying, some stays in the pan" },
+      { "id": "powdered-sugar", "quantity": 40, "unit": "g" }
+    ],
+    "steps": ["Mix the flour, yeast, sugar, eggs, yogurt, warm milk, lemon zest and raisins into a soft, sticky batter. Cover and leave to rise 1 hour.", "Heat the oil in a deep pan. Drop in small spoonfuls of batter and fry 3 minutes until golden, turning.", "Drain on paper and roll in icing sugar while warm."],
+    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["deep pan", "bowl"], "illustration": "🍩"
+  },
+  {
+    "id": "tiramisu", "title": "Tiramisu",
+    "description": "Coffee-soaked biscuits layered with mascarpone cream and cocoa. Make it a day ahead.",
+    "mealTypes": ["dessert"], "cuisine": "italian", "servings": 8, "prepMinutes": 25, "cookMinutes": 0,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "mascarpone", "quantity": 500, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "sugar", "quantity": 90, "unit": "g" }, { "id": "ladyfingers", "quantity": 200, "unit": "g" },
+      { "id": "cocoa", "quantity": 2, "unit": "tbsp" }
+    ],
+    "steps": ["Make 300 ml strong coffee and let it cool.", "Whisk the yolks with the sugar until pale, then beat in the mascarpone. Whisk the whites stiff and fold in.", "Dip the biscuits quickly in the coffee and layer with the cream in a dish, twice.", "Dust with cocoa and chill at least 6 hours."],
+    "tags": ["vegetarian", "make-ahead", "no-cook", "festive"], "keepsDays": 3, "equipment": ["dish", "whisk"], "illustration": "☕"
+  },
+  {
+    "id": "brownies", "title": "Fudgy brownies",
+    "description": "Dense chocolate brownies with a crackly top and walnuts. Cut into 16 small squares.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 16, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "dark-chocolate", "quantity": 200, "unit": "g" }, { "id": "butter", "quantity": 150, "unit": "g" },
+      { "id": "sugar", "quantity": 200, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "flour", "quantity": 100, "unit": "g" }, { "id": "cocoa", "quantity": 20, "unit": "g" },
+      { "id": "walnuts", "quantity": 60, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 180 °C and line a 20 x 30 cm tin.", "Melt the chocolate and butter together. Whisk in the sugar, then the eggs one by one.", "Fold in the flour, cocoa and chopped walnuts, pour into the tin and bake 22 to 25 minutes. It should still be soft in the middle. Cool before cutting."],
+    "tags": ["vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tin"], "illustration": "🍫"
+  },
+  {
+    "id": "mandarin-yogurt-cake", "title": "Mandarin yogurt cake",
+    "description": "Light, moist cake made with yogurt and oil and lots of mandarin zest and juice. Perfect in winter.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-dalmatian", "servings": 12, "prepMinutes": 15, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "mandarin", "quantity": 4, "unit": "piece" }, { "id": "yogurt", "quantity": 180, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" }, { "id": "sugar", "quantity": 150, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 100, "unit": "ml" }, { "id": "flour", "quantity": 250, "unit": "g" },
+      { "id": "baking-powder", "quantity": 12, "unit": "g" }, { "id": "powdered-sugar", "quantity": 20, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 180 °C. Zest two mandarins and juice all four.", "Whisk the eggs and sugar until fluffy, then the yogurt, oil, zest and half the juice.", "Fold in the flour and baking powder, pour into a lined tin and bake 35 to 40 minutes.", "Drizzle the rest of the juice over the warm cake and dust with icing sugar when cool."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin"], "illustration": "🍊"
+  },
+  {
+    "id": "no-bake-cheesecake", "title": "No-bake cheesecake",
+    "description": "Biscuit base with a creamy cottage cheese and cream cheese filling and berry topping. Sets in the fridge.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 10, "prepMinutes": 25, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "biscuits", "quantity": 200, "unit": "g" }, { "id": "butter", "quantity": 80, "unit": "g" },
+      { "id": "cream-cheese", "quantity": 300, "unit": "g" }, { "id": "cottage-cheese", "quantity": 250, "unit": "g" },
+      { "id": "whipping-cream", "quantity": 200, "unit": "ml" }, { "id": "sugar", "quantity": 80, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "frozen-berries", "quantity": 250, "unit": "g" }
+    ],
+    "steps": ["Crush the biscuits, mix with the melted butter and press into a 22 cm tin. Chill.", "Blend the cottage cheese smooth, then beat with the cream cheese, sugar and lemon juice.", "Whip the cream and fold it in. Spread over the base and chill at least 6 hours.", "Top with thawed berries before serving."],
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["springform tin", "blender", "whisk"], "illustration": "🍰"
+  },
+  {
+    "id": "chocolate-pudding", "title": "Homemade chocolate pudding",
+    "description": "Smooth chocolate pudding cooked from milk, cocoa and cornflour, topped with a little cream.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 4, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "milk", "quantity": 600, "unit": "ml" }, { "id": "cocoa", "quantity": 25, "unit": "g" },
+      { "id": "cornstarch", "quantity": 35, "unit": "g" }, { "id": "sugar", "quantity": 60, "unit": "g" },
+      { "id": "dark-chocolate", "quantity": 30, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" }
+    ],
+    "steps": ["Whisk the cocoa, cornflour, sugars and 150 ml of the milk until smooth.", "Bring the rest of the milk to the boil, whisk in the mixture and stir 2 minutes until thick.", "Stir in the chopped chocolate and pour into bowls. Serve warm or chilled."],
+    "tags": ["vegetarian", "kid-friendly", "quick"], "keepsDays": 3, "equipment": ["saucepan", "whisk"], "illustration": "🍫"
+  },
+  {
+    "id": "winter-fruit-salad", "title": "Winter fruit salad with honey yogurt",
+    "description": "Mandarins, apple, pear, kiwi and pomegranate with honey yogurt and toasted almonds.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 4, "prepMinutes": 15, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "mandarin", "quantity": 4, "unit": "piece" }, { "id": "apple", "quantity": 1, "unit": "piece" },
+      { "id": "pear", "quantity": 1, "unit": "piece" }, { "id": "kiwi", "quantity": 2, "unit": "piece" },
+      { "id": "pomegranate", "quantity": 0.5, "unit": "piece", "optional": true }, { "id": "greek-yogurt", "quantity": 300, "unit": "g" },
+      { "id": "honey", "quantity": 1, "unit": "tbsp" }, { "id": "almonds", "quantity": 30, "unit": "g" }
+    ],
+    "steps": ["Peel and slice the fruit into a bowl.", "Mix the yogurt and honey.", "Serve the fruit with the yogurt and chopped almonds."],
+    "tags": ["vegetarian", "no-cook", "light", "quick"], "keepsDays": 1, "equipment": ["bowl"], "illustration": "🥝"
+  },
+  {
+    "id": "frozen-yogurt-bark", "title": "Frozen yogurt bark",
+    "description": "Thick yogurt spread on a tray with berries, chocolate and nuts, frozen and broken into pieces.",
+    "mealTypes": ["dessert", "snack"], "cuisine": "everyday", "servings": 8, "prepMinutes": 10, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "greek-yogurt", "quantity": 500, "unit": "g" }, { "id": "honey", "quantity": 2, "unit": "tbsp" },
+      { "id": "frozen-berries", "quantity": 150, "unit": "g" }, { "id": "dark-chocolate", "quantity": 30, "unit": "g" },
+      { "id": "almonds", "quantity": 30, "unit": "g" }
+    ],
+    "steps": ["Mix the yogurt and honey and spread 1 cm thick on a lined tray.", "Scatter with berries, chopped chocolate and almonds.", "Freeze 3 hours, then break into pieces. Keep in the freezer."],
+    "tags": ["vegetarian", "kid-friendly", "freezer-friendly", "no-cook"], "keepsDays": 14, "equipment": ["tray", "baking paper"], "illustration": "🍓"
+  },
+  {
+    "id": "carrot-cake", "title": "Carrot cake with cream cheese frosting",
+    "description": "Moist spiced carrot cake with walnuts and raisins, topped with a light cream cheese frosting.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 12, "prepMinutes": 25, "cookMinutes": 45,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "carrot", "quantity": 4, "unit": "piece" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "sugar", "quantity": 150, "unit": "g" }, { "id": "sunflower-oil", "quantity": 150, "unit": "ml" },
+      { "id": "flour", "quantity": 220, "unit": "g" }, { "id": "baking-powder", "quantity": 10, "unit": "g" },
+      { "id": "cinnamon", "quantity": 2, "unit": "tsp" }, { "id": "walnuts", "quantity": 60, "unit": "g" },
+      { "id": "raisins", "quantity": 50, "unit": "g" }, { "id": "cream-cheese", "quantity": 200, "unit": "g" },
+      { "id": "powdered-sugar", "quantity": 50, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 175 °C. Whisk the eggs, sugar and oil.", "Fold in the flour, baking powder, cinnamon, grated carrot, walnuts and raisins.", "Bake in a lined tin for 40 to 45 minutes and cool completely.", "Beat the cream cheese with the icing sugar and spread on top."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin", "grater"], "illustration": "🥕"
+  },
+  {
+    "id": "berry-clafoutis", "title": "Berry clafoutis",
+    "description": "A soft baked custard-pancake studded with berries. Five minutes to mix, then into the oven.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 6, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "frozen-berries", "quantity": 400, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "milk", "quantity": 300, "unit": "ml" }, { "id": "flour", "quantity": 80, "unit": "g" },
+      { "id": "sugar", "quantity": 70, "unit": "g" }, { "id": "butter", "quantity": 15, "unit": "g" },
+      { "id": "powdered-sugar", "quantity": 10, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 190 °C and butter a baking dish. Scatter in the berries.", "Whisk the eggs, sugar, flour and milk into a smooth batter and pour over.", "Bake 30 to 35 minutes until puffed and set. Dust with icing sugar and serve warm."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🫐"
+  },
+  {
+    "id": "banana-nice-cream", "title": "Banana and cocoa nice cream",
+    "description": "Frozen bananas blended into a creamy, ice-cream-like dessert with cocoa and peanut butter.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "banana", "quantity": 5, "unit": "piece", "note": "sliced and frozen" }, { "id": "cocoa", "quantity": 2, "unit": "tbsp" },
+      { "id": "peanut-butter", "quantity": 40, "unit": "g" }, { "id": "oat-drink", "quantity": 60, "unit": "ml" }
+    ],
+    "steps": ["Slice the bananas and freeze for at least 4 hours.", "Blend with the cocoa, peanut butter and oat drink until smooth, scraping down the sides.", "Eat straight away or freeze 30 minutes for a firmer scoop."],
+    "tags": ["vegan", "vegetarian", "kid-friendly", "no-cook"], "keepsDays": 7, "equipment": ["blender"], "illustration": "🍨"
+  },
+  {
+    "id": "walnut-roll", "title": "Walnut roll (orehnjača)",
+    "description": "Soft yeast dough rolled around a sweet walnut filling. A holiday classic in every Croatian home.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "servings": 12, "prepMinutes": 40, "cookMinutes": 45,
+    "difficulty": "hard", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "flour", "quantity": 500, "unit": "g" }, { "id": "fresh-yeast", "quantity": 21, "unit": "g" },
+      { "id": "milk", "quantity": 330, "unit": "ml" }, { "id": "butter", "quantity": 80, "unit": "g" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "sugar", "quantity": 160, "unit": "g" },
+      { "id": "walnuts", "quantity": 300, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece", "note": "zest" },
+      { "id": "vanilla-sugar", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Dissolve the yeast in 200 ml warm milk with 1 tsp sugar. Knead with the flour, 60 g sugar, melted butter, 1 egg, salt and zest into a soft dough. Rise 1 hour.", "Warm the rest of the milk with the rest of the sugar and vanilla sugar and pour over the ground walnuts. Cool.", "Roll the dough out to a large rectangle, spread with the filling and roll up tightly. Rise 30 minutes on a lined tray.", "Brush with the other egg and bake at 175 °C for 40 to 45 minutes. Cool before slicing."],
+    "tags": ["vegetarian", "festive", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray", "rolling pin"], "illustration": "🌰"
+  },
+  {
+    "id": "sour-cherry-strudel", "title": "Sour cherry strudel",
+    "description": "Thin pastry sheets rolled around sour cherries, sugar and breadcrumbs, baked crisp and dusted with sugar.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "servings": 8, "prepMinutes": 20, "cookMinutes": 35,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "filo-pastry", "quantity": 400, "unit": "g" }, { "id": "sour-cherries", "quantity": 700, "unit": "g", "note": "drained" },
+      { "id": "sugar", "quantity": 100, "unit": "g" }, { "id": "breadcrumbs", "quantity": 50, "unit": "g" },
+      { "id": "butter", "quantity": 60, "unit": "g" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "powdered-sugar", "quantity": 20, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 190 °C. Toast the breadcrumbs in 20 g butter until golden.", "Lay out half the pastry sheets, brushing each with melted butter. Sprinkle with breadcrumbs, then the drained cherries, sugar and cinnamon.", "Roll up, repeat with the rest, and bake 30 to 35 minutes until crisp.", "Dust with icing sugar and serve warm."],
+    "tags": ["vegetarian", "festive"], "keepsDays": 2, "equipment": ["oven", "baking tray", "pastry brush"], "illustration": "🍒"
+  }
+]

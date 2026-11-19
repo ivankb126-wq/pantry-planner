@@ -1,0 +1,398 @@
+[
+  {
+    "id": "apple-cinnamon-porridge", "title": "Apple and cinnamon porridge",
+    "description": "Creamy oats cooked in milk with grated apple, cinnamon and a few walnuts on top.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 7,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "oats", "quantity": 100, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
+      { "id": "apple", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "walnuts", "quantity": 20, "unit": "g" }, { "id": "honey", "quantity": 1, "unit": "tsp", "optional": true }
+    ],
+    "steps": ["Simmer the oats in the milk for 5 minutes, stirring.", "Grate in the apple, add the cinnamon and cook 2 minutes more.", "Top with chopped walnuts and a little honey if you like."],
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥣"
+  },
+  {
+    "id": "banana-oat-pancakes", "title": "Banana oat pancakes",
+    "description": "Three-ingredient pancakes from banana, eggs and oats, served with yogurt and berries.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "banana", "quantity": 2, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "butter", "quantity": 10, "unit": "g" },
+      { "id": "greek-yogurt", "quantity": 150, "unit": "g" }, { "id": "frozen-berries", "quantity": 100, "unit": "g" }
+    ],
+    "steps": ["Blend or mash the bananas, eggs and oats into a thick batter.", "Fry small pancakes in a little butter, 2 minutes a side.", "Serve with yogurt and warmed berries."],
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
+  },
+  {
+    "id": "scrambled-eggs-toast", "title": "Scrambled eggs on toast",
+    "description": "Soft, slow-scrambled eggs on wholegrain toast with sliced tomato.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 2, "cookMinutes": 6,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "butter", "quantity": 10, "unit": "g" },
+      { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "tomato", "quantity": 1, "unit": "piece" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "black-pepper", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Beat the eggs with salt and pepper.", "Melt the butter on low heat, add the eggs and stir slowly until just set.", "Serve on toast with sliced tomato."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["non-stick pan", "toaster"], "illustration": "🍳"
+  },
+  {
+    "id": "vegetable-omelette", "title": "Vegetable omelette",
+    "description": "A folded omelette with pepper, spinach and onion and a little cheese.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 5, "unit": "piece" }, { "id": "bell-pepper", "quantity": 0.5, "unit": "piece" },
+      { "id": "spinach", "quantity": 60, "unit": "g" }, { "id": "spring-onion", "quantity": 20, "unit": "g" },
+      { "id": "hard-cheese", "quantity": 30, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "bread", "quantity": 80, "unit": "g" }
+    ],
+    "steps": ["Fry the diced pepper and spring onion in the oil for 3 minutes, add the spinach to wilt.", "Pour in the beaten eggs, cook gently until almost set and scatter with cheese.", "Fold, halve and serve with bread."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍳"
+  },
+  {
+    "id": "greek-yogurt-honey-walnuts", "title": "Greek yogurt with honey, walnuts and fruit",
+    "description": "Thick yogurt with a drizzle of honey, toasted walnuts and a sliced pear or apple.",
+    "mealTypes": ["breakfast"], "cuisine": "greek", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "greek-yogurt", "quantity": 300, "unit": "g" }, { "id": "honey", "quantity": 2, "unit": "tsp" },
+      { "id": "walnuts", "quantity": 30, "unit": "g" }, { "id": "pear", "quantity": 1, "unit": "piece" },
+      { "id": "oats", "quantity": 30, "unit": "g" }
+    ],
+    "steps": ["Toast the oats and walnuts in a dry pan for 2 minutes (optional).", "Spoon the yogurt into bowls, add the sliced pear, nuts and oats and drizzle with honey."],
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["bowl"], "illustration": "🍯"
+  },
+  {
+    "id": "chia-berry-pudding", "title": "Chia pudding with berries",
+    "description": "Chia seeds soaked overnight in milk with vanilla, topped with berries. Make it the evening before.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "chia", "quantity": 60, "unit": "g" }, { "id": "milk", "quantity": 350, "unit": "ml" },
+      { "id": "honey", "quantity": 2, "unit": "tsp" }, { "id": "frozen-berries", "quantity": 150, "unit": "g" },
+      { "id": "almonds", "quantity": 20, "unit": "g" }
+    ],
+    "steps": ["Mix the chia, milk and honey in two jars and stir again after 10 minutes.", "Leave in the fridge overnight.", "Top with berries and chopped almonds."],
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["2 jars"], "illustration": "🫙"
+  },
+  {
+    "id": "berry-smoothie-bowl", "title": "Berry smoothie bowl",
+    "description": "A thick frozen berry and banana smoothie in a bowl, topped with oats, seeds and fruit.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 8, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "frozen-berries", "quantity": 250, "unit": "g" }, { "id": "banana", "quantity": 2, "unit": "piece" },
+      { "id": "yogurt", "quantity": 250, "unit": "g" }, { "id": "oats", "quantity": 40, "unit": "g" },
+      { "id": "pumpkin-seeds", "quantity": 20, "unit": "g" }
+    ],
+    "steps": ["Blend the berries, one banana and the yogurt until thick.", "Pour into bowls and top with the other banana, oats and seeds."],
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["blender"], "illustration": "🫐"
+  },
+  {
+    "id": "avocado-egg-toast", "title": "Avocado toast with a soft egg",
+    "description": "Crushed avocado with lemon and chili on toast, topped with a soft-boiled egg.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 7,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "avocado", "quantity": 1, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "lemon", "quantity": 0.25, "unit": "piece" },
+      { "id": "chili-flakes", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Boil the eggs for 6.5 minutes and cool in cold water.", "Mash the avocado with lemon juice, salt and chili.", "Spread on toast and top with the halved eggs."],
+    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "toaster"], "illustration": "🥑"
+  },
+  {
+    "id": "cottage-cheese-tomato-toast", "title": "Cottage cheese and tomato toast",
+    "description": "Fresh cottage cheese on toast with tomato, cucumber, a little olive oil and black pepper.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 2,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cottage-cheese", "quantity": 250, "unit": "g" }, { "id": "bread", "quantity": 120, "unit": "g" },
+      { "id": "tomato", "quantity": 1, "unit": "piece" }, { "id": "cucumber", "quantity": 0.3, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tsp" }, { "id": "black-pepper", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Toast the bread.", "Spread with cottage cheese and top with sliced tomato and cucumber, oil and pepper."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍅"
+  },
+  {
+    "id": "french-toast-berries", "title": "French toast with berries",
+    "description": "Bread soaked in egg and milk, fried golden and served with warm berries and yogurt.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "bread", "quantity": 160, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "milk", "quantity": 100, "unit": "ml" }, { "id": "cinnamon", "quantity": 0.25, "unit": "tsp" },
+      { "id": "butter", "quantity": 15, "unit": "g" }, { "id": "frozen-berries", "quantity": 150, "unit": "g" },
+      { "id": "yogurt", "quantity": 150, "unit": "g" }
+    ],
+    "steps": ["Whisk the eggs, milk and cinnamon. Soak the bread slices for a few seconds each.", "Fry in the butter 2 to 3 minutes a side.", "Warm the berries in a small pan and serve with the toast and yogurt."],
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍞"
+  },
+  {
+    "id": "bircher-muesli", "title": "Bircher muesli",
+    "description": "Oats soaked overnight in yogurt and milk with grated apple, raisins and hazelnuts.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "oats", "quantity": 90, "unit": "g" }, { "id": "yogurt", "quantity": 200, "unit": "g" },
+      { "id": "milk", "quantity": 100, "unit": "ml" }, { "id": "apple", "quantity": 1, "unit": "piece" },
+      { "id": "raisins", "quantity": 20, "unit": "g" }, { "id": "hazelnuts", "quantity": 20, "unit": "g" }
+    ],
+    "steps": ["Mix the oats, yogurt, milk, raisins and grated apple. Cover and chill overnight.", "Stir and top with chopped hazelnuts."],
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 2, "equipment": ["bowl"], "illustration": "🍎"
+  },
+  {
+    "id": "breakfast-burrito", "title": "Breakfast burrito",
+    "description": "Scrambled eggs, beans, peppers and cheese wrapped in a warm tortilla. Good to take away.",
+    "mealTypes": ["breakfast"], "cuisine": "mexican", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "tortillas", "quantity": 120, "unit": "g", "note": "2 large" }, { "id": "eggs", "quantity": 4, "unit": "piece" },
+      { "id": "black-beans", "quantity": 200, "unit": "g" }, { "id": "bell-pepper", "quantity": 0.5, "unit": "piece" },
+      { "id": "cheddar", "quantity": 40, "unit": "g" }, { "id": "salsa", "quantity": 60, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Fry the diced pepper in the oil, add the drained beans to warm.", "Add the beaten eggs and scramble.", "Fill the warm tortillas with the eggs, cheese and salsa and roll up."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🌯"
+  },
+  {
+    "id": "ham-cheese-toastie", "title": "Ham and cheese toastie",
+    "description": "Crisp toasted sandwich with ham and melted cheese, served with a few slices of cucumber.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 6,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "bread", "quantity": 160, "unit": "g" }, { "id": "ham", "quantity": 80, "unit": "g" },
+      { "id": "hard-cheese", "quantity": 50, "unit": "g" }, { "id": "butter", "quantity": 10, "unit": "g" },
+      { "id": "cucumber", "quantity": 0.3, "unit": "piece" }
+    ],
+    "steps": ["Fill the bread with ham and cheese and butter the outsides.", "Toast in a pan or sandwich maker 2 to 3 minutes a side until golden and melted.", "Serve with cucumber slices."],
+    "tags": ["quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan or sandwich maker"], "illustration": "🥪"
+  },
+  {
+    "id": "peanut-butter-banana-toast", "title": "Peanut butter and banana toast",
+    "description": "Wholegrain toast with peanut butter, sliced banana and a sprinkle of cinnamon.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 4, "cookMinutes": 2,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "peanut-butter", "quantity": 40, "unit": "g" },
+      { "id": "banana", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 1, "unit": "pinch" },
+      { "id": "milk", "quantity": 300, "unit": "ml", "note": "a glass each" }
+    ],
+    "steps": ["Toast the bread and spread with peanut butter.", "Top with sliced banana and a pinch of cinnamon. Serve with a glass of milk."],
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍌"
+  },
+  {
+    "id": "kajgana-s-paprikom", "title": "Kajgana with peppers and onion",
+    "description": "Croatian-style scrambled eggs cooked with sweet pepper, onion and a little bacon, with fresh bread.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" }, { "id": "bacon", "quantity": 30, "unit": "g", "optional": true },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "bread", "quantity": 100, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Fry the onion and pepper strips (and bacon) in the oil for 6 minutes.", "Add the beaten eggs and salt and stir until just set.", "Serve with bread."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🫑"
+  },
+  {
+    "id": "zganci-s-jogurtom", "title": "Žganci with yogurt",
+    "description": "Old-fashioned breakfast of crumbly cornmeal žganci with cold yogurt or warm milk.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 2, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "polenta", "quantity": 120, "unit": "g" }, { "id": "yogurt", "quantity": 400, "unit": "g" },
+      { "id": "butter", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Bring 500 ml salted water to the boil, pour in the cornmeal in one go and make a hole in the middle with a spoon handle.", "Cook 15 minutes on low heat, then pour off a little water and break into crumbs with a fork. Stir in the butter.", "Serve in bowls with cold yogurt."],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["saucepan"], "illustration": "🌽"
+  },
+  {
+    "id": "griz-na-mlijeku", "title": "Semolina porridge with cocoa",
+    "description": "Smooth semolina cooked in milk, sprinkled with cocoa and a little sugar. A childhood classic.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 2, "cookMinutes": 8,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "semolina", "quantity": 70, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },
+      { "id": "sugar", "quantity": 2, "unit": "tsp" }, { "id": "cocoa", "quantity": 1, "unit": "tsp" },
+      { "id": "frozen-berries", "quantity": 100, "unit": "g", "optional": true }
+    ],
+    "steps": ["Bring the milk to a simmer, whisk in the semolina and stir 5 minutes until thick.", "Serve sprinkled with cocoa and sugar, or with berries."],
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥛"
+  },
+  {
+    "id": "buckwheat-apple-porridge", "title": "Buckwheat porridge with apple and kefir",
+    "description": "Nutty buckwheat simmered until soft, with stewed apple, cinnamon and a pour of kefir.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "buckwheat", "quantity": 100, "unit": "g" }, { "id": "apple", "quantity": 1, "unit": "piece" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "kefir", "quantity": 300, "unit": "g" },
+      { "id": "honey", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Rinse the buckwheat and simmer in 300 ml water for 12 minutes until soft.", "Add the diced apple and cinnamon for the last 3 minutes.", "Serve with kefir and a little honey."],
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
+  },
+  {
+    "id": "savoury-oats-egg", "title": "Savoury oats with spinach and egg",
+    "description": "Oats cooked like a risotto with stock and spinach, topped with a fried egg and cheese.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "oats", "quantity": 80, "unit": "g" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "spinach", "quantity": 80, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "parmesan", "quantity": 15, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": ["Simmer the oats in 350 ml water with the stock cube for 5 minutes. Stir in the spinach.", "Fry the eggs in the oil.", "Serve the oats topped with the eggs and grated parmesan."],
+    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "frying pan"], "illustration": "🥬"
+  },
+  {
+    "id": "kefir-oat-smoothie", "title": "Kefir, banana and oat smoothie",
+    "description": "A filling drink-and-go breakfast of kefir, banana, oats and a spoon of peanut butter.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "kefir", "quantity": 400, "unit": "g" }, { "id": "banana", "quantity": 2, "unit": "piece" },
+      { "id": "oats", "quantity": 50, "unit": "g" }, { "id": "peanut-butter", "quantity": 20, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Blend everything until smooth.", "Drink straight away or keep in the fridge until morning."],
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 1, "equipment": ["blender"], "illustration": "🥤"
+  },
+  {
+    "id": "zucchini-fritaja", "title": "Zucchini fritaja",
+    "description": "Coastal-style fritaja: eggs baked slowly with zucchini, onion and a little cheese.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-istrian", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 8, "unit": "piece" }, { "id": "zucchini", "quantity": 2, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" }, { "id": "bread", "quantity": 200, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": ["Fry the onion and thinly sliced zucchini in the oil for 10 minutes until soft and golden.", "Beat the eggs with salt and parmesan, pour over and cook on low heat with a lid for 8 minutes.", "Flip onto a plate and back, or finish under the grill. Serve in wedges with bread."],
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["frying pan with lid"], "illustration": "🥒"
+  },
+  {
+    "id": "tofu-scramble", "title": "Tofu scramble on toast",
+    "description": "Crumbled tofu fried with turmeric, onion, pepper and spinach. A plant-based scrambled egg.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "tofu",
+    "ingredients": [
+      { "id": "tofu", "quantity": 250, "unit": "g" }, { "id": "turmeric", "quantity": 0.5, "unit": "tsp" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" }, { "id": "bell-pepper", "quantity": 0.5, "unit": "piece" },
+      { "id": "spinach", "quantity": 60, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Fry the onion and pepper in the oil for 4 minutes.", "Crumble in the tofu, add turmeric and salt and fry 4 minutes. Stir in the spinach.", "Serve on toast."],
+    "tags": ["vegan", "vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍳"
+  },
+  {
+    "id": "mushroom-egg-toast", "title": "Garlic mushrooms and egg on toast",
+    "description": "Buttery garlic mushrooms with parsley on toast, topped with a poached or fried egg.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "mushrooms", "quantity": 250, "unit": "g" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "butter", "quantity": 15, "unit": "g" }, { "id": "parsley", "quantity": 5, "unit": "g" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "bread", "quantity": 120, "unit": "g" }
+    ],
+    "steps": ["Fry the sliced mushrooms in the butter on high heat for 6 minutes, add the garlic and parsley.", "Poach or fry the eggs.", "Pile the mushrooms on toast and top with the eggs."],
+    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["frying pan", "toaster"], "illustration": "🍄"
+  },
+  {
+    "id": "yogurt-muesli-parfait", "title": "Yogurt and muesli parfait",
+    "description": "Layers of yogurt, muesli and fruit in a glass. Make two the night before.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "yogurt", "quantity": 350, "unit": "g" }, { "id": "muesli", "quantity": 80, "unit": "g" },
+      { "id": "mandarin", "quantity": 2, "unit": "piece" }, { "id": "frozen-berries", "quantity": 80, "unit": "g" }
+    ],
+    "steps": ["Layer yogurt, muesli and fruit in two glasses.", "Eat straight away or keep the muesli separate until morning so it stays crunchy."],
+    "tags": ["vegetarian", "no-cook", "make-ahead", "quick"], "keepsDays": 1, "equipment": ["2 glasses"], "illustration": "🍊"
+  },
+  {
+    "id": "millet-pear-porridge", "title": "Millet porridge with pear and almonds",
+    "description": "Creamy millet cooked in milk with vanilla, topped with soft pear and toasted almonds.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "millet", "quantity": 90, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
+      { "id": "pear", "quantity": 1, "unit": "piece" }, { "id": "almonds", "quantity": 20, "unit": "g" },
+      { "id": "vanilla-sugar", "quantity": 5, "unit": "g" }
+    ],
+    "steps": ["Rinse the millet in hot water, then simmer in the milk with the vanilla sugar for 18 minutes, stirring often.", "Add the diced pear for the last 5 minutes.", "Top with chopped almonds."],
+    "tags": ["vegetarian"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🍐"
+  },
+  {
+    "id": "quinoa-breakfast-bowl", "title": "Warm quinoa breakfast bowl",
+    "description": "Quinoa cooked in milk with cinnamon, topped with banana, peanut butter and seeds.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "quinoa", "quantity": 90, "unit": "g" }, { "id": "milk", "quantity": 350, "unit": "ml" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "banana", "quantity": 1, "unit": "piece" },
+      { "id": "peanut-butter", "quantity": 20, "unit": "g" }, { "id": "sunflower-seeds", "quantity": 15, "unit": "g" }
+    ],
+    "steps": ["Rinse the quinoa and simmer in the milk with cinnamon for 15 minutes.", "Top with sliced banana, peanut butter and seeds."],
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
+  },
+  {
+    "id": "smoked-salmon-rye", "title": "Smoked salmon on rye with cream cheese",
+    "description": "Dark rye bread with cream cheese, smoked salmon, cucumber and a squeeze of lemon.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "bread", "quantity": 120, "unit": "g", "note": "rye bread" }, { "id": "cream-cheese", "quantity": 50, "unit": "g" },
+      { "id": "smoked-salmon", "quantity": 100, "unit": "g" }, { "id": "cucumber", "quantity": 0.3, "unit": "piece" },
+      { "id": "lemon", "quantity": 0.25, "unit": "piece" }, { "id": "dill", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": ["Spread the bread with cream cheese.", "Top with salmon, thin cucumber slices, dill and a squeeze of lemon."],
+    "tags": ["quick", "no-cook", "high-protein"], "keepsDays": 0, "equipment": ["knife"], "illustration": "🐟"
+  },
+  {
+    "id": "turkish-eggs", "title": "Turkish eggs with garlic yogurt",
+    "description": "Poached eggs on garlicky yogurt with paprika butter, eaten with warm bread.",
+    "mealTypes": ["breakfast"], "cuisine": "middle-eastern", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "greek-yogurt", "quantity": 200, "unit": "g" },
+      { "id": "garlic", "quantity": 3, "unit": "g" }, { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 1, "unit": "pinch" },
+      { "id": "bread", "quantity": 120, "unit": "g" }
+    ],
+    "steps": ["Mix the yogurt with the grated garlic and spread on two plates.", "Poach the eggs in gently simmering water for 3 minutes.", "Melt the butter with paprika and chili. Put the eggs on the yogurt, pour over the butter and serve with bread."],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["saucepan", "small pan"], "illustration": "🥚"
+  },
+  {
+    "id": "baked-eggs-spinach-feta", "title": "Baked eggs with spinach and feta",
+    "description": "Eggs baked in a dish over garlicky spinach and tomatoes with crumbled feta.",
+    "mealTypes": ["breakfast"], "cuisine": "greek", "servings": 2, "prepMinutes": 5, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "spinach", "quantity": 200, "unit": "g" },
+      { "id": "tomato", "quantity": 1, "unit": "piece" }, { "id": "feta", "quantity": 60, "unit": "g" },
+      { "id": "garlic", "quantity": 3, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "bread", "quantity": 100, "unit": "g" }
+    ],
+    "steps": ["Heat the oven to 200 °C. Wilt the spinach with the garlic in the oil and spread in a small dish with the diced tomato.", "Make hollows, crack in the eggs and scatter with feta.", "Bake 10 to 12 minutes until the whites set. Serve with bread."],
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 0, "equipment": ["oven", "small baking dish"], "illustration": "🥚"
+  },
+  {
+    "id": "cottage-cheese-pancakes", "title": "Cottage cheese pancakes",
+    "description": "Soft little pancakes made with fresh cottage cheese, eggs and a little flour, served with jam.",
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cottage-cheese", "quantity": 250, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "flour", "quantity": 60, "unit": "g" }, { "id": "sugar", "quantity": 1, "unit": "tbsp" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "jam", "quantity": 30, "unit": "g" }
+    ],
+    "steps": ["Mix the cottage cheese, eggs, flour and sugar into a thick batter.", "Fry small spoonfuls in a little oil, 2 to 3 minutes a side.", "Serve with jam."],
+    "tags": ["vegetarian", "quick", "kid-friendly", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
+  }
+]

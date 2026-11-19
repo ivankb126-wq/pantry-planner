@@ -10,6 +10,7 @@ import yaml
 UNITS = {"g", "ml", "piece"}
 STORAGE = {"fridge", "shelves", "freezer"}
 PACKAGE_TYPES = {"jar", "box", "bag", "bottle", "can", "pack", "loose", "carton", "tube"}
+DIETS = ("vegan", "vegetarian", "pescatarian", "meat")
 NUTRIENTS = ("kcal", "protein", "carbs", "sugar", "fat", "sat_fat", "fibre", "salt")
 CATEGORIES = {
     "fruit-veg",
@@ -51,6 +52,8 @@ class Ingredient:
     loose_ok: bool = False
     tags: list[str] = field(default_factory=list)
     allow: list[str] = field(default_factory=list)  # exclude groups that do not apply
+    diet: str = "vegan"  # strictest diet it fits: vegan, vegetarian, pescatarian, meat
+    edible: float = 1.0  # part you eat (no bones, shells, peel)
 
     def to_public(self) -> dict:
         """The fields the web app needs (no matching rules)."""
@@ -64,7 +67,12 @@ class Ingredient:
             "packageType": self.package_type,
             "packages": self.packages,
             "nutrition": self.nutrition,
+            "diet": self.diet,
         }
+        if self.density != 1.0:
+            out["density"] = self.density
+        if self.edible != 1.0:
+            out["edible"] = self.edible
         if self.piece_g:
             out["pieceG"] = self.piece_g
         if self.shelf_life_days:
@@ -123,6 +131,8 @@ def _parse(item: dict) -> Ingredient:
         loose_ok=bool(item.get("loose", False)),
         tags=[str(x) for x in item.get("tags", [])],
         allow=[str(x) for x in match.get("allow", [])],
+        diet=str(item.get("diet", "vegan")),
+        edible=float(item.get("edible", 1.0)),
     )
 
 
@@ -142,13 +152,15 @@ def _check(ing: Ingredient) -> list[str]:
     n = ing.nutrition
     if all(k in n for k in ("protein", "carbs", "fat", "kcal")):
         # Energy from macros should roughly agree with kcal (4/4/9 rule, fibre 2).
-        est = 4 * n["protein"] + 4 * n["carbs"] + 9 * n["fat"] + 2 * n.get("fibre", 0)
+        est = 4 * n["protein"] + 4 * n["carbs"] + 9 * n["fat"] + 2 * n.get("fibre", 0) + 7 * n.get("alcohol", 0)
         if n["kcal"] > 40 and abs(est - n["kcal"]) > max(40, 0.25 * n["kcal"]):
             p.append(f"kcal {n['kcal']} does not fit the macros (about {est:.0f})")
     if n.get("sugar", 0) > n.get("carbs", 0) + 0.01:
         p.append("sugar is higher than carbs")
     if n.get("sat_fat", 0) > n.get("fat", 0) + 0.01:
         p.append("sat_fat is higher than fat")
+    if ing.diet not in DIETS:
+        p.append(f"diet must be one of {DIETS}")
     if not ing.include:
         p.append("match.include is empty")
     if ing.unit == "piece" and not ing.piece_g:

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pantry-planner/recipe.schema.json",
+  "title": "Pantry Planner recipe file",
+  "description": "A file holds one recipe or a list of recipes. Nutrition is calculated from data/ingredients.yml, never written here.",
+  "oneOf": [
+    { "$ref": "#/definitions/recipe" },
+    { "type": "array", "items": { "$ref": "#/definitions/recipe" }, "minItems": 1 }
+  ],
+  "definitions": {
+    "recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "title", "description", "mealTypes", "cuisine", "servings", "prepMinutes", "cookMinutes",
+        "difficulty", "mainProtein", "ingredients", "steps", "tags", "keepsDays", "equipment", "illustration"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 60 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 200 },
+        "mealTypes": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": { "enum": ["breakfast", "lunch", "dinner", "dessert", "snack"] }
+        },
+        "cuisine": {
+          "enum": [
+            "croatian-dalmatian", "croatian-slavonian", "croatian-istrian", "croatian-continental",
+            "mediterranean", "italian", "greek", "chinese", "thai", "japanese", "korean", "indian",
+            "mexican", "middle-eastern", "everyday"
+          ]
+        },
+        "servings": { "type": "integer", "minimum": 1, "maximum": 16 },
+        "prepMinutes": { "type": "integer", "minimum": 0, "maximum": 240 },
+        "cookMinutes": { "type": "integer", "minimum": 0, "maximum": 480 },
+        "difficulty": { "enum": ["easy", "medium", "hard"] },
+        "mainProtein": {
+          "enum": ["chicken", "turkey", "beef", "pork", "lamb", "veal", "fish", "seafood", "eggs", "dairy", "legumes", "tofu", "mixed-meat", "nuts", "none"]
+        },
+        "ingredients": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "quantity", "unit"],
+            "properties": {
+              "id": { "type": "string" },
+              "quantity": { "type": "number", "exclusiveMinimum": 0 },
+              "unit": { "enum": ["g", "ml", "piece", "tbsp", "tsp", "pinch"] },
+              "optional": { "type": "boolean" },
+              "note": { "type": "string", "maxLength": 60 }
+            }
+          }
+        },
+        "steps": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 5, "maxLength": 400 } },
+        "tags": {
+          "type": "array", "uniqueItems": true,
+          "items": {
+            "enum": [
+              "vegetarian", "vegan", "high-protein", "freezer-friendly", "cook-once-eat-twice", "kid-friendly",
+              "batch", "quick", "one-pot", "no-cook", "make-ahead", "comfort", "light", "festive"
+            ]
+          }
+        },
+        "keepsDays": { "type": "integer", "minimum": 0, "maximum": 14, "description": "Days it keeps in the fridge once cooked" },
+        "equipment": { "type": "array", "items": { "type": "string" } },
+        "illustration": { "type": "string", "minLength": 1, "maxLength": 8, "description": "An emoji for now; photos later" },
+        "photo": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
