@@ -1,0 +1,186 @@
+// App state: one object, saved to IndexedDB after every change.
+
+import { useEffect, useState } from 'preact/hooks';
+import type { ChainId } from '../lib/data';
+import type { Diet } from '../lib/nutrition';
+import type { Meal, PantryItem, Rating, Slot } from '../planner/types';
+import { dbGet, dbSet } from './db';
+
+export interface StoreChoice {
+  chain: ChainId;
+  storeId: string;
+  label: string; // "Lidl Jastrebarsko"
+  address: string;
+}
+
+export interface Settings {
+  onboarded: boolean;
+  adults: number;
+  children: number;
+  budget: number;
+  meals: Slot[];
+  diet: Diet | 'none';
+  dislikes: string[];
+  stores: StoreChoice[];
+  storeMode: 'one' | 'cheapest';
+  activeStore: number; // which store, when storeMode is 'one'
+  energyTarget: number;
+  weekdayMaxMinutes: number;
+  newDishEachWeek: boolean;
+  cookOnceEatTwice: boolean;
+}
+
+export interface SavedPlan {
+  startDate: string;
+  seed: number;
+  meals: Meal[];
+  cooked: number[]; // indexes of meals marked cooked
+  avoid: Record<number, string[]>; // recipes already swapped out per meal
+  settingsKey: string; // settings the plan was made with
+  createdAt: string;
+  /** What was at home when the plan was made. The week's shopping list is
+   * based on this, so adding shopping or cooking later does not change it. */
+  pantryAtStart: PantryItem[];
+  leftoversSaved?: boolean;
+}
+
+export interface RatingEntry extends Rating {
+  reasons?: string[];
+  at: string;
+}
+
+export interface PantryEntry {
+  id: string;
+  ingredient: string;
+  amount: number; // ingredient unit
+  full: number; // amount when full (for the fill bar)
+  storage: 'fridge' | 'shelves' | 'freezer';
+  addedOn: string;
+  expiresOn?: string;
+}
+
+export interface AppData {
+  version: 1;
+  settings: Settings;
+  plan: SavedPlan | null;
+  ratings: RatingEntry[];
+  favourites: string[];
+  notes: Record<string, string>;
+  history: { recipeId: string; date: string }[];
+  pantry: PantryEntry[];
+  shoppingChecked: Record<string, boolean>;
+}
+
+export const DEFAULT_APP_SETTINGS: Settings = {
+  onboarded: false,
+  adults: 2,
+  children: 0,
+  budget: 80,
+  meals: ['breakfast', 'lunch', 'dinner'],
+  diet: 'none',
+  dislikes: [],
+  stores: [],
+  storeMode: 'one',
+  activeStore: 0,
+  energyTarget: 2200,
+  weekdayMaxMinutes: 45,
+  newDishEachWeek: true,
+  cookOnceEatTwice: true,
+};
+
+export function emptyData(): AppData {
+  return {
+    version: 1,
+    settings: { ...DEFAULT_APP_SETTINGS },
+    plan: null,
+    ratings: [],
+    favourites: [],
+    notes: {},
+    history: [],
+    pantry: [],
+    shoppingChecked: {},
+  };
+}
+
+/** The settings that change what a plan looks like. */
+export function settingsKey(s: Settings): string {
+  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice]);
+}
+
+// ------------------------------------------------------------------ store
+
+const KEY = 'data';
+let data: AppData = emptyData();
+let loaded = false;
+const listeners = new Set<() => void>();
+let saveTimer: ReturnType<typeof setTimeout> | null = null;
+
+export async function loadData(): Promise<AppData> {
+  const saved = await dbGet<AppData>(KEY);
+  data = saved ? migrate(saved) : emptyData();
+  loaded = true;
+  listeners.forEach((l) => l());
+  return data;
+}
+
+export function migrate(d: AppData): AppData {
+  const base = emptyData();
+  const out = { ...base, ...d, settings: { ...base.settings, ...(d.settings ?? {}) } };
+  if (out.plan) out.plan = { ...out.plan, cooked: out.plan.cooked ?? [], avoid: out.plan.avoid ?? {}, pantryAtStart: out.plan.pantryAtStart ?? [] };
+  return out;
+}
+
+/** Start again from scratch (used by Settings). */
+export function resetData(): void {
+  update(() => emptyData());
+}
+
+export function getData(): AppData {
+  return data;
+}
+
+export function isLoaded(): boolean {
+  return loaded;
+}
+
+/** Change state. The updater gets a copy-on-write draft. */
+export function update(fn: (d: AppData) => AppData | void): void {
+  const draft = structuredClone(data);
+  data = fn(draft) ?? draft;
+  listeners.forEach((l) => l());
+  if (saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => void dbSet(KEY, data), 250);
+}
+
+export function useApp(): AppData {
+  const [, setTick] = useState(0);
+  useEffect(() => {
+    const l = () => setTick((t) => t + 1);
+    listeners.add(l);
+    return () => {
+      listeners.delete(l);
+    };
+  }, []);
+  return data;
+}
+
+// ------------------------------------------------------------------ backup
+
+export function exportBackup(): string {
+  return JSON.stringify({ app: 'pantry-planner', exportedAt: new Date().toISOString(), data }, null, 1);
+}
+
+/** Replace everything with a backup file's contents. Throws a readable error. */
+export function importBackup(text: string): void {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    throw new Error('This file is not a Pantry Planner backup.');
+  }
+  const p = parsed as { app?: string; data?: AppData };
+  if (p.app !== 'pantry-planner' || !p.data || p.data.version !== 1 || typeof p.data.settings !== 'object') {
+    throw new Error('This file is not a Pantry Planner backup.');
+  }
+  update(() => migrate(p.data!));
+}

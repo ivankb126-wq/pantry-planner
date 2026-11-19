@@ -1,8 +1,4 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
-import { PlannerDemo } from './components/PlannerDemo';
-import { RecipeBrowser } from './components/RecipeBrowser';
-import type { Offer } from './planner/types';
-import { SunsetArt } from './components/SunsetArt';
 import {
   CHAIN_ORDER,
   type ChainId,
@@ -13,22 +9,20 @@ import {
   type StorePrices,
   loadIngredients,
   loadMeta,
-  loadReferencePrices,
   loadStorePrices,
   loadStores,
-} from './lib/data';
-import { daysBetween, formatAmount, formatEur, formatShortDate, formatUnitPrice, zagrebToday } from './lib/format';
-import { readPref, writePref } from './lib/prefs';
+} from '../lib/data';
+import { daysBetween, formatAmount, formatEur, formatShortDate, formatUnitPrice, zagrebToday } from '../lib/format';
+import { readPref, writePref } from '../lib/prefs';
+import { Screen, TitleBar } from '../ui/kit';
 
-// Milestone 1: a "data status" page. It shows how fresh each chain's prices
-// are and lets you check sample prices in any store against the shelf.
+// "Price data": how fresh each chain's prices are, and sample prices in any
+// store to check against the shelf (the milestone 1 status page).
 
-export function App() {
+export function DataStatus() {
   const [meta, setMeta] = useState<Meta | null>(null);
   const [ingredients, setIngredients] = useState<Record<string, Ingredient>>({});
   const [error, setError] = useState<string | null>(null);
-  const [planPrices, setPlanPrices] = useState<{ prices: StorePrices | null; label: string }>({ prices: null, label: '' });
-  const [reference, setReference] = useState<Offer[]>([]);
 
   useEffect(() => {
     Promise.all([loadMeta(), loadIngredients()])
@@ -37,16 +31,11 @@ export function App() {
         setIngredients(Object.fromEntries(ings.map((i) => [i.id, i])));
       })
       .catch(() => setError('Price data could not be loaded. Check your connection and try again.'));
-    loadReferencePrices().then((list) => setReference(list.map((r) => ({ ...r, store: 'estimate' }))));
   }, []);
 
   return (
-    <main class="page">
-      <header class="hero">
-        <SunsetArt />
-        <h1>Pantry Planner</h1>
-        <p>Price data and recipe library. Plans, shopping lists and your pantry arrive in the next steps.</p>
-      </header>
+    <Screen tabs={false} glow="teal">
+      <TitleBar title="Price data" backTo="#/settings" />
 
       {error && (
         <section class="card error" role="alert">
@@ -57,11 +46,7 @@ export function App() {
 
       {meta && <Summary meta={meta} />}
       {meta && <ChainStatus meta={meta} />}
-      {meta && (
-        <SamplePrices meta={meta} ingredients={ingredients} onPrices={(prices, label) => setPlanPrices({ prices, label })} />
-      )}
-      {meta && <PlannerDemo prices={planPrices.prices} storeLabel={planPrices.label} reference={reference} />}
-      <RecipeBrowser />
+      {meta && <SamplePrices meta={meta} ingredients={ingredients} />}
 
       <p class="note">
         Orientation prices from the official daily price lists, via{' '}
@@ -70,7 +55,7 @@ export function App() {
         </a>
         . Loyalty-card and app-only discounts may not be included.
       </p>
-    </main>
+    </Screen>
   );
 }
 
@@ -138,15 +123,7 @@ interface Choice {
   store: string | null;
 }
 
-function SamplePrices({
-  meta,
-  ingredients,
-  onPrices,
-}: {
-  meta: Meta;
-  ingredients: Record<string, Ingredient>;
-  onPrices?: (prices: StorePrices | null, label: string) => void;
-}) {
+function SamplePrices({ meta, ingredients }: { meta: Meta; ingredients: Record<string, Ingredient> }) {
   const available = CHAIN_ORDER.filter((c) => meta.chains[c]?.available);
   const saved = readPref<Choice>('status.store');
   const [chain, setChain] = useState<ChainId>(saved && available.includes(saved.chain) ? saved.chain : available[0]);
@@ -187,12 +164,6 @@ function SamplePrices({
   }, [stores, cityQuery]);
 
   const store = stores.find((s) => s.id === storeId) ?? null;
-
-  // Share the chosen store's prices with the planner.
-  const label = store ? `${meta.chains[chain]?.name ?? chain} ${store.city}` : '';
-  useEffect(() => {
-    onPrices?.(prices && store ? prices : null, label);
-  }, [prices, label]);
 
   // One line per ingredient: its best value product in this store.
   const rows = useMemo(() => {

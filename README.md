@@ -4,7 +4,20 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 3** (price pipeline, 262 ingredients, 150 recipes, planner engine).
+Status: **milestone 4** (price pipeline, 262 ingredients, 150 recipes, planner
+engine, and the app screens: setup, Plan, Recipes, recipe page, cooking mode,
+Shopping, Pantry, Settings with backup).
+
+## App
+
+[src/app/](src/app) holds the app's state (saved in the browser's IndexedDB on
+the phone, with a backup file you can export and restore), the hash router
+(`#/plan`, `#/recipes`, `#/recipe/<id>`, `#/cook/<id>`, `#/shopping`,
+`#/pantry`, `#/settings`, `#/data`) and the glue to the planner.
+[src/screens/](src/screens) has one file per screen and [src/ui/](src/ui) the
+shared pieces (icons, sheets, steppers, switches) in the Sunset Night style.
+A plan remembers what was in the pantry when it was made, so adding shopping
+or cooking during the week does not change that week's list.
 
 ## Planner
 
@@ -54,7 +67,7 @@ for unusual values.
 
 | Folder | What is in it |
 |---|---|
-| `src/` | The web app |
+| `src/` | The web app (`app/` state, `screens/`, `ui/`, `planner/`, `lib/`) |
 | `pipeline/` | Python price pipeline and its tests |
 | `data/ingredients.yml` | Master ingredient list: nutrition, package sizes, Croatian search words |
 | `.github/workflows/` | Checks on every change, and the twice-daily price update and deploy |

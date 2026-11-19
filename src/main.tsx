@@ -1,5 +1,6 @@
 import { render } from 'preact';
-import { App } from './app';
+import { Shell } from './app/Shell';
 import './styles/app.css';
+import './styles/screens.css';
 
-render(<App />, document.getElementById('app')!);
+render(<Shell />, document.getElementById('app')!);
