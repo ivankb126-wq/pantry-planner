@@ -3,6 +3,70 @@
 body.no-scroll {
   overflow: hidden;
 }
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+a,
+label,
+input {
+  touch-action: manipulation;
+}
+
+/* ---------------------------------------------------------------- offline and install */
+.offline-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: calc(var(--safe-top) + 4px) 16px 5px;
+  background: #3a2210;
+  border-bottom: 1px solid var(--orange);
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+body.is-offline .screen-inner {
+  padding-top: calc(var(--safe-top) + 46px);
+}
+.install-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 12px 12px 14px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--purple);
+}
+.install-card img {
+  border-radius: 10px;
+  flex: none;
+}
+.install-card strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.25;
+}
+.install-card small {
+  display: block;
+  color: var(--muted);
+}
+.install-steps {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+}
+.install-steps li::marker {
+  color: var(--pink);
+  font-weight: 700;
+}
+.inline-icon {
+  vertical-align: -3px;
+  color: var(--teal);
+}
 a {
   color: inherit;
 }

@@ -13,7 +13,8 @@
     "test": "npm run content && vitest run",
     "check": "npm run lint && npm run typecheck && npm run test",
     "add-recipe-check": "tsx scripts/recipes.ts check",
-    "content": "tsx scripts/recipes.ts build"
+    "content": "tsx scripts/recipes.ts build",
+    "icons": "tsx scripts/make-icons.ts"
   },
   "dependencies": {
     "preact": "^11.2.0"

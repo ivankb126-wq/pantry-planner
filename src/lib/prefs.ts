@@ -1,5 +1,5 @@
-// Small per-device conveniences (last chosen store and similar). Real user
-// data (plans, pantry, ratings) will live in IndexedDB from milestone 4.
+// Small per-device conveniences (last chosen store, hidden tips). Real user
+// data (plans, pantry, ratings) lives in IndexedDB (src/app/state.ts).
 
 const PREFIX = 'pantry-planner:';
 

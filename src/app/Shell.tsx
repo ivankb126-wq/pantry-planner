@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { Cooking } from '../screens/Cooking';
 import { DataStatus } from '../screens/DataStatus';
+import { OfflineBar } from '../screens/Install';
 import { Onboarding } from '../screens/Onboarding';
 import { PantryScreen } from '../screens/Pantry';
 import { PlanScreen } from '../screens/Plan';
@@ -14,7 +15,7 @@ import { ShoppingScreen } from '../screens/Shopping';
 import { TabBar } from '../ui/kit';
 import { requestPersistence } from './db';
 import { usePriceData } from './prices';
-import { useRoute } from './router';
+import { type Route as RouteInfo, useRoute } from './router';
 import { isLoaded, loadData, useApp } from './state';
 
 export function Shell() {
@@ -30,8 +31,17 @@ export function Shell() {
   const prices = usePriceData(d.settings);
 
   if (!ready) return <div class="boot" aria-busy="true" />;
+  return (
+    <>
+      <OfflineBar />
+      <Route route={route} prices={prices} onboarded={d.settings.onboarded} />
+    </>
+  );
+}
+
+function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnType<typeof usePriceData>; onboarded: boolean }) {
   if (route.name === 'data') return <DataStatus />;
-  if (!d.settings.onboarded) return <Onboarding />;
+  if (!onboarded) return <Onboarding />;
 
   switch (route.name) {
     case 'recipe':

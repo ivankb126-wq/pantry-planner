@@ -13,6 +13,7 @@ import type { Check, MealView, PlanResult } from '../planner/types';
 import { IconCheck, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
 import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
+import { InstallCard } from './Install';
 import { CHAIN_NAME, StoreModePicker } from './pickers';
 
 export interface PriceState {
@@ -164,6 +165,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
   return (
     <>
       <BudgetCard d={d} data={data} result={result} onStore={onStore} />
+      <InstallCard />
       <TodayCard d={d} result={result} t={t} sale={sale} onSwap={onSwap} />
       <CheckChips checks={result.checks} />
       <WeekList d={d} result={result} t={t} sale={sale} />

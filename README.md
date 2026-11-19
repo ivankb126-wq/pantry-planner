@@ -4,10 +4,44 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 5** (price pipeline, 262 ingredients, 150 recipes, planner
-engine, the app screens, and the living pantry: shopping fills it, "Mark
-cooked" empties it with Undo, use-soon dates, running-low staples suggested
-for the shopping list, a weekly pantry check).
+Status: **milestone 6** (price pipeline, 262 ingredients, 150 recipes, planner
+engine, the app screens, the living pantry, works offline and installs on
+the iPhone home screen).
+
+Open it: **https://ivankb126-wq.github.io/pantry-planner/**
+
+## Put it on the iPhone home screen
+
+1. Open the link above in **Safari** on the iPhone.
+2. Tap the **Share** button (the square with an arrow, at the bottom).
+3. Scroll down and tap **Add to Home Screen**, then **Add**.
+4. Open **Pantry** from the home screen. It opens full screen and works
+   without internet, using the prices saved the last time it was online.
+
+The home screen app keeps its own data, separate from Safari. To move your
+plan, ratings and pantry: in Safari open Settings, **Back up my data**, then
+in the home screen app open Settings, **Restore a backup** and pick the file.
+
+## Asking for new recipes and features
+
+Changes are made by asking Claude in a Claude Code session on this
+repository. Plain sentences work. Some examples:
+
+- **A new recipe:** "Add a recipe for stuffed peppers (punjene paprike),
+  dinner, serves 4, about 60 minutes." Paste a recipe from a book or website
+  if you have one. Claude writes it in `recipes/`, runs the recipe check
+  (format, ingredients, nutrition) and uploads it. Missing ingredients are
+  added to `data/ingredients.yml` with their nutrition and shop search words.
+- **A wrong price or product:** "Eggs at Konzum show the wrong product" with a
+  screenshot. Claude adjusts the search words for that ingredient.
+- **A change to the app:** "Make the shopping list text bigger" or "Add a
+  dessert every Sunday". Describe what you see and what you would like
+  instead; a screenshot helps.
+- **Something broken:** say what you tapped, what you expected and what
+  happened, with a screenshot.
+
+Every change is checked automatically on GitHub (tests, recipe check) before
+the site updates, and the site updates itself within a few minutes.
 
 ## App
 
@@ -23,6 +57,13 @@ or cooking during the week does not change that week's list.
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a
 threshold (or used up) are suggested as "Running low".
+
+**Offline.** [src/service-worker.js](src/service-worker.js) is published as
+`sw.js` by a small plugin in [vite.config.ts](vite.config.ts), which fills in
+the build's file list. App files are saved on install; price data is fetched
+fresh when online and the saved copy is used offline (or after 4 seconds on a
+slow connection). App icons are drawn by `npm run icons`
+([scripts/make-icons.ts](scripts/make-icons.ts)) into `public/icons/`.
 
 ## Planner
 

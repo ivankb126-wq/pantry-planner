@@ -8,6 +8,7 @@ import { IconChevron } from '../ui/icons';
 import { Chip, Screen, Sheet, Stepper, TitleBar, Toast, Toggle, useToast } from '../ui/kit';
 import { plural } from '../ui/words';
 import { DIET_OPTIONS, DietPicker, DislikesPicker, MEAL_OPTIONS, MealsPicker, StoreModePicker, StorePicker } from './pickers';
+import { InstallSteps, isInstalled } from './Install';
 import { storeSummary } from './Plan';
 
 function set(p: Partial<Settings>) {
@@ -119,6 +120,7 @@ export function SettingsScreen({ section }: { section?: string }) {
       <BackupGroup />
 
       <Group title="About">
+        <InstallRow />
         <a class="list-row link" href="#/data">
           <span class="grow">
             Price data and dates
@@ -137,18 +139,63 @@ export function SettingsScreen({ section }: { section?: string }) {
   );
 }
 
+function InstallRow() {
+  const [open, setOpen] = useState(false);
+  if (isInstalled()) {
+    return (
+      <div class="list-row">
+        <span class="grow">
+          On your home screen
+          <small>The app works offline with the prices saved on your phone.</small>
+        </span>
+      </div>
+    );
+  }
+  return (
+    <>
+      <button class="list-row link" onClick={() => setOpen(true)}>
+        <span class="grow">
+          Add to Home Screen
+          <small>Opens like an app and works offline in the shop</small>
+        </span>
+        <IconChevron size={18} />
+      </button>
+      {open && (
+        <Sheet title="Add to Home Screen" onClose={() => setOpen(false)}>
+          <InstallSteps />
+          <button class="btn-primary wide" onClick={() => setOpen(false)}>
+            Got it
+          </button>
+        </Sheet>
+      )}
+    </>
+  );
+}
+
 function BackupGroup() {
   const d = useApp();
   const file = useRef<HTMLInputElement>(null);
   const [toast, setToast] = useToast<string>();
   const [confirmReset, setConfirmReset] = useState(false);
 
-  const download = () => {
-    const blob = new Blob([exportBackup()], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
+  const download = async () => {
+    const name = `pantry-planner-backup-${zagrebToday()}.json`;
+    const file = new File([exportBackup()], name, { type: 'application/json' });
+    // On the iPhone the share sheet has "Save to Files", which also works
+    // from the home screen app (plain downloads do not always).
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: 'Pantry Planner backup' });
+        setToast('Backup ready. Keep the file somewhere safe, for example iCloud Drive.');
+      } catch (e) {
+        if ((e as Error).name !== 'AbortError') setToast('The backup could not be shared. Try again.');
+      }
+      return;
+    }
+    const url = URL.createObjectURL(file);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `pantry-planner-backup-${zagrebToday()}.json`;
+    a.download = name;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -177,7 +224,7 @@ function BackupGroup() {
           </span>
         </div>
         <div class="list-row buttons">
-          <button class="btn-primary grow" onClick={download}>
+          <button class="btn-primary grow" onClick={() => void download()}>
             Back up my data
           </button>
           <button class="btn-ghost grow" onClick={() => file.current?.click()}>
