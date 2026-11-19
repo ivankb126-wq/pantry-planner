@@ -1,0 +1,32 @@
+/* Sunset Night design tokens (SPEC section 7). The app is dark only. */
+:root {
+  --bg: #140b24;
+  --surface: #1f1433;
+  --surface-2: #2a1650;
+  --border: #33224d;
+  --text: #fff1f7;
+  --muted: #b9a8d0;
+  --pink: #ff4fa3;
+  --orange: #ff9a3c;
+  --teal: #3de3d0;
+  --purple: #9b5cff;
+  --on-accent: #140b24;
+  --plank: #3a2560;
+
+  --sunset: linear-gradient(120deg, var(--pink), var(--orange));
+  --glow-pink: 0 8px 28px rgba(255, 79, 163, 0.35);
+
+  --radius-card: 24px;
+  --radius-control: 16px;
+  --radius-tile: 14px;
+  --tap: 44px;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --gutter: 16px;
+
+  color-scheme: dark;
+}

@@ -1,0 +1,9 @@
+product_id,barcode,name,brand,category,unit,quantity
+1,3850001,PILEĆI FILE 500 g,Cekin,Hrana,kg,"0,5000"
+2,3850002,JAJA SPAR M RAZRED 10/1,Spar,Hrana,kom,"10,0000"
+3,3850003,MAJONEZA OD SVJ. JAJA 165 g,Thomy,Hrana,kg,"0,1650"
+4,3850004,RIŽA S-BUDGET BASMATI 1 kg,S-Budget,Hrana,kg,"1,0000"
+5,3850005,RIŽA PREMIUM BASMATI 500 g,Spar,Hrana,kg,"0,5000"
+6,3850006,Mandarina rfs,,Hrana,kg,"1,0000"
+7,3850007,OSVJ.PIĆE FIS JABUKA 1 L,Fis,Pića,L,"1,0000"
+8,3850008,SRE.ZA ČIŠĆ. PERIL.SOMAT 250 ml,Somat,Sredstva za čišćenje,L,"0,2500"

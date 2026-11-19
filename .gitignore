@@ -1,0 +1,12 @@
+node_modules/
+dist/
+# Price data is built by GitHub Actions into the Pages site, never committed.
+public/data/
+build/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store

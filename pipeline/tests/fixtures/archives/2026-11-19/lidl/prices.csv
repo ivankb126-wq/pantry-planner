@@ -1,0 +1,5 @@
+store_id,product_id,price,unit_price,best_price_30,anchor_price,special_price,available,special_sale_type,anchor_price_date
+104,10,2.29,2.29,,2.29,,,,2025-05-02
+104,10,2.29,2.29,,2.29,,,,2025-05-02
+104,11,2.49,0.25,2.29,2.79,2.49,,,2025-05-02
+104,12,1.98,0.99,,2.18,,,,2025-05-02

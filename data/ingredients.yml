@@ -1,0 +1,1676 @@
+# Pantry Planner master ingredient list.
+#
+# Every recipe ingredient must have an entry here. Fields:
+#   id            short unique name used by recipes (lowercase, dashes)
+#   name          English name shown in the app
+#   category      aisle: fruit-veg, meat, fish, dairy, eggs, bakery, grains, legumes,
+#                 canned, sauces, oils, spices, baking, nuts, frozen, sweets, drinks
+#   storage       where it lives at home: fridge, shelves, freezer
+#   unit          g, ml or piece (what recipes measure it in)
+#   piece_g       weight of one piece in g (needed for unit: piece)
+#   density       g per ml (only for liquids measured in ml, default 1)
+#   staple        true for pantry basics (oil, salt, flour...)
+#   package       icon on the pantry shelf: jar, box, bag, bottle, can, pack, loose, carton, tube
+#   packages      typical package sizes in the ingredient's unit
+#   loose         true if the shops also sell it by weight (price per kg)
+#   shelf_life_days  how long it keeps once bought (fresh food only)
+#   nutrition     per 100 g (per 100 ml for unit ml): kcal, protein, carbs (without fibre),
+#                 sugar, fat, sat_fat, fibre, salt. Approximate values from standard food tables.
+#   match         Croatian search words for the store price files:
+#                   include: product matches if ANY rule matches (all words of that rule present)
+#                   exclude: product is skipped if ANY rule matches
+#                 Case and diacritics do not matter. A word ending in * matches any
+#                 ending: "PILE*" matches PILEĆI, PILEĆA, PILEĆE.
+
+settings:
+  # Non-food products are never matched, whatever their name.
+  global_exclude:
+    - HRANA ZA
+    - ZA PSE
+    - ZA MACKE
+    - PSE
+    - PSI
+    - MACKE
+    - PASA
+    - SAMPON*
+    - REGENERATOR*
+    - DEZODOR*
+    - DETERDZ*
+    - OMEKSIV*
+    - PELEN*
+    - SVIJEC*
+    - SAPUN*
+    - LOSION*
+    - BALZAM ZA
+    - GEL ZA
+    - KREMA ZA LICE
+    - KREMA ZA RUKE
+    - KREMA ZA TIJELO
+    - PASTA ZA ZUBE
+    - OSVJEZIV*
+    - KASICA*
+    - HIPP
+    - SPF
+    - ZA SUNCANJE
+    - SREDSTVO ZA
+    - DEKORACIJ*
+    - IGRACK*
+    - REZAC*
+    - PRESA
+    - GNJECIL*
+    - MLINAC*
+    - CJEDIL*
+    - NALJEPN*
+    - TRAKA
+    - VRPCA
+    - SADNIC*
+    - OLOVK*
+    - GRIZALO*
+    - PLASTICN*
+    - SILIKON*
+    - MIRISNI
+    - BORIC
+    - VUSE
+    - THOR
+    - NIKOTIN*
+    - KALUP*
+    - POSUDA*
+    - ZDJEL*
+    - LEGO*
+    - ZA USNE
+    - NAVLAK*
+    - KUPANJ*
+    - PJENA ZA
+    - SJEME
+    - NISKI
+    - UKRASN*
+    - PALETTE*
+    - INTEX*
+    - BAZEN*
+    - LONAC*
+    - DOZATOR*
+    - ZLICIC*
+    - KUPKA*
+    - PALMOLIVE*
+    - ODMASC*
+    - PERO
+    - BOLSIUS*
+    - MIRISNO
+    - PEDIGRE*
+    - FRISKIES*
+    - WHISKAS*
+    - PURINA*
+    - FELIX*
+    - PEDIGREE*
+    - GOURMET GOLD
+    - ADULT
+    - PSEC*
+    - TAMNJ*
+    - SYOSS*
+    - BOJA ZA KOSU
+    - BREF*
+    - WC
+    - PRANJ*
+    - TUS
+    - DEO
+    - BIOBAZA*
+    - VIOLETA*
+    - MARAMIC*
+    - ZLICA*
+    - GERBER*
+    - HIPPIS*
+    - POUCH*
+    - FI
+    - RIBEZ*
+    - NOZ
+    - LJUSTENJ*
+    - SPREJ
+    - COCKPIT*
+  nonfood_categories:
+    - KOZMET
+    - CISCENJ
+    - TOALET
+    - KUCANS
+    - LJUBIMC
+    - HIGIJEN
+    - DROGER
+    - NEPREHRAMB
+    - TEKSTIL
+    - PAPIRN
+  # Groups of words that reject a product for every ingredient, unless the
+  # ingredient says "allow: [group]" under match (dark chocolate allows sweets).
+  exclude_groups:
+    drinks: [PICE, OSVJ, GAZ, NEKT*, SOK, SOKOVI, JUICE, VINO, PJEN, PJENUSAC*, PIVO, RADLER*, VODKA, GIN, RUM, LIKER*, RAKIJ*, KOMBUCH*, LIMUNAD*, ISO, ENERGY, CEDEVIT*, NAPITAK*, NAPITCI, SIRUP*, JUICY*, RAUCH*, YIPPY*, POWERADE*, TOCO, MULLERMILCH*, BOLERO*, NESTEA*, ISOTONIC*, FLEXWATER*, ACTIMEL*, MILCHSHAKE*, PFANNER*, PAGO, FRUCTAL*, VINDI, OSHEE*, IZOTONIK*, JANA, PEPSI*, COCA*, FANTA, SPRITE, SCHWEPP*, SOMERSBY*, CIDER*, SMOOTHIE*, NEKTAR*, CAJ, VOCNI CAJ, LEDENI CAJ]
+    sweets: [COK, COKO*, COKOL*, CHOCO*, BOMB, BOMBON*, SLAD, SLADOLED*, NAPOL, NAPOLITANK*, VAFEL*, VAFL*, KEKS*, KEKSI, MUFFIN*, ROLA, ROLADA*, CROIS*, KROASAN*, DONUT*, KREMSNIT*, TORTA, TORTE, TORTICA, DESERT*, DES, DESE, PUD, PUDING*, CHEESE CAKE, CHEESECAKE*, TART, GUMENI*, LIZALIC*, ZVAKAC*, NUGAT*, PRALIN*, MARCIPAN*, KANDIT*, MILKA, KINDER*, MERCI, LINDT, TOBLERONE*, MARS, SNICKERS*, TWIX*, BOUNTY*, NUTELL*, KOLAC*, KOL, KROKANT*, PLOCIC*, BAR, PROTEIN BAR*, MUSLI PL*, CORNY*, CRUNCHY*, SANTE, BISKVIT*, PISKOT*, KITKAT*, KIT KAT, DESSERT*, ROLAD*, SOFT, BISCUIT*, CAKE*, MIGNON*, SLATKIS*, KRAFN*, CHIPITA*, JAFFA*, MEDENJAC*]
+    readymeals: [SAL, SALATA OD, GOTOV*, JELO, SENDVI*, POLPET*, GRATIN*, GRATINI, S MESOM, SA MESOM, NUGGET*, KAS, KASA, KASICA*, OBROK, VARIVO*, RIZOTO*, PAELL*, LAZANJ*, MUSAK*, SARMA*, PIZZ*, BUREK*, PITA, SAVIJAC*, STRUKL*, ZAMJES, ZAMJ*, JASTUC*, JAST, PUNJ, OKRUGLIC*, SLOZENAC*, INSALAT*, NA MASLACU, STRUDL*, PILETIN*]
+
+ingredients:
+
+  # ---------------------------------------------------------------- meat
+  - id: chicken-breast
+    name: Chicken breast
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [400, 500, 1000]
+    shelf_life_days: 3
+    nutrition: {kcal: 110, protein: 23, carbs: 0, sugar: 0, fat: 1.5, sat_fat: 0.4, fibre: 0, salt: 0.15}
+    match:
+      include: ["PILE* FILE*", "FILE PILE*", "PILE* PRS*", "PRSA PILE*"]
+      exclude: &processed_meat [SIR, LEDOLE*, PAPROM, PAPAR*, OVITK*, ZABAT*, BATAK*, PAN, DIM, NAREZ*, POHAN*, NARESC*, SALAM*, DIMLJ*, PECEN*, KUHAN*, PASTET*, HRENOV*, KOBAS*, SENDVI*, SALAT*, PANIR*, NUGGET*, JUHA, UMAK*, GRIL*, KEBAB*, PRSUT*, TRAPIC*, SNACK*, CIPS*, PLJESKAV*, CEVAP*, MLJEV*, SUNKA*, PUN*, ROLAD*, STICK*, KROKET*]
+
+  - id: chicken-legs
+    name: Chicken thighs and drumsticks
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [500, 1000]
+    shelf_life_days: 3
+    nutrition: {kcal: 180, protein: 18, carbs: 0, sugar: 0, fat: 12, sat_fat: 3.3, fibre: 0, salt: 0.2}
+    match:
+      include: ["PILE* BATAK*", "PILE* ZABATAK*", "PILE* BATAC*", "PILE* ZABATC*", "PILE* NOG*", "PILE* NOZIC*", "PILE* KARABATAK*", "PILE* FILE ZABAT*"]
+      exclude: [PAN, DIM, NAREZ*, POHAN*, NARESC*, SALAM*, DIMLJ*, PECEN*, KUHAN*, PASTET*, HRENOV*, KOBAS*, SENDVI*, SALAT*, PANIR*, NUGGET*, JUHA, UMAK*, GRIL*, KEBAB*, TRAPIC*, SNACK*, PLJESKAV*, CEVAP*, MLJEV*, SUNKA*, PUN*, ROLAD*, STICK*, KROKET*, KRILC*]
+
+  - id: minced-beef
+    name: Minced beef
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [400, 500, 1000]
+    shelf_life_days: 2
+    nutrition: {kcal: 250, protein: 17, carbs: 0, sugar: 0, fat: 20, sat_fat: 8, fibre: 0, salt: 0.17}
+    match:
+      include: ["JUNE* MLJEVEN*", "MLJEVEN* JUNE*", "GOVE* MLJEVEN*", "MLJEVEN* GOVE*"]
+      exclude: [ZELATIN*, PLJESKAV*, CEVAP*, UMAK*, BOLONJ*, MJESAN*, MIJESAN*, SVINJ*]
+
+  - id: minced-mixed
+    name: Minced pork and beef
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [400, 500, 1000]
+    shelf_life_days: 2
+    nutrition: {kcal: 260, protein: 16, carbs: 0, sugar: 0, fat: 22, sat_fat: 8.5, fibre: 0, salt: 0.17}
+    match:
+      include: ["MLJEVEN* MIJESAN*", "MIJESAN* MLJEVEN*", "MLJEVEN* MJESAN*", "MJESAN* MLJEVEN*", "MLJEVEN* JUNE* SVINJ*", "MLJEVEN* SVINJ* JUNE*", "MLJ MIJ*"]
+      exclude: [PLJESKAV*, CEVAP*, UMAK*, BURGER*]
+
+  - id: pork-loin
+    name: Pork loin chops
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [500, 1000]
+    shelf_life_days: 3
+    nutrition: {kcal: 143, protein: 21, carbs: 0, sugar: 0, fat: 6.5, sat_fat: 2.3, fibre: 0, salt: 0.13}
+    match:
+      include: ["SVINJ* KARE*", "SVINJ* KOTLET*", "SVINJ* BUT*", "SVINJ* FILE*", "SVINJ* SNICL*", "SVINJ* OTKOSTEN*"]
+      exclude: [RAZNJIC*, HRENOV*, MARMEL*, DIMLJ*, KUHAN*, PECEN*, SUNKA*, NARESC*, PRSUT*, SALAM*, POHAN*, PASTET*, KOBAS*, MLJEVEN*, VRAT*]
+
+  - id: pork-neck
+    name: Pork neck
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [500, 1000]
+    shelf_life_days: 3
+    nutrition: {kcal: 220, protein: 17, carbs: 0, sugar: 0, fat: 17, sat_fat: 6, fibre: 0, salt: 0.15}
+    match:
+      include: ["SVINJ* VRAT*"]
+      exclude: [DIMLJ*, KUHAN*, NARESC*, PRSUT*, SALAM*, SUNKA*, PECEN*, BUDJOLA*, BUDELA*]
+
+  - id: turkey-breast
+    name: Turkey breast
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [400, 500, 1000]
+    shelf_life_days: 3
+    nutrition: {kcal: 105, protein: 23.5, carbs: 0, sugar: 0, fat: 1.2, sat_fat: 0.4, fibre: 0, salt: 0.15}
+    match:
+      include: ["PURE* FILE*", "FILE PURE*", "PURE* PRS*"]
+      exclude: [SIROM, ZARA, OVITK*, DELIKAT*, NJUPAL*, LINO*, ZABAT*, BATAK*, PAN, DIM, NAREZ*, POHAN*, NARESC*, SALAM*, DIMLJ*, PECEN*, KUHAN*, PASTET*, HRENOV*, KOBAS*, SENDVI*, SALAT*, PANIR*, NUGGET*, JUHA, UMAK*, GRIL*, KEBAB*, PRSUT*, TRAPIC*, SNACK*, CIPS*, PLJESKAV*, CEVAP*, MLJEV*, SUNKA*, PUN*, ROLAD*, STICK*, KROKET*]
+
+  - id: bacon
+    name: Smoked bacon
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [100, 150, 200, 500]
+    shelf_life_days: 14
+    nutrition: {kcal: 400, protein: 13, carbs: 1, sugar: 0.5, fat: 38, sat_fat: 14, fibre: 0, salt: 3.5}
+    match:
+      include: ["SLANINA*", "PANCETA*", "BACON*", "SLANINE"]
+      exclude: [CIPS*, CHIPS*, OKUS*, NAMAZ*, PASTET*, KOCK* ZA JUHU, UMAK*, KREKER*, STAPIC*, SIR*, KOBAS*, ROLAD*, PIZZA*]
+
+  - id: ham
+    name: Cooked ham
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [100, 150, 200, 500]
+    shelf_life_days: 7
+    nutrition: {kcal: 115, protein: 18, carbs: 1.5, sugar: 1, fat: 4, sat_fat: 1.4, fibre: 0, salt: 2.2}
+    match:
+      include: ["SUNKA*"]
+      exclude: [SUNKARIC*, PIZZ*, PRSUT*, PIZZA*, SIR*, SENDVI*, TOST*, PASTET*, NAMAZ*, DIMLJ* BUT*, SALAM*, CIPS*, OKUS*, PUN*, KROASAN*, BUREK*, TJESTENIN*, PECIV*, SALAT*, ROLAD*]
+
+  - id: sausages
+    name: Smoked sausages
+    category: meat
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [300, 400, 500]
+    shelf_life_days: 14
+    nutrition: {kcal: 300, protein: 13, carbs: 2, sugar: 1, fat: 27, sat_fat: 10, fibre: 0, salt: 2.3}
+    match:
+      include: ["KOBASIC*", "KOBASA*", "KRANJSK*", "HRENOVK*"]
+      exclude: [GRAH*, PILE* PASTET*, CIPS*, OKUS*, PIZZA*, KROASAN*, PECIV*, PUNJEN* TIJEST*, GRAH* S, VARIVO*, GULAS*, JUHA*, KONZERV*, SENDVI*]
+
+  # ---------------------------------------------------------------- fish
+  - id: hake
+    name: Hake fillets
+    category: fish
+    storage: freezer
+    unit: g
+    package: pack
+    packages: [400, 500, 750, 1000]
+    nutrition: {kcal: 75, protein: 17, carbs: 0, sugar: 0, fat: 0.8, sat_fat: 0.2, fibre: 0, salt: 0.2}
+    match:
+      include: ["OSLIC*", "HAKE"]
+      exclude: [EVA, ULJ*, PAN, PECEN*, BAKALAR*, POHAN*, PANIR*, STAPIC*, PRSTIC*, BURGER*, KROKET*, PASTET*, UMAK*]
+
+  - id: salmon
+    name: Salmon fillet
+    category: fish
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [125, 250, 400, 500]
+    shelf_life_days: 2
+    nutrition: {kcal: 200, protein: 20, carbs: 0, sugar: 0, fat: 13, sat_fat: 2.5, fibre: 0, salt: 0.15}
+    match:
+      include: ["LOSOS*", "SALMON*"]
+      exclude: [POKE*, BOWL*, COMBO*, BOX, SENF*, KAISER*, GLAVA, PATE*, DIM, DIMLJ*, NAMAZ*, PASTET*, KONZERV*, SALAT*, SUSHI*, UMAK*, KREM*, POHAN*, BURGER*, HRANA*, ULJE*, OMEGA*, KAPSUL*, NARESC*]
+
+  - id: tuna-canned
+    name: Canned tuna
+    category: canned
+    storage: shelves
+    unit: g
+    package: can
+    packages: [80, 160, 185]
+    nutrition: {kcal: 190, protein: 25, carbs: 0, sugar: 0, fat: 10, sat_fat: 1.6, fibre: 0, salt: 1.0}
+    match:
+      include: ["TUNA*", "TUNJEVIN*"]
+      exclude: [TUNARIC*, PATE*, PASTET*, NAMAZ*, SALAT* S, SALATA*, SVJEZ*, STEAK*, ODREZ*, SUSHI*, PIZZA*, SENDVI*, KROKET*, CARPACCIO*, TJESTENIN*, SMRZN*, MAKARONI*]
+
+  - id: sardines-canned
+    name: Canned sardines
+    category: canned
+    storage: shelves
+    unit: g
+    package: can
+    packages: [90, 100, 125]
+    nutrition: {kcal: 210, protein: 24, carbs: 0, sugar: 0, fat: 12.5, sat_fat: 3, fibre: 0, salt: 1.0}
+    match:
+      include: ["SARDIN*", "SRDEL*"]
+      exclude: [SVJ, SMRZ, PEC*, CIJEL*, FROZY*, SOLJEN*, BG, PATE*, PASTET*, NAMAZ*, SVJEZ*, SMRZN*, FILE* MARINIR*]
+
+  - id: shrimp
+    name: Prawns
+    category: fish
+    storage: freezer
+    unit: g
+    package: bag
+    packages: [200, 400, 500, 1000]
+    nutrition: {kcal: 85, protein: 19, carbs: 0.5, sugar: 0, fat: 1, sat_fat: 0.2, fibre: 0, salt: 1.0}
+    match:
+      include: ["KOZIC*", "SKAMP*", "REPOV* SKAMP*", "GAMBER*", "PRAWN*", "SHRIMP*"]
+      exclude: [SURIMI*, TEMELJAC*, POKE*, BOWL*, CIPS*, CHIPS*, KREKER*, OKUS*, SALAT*, PASTET*, UMAK*, SUSHI*, RIZOT*, PAELL*, PIZZA*, POHAN*, PANIR*]
+
+  - id: squid
+    name: Squid
+    category: fish
+    storage: freezer
+    unit: g
+    package: bag
+    packages: [400, 500, 750, 1000]
+    nutrition: {kcal: 92, protein: 16, carbs: 3, sugar: 0, fat: 1.4, sat_fat: 0.4, fibre: 0, salt: 0.6}
+    match:
+      include: ["LIGNJ*", "LIGNJA"]
+      exclude: [PEC, PECEN*, PRZEN*, POHAN*, PANIR*, KOLUT* POHAN*, SALAT*, KONZERV*, CIPS*, OKUS*, PUN*]
+
+  # ---------------------------------------------------------------- eggs and dairy
+  - id: eggs
+    name: Eggs
+    category: eggs
+    storage: fridge
+    unit: piece
+    piece_g: 60
+    package: box
+    packages: [6, 10, 12, 15, 20, 30]
+    shelf_life_days: 21
+    staple: true
+    nutrition: {kcal: 143, protein: 12.6, carbs: 0.7, sugar: 0.4, fat: 9.5, sat_fat: 3.1, fibre: 0, salt: 0.36}
+    match:
+      include: ["JAJA", "KOKOS* JAJ*"]
+      exclude: [GNOCCHI*, BEZ JAJA, SPATZL*, TIJ, USKRS*, TEK, PASTERIZ*, DOMACE TJEST*, OBOJ*, BOJ*, MAJONEZ*, TJESTENIN*, OD JAJA, S JAJIMA, S JAJ*, JAJCAN*, NOODL*, REZANC*, FLEKIC*, POLZ*, TRGANC*, SPAGET*, KUHAN*, PRAH*, CHOCO*, COKOLAD*, KINDER*, SURPRISE*, PREPELIC*, LIKER*, NJOKI*, MLINC*, TARHAN*, KORE*, JUHA*, SALAT*, NAMAZ*, BJELANJ*, ZUMANJ*, PASTA*, TAGLIA*, LAZANJ*, FUSILLI*, PENNE*, PAPPARDEL*, VERMICEL*, KNEDL*, PENE*]
+
+  - id: milk
+    name: Milk
+    category: dairy
+    storage: fridge
+    unit: ml
+    density: 1.03
+    package: carton
+    packages: [500, 1000]
+    shelf_life_days: 7
+    staple: true
+    nutrition: {kcal: 62, protein: 3.3, carbs: 4.8, sugar: 4.8, fat: 3.2, sat_fat: 2.0, fibre: 0, salt: 0.1}
+    match:
+      include: ["MLIJEKO", "TRAJNO MLIJEKO", "SVJEZE MLIJEKO", "MLIJEKO UHT"]
+      exclude: [ACIDOF*, ZAM, ZAMJ*, BEBIMIL*, APTAMIL*, NUTRILON*, HIPP*, COKOLAD*, KAKAO*, KOKOS*, BADEM*, ZOB*, SOJ*, RIZ*, PRAH*, KONDENZ*, KAVA*, CAPPUCC*, LATTE*, VANILI*, JAGOD*, BANAN*, KISEL*, FERMENT*, KEFIR*, JOGURT*, DJECJ*, FORMUL*, POCETN*, NASTAVN*, BIO KOZ*, KOZJ*, TIJELO*, CISCENJ*, LICE*, SUNC*, NAPITAK*, PROTEIN*, KEKS*, BOMBON*, SLADOLED*, KREM*, NAMAZ*, ZA KAVU, BEZ LAKTOZ* PRAH*, MILKA*, KINDER*, DESERT*, PUDING*, SIR*, KASA*, GRIZ*, PAHULJIC*, CORN*, MUESLI*, MUSLI*, KUKURUZ*, LJESNJAK*, ORAS*, HALAL*, DOJENC*, BEBE*]
+
+  - id: yogurt
+    name: Plain yogurt
+    category: dairy
+    storage: fridge
+    unit: g
+    density: 1.03
+    package: carton
+    packages: [180, 500, 1000]
+    shelf_life_days: 10
+    nutrition: {kcal: 62, protein: 3.5, carbs: 4.5, sugar: 4.5, fat: 3.2, sat_fat: 2.1, fibre: 0, salt: 0.12}
+    match:
+      include: ["JOGURT*", "TEKUCI JOGURT"]
+      exclude: [DRESSING*, NARAN*, CIM*, GRIC*, VOC*, JAGOD*, BRESK*, BANAN*, VANILI*, COKOLAD*, SUMSK*, BOROVN*, MALIN*, VISNJ*, MARELIC*, KUPIN*, ANANAS*, MANGO*, LIMUN*, KOKOS*, CORN*, MUESLI*, MUSLI*, PAHULJ*, GRCK*, GREEK*, PROTEIN*, PIC*, NAPITAK*, KEKS*, PRELJEV*, UMAK*, DRESING*, SMOOTHIE*, CAPPUCC*, KAVA*, STRACIAT*, STRACCIAT*, ZITARIC*, CEREAL*, SKYR*, KEFIR*, DESERT*, LJESNJAK*, ORAH*, MED*, TIRAMIS*, KARAMEL*, PUDING*, KREM*, ACTIVIA* S, ZOB*, SOJ*, BADEM*, VEGAN*, BIOAKTIV*, PRESELJ*]
+
+  - id: greek-yogurt
+    name: Greek-style yogurt
+    category: dairy
+    storage: fridge
+    unit: g
+    package: carton
+    packages: [150, 400, 500, 1000]
+    shelf_life_days: 10
+    nutrition: {kcal: 115, protein: 5, carbs: 4, sugar: 4, fat: 9, sat_fat: 6, fibre: 0, salt: 0.1}
+    match:
+      include: ["GRCK* JOGURT*", "JOGURT* GRCK*", "GREEK* YOG*", "GRCKI TIP*", "GRCK* TIP*", "SKYR*"]
+      exclude: [SIR, BERRY*, ZOB*, GROZ*, VAN, BRES*, MAR, TEK, KUP, VOC*, JAGOD*, BRESK*, BANAN*, VANILI*, COKOLAD*, SUMSK*, BOROVN*, MALIN*, VISNJ*, MARELIC*, KUPIN*, MANGO*, LIMUN*, KOKOS*, MED*, ORAH*, MUESLI*, GRANOL*, PRELJEV*, UMAK*, DRESING*, LJESNJAK*, KARAMEL*, SMOKV*, PISTAC*, CIMET*, TIRAMIS*]
+
+  - id: butter
+    name: Butter
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [125, 250]
+    shelf_life_days: 45
+    staple: true
+    nutrition: {kcal: 740, protein: 0.6, carbs: 0.6, sugar: 0.6, fat: 82, sat_fat: 52, fibre: 0, salt: 0.02}
+    match:
+      include: ["MASLAC", "MASLACA", "BUTTER"]
+      exclude: [OD, INDIJSK*, ORASC*, KIKIRIK*, PEANUT*, KAKAO*, SHEA*, BADEM*, LJESNJAK*, KEKS*, KROASAN*, PECIV*, BISKVIT*, BOMBON*, KARAMEL*, COKOLAD*, NAMAZ* S, TIJESTO*, LISNAT*, CIPS*, POPCORN*, KOKICE*, KEKSI*, BUTTERFLY*, BUTTERMILK*, UMAK*, ZACIN*, BILJN*, MARGARIN*, BISCUIT*, COOKIE*, KREMA*, SLADOLED*, TOST*, VOCN*, GRISIN*, KUKURUZ*, KRUH*, KIFL*, KUGLIC*]
+
+  - id: cooking-cream
+    name: Cooking cream
+    category: dairy
+    storage: fridge
+    unit: ml
+    package: carton
+    packages: [200, 500]
+    shelf_life_days: 14
+    nutrition: {kcal: 200, protein: 2.7, carbs: 3.8, sugar: 3.8, fat: 19, sat_fat: 12, fibre: 0, salt: 0.1}
+    match:
+      include: ["VRHNJE ZA KUHANJE", "KUHANJE VRHNJE", "VRHNJE KUHANJE", "CREME FRAICHE", "VRHNJE ZA KUH*", "VRH* ZA KUH*", "VRHNJE KULINAR*"]
+      exclude: [BILJN*, SOJ*, ZOB*, KOKOS*, RIZ*, BADEM*, VEGAN*]
+
+  - id: sour-cream
+    name: Sour cream
+    category: dairy
+    storage: fridge
+    unit: g
+    package: carton
+    packages: [180, 200, 400, 500]
+    shelf_life_days: 14
+    nutrition: {kcal: 136, protein: 3, carbs: 4, sugar: 4, fat: 12, sat_fat: 7.5, fibre: 0, salt: 0.1}
+    match:
+      include: ["KISEL* VRHNJ*", "VRHNJ* KISEL*", "KISELO VRH*"]
+      exclude: [UMAK*, DIP*, NAMAZ*, CIPS*, OKUS*, LUK*, KREKER*]
+
+  - id: whipping-cream
+    name: Whipping cream
+    category: dairy
+    storage: fridge
+    unit: ml
+    package: carton
+    packages: [200, 250, 500]
+    shelf_life_days: 14
+    nutrition: {kcal: 336, protein: 2.2, carbs: 3, sugar: 3, fat: 35, sat_fat: 22, fibre: 0, salt: 0.08}
+    match:
+      include: ["SLATK* VRHNJ*", "VRHNJ* ZA SLAG*", "VRHNJ* ZA TUC*", "SLAG VRHNJ*", "VRHNJE SLATKO", "SLATKO VRH*"]
+      exclude: [MASLAC*, BILJN*, SOJ*, SPREJ*, SPRAY*, U PRAH*, PRAH*, SLAG PJEN*, KOKOS*, VEGAN*, ZOB*]
+
+  - id: cottage-cheese
+    name: Fresh cottage cheese
+    category: dairy
+    storage: fridge
+    unit: g
+    package: carton
+    packages: [250, 400, 500, 1000]
+    shelf_life_days: 7
+    nutrition: {kcal: 102, protein: 12, carbs: 3.5, sugar: 3.5, fat: 4.5, sat_fat: 2.8, fibre: 0, salt: 0.1}
+    match:
+      include: ["SVJEZ* SIR*", "SIR SVJEZ*", "SVJEZI KRAVLJI SIR", "ZRNAT* SIR*", "COTTAGE*", "SIR ZRNAT*"]
+      exclude: [NAMAZ*, VRHNJE I, VRHNJEM, S VRHNJ*, ZACIN*, VLASC*, LUK*, PAPRIK*, MASLIN*, BILJ*, VOC*, JAGOD*, BRESK*, VANILI*, KREM* SIR*, MOZZARELL*, BURRAT*, SALAT*, STRUKL*, PITA*, BUREK*, PECIV*, SAVIJAC*, TORT*, KOLAC*, SLAN*, RICOTT*, MASCARP*, FILADELF*, PHILADELPH*, LIMUN*, COKOL*, ZAPEC*, ROLAD*, PALACINK*, PUN*]
+
+  - id: hard-cheese
+    name: Gouda or Edam cheese
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [150, 200, 250, 400, 500, 1000]
+    shelf_life_days: 30
+    nutrition: {kcal: 350, protein: 25, carbs: 0.5, sugar: 0, fat: 27.5, sat_fat: 18, fibre: 0, salt: 1.8}
+    match:
+      include: ["GAUDA*", "GOUDA*", "EDAMER*", "EDAM", "TRAPIST*", "SIR GAUDA*", "SIR EDAM*"]
+      exclude: [CIPS*, KREKER*, OKUS*, PIZZA*, SENDVI*, TOST*, PECIV*, KROASAN*, BUREK*, NAMAZ*, TOPLJEN*, KRISKE TOPLJ*, STAPIC*, UMAK*, KOCKIC* SIR* PEC*, PUNJEN*, PRSTIC*, GRICK*]
+
+  - id: parmesan
+    name: Parmesan or Grana Padano
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [80, 100, 150, 200, 250]
+    shelf_life_days: 60
+    nutrition: {kcal: 393, protein: 33, carbs: 0, sugar: 0, fat: 29, sat_fat: 18, fibre: 0, salt: 1.6}
+    match:
+      include: ["PARMIG*", "PARMEZAN*", "GRANA PADANO", "PARMESAN*"]
+      exclude: [SALAM*, CIPS*, KREKER*, OKUS*, PIZZA*, UMAK*, PESTO*, SENDVI*, TJESTENIN*, NJOKI*, RIZOT*, TORTEL*, RAVIOL*, GRISIN*, ZACIN*, PRELJEV*, DRESING*, KRUTON*, KREKERI*, ARANCIN*, CAESAR*]
+
+  - id: mozzarella
+    name: Mozzarella
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [125, 200, 250]
+    shelf_life_days: 14
+    nutrition: {kcal: 250, protein: 18, carbs: 1, sugar: 1, fat: 19.5, sat_fat: 13, fibre: 0, salt: 0.5}
+    match:
+      include: ["MOZZARELL*", "MOCARELA*", "MOZARELA*", "MOZARELL*"]
+      exclude: [PIZZA*, STAPIC*, PRSTIC*, POHAN*, SENDVI*, TOST*, CIPS*, OKUS*, PANIN*, PECIV*, SALAT*, PIADIN*, FOCACC*, KROKET*, TORTIL*, LAZANJ*]
+
+  - id: feta
+    name: Feta cheese
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [150, 200, 400, 500]
+    shelf_life_days: 21
+    nutrition: {kcal: 263, protein: 14, carbs: 1, sugar: 1, fat: 22.5, sat_fat: 15, fibre: 0, salt: 2.7}
+    match:
+      include: ["FETA*", "SIR FETA*", "BALKANSK* SIR*", "SIR U SALAMUR*", "SIR* SALAMUR*", "BIJELI SIR U*"]
+      exclude: [KRUH*, CIPS*, KREKER*, OKUS*, PIZZA*, PECIV*, BUREK*, PITA*, SALAT*, NAMAZ*, SPANAK*, SPINAT*, PIT*, MASLIN* PUN*, PUNJEN*, SAVIJAC*, TORTIL*]
+
+  - id: cream-cheese
+    name: Cream cheese
+    category: dairy
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [125, 150, 175, 200, 300]
+    shelf_life_days: 14
+    nutrition: {kcal: 247, protein: 6, carbs: 4, sugar: 3.5, fat: 23, sat_fat: 15, fibre: 0, salt: 0.8}
+    match:
+      include: ["KREM SIR*", "KREMNI SIR*", "SIR KREM*", "PHILADELPH*", "FILADELF*", "MASCARPONE*", "CREAM CHEESE", "SIRNI NAMAZ*"]
+      exclude: [WASABI*, SUN, KULEN*, VLASC*, LUK*, ZACIN*, BILJ*, PAPRIK*, CHILI*, HREN*, SUNK*, LOSOS*, TUNA*, MASLIN*, RAJCIC*, VOC*, ORAH*, TIRAMIS*, TORT*, KOLAC*, KEKS*, DESERT*, CHEESECAKE*, PECIV*, KROASAN*, LISNAT*, PUN*]
+
+  # ---------------------------------------------------------------- vegetables
+  - id: onion
+    name: Onion
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    piece_g: 120
+    package: bag
+    packages: [500, 1000, 2000]
+    loose: true
+    shelf_life_days: 30
+    staple: true
+    nutrition: {kcal: 40, protein: 1.1, carbs: 7.6, sugar: 4.2, fat: 0.1, sat_fat: 0, fibre: 1.7, salt: 0.01}
+    match:
+      include: ["LUK CRVENI", "CRVENI LUK", "LUK ZUTI", "ZUTI LUK", "LUK SMEDJI", "LUK KUHINJSK*", "LUK MREZ*", "LUK ZLATN*", "LUK LJUBICAST*", "LJUBICASTI LUK", "LUK ZA KUHANJE", "LUK SREBRNAC*"]
+      exclude: [PRZEN*, SUSEN*, PRAH*, GRANUL*, CIPS*, OKUS*, KISEL*, MARMELAD*, DŽEM*, DZEM*, UMAK*, KREKER*, KOLUT*, SIR*, PASTET*, NAMAZ*, ZACIN*, PRSTEN*, POHAN*, KONFIT*, JUHA*, DIP*, PECEN* LUK*, PEC*, HRSKAV*, VEGETA*, KOBAS*, SALAMA*, SMRZN*, MIJESAV*, MIJESANO*, SJEME*, LUKOVIC*]
+
+  - id: garlic
+    name: Garlic
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    package: loose
+    packages: [50, 100, 200, 250]
+    loose: true
+    shelf_life_days: 60
+    staple: true
+    nutrition: {kcal: 149, protein: 6.4, carbs: 30, sugar: 1, fat: 0.5, sat_fat: 0.1, fibre: 2.1, salt: 0.04}
+    match:
+      include: ["CESNJAK*", "BIJELI LUK", "LUK BIJELI"]
+      exclude: [PAPAR*, TABASCO*, JUHA*, KREM*, ROLLS, BAKE*, SJEM, SJEME*, KUPUS*, PRAH*, GRANUL*, SUSEN*, MLJEVEN*, CIPS*, OKUS*, UMAK*, KRUH*, PECIV*, SIR*, ULJE*, ZACIN*, KREKER*, PASTA*, PASTET*, NAMAZ*, SOL*, MAJONEZ*, AIOLI*, DIP*, MASLAC*, KOBAS*, SALAM*, KISEL*, BAGET*, TOST*, ZACIN*, PESTO*, PIRE*, DRESING*, PRELJEV*, MIJESAN*, LISTIC*]
+
+  - id: potato
+    name: Potatoes
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    piece_g: 170
+    package: bag
+    packages: [1000, 2000, 2500, 5000]
+    loose: true
+    shelf_life_days: 30
+    nutrition: {kcal: 77, protein: 2, carbs: 17, sugar: 0.8, fat: 0.1, sat_fat: 0, fibre: 2.2, salt: 0.01}
+    match:
+      include: ["KRUMPIR", "KRUMPIRA", "MLADI KRUMPIR", "KRUMPIR MLADI", "KRUMPIR BIJELI", "KRUMPIR CRVENI", "KRUMPIR ZUTI", "KRUMPIR MREZ*"]
+      exclude: [PEKARSK*, SRCA, NOZ, ZAC, VEGETA*, POVRC*, RESETKAST*, CIPS*, PIRE*, PRAH*, POMFRIT*, FRIT*, KROKET*, NJOKI*, SMRZN*, SALAT*, PECEN*, KRISK*, WEDG*, OKUS*, BATAT*, SLATK*, JUHA*, BRASN*, STAPIC*, TIJEST*, MLINC*, PLOSK*, RÖSTI*, ROSTI*, HASH*, PALACINK*, OKRUG*, FRANCUSK*, POHAN*, KOLUTIC*, KOCKIC*, KUHAN*, VAKUUM*]
+
+  - id: carrot
+    name: Carrots
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 80
+    package: bag
+    packages: [500, 1000, 2000]
+    loose: true
+    shelf_life_days: 21
+    nutrition: {kcal: 41, protein: 0.9, carbs: 7, sugar: 4.7, fat: 0.2, sat_fat: 0, fibre: 2.8, salt: 0.17}
+    match:
+      include: ["MRKVA*", "MRKVE"]
+      exclude: [PATE*, TUNA*, GRASAK*, KUPUS*, FLIPS*, SOK*, KASIC*, PIRE*, SALAT*, SMRZN*, MIJESAN*, MJESAVIN*, GRASAK I, GRASAK S, KOLAC*, TORT*, JUHA*, CIPS*, SUSEN*, NAPITAK*, SMOOTHIE*, DJECJ*, KONZERV*, KISEL*, DZEM*, MUFFIN*, BABY*]
+
+  - id: tomato
+    name: Tomatoes
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 120
+    package: loose
+    packages: [500, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 18, protein: 0.9, carbs: 3, sugar: 2.6, fat: 0.2, sat_fat: 0, fibre: 1.2, salt: 0.01}
+    match:
+      include: ["RAJCICA", "RAJCICE", "CHERRY RAJC*", "RAJCICA CHERRY", "RAJCICA GROZD*", "RAJCICA OKRUGL*", "RAJCICA SVJEZ*", "RAJCICA DATTERINI", "RAJCICA RIBEAR*", "RAJCICA PELAT* SVJ*", "RAJCICA SAN MARZANO SVJ*"]
+      exclude: [PULPA*, OGULJ*, NASJECK*, KONC*, PASIR*, SJECKAN*, SJECK*, PELAT*, KONCENTR*, KONZERV*, SUSEN*, SUHA*, SUHE*, SOK*, UMAK*, KETCHUP*, PASTA*, PESTO*, JUHA*, CIPS*, OKUS*, PRAH*, PIZZA*, MOZZAR*, KREKER*, NAMAZ*, U ULJU, ULJ*, U SOKU, PASSATA*, POLPA*, KOCK*, PIRE*, SALSA*, AJVAR*, LIMENK*, BOCA*, STAKL*, TETRA*, ZACIN*, MAKARON*, TJESTENIN*, GRAH*, SALAT*, SARDIN*, TUNA*, SKUSA*, RIBA*, FILE*, PECEN*, SIR*, SUSHI*, PUNJEN*, BRUSCHET*]
+
+  - id: cucumber
+    name: Cucumber
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 300
+    package: loose
+    packages: [300, 500, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 15, protein: 0.7, carbs: 2.5, sugar: 1.7, fat: 0.1, sat_fat: 0, fibre: 0.5, salt: 0.01}
+    match:
+      include: ["KRASTAVAC", "KRASTAVAC SALATAR", "SALATNI KRASTAVAC", "KRASTAVCI SALATAR*"]
+      exclude: [DELIK*, KLAS*, KORN*, DOORA*, VEGETER*, KISEL*, KORNISON*, KORNIŠON*, KONZERV*, STAKL*, SALAT* OD, U OCTU, OCAT*, MARINIR*, SOK*, SALATA*, TZATZIK*, DZATZIK*, NAMAZ*, UMAK*, PIKANT*, LJUT*, SLATKO*, KRASTAVCI KORN*, MIJESAN*, TURSIJ*]
+
+  - id: bell-pepper
+    name: Bell pepper
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 160
+    package: loose
+    packages: [500, 1000]
+    loose: true
+    shelf_life_days: 10
+    nutrition: {kcal: 26, protein: 1, carbs: 4.5, sugar: 3.5, fat: 0.3, sat_fat: 0, fibre: 1.7, salt: 0.01}
+    match:
+      include: ["PAPRIKA CRVENA", "PAPRIKA ZUTA", "PAPRIKA ZELENA", "PAPRIKA BABURA", "BABURA*", "PAPRIKA MIX*", "PAPRIKA RUDA*", "PAPRIKA BIJELA", "PAPRIKA SVJEZ*", "PAPRIKA BLAGA", "PAPRIKA ROG*", "PAPRIKA SILJ*", "CRVENA PAPRIKA", "PAPRIKA TROBOJ*", "PAPRIKA BABURA*"]
+      exclude: [MLJEVEN*, PRAH*, ALEV*, SLATK* MLJ*, DIMLJ*, KONZERV*, STAKL*, PECEN*, PUNJEN*, KISEL*, CIPS*, OKUS*, AJVAR*, UMAK*, PASTA*, PASTET*, NAMAZ*, SALAM*, KOBAS*, SIR*, SMRZN*, SUSEN*, PRZEN*, KREKER*, FILE*, MARINIR*, LJUT*, CHILI*, FEFERON*, SALATA*, ZACIN*, KECAP*, KETCHUP*, U ULJ*, U OCTU, CIPS, ROSTILJ*, PRSTEN*, KOKICE*, PLJESK*, PAPRIKAS*]
+
+  - id: zucchini
+    name: Zucchini
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 250
+    package: loose
+    packages: [500, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 17, protein: 1.2, carbs: 2.2, sugar: 2, fat: 0.3, sat_fat: 0.1, fibre: 1, salt: 0.02}
+    match:
+      include: ["TIKVICA", "TIKVICE", "TIKVICA ZELENA", "ZUCCHIN*", "CUKIN*"]
+      exclude: [UMAK*, PLJUKANC*, PANIR*, OROZOTT*, ORZOTT*, SJEME, SMRZN*, PECEN*, GRIL*, MARINIR*, U ULJ*, KONZERV*, POHAN*, SPAGET*, NJOKI*, NAMAZ*, SALATA*, MIJESAN*, CIPS*, OKUS*, JUHA*, KREM*]
+
+  - id: eggplant
+    name: Aubergine
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 300
+    package: loose
+    packages: [500, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 25, protein: 1, carbs: 3, sugar: 3, fat: 0.2, sat_fat: 0, fibre: 3, salt: 0.01}
+    match:
+      include: ["PATLIDZAN*", "PATLIDŽAN*", "MELANZAN*", "MELANCAN*"]
+      exclude: [SLANUT*, GRIL*, PECEN*, U ULJ*, NAMAZ*, AJVAR*, PASTA*, UMAK*, SMRZN*, KONZERV*, MARINIR*, POHAN*, KREM*, MIJESAN*, SALATA*, CIPS*, LAZANJ*, MUSAK*]
+
+  - id: cabbage
+    name: Cabbage
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: loose
+    packages: [1000, 1500, 2000]
+    loose: true
+    shelf_life_days: 21
+    nutrition: {kcal: 25, protein: 1.3, carbs: 3.5, sugar: 3.2, fat: 0.1, sat_fat: 0, fibre: 2.5, salt: 0.05}
+    match:
+      include: ["KUPUS", "KUPUS BIJELI", "BIJELI KUPUS", "KUPUS CRVENI", "CRVENI KUPUS", "KUPUS GLAVICA*", "KUPUS MLADI", "KUPUS KINESKI", "KINESKI KUPUS"]
+      exclude: [KIS, MRKV*, KISEL*, RIBAN*, SALAT*, SARMA*, STAKL*, KONZERV*, MIJESAN*, VARIVO*, JUHA*, SMRZN*, CIPS*, OKUS*, LIST*, CIJELI LIST*, KOMORAC*, KOLAR*, KISELI, ZELJE*, BURGER*, PIT*]
+
+  - id: sauerkraut
+    name: Sauerkraut
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: bag
+    packages: [500, 1000, 2000]
+    shelf_life_days: 30
+    nutrition: {kcal: 19, protein: 0.9, carbs: 1.5, sugar: 1, fat: 0.1, sat_fat: 0, fibre: 2.9, salt: 1.5}
+    match:
+      include: ["KISEL* KUPUS*", "KUPUS KISEL*", "KUPUS KIS", "KISELI RIBANI KUPUS", "RIBANI KISELI*", "KISEL* RIBAN*", "KUPUS RIBANI KISEL*", "KISEL* LIST*"]
+      exclude: [KISELJENJ*, SARM*, ULJ, CESNJ*, PAPR*, SARMA*, VARIVO*, GULAS*, JUHA*, KOBAS*, SALAT* S, SMRZN*, SOK*]
+
+  - id: kale
+    name: Kale or savoy cabbage
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: loose
+    packages: [200, 500, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 45, protein: 4.3, carbs: 4.5, sugar: 1.2, fat: 0.9, sat_fat: 0.1, fibre: 3.6, salt: 0.1}
+    match:
+      include: ["KELJ", "KALE", "KELJ GLAVAT*", "KELJ KOVRC*", "KOVRCAV* KELJ*", "KELJ LISTAT*", "RASTAN*", "RASTIKA*", "RASTAN"]
+      exclude: [PUPC*, PROKULIC*, CIPS*, CHIPS*, SMRZN*, SMOOTHIE*, SOK*, PRAH*, NAPITAK*, SALAT* S, KISEL*, MIJESAN*, MJESAV*, CRISP*, OKUS*]
+
+  - id: spinach
+    name: Spinach
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: bag
+    packages: [125, 200, 250, 450, 1000]
+    shelf_life_days: 4
+    nutrition: {kcal: 23, protein: 2.9, carbs: 1.4, sugar: 0.4, fat: 0.4, sat_fat: 0.1, fibre: 2.2, salt: 0.2}
+    match:
+      include: ["SPINAT*", "ŠPINAT*", "BABY SPINAT*", "MLADI SPINAT*"]
+      exclude: [TJES, TAGL*, ODREZ*, SJEME, PIT*, BUREK*, LISNAT*, PECIV*, SAVIJAC*, TJESTENIN*, NJOKI*, RAVIOL*, TORTEL*, LAZANJ*, PIZZA*, KREM* SPINAT* S, NAMAZ*, UMAK*, PESTO*, PALACINK*, CIPS*, OKUS*, SALAT* MIJ*, MIX*, MIJESAN*, RIKOT*, RICOTT*, KROKET*, BURGER*, POHAN*, KUGLIC*, JUHA*, FILO*, PRZEN*, KAŠIC*, KASIC*, OMLET*]
+
+  - id: lettuce
+    name: Lettuce
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 300
+    package: loose
+    packages: [150, 300, 500]
+    shelf_life_days: 5
+    nutrition: {kcal: 15, protein: 1.3, carbs: 1.8, sugar: 1.2, fat: 0.2, sat_fat: 0, fibre: 1.3, salt: 0.03}
+    match:
+      include: ["ZELENA SALATA", "SALATA ZELENA", "SALATA LEDENKA", "LEDENKA*", "SALATA KRISTALK*", "KRISTALKA*", "SALATA PUTER*", "SALATA ROMANA", "ROMANA SALATA", "SALATA LOLLO*", "LOLLO*", "SALATA HRASTOV*", "RADIC*", "MATOVILAC*", "MATOVILEC*", "RIKOLA*", "RUKOLA*", "SALATA MIX", "MIX SALATA", "MJESAVINA SALATA", "SALATA BABY", "BABY LEAF*", "SALATA RADIC*", "ENDIVIJ*", "SALATA ENDIV*", "SALATA KRAT*", "SALATA ICEBERG", "ICEBERG*"]
+      exclude: [SPINAT*, KRUMPIR* SALAT*, GRAH* SALAT*, TUNA*, PILE*, PASTA*, TJESTENIN*, PRELJEV*, DRESING*, UMAK*, CAESAR* S, SA PILE*, S PILE*, RIZ*, KUS*, COUS*, QUINO*, KVINOJ*, SUSAM*, SJEMENK*, KRUTON*, SIR*, JAJ*, SUNK*, LOSOS*, KOZIC*, PRSUT*, SNACK*, SENDVI*, WRAP*, KISEL*, CIKL*, ROTKV*, MRKV*, KUPUS*, KUKURUZ*, LECA*, SLANUT*, BULGUR*, HELDA*, CIPS*, OKUS*, MESN*, MAJONEZ*, RUSKA*, FRANCUSK*, VOCN*, ZACIN*, ZA SALAT*, SJEME*]
+
+  - id: broccoli
+    name: Broccoli
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 400
+    package: loose
+    packages: [400, 500, 750, 1000]
+    loose: true
+    shelf_life_days: 5
+    nutrition: {kcal: 34, protein: 2.8, carbs: 4, sugar: 1.7, fat: 0.4, sat_fat: 0, fibre: 2.6, salt: 0.08}
+    match:
+      include: ["BROKUL*", "BROKOL*", "BROCCOL*"]
+      exclude: [KRUMP*, KARFIOL*, CVJETAC*, KREM*, JUHA*, MIJESAN*, MIX*, POHAN*, KROKET*, BURGER*, CIPS*, OKUS*, PIRE*, KASIC*, TJESTENIN*, RIZOT*, SALAT* S, SOK*, NAPITAK*, KLICE*, SJEME*, CVJETAC* I, I CVJETAC*]
+
+  - id: cauliflower
+    name: Cauliflower
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 700
+    package: loose
+    packages: [500, 750, 1000]
+    loose: true
+    shelf_life_days: 7
+    nutrition: {kcal: 25, protein: 1.9, carbs: 3, sugar: 1.9, fat: 0.3, sat_fat: 0.1, fibre: 2, salt: 0.08}
+    match:
+      include: ["CVJETAC*", "KARFIOL*", "CAULIFLOWER*"]
+      exclude: [BROKUL*, KREM*, JUHA*, MIJESAN*, MIX*, POHAN*, KROKET*, BURGER*, CIPS*, OKUS*, PIRE*, KASIC*, RIZ*, KISEL*, SALAT* S, I BROKUL*, BROKUL* I, PIZZA*]
+
+  - id: leek
+    name: Leek
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 250
+    package: loose
+    packages: [250, 500, 1000]
+    loose: true
+    shelf_life_days: 10
+    nutrition: {kcal: 31, protein: 1.5, carbs: 5, sugar: 3.9, fat: 0.3, sat_fat: 0, fibre: 1.8, salt: 0.05}
+    match:
+      include: ["PORILUK*", "PORI LUK", "PORILUKA"]
+      exclude: [PILETIN*, JUHA*, KREM*, SUSEN*, PRAH*, ZACIN*, MIJESAN*, PITA*, QUICHE*, VARIVO*]
+
+  - id: mushrooms
+    name: Mushrooms
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [250, 400, 500]
+    loose: true
+    shelf_life_days: 5
+    nutrition: {kcal: 22, protein: 3.1, carbs: 0.5, sugar: 0.5, fat: 0.3, sat_fat: 0, fibre: 1, salt: 0.01}
+    match:
+      include: ["SAMPINJON*", "ŠAMPINJON*", "GLJIVA", "GLJIVE", "GLJIVA*", "BUKOVAC*", "BUKOVAČ*", "SHIITAKE*", "PORTOBELL*", "VRGANJ*", "CHAMPIGNON*"]
+      exclude: [RAGU*, UMAK*, JUHA*, KREM*, PIZZA*, RIZOT*, RIZ*, PASTET*, NAMAZ*, CIPS*, OKUS*, KONZERV*, STAKL*, U ULJ*, MARINIR*, SUSEN*, PRAH*, MLJEVEN*, ZACIN*, TJESTENIN*, NJOKI*, RAVIOL*, TORTEL*, KOCK* ZA, PUNJEN*, POHAN*, BURGER*, PITA*, BUREK*, SIR*, PECIV*, SALAMA*, KOBAS*, KAPSUL*, CAJ*, LINCZI*, LINGZHI*, REISHI*, CHAGA*, KAVA*, KISEL*, NARESC*, PRZEN*, RESTAN*, MIJESAN*, MIX*, SMRZN*, PELET*, GULAS*, MESO*, VEGAN*, TOFU*, SEITAN*, LISTIC* KONZ*, U SALAMUR*, KAPSUL*]
+
+  - id: pumpkin
+    name: Pumpkin or squash
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    package: loose
+    packages: [1000, 1500, 2000]
+    loose: true
+    shelf_life_days: 30
+    nutrition: {kcal: 30, protein: 1, carbs: 6, sugar: 2.8, fat: 0.1, sat_fat: 0, fibre: 1.2, salt: 0.01}
+    match:
+      include: ["BUNDEV*", "TIKVA", "TIKVA HOKAIDO", "HOKAIDO*", "HOKKAIDO*", "BUTTERNUT*", "TIKVA MUSKATN*", "MUSKATNA TIKVA", "TIKVA BUTTERNUT"]
+      exclude: [MINI NOC, NOC VJESTIC*, PUNJEN*, KUGLIC*, MJES, MJES*, POVR, POVR*, SJEME*, SJEMENK*, KOSTIC*, KOŠTIC*, ULJE*, JUHA*, KREM*, PIRE*, KRUH*, PECIV*, BRASN*, PRAH*, MUFFIN*, KOLAC*, TORT*, NAMAZ*, DZEM*, SMRZN*, KASIC*, CIPS*, OKUS*, PROTEIN*, LATTE*, SPICE*, VOSAK*, DEKOR*, UKRAS*]
+
+  - id: sweet-potato
+    name: Sweet potato
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    piece_g: 250
+    package: loose
+    packages: [500, 1000]
+    loose: true
+    shelf_life_days: 21
+    nutrition: {kcal: 86, protein: 1.6, carbs: 17, sugar: 4.2, fat: 0.1, sat_fat: 0, fibre: 3, salt: 0.14}
+    match:
+      include: ["BATAT*", "SLATK* KRUMPIR*", "KRUMPIR SLATK*", "SWEET POTATO*"]
+      exclude: [POMMES*, REZANC*, TJ, MLINC*, CIPS*, POMFRIT*, FRIT*, PIRE*, SMRZN*, KROKET*, KASIC*, OKUS*, JUHA*, KREM*, KRISK*, STAPIC*, PRAH*, BRASN*, PELET*, SNACK*, KEKS*]
+
+  - id: spring-onion
+    name: Spring onion
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: loose
+    packages: [100, 150, 200]
+    shelf_life_days: 7
+    nutrition: {kcal: 32, protein: 1.8, carbs: 4.7, sugar: 2.3, fat: 0.2, sat_fat: 0, fibre: 2.6, salt: 0.04}
+    match:
+      include: ["MLADI LUK", "LUK MLADI", "LUK VLASAC*", "VLASAC*", "LUK MLADI VEZ*", "MLADI LUK VEZ*"]
+      exclude: [ZAC, SUSEN*, PRAH*, SIR*, NAMAZ*, CIPS*, OKUS*, UMAK*, KREKER*, ZACIN*, SMRZN*, KREM*, DIP*, VRHNJ*, MAJONEZ*, PRELJEV*, DRESING*, SJEME*, MIX*, ZAMRZN*, LIOFILIZ*, KISEL*]
+
+  - id: parsley
+    name: Parsley
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    package: loose
+    packages: [20, 30, 50, 100]
+    shelf_life_days: 7
+    nutrition: {kcal: 36, protein: 3, carbs: 3.5, sugar: 0.9, fat: 0.8, sat_fat: 0.1, fibre: 3.3, salt: 0.14}
+    match:
+      include: ["PERSIN*", "PERŠIN*", "PETERSIL*", "PERSUN*"]
+      exclude: [SUSEN*, SUSENI, SUHI, SUHO, MLJEVEN*, PRAH*, ZACIN*, MIJESAN*, MJESAVIN*, SOL*, CIPS*, OKUS*, SMRZN*, MASLAC*, SIR*, UMAK*, PESTO*, NAMAZ*, ULJE*, ZAMRZN*, LIOFILIZ*, KORIJEN*, JUHA*, POVRC* ZA JUH*, VEZICA POVRC*, KREKER*]
+
+  - id: green-beans
+    name: Green beans
+    category: frozen
+    storage: freezer
+    unit: g
+    package: bag
+    packages: [400, 450, 500, 750, 1000]
+    loose: true
+    nutrition: {kcal: 31, protein: 1.8, carbs: 4.3, sugar: 3.3, fat: 0.2, sat_fat: 0, fibre: 2.7, salt: 0.01}
+    match:
+      include: ["MAHUN*", "BOR* MAHUN*", "ZELENE MAHUNE", "ZUTE MAHUNE", "MAHUNE ZUTE", "MAHUNE ZELENE", "MAHUNE GRAH*"]
+      exclude: [MESOM, MESO*, MAHUNARK*, SALAT* S, VARIVO*, JUHA*, KREM*, KISEL*, U OCTU, MIJESAN* POVR*, MIX*, PROTEIN*, CIPS*, OKUS*, SNACK*, PRSTIC*, STAPIC*, SOJ*, EDAMAME*, KONZERV*, STAKL*]
+
+  - id: peas
+    name: Peas
+    category: frozen
+    storage: freezer
+    unit: g
+    package: bag
+    packages: [400, 450, 500, 750, 1000]
+    nutrition: {kcal: 81, protein: 5.4, carbs: 10, sugar: 5.7, fat: 0.4, sat_fat: 0.1, fibre: 5.1, salt: 0.01}
+    match:
+      include: ["GRASAK*", "GRAŠAK*", "GRASKA"]
+      exclude: [SJEME, SUSEN*, MRKV*, I MRKVA, S MRKV*, MIJESAN*, MIX*, MJESAVIN*, POVRC* MIJ*, JUHA*, KREM*, PIRE*, KASIC*, RIZ*, RIZOT*, SALAT*, PROTEIN*, CIPS*, OKUS*, SNACK*, WASABI*, PRZEN*, SLANUT*, LJUSTEN*, KLICE*, MLIJEKO*, NAPITAK*, SUHI*, ZUTI GRASAK, LOMLJEN*, CESAN* GRASAK, SECERN*, SNJEZ*, KONZERV*, STAKL*, BURGER*, POHAN*, BRASNO*, TJESTENIN*, PROTEINSK*]
+
+  - id: sweetcorn
+    name: Sweetcorn (canned)
+    category: canned
+    storage: shelves
+    unit: g
+    package: can
+    packages: [150, 285, 300, 340, 425]
+    nutrition: {kcal: 80, protein: 2.5, carbs: 14, sugar: 5, fat: 1.2, sat_fat: 0.2, fibre: 2.7, salt: 0.5}
+    match:
+      include: ["KUKURUZ SECERAC*", "KUKURUZ ŠEĆERAC*", "SECERAC*", "KUKURUZ SLATKI", "SLATKI KUKURUZ", "KUKURUZ U ZRN*", "KUKURUZ ZRNO*", "KUKURUZ KONZERV*", "SWEET CORN*", "KUKURUZ KUHAN*"]
+      exclude: [KOKICE*, POPCORN*, CIPS*, PAHULJ*, FLAKES*, BRASN*, KRUPIC*, PALENT*, GRIZ*, ULJE*, SKROB*, STAPIC*, FLIPS*, SNACK*, KREKER*, SALAT* S, MIJESAN*, MIX*, MJESAVIN*, MEKSIK*, KREM*, JUHA*, TORTIL*, KLIP*, NACHOS*, SIRUP*, KRUH*, PECIV*, KEKS*, KASIC*, DJECJ*, KOKOS*]
+
+  # ---------------------------------------------------------------- fruit
+  - id: apple
+    name: Apples
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 180
+    package: loose
+    packages: [1000, 1500, 2000]
+    loose: true
+    shelf_life_days: 21
+    nutrition: {kcal: 52, protein: 0.3, carbs: 11.4, sugar: 10.4, fat: 0.2, sat_fat: 0, fibre: 2.4, salt: 0}
+    match:
+      include: ["JABUK*"]
+      exclude: [SOK*, NAPITAK*, NEKTAR*, OCAT*, KASIC*, PIRE*, KOMPOT*, DZEM*, DŽEM*, PEKMEZ*, SUSEN*, CIPS*, CHIPS*, PITA*, STRUDL*, SAVIJAC*, KOLAC*, KOLACIC*, TORT*, MUFFIN*, KEKS*, JOGURT*, CAJ*, SIRUP*, SMOOTHIE*, LIMUNAD*, CIDER*, RAKIJ*, LIKER*, BOMBON*, GUMENI*, PECIV*, KROASAN*, KRUH*, MUESLI*, MUSLI*, PAHULJ*, PLOCIC*, SNACK*, OKUS*, AROM*, KASICA*, DESERT*, PUDING*, KISEL*, VOCN* SALAT*, BAR*, STAPIC*, PEKMEZ*, ROLAD*, PALACINK*, DJECJ*, CIMET*, MARMELAD*, JUHA*, SLADOLED*, KREM*, SORBET*, VINO*, PIVO*, SODA*, VODA*, MLIJEC*, SIR*, SUSENA*, SUSENE*, RAJSKA*, PUNJEN*, BIO VOC* PIRE*, LIOFILIZ*]
+
+  - id: banana
+    name: Bananas
+    category: fruit-veg
+    storage: shelves
+    unit: g
+    piece_g: 120
+    package: loose
+    packages: [1000]
+    loose: true
+    shelf_life_days: 6
+    nutrition: {kcal: 89, protein: 1.1, carbs: 20, sugar: 12, fat: 0.3, sat_fat: 0.1, fibre: 2.6, salt: 0}
+    match:
+      include: ["BANANA", "BANANE", "BANANA BIO", "BANANE BIO"]
+      exclude: [PUC*, PRAH, SOK*, NAPITAK*, NEKTAR*, CIPS*, CHIPS*, SUSEN*, KASIC*, PIRE*, JOGURT*, MLIJEK*, KEKS*, BOMBON*, SMOOTHIE*, MUFFIN*, KRUH*, OKUS*, AROM*, DESERT*, PUDING*, BAR*, PLOCIC*, SLADOLED*, COKOLAD*, LIKER*, GUMENI*, SNACK*, DJECJ*, KOLAC*, KREM*, PROTEIN*, SHAKE*, NAMAZ*, VOCN*, MIJESAN*]
+
+  - id: orange
+    name: Oranges
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 200
+    package: loose
+    packages: [1000, 1500, 2000]
+    loose: true
+    shelf_life_days: 14
+    nutrition: {kcal: 47, protein: 0.9, carbs: 9.4, sugar: 9.4, fat: 0.1, sat_fat: 0, fibre: 2.4, salt: 0}
+    match:
+      include: ["NARANC*", "NARANČ*", "NARANCA", "NARANCE", "NARANCA STOLN*", "NARANCA ZA SOK"]
+      exclude: [NARANCAST*, TIKVA, PLIVA*, KVIK*, NAMAZ*, JUICY*, IZOTON*, SHAKE*, MARMEL*, SOK*, NAPITAK*, NEKTAR*, SIRUP*, KASIC*, DZEM*, MARMELAD*, KEKS*, BOMBON*, COKOLAD*, LIKER*, GUMENI*, SUSEN*, KORA*, KANDIR*, JOGURT*, CAJ*, LIMUNAD*, SODA*, VODA*, OKUS*, AROM*, ULJE*, DESERT*, KOLAC*, TORT*, MUFFIN*, SLADOLED*, SORBET*, SMOOTHIE*, PIVO*, VINO*, GAZIR*, FANTA*, ORANGINA*, CEDEVIT*, TABLET*, VITAMIN*, PUDING*, KREM*, PEKMEZ*, BAR*, SNACK*, PROTEIN*, ROLAD*, MIJESAN*, CRVENA NARANC* SOK*]
+
+  - id: mandarin
+    name: Mandarins
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 80
+    package: loose
+    packages: [1000, 2000]
+    loose: true
+    shelf_life_days: 14
+    nutrition: {kcal: 53, protein: 0.8, carbs: 11.5, sugar: 10.6, fat: 0.3, sat_fat: 0, fibre: 1.8, salt: 0}
+    match:
+      include: ["MANDARIN*", "KLEMENTIN*", "CLEMENTIN*", "MANDARINA NERETV*", "MANDARINE"]
+      exclude: [MARMEL*, VOCEM, YUZU*, SOK*, NAPITAK*, NEKTAR*, SIRUP*, KASIC*, DZEM*, MARMELAD*, KEKS*, BOMBON*, COKOLAD*, LIKER*, GUMENI*, SUSEN*, KONZERV*, KOMPOT*, U SIRUP*, JOGURT*, CAJ*, LIMUNAD*, SODA*, VODA*, OKUS*, AROM*, DESERT*, SLADOLED*, SMOOTHIE*, GAZIR*, VITAMIN*, PUDING*, KOLAC*, KREM*, PIVO*, VINO*, RAKIJ*, ULJE*, STAKL*, MIJESAN*]
+
+  - id: lemon
+    name: Lemons
+    category: fruit-veg
+    storage: fridge
+    unit: piece
+    piece_g: 100
+    package: loose
+    packages: [3, 5, 10]
+    loose: true
+    shelf_life_days: 21
+    nutrition: {kcal: 29, protein: 1.1, carbs: 3, sugar: 2.5, fat: 0.3, sat_fat: 0, fibre: 2.8, salt: 0}
+    match:
+      include: ["LIMUN", "LIMUNI", "LIMUN MREZ*", "LIMUN BIO", "LIMUN SVJEZ*", "LIMETA*", "LIMETE", "LIME"]
+      exclude: [OCAT*, ARGETA*, NAMAZ*, GREJP*, MAX, KUP, HUGO*, SECER*, SOK*, NAPITAK*, SIRUP*, LIMUNAD*, KORA*, KANDIR*, ULJE*, CAJ*, OKUS*, AROM*, BOMBON*, KEKS*, VODA*, SODA*, GAZIR*, PIVO*, RADLER*, TONIK*, TONIC*, LEDEN*, JOGURT*, SLADOLED*, SORBET*, KOLAC*, TORT*, MUFFIN*, LIKER*, LIMONCELL*, KONCENTR*, SOL*, PAPAR*, ZACIN*, PRELJEV*, DRESING*, MARINAD*, TABLET*, VITAMIN*, DESERT*, KREM*, PUDING*, DZEM*, MARMELAD*, GUMENI*, COKOLAD*, PIVO*, CEDEVIT*, SCHWEPP*, SPRITE*, NEKTAR*, KISEL*, LIMUNSK*, PJENUSAV*, MIJESAN*, SAPUN*, CISCENJ*, ZA POSUDJE, ZA POSUĐE, DETERD*, TUNA*, SARDIN*, SKUSA*, RIBA*, PAPAR*, SIR*, PILE*, PROTEIN*, BAR*, VAFL*, NAPOLITANK*, KEKSI*, ROLAD*, OMEKS*, OSVJEZ*, MLIJEKO*, MLIJECN*, MARELIC*]
+
+  - id: pear
+    name: Pears
+    category: fruit-veg
+    storage: fridge
+    unit: g
+    piece_g: 180
+    package: loose
+    packages: [1000]
+    loose: true
+    shelf_life_days: 10
+    nutrition: {kcal: 57, protein: 0.4, carbs: 12, sugar: 9.8, fat: 0.1, sat_fat: 0, fibre: 3.1, salt: 0}
+    match:
+      include: ["KRUSKA", "KRUSKE", "KRUSKA KONFERENC*", "KRUSKA VILJAMOVK*", "KRUSKA ABATE", "KRUSKA PACKHAM*", "KRUSKA WILLIAMS*"]
+      exclude: [SOK*, NAPITAK*, NEKTAR*, KASIC*, PIRE*, KOMPOT*, KONZERV*, DZEM*, PEKMEZ*, SUSEN*, CIPS*, RAKIJ*, JABUK*, LIKER*, VILJAMOVK* RAK*, KEKS*, BOMBON*, JOGURT*, OKUS*, AROM*, DESERT*, SLADOLED*, SMOOTHIE*, CAJ*, SIRUP*, GUMENI*, TORT*, KOLAC*, KREM*, PUDING*, DJECJ*, U SIRUP*, POLOVIC*, SNACK*, BAR*, PLOCIC*, MIJESAN*, COKOLAD*]
+
+  - id: frozen-berries
+    name: Frozen berries
+    category: frozen
+    storage: freezer
+    unit: g
+    package: bag
+    packages: [300, 400, 450, 500, 750, 1000]
+    nutrition: {kcal: 45, protein: 1, carbs: 8, sugar: 7, fat: 0.4, sat_fat: 0, fibre: 4, salt: 0}
+    match:
+      include: ["SUMSKO VOCE", "ŠUMSKO VOĆE", "SUMSK* VOC* SMRZN*", "SMRZNUT* SUMSK*", "SMRZN* BOROVNIC*", "BOROVNIC* SMRZN*", "SMRZN* MALIN*", "MALIN* SMRZN*", "SMRZN* JAGOD*", "JAGOD* SMRZN*", "BOBICAST* VOC*", "VOCE SMRZN*", "SMRZN* VOCE", "SMRZNUT* VOC*", "BERRIES*", "BERRY MIX*", "MIX BOBIC*", "SMRZN* KUPIN*", "SMRZN* VISNJ*", "VISNJ* SMRZN*", "KUPIN* SMRZN*", "SMRZNUTO VOCE", "SMRZ VOC*", "SMR* SUMSK* VOC*"]
+      exclude: [JOG, TUBA, FRUTEK*, SOK*, NAPITAK*, NEKTAR*, JOGURT*, SLADOLED*, SORBET*, DZEM*, MARMELAD*, SIRUP*, CAJ*, KEKS*, MUFFIN*, TORT*, KOLAC*, PITA*, STRUDL*, SAVIJAC*, KROASAN*, PALACINK*, DESERT*, PUDING*, BOMBON*, COKOLAD*, OKUS*, AROM*, LIKER*, SMOOTHIE* NAPIT*, PROTEIN*, KASIC*, DJECJ*, PIRE*, MUESLI*, MUSLI*, PAHULJ*, GRANOL*, BAR*, PLOCIC*, SUSEN*, LIOFILIZ*, KEFIR*, SKYR*, ACAI*]
+
+  - id: raisins
+    name: Raisins
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 299, protein: 3.1, carbs: 79, sugar: 59, fat: 0.5, sat_fat: 0.1, fibre: 3.7, salt: 0.03}
+    match:
+      include: ["GROZDJIC*", "GROŽĐIC*", "GROZDJ* SUH*", "SULTANA*", "SULTANIN*", "RAISIN*", "GROZDICE"]
+      exclude: [PUZ*, COKOLAD*, KEKS*, MUESLI*, MUSLI*, PAHULJ*, GRANOL*, BAR*, PLOCIC*, KOLAC*, KRUH*, PECIV*, MIJESAN*, MIX*, STUDENTSK*, SMJES*, ORASAST* I, ORAH* I, LJESNJAK* I, BADEM* I, KIKIRIK* I, SLADOLED*, RUM*, PUDING*, JOGURT*, PREMAZ*, OBLOZEN*, PRELIV*, KREM*, NAPITAK*, SOK*]
+
+  - id: dates
+    name: Dates
+    category: nuts
+    storage: shelves
+    unit: g
+    package: box
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 282, protein: 2.5, carbs: 67, sugar: 63, fat: 0.4, sat_fat: 0, fibre: 8, salt: 0}
+    match:
+      include: ["DATULJ*", "DATULE", "DATES", "MEDJOOL*", "DEGLET*"]
+      exclude: [PEKAN*, ORAH*, RAJCIC*, COKOLAD*, KEKS*, BAR*, PLOCIC*, KOLAC*, SIRUP*, NAMAZ*, KREM*, PUNJEN*, MUESLI*, MUSLI*, GRANOL*, SNACK*, KUGLIC*, PROTEIN*, NAPITAK*, SOK*, OBLOZEN*, MIJESAN*, MIX*, SLADOLED*, PASTA*]
+
+  - id: avocado
+    name: Avocado
+    category: fruit-veg
+    storage: shelves
+    unit: piece
+    piece_g: 200
+    package: loose
+    packages: [1, 2, 4]
+    shelf_life_days: 5
+    nutrition: {kcal: 160, protein: 2, carbs: 1.9, sugar: 0.7, fat: 14.7, sat_fat: 2.1, fibre: 6.7, salt: 0.02}
+    match:
+      include: ["AVOKAD*", "AVOCAD*"]
+      exclude: [ROLL*, MAJON*, PILETIN*, ULJE*, NAMAZ*, GUACAM*, GVAKAM*, KREM*, SMRZN*, DIP*, UMAK*, SUSHI*, SALAT* S, SENDVI*, WRAP*, TOST*, CIPS*, OKUS*, MASK*, SAPUN*, KOZMET*, SAMPON*, BALZAM*, SALSA*, PIRE*, MIJESAN*, MIX*]
+
+  # ---------------------------------------------------------------- grains and bakery
+  - id: rice
+    name: Rice
+    category: grains
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000, 2000]
+    staple: true
+    nutrition: {kcal: 355, protein: 7, carbs: 79, sugar: 0.2, fat: 0.6, sat_fat: 0.2, fibre: 1.3, salt: 0.01}
+    match:
+      include: ["RIZA", "RIŽA", "RIZA DUGO*", "RIZA BASMATI*", "BASMATI*", "JASMIN* RIZ*", "RIZA JASMIN*", "RIZA OKRUGL*", "RIZA ARBORIO*", "ARBORIO*", "RIZA ZA RIZOT*", "RIZA PARBOIL*", "PARBOIL* RIZ*", "RIZA SMEDJ*", "SMEDJA RIZA", "RIZA INTEGR*", "INTEGRAL* RIZ*", "RIZA BIJEL*", "RIZA DUGOZRN*", "RIZA KRATKOZRN*", "RIZA SREDNJ*", "CARNAROLI*", "RIZA U VRECIC*", "RIZA ZA SUSHI", "RIZA DIVLJ*", "RIZA CRN*", "RIZA CRVEN*", "RIZA MIX*", "RIZA SUSHI*"]
+      exclude: [MLIJEKU, EKSTRUD*, KAKAO*, TJES, TJ, VERMIC*, SNACK*, PROSO*, MLIJEKO*, NAPITAK*, KREKER*, VAFL*, GALET*, CIPS*, CHIPS*, BRASN*, KASA*, KASIC*, PAHULJ*, PUFFED*, NAPUHAN*, KOKIC*, OCAT*, REZANC*, NOODL*, TJESTENIN*, SIRUP*, SLAD*, PAPIR* ZA, PAPIR*, PRAH*, SKROB*, GRIZ*, PUDING*, DESERT*, MLIJECN*, SLADOLED*, JUHA*, SALAT*, GOTOV* JEL*, GOTOV*, MIKROVAL*, PILE*, POVRC*, RIZOTO*, PAELL*, ZACIN*, KUSKUS*, KVINOJ*, QUINOA*, SUSHI* NORI*, NORI*, SAKE*, VINO*, PIVO*, PROTEIN*, KEKS*, COKOLAD*, BAR*, PLOCIC*, KUGLIC*, LISTIC*, KROKET*, ARANCIN*, PUNJEN*, SARMA*, ULJE*, MEKINJ*, MEKINE*, KLICE*]
+
+  - id: pasta
+    name: Pasta
+    category: grains
+    storage: shelves
+    unit: g
+    package: box
+    packages: [400, 500, 1000]
+    staple: true
+    nutrition: {kcal: 355, protein: 12.5, carbs: 71, sugar: 3, fat: 1.5, sat_fat: 0.3, fibre: 3, salt: 0.01}
+    match:
+      include: ["TJESTENIN*", "SPAGET*", "ŠPAGET*", "SPAGHETTI*", "PENNE*", "PENE", "FUSILLI*", "FUSILI*", "FARFALLE*", "MAKARON*", "RIGATONI*", "TAGLIATELLE*", "LINGUINE*", "TORTIGLIONI*", "CONCHIGLIE*", "ORECCHIETTE*", "FUZI*", "FUŽI*", "PUZIC*", "SPIRAL*", "MASNE", "MASNICE", "ROZETE*", "TAGLIOLIN*", "PAPPARDELLE*", "BUCATINI*", "MEZZE*", "CASARECCE*", "GNOCCHETTI*", "SEDANI*", "DITALINI*", "ELICHE*", "PIPE RIGATE", "TROFIE*", "TORTIGLIONI", "LASAGN* LIST*", "BIGOLI*"]
+      exclude: [GOTOV*, UMAK*, SALAT*, PILE*, TUNA*, SIR*, KREM*, PUNJEN*, TORTELL*, TORTEL*, RAVIOL*, CAPPELLET*, NJOKI*, GNOCCHI, MIKROVAL*, JUHA*, ZACIN*, MESN*, BOLOGN*, CARBONAR*, PESTO*, POVRC* S, VARIVO*, KONZERV*, LIMENK*, CIPS*, SNACK*, KASIC*, DJECJ*, SVJEZ* TJEST*, FRESH*, FRISCH*, SMRZN*, SPINAT* I, VRECIC* ZA, CUP*, INSTANT*, NOODL*, REZANC*, RIZ*, KUHAN*, PAKIR*, MAKARONI SIR*, MAC*, CHEESE*, PRIPRAV*, KESTEN*, LAZANJE BOLONJ*, PECEN*, ZAPEC*, KOLAC*, KEKS*, VAFL*, BOMBON*, GUMENI*, SPAGETI BOLONJ*, MAKRONE*, MACARON*, KOKOS*]
+
+  - id: oats
+    name: Rolled oats
+    category: grains
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000]
+    staple: true
+    nutrition: {kcal: 372, protein: 13.5, carbs: 58.7, sugar: 1, fat: 7, sat_fat: 1.2, fibre: 10, salt: 0.01}
+    match:
+      include: ["ZOBEN* PAHULJ*", "PAHULJ* ZOB*", "ZOBENE PAHULJICE", "OAT FLAKES", "OATS", "ZOB PAHULJ*", "ZOBENE KRUPNE", "ZOBENE SITNE", "INSTANT ZOBEN*", "ZOBENE FINE", "ZOBENE NJEZN*", "ZOBENE KRUPNO*"]
+      exclude: [PROT, PROT*, CHO, APPLE*, COKOLAD*, VOC*, JAGOD*, BANAN*, JABUK*, MED*, MUESLI*, MUSLI*, GRANOL*, KEKS*, BAR*, PLOCIC*, NAPITAK*, MLIJEK*, KASA* S, OKUS*, PROTEIN* S, KAKAO*, CIMET*, BOROVN*, MALIN*, ORAH*, LJESNJAK*, KOKOS*, KIKIRIK*, VANILI*, KARAMEL*, KREM*, KASIC*, DJECJ*, SLAD*, BRASN*, MEKINJ*, MEKINE*, CRISP*, KRUH*, PECIV*, SIRUP*, BADEM*]
+
+  - id: flour
+    name: Plain wheat flour
+    category: baking
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [1000, 2000, 5000]
+    staple: true
+    nutrition: {kcal: 345, protein: 10.5, carbs: 72, sugar: 0.6, fat: 1.2, sat_fat: 0.2, fibre: 3, salt: 0}
+    match:
+      include: ["BRASNO GLATKO", "GLATKO BRASNO", "BRASNO PSENICNO", "PSENICNO BRASNO", "BRASNO T 400", "BRASNO T 550", "BRASNO T400", "BRASNO T550", "BRASNO TIP 400", "BRASNO TIP 550", "BRASNO OSTRO", "OSTRO BRASNO", "BRASNO POLUOSTRO", "POLUOSTRO BRASNO", "BRASNO BIJELO", "BIJELO BRASNO", "BRASNO MEKO", "BRASNO 00", "BRASNO TIP 00", "BRASNO ZA PIZZ*", "BRASNO UNIVERZAL*", "BRASNO T 500", "BRASNO T500", "BRASNO TIP 500", "BRASNO T 850", "BRASNO T850", "BRASNO GL*", "BRASNO PS*", "BRAS PS*"]
+      exclude: [CRNO, CRNI, TAM, TAMNO, T1600, "1600", "1100", T1100, KUKURUZ*, RAZ*, HELJD*, RIZ*, ZOB*, SPELT*, PIR*, KESTEN*, BADEM*, KOKOS*, SLANUT*, BEZ GLUTEN*, BEZGLUTEN*, GLUTEN FREE, INTEGRAL*, CJELOVIT*, MJESAV*, SMJES*, ZA KRUH, ZA PALACINK*, PALACINK*, KOLAC*, TORT*, SMRZN*, PRASAK*, KVASAC*, ZA POHANJ*, POHANJ*, TIJESTO*, MIX*, KRUMPIR*, PROSO*, AMARANT*, LAN*, SUNCOKRET*, KONOPLJ*, KVINOJ*, CHIA*, SOJ*, LIJEKOVIT*]
+
+  - id: bread
+    name: Bread
+    category: bakery
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [400, 500, 600, 750, 1000]
+    shelf_life_days: 4
+    nutrition: {kcal: 250, protein: 8.5, carbs: 46, sugar: 3, fat: 2.5, sat_fat: 0.5, fibre: 5, salt: 1.2}
+    match:
+      include: ["KRUH", "KRUH BIJELI", "KRUH POLUBIJELI", "KRUH CRNI", "KRUH RAZENI", "KRUH INTEGRAL*", "KRUH CJELOVIT*", "KRUH TOST*", "TOST KRUH", "TOAST*", "KRUH S SJEMENK*", "KRUH SA SJEMENK*", "KRUH VISEZRNAT*", "VISEZRNAT* KRUH", "KRUH KUKURUZ*", "KRUH SPELT*", "KRUH ZITNI", "ZITNI KRUH", "KRUH MJESANI", "MJESANI KRUH", "KRUH SEOSKI", "SEOSKI KRUH", "KRUH DOMACI", "KRUH NARESKAN*", "KRUH RUSTIK*", "BAGET*", "CIABATT*", "KRUH PSENICNI", "PSENICNI KRUH", "KRUH OD", "KRUH SA", "KRUH S", "KRUH RAZ*", "KRUH PIR*", "KRUH HELJD*", "KRUH ZOB*", "KRUH ZRNAT*", "KRUH TAMNI"]
+      exclude: [BRAS*, KRUSC*, LOVAC*, MRVIC*, KRUSN*, PRAH*, MJESAVIN* ZA, SMJESA* ZA, BRASNO*, PRIPRAV*, SMRZN* TIJ*, PECIV*, KIFL*, KROASAN*, PEREC*, KREKER*, DVOPEK*, PRESEC*, GRISIN*, STAPIC*, KRUTON*, CIPS*, OKUS*, PUDING*, SLATKI KRUH, KOLAC*, KEKS*, MED*, BOROVNIC*, BANANA KRUH, BANANIN*, PECIVO*, PAPIR*, TOSTER*, SENDVI*, SIR*, SUNKA*, PIZZA*, LEPINJ*, PITA*, TORTILJ*, TORTIL*, WRAP*, PIADIN*, NAAN*, BURGER*, HOT DOG*, HOTDOG*, ZEMLJ*, PLETENIC*, BRIOS*, BRIOCH*, PANETTON*, KRUSKA*, HRSKAV* KRUH*, KNACK*, KRISP*, WASA*, MASLAC*, CESNJ*, NAMAZ*, POGAC*, FOCACC*, BUREK*, LISNAT*, KUKURUZN* PAHULJ*, DJECJ*, KASIC*, ROLAD*, MLIJECN*]
+
+  - id: tortillas
+    name: Wheat tortillas
+    category: bakery
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [240, 320, 370, 400]
+    shelf_life_days: 30
+    nutrition: {kcal: 300, protein: 8, carbs: 50, sugar: 3, fat: 7, sat_fat: 2.5, fibre: 2.5, salt: 1.3}
+    match:
+      include: ["TORTILJ*", "TORTILL*", "TORTILIJ*", "WRAP*", "TORTILLA WRAP*", "PSENICNE TORT*"]
+      exclude: [CIPS*, CHIPS*, NACHOS*, OKUS*, SALSA*, UMAK*, PILE*, SUNKA*, SIR*, KIT*, ZACIN*, MJESAV*, SMJES*, SENDVI*, GOTOV*, TUNA*, MEKSIK* KIT*, KOMPLET*, SET*, PAPIR*, FOLIJ*, SUSHI*]
+
+  - id: couscous
+    name: Couscous
+    category: grains
+    storage: shelves
+    unit: g
+    package: box
+    packages: [250, 500, 1000]
+    nutrition: {kcal: 360, protein: 12.5, carbs: 72, sugar: 0.5, fat: 1, sat_fat: 0.2, fibre: 3.5, salt: 0.02}
+    match:
+      include: ["KUSKUS*", "COUSCOUS*", "KUS KUS*", "COUS COUS*", "KUS-KUS*"]
+      exclude: [TUNA*, KAS, ENJOY*, SALAT*, GOTOV*, POVRC* S, PILE*, MIKROVAL*, ZACIN*, OKUS*, MJESAV*]
+
+  - id: bulgur
+    name: Bulgur
+    category: grains
+    storage: shelves
+    unit: g
+    package: box
+    packages: [400, 500, 1000]
+    nutrition: {kcal: 342, protein: 12, carbs: 64, sugar: 0.4, fat: 1.3, sat_fat: 0.2, fibre: 12.5, salt: 0.02}
+    match:
+      include: ["BULGUR*", "BURGUL*"]
+      exclude: [SALAT*, GOTOV*, MIKROVAL*, ZACIN*, OKUS*, MJESAV*, TABULE*, TABBOUL*]
+
+  - id: quinoa
+    name: Quinoa
+    category: grains
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [250, 400, 500, 1000]
+    nutrition: {kcal: 368, protein: 14, carbs: 57, sugar: 1, fat: 6, sat_fat: 0.7, fibre: 7, salt: 0.01}
+    match:
+      include: ["KVINOJ*", "QUINOA*", "KINOA*", "KINOJA*"]
+      exclude: [GRISIN*, KREK*, RIZ*, JUHA*, MINIBURGER*, MJES, MJES*, MJ, MUSLI*, SALAT*, GOTOV*, MIKROVAL*, ZACIN*, OKUS*, MJESAV*, KREKER*, CIPS*, PAHULJ*, NAPUHAN*, PUFF*, BAR*, PLOCIC*, BRASN*, TJESTENIN*, SPAGET*, PENNE*, FUSILL*, BURGER*, KOKICE*, MUESLI*, GRANOL*, KASA*, RIZ* I, I RIZ*, MIX*, MIJESAN*]
+
+  - id: polenta
+    name: Polenta (cornmeal)
+    category: grains
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000]
+    nutrition: {kcal: 360, protein: 8, carbs: 77, sugar: 0.6, fat: 1.5, sat_fat: 0.2, fibre: 3.5, salt: 0}
+    match:
+      include: ["PALENT*", "POLENT*", "KUKURUZN* KRUPIC*", "KUKURUZN* GRIZ*", "KRUPIC* KUKURUZ*", "KUKURUZNO BRASNO", "BRASNO KUKURUZNO", "KUKURUZN* BRASN*", "PURA"]
+      exclude: [GOTOV*, PECEN*, NAREZ*, KRISK*, STAPIC*, CIPS*, KREKER*, PAHULJ*, KRUH*, PECIV*, KOLAC*, KASA*, KASIC*, DJECJ*, SMJES*, MJESAV*, KOCKIC*]
+
+  - id: breadcrumbs
+    name: Breadcrumbs
+    category: bakery
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [200, 400, 500, 1000]
+    nutrition: {kcal: 370, protein: 12, carbs: 72, sugar: 5, fat: 3, sat_fat: 0.7, fibre: 4.5, salt: 1.2}
+    match:
+      include: ["KRUSN* MRVIC*", "MRVIC* KRUSN*", "PANKO*", "MRVICE ZA POHANJ*", "KRUSNE MRVICE", "MRVICE KRUSNE", "PRVICE KRUS*"]
+      exclude: [ZACIN*, OKUS*, BEZ GLUTEN*, KUKURUZ*]
+
+  - id: noodles
+    name: Asian noodles
+    category: grains
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [200, 250, 300, 400, 500]
+    nutrition: {kcal: 360, protein: 6, carbs: 80, sugar: 0.1, fat: 0.6, sat_fat: 0.1, fibre: 1.6, salt: 0.05}
+    match:
+      include: ["RIZIN* REZANC*", "REZANC* RIZ*", "RICE NOODL*", "NOODL*", "UDON*", "SOBA NOODL*", "SOBA REZANC*", "RAMEN*", "REZANC* ZA WOK*", "WOK REZANC*", "EGG NOODL*", "MIE NOODL*", "STAKLEN* REZANC*", "RIZINI REZANCI", "VERMICELLI RIZ*", "RIZIN* VERMIC*", "RIZIN* TJESTENIN*", "TJESTENIN* RIZIN*", "PAD THAI", "PHO REZANC*", "HOKKIEN*", "CHOW MEIN*", "YAKISOBA*", "MIE"]
+      exclude: [CASI, CASA, NISSIN*, UM, PERAD, PATKA*, MAGGI*, TERIYAKI*, PRZ, INSTANT*, CUP*, JUHA*, SOUP*, OKUS*, PILE*, GOVED*, KOZIC*, CURRY* S, UMAK*, ZACIN*, GOTOV*, MIKROVAL*, CIPS*, SNACK*, KUHINJ* SOBA*, SOBARIC*]
+
+  # ---------------------------------------------------------------- legumes
+  - id: chickpeas
+    name: Chickpeas (canned)
+    category: legumes
+    storage: shelves
+    unit: g
+    package: can
+    packages: [240, 400, 425, 800]
+    nutrition: {kcal: 121, protein: 7, carbs: 15, sugar: 0.5, fat: 2.5, sat_fat: 0.3, fibre: 5.5, salt: 0.6}
+    match:
+      include: ["SLANUT*", "CHICKPEA*", "CECI*", "GARBANZ*", "NAHUT*"]
+      exclude: [TJES, PATLID*, HUMUS*, HUMMUS*, NAMAZ*, BRASN*, CIPS*, SNACK*, PRZEN*, PECEN*, CURRY*, SALAT*, TJESTENIN*, PENNE*, FUSILL*, SPAGET*, FALAFEL*, BURGER*, ZACIN*, OKUS*, PROTEIN*, MIX*, MIJESAN*, PLOCIC*, KREKER*, SUH*]
+
+  - id: red-lentils
+    name: Red lentils
+    category: legumes
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [400, 500, 1000]
+    nutrition: {kcal: 340, protein: 24, carbs: 50, sugar: 2, fat: 1.5, sat_fat: 0.2, fibre: 11, salt: 0.02}
+    match:
+      include: ["LECA CRVEN*", "CRVEN* LECA", "LEĆA CRVEN*", "LECA LJUST*", "LECA RED", "RED LENTIL*", "LECA NARANC*", "CRVENA LECA"]
+      exclude: [TJ, SPAGH*, TJESTENIN*, PENNE*, FUSILL*, SPAGET*, JUHA*, CIPS*, SNACK*, KREKER*, NAMAZ*, BURGER*, GOTOV*, KONZERV*, CURRY*, DAL S, DHAL S, SALAT*, BRASN*, PAHULJ*]
+
+  - id: lentils
+    name: Brown or green lentils
+    category: legumes
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [400, 500, 1000]
+    nutrition: {kcal: 330, protein: 24, carbs: 48, sugar: 2, fat: 1.2, sat_fat: 0.2, fibre: 12, salt: 0.02}
+    match:
+      include: ["LECA", "LEĆA", "LECA ZELEN*", "LECA SMEDJ*", "LECA CRN*", "LECA BELUGA", "LECA DUPUY", "LECA KRUPN*", "LENTIL*", "ZELENA LECA", "SMEDJA LECA", "CRNA LECA"]
+      exclude: [CRVEN*, LJUST*, NARANC*, RED, TJESTENIN*, PENNE*, FUSILL*, SPAGET*, JUHA*, CIPS*, SNACK*, KREKER*, NAMAZ*, BURGER*, GOTOV*, CURRY*, SALAT*, BRASN*, PAHULJ*, KONTAKT*, LECE, VARIVO*, SA SUNK*, S KOBAS*, PILE*, POVRC* S, KLIC*]
+
+  - id: kidney-beans
+    name: Red kidney beans (canned)
+    category: legumes
+    storage: shelves
+    unit: g
+    package: can
+    packages: [240, 400, 425, 800]
+    nutrition: {kcal: 100, protein: 6.5, carbs: 13, sugar: 1, fat: 0.5, sat_fat: 0.1, fibre: 6, salt: 0.6}
+    match:
+      include: ["GRAH CRVEN*", "CRVEN* GRAH*", "GRAH KIDNEY", "KIDNEY*", "GRAH CRVENI KONZ*", "CRNI GRAH", "GRAH CRNI", "GRAH MEKSIK*", "GRAH U LIMENC*", "GRAH KUHAN*", "KUHANI GRAH", "GRAH KONZERV*", "BORLOTTI*", "CANNELLINI*", "GRAH CANNELL*", "GRAH BIJELI KUHAN*", "GRAH U SALAMUR*", "GRAH PINTO", "PINTO GRAH"]
+      exclude: [KUKURUZ*, CHILY, MEXICAN*, UMAK*, RAJCIC*, VARIVO*, GULAS*, CHILI* CON*, CON CARNE*, KOBAS*, SLANIN*, SUNK*, PECEN*, BAKED*, SALAT*, JUHA*, SUH*, ZRNO*, TETOVAC*, BRASN*, TJESTENIN*, CIPS*, SNACK*, BURGER*, GOTOV*, MAHUN*, NAMAZ*, ZACIN*, KAVA*, ZRNA KAVE, PRZEN*, KAPSUL*, MLJEVEN*, ESPRESSO*, ARABIC*, ROBUST*]
+
+  - id: white-beans
+    name: Dried white beans
+    category: legumes
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000]
+    nutrition: {kcal: 320, protein: 22, carbs: 45, sugar: 2.5, fat: 1.5, sat_fat: 0.2, fibre: 17, salt: 0.02}
+    match:
+      include: ["GRAH TETOVAC*", "TETOVAC*", "GRAH BIJELI", "BIJELI GRAH", "GRAH ZRNO*", "GRAH ZRNAT*", "GRAH PUTER*", "GRAH BISER*", "GRAH TREPCA*", "GRAH SARENI", "SARENI GRAH", "GRAH DOMACI", "GRAH KRUPNI", "GRAH SITNI", "GRAH ZUTI", "GRAH TRESNJEVAC*", "GRAH BIJELI KRUPN*", "GRAH BIJELI SITN*", "GRAH CJEL*"]
+      exclude: [KUHAN*, KONZERV*, LIMENK*, LIMENC*, UMAK*, RAJCIC*, VARIVO*, GULAS*, KOBAS*, SLANIN*, SUNK*, PECEN*, BAKED*, SALAT*, JUHA*, GOTOV*, MAHUN*, NAMAZ*, ZACIN*, KAVA*, PREBRAN* KONZ*, SALAMUR*, STAKL*, TEGL*, KAPSUL*, ARABIC*, ESPRESSO*, BRASN*, TJESTENIN*]
+
+  - id: tofu
+    name: Tofu
+    category: legumes
+    storage: fridge
+    unit: g
+    package: pack
+    packages: [180, 200, 250, 400]
+    shelf_life_days: 14
+    nutrition: {kcal: 130, protein: 13, carbs: 1.5, sugar: 0.5, fat: 8, sat_fat: 1.2, fibre: 1, salt: 0.02}
+    match:
+      include: ["TOFU*", "TOFU NATUR*"]
+      exclude: [PANIR*, NAMAZ*, BURGER*, KOBAS*, HRENOV*, SALAMA*, NARESC*, KOCKIC* MARINIR*, DESERT*, PUDING*, NAPITAK*, MLIJEKO*, JOGURT*, ROLAD*, PLJESK*, CEVAP*, NUGGET*, SNACK*, CIPS*, PASTET*, OKUS*, MED*, SIR*]
+
+  # ---------------------------------------------------------------- oils, sauces, condiments
+  - id: olive-oil
+    name: Olive oil
+    category: oils
+    storage: shelves
+    unit: ml
+    density: 0.92
+    package: bottle
+    packages: [250, 500, 750, 1000]
+    staple: true
+    nutrition: {kcal: 820, protein: 0, carbs: 0, sugar: 0, fat: 91, sat_fat: 13, fibre: 0, salt: 0}
+    match:
+      include: ["MASLINOV* ULJ*", "ULJE MASLIN*", "EKSTRA DJEVIC*", "EXTRA VERGIN*", "EXTRA VIRGIN*", "OLIVE OIL", "OLIO EXTRA*", "OLIO DI OLIVA", "MASLINOVO ULJE", "DJEVICANSK* MASLIN*"]
+      exclude: [TARALL*, RAMA, PB, SRDEL*, SPREJ*, SPRAY*, TUNA*, SARDIN*, SKUSA*, RIBA*, INCUN*, U MASLINOV*, U ULJ*, MASLINE*, MASLINA* ZELEN*, SIR*, PRSUT*, SUSEN*, RAJCIC*, CIPS*, CHIPS*, KREKER*, OKUS*, NAMAZ*, MAJONEZ*, UMAK*, PESTO*, MARGARIN*, SAPUN*, KREMA*, SAMPON*, KOZMET*, TIJELO*, LICE*, KOSA*, KOMIN*, OCAT*, PRELJEV*, DRESING*, MIJESAN*, BILJNO*, SUNCOKRET*, REPIC*, ZACINSK*, CESNJ*, CHILI*, LJUT*, TARTUF*, TRUFFLE*, BOSILJ*, RUZMARIN*, LIMUN*, ARTICOK*, PAPRIK*, PATLIDZ*, GLJIV*, FILE*, FILETI*, TUNJEVIN*]
+
+  - id: sunflower-oil
+    name: Sunflower oil
+    category: oils
+    storage: shelves
+    unit: ml
+    density: 0.92
+    package: bottle
+    packages: [1000, 2000, 3000]
+    staple: true
+    nutrition: {kcal: 820, protein: 0, carbs: 0, sugar: 0, fat: 91, sat_fat: 10, fibre: 0, salt: 0}
+    match:
+      include: ["SUNCOKRETOV* ULJ*", "ULJE SUNCOKRET*", "JESTIVO ULJE", "ULJE JESTIVO", "ULJE ZA PRZENJ*", "BILJNO ULJE", "ULJE BILJNO", "ULJE REPICIN*", "REPICIN* ULJE", "ULJE OD REPIC*", "ULJE SUNCOK*", "SUNCOK* ULJE", "ULJE REPIC*"]
+      exclude: [LOSOS*, EVA, SRDEL*, SPREJ*, SPRAY*, TUNA*, SARDIN*, SKUSA*, RIBA*, INCUN*, U ULJ*, SUNCOKRETOV* SJEM*, SJEMENK*, KOSTIC*, SIR*, CIPS*, CHIPS*, KREKER*, OKUS*, NAMAZ*, MAJONEZ*, UMAK*, MARGARIN*, SAPUN*, KREMA*, KOZMET*, TIJELO*, LICE*, KOSA*, MASAZ*, BEB*, ZA SUNCANJE, OCAT*, PRELJEV*, DRESING*, MASLINOV*, BUCIN*, LANENO*, SEZAM*, KOKOS*, ORAHOV*, TARTUF*, KAPSUL*, OMEGA*, RIBLJE*, KOMOROC*, BUCINO*, KONOPLJ*, AVOKAD*, PALMIN*, MASLAC*, MAST*]
+
+  - id: salt
+    name: Salt
+    category: spices
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000]
+    staple: true
+    nutrition: {kcal: 0, protein: 0, carbs: 0, sugar: 0, fat: 0, sat_fat: 0, fibre: 0, salt: 99}
+    match:
+      include: ["SOL", "SOL MORSKA", "MORSKA SOL", "SOL KUHINJSK*", "KUHINJSKA SOL", "SOL JODIR*", "JODIRANA SOL", "SOL SITNA", "SOL KRUPNA", "SOL HIMALAJ*", "HIMALAJSK* SOL", "SOL FINA", "FINA SOL", "SOL PAŠKA", "PASKA SOL", "SOL PASKA", "SOL NIN*", "NINSKA SOL", "SOL SOLANA*", "MALDON*", "FLEUR DE SEL", "CVIJET SOLI"]
+      exclude: [ZAC, BAKE*, ROLLS, TO GO, PAPAR*, ZACIN*, BILJ*, CESNJ*, LUK*, TARTUF*, CHILI*, LIMUN*, KOPAR*, RUZMARIN*, MLIN* S, MLINAC* PAPR*, KUPK*, ZA KUPANJE, KUPANJE*, KOZMET*, MASAZ*, PILING*, PERILIC*, POSUDJ*, POSUĐ*, ZA PERILIC*, REGENER*, TABLET*, SOL ZA PERILIC*, DIMLJ*, CEL*, SOLNIC*, SOLNJAK*, MLINAC*, CIPS*, KREKER*, STAPIC*, KIKIRIK*, BADEM*, PISTAC*, INDIJSK*, SLAN* KIKIR*, LIZALIC*, KARAMEL*, COKOLAD*, NITRIT*, SALAMURA*, ZA ZIMNIC*, ZIMNIC*, GLAUBER*, GORKA*, EPSOM*, LIJEK*, MASLIN*, MIJESAN*, MIX*, BIO SOL ZA, ZA KISEL*, ZA SOLJENJE, ZA CIŠĆENJE, KOLAC*, KRISK*, VAFL*, KEKS*, POPCORN*, KOKIC*, SLAMKE*, OCAT*, PERECI*, PERECI, PEREC*, KNEIP*]
+
+  - id: black-pepper
+    name: Black pepper
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [20, 25, 40, 50, 100]
+    staple: true
+    nutrition: {kcal: 250, protein: 10, carbs: 39, sugar: 0.6, fat: 3.3, sat_fat: 1.4, fibre: 25, salt: 0.05}
+    match:
+      include: ["PAPAR CRNI", "CRNI PAPAR", "PAPAR MLJEVENI", "MLJEVENI PAPAR", "PAPAR ZRNO", "PAPAR U ZRNU", "PAPAR CRNI MLJEVENI", "PAPAR MLIN*", "MLIN* PAPAR*", "PAPAR CRNI ZRNO"]
+      exclude: [CRVENI, SARE*, BIJELI, ZELENI, ROZI, RUZICAST*, SARENI, MIX*, MIJESAN*, LIMUN*, SOL I, I SOL, S SOLI, CILI*, CHILI*, KAJENSK*, ZACIN* S, CIPS*, OKUS*, SALAMA*, KOBAS*, PRSUT*, SIR*, SUNKA*, NARESC*, PECIV*, KREKER*, ZA MESO*, ZA ROSTILJ*, STEAK*, ODREZAK*, BIFTEK*, CRNI LUK*, SLANIN*, PAPRIK*, TUNA*, SKUSA*, LOSOS*, TJESTENIN*, UMAK*, MAJONEZ*]
+
+  - id: sugar
+    name: Sugar
+    category: baking
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [500, 1000, 2000]
+    staple: true
+    nutrition: {kcal: 400, protein: 0, carbs: 100, sugar: 100, fat: 0, sat_fat: 0, fibre: 0, salt: 0}
+    match:
+      include: ["SECER", "ŠEĆER", "SECER BIJELI", "BIJELI SECER", "KRISTAL* SECER*", "SECER KRISTAL*", "SECER KONZUMNI", "KONZUMNI SECER", "SECER SMEDJI", "SMEDJI SECER", "SECER TRSKIN*", "TRSKIN* SECER*", "SECER U PRAHU", "SECER PRAH*", "SECER KOCK*", "SECER SITNI", "SECER FINI", "SECER BIJ*"]
+      exclude: [TO GO, LIMUN*, ZELIRN*, VANILIN*, VANILIJ*, BEZ SECER*, BEZ DODAN*, MANJE SECER*, SMANJEN*, ZERO*, ZAMJEN*, SLADIL*, STEVIA*, STEVIJ*, KSILIT*, ERITRIT*, KOKOS* SECER*, KOKOSOV* SECER*, SECER OD KOKOS*, GROZDAN*, VOCN* SECER*, FRUKTOZ*, DEKSTR*, GLUKOZ*, ZA ZELIR*, ZELIRAN*, ZA DZEM*, DZEM*, CIMET*, SIRUP*, KARAMEL*, BOMBON*, LIZALIC*, MRVIC*, POSIP*, DEKOR*, UKRAS*, PERLE*, MRVICE*, KONFET*, GUMEN*, ZVAKAC*, KEKS*, KOLAC*, NAPITAK*, SOK*, CAJ*, KAVA*, CAPPUCC*, COKOLAD*, KAKAO*, MED*, PJENA*, SLAG*, OBOJEN*, GLAZUR*, FONDAN*, MARCIPAN*, ZELE*, BIO SECER OD, PALMIN*, KLEN*, SIRUP*, AGAV*, DATULJ*, TRSKA*, MUSCOVAD* SIRUP*, VATA*, SECERN* GRASAK, SECERAC*, SECERNA*, SECERNE*, SECERN* REP*]
+
+  - id: honey
+    name: Honey
+    category: sweets
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [250, 450, 500, 900, 1000]
+    nutrition: {kcal: 304, protein: 0.3, carbs: 82, sugar: 82, fat: 0, sat_fat: 0, fibre: 0.2, salt: 0}
+    match:
+      include: ["MED", "MED CVJETNI", "CVJETNI MED", "MED BAGREM*", "BAGREMOV* MED", "MED LIVADN*", "LIVADNI MED", "MED KADULJ*", "MED LIPOV*", "MED KESTEN*", "MED SUMSK*", "MED VRISK*", "MED MIJESAN*", "MED KADULJE", "MED LAVAND*", "MED RUZMARIN*", "MED MANUKA*", "MANUKA*", "MED DOMACI", "DOMACI MED", "MED BIO", "MED PROPOL*", "MED DUZIC*"]
+      exclude: [KRASTAV*, KORN*, NAMAZ*, MENTOL*, MEDO*, MEDVJED*, MEDENJ*, MEDENI*, MEDALJ*, MEDIT*, MEDIUM*, MEDJ*, KEKS*, BOMBON*, LIZALIC*, CAJ*, BALZAM*, SAPUN*, KREMA*, KOZMET*, SAMPON*, SENF*, PRELJEV*, DRESING*, UMAK*, MARINAD*, PAHULJ*, MUESLI*, MUSLI*, GRANOL*, CORN*, BAR*, PLOCIC*, JOGURT*, MLIJEK*, PIVO*, LIKER*, RAKIJ*, MEDICA*, MEDOVIN*, VINO*, KOLAC*, KRUH*, ORAS*, ORAH*, LJESNJAK*, BADEM*, KIKIRIK*, SEZAM*, SJEMENK*, CIPS*, OKUS*, CIMET*, LIMUN*, DUMBIR* I, DJUMBIR* I, NAPITAK*, SIRUP* OD, KAPI*, PASTIL*, SPREJ*, MEDNI*, SATOVL* I, SKUTA*, SIR*, PILE*, SUNKA*, PECIV*, KROASAN*, PROTEIN*, KASA*, SENF*, GORUSIC*]
+
+  - id: passata
+    name: Tomato passata
+    category: canned
+    storage: shelves
+    unit: g
+    package: bottle
+    packages: [500, 680, 700, 1000]
+    nutrition: {kcal: 30, protein: 1.4, carbs: 5, sugar: 4, fat: 0.2, sat_fat: 0, fibre: 1.2, salt: 0.3}
+    match:
+      include: ["PASIRAN* RAJCIC*", "RAJCIC* PASIRAN*", "PASSATA*", "PASATA*", "PASIRANA RAJČICA", "PULPA RAJCIC*", "RAJCICA PULPA", "POLPA*", "TOMATO PASSATA", "PASSATA DI POMODORO", "RAJCICA PASIR*", "SUGO DI POMOD*", "RAJCICA PROCIJED*"]
+      exclude: [BOSILJ*, CESNJ*, LUK*, BILJ*, ZACIN*, CHILI*, LJUT*, ORIGANO*, GLJIV*, MASLIN*, PAPRIK*, POVRC*, ARRABIAT*, NAPOLET*, BOLOGN*, PIZZA*, MESN*, SIR*, PESTO*, KETCHUP*, KECAP*, BASIL*, BASILICO*, ERB*, ROSTIL*, SALSA*, PIKANT*, SPICY*, TOMATINO*, VERDUR*, OLIV*, CAPER*, KAPAR*, TUNA*]
+
+  - id: canned-tomatoes
+    name: Chopped tomatoes (canned)
+    category: canned
+    storage: shelves
+    unit: g
+    package: can
+    packages: [400, 800, 2500]
+    nutrition: {kcal: 22, protein: 1.1, carbs: 3.5, sugar: 3, fat: 0.2, sat_fat: 0, fibre: 1.2, salt: 0.3}
+    match:
+      include: ["SJECKAN* RAJCIC*", "RAJCIC* SJECKAN*", "RAJCICA SJECK*", "SJECK* RAJC*", "PELAT*", "RAJCICA PELAT*", "PELATI RAJCIC*", "RAJCICA OGULJ*", "OGULJ* RAJC*", "RAJCIC* U KOCK*", "RAJCICA KOCK*", "RAJCIC* KONZERV*", "KONZERV* RAJC*", "RAJCICA CIJEL* KONZ*", "CHOPPED TOMATO*", "POMODORI PELATI", "POLPA DI POMODORO", "RAJCICA U LIMENC*", "RAJCICA SJEC*", "RAJCICA NASJECK*", "NASJECK* RAJC*"]
+      exclude: [BOSILJ*, CESNJ*, LUK*, BILJ*, ZACIN*, CHILI*, LJUT*, ORIGANO*, GLJIV*, MASLIN*, PAPRIK*, POVRC*, ARRABIAT*, NAPOLET*, BOLOGN*, PIZZA*, MESN*, SIR*, PESTO*, KETCHUP*, SALSA*, PIKANT*, SPICY*, SUSEN*, CHERRY* SVJ*, SVJEZ*, MOZZAREL*, TUNA*, CAPER*, KAPAR*, SARDIN*, GRAH*, SLANUT*, LECA*, RIZ*, TJESTENIN*, PASIR*, PASSATA*]
+
+  - id: tomato-paste
+    name: Tomato paste
+    category: canned
+    storage: shelves
+    unit: g
+    package: tube
+    packages: [70, 140, 200, 400]
+    nutrition: {kcal: 85, protein: 4.5, carbs: 14, sugar: 11, fat: 0.5, sat_fat: 0.1, fibre: 4, salt: 0.3}
+    match:
+      include: ["KONCENTRAT RAJC*", "RAJCICA KONCENTR*", "RAJC* KONCENTR*", "KONC* RAJC*", "PIRE RAJCIC*", "RAJCICA PIRE", "TOMATO PASTE", "DVOSTRUK* KONCENTR*", "TROSTRUK* KONCENTR*", "KONCENTRAT OD RAJC*", "KONCENTRAT PARADAJZ*", "PARADAJZ KONCENTR*", "CONCENTRATO DI POMOD*", "DOPPIO CONCENTR*", "TRIPLO CONCENTR*", "KONCENTRAT RAJČ*", "SALSA DI POMOD*"]
+      exclude: [BOSILJ*, CESNJ*, BILJ*, ZACIN*, CHILI*, LJUT*, PIKANT*, SUSEN*, SOK*, KETCHUP*, UMAK*, PAPRIK*, PESTO*, SUGO*]
+
+  - id: soy-sauce
+    name: Soy sauce
+    category: sauces
+    storage: shelves
+    unit: ml
+    density: 1.15
+    package: bottle
+    packages: [125, 150, 250, 500, 1000]
+    nutrition: {kcal: 60, protein: 8, carbs: 6, sugar: 1, fat: 0.1, sat_fat: 0, fibre: 0.8, salt: 14}
+    match:
+      include: ["SOJIN* UMAK*", "SOJA UMAK*", "UMAK SOJ*", "SOJ* UMAK*", "SOY SAUCE*", "SOJA SOS*", "TAMARI*", "SHOYU*", "KIKKOMAN* SOJ*", "KIKKOMAN* UMAK*", "SAUCE SOJA", "SOJA SAUCE"]
+      exclude: [TERIYAK*, SLATK* I KISEL*, SWEET*, CHILI*, LJUT*, CESNJ*, SEZAM*, KIKIRIK*, WOK UMAK*, MARINAD*, OSTRIG*, OYSTER*, HOISIN*, CURRY*, SRIRACH*, GOCHUJ*, DUMBIR*, DJUMBIR*, GINGER*, LIMUN*, YAKITORI*, PONZU*, SUSHI* SET*, SET*, BBQ*, ROSTILJ*, NAMAZ*, GULAS*, KECAP MANIS*, KECAP*, MANIS*]
+
+  - id: vinegar
+    name: Vinegar
+    category: sauces
+    storage: shelves
+    unit: ml
+    package: bottle
+    packages: [500, 750, 1000]
+    staple: true
+    nutrition: {kcal: 20, protein: 0, carbs: 0.6, sugar: 0.4, fat: 0, sat_fat: 0, fibre: 0, salt: 0}
+    match:
+      include: ["OCAT", "OCAT VINSKI", "VINSKI OCAT", "OCAT JABUCN*", "JABUCNI OCAT", "OCAT ALKOHOL*", "ALKOHOLNI OCAT", "OCAT BALZAM*", "BALZAMICN* OCAT*", "ACETO BALSAM*", "BALSAMIC*", "OCAT KVASN*", "OCAT RIZIN*", "RIZIN* OCAT*", "OCAT CRVEN*", "OCAT BIJEL*", "OCAT OD", "OCAT DOMACI", "OCAT SPIRIT*", "ACETO*", "OCAT ZA SALAT*", "OCAT ZA KISEL*"]
+      exclude: [DRESSING*, KREMA*, GLAZ*, GLAZUR*, REDUKC*, PRELJEV*, DRESING*, CREMA*, CIPS*, CHIPS*, OKUS*, SOL I OCAT, SOL & OCAT, CISCENJ*, CISTAC*, ZA CISC*, ZA POSUD*, ZA PERILIC*, KAMENAC*, OMEKS*, ZA RUBLJ*, ZA PODOVE, SPREJ*, KAPSUL*, PIKANT*, KRASTAV*, PAPRIK*, CIKL*, MIJESAN*, TURSIJ*, LUK*, CESNJ*, TARTUF*, KORNIS*]
+
+  - id: mustard
+    name: Mustard
+    category: sauces
+    storage: fridge
+    unit: g
+    package: jar
+    packages: [100, 200, 250, 300, 500]
+    nutrition: {kcal: 90, protein: 5, carbs: 6, sugar: 4, fat: 5, sat_fat: 0.3, fibre: 3, salt: 3}
+    match:
+      include: ["SENF*", "GORUSIC*", "MUSTARD*", "DIJON*", "MOUTARDE*"]
+      exclude: [SJEME*, ZRNO* GORUSIC*, PRAH*, MAJONEZ*, KETCHUP*, MED I SENF, MED SENF*, UMAK* S, DRESING*, PRELJEV*, CIPS*, OKUS*, KOBAS*, HRENOV*, SALAMA*, SIR*, SUNKA*, KREKER*, PRETZEL*, PEREC*, MAJO*]
+
+  - id: mayonnaise
+    name: Mayonnaise
+    category: sauces
+    storage: fridge
+    unit: g
+    package: jar
+    packages: [180, 250, 300, 500, 630]
+    nutrition: {kcal: 680, protein: 1, carbs: 1.5, sugar: 1.2, fat: 75, sat_fat: 6, fibre: 0, salt: 1.4}
+    match:
+      include: ["MAJONEZ*", "MAYONNAISE*", "MAYO", "MAJONEZA DELIKATES*"]
+      exclude: [CILI*, KETCHUP*, LIGHT*, LAKA*, LAGANA*, VEGAN*, SALAT*, TUNA*, PILE*, SUNKA*, JAJ* S MAJ*, SENDVI*, KREKER*, CIPS*, OKUS*, CESNJ*, CHILI*, LJUT*, SRIRACH*, WASABI*, TARTUF*, KETCHUP* I, I KETCHUP*, DIP*, BURGER* UMAK*, TARTAR*, SPECIJ*, MIX*]
+
+  - id: ketchup
+    name: Ketchup
+    category: sauces
+    storage: fridge
+    unit: g
+    package: bottle
+    packages: [300, 500, 750, 1000]
+    nutrition: {kcal: 110, protein: 1.2, carbs: 25, sugar: 22, fat: 0.2, sat_fat: 0, fibre: 0.5, salt: 1.8}
+    match:
+      include: ["KETCHUP*", "KECAP*", "KEČAP*", "KECHUP*"]
+      exclude: [MAJONEZ*, PASTET*, CIPS*, OKUS*, CHIPS*, MAJONEZ* I, I MAJONEZ*, KREKER*, FLIPS*, STAPIC*, SNACK*, KECAP MANIS*, MANIS*, ZERO*, BEZ SECER*, BEZ DODAN*, CURRY* KETCH*, CURRY*]
+
+  - id: peanut-butter
+    name: Peanut butter
+    category: sweets
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [250, 340, 350, 400, 500, 1000]
+    nutrition: {kcal: 600, protein: 25, carbs: 13, sugar: 6, fat: 50, sat_fat: 8, fibre: 6, salt: 0.6}
+    match:
+      include: ["MASLAC OD KIKIRIK*", "KIKIRIKI MASLAC*", "KIKIRIKI KREM*", "KREMA OD KIKIRIK*", "KIKIRIKI NAMAZ*", "NAMAZ OD KIKIRIK*", "PEANUT BUTTER*", "KIKIRIKI PASTA*", "PASTA OD KIKIRIK*", "KIKIRIKI BUTTER*", "MASLAC KIKIRIK*", "KREM OD KIKIRIK*", "PEANUT CREAM*", "KIKIRIKI MASLAC", "MASLAC OD KIKIRIKIJA"]
+      exclude: [COKOLAD*, KAKAO*, KEKS*, BAR*, PLOCIC*, BOMBON*, CIPS*, KREKER*, PROTEIN* BAR*, PRAH*, NAPITAK*, SLADOLED*, MUFFIN*, KOLAC*, ZELE*, JELLY*, DZEM*, GRANOL*, MUESLI*, KUGLIC*, DESERT*, PUDING*, M&M*, SNICKERS*, REESE*, CUP*, ZA PSE*]
+
+  - id: coconut-milk
+    name: Coconut milk
+    category: canned
+    storage: shelves
+    unit: ml
+    package: can
+    packages: [165, 200, 400, 1000]
+    nutrition: {kcal: 180, protein: 1.6, carbs: 2.8, sugar: 2, fat: 18, sat_fat: 16, fibre: 0.5, salt: 0.05}
+    match:
+      include: ["KOKOSOV* MLIJEK*", "KOKOS* MLIJEKO", "MLIJEKO KOKOS*", "COCONUT MILK*", "KOKOSOVO MLIJEKO", "KOKOSOV* KREM*", "COCONUT CREAM*", "KOKOS* VRHNJ*", "VRHNJE KOKOS*", "KOKOSOV* NAPITAK ZA KUH*"]
+      exclude: [NAPITAK*, DRINK*, BARISTA*, COKOLAD*, KAKAO*, VANILI*, JOGURT*, DESERT*, PUDING*, SLADOLED*, KEKS*, BOMBON*, PRAH*, U PRAHU, CAPPUCC*, LATTE*, KAVA*, BADEM*, RIZ*, ZOB*, SOJ*, VODA*, SOK*, LICE*, TIJELO*, KOSA*, SAMPON*, KOZMET*, MASKA*, KREMA ZA, ULJE*, PROTEIN*, CHIA*, CURRY*, UMAK*, JUHA*, LIGHT*]
+
+  - id: stock-cubes
+    name: Stock cubes
+    category: sauces
+    storage: shelves
+    unit: g
+    package: box
+    packages: [60, 66, 80, 100, 120]
+    nutrition: {kcal: 262, protein: 7, carbs: 20, sugar: 5, fat: 17, sat_fat: 9, fibre: 0.5, salt: 55}
+    match:
+      include: ["KOCK* ZA JUH*", "JUHA U KOCK*", "JUHA KOCK*", "KOCKA PILE*", "KOCKA POVRT*", "KOCKA GOVED*", "KOCKE PILE*", "KOCKE POVRT*", "KOCKE GOVED*", "KOCK* JUH*", "TEMELJAC*", "BUJON*", "BOUILLON*", "JUSNA KOCK*", "JUSN* OSNOV*", "OSNOVA ZA JUH*", "KOCKA ZA JUHU", "VEGETA KOCK*", "JUHA OD POVRC* KOCK*", "STOCK CUBE*", "KOCKE ZA JUHU", "TEKUC* TEMELJ*", "BRODO*", "DADO*", "SUPPENWURF*", "KOCKA*  JUHU"]
+      exclude: [INSTANT*, VRECIC*, GOTOV*, KREM* JUH*, KREMA*, KLIP*, REZANC*, ZVJEZDIC*, ABECED*, TJESTENIN* ZA JUH*, FIDE*, KNEDL*, NOKL*, ZA PSE, LED*, SIR*, KOCKIC* SIR*, COKOLAD*, SECER*]
+
+  # ---------------------------------------------------------------- baking
+  - id: baking-powder
+    name: Baking powder
+    category: baking
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [12, 15, 50, 100]
+    staple: true
+    nutrition: {kcal: 100, protein: 0, carbs: 25, sugar: 0, fat: 0, sat_fat: 0, fibre: 0, salt: 20}
+    match:
+      include: ["PRASAK ZA PECIV*", "PECIVO PRASAK", "PRASAK PECIV*", "BAKING POWDER*", "BACKPULVER*", "PRAŠAK ZA PECIVO", "PRASAK ZA PEC*", "PRASAK ZA KOL*"]
+      exclude: [VANILIN*, PUDING*, SLAG*, KREM*, SIRUP*]
+
+  - id: dry-yeast
+    name: Dry yeast
+    category: baking
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [7, 10, 21, 50, 100]
+    staple: true
+    nutrition: {kcal: 325, protein: 40, carbs: 30, sugar: 0, fat: 7.6, sat_fat: 1, fibre: 20, salt: 0.13}
+    match:
+      include: ["SUHI KVASAC", "KVASAC SUHI", "INSTANT KVASAC", "KVASAC INSTANT", "SUHI KVAS*", "KVASAC SUH*", "DRY YEAST*", "KVASAC U PRAHU", "KVASAC ZA PIZZ*", "KVASAC ZA KRUH", "KVASAC DR*", "KVASAC"]
+      exclude: [SVJEZ*, PIVSKI*, PIVSK*, PREHRAMBENI*, LJEKOVIT*, TABLET*, KAPSUL*, SELEN*, B12*, CINK*, CROM*, KROM*, NUTRITIVN*, PAHULJ*, FLAKES*, VEGAN* ZAC*, ZACIN*, EKSTRAKT*, POJACIVAC*, PROTEIN*]
+
+  - id: cocoa
+    name: Cocoa powder
+    category: baking
+    storage: shelves
+    unit: g
+    package: box
+    packages: [75, 100, 125, 200, 250]
+    nutrition: {kcal: 350, protein: 20, carbs: 12, sugar: 1, fat: 21, sat_fat: 13, fibre: 33, salt: 0.05}
+    match:
+      include: ["KAKAO PRAH*", "KAKAO U PRAHU", "KAKAO ZA KUHAN*", "KAKAO ZA KOL*", "KAKAO BEZ SECER*", "KAKAO NATUR*", "KAKAO POSNI*", "KAKAO NISK*", "CACAO POWDER*", "KAKAO PUDER*", "KAKAO HOLLAND*", "KAKAO ALKALIZ*", "KAKAO PRAŠAK", "KAKAO", "KAKAO BIO", "SIROVI KAKAO", "KAKAO SIROVI"]
+      allow: [sweets]
+      exclude: [DAY*, KAPSUL*, VITAMIN*, MRVIC*, EXPRES*, COK, COKO*, COKOL*, INST*, EXPRESS*, PLOCA*, CAJNI, KOLUT*, VAFEL*, CROIS*, NAPITAK*, INSTANT*, NESQUIK*, BENQUICK*, TOPLA COKOLAD*, CAPPUCC*, KAVA*, MLIJEK*, KREM*, NAMAZ*, KEKS*, BOMBON*, PLOCIC*, BAR*, COKOLAD*, PAHULJ*, MUESLI*, GRANOL*, CORN*, PROTEIN*, SLADOLED*, PUDING*, DESERT*, KOLAC*, TORT*, MUFFIN*, MASLAC*, ZRNA*, ZRNO*, NIBS*, KOMADIC*, PERLE*, LISTIC*, PRELJEV*, SIRUP*, GLAZUR*, PREMAZ*, KUGLIC*, VAFL*, KROASAN*, OKUS*, AROM*, MED*, SECER*, ZOB*, NAPOLITANK*, KIFL*, PECIV*, PRAH ZA PUD*, JOGURT*, LIKER*, VODA*, ZA PRIPREM*, ZA NAPITAK*, KAKAOV* MASLAC*, BIJELI*, KEKSI*, ROLAD*, SAVIJAC*, PUNJEN*, TORTE*]
+
+  - id: dark-chocolate
+    name: Dark chocolate
+    category: sweets
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [80, 100, 200]
+    nutrition: {kcal: 580, protein: 8, carbs: 34, sugar: 28, fat: 43, sat_fat: 26, fibre: 10, salt: 0.02}
+    match:
+      include: ["COKOLADA ZA KUHAN*", "COKOLAD* ZA KUH*", "COKOLADA TAMNA", "TAMNA COKOLADA", "COKOLADA CRNA", "CRNA COKOLADA", "COKOLADA GORKA", "GORKA COKOLADA", "DARK CHOCOLATE*", "COKOLADA EXTRA DARK", "COKOLADA DARK", "COKOLADA KUHAN*", "EXTRA DARK*", "COKOLADA ZA KOL*", "TAMNA COK*", "COKOLADA TAM*", "COK* TAMNA", "COK* TAM*", "COK* EXC* TAMNA"]
+      allow: [sweets]
+      exclude: [NARAN*, KANDI*, NUGAT*, STEVIJ*, TART*, MLIJECN*, BIJEL*, KEKS*, BOMBON*, PRALIN*, PUNJEN*, NAPITAK*, TOPLA*, PRAH*, MOUSSE*, PUDING*, DESERT*, SLADOLED*, NAMAZ*, KREM*, PLOCIC*, BAR*, PROTEIN*, MUESLI*, GRANOL*, OBLOZEN*, PRELIV*, PRELJEV*, PREMAZ*, GLAZUR*, KAVA*, LIKER*, KUGLIC*, JAJE*, JAJA*, KINDER*, MARCIPAN*, VAFL*, KOLAC*, TORT*, MUFFIN*, KROASAN*, ZOB*, CAJ*, PAHULJ*, MENTA* KREM*, KARAMEL*, PISTAC*, ORAS*, LJESNJAK*, BADEM*, MALIN*, NARANC*, KOKOS*, SOL*, CHILI*, MANGO*, JAGOD*, VISNJ*, BRUSNIC*, MENT*, KAPI*, KOMADIC*, LISTIC*, PERLE*, MRVIC*]
+
+  # ---------------------------------------------------------------- nuts and seeds
+  - id: walnuts
+    name: Walnuts
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 654, protein: 15, carbs: 7, sugar: 2.6, fat: 65, sat_fat: 6, fibre: 6.7, salt: 0}
+    match:
+      include: ["ORAH", "ORASI", "ORAH JEZGR*", "JEZGRA ORAH*", "ORASI JEZGR*", "ORAH MLJEVEN*", "MLJEVENI ORAH", "ORAH OCISCEN*", "ORAH POLOVIC*", "ORASI POLOVIC*", "WALNUT*", "ORAH SJECKAN*", "ORAH LOMLJEN*", "ORAH CIJELI", "ORAH U LJUSCI", "ORAHOVA JEZGRA", "ORAH SVJ*", "ORAH DOMACI"]
+      exclude: [BUT, JUNE*, TELE*, SVINJ*, TWIST*, MAK, AMUR, TOLSTOLOB*, ODR, PP, OCAT*, MUS, IND, ZAC, ZACIN*, KIKIRIK*, LJESNJAK*, BADEM*, INDIJSK*, PISTAC*, BRAZIL*, PEKAN*, MAKADAM*, KOKOS*, MUSKAT*, MIJESAN*, MIX*, STUDENTSK*, COKOLAD*, KEKS*, BAR*, PLOCIC*, BOMBON*, KOLAC*, TORT*, MUFFIN*, KRUH*, PECIV*, KROASAN*, SAVIJAC*, STRUDL*, POTIC*, BEIGLI*, MAKOVNJAC*, ORAHNJAC*, LIKER*, RAKIJ*, ORAHOVAC*, ULJE*, NAMAZ*, KREM*, MASLAC*, PREMAZ*, MED*, GRANOL*, MUESLI*, MUSLI*, PAHULJ*, SLADOLED*, JOGURT*, SIR*, PROTEIN*, KASIC*, CAJ*, SAPUN*, KOZMET*, TIJESTO*, PUNJENJ*, NADJEV*, GLAZIR*, KARAMEL*, KANDIR*, PRZEN* SOL*, SLAN*]
+
+  - id: almonds
+    name: Almonds
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 600, protein: 21, carbs: 9, sugar: 4.4, fat: 50, sat_fat: 3.8, fibre: 12.5, salt: 0}
+    match:
+      include: ["BADEM", "BADEMI", "BADEM JEZGR*", "BADEM LISTIC*", "BADEM MLJEVEN*", "MLJEVENI BADEM", "BADEM BLANSIR*", "BADEM OGULJ*", "BADEM CIJELI", "BADEM SIROVI", "ALMOND*", "BADEM PRZEN*", "BADEM NATUR*", "BADEMI NATUR*", "BADEM SJECKAN*", "BADEM STAPIC*", "BADEMOVO BRASNO", "BRASNO BADEM*"]
+      exclude: [KIKIRIK*, LJESNJAK*, ORAH*, ORASI*, INDIJSK*, PISTAC*, BRAZIL*, PEKAN*, MAKADAM*, KOKOS*, MIJESAN*, MIX*, STUDENTSK*, COKOLAD*, KEKS*, BAR*, PLOCIC*, BOMBON*, KOLAC*, TORT*, MUFFIN*, KRUH*, PECIV*, KROASAN*, LIKER*, ULJE*, NAMAZ*, KREM*, MASLAC*, MLIJEKO*, NAPITAK*, DRINK*, JOGURT*, DESERT*, PUDING*, SLADOLED*, MED*, GRANOL*, MUESLI*, MUSLI*, PAHULJ*, SIR*, PROTEIN*, CAJ*, SAPUN*, KOZMET*, SAMPON*, TIJELO*, KANDIR*, KARAMEL*, DIMLJ*, SLAN*, BBQ*, CHILI*, WASABI*, TAMARI*, OBLOZEN*, GLAZIR*, SECER*, MARCIPAN*, KOSTIC*, AMARETT*, BISKVIT*, NUGAT*]
+
+  - id: hazelnuts
+    name: Hazelnuts
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 640, protein: 15, carbs: 7, sugar: 4.3, fat: 61, sat_fat: 4.5, fibre: 9.7, salt: 0}
+    match:
+      include: ["LJESNJAK", "LJESNJACI", "LJESNJAK JEZGR*", "LJESNJAK MLJEVEN*", "MLJEVENI LJESNJAK", "LJESNJAK PRZEN*", "LJESNJAK CIJELI", "LJESNJAK SIROVI", "HAZELNUT*", "LJESNJAKA JEZGRA", "LJESNJAK NATUR*", "LJESNJAK SJECKAN*", "LJESNJAK OGULJ*"]
+      exclude: [KIKIRIK*, BADEM*, ORAH*, ORASI*, INDIJSK*, PISTAC*, BRAZIL*, MIJESAN*, MIX*, STUDENTSK*, COKOLAD*, KEKS*, BAR*, PLOCIC*, BOMBON*, KOLAC*, TORT*, MUFFIN*, KRUH*, PECIV*, KROASAN*, LIKER*, ULJE*, NAMAZ*, KREM*, MASLAC*, MLIJEKO*, NAPITAK*, JOGURT*, DESERT*, PUDING*, SLADOLED*, MED*, GRANOL*, MUESLI*, MUSLI*, PAHULJ*, SIR*, PROTEIN*, CAJ*, KAVA*, AROM*, OKUS*, SIRUP*, KARAMEL*, KANDIR*, NUGAT*, VAFL*, NAPOLITANK*, OBLOZEN*, GLAZIR*, SECER*, NUTELL*, LINO*, KINDER*, PRALIN*, BAJADER*]
+
+  - id: peanuts
+    name: Peanuts
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 590, protein: 25, carbs: 12, sugar: 4, fat: 49, sat_fat: 7, fibre: 8, salt: 0.5}
+    match:
+      include: ["KIKIRIKI", "KIKIRIKIJI", "KIKIRIKI PRZEN*", "PRZENI KIKIRIKI", "KIKIRIKI SLAN*", "SLANI KIKIRIKI", "KIKIRIKI NESLAN*", "NESLANI KIKIRIKI", "KIKIRIKI JEZGR*", "KIKIRIKI OGULJ*", "KIKIRIKI SIROVI", "KIKIRIKI U LJUSC*", "PEANUTS", "KIKIRIKI NATUR*"]
+      exclude: [STAPIC*, ZIGI*, TERIYAKI*, CILI*, MASLAC*, BUTTER*, KREM*, NAMAZ*, PASTA*, COKOLAD*, KEKS*, BAR*, PLOCIC*, BOMBON*, FLIPS*, CIPS*, SNACK*, SMOKI*, KREKER*, KOLAC*, MIJESAN*, MIX*, STUDENTSK*, UMAK*, ULJE*, PROTEIN*, OBLOZEN*, GLAZIR*, MED*, KARAMEL*, CHILI*, BBQ*, WASABI*, PAPRIK*, OKUS*, TIJEST*, BRASN*, KOKOS*, M&M*, SNICKERS*, KIKIRIKI SA, KIKIRIKI S, SEZAM*, ZA PTICE, PTIC*, NUGAT*, SLADOLED*]
+
+  - id: sesame
+    name: Sesame seeds
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 500]
+    nutrition: {kcal: 573, protein: 18, carbs: 12, sugar: 0.3, fat: 50, sat_fat: 7, fibre: 12, salt: 0}
+    match:
+      include: ["SEZAM", "SEZAM BIJELI", "SEZAM CRNI", "SEZAM OLJUST*", "SEZAM NEOLJUST*", "SEZAMOVE SJEMENK*", "SJEMENKE SEZAM*", "SESAME SEED*", "SEZAM SJEMENK*", "SEZAM ZRNO", "SEZAM PRZEN*"]
+      exclude: [CRACKER*, RIBIC*, GOLDFISH*, ULJE*, PASTA*, TAHINI*, TAHAN*, NAMAZ*, KREKER*, STAPIC*, PECIV*, KRUH*, KEKS*, BAR*, PLOCIC*, BOMBON*, KOLAC*, CIPS*, SNACK*, MIJESAN*, MIX*, UMAK*, DRESING*, PRELJEV*, PILE*, SUSHI*, PEREC*, GRISIN*, LEPINJ*, KIFL*, ZEMLJ*, BAGET*, HALVA*, CHIKKI*, MED*, KARAMEL*, OBLOZEN*, GLAZIR*, KIKIRIK*]
+
+  - id: chia
+    name: Chia seeds
+    category: nuts
+    storage: shelves
+    unit: g
+    package: bag
+    packages: [100, 150, 200, 250, 300, 500]
+    nutrition: {kcal: 486, protein: 17, carbs: 7.7, sugar: 0, fat: 31, sat_fat: 3.3, fibre: 34, salt: 0.04}
+    match:
+      include: ["CHIA", "CIA SJEMENK*", "SJEMENKE CHIA", "CHIA SJEM*"]
+      exclude: [KREK*, RIZ*, GRISIN*, ZIT, OBROK, UM, PUDING*, DESERT*, NAPITAK*, JOGURT*, KREKER*, KRUH*, PECIV*, KEKS*, BAR*, PLOCIC*, MUESLI*, MUSLI*, GRANOL*, PAHULJ*, KASA*, MIJESAN*, MIX*, SMOOTHIE*, SOK*, ULJE*, PROTEIN*, CIPS*, SNACK*, KOLAC*, MUFFIN*, TORTIL*, TJESTENIN*, BRASN*, LAN* I, I LAN*, BOROVN*, MALIN*, JAGOD*, MANGO*, BANAN*, COKOLAD*, KAKAO*, VANILI*, KOKOS*]
+
+  # ---------------------------------------------------------------- spices
+  - id: paprika-powder
+    name: Sweet paprika powder
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [40, 50, 100, 200]
+    nutrition: {kcal: 290, protein: 14, carbs: 19, sugar: 10, fat: 13, sat_fat: 2, fibre: 35, salt: 0.07}
+    match:
+      include: ["PAPRIKA MLJEVEN*", "MLJEVEN* PAPRIK*", "PAPRIKA SLATK* MLJ*", "PAPRIKA SLATKA", "SLATKA PAPRIKA", "ALEVA PAPRIKA", "PAPRIKA ALEVA", "PAPRIKA DIMLJ*", "DIMLJENA PAPRIKA", "PAPRIKA LJUTA MLJ*", "LJUTA PAPRIKA MLJ*", "PAPRIKA PRAH*", "PAPRIKA PULVER*", "PAPRIKA ZACIN*", "PAPRIKA EDELSUSS*", "PIMENTON*", "PAPRIKA SLATKA MLJEVENA", "PAPRIKA LJUTA", "LJUTA PAPRIKA"]
+      exclude: [PEPPADEW*, CIPS*, CHIPS*, OKUS*, SVJEZ*, KONZERV*, STAKL*, PECEN*, PUNJEN*, KISEL*, AJVAR*, UMAK*, PASTA*, PASTET*, NAMAZ*, SALAM*, KOBAS*, SIR*, KREKER*, FLIPS*, STAPIC*, SNACK*, FILE*, MARINIR*, CRVENA PAPRIKA KG, PAPRIKA BABURA, BABURA*, ROG*, FEFERON*, KRISK*, TRAK*, PRSTEN*, SALATA*, PAPRIKAS*, KOKIC*, POPCORN*, BADEM*, KIKIRIK*, INDIJSK*, PILE*, ROSTIL* ZACIN* MIJ*]
+
+  - id: cumin
+    name: Ground cumin
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [25, 30, 35, 40, 50, 100]
+    nutrition: {kcal: 375, protein: 18, carbs: 34, sugar: 2, fat: 22, sat_fat: 1.5, fibre: 11, salt: 0.4}
+    match:
+      include: ["KUMIN*", "CUMIN*", "RIMSKI KIM", "KIM RIMSKI", "JEERA*", "KREUZKUMMEL*"]
+      exclude: [MIJESAN*, MIX*, MJESAVIN*, ZACIN* ZA, CIPS*, OKUS*, SIR*, KRUH*, PECIV*, KREKER*, SOL*, ULJE*]
+
+  - id: cinnamon
+    name: Ground cinnamon
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [15, 20, 25, 30, 40, 50, 100]
+    nutrition: {kcal: 250, protein: 4, carbs: 28, sugar: 2, fat: 1.2, sat_fat: 0.3, fibre: 53, salt: 0.03}
+    match:
+      include: ["CIMET", "CIMET MLJEVEN*", "MLJEVENI CIMET", "CIMET STAPIC*", "CIMET CEJLON*", "CEJLONSKI CIMET", "CIMET KASIJ*", "CINNAMON*", "ZIMT*", "CIMET U PRAHU", "CIMET ZACIN*", "CIMET CIJELI", "CIMET KORA"]
+      exclude: [GRIZ*, RIZA, MLI, SECER*, MIJESAN*, MIX*, KEKS*, BOMBON*, KOLAC*, PECIV*, PUZ*, ROLL*, ROLAD*, PAHULJ*, MUESLI*, MUSLI*, GRANOL*, CORN*, CAJ*, KAVA*, CAPPUCC*, LATTE*, SIRUP*, JABUK*, SLJIV*, KRUSK*, MED*, JOGURT*, PUDING*, DESERT*, SLADOLED*, ZVAKAC*, GUMA*, KASA*, ZOB*, BADEM*, ORAH*, LJESNJAK*, KIKIRIK*, BAR*, PLOCIC*, LIKER*, RAKIJ*, VINO*, KUHANO VINO, ZACIN* ZA KUHANO, KUHANO*, SVIJEC*, MIRIS*, OSVJEZ*, SAPUN*, KREMA*, KOZMET*, TIJESTO*, KRUH*, KROASAN*, NAPITAK*, VAFL*, KREKER*, CIPS*, OKUS*, AROM*, SNACK*, DATULJ*, KARAMEL*, COKOLAD*]
+
+  - id: oregano
+    name: Dried oregano
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [5, 8, 10, 15, 20, 25, 50]
+    nutrition: {kcal: 265, protein: 9, carbs: 27, sugar: 4, fat: 4.3, sat_fat: 1.5, fibre: 42, salt: 0.06}
+    match:
+      include: ["ORIGANO*", "OREGANO*", "MRAVINAC*"]
+      exclude: [KIKIRI*, MIJESAN*, MIX*, MJESAVIN*, ZACIN* ZA, PIZZA*, CIPS*, CHIPS*, OKUS*, SIR*, KRUH*, PECIV*, KREKER*, SOL*, ULJE*, UMAK*, PASTA*, PASSATA*, PASIRAN*, RAJCIC*, MASLIN*, PESTO*, TALIJANSK* BILJ*, PROVANS*, BILJE*, GRISIN*, FOCACC*, STAPIC*, SNACK*, KAPSUL*, ETERICN*, CAJ*, SIRUP*]
+
+  - id: curry-powder
+    name: Curry powder
+    category: spices
+    storage: shelves
+    unit: g
+    package: jar
+    packages: [25, 30, 35, 40, 50, 100]
+    nutrition: {kcal: 325, protein: 14, carbs: 26, sugar: 3, fat: 14, sat_fat: 2.2, fibre: 33, salt: 0.1}
+    match:
+      include: ["CURRY", "CURRY PRAH*", "CURRY ZACIN*", "CURRY MLJEVEN*", "CURRY BLAGI", "CURRY LJUTI", "CURRY MADRAS", "MADRAS CURRY", "KARI", "KARI ZACIN*", "ZACIN CURRY", "ZACIN KARI", "CURRY PULVER*", "CURRY POWDER", "GARAM MASAL*", "MASALA*", "KURKUM*", "TURMERIC*"]
+      exclude: [PASTA*, UMAK*, KECAP*, KETCHUP*, CIPS*, CHIPS*, OKUS*, PILE*, GOTOV*, MIKROVAL*, RIZ*, REZANC*, NOODL*, JUHA*, KOKOS*, MLIJEK*, SIR*, MAJONEZ*, KREKER*, SNACK*, LECA*, SLANUT*, POVRC* S, VARIVO*, KONZERV*, TIKK*, KORMA* UMAK*, VINDALOO* UMAK*, JALFREZ*, BUTTER CHICKEN*, KAPSUL*, CAJ*, NAPITAK*, LATTE*, SAPUN*, KOZMET*, KREMA*, TABLET*, DODATAK*, EKSTRAKT*, KURKUMA I, I KURKUM*, PAPAR* I, DJUMBIR*, DUMBIR*, BIO KURKUMA I]
+
+  - id: bay-leaves
+    name: Bay leaves
+    category: spices
+    storage: shelves
+    unit: g
+    package: pack
+    packages: [5, 8, 10, 15, 20]
+    nutrition: {kcal: 313, protein: 7.6, carbs: 48.7, sugar: 0, fat: 8.4, sat_fat: 2.3, fibre: 26, salt: 0.06}
+    match:
+      include: ["LOVOR*", "LOVOROV* LIST*", "LIST LOVOR*", "LORBEER*", "ALLORO*"]
+      exclude: [MIJESAN*, MIX*, ZACIN* ZA, ULJE*, ETERICN*, CAJ*, SAPUN*, KOZMET*, SIRUP*, LIKER*, RAKIJ*]
