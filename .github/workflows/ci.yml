@@ -18,6 +18,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Recipe check (schema, ingredients, nutrition)
+        run: npm run add-recipe-check
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test

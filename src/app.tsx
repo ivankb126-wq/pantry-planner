@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
+import { RecipeBrowser } from './components/RecipeBrowser';
 import { SunsetArt } from './components/SunsetArt';
 import {
   CHAIN_ORDER,
@@ -38,7 +39,7 @@ export function App() {
       <header class="hero">
         <SunsetArt />
         <h1>Pantry Planner</h1>
-        <p>Price data status. Plans, recipes and your pantry arrive in the next steps.</p>
+        <p>Price data and recipe library. Plans, shopping lists and your pantry arrive in the next steps.</p>
       </header>
 
       {error && (
@@ -51,6 +52,7 @@ export function App() {
       {meta && <Summary meta={meta} />}
       {meta && <ChainStatus meta={meta} />}
       {meta && <SamplePrices meta={meta} ingredients={ingredients} />}
+      <RecipeBrowser />
 
       <p class="note">
         Orientation prices from the official daily price lists, via{' '}

@@ -4,7 +4,22 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 1** (price pipeline and a data status page).
+Status: **milestone 2** (price pipeline, 262 ingredients, 150 recipes with calculated nutrition).
+
+## Recipes
+
+Recipes live in [recipes/](recipes) as JSON (one recipe or a list per file),
+checked against [recipes/schema.json](recipes/schema.json). Nutrition is never
+typed in: it is calculated from [data/ingredients.yml](data/ingredients.yml).
+After adding or changing recipes, run:
+
+```bash
+npm run add-recipe-check
+```
+
+It checks the format, that every ingredient exists and its unit fits, the
+quick/vegetarian/vegan labels, and prints nutrition per serving with warnings
+for unusual values.
 
 ## How it works
 
