@@ -4,9 +4,10 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 4** (price pipeline, 262 ingredients, 150 recipes, planner
-engine, and the app screens: setup, Plan, Recipes, recipe page, cooking mode,
-Shopping, Pantry, Settings with backup).
+Status: **milestone 5** (price pipeline, 262 ingredients, 150 recipes, planner
+engine, the app screens, and the living pantry: shopping fills it, "Mark
+cooked" empties it with Undo, use-soon dates, running-low staples suggested
+for the shopping list, a weekly pantry check).
 
 ## App
 
@@ -18,6 +19,10 @@ the phone, with a backup file you can export and restore), the hash router
 shared pieces (icons, sheets, steppers, switches) in the Sunset Night style.
 A plan remembers what was in the pantry when it was made, so adding shopping
 or cooking during the week does not change that week's list.
+[src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
+cooked meal takes (scaled to the people and any leftover meals), soonest
+use-by first, items that reach zero leave the shelf, and staples below a
+threshold (or used up) are suggested as "Running low".
 
 ## Planner
 

@@ -2,17 +2,24 @@
 
 import { useState } from 'preact/hooks';
 import { AISLE_LABEL, AISLE_ORDER, INGREDIENTS, ingName } from '../app/catalog';
-import { addToPantry, planResult } from '../app/planning';
+import { removeExtra } from '../app/actions';
+import { buyFor, priceIndex } from '../app/costs';
+import { stock } from '../app/pantry';
+import { planResult } from '../app/planning';
+import type { PriceData } from '../app/prices';
 import { update, useApp } from '../app/state';
 import { formatAmount, formatEur } from '../lib/format';
 import { ESTIMATE } from '../planner/evaluate';
 import type { ShoppingLine } from '../planner/types';
-import { IconCheck } from '../ui/icons';
+import { IconCheck, IconClose } from '../ui/icons';
 import { Empty, Screen, Segmented, Toast, useToast } from '../ui/kit';
 import type { PriceState } from './Plan';
+import { RunningLow } from './RunningLow';
 
-export function lineKey(l: ShoppingLine): string {
-  return `${l.store}|${l.ingredient}|${l.product}|${l.size}`;
+type ShopLine = ShoppingLine & { extra?: boolean };
+
+export function lineKey(l: ShopLine): string {
+  return `${l.extra ? 'extra|' : ''}${l.store}|${l.ingredient}|${l.product}|${l.size}`;
 }
 
 /** "2 × 500 g", "about 1,2 kg" (loose), "1 × 10 pcs" */
@@ -24,6 +31,43 @@ export function lineQuantity(l: ShoppingLine): string {
 
 function storeName(s: string): string {
   return s === ESTIMATE ? 'Any store (typical price)' : s;
+}
+
+/** Shopping lines for staples added because they are running low (one usual package each). */
+export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
+  const idx = priceIndex(prices);
+  const out: ShopLine[] = [];
+  for (const id of extras) {
+    const ing = INGREDIENTS[id];
+    if (!ing) continue;
+    const need = ing.packages[0] ?? (ing.unit === 'piece' ? 1 : 500);
+    const p = buyFor(id, need, idx);
+    if (!p) continue;
+    for (const l of p.lines) {
+      // Two listings of the same product (for example two barcodes): one line.
+      const same = out.find((o) => o.ingredient === id && o.store === l.offer.store && o.product === l.offer.name);
+      if (same && !l.offer.loose) {
+        same.packs += l.count;
+        same.amount += l.amount;
+        same.cost = Math.round((same.cost + l.cost) * 100) / 100;
+        continue;
+      }
+      out.push({
+        ingredient: id,
+        store: l.offer.store,
+        product: l.offer.name,
+        size: l.offer.size,
+        loose: !!l.offer.loose,
+        packs: l.count,
+        amount: l.amount,
+        cost: l.cost,
+        onSale: l.offer.salePrice != null,
+        estimated: l.offer.store === ESTIMATE,
+        extra: true,
+      });
+    }
+  }
+  return out;
 }
 
 function tabName(s: string): string {
@@ -57,9 +101,12 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
   }
 
   const checked = d.shoppingChecked;
-  const stores = [...new Set(result.shopping.map((l) => l.store))].sort((a, b) => (a === ESTIMATE ? 1 : b === ESTIMATE ? -1 : a.localeCompare(b)));
+  const extra = extraLines(d.extras, prices.data!);
+  const extraKeys = new Set(extra.map(lineKey));
+  const all: ShopLine[] = [...result.shopping, ...extra];
+  const stores = [...new Set(all.map((l) => l.store))].sort((a, b) => (a === ESTIMATE ? 1 : b === ESTIMATE ? -1 : a.localeCompare(b)));
   const shown = tab === 'all' ? stores : stores.filter((s) => s === tab);
-  const lines = result.shopping.filter((l) => shown.includes(l.store));
+  const lines = all.filter((l) => shown.includes(l.store));
   const inBasket = lines.filter((l) => checked[lineKey(l)]);
   const basketCost = inBasket.reduce((s, l) => s + l.cost, 0);
   const total = lines.reduce((s, l) => s + l.cost, 0);
@@ -75,7 +122,7 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
   const addBasket = () => {
     const items = inBasket.map((l) => ({ ingredient: l.ingredient, amount: l.loose ? l.amount : l.packs * l.size }));
     update((x) => {
-      x.pantry = addToPantry(x.pantry, items);
+      stock(x, items);
       for (const l of inBasket) {
         delete x.shoppingChecked[lineKey(l)];
         x.shoppingChecked[`bought|${lineKey(l)}`] = true;
@@ -98,7 +145,7 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
       {stores.length > 1 && <Segmented label="Store" options={[{ id: 'all', label: 'All' }, ...stores.map((s) => ({ id: s, label: tabName(s) }))]} value={tab} onChange={setTab} />}
 
       {shown.map((store) => {
-        const sl = result.shopping.filter((l) => l.store === store);
+        const sl = all.filter((l) => l.store === store);
         const groups = AISLE_ORDER.map((a) => ({ a, items: sl.filter((l) => (INGREDIENTS[l.ingredient]?.category ?? 'other') === a) })).filter((g) => g.items.length);
         const other = sl.filter((l) => !AISLE_ORDER.includes(INGREDIENTS[l.ingredient]?.category ?? 'other'));
         if (other.length) groups.push({ a: 'other', items: other });
@@ -130,9 +177,15 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
                             </small>
                             {l.onSale && <span class="tag teal">On sale</span>}
                             {bought(l) && <span class="tag outline">In pantry</span>}
+                            {extraKeys.has(lineKey(l)) && <span class="tag orange">Running low</span>}
                           </span>
                           <span class="shop-price">{formatEur(l.cost)}</span>
                         </label>
+                        {extraKeys.has(lineKey(l)) && (
+                          <button class="icon-btn small remove-extra" aria-label={`Remove ${ingName(l.ingredient)} from the list`} onClick={() => removeExtra(l.ingredient)}>
+                            <IconClose size={16} />
+                          </button>
+                        )}
                       </li>
                     );
                   })}
@@ -142,6 +195,8 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
           </section>
         );
       })}
+
+      <RunningLow note="Nearly gone at home. Add them to this list?" />
 
       {result.fromPantry.length > 0 && (
         <section class="card">

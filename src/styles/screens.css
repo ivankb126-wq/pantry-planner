@@ -783,7 +783,7 @@ h1 {
   font-size: 28px;
   margin-top: 12px;
 }
-.screen-inner section {
+.screen-inner > section:not([class]) {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1772,6 +1772,103 @@ h1 {
   color: var(--text);
   font: inherit;
   color-scheme: dark;
+}
+
+/* ---------------------------------------------------------------- living pantry */
+.tile {
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.fineprint.center {
+  text-align: center;
+}
+.tonight-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #2a1650, #4a1e5c);
+  border: 1px solid var(--border);
+}
+.tonight-emoji {
+  font-size: 30px;
+  line-height: 1;
+}
+.tonight-card small {
+  display: block;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.tonight-card a {
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.25;
+}
+.tonight-card .btn-teal-outline {
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+.taken-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 20px;
+  background: rgba(61, 227, 208, 0.1);
+  border: 1px solid var(--teal);
+}
+.taken-card p {
+  flex: 1;
+  margin: 0;
+  font-size: 15px;
+}
+.taken-card svg {
+  color: var(--teal);
+  vertical-align: -3px;
+}
+.low-card {
+  border-color: rgba(255, 154, 60, 0.5);
+}
+.low-card h2 {
+  color: var(--orange);
+}
+.low-list,
+.check-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.low-list li,
+.check-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 56px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+}
+.low-list small,
+.check-list small {
+  display: block;
+  color: var(--muted);
+}
+.check-list .stepper2.small > span {
+  min-width: 64px;
+  font-size: 13px;
+}
+.shop-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.shop-list li > label {
+  flex: 1;
+  min-width: 0;
 }
 
 /* ---------------------------------------------------------------- old status page inside a Screen */

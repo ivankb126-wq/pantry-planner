@@ -42,6 +42,13 @@ export interface SavedPlan {
    * based on this, so adding shopping or cooking later does not change it. */
   pantryAtStart: PantryItem[];
   leftoversSaved?: boolean;
+  /** What "Mark cooked" took from the pantry, per meal (put back when unmarked). */
+  taken?: Record<number, Amount[]>;
+}
+
+export interface Amount {
+  ingredient: string;
+  amount: number; // ingredient unit
 }
 
 export interface RatingEntry extends Rating {
@@ -69,6 +76,14 @@ export interface AppData {
   history: { recipeId: string; date: string }[];
   pantry: PantryEntry[];
   shoppingChecked: Record<string, boolean>;
+  /** Staples that ran out (reached zero), to suggest for shopping. */
+  ranOut: string[];
+  /** Extra items added to the shopping list (running low). */
+  extras: string[];
+  /** Running-low suggestions dismissed, ingredient -> date. */
+  lowDismissed: Record<string, string>;
+  /** Last "Check my pantry". */
+  pantryCheckedOn: string | null;
 }
 
 export const DEFAULT_APP_SETTINGS: Settings = {
@@ -99,6 +114,10 @@ export function emptyData(): AppData {
     history: [],
     pantry: [],
     shoppingChecked: {},
+    ranOut: [],
+    extras: [],
+    lowDismissed: {},
+    pantryCheckedOn: null,
   };
 }
 

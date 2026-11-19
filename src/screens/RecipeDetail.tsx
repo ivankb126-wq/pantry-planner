@@ -1,7 +1,7 @@
 // Recipe detail: ingredients with where to buy them, steps, nutrition,
 // ratings, notes, favourites, and adding it to this week.
 
-import { useEffect, useState } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { type HideFor, rate, ratingOf, setCooked, setNote, swap, toggleFavourite } from '../app/actions';
 import { CUISINE_LABEL, INGREDIENTS, RECIPE_BY_ID } from '../app/catalog';
 import { buyFor, priceIndex, saleIngredient, servingCost } from '../app/costs';
@@ -14,7 +14,8 @@ import { NUTRIENTS } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
-import { Chip, DishArt, Empty, Screen, Sheet, Toast } from '../ui/kit';
+import { takenText } from '../app/pantry';
+import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, minutes } from '../ui/words';
 import type { PriceState } from './Plan';
 
@@ -73,14 +74,8 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const mealIndex = mealParam != null && d.plan && d.plan.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   const [servings, setServings] = useState(() => Math.max(1, Math.round(portionsFor(d.settings))));
   const [sheet, setSheet] = useState<null | 'down' | 'add'>(null);
-  const [toast, setToast] = useState<string | null>(null);
+  const [toast, setToast] = useToast<{ text: string; undo?: () => void }>(7000);
   const [note, setNoteText] = useState(d.notes[id] ?? '');
-
-  useEffect(() => {
-    if (!toast) return;
-    const t = setTimeout(() => setToast(null), 4000);
-    return () => clearTimeout(t);
-  }, [toast]);
 
   if (!r) {
     return (
@@ -137,7 +132,19 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
             {view.leftover && ' (leftovers)'}
           </p>
           <div class="row-btns">
-            <button class={cooked ? 'btn-teal' : 'btn-teal-outline'} aria-pressed={cooked} onClick={() => setCooked(mealIndex, !cooked)}>
+            <button
+              class={cooked ? 'btn-teal' : 'btn-teal-outline'}
+              aria-pressed={cooked}
+              onClick={() => {
+                if (cooked) {
+                  setCooked(mealIndex, false);
+                  setToast({ text: 'Marked as not cooked. Anything taken is back in your pantry.' });
+                  return;
+                }
+                const taken = setCooked(mealIndex, true);
+                setToast({ text: taken.length ? `Taken from your pantry: ${takenText(taken)}.` : 'Marked as cooked.', undo: () => setCooked(mealIndex, false) });
+              }}
+            >
               <IconCheck size={18} /> {cooked ? 'Cooked' : 'Mark cooked'}
             </button>
             <button
@@ -256,7 +263,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           aria-pressed={!!rating?.up}
           onClick={() => {
             rate(id, rating?.up ? null : true);
-            if (!rating?.up) setToast('Thanks. You will see this more often.');
+            if (!rating?.up) setToast({ text: 'Thanks. You will see this more often.' });
           }}
         >
           <IconThumbUp />
@@ -278,7 +285,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
               for (const { i } of [...planMeals].reverse()) swap(prices.data, i);
             }
             setSheet(null);
-            setToast(hide === 'forever' ? 'Hidden for good.' : 'Hidden for 8 weeks.');
+            setToast({ text: hide === 'forever' ? 'Hidden for good.' : 'Hidden for 8 weeks.' });
           }}
         />
       )}
@@ -308,7 +315,17 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           {!result.views.some((v) => slotsFor(r).includes(v.slot)) && <p class="hint">Your plan has no {r.mealTypes.join(' or ')} meals. Turn them on in Settings.</p>}
         </Sheet>
       )}
-      {toast && <Toast>{toast}</Toast>}
+      {toast && (
+        <Toast
+          action={toast.undo ? 'Undo' : undefined}
+          onAction={() => {
+            toast.undo?.();
+            setToast(null);
+          }}
+        >
+          {toast.text}
+        </Toast>
+      )}
     </Screen>
   );
 }

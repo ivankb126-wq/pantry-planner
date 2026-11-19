@@ -1,12 +1,12 @@
 // Cooking mode: one step per screen, big text, screen kept awake, timers.
 
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { rate, ratingOf, setCooked } from '../app/actions';
+import { cookedOutsidePlan, rate, ratingOf, setCooked } from '../app/actions';
 import { RECIPE_BY_ID } from '../app/catalog';
+import { takenText } from '../app/pantry';
 import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
-import { update, useApp } from '../app/state';
-import { zagrebToday } from '../lib/format';
+import { type Amount, useApp } from '../app/state';
 import { IconClose, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { Empty, Screen, Sheet } from '../ui/kit';
 import { fold } from './pickers';
@@ -147,7 +147,7 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   const d = useApp();
   const r = RECIPE_BY_ID.get(id);
   const [step, setStep] = useState(0);
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinished] = useState<{ taken: Amount[]; undo?: () => void } | null>(null);
   const awake = useWakeLock();
 
   useEffect(() => {
@@ -173,13 +173,11 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   });
 
   const finish = () => {
-    if (mealIndex != null) setCooked(mealIndex, true);
-    else
-      update((x) => {
-        const date = zagrebToday();
-        if (!x.history.some((h) => h.recipeId === id && h.date === date)) x.history.push({ recipeId: id, date });
-      });
-    setFinished(true);
+    if (mealIndex != null) {
+      const already = d.plan!.cooked.includes(mealIndex);
+      const taken = already ? [] : setCooked(mealIndex, true);
+      setFinished({ taken, undo: already ? undefined : () => setCooked(mealIndex, false) });
+    } else setFinished(cookedOutsidePlan(id));
   };
 
   return (
@@ -234,16 +232,38 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
         )}
       </div>
 
-      {finished && <RateSheet id={id} title={r.title} onClose={() => go('plan')} />}
+      {finished && <RateSheet id={id} title={r.title} taken={finished.taken} undo={finished.undo} onClose={() => go('plan')} />}
     </Screen>
   );
 }
 
-function RateSheet({ id, title, onClose }: { id: string; title: string; onClose: () => void }) {
+function RateSheet({ id, title, taken, undo, onClose }: { id: string; title: string; taken: Amount[]; undo?: () => void; onClose: () => void }) {
   const d = useApp();
   const current = ratingOf(d, id);
+  const [undone, setUndone] = useState(false);
   return (
     <Sheet title={`How was ${title}?`} sub="Your answer helps the next plans." onClose={onClose}>
+      {taken.length > 0 && (
+        <div class="taken-card">
+          <p>
+            <strong>Taken from your pantry:</strong> {takenText(taken)}.
+          </p>
+          {undo &&
+            (undone ? (
+              <span class="hint">Put back. The meal is not marked cooked.</span>
+            ) : (
+              <button
+                class="link-btn"
+                onClick={() => {
+                  undo();
+                  setUndone(true);
+                }}
+              >
+                Undo
+              </button>
+            ))}
+        </div>
+      )}
       <div class="rate-row">
         <button
           class={`round-btn big${current && !current.up ? ' on-pink' : ''}`}

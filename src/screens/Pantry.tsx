@@ -1,15 +1,18 @@
 // Pantry: Fridge, Shelves and Freezer, with items on glowing planks.
 
-import { useMemo, useState } from 'preact/hooks';
-import { INGREDIENTS, INGREDIENT_LIST, ingName } from '../app/catalog';
-import { addToPantry } from '../app/planning';
-import { type PantryEntry, update, useApp } from '../app/state';
+import { useMemo, useRef, useState } from 'preact/hooks';
+import { removeFromPantry, restorePantry, setCooked } from '../app/actions';
+import { INGREDIENTS, INGREDIENT_LIST, RECIPE_BY_ID, ingName } from '../app/catalog';
+import { isExpiring, isLow, needsCheck, stock, takenText } from '../app/pantry';
+import { todayIndex } from '../app/planning';
+import { type Amount, type PantryEntry, update, useApp } from '../app/state';
 import { daysBetween, formatAmount, formatShortDate, zagrebToday } from '../lib/format';
 import type { IngredientInfo } from '../lib/nutrition';
-import { IconPlus, IconSearch } from '../ui/icons';
+import { IconCheck, IconClose, IconPlus, IconSearch } from '../ui/icons';
 import { Chip, Screen, Segmented, Sheet, Toast, useToast } from '../ui/kit';
-import { plural } from '../ui/words';
+import { SLOT_LABEL, plural } from '../ui/words';
 import { fold } from './pickers';
+import { RunningLow } from './RunningLow';
 
 type Section = PantryEntry['storage'];
 const SECTIONS: { id: Section; label: string }[] = [
@@ -119,14 +122,20 @@ export function PantryScreen() {
   const [section, setSection] = useState<Section>('fridge');
   const [editing, setEditing] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
-  const [toast, setToast] = useToast<{ text: string; undo?: PantryEntry[] }>();
+  const [checking, setChecking] = useState(false);
+  const [toast, setToast] = useToast<{ text: string; undo?: PantryEntry[] }>(6000);
 
-  const soon = d.pantry.filter((p) => p.expiresOn && daysBetween(today, p.expiresOn) <= 2).sort((a, b) => a.expiresOn!.localeCompare(b.expiresOn!));
+  const soon = d.pantry.filter((p) => isExpiring(p, today)).sort((a, b) => a.expiresOn!.localeCompare(b.expiresOn!));
   const items = d.pantry.filter((p) => p.storage === section).sort((a, b) => ingName(a.ingredient).localeCompare(ingName(b.ingredient)));
   const rows: PantryEntry[][] = [];
   for (let i = 0; i < items.length; i += 4) rows.push(items.slice(i, i + 4));
   const count = (s: Section) => d.pantry.filter((p) => p.storage === s).length;
   const edit = d.pantry.find((p) => p.id === editing) ?? null;
+
+  const finish = (p: PantryEntry) => {
+    const before = removeFromPantry(p.id);
+    setToast({ text: `${ingName(p.ingredient)} finished and removed.`, undo: before });
+  };
 
   return (
     <Screen glow="purple">
@@ -141,6 +150,17 @@ export function PantryScreen() {
       </header>
 
       <Segmented label="Pantry section" options={SECTIONS.map((s) => ({ id: s.id, label: `${s.label} ${count(s.id) ? count(s.id) : ''}`.trim() }))} value={section} onChange={setSection} />
+
+      <TonightCard />
+
+      {needsCheck(d, today) && (
+        <div class="notice">
+          <span class="grow">Quick weekly check: is your pantry still right?</span>
+          <button class="btn-small" onClick={() => setChecking(true)}>
+            Check
+          </button>
+        </div>
+      )}
 
       {soon.length > 0 && (
         <section class="use-soon" aria-label="Use soon">
@@ -158,31 +178,21 @@ export function PantryScreen() {
         </section>
       )}
 
+      <RunningLow />
+
       {items.length ? (
         <div class="shelves">
           {rows.map((row, ri) => (
             <div key={ri} class="shelf">
               <div class="shelf-items">
-                {row.map((p) => {
-                  const ing = INGREDIENTS[p.ingredient];
-                  const frac = p.full > 0 ? Math.min(1, p.amount / p.full) : 1;
-                  const days = p.expiresOn ? daysBetween(today, p.expiresOn) : 99;
-                  const warn = days <= 2 || frac < 0.25;
-                  return (
-                    <button key={p.id} class="tile" onClick={() => setEditing(p.id)} aria-label={`${ingName(p.ingredient)}, ${formatAmount(Math.round(p.amount), ing?.unit ?? 'g')}. Edit`}>
-                      <PackIcon type={ing?.packageType ?? 'pack'} colour={COLOUR[ing?.category ?? ''] ?? '#B9A8D0'} />
-                      <span class="tile-name">{ingName(p.ingredient)}</span>
-                      <span class="tile-amount">{formatAmount(Math.round(p.amount), ing?.unit ?? 'g')}</span>
-                      <span class={`fill${warn ? ' warn' : ''}`}>
-                        <span style={{ width: `${Math.max(6, frac * 100)}%` }} />
-                      </span>
-                    </button>
-                  );
-                })}
+                {row.map((p) => (
+                  <Tile key={p.id} p={p} today={today} onTap={() => setEditing(p.id)} onLong={() => finish(p)} />
+                ))}
               </div>
               <div class="plank" aria-hidden="true" />
             </div>
           ))}
+          <p class="fineprint center">Tap an item to change it. Press and hold when it is finished.</p>
         </div>
       ) : (
         <div class="empty-card">
@@ -194,13 +204,17 @@ export function PantryScreen() {
         </div>
       )}
 
+      {d.pantry.length > 0 && (
+        <button class="btn-ghost wide" onClick={() => setChecking(true)}>
+          Check my pantry
+        </button>
+      )}
+
       {adding && (
         <AddSheet
           onClose={() => setAdding(false)}
           onAdd={(ingredient, amount) => {
-            update((x) => {
-              x.pantry = addToPantry(x.pantry, [{ ingredient, amount }]);
-            });
+            update((x) => stock(x, [{ ingredient, amount }]));
             setSection(INGREDIENTS[ingredient]?.storage ?? 'shelves');
             setToast({ text: `${ingName(ingredient)} added.` });
           }}
@@ -211,24 +225,17 @@ export function PantryScreen() {
           entry={edit}
           onClose={() => setEditing(null)}
           onRemove={() => {
-            const before = d.pantry;
-            update((x) => {
-              x.pantry = x.pantry.filter((p) => p.id !== edit.id);
-            });
             setEditing(null);
-            setToast({ text: `${ingName(edit.ingredient)} removed.`, undo: before });
+            finish(edit);
           }}
         />
       )}
+      {checking && <CheckSheet onClose={() => setChecking(false)} />}
       {toast && (
         <Toast
           action={toast.undo ? 'Undo' : undefined}
           onAction={() => {
-            const undo = toast.undo;
-            if (undo)
-              update((x) => {
-                x.pantry = undo;
-              });
+            if (toast.undo) restorePantry(toast.undo);
             setToast(null);
           }}
         >
@@ -236,6 +243,155 @@ export function PantryScreen() {
         </Toast>
       )}
     </Screen>
+  );
+}
+
+/** A pantry item on the shelf. Tap to edit, press and hold to finish it. */
+function Tile({ p, today, onTap, onLong }: { p: PantryEntry; today: string; onTap: () => void; onLong: () => void }) {
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const long = useRef(false);
+  const ing = INGREDIENTS[p.ingredient];
+  const frac = p.full > 0 ? Math.min(1, p.amount / p.full) : 1;
+  const warn = isExpiring(p, today) || isLow(p);
+  const cancel = () => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+  };
+  return (
+    <button
+      class="tile"
+      onPointerDown={() => {
+        long.current = false;
+        cancel();
+        timer.current = setTimeout(() => {
+          long.current = true;
+          navigator.vibrate?.(30);
+          onLong();
+        }, 600);
+      }}
+      onPointerUp={cancel}
+      onPointerLeave={cancel}
+      onPointerCancel={cancel}
+      onContextMenu={(e) => e.preventDefault()}
+      onClick={() => {
+        if (long.current) {
+          long.current = false;
+          return;
+        }
+        onTap();
+      }}
+      aria-label={`${ingName(p.ingredient)}, ${formatAmount(Math.round(p.amount), ing?.unit ?? 'g')}${warn ? ', use soon or running low' : ''}. Edit`}
+    >
+      <PackIcon type={ing?.packageType ?? 'pack'} colour={COLOUR[ing?.category ?? ''] ?? '#B9A8D0'} />
+      <span class="tile-name">{ingName(p.ingredient)}</span>
+      <span class="tile-amount">{formatAmount(Math.round(p.amount), ing?.unit ?? 'g')}</span>
+      <span class={`fill${warn ? ' warn' : ''}`}>
+        <span style={{ width: `${Math.max(6, frac * 100)}%` }} />
+      </span>
+    </button>
+  );
+}
+
+/** Tonight's meal with "Mark cooked", then what was taken with Undo. */
+function TonightCard() {
+  const d = useApp();
+  const [done, setDone] = useState<{ index: number; taken: Amount[] } | null>(null);
+  const plan = d.plan;
+  if (!plan) return null;
+  const t = todayIndex(plan);
+  if (done) {
+    return (
+      <section class="taken-card" aria-live="polite">
+        <p>
+          <IconCheck size={18} /> <strong>Taken from your pantry:</strong> {done.taken.length ? takenText(done.taken) : 'nothing, it was not in your pantry'}.
+        </p>
+        <button
+          class="link-btn"
+          onClick={() => {
+            setCooked(done.index, false);
+            setDone(null);
+          }}
+        >
+          Undo
+        </button>
+      </section>
+    );
+  }
+  const order = ['dinner', 'lunch', 'breakfast', 'dessert', 'snack'];
+  const candidates = plan.meals
+    .map((m, i) => ({ m, i }))
+    .filter(({ m, i }) => m.day === t && m.source === 'cook' && !plan.cooked.includes(i))
+    .sort((a, b) => order.indexOf(a.m.slot) - order.indexOf(b.m.slot));
+  if (!candidates.length) return null;
+  const { m, i } = candidates[0];
+  const r = RECIPE_BY_ID.get(m.recipeId);
+  if (!r) return null;
+  return (
+    <section class="tonight-card" aria-label="Tonight">
+      <span class="tonight-emoji" aria-hidden="true">
+        {r.illustration}
+      </span>
+      <span class="grow">
+        <small>{m.slot === 'dinner' ? 'Tonight' : `Today, ${SLOT_LABEL[m.slot].toLowerCase()}`}</small>
+        <a href={`#/recipe/${r.id}?meal=${i}`}>{r.title}</a>
+      </span>
+      <button class="btn-teal-outline" onClick={() => setDone({ index: i, taken: setCooked(i, true) })}>
+        Mark cooked
+      </button>
+    </section>
+  );
+}
+
+/** Weekly "Check my pantry": every item in one list to confirm or fix. */
+function CheckSheet({ onClose }: { onClose: () => void }) {
+  const d = useApp();
+  const order: Section[] = ['fridge', 'shelves', 'freezer'];
+  const list = [...d.pantry].sort((a, b) => order.indexOf(a.storage) - order.indexOf(b.storage) || ingName(a.ingredient).localeCompare(ingName(b.ingredient)));
+  const set = (id: string, amount: number) =>
+    update((x) => {
+      x.pantry = x.pantry.map((e) => (e.id === id ? { ...e, amount, full: Math.max(e.full, amount) } : e));
+    });
+  return (
+    <Sheet title="Check my pantry" sub="Fix anything that is not right. Rough amounts are fine." onClose={onClose}>
+      <ul class="check-list">
+        {list.map((p) => {
+          const ing = INGREDIENTS[p.ingredient];
+          const step = stepFor(ing, p.full);
+          return (
+            <li key={p.id}>
+              <span class="grow">
+                <strong>{ingName(p.ingredient)}</strong>
+                <small>{SECTIONS.find((s) => s.id === p.storage)!.label}</small>
+              </span>
+              <div class="stepper2 small">
+                <button aria-label={`Less ${ingName(p.ingredient)}`} disabled={p.amount <= step} onClick={() => set(p.id, Math.max(step, p.amount - step))}>
+                  −
+                </button>
+                <span>{formatAmount(Math.round(p.amount), ing?.unit ?? 'g')}</span>
+                <button aria-label={`More ${ingName(p.ingredient)}`} onClick={() => set(p.id, p.amount + step)}>
+                  +
+                </button>
+              </div>
+              <button class="icon-btn small" aria-label={`Remove ${ingName(p.ingredient)}`} onClick={() => removeFromPantry(p.id)}>
+                <IconClose size={16} />
+              </button>
+            </li>
+          );
+        })}
+        {!list.length && <li class="hint">Your pantry is empty.</li>}
+      </ul>
+      <button
+        class="btn-primary wide"
+        onClick={() => {
+          update((x) => {
+            x.pantryCheckedOn = zagrebToday();
+          });
+          onClose();
+        }}
+      >
+        Looks right
+      </button>
+    </Sheet>
   );
 }
 
