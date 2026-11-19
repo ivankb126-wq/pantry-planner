@@ -390,7 +390,7 @@ ingredients:
     nutrition: {kcal: 85, protein: 19, carbs: 0.5, sugar: 0, fat: 1, sat_fat: 0.2, fibre: 0, salt: 1.0}
     match:
       include: ["KOZIC*", "SKAMP*", "REPOV* SKAMP*", "GAMBER*", "PRAWN*", "SHRIMP*"]
-      exclude: [SURIMI*, TEMELJAC*, POKE*, BOWL*, CIPS*, CHIPS*, KREKER*, OKUS*, SALAT*, PASTET*, UMAK*, SUSHI*, RIZOT*, PAELL*, PIZZA*, POHAN*, PANIR*]
+      exclude: [PANZEROTT*, RAVIOL*, TORTEL*, PUNJ*, SURIMI*, TEMELJAC*, POKE*, BOWL*, CIPS*, CHIPS*, KREKER*, OKUS*, SALAT*, PASTET*, UMAK*, SUSHI*, RIZOT*, PAELL*, PIZZA*, POHAN*, PANIR*]
 
   - id: squid
     name: Squid
@@ -2002,7 +2002,7 @@ ingredients:
     nutrition: {kcal: 250, protein: 27, carbs: 0, sugar: 0, fat: 15.5, sat_fat: 5.5, fibre: 0, salt: 6}
     match:
       include: ["PRSUT*", "PRŠUT*", "PROSCIUTT*", "PROSCIUTO*"]
-      exclude: [CIABATT*, KUKUR, PIZZ*, TORTEL*, RAVIOL*, SENDVI*, SIR S, KREKER*, CIPS*, OKUS*, NAMAZ*, PASTET*, GRISIN*, ROLAD*, PUNJEN*, SALAT*, KOBAS*, SALAM*, PILE*, PURE*, MEDALJ*, PECIV*, KROASAN*, BUREK*, NJOKI*, TJESTENIN*, FOCACC*, BAGET*]
+      exclude: [COTTO, CIABATT*, KUKUR, PIZZ*, TORTEL*, RAVIOL*, SENDVI*, SIR S, KREKER*, CIPS*, OKUS*, NAMAZ*, PASTET*, GRISIN*, ROLAD*, PUNJEN*, SALAT*, KOBAS*, SALAM*, PILE*, PURE*, MEDALJ*, PECIV*, KROASAN*, BUREK*, NJOKI*, TJESTENIN*, FOCACC*, BAGET*]
 
   - id: salami
     name: Salami
@@ -3254,7 +3254,7 @@ ingredients:
     match:
       include: ["PUDING* VANILI*", "PUDING VANILIJA", "PUDING COKOL*", "PUDING CVJETNI*", "PUDING U PRAHU", "PUDING PRAH*", "PUD VANILI*", "PUD COKOL*", "PUDING ZA KUHAN*", "DOLCELA PUDING*", "PUDING DR OETKER*", "PUDING OETKER*", "PUDING KAKAO*", "PUDING*"]
       allow: [sweets]
-      exclude: [VINDIJ*, CASA, CASA*, MLIJEC*, LISNAT*, GOTOV*, CASIC*, CASI, 4X, 3X, DUKAT*, DANETTE*, MONTE*, ALPRO*, SOJ*, RIZ* NA MLIJEK*, GRIZ*, JOGURT*, MLIJECN* PUDING*, KREMNI PUDING*, PROTEIN*, CHIA*, DESERT*, BELRISO*, ZOTT*, BEZ SECERA PUDING GOTOV*]
+      exclude: [SLAGOM, SLAG, PUDING OD, VINDIJ*, CASA, CASA*, MLIJEC*, LISNAT*, GOTOV*, CASIC*, CASI, 4X, 3X, DUKAT*, DANETTE*, MONTE*, ALPRO*, SOJ*, RIZ* NA MLIJEK*, GRIZ*, JOGURT*, MLIJECN* PUDING*, KREMNI PUDING*, PROTEIN*, CHIA*, DESERT*, BELRISO*, ZOTT*, BEZ SECERA PUDING GOTOV*]
 
   - id: condensed-milk
     name: Condensed milk

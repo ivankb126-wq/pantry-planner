@@ -4,7 +4,21 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 2** (price pipeline, 262 ingredients, 150 recipes with calculated nutrition).
+Status: **milestone 3** (price pipeline, 262 ingredients, 150 recipes, planner engine).
+
+## Planner
+
+[src/planner/](src/planner) plans a week from the recipes, one store's prices
+and your settings. It buys whole packages (or loose produce by weight), uses
+the pantry first, lets lunch be yesterday's dinner, keeps to the budget and a
+healthy-eating check, avoids repeats, and prefers liked dishes, sale items
+and at least one new dish. Items a store does not list get a
+typical price from `data/reference-prices.json`, marked as an estimate.
+Same seed, same plan; a new seed is "Regenerate". To try it on real data:
+
+```bash
+npx tsx scripts/try-plan.ts lidl 104 110 1   # chain, store, budget, seed
+```
 
 ## Recipes
 

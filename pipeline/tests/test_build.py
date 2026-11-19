@@ -71,6 +71,11 @@ def test_dry_run_outputs(first_run):
     assert rice["size"] == 500 and rice["unitPrice"] == 2.58
 
     assert (out / "bundle" / "spar.json.gz").exists()
+
+    ref = {r["ingredient"]: r for r in read(out / "reference-prices.json")}
+    assert ref["rice"]["stores"] == 3  # Spar 87005, Lidl, Kaufland (Spar 87011 has no rice)
+    assert ref["eggs"]["unit"] == "piece"
+    assert ref["mandarin"]["loose"] is True
     assert len(read(out / "ingredients.json")) > 100
 
 

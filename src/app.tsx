@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
+import { PlannerDemo } from './components/PlannerDemo';
 import { RecipeBrowser } from './components/RecipeBrowser';
+import type { Offer } from './planner/types';
 import { SunsetArt } from './components/SunsetArt';
 import {
   CHAIN_ORDER,
@@ -11,6 +13,7 @@ import {
   type StorePrices,
   loadIngredients,
   loadMeta,
+  loadReferencePrices,
   loadStorePrices,
   loadStores,
 } from './lib/data';
@@ -24,6 +27,8 @@ export function App() {
   const [meta, setMeta] = useState<Meta | null>(null);
   const [ingredients, setIngredients] = useState<Record<string, Ingredient>>({});
   const [error, setError] = useState<string | null>(null);
+  const [planPrices, setPlanPrices] = useState<{ prices: StorePrices | null; label: string }>({ prices: null, label: '' });
+  const [reference, setReference] = useState<Offer[]>([]);
 
   useEffect(() => {
     Promise.all([loadMeta(), loadIngredients()])
@@ -32,6 +37,7 @@ export function App() {
         setIngredients(Object.fromEntries(ings.map((i) => [i.id, i])));
       })
       .catch(() => setError('Price data could not be loaded. Check your connection and try again.'));
+    loadReferencePrices().then((list) => setReference(list.map((r) => ({ ...r, store: 'estimate' }))));
   }, []);
 
   return (
@@ -51,7 +57,10 @@ export function App() {
 
       {meta && <Summary meta={meta} />}
       {meta && <ChainStatus meta={meta} />}
-      {meta && <SamplePrices meta={meta} ingredients={ingredients} />}
+      {meta && (
+        <SamplePrices meta={meta} ingredients={ingredients} onPrices={(prices, label) => setPlanPrices({ prices, label })} />
+      )}
+      {meta && <PlannerDemo prices={planPrices.prices} storeLabel={planPrices.label} reference={reference} />}
       <RecipeBrowser />
 
       <p class="note">
@@ -129,7 +138,15 @@ interface Choice {
   store: string | null;
 }
 
-function SamplePrices({ meta, ingredients }: { meta: Meta; ingredients: Record<string, Ingredient> }) {
+function SamplePrices({
+  meta,
+  ingredients,
+  onPrices,
+}: {
+  meta: Meta;
+  ingredients: Record<string, Ingredient>;
+  onPrices?: (prices: StorePrices | null, label: string) => void;
+}) {
   const available = CHAIN_ORDER.filter((c) => meta.chains[c]?.available);
   const saved = readPref<Choice>('status.store');
   const [chain, setChain] = useState<ChainId>(saved && available.includes(saved.chain) ? saved.chain : available[0]);
@@ -170,6 +187,12 @@ function SamplePrices({ meta, ingredients }: { meta: Meta; ingredients: Record<s
   }, [stores, cityQuery]);
 
   const store = stores.find((s) => s.id === storeId) ?? null;
+
+  // Share the chosen store's prices with the planner.
+  const label = store ? `${meta.chains[chain]?.name ?? chain} ${store.city}` : '';
+  useEffect(() => {
+    onPrices?.(prices && store ? prices : null, label);
+  }, [prices, label]);
 
   // One line per ingredient: its best value product in this store.
   const rows = useMemo(() => {

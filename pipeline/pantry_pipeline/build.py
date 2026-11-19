@@ -372,8 +372,52 @@ def write_outputs(out: Path, outcomes: list[ChainOutcome], ingredients: list[Ing
             "notes": oc.notes,
         }
     _dump(out / "ingredients.json", [i.to_public() for i in ingredients])
+    _dump(out / "reference-prices.json", reference_prices(outcomes))
     _dump(out / "meta.json", meta)
     return meta
+
+
+def reference_prices(outcomes: list[ChainOutcome]) -> list[dict]:
+    """A typical price per ingredient: the median best-value product across all
+    stores. The planner uses it only for items a chosen store does not list,
+    and marks them as estimated."""
+    per_ing: dict[str, list[dict]] = defaultdict(list)
+    for oc in outcomes:
+        if not oc.bundle:
+            continue
+        for items in oc.bundle["prices"].values():
+            seen: set[str] = set()
+            for item in items:  # best value option comes first per ingredient
+                if item["ingredient"] in seen:
+                    continue
+                seen.add(item["ingredient"])
+                per_ing[item["ingredient"]].append(item)
+    out = []
+    for iid, items in sorted(per_ing.items()):
+        unit_prices = sorted(i["unitPrice"] for i in items)
+        mid = unit_prices[len(unit_prices) // 2]
+        loose_share = sum(1 for i in items if i.get("loose")) / len(items)
+        sizes = sorted(i["size"] for i in items if not i.get("loose"))
+        unit = items[0]["unit"]
+        if loose_share > 0.5 or not sizes:
+            size, loose = (1000.0 if unit != "piece" else 1.0), True
+        else:
+            size, loose = sizes[len(sizes) // 2], False
+        per = 1 if unit == "piece" else 1000
+        entry = {
+            "ingredient": iid,
+            "name": "Typical price (estimate)",
+            "size": size,
+            "unit": unit,
+            "price": round(mid * size / per, 2),
+            "salePrice": None,
+            "unitPrice": round(mid, 2),
+            "stores": len(items),
+        }
+        if loose:
+            entry["loose"] = True
+        out.append(entry)
+    return out
 
 
 def write_summary(meta: dict) -> None:

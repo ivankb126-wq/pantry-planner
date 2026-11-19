@@ -82,3 +82,6 @@ export const loadIngredients = () => getJson<Ingredient[]>('ingredients.json');
 export const loadStores = (chain: ChainId) => getJson<Store[]>(`stores/${chain}.json`);
 export const loadStorePrices = (chain: ChainId, store: string) =>
   getJson<StorePrices>(`prices/${chain}/${store}.json`);
+/** Typical price per ingredient across all stores (fills gaps in one store's list). */
+export const loadReferencePrices = () =>
+  getJson<(PriceItem & { stores: number })[]>('reference-prices.json').catch(() => []);
