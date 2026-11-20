@@ -25,7 +25,14 @@
       { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "sunflower-seeds", "quantity": 40, "unit": "g" },
       { "id": "chocolate-chips", "quantity": 40, "unit": "g", "optional": true }
     ],
-    "steps": ["Heat the oven to 175 °C and line a 20 x 20 cm tin.", "Melt the peanut butter, honey and butter together. Stir in the oats, raisins and seeds (and chocolate when cool).", "Press firmly into the tin and bake 18 to 20 minutes. Cool fully, then cut into 12 bars."],
+    "steps": [
+      { "text": "Heat the oven to 175 °C and line a 20 x 20 cm tin with baking paper, letting it hang over the sides.", "tip": "The overhanging paper lets you lift the whole slab out to cut it." },
+      "Put the peanut butter, honey and butter in a pot on low heat and stir until melted and smooth.",
+      "Take the pot off the heat and stir in the oats, raisins and sunflower seeds until everything is coated.",
+      { "text": "Tip the mix into the tin and press it down very firmly and evenly with the back of a spoon or the bottom of a glass.", "tip": "Press hard: this is what stops the bars crumbling." },
+      "Bake for 18 to 20 minutes until golden at the edges. Scatter the chocolate chips over the top straight away so they melt a little.",
+      { "text": "Let it cool completely in the tin, then lift it out and cut it into bars.", "tip": "Use a sharp knife and wait until it is fully cool, or they crumble. They keep a week in a closed tin." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🍫"
   },
   {
@@ -93,7 +100,14 @@
       { "id": "yogurt", "quantity": 200, "unit": "g" }, { "id": "sunflower-oil", "quantity": 80, "unit": "ml" },
       { "id": "frozen-berries", "quantity": 200, "unit": "g" }, { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "zest" }
     ],
-    "steps": ["Heat the oven to 190 °C and line a muffin tin.", "Mix the dry ingredients in one bowl and the eggs, yogurt, oil and zest in another.", "Stir together briefly, fold in the frozen berries, fill the cases and bake 20 to 22 minutes."],
+    "steps": [
+      "Heat the oven to 190 °C and line a 12-hole muffin tin with paper cases.",
+      "In a large bowl mix the flour, sugar and baking powder.",
+      "In another bowl whisk the eggs, yogurt, oil and grated lemon zest.",
+      { "text": "Pour the wet mix into the dry and stir with a spatula just until there is no dry flour left. Fold in the berries straight from the freezer.", "tip": "Do not thaw the berries first, or they turn the batter purple. A lumpy batter makes light muffins." },
+      { "text": "Fill the cases almost to the top and bake for 20 to 22 minutes until risen and golden.", "tip": "A skewer in the middle should come out clean, apart from a little berry juice." },
+      { "text": "Cool them in the tin for 5 minutes, then on a rack.", "tip": "They keep 4 days in a closed box, and freeze well." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🫐"
   },
   {
@@ -286,7 +300,14 @@
       { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "baking-powder", "quantity": 12, "unit": "g" },
       { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Heat the oven to 180 °C and line a muffin tin.", "Grate the carrot and zucchini and squeeze the zucchini dry.", "Whisk the eggs, oil and honey, stir in the dry ingredients and the vegetables. Fill the cases and bake 20 to 22 minutes."],
+    "steps": [
+      "Heat the oven to 180 °C and line a 12-hole muffin tin with paper cases.",
+      { "text": "Grate the carrots and zucchini. Put the zucchini in a clean towel and squeeze out as much water as you can.", "tip": "Squeezing matters: wet zucchini makes heavy, damp muffins." },
+      "In a large bowl whisk the eggs, oil and honey.",
+      "Add the flour, oats, baking powder and cinnamon and stir briefly, then fold in the carrot and zucchini until just mixed.",
+      { "text": "Fill the cases and bake for 20 to 22 minutes until golden.", "tip": "A skewer pushed into the middle of a muffin should come out clean." },
+      { "text": "Cool them in the tin for 5 minutes, then on a rack.", "tip": "They keep 4 days and are good in a lunch box." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin", "grater"], "illustration": "🥕"
   },
   {

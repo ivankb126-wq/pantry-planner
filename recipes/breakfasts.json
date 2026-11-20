@@ -28,7 +28,13 @@
       { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "butter", "quantity": 10, "unit": "g" },
       { "id": "greek-yogurt", "quantity": 150, "unit": "g" }, { "id": "frozen-berries", "quantity": 100, "unit": "g" }
     ],
-    "steps": ["Blend or mash the bananas, eggs and oats into a thick batter.", "Fry small pancakes in a little butter, 2 minutes a side.", "Serve with yogurt and warmed berries."],
+    "steps": [
+      { "text": "Blend the bananas, eggs and oats into a thick batter, or mash the bananas well with a fork and mix in the eggs and oats.", "tip": "Let the batter stand for a few minutes so the oats soften and thicken it." },
+      "Put the berries in a small pan on low heat to thaw and warm, stirring now and then.",
+      "Heat a little of the butter in a non-stick frying pan on medium-low. Add spoonfuls of batter to make small pancakes, about 8 cm across.",
+      { "text": "Cook for 2 minutes until bubbles appear and the edges set, then flip and cook 2 minutes more. Repeat with the rest.", "tip": "Keep them small and the heat gentle: they have no flour, so big ones break when you flip them." },
+      "Serve with a spoon of yogurt and the warm berries."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
   },
   {
@@ -79,7 +85,12 @@
       { "id": "walnuts", "quantity": 30, "unit": "g" }, { "id": "pear", "quantity": 1, "unit": "piece" },
       { "id": "oats", "quantity": 30, "unit": "g" }
     ],
-    "steps": ["Toast the oats and walnuts in a dry pan for 2 minutes (optional).", "Spoon the yogurt into bowls, add the sliced pear, nuts and oats and drizzle with honey."],
+    "steps": [
+      { "text": "If you like, toast the oats and walnuts in a dry frying pan on medium heat for 2 minutes, shaking the pan, until they smell nutty.", "tip": "Tip them out of the pan straight away, or they keep cooking and burn." },
+      "Chop the walnuts roughly. Core the pear and slice it.",
+      "Spoon the yogurt into bowls and top with the pear, walnuts and oats.",
+      "Drizzle with the honey."
+    ],
     "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["bowl"], "illustration": "🍯"
   },
   {
@@ -194,7 +205,13 @@
       { "id": "cheddar", "quantity": 40, "unit": "g" }, { "id": "salsa", "quantity": 60, "unit": "g" },
       { "id": "sunflower-oil", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Fry the diced pepper in the oil, add the drained beans to warm.", "Add the beaten eggs and scramble.", "Fill the warm tortillas with the eggs, cheese and salsa and roll up."],
+    "steps": [
+      "Dice the pepper, drain and rinse the beans and grate the cheese. Beat the eggs with a pinch of salt.",
+      "Heat the oil in a frying pan on medium and fry the pepper for 3 minutes. Add the beans and warm them for 2 minutes.",
+      { "text": "Turn the heat to low, pour in the eggs and stir slowly until just set, about 2 minutes.", "tip": "Take them off while still a little wet: they keep cooking inside the burrito." },
+      "Warm the tortillas for a few seconds in a dry pan so they fold without cracking.",
+      { "text": "Spoon the eggs and beans down the middle of each tortilla, add the cheese and salsa, fold in the sides and roll up tightly.", "tip": "Toasting the rolled burrito seam side down in the dry pan seals it. Wrap it in foil to take with you." }
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🌯"
   },
   {
@@ -417,7 +434,13 @@
       { "id": "pear", "quantity": 1, "unit": "piece" }, { "id": "almonds", "quantity": 20, "unit": "g" },
       { "id": "vanilla-sugar", "quantity": 5, "unit": "g" }
     ],
-    "steps": ["Rinse the millet in hot water, then simmer in the milk with the vanilla sugar for 18 minutes, stirring often.", "Add the diced pear for the last 5 minutes.", "Top with chopped almonds."],
+    "steps": [
+      { "text": "Put the millet in a sieve and rinse it well under hot water.", "tip": "Rinsing takes away the slightly bitter taste millet can have." },
+      "Put the millet, milk and vanilla sugar in a small pot and bring to a simmer.",
+      { "text": "Turn the heat to low and cook for 18 minutes, stirring often, until the millet is soft and creamy.", "tip": "Add a splash of milk or water if it gets too thick before the millet is soft." },
+      "Meanwhile dice the pear and chop the almonds. Stir the pear in for the last few minutes of cooking.",
+      "Spoon into bowls and top with the almonds."
+    ],
     "tags": ["vegetarian"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🍐"
   },
   {
@@ -430,7 +453,12 @@
       { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "banana", "quantity": 1, "unit": "piece" },
       { "id": "peanut-butter", "quantity": 20, "unit": "g" }, { "id": "sunflower-seeds", "quantity": 15, "unit": "g" }
     ],
-    "steps": ["Rinse the quinoa and simmer in the milk with cinnamon for 15 minutes.", "Top with sliced banana, peanut butter and seeds."],
+    "steps": [
+      { "text": "Rinse the quinoa in a fine sieve under cold water.", "tip": "Rinsing removes the bitter coating on the seeds." },
+      "Put it in a small pot with the milk and cinnamon and bring to a simmer.",
+      { "text": "Cover and cook on low for 15 minutes, stirring now and then, until the seeds are soft and you can see little curly tails.", "tip": "If it dries out before it is soft, add a splash of milk." },
+      "Spoon into bowls and top with sliced banana, a spoon of peanut butter and the sunflower seeds."
+    ],
     "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
   },
   {

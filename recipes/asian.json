@@ -61,10 +61,13 @@
       { "id": "rice", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Cook the rice. Fry the curry paste in the oil for 1 minute until it smells strong.",
-      "Add the sliced chicken and stir until coated, then pour in the coconut milk and 150 ml water.",
-      "Add the vegetables in bite-size pieces and simmer 12 minutes.",
-      "Season with lime juice, honey and fish sauce. Serve over rice."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Slice the chicken thinly. Cut the zucchini and pepper into bite-size pieces and the green beans in half.",
+      { "text": "Heat the oil in a large pan or wok on medium heat. Fry the curry paste for 1 minute, stirring, until it smells strong.", "tip": "Curry pastes differ a lot in heat. Use a little less if you do not like it hot." },
+      "Add the chicken and stir until coated. Pour in the coconut milk and {150 ml} water and bring to a gentle simmer.",
+      "Add the vegetables and simmer for 12 minutes, until the chicken is cooked and the vegetables are tender but still bright.",
+      { "text": "Season with the lemon juice, honey and fish sauce. Taste and adjust: it should be salty, sour, a little sweet and hot.", "tip": "No fish sauce? A splash of soy sauce works instead." },
+      "Serve over the rice."
     ],
     "tags": ["high-protein"],
     "keepsDays": 3,
@@ -96,10 +99,13 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Cook the rice and steam the broccoli for 5 minutes.",
-      "Mix the soy sauce, honey, vinegar, grated ginger and garlic.",
-      "Fry the chicken skin side down in the oil for 8 minutes, turn and cook 6 minutes more.",
-      "Pour in the sauce and let it bubble until sticky, turning the chicken. Slice and serve on rice with the broccoli, sesame and spring onion."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Mix the soy sauce, honey, vinegar, grated ginger and grated garlic in a cup.",
+      "Cut the broccoli into florets. Steam them over boiling water, or boil them in a little salted water, for 5 minutes until bright green and just tender. Drain.",
+      { "text": "If the chicken is on the bone, cut the meat off in large pieces. Pat it dry. Heat the oil in a large frying pan on medium-high and fry the chicken skin side down for 8 minutes without moving it, until the skin is golden and crisp.", "tip": "Press the pieces flat with a spatula at the start so the skin crisps evenly." },
+      { "text": "Turn the chicken and cook for 6 minutes more. Spoon most of the fat out of the pan.", "tip": "It is done when there is no pink inside and the juices run clear." },
+      { "text": "Pour in the sauce and let it bubble for 2 to 3 minutes, turning the chicken, until the sauce is sticky and coats it.", "tip": "Watch it closely at the end: honey burns fast." },
+      "Slice the chicken and serve it on the rice with the broccoli, the sauce from the pan, sesame seeds and sliced spring onion."
     ],
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
@@ -168,10 +174,12 @@
       { "id": "sesame", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Cook the rice. Cut the carrot and cucumber into matchsticks.",
-      "Brown the beef in a hot pan, breaking it up, for 6 minutes. Pour off excess fat.",
-      "Add the garlic, ginger, soy sauce, honey and chili and cook 3 minutes until sticky. Stir in the sesame oil.",
-      "Serve on rice with the vegetables, spring onion and sesame."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Cut the carrots and cucumber into thin matchsticks. Slice the spring onion. Grate the garlic and ginger.",
+      { "text": "Heat a large frying pan on high, with no oil. Add the beef and brown it for 6 minutes, breaking it into small pieces, until browned and a little crisp.", "tip": "Leave it alone for a minute at a time so it browns. Pour off the fat if there is a lot." },
+      "Turn the heat to medium. Add the garlic, ginger, soy sauce, honey and chili flakes and cook for 3 minutes, stirring, until sticky.",
+      { "text": "Take the pan off the heat and stir in the sesame oil.", "tip": "Sesame oil loses its taste when it gets too hot, so it goes in at the end." },
+      "Serve the beef on the rice with the carrot and cucumber, scattered with spring onion and sesame seeds."
     ],
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
@@ -205,10 +213,13 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Cook the rice. Blanch the spinach for 30 seconds, squeeze dry and mix with half the sesame oil, garlic and a dash of soy.",
-      "Fry the carrot strips, zucchini strips and sliced mushrooms separately in a little oil, seasoning each with soy. Cook the edamame.",
-      "Fry the eggs so the yolks stay runny.",
-      "Put rice in bowls, arrange the vegetables on top with an egg, and serve with the chili sauce, the rest of the sesame oil and sesame seeds."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Cut the carrots and zucchini into thin strips, slice the mushrooms and chop the garlic.",
+      "Bring a pot of water to the boil. Dip in the spinach for 30 seconds, then lift it out, rinse it under cold water and squeeze it dry. Mix it with half the sesame oil, the garlic and a little soy sauce.",
+      "Cook the edamame in the same boiling water for 4 minutes and drain.",
+      { "text": "Heat a little of the sunflower oil in a frying pan on medium-high. Fry the carrots for 3 minutes with a splash of soy sauce and set them aside. Do the same with the zucchini, then the mushrooms.", "tip": "Cooking each vegetable on its own keeps its colour and taste. It is what makes bibimbap look so good." },
+      "Fry the eggs for 3 to 4 minutes, until the whites are set and the yolks still runny.",
+      { "text": "Put the rice in bowls, arrange the vegetables and edamame on top in little piles and put an egg in the middle. Serve with the chili sauce, the rest of the sesame oil and the sesame seeds.", "tip": "Mix it all together at the table, with as much chili sauce as you like." }
     ],
     "tags": ["vegetarian"],
     "keepsDays": 2,
@@ -391,10 +402,13 @@
       { "id": "rice", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Cook the rice. Press the tofu dry, cut into cubes, toss with the cornstarch and fry in the oil until golden. Set aside.",
-      "Fry the curry paste for 1 minute, add the coconut milk and 150 ml water.",
-      "Add the vegetables and simmer 10 minutes.",
-      "Add the tofu, soy sauce and lemon juice and serve with rice."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      { "text": "Drain the tofu, wrap it in a clean towel and press it under a heavy pan for 10 minutes.", "tip": "Pressing out the water makes the tofu crisp instead of soggy." },
+      "Cut the tofu into cubes and toss with the cornstarch. Heat the oil in a large frying pan on medium-high and fry the tofu for 8 minutes, turning, until golden on all sides. Take it out.",
+      "Cut the broccoli into florets, the pepper into strips and the carrot into thin slices.",
+      "In the same pan fry the curry paste for 1 minute, stirring. Add the coconut milk and {150 ml} water and bring to a simmer.",
+      "Add the vegetables and simmer for 10 minutes until tender but still a little crunchy.",
+      { "text": "Stir in the tofu, soy sauce and lemon juice and heat for 1 minute. Serve with the rice.", "tip": "Adding the tofu at the end keeps it crisp." }
     ],
     "tags": ["vegan", "vegetarian"],
     "keepsDays": 3,
@@ -428,10 +442,14 @@
       { "id": "cabbage", "quantity": 200, "unit": "g" }
     ],
     "steps": [
-      "Cook the rice. Soften the chopped onion and carrot in 1 tbsp oil for 8 minutes.",
-      "Stir in 2 tbsp of the flour and the curry powder, then 500 ml water with the stock cube, the honey and soy. Simmer 15 minutes and blend smooth.",
-      "Flatten the chicken, coat in the rest of the flour, beaten egg and breadcrumbs, and fry in the rest of the oil 4 minutes a side.",
-      "Slice the chicken and serve on rice with the sauce and finely shredded cabbage."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Chop the onion and carrot. Heat {1 tbsp} of the oil in a pot on medium heat and soften them for 8 minutes.",
+      { "text": "Stir in {2 tbsp} of the flour and the curry powder and cook for 1 minute. Slowly stir in {500 ml} water, then crumble in the stock cube and add the honey and soy sauce.", "tip": "Pour the water slowly while stirring so the flour does not form lumps." },
+      { "text": "Simmer the sauce for 15 minutes, stirring now and then, then blend it smooth with a stick blender. Keep it warm on low heat.", "tip": "Too thick? Add a splash of water. Too thin? Simmer it a few minutes longer." },
+      { "text": "Meanwhile cut each chicken breast in half through the middle, or put it between baking paper and flatten it with a pan to about 1 cm thick.", "tip": "Thin, even pieces cook through before the crumbs burn." },
+      "Set out three plates: the rest of the flour with a pinch of salt, the beaten eggs, and the breadcrumbs. Coat each piece in flour, then egg, then press it into the breadcrumbs on both sides.",
+      { "text": "Heat the rest of the oil in a large frying pan on medium-high. Fry the chicken for 4 minutes on each side until deep golden and cooked through. Drain on kitchen paper.", "tip": "The oil is ready when a breadcrumb sizzles straight away. Fry in batches so the pan does not cool down." },
+      "Shred the cabbage very finely. Slice the chicken into strips and serve it on the rice with the curry sauce poured alongside and the cabbage next to it."
     ],
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 2,

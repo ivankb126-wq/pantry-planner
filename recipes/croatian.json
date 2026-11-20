@@ -429,10 +429,12 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Simmer the beans, barley, ribs and bay leaves in 2.5 litres of water for 1 hour.",
-      "Add the diced carrot, parsnip and potato and cook 30 minutes more.",
-      "Fry the onion and garlic in the oil and stir them in. Take the meat off the bones, return it and add the parsley.",
-      "Season with pepper and salt only if needed; smoked meat is salty."
+      "The night before, cover the beans with plenty of cold water and leave them to soak overnight.",
+      { "text": "Drain the beans and rinse the barley. Put both in a large pot with the ribs, bay leaves and {2500 ml} water. Bring to the boil, skim off any foam and simmer on low for 1 hour.", "tip": "Stir now and then: barley likes to stick to the bottom. Do not add salt yet." },
+      { "text": "Dice the carrots, parsnip and potatoes. Add them to the pot and simmer 30 minutes more, until the beans and barley are soft.", "tip": "Add a little hot water if it gets too thick. Ričet should be thick but still a stew, not a porridge." },
+      "Chop the onion and garlic. Fry them in the oil in a small pan on medium heat for 5 minutes until soft, then stir them into the stew.",
+      "Lift out the ribs, cut the meat off the bones and put it back. Chop the parsley and stir it in.",
+      { "text": "Taste and season with pepper, and with salt only if it needs it.", "tip": "Smoked meat is salty. Ričet keeps 4 days and thickens as it stands, so add water when you reheat it." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "comfort"],
     "keepsDays": 4,
@@ -501,11 +503,13 @@
       { "id": "lettuce", "quantity": 0.5, "unit": "piece" }
     ],
     "steps": [
-      "Boil the potatoes in their skins for 20 minutes. Peel while warm and slice.",
-      "Dress the potatoes with the thinly sliced onion, vinegar, 3 tbsp of the frying oil (or the pumpkin seed oil), salt and pepper.",
-      "Slice the chicken into thin escalopes, season, then coat in flour, beaten egg and breadcrumbs.",
-      "Fry in hot oil for 3 to 4 minutes a side until golden and cooked through. Drain on paper.",
-      "Serve with the potato salad and green salad."
+      "Wash the potatoes and put them, in their skins, in a pot of cold salted water. Bring to the boil and cook for 20 minutes until a knife slides in easily.",
+      { "text": "Drain them and peel them while still warm, holding each one with a fork. Slice them into rounds into a bowl.", "tip": "Warm potatoes soak up the dressing much better than cold ones." },
+      { "text": "Slice the onion very thinly. Add it to the potatoes with the vinegar, the pumpkin seed oil, half the salt and the pepper. Mix gently and leave to stand.", "tip": "Pumpkin seed oil (bučino ulje) gives the typical northern Croatian taste. A splash of the warm potato water makes the salad creamier." },
+      "Cut the chicken breasts into slices about 1 cm thick, and flatten any thicker pieces with a pan between baking paper. Season with the rest of the salt.",
+      { "text": "Set out three plates: flour, beaten eggs and breadcrumbs. Coat each piece in flour, then egg, then breadcrumbs, pressing them on.", "tip": "Shake off extra flour before the egg. Use one hand for dry and one for wet, so your fingers do not get breaded too." },
+      { "text": "Heat the sunflower oil in a large frying pan on medium-high. Fry the chicken in batches for 3 to 4 minutes on each side until golden and cooked through.", "tip": "The oil is ready when a breadcrumb sizzles at once. Cut the thickest piece to check: it should be white all the way through." },
+      "Drain on kitchen paper. Serve with the potato salad and the green salad."
     ],
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
@@ -679,11 +683,13 @@
       { "id": "cucumber", "quantity": 1, "unit": "piece", "note": "for a side salad" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Peel and thinly slice the potatoes.",
-      "Fry the onion in the oil for 5 minutes, add the meat, paprika, 1 tsp salt and pepper and cook until browned.",
-      "Grease a baking dish and layer potatoes and meat, starting and ending with potatoes. Sprinkle the potato layers with the rest of the salt.",
-      "Pour in 200 ml milk, cover with foil and bake for 40 minutes.",
-      "Whisk the eggs, sour cream and remaining milk, pour over and bake uncovered for 20 minutes until golden. Rest 10 minutes before cutting."
+      { "text": "Heat the oven to 200 °C. Peel the potatoes and slice them thinly, about 3 mm. Chop the onions.", "tip": "The slicing side of a grater makes thin, even slices fast." },
+      "Heat the oil in a large frying pan on medium heat and fry the onions for 5 minutes until soft.",
+      "Add the mince, paprika, half the salt and the pepper. Cook for about 8 minutes, breaking it up with a spoon, until browned and crumbly.",
+      { "text": "Grease a baking dish. Layer the potatoes and meat, starting and ending with potatoes, and sprinkle each potato layer with a little of the rest of the salt.", "tip": "Three layers of potato and two of meat works well." },
+      "Pour {200 ml} of the milk over, cover the dish with foil and bake for 40 minutes.",
+      { "text": "Whisk the eggs, sour cream and the rest of the milk. Take off the foil, pour this over the top and bake uncovered for 20 minutes more, until golden and set.", "tip": "Push a knife through the middle: the potatoes should be soft all the way down." },
+      { "text": "Let it rest for 10 minutes before cutting, so it holds together. Serve with a cucumber salad.", "tip": "Keeps 3 days in the fridge. Reheat portions in the oven or microwave." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "kid-friendly"],
     "keepsDays": 3,

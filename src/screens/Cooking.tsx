@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { cookedOutsidePlan, rate, ratingOf, setCooked } from '../app/actions';
 import { RECIPE_BY_ID } from '../app/catalog';
-import { takenText } from '../app/pantry';
+import { mealPortions, takenText } from '../app/pantry';
 import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type Amount, useApp } from '../app/state';
@@ -169,7 +169,8 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   }
   const mealIndex = mealParam != null && d.plan?.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   const n = r.steps.length;
-  const portions = Math.max(1, Math.round(portionsFor(d.settings)));
+  // A plan meal is cooked for its eaters plus any later leftover or batch meals.
+  const portions = Math.max(1, Math.round(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings)));
   const factor = portions / r.servings;
   const text = scaleStep(stepText(r.steps[step]), factor);
   const rawTip = stepTip(r.steps[step]);

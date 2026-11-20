@@ -14,10 +14,10 @@ import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
-import { takenText } from '../app/pantry';
+import { mealPortions, takenText } from '../app/pantry';
 import { photoFor, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
 import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
-import { SLOT_LABEL, dayLong, minutes } from '../ui/words';
+import { SLOT_LABEL, dayLong, minutes, plural } from '../ui/words';
 import type { PriceState } from './Plan';
 
 export const REASONS = ['Too expensive', 'Too much work', 'Not tasty', 'Portion too small'];
@@ -73,7 +73,10 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const d = useApp();
   const r = RECIPE_BY_ID.get(id);
   const mealIndex = mealParam != null && d.plan && d.plan.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
-  const [servings, setServings] = useState(() => Math.max(1, Math.round(portionsFor(d.settings))));
+  // A plan meal is cooked for its eaters plus any later leftover or batch meals.
+  const cookFor = Math.max(1, Math.round(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings)));
+  const [servings, setServings] = useState(cookFor);
+  const maxServings = Math.max(12, cookFor);
   const [sheet, setSheet] = useState<null | 'down' | 'add'>(null);
   const [toast, setToast] = useToast<{ text: string; undo?: () => void }>(7000);
   const [note, setNoteText] = useState(d.notes[id] ?? '');
@@ -135,6 +138,11 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
             In your plan: <strong>{dayLong(view.date)} {SLOT_LABEL[view.slot].toLowerCase()}</strong>
             {view.leftover && ' (leftovers)'}
           </p>
+          {!view.leftover && cookFor > portionsFor(d.settings) + 0.5 && (
+            <p class="sub">
+              Cook {cookFor} servings: this meal plus {plural(d.plan!.meals.filter((m) => m.source === 'leftover' && m.from === mealIndex).length, 'later meal', 'later meals')}. The amounts below are for all of it.
+            </p>
+          )}
           <div class="row-btns">
             <button
               class={cooked ? 'btn-teal' : 'btn-teal-outline'}
@@ -173,7 +181,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
               −
             </button>
             <span>{servings} servings</span>
-            <button aria-label="More servings" disabled={servings >= 12} onClick={() => setServings(servings + 1)}>
+            <button aria-label="More servings" disabled={servings >= maxServings} onClick={() => setServings(servings + 1)}>
               +
             </button>
           </div>

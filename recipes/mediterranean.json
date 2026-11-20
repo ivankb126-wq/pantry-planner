@@ -339,9 +339,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Slice the potatoes thinly, toss with 2 tbsp oil and the salt and bake in a dish for 20 minutes.",
-      "Lay the fish on top with sliced tomatoes, olives, capers and garlic. Drizzle with the rest of the oil.",
-      "Bake 18 to 20 minutes until the fish is white all the way through. Scatter with parsley."
+      "Heat the oven to 200 °C. Peel the potatoes and slice them thinly, about 3 mm.",
+      "Toss them in a baking dish with {2 tbsp} of the olive oil and the salt, spread them out evenly and bake for 20 minutes until they start to soften.",
+      { "text": "Meanwhile slice the tomatoes and garlic, halve the olives and chop the parsley.", "tip": "Using frozen hake? Thaw it in the fridge overnight and pat it dry." },
+      "Lay the fish on the potatoes and cover it with the tomatoes, olives, capers and garlic. Drizzle with the rest of the oil.",
+      { "text": "Bake for 18 to 20 minutes, until the fish is white all the way through and flakes easily.", "tip": "Check the thickest piece with a fork. If the potatoes are still firm, give it a few more minutes." },
+      "Scatter with the parsley and serve from the dish."
     ],
     "tags": ["high-protein", "light"],
     "keepsDays": 2,

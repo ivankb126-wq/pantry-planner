@@ -48,7 +48,14 @@
       { "id": "dark-chocolate", "quantity": 150, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
       { "id": "whipping-cream", "quantity": 150, "unit": "ml" }, { "id": "sugar", "quantity": 25, "unit": "g" }
     ],
-    "steps": ["Melt the chocolate over hot water and cool a little. Stir in the egg yolks.", "Whip the cream softly. Whisk the whites with the sugar to soft peaks.", "Fold the cream, then the whites, into the chocolate. Spoon into glasses and chill at least 3 hours."],
+    "steps": [
+      { "text": "Break the chocolate into a heatproof bowl. Set it over a pot of barely simmering water, without the bowl touching the water, and stir until melted. Let it cool for 5 minutes.", "tip": "A single drop of water in the chocolate makes it thick and grainy, so keep everything dry." },
+      { "text": "Separate the eggs, putting the whites in a large, very clean bowl. Stir the yolks one at a time into the warm chocolate.", "tip": "The smallest bit of yolk stops the whites whipping up." },
+      "Whip the cream until it just holds soft peaks.",
+      "In the clean bowl, whisk the whites until foamy, then add the sugar and whisk until they hold soft peaks.",
+      { "text": "Stir a spoon of cream into the chocolate to loosen it. Then gently fold in the rest of the cream, and after it the whites, with a spatula until no white streaks remain.", "tip": "Cut through the middle and lift from the bottom while you turn the bowl. Stirring knocks out the air that makes it light." },
+      { "text": "Spoon into glasses and chill for a few hours, or overnight, until set.", "tip": "It needs at least 3 hours and keeps 2 days, covered. It contains raw egg, so do not serve it to pregnant women or small children." }
+    ],
     "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["bowls", "whisk"], "illustration": "🍫"
   },
   {
@@ -223,7 +230,13 @@
       { "id": "cornstarch", "quantity": 35, "unit": "g" }, { "id": "sugar", "quantity": 60, "unit": "g" },
       { "id": "dark-chocolate", "quantity": 30, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" }
     ],
-    "steps": ["Whisk the cocoa, cornflour, sugars and 150 ml of the milk until smooth.", "Bring the rest of the milk to the boil, whisk in the mixture and stir 2 minutes until thick.", "Stir in the chopped chocolate and pour into bowls. Serve warm or chilled."],
+    "steps": [
+      { "text": "In a bowl whisk the cocoa, cornstarch, sugar, vanilla sugar and {150 ml} of the milk until completely smooth.", "tip": "Whisk well now: lumps of cornstarch do not disappear later." },
+      "Bring the rest of the milk to the boil in a pot, watching it so it does not boil over.",
+      "Take the pot off the heat, pour in the cocoa mix while whisking, then put it back on medium heat.",
+      { "text": "Keep whisking for 2 minutes as it bubbles and thickens into a pudding.", "tip": "It must bubble properly, or the cornstarch does not set and it stays runny." },
+      { "text": "Take it off the heat and stir in the chopped chocolate until melted. Pour into bowls.", "tip": "To stop a skin forming, press cling film onto the surface while it cools. Keeps 3 days in the fridge." }
+    ],
     "tags": ["vegetarian", "kid-friendly", "quick"], "keepsDays": 3, "equipment": ["saucepan", "whisk"], "illustration": "🍫"
   },
   {
@@ -266,7 +279,15 @@
       { "id": "raisins", "quantity": 50, "unit": "g" }, { "id": "cream-cheese", "quantity": 200, "unit": "g" },
       { "id": "powdered-sugar", "quantity": 50, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 175 °C. Whisk the eggs, sugar and oil.", "Fold in the flour, baking powder, cinnamon, grated carrot, walnuts and raisins.", "Bake in a lined tin for 40 to 45 minutes and cool completely.", "Beat the cream cheese with the icing sugar and spread on top."],
+    "steps": [
+      "Heat the oven to 175 °C and line a cake tin of about 24 cm with baking paper. Take the cream cheese out of the fridge.",
+      "Grate the carrots finely and chop the walnuts.",
+      "Whisk the eggs, sugar and oil for 2 minutes until smooth and a little thicker.",
+      "Fold in the flour, baking powder and cinnamon, then the carrot, walnuts and raisins, until just mixed.",
+      { "text": "Pour into the tin and bake for 40 to 45 minutes, until a skewer in the middle comes out clean.", "tip": "If the top browns too fast, cover it loosely with foil." },
+      { "text": "Let the cake cool completely, which takes at least an hour.", "tip": "Frosting on a warm cake melts and slides off." },
+      { "text": "Beat the soft cream cheese with the powdered sugar until smooth and spread it over the top.", "tip": "Keep the frosted cake in the fridge. It keeps 4 days." }
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin", "grater"], "illustration": "🥕"
   },
   {
@@ -280,7 +301,13 @@
       { "id": "sugar", "quantity": 70, "unit": "g" }, { "id": "butter", "quantity": 15, "unit": "g" },
       { "id": "powdered-sugar", "quantity": 10, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 190 °C and butter a baking dish. Scatter in the berries.", "Whisk the eggs, sugar, flour and milk into a smooth batter and pour over.", "Bake 30 to 35 minutes until puffed and set. Dust with icing sugar and serve warm."],
+    "steps": [
+      "Heat the oven to 190 °C. Grease a baking dish of about 24 cm with the butter and scatter the frozen berries over the bottom.",
+      { "text": "Whisk the eggs and sugar for 1 minute. Add the flour and whisk until smooth, then whisk in the milk.", "tip": "It is a thin batter, like for palačinke. Add the milk slowly to avoid lumps." },
+      "Pour the batter over the berries.",
+      { "text": "Bake for 30 to 35 minutes until puffed, golden and set in the middle.", "tip": "It may wobble a little when you shake the dish but should not be liquid. It sinks as it cools, which is normal." },
+      "Let it cool for 10 minutes, dust with the powdered sugar and serve warm."
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🫐"
   },
   {
@@ -292,7 +319,12 @@
       { "id": "banana", "quantity": 5, "unit": "piece", "note": "sliced and frozen" }, { "id": "cocoa", "quantity": 2, "unit": "tbsp" },
       { "id": "peanut-butter", "quantity": 40, "unit": "g" }, { "id": "oat-drink", "quantity": 60, "unit": "ml" }
     ],
-    "steps": ["Slice the bananas and freeze for at least 4 hours.", "Blend with the cocoa, peanut butter and oat drink until smooth, scraping down the sides.", "Eat straight away or freeze 30 minutes for a firmer scoop."],
+    "steps": [
+      { "text": "The day before, peel the bananas, slice them into rounds and freeze them in a box or bag.", "tip": "They need at least 4 hours. Spread them out so they do not freeze into one block." },
+      "Put the frozen banana, cocoa, peanut butter and oat drink into a food processor or strong blender.",
+      { "text": "Blend, stopping to scrape down the sides every so often, until smooth and creamy like soft ice cream.", "tip": "It looks crumbly first, then suddenly turns creamy. Add a spoon more oat drink if the blades stop moving it." },
+      { "text": "Eat it straight away, or put it in a box in the freezer for 30 minutes for a firmer scoop.", "tip": "If it freezes solid later, leave it out for 10 minutes before scooping." }
+    ],
     "tags": ["vegan", "vegetarian", "kid-friendly", "no-cook"], "keepsDays": 7, "equipment": ["blender"], "illustration": "🍨"
   },
   {
@@ -307,7 +339,17 @@
       { "id": "walnuts", "quantity": 300, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece", "note": "zest" },
       { "id": "vanilla-sugar", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Dissolve the yeast in 200 ml warm milk with 1 tsp sugar. Knead with the flour, 60 g sugar, melted butter, 1 egg, salt and zest into a soft dough. Rise 1 hour.", "Warm the rest of the milk with the rest of the sugar and vanilla sugar and pour over the ground walnuts. Cool.", "Roll the dough out to a large rectangle, spread with the filling and roll up tightly. Rise 30 minutes on a lined tray.", "Brush with the other egg and bake at 175 °C for 40 to 45 minutes. Cool before slicing."],
+    "steps": [
+      { "text": "Warm {200 ml} of the milk until it feels just warm on your finger. Crumble in the yeast with {1 tsp} of the sugar, stir and leave for 10 minutes until foamy.", "tip": "If it does not foam, the yeast is old or the milk was too hot. Start again with new yeast." },
+      "Melt the butter. In a large bowl mix the flour, {60 g} of the sugar, the salt and the grated lemon zest. Add the yeast milk, the melted butter and one of the eggs. Keep the other egg for later.",
+      { "text": "Knead for about 10 minutes into a soft, smooth dough that no longer sticks to your hands.", "tip": "Add a spoon of flour if it stays very sticky, but keep it soft. A soft dough gives a tender roll." },
+      "Cover the bowl with a towel and leave it somewhere warm for 1 hour, until doubled in size.",
+      { "text": "Meanwhile grind the walnuts. Bring the rest of the milk to the boil with the rest of the sugar and the vanilla sugar, pour it over the walnuts and stir. Leave to cool.", "tip": "The filling must be cool before you spread it, or it melts the dough." },
+      "Roll the dough out on a floured surface into a large rectangle about as thick as your finger. Spread the filling evenly, leaving a 2 cm edge.",
+      "Roll it up tightly from the long side, pinch the ends closed and lay it on a lined tray, seam side down. Cover and leave to rise for 30 minutes. Heat the oven to 175 °C.",
+      { "text": "Beat the other egg and brush it over the roll. Bake for 40 to 45 minutes until deep golden.", "tip": "Tap the bottom: it sounds hollow when baked. If the top browns too fast, cover it with foil." },
+      { "text": "Let it cool completely before slicing.", "tip": "Sliced warm, it falls apart. It keeps 5 days wrapped in a clean towel." }
+    ],
     "tags": ["vegetarian", "festive", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray", "rolling pin"], "illustration": "🌰"
   },
   {

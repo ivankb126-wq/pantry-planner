@@ -510,10 +510,11 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Grill or pan-fry the ćevapi for 10 to 12 minutes, turning, until browned and cooked through.",
-      "Warm the flatbread on the grill or in the pan with the meat juices.",
-      "Shred the cabbage, slice the tomatoes and dress with vinegar, oil and a pinch of salt.",
-      "Fill the bread with ćevapi, chopped onion and ajvar and serve with the salad."
+      "Shred the cabbage very thinly and slice the tomatoes. Dress them with the vinegar, the oil and a pinch of salt, and squeeze the cabbage with your hands for a moment so it softens.",
+      "Chop the onion finely.",
+      { "text": "Heat a grill pan or frying pan on medium-high, with no oil. Fry the ćevapi for 10 to 12 minutes, turning every few minutes, until browned all over and cooked through.", "tip": "Do not move them for the first couple of minutes or they stick. Cut one in half to check: no pink inside." },
+      { "text": "Lift out the ćevapi. Cut the flatbreads open and press them into the pan for a few seconds on each side to soak up the meat juices.", "tip": "This is how they do it in a ćevabdžinica: the bread soaks up all the flavour." },
+      "Fill the bread with ćevapi, a spoon of ajvar and chopped onion, and serve with the salad."
     ],
     "tags": ["quick", "high-protein", "kid-friendly"],
     "keepsDays": 1,
