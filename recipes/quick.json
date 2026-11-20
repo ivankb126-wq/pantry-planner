@@ -88,10 +88,12 @@
       { "id": "parsley", "quantity": 10, "unit": "g" }
     ],
     "steps": [
-      "Cook the pasta. Warm the garlic and chili in the oil for 1 minute.",
-      "Add the tomatoes, capers and olives and simmer 10 minutes.",
-      "Stir in the drained tuna and heat through.",
-      "Toss with the pasta and parsley."
+      "Bring a large pot of salted water to the boil. Chop the garlic, halve the olives and chop the parsley. Drain the tuna.",
+      { "text": "Cook the pasta until al dente, a little less than the packet says.", "tip": "Keep a mug of the pasta water before you drain it." },
+      "Meanwhile put the olive oil, garlic and chili flakes in a cold frying pan and warm on medium-low for 1 to 2 minutes, until the garlic sizzles but does not brown.",
+      { "text": "Add the tomatoes, capers and olives, crush any big pieces with a spoon and simmer for 10 minutes until thick.", "tip": "Capers and olives are salty, so taste before adding any salt." },
+      "Stir in the tuna in chunks and heat through for 2 minutes. Do not stir too much, so the tuna stays in pieces.",
+      "Drain the pasta and toss it with the sauce, the parsley and a splash of pasta water. Serve straight away."
     ],
     "tags": ["quick", "high-protein"],
     "keepsDays": 2,
@@ -405,10 +407,11 @@
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Pour 300 ml boiling water over the couscous with the salt, cover for 5 minutes and fluff with a fork.",
-      "Dice the cucumber, tomato and peppers and chop the parsley.",
-      "Mix everything with the drained chickpeas, lemon juice and oil.",
-      "Crumble the feta over the top."
+      { "text": "Put the couscous and salt in a large bowl and pour over {300 ml} boiling water. Cover with a plate and leave for 5 minutes.", "tip": "Too much water makes couscous mushy, so measure it." },
+      "Meanwhile dice the cucumber, tomatoes and roasted peppers and chop the parsley. Drain and rinse the chickpeas.",
+      { "text": "Fluff the couscous with a fork to break up any lumps and let it cool a little.", "tip": "Warm couscous wilts the vegetables. Spread it on a plate to cool faster." },
+      "Add the vegetables, chickpeas, parsley, lemon juice and olive oil and mix well. Taste and add salt or more lemon.",
+      { "text": "Crumble the feta over the top.", "tip": "It keeps 3 days in the fridge and makes a good packed lunch." }
     ],
     "tags": ["quick", "vegetarian", "make-ahead", "no-cook"],
     "keepsDays": 3,
@@ -439,10 +442,11 @@
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Slice the turkey, peppers and onion into strips. Toss with paprika and salt.",
-      "Fry in the oil on high heat for 8 to 10 minutes.",
-      "Mix the yogurt with the crushed garlic.",
-      "Fill the warm tortillas with lettuce, turkey and peppers and a spoon of yogurt."
+      "Slice the turkey into thin strips. Cut the peppers and onion into strips of the same thickness.",
+      "Toss the turkey and vegetables in a bowl with the paprika and salt.",
+      { "text": "Heat the oil in a large frying pan on high. Add everything in one layer and fry for 8 to 10 minutes, stirring now and then, until the turkey is cooked and the peppers are browned at the edges.", "tip": "Turkey breast dries out quickly. It is done as soon as there is no pink inside. Fry in two batches if your pan is small." },
+      "Meanwhile crush the garlic into the yogurt with a pinch of salt and stir. Shred the lettuce.",
+      "Warm the tortillas for a few seconds on each side in a dry pan. Fill them with lettuce, the turkey and peppers and a spoon of garlic yogurt, then roll up."
     ],
     "tags": ["quick", "high-protein", "kid-friendly"],
     "keepsDays": 2,
@@ -602,10 +606,11 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Cook the tortellini as the packet says, adding the peas for the last 2 minutes.",
-      "Warm the diced ham in a pan, add the cream and pepper and bubble 2 minutes.",
-      "Toss with the drained tortellini and peas.",
-      "Serve with parmesan."
+      "Bring a large pot of salted water to the boil. Dice the ham and grate the parmesan.",
+      { "text": "Cook the tortellini as the packet says, adding the peas to the pot when the tortellini have a couple of minutes left.", "tip": "Taste one: they are done when the pasta edge is soft." },
+      "Meanwhile warm the ham in a large frying pan on medium heat for 2 minutes. Pour in the cream, add the pepper and let it bubble gently for 2 minutes until slightly thicker.",
+      "Drain the tortellini and peas, keeping a little of the cooking water. Tip them into the pan and toss to coat, adding a splash of the water if the sauce is too thick.",
+      "Serve with the parmesan on top."
     ],
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,

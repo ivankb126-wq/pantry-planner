@@ -29,7 +29,14 @@
       { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "butter", "quantity": 80, "unit": "g" },
       { "id": "walnuts", "quantity": 40, "unit": "g" }, { "id": "greek-yogurt", "quantity": 300, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 190 °C. Slice the apples into a dish with 20 g sugar and the cinnamon.", "Rub the flour, oats, butter and remaining sugar together, then stir in the chopped walnuts.", "Scatter over the apples and bake 35 minutes until golden. Serve with yogurt."],
+    "steps": [
+      "Heat the oven to 190 °C. Peel and core the apples and slice them thinly.",
+      "Put the apples in a baking dish and toss them with {20 g} of the sugar and the cinnamon.",
+      { "text": "Rub the cold butter into the flour with your fingertips until it looks like breadcrumbs. Stir in the oats, the rest of the sugar and the chopped walnuts.", "tip": "Use cold butter and work quickly so it does not melt. A few bigger clumps make a crunchier topping." },
+      "Scatter the crumble evenly over the apples without pressing it down.",
+      { "text": "Bake for 35 minutes until golden on top and bubbling at the edges.", "tip": "Push a knife into the apples: they should be soft." },
+      { "text": "Let it cool for 10 minutes and serve warm with the yogurt.", "tip": "Keeps 3 days in the fridge. Warm portions in the oven so the top crisps up again." }
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["oven", "baking dish"], "illustration": "🍎"
   },
   {
@@ -68,7 +75,14 @@
       { "id": "raisins", "quantity": 30, "unit": "g" }, { "id": "honey", "quantity": 2, "unit": "tbsp" },
       { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "butter", "quantity": 15, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 180 °C. Core the apples, leaving the bottoms whole.", "Mix the chopped walnuts, raisins, honey and cinnamon and fill the apples. Top each with a little butter.", "Bake 30 to 35 minutes until soft."],
+    "steps": [
+      { "text": "Heat the oven to 180 °C. Wash the apples and cut out the cores with a small knife or apple corer, leaving the bottom of each apple whole.", "tip": "A closed bottom keeps the filling and juice inside." },
+      "Chop the walnuts and mix them with the raisins, honey and cinnamon.",
+      "Stand the apples in a small baking dish and fill them with the nut mix, pressing it in. Put a little butter on top of each.",
+      "Pour a little water into the dish, just enough to cover the bottom.",
+      { "text": "Bake for 30 to 35 minutes, until the apples are soft and the skins wrinkle.", "tip": "A knife should slide in easily. Spoon the juices from the dish over the apples once or twice while they bake." },
+      "Serve warm with the juices from the dish."
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🍏"
   },
   {
@@ -82,7 +96,14 @@
       { "id": "jam", "quantity": 120, "unit": "g" }, { "id": "walnuts", "quantity": 50, "unit": "g" },
       { "id": "sugar", "quantity": 20, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Whisk the flour, eggs, milk, salt and 1 tbsp oil into a smooth thin batter and rest 10 minutes.", "Wipe a hot pan with a little oil and fry thin crepes, about 1 minute a side.", "Spread with jam or sprinkle with ground walnuts and sugar, and roll up."],
+    "steps": [
+      { "text": "Whisk the flour, eggs and salt with a little of the milk into a thick, smooth paste. Then whisk in the rest of the milk and {1 tbsp} of the oil, a bit at a time.", "tip": "Adding the milk slowly is the trick to a batter without lumps." },
+      { "text": "Let the batter rest for 10 minutes. Meanwhile grind or finely chop the walnuts and mix them with the sugar.", "tip": "The batter should be thin, like single cream. If it is thicker, add a splash of milk." },
+      "Heat a frying pan on medium-high and wipe it with a little oil on kitchen paper.",
+      { "text": "Pour in a small ladle of batter and tilt the pan at once so it covers the bottom in a thin layer. Cook for about 1 minute, until the edges lift and the bottom has golden spots.", "tip": "The first palačinka is often a bad one. It is the cook's treat." },
+      "Flip with a spatula and cook the other side for a few seconds, then stack on a plate. Wipe the pan with oil every couple of palačinke.",
+      "Spread each one with jam, or sprinkle with the walnut sugar, and roll or fold it up."
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["frying pan", "bowl"], "illustration": "🥞"
   },
   {

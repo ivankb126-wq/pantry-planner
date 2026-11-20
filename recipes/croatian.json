@@ -107,11 +107,14 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Soak the beans overnight. Drain, cover with fresh water and bring to the boil, then pour that water away.",
-      "Cover the beans and ribs with 2.5 litres of water, add the bay leaves and simmer for 1 hour.",
-      "Add the diced carrot and half the onion and cook for 40 more minutes, until the beans are soft.",
-      "Fry the rest of the onion in the oil, stir in the flour until golden, then the garlic, paprika and tomato paste. Stir this into the stew.",
-      "Simmer 10 minutes, season with pepper (the ribs bring the salt) and serve with bread."
+      "The night before, cover the beans with plenty of cold water and leave them to soak overnight.",
+      { "text": "Drain the beans, put them in a large pot, cover with fresh water and bring to the boil. Pour this first water away.", "tip": "Throwing away the first water makes the beans easier to digest." },
+      { "text": "Put the beans back in the pot with the ribs, bay leaves and {2500 ml} water. Bring to the boil, then simmer on low with the lid half on for 1 hour.", "tip": "Do not add salt: the smoked ribs bring enough. Salt added early can keep the beans hard." },
+      { "text": "Dice the carrots and chop the onions. Add the carrots and half the onions to the pot and cook for 40 minutes more, until the beans are soft.", "tip": "Squash a bean between your fingers: it should be creamy all the way through." },
+      "Make the zaprška (roux): heat the oil in a small pan on medium heat and fry the rest of the onion for 5 minutes. Add the flour and stir for 2 minutes until light golden.",
+      { "text": "Take the pan off the heat and quickly stir in the chopped garlic, paprika and tomato paste. Add a ladle of the bean liquid and stir until smooth.", "tip": "Paprika burns easily, which is why it goes in off the heat. The ladle of liquid stops lumps when it goes into the stew." },
+      "Stir it into the stew and simmer for 10 minutes until thickened. Take out the ribs, cut the meat off the bones and put it back. Season with the pepper and taste for salt.",
+      { "text": "Serve hot with bread.", "tip": "Grah is even better the next day. It keeps 4 days in the fridge; add a little water when you reheat it." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "high-protein", "comfort"],
     "keepsDays": 4,
@@ -460,10 +463,12 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Shred the kelj, dice the potatoes and cook both in 1.2 litres of water with the Vegeta for 25 minutes.",
-      "Slice the sausage and brown it in a dry pan, then add it to the pot.",
-      "Fry the chopped onion in the oil, stir in the flour until golden, then the garlic and paprika. Stir into the stew.",
-      "Simmer 5 minutes, season with pepper and serve."
+      "Cut the savoy cabbage (kelj) into quarters, cut out the hard core and shred the leaves. Peel and dice the potatoes.",
+      "Put the cabbage and potatoes in a large pot with {1200 ml} water and the Vegeta. Bring to the boil, then simmer for 25 minutes until both are soft.",
+      { "text": "Meanwhile slice the sausages and brown them in a dry frying pan on medium heat for 5 minutes. Add them to the pot.", "tip": "Browning them first gives the stew a smoky flavour." },
+      "Make the zaprška (roux): heat the oil in the same pan and fry the chopped onion for 5 minutes, then add the flour and stir for 2 minutes until light golden.",
+      { "text": "Take the pan off the heat, stir in the chopped garlic and paprika, then a ladle of liquid from the pot until smooth. Stir it into the stew.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      { "text": "Simmer for 5 minutes until thickened. Season with the pepper and taste for salt before serving.", "tip": "Vegeta is already salty, so taste before adding any salt." }
     ],
     "tags": ["one-pot", "comfort", "cook-once-eat-twice"],
     "keepsDays": 3,
@@ -531,11 +536,12 @@
       { "id": "vinegar", "quantity": 2, "unit": "tbsp" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Cut the potatoes into wedges and the onions into quarters.",
-      "Toss them on a tray with the oil, garlic, rosemary and half the salt.",
-      "Rub the chicken with paprika and the rest of the salt and lay it on top, skin up.",
-      "Roast for 55 to 60 minutes until the skin is crisp and the juices run clear.",
-      "Shred the cabbage finely and dress it with vinegar, a pinch of salt and a little oil."
+      "Heat the oven to 200 °C. Peel the potatoes (or leave the skins on) and cut them into wedges. Cut the onions into quarters and chop the garlic.",
+      "Toss the potatoes, onions and garlic on a large roasting tray with {2 tbsp} of the olive oil, the rosemary and half the salt, and spread them out.",
+      { "text": "Pat the chicken legs dry and rub them with the paprika and the rest of the salt. Lay them on top of the potatoes, skin side up.", "tip": "Dry skin gets crisp, and the juices from the chicken drip onto the potatoes and flavour them." },
+      { "text": "Roast for 55 to 60 minutes, until the skin is crisp and golden.", "tip": "Pierce the thickest part near the bone: the juices should run clear, not pink. Turn the potatoes once halfway if they brown unevenly." },
+      { "text": "While it roasts, shred the cabbage very thinly. Mix it with the vinegar, the rest of the oil and a pinch of salt, and squeeze it with your hands for a moment so it softens.", "tip": "Made early, the salad gets softer and tastier as it stands." },
+      "Rest the chicken for 5 minutes, then serve with the potatoes, onions and cabbage salad."
     ],
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 3,
@@ -567,10 +573,12 @@
       { "id": "sour-cream", "quantity": 100, "unit": "g", "optional": true }
     ],
     "steps": [
-      "Brown the diced pork in 1 tbsp oil. Add the onion and cook 5 minutes.",
-      "Add 1.2 litres of water and the Vegeta and simmer for 25 minutes.",
-      "Add the beans, potato and carrot and cook for 20 minutes.",
-      "Make a roux with the rest of the oil, the flour, garlic and paprika, stir it in and simmer 5 minutes. Serve with a spoon of sour cream if you like."
+      "Cut the pork into small cubes and chop the onion and garlic. Top and tail the green beans and cut them in half. Dice the potatoes and carrots.",
+      { "text": "Heat {1 tbsp} of the oil in a large pot on medium-high and brown the pork for 5 minutes. Add the onion and cook 5 minutes more until soft.", "tip": "If the pot is crowded, brown the meat in two batches so it browns instead of stewing." },
+      "Add {1200 ml} water and the Vegeta, bring to the boil and simmer for 25 minutes.",
+      "Add the green beans, potatoes and carrots and simmer for 20 minutes more, until everything is soft.",
+      { "text": "Make the zaprška (roux): heat the rest of the oil in a small pan, add the flour and stir on medium heat for 2 minutes until light golden. Off the heat, stir in the garlic and paprika, then a ladle of liquid from the pot.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      { "text": "Stir it into the stew and simmer for 5 minutes until thickened. Serve with a spoon of sour cream on each plate if you like.", "tip": "Taste for salt before serving: Vegeta is already salty." }
     ],
     "tags": ["one-pot", "freezer-friendly", "cook-once-eat-twice"],
     "keepsDays": 3,

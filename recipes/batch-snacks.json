@@ -38,7 +38,13 @@
       { "id": "oats", "quantity": 60, "unit": "g" }, { "id": "cocoa", "quantity": 2, "unit": "tbsp" },
       { "id": "coconut-flakes", "quantity": 30, "unit": "g" }
     ],
-    "steps": ["Soak the dates in hot water for 5 minutes if they are dry, then drain.", "Blend the dates, walnuts, oats and cocoa into a sticky dough.", "Roll into 20 balls, roll in coconut and chill. Two balls make a portion."],
+    "steps": [
+      { "text": "If the dates are hard and dry, soak them in hot water for 5 minutes, then drain them well. Remove any stones.", "tip": "Soft dates (like Medjool) do not need soaking." },
+      "Blend the walnuts and oats in a food processor until finely chopped.",
+      { "text": "Add the dates and cocoa and blend until it clumps together into a sticky dough.", "tip": "Press a little between your fingers: if it holds together, it is ready. Too dry? Add a spoon of water." },
+      { "text": "Roll the dough into walnut-size balls with your hands, then roll each ball in the coconut.", "tip": "Slightly wet hands stop the dough sticking." },
+      { "text": "Chill them for an hour to firm up, then keep them in a closed box in the fridge. Two balls make a portion.", "tip": "They keep about 10 days in the fridge." }
+    ],
     "tags": ["batch", "vegan", "vegetarian", "no-cook", "freezer-friendly"], "keepsDays": 10, "equipment": ["food processor"], "illustration": "🟤"
   },
   {

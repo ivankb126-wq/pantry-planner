@@ -24,10 +24,12 @@
       { "id": "rice", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Cook the rice. Mix the soy sauce, honey, cornstarch and 100 ml water in a cup.",
-      "Slice the chicken thinly. Cut the broccoli into small florets, the pepper into strips and the carrot into thin slices.",
-      "Stir-fry the chicken in 1 tbsp oil on high heat for 5 minutes and take it out.",
-      "Stir-fry the vegetables with the grated ginger and garlic in the rest of the oil for 4 minutes. Return the chicken, add the sauce and toss until glossy."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      { "text": "Mix the soy sauce, honey, cornstarch and {100 ml} water in a cup until smooth.", "tip": "Cornstarch sinks, so stir again just before you pour it in." },
+      { "text": "Slice the chicken thinly. Cut the broccoli into small florets, the pepper into strips and the carrots into thin slices. Grate the ginger and garlic.", "tip": "Have everything cut before you start cooking. A stir-fry moves fast." },
+      "Heat {1 tbsp} of the oil in a wok or large frying pan on high until very hot. Stir-fry the chicken for 5 minutes until golden and cooked through, then take it out onto a plate.",
+      { "text": "Add the rest of the oil, then the carrots and broccoli and stir-fry for 2 minutes. Add the pepper, ginger and garlic and stir-fry for 2 minutes more.", "tip": "The vegetables should stay bright and a little crunchy. If the broccoli is too firm, add a spoon of water and cover for a moment." },
+      "Put the chicken back, pour in the sauce and toss for 1 minute until it bubbles, thickens and turns glossy. Serve with the rice."
     ],
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 2,
@@ -128,10 +130,12 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Cook the rice. Slice the cucumber thinly and mix with the vinegar, sugar and a pinch of salt.",
-      "Mix the soy sauce, honey and grated ginger.",
-      "Fry the salmon in the oil for 4 minutes a side. Pour in the sauce and spoon it over the fish for 1 minute until glazed.",
-      "Serve with the rice and cucumber, scattered with sesame."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Slice the cucumber thinly and mix it with the vinegar, sugar and a pinch of salt. Keep it in the fridge while you cook.",
+      "Mix the soy sauce, honey and grated ginger in a cup.",
+      { "text": "Pat the salmon dry. Heat the oil in a frying pan on medium-high. Fry the salmon for 4 minutes, then turn and fry 4 minutes more.", "tip": "Start skin side down and do not move it while it cooks, so it gets a golden crust." },
+      { "text": "Turn the heat to low and pour in the sauce. Let it bubble for 1 minute, spooning it over the fish, until sticky and glazed.", "tip": "Honey burns quickly, so keep the heat low and keep spooning." },
+      "Toast the sesame seeds in a dry pan for a moment if you like. Serve the salmon on the rice with the sauce from the pan, the cucumber salad on the side and sesame on top."
     ],
     "tags": ["high-protein"],
     "keepsDays": 2,
@@ -460,10 +464,12 @@
       { "id": "rice", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Cook the rice. Cut the pork into cubes, toss with the egg and 3 tbsp cornstarch.",
-      "Fry the pork in 3 tbsp oil until crisp and cooked, about 8 minutes. Drain.",
-      "Stir-fry the pepper and onion in the rest of the oil for 3 minutes. Add the pineapple.",
-      "Mix the ketchup, vinegar, sugar, soy, the last tbsp of cornstarch and 100 ml water, pour in and bubble until thick. Toss with the pork and serve."
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      { "text": "Cut the pork into 2 cm cubes. Beat the egg in a bowl, add the pork and toss, then sprinkle over {3 tbsp} of the cornstarch and mix until every piece is coated.", "tip": "This coating makes the crisp crust. It looks pasty at first, which is fine." },
+      "Cut the peppers and onion into chunks and drain the pineapple. In a cup mix the ketchup, vinegar, sugar, soy sauce, the last of the cornstarch and {100 ml} water.",
+      { "text": "Heat {3 tbsp} of the oil in a large frying pan on medium-high. Fry the pork in one layer for about 8 minutes, turning, until golden, crisp and cooked through. Lift it out onto kitchen paper.", "tip": "Do not crowd the pan or the coating goes soggy. Fry in two batches if needed." },
+      "Wipe out any burnt bits, add the rest of the oil and stir-fry the peppers and onion for 3 minutes so they stay a little crunchy. Add the pineapple.",
+      { "text": "Stir the sauce, pour it in and let it bubble for 1 to 2 minutes until thick and glossy. Toss the pork through just before serving with the rice.", "tip": "Adding the pork at the last moment keeps it crisp." }
     ],
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,

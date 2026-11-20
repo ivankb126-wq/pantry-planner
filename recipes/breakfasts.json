@@ -60,7 +60,13 @@
       { "id": "hard-cheese", "quantity": 30, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
       { "id": "bread", "quantity": 80, "unit": "g" }
     ],
-    "steps": ["Fry the diced pepper and spring onion in the oil for 3 minutes, add the spinach to wilt.", "Pour in the beaten eggs, cook gently until almost set and scatter with cheese.", "Fold, halve and serve with bread."],
+    "steps": [
+      "Dice the pepper, slice the spring onion and grate the cheese. Beat the eggs with a pinch of salt.",
+      "Heat the oil in a non-stick frying pan on medium. Fry the pepper and spring onion for 3 minutes, then add the spinach and stir until it wilts.",
+      "Spread the vegetables out, pour in the eggs and let them sit for a few seconds. Gently pull the set edges into the middle with a spatula, tilting the pan so the runny egg fills the gaps.",
+      { "text": "When the omelette is almost set but still a little wet on top, after about 2 minutes, scatter over the cheese.", "tip": "It keeps cooking after you fold it, so do not wait until the top is dry." },
+      "Fold it in half, cut it in two and serve with bread."
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍳"
   },
   {
@@ -150,7 +156,13 @@
       { "id": "butter", "quantity": 15, "unit": "g" }, { "id": "frozen-berries", "quantity": 150, "unit": "g" },
       { "id": "yogurt", "quantity": 150, "unit": "g" }
     ],
-    "steps": ["Whisk the eggs, milk and cinnamon. Soak the bread slices for a few seconds each.", "Fry in the butter 2 to 3 minutes a side.", "Warm the berries in a small pan and serve with the toast and yogurt."],
+    "steps": [
+      "Put the berries in a small pan on low heat to thaw and warm, stirring now and then, about 5 minutes.",
+      "Whisk the eggs, milk and cinnamon in a wide, shallow dish.",
+      { "text": "Heat half the butter in a frying pan on medium heat. Dip a slice of bread in the egg for a few seconds on each side, let the extra drip off and put it in the pan.", "tip": "Day-old bread is best. Fresh bread soaks up too much and falls apart." },
+      { "text": "Fry for 2 to 3 minutes on each side until golden. Repeat with the rest, adding the rest of the butter.", "tip": "If the outside browns before the middle is set, turn the heat down a little." },
+      "Serve the toast with the warm berries and a spoon of yogurt."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍞"
   },
   {
@@ -340,7 +352,14 @@
       { "id": "parmesan", "quantity": 30, "unit": "g" }, { "id": "bread", "quantity": 200, "unit": "g" },
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
-    "steps": ["Fry the onion and thinly sliced zucchini in the oil for 10 minutes until soft and golden.", "Beat the eggs with salt and parmesan, pour over and cook on low heat with a lid for 8 minutes.", "Flip onto a plate and back, or finish under the grill. Serve in wedges with bread."],
+    "steps": [
+      "Slice the zucchini into thin rounds and the onion into thin half moons.",
+      { "text": "Heat the olive oil in a non-stick frying pan with a lid on medium heat. Fry the onion and zucchini for 10 minutes, stirring now and then, until soft and golden.", "tip": "Golden zucchini have the most flavour. Spread them out so they brown instead of steaming." },
+      "Meanwhile beat the eggs with the salt and the grated parmesan.",
+      { "text": "Spread the vegetables evenly, pour over the eggs and turn the heat to low. Cover and cook for 8 minutes, until the top is almost set.", "tip": "Do not stir. Run a spatula around the edge after a few minutes so it does not stick." },
+      { "text": "Put a large plate over the pan and turn it over quickly so the fritaja lands on the plate. Slide it back into the pan, cooked side up, and cook 2 minutes more.", "tip": "Not confident flipping? If your pan handle can go in the oven, finish it under the grill for a couple of minutes instead." },
+      { "text": "Cut into wedges and serve warm or cold with bread.", "tip": "Cold wedges make a good packed lunch the next day." }
+    ],
     "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["frying pan with lid"], "illustration": "🥒"
   },
   {
@@ -477,7 +496,13 @@
       { "id": "flour", "quantity": 60, "unit": "g" }, { "id": "sugar", "quantity": 1, "unit": "tbsp" },
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "jam", "quantity": 30, "unit": "g" }
     ],
-    "steps": ["Mix the cottage cheese, eggs, flour and sugar into a thick batter.", "Fry small spoonfuls in a little oil, 2 to 3 minutes a side.", "Serve with jam."],
+    "steps": [
+      { "text": "Put the cottage cheese, eggs, flour and sugar in a bowl and mix with a fork into a thick batter.", "tip": "It should hold its shape on a spoon. If it is runny, add a spoon of flour." },
+      "Heat a little of the oil in a non-stick frying pan on medium heat.",
+      { "text": "Drop in heaped spoonfuls of batter and flatten them a little into thick pancakes about the size of your palm. Fry for 2 to 3 minutes until golden underneath.", "tip": "Leave them alone until the edges look set. They are soft and break if you flip them too early." },
+      { "text": "Flip carefully with a spatula and fry the other side for 2 to 3 minutes. Repeat with the rest of the batter, adding a little oil each time.", "tip": "Turn the heat down a little if they brown before the middle is cooked." },
+      "Serve warm with the jam."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
   }
 ]

@@ -100,10 +100,11 @@
       { "id": "parmesan", "quantity": 60, "unit": "g" }
     ],
     "steps": [
-      "Soften the chopped onion, carrot and celeriac in 2 tbsp oil for 10 minutes. Add the garlic.",
-      "Add the diced potato, zucchini and shredded cabbage, the tomatoes, stock cube and 1.5 litres of water. Simmer 20 minutes.",
-      "Add the drained beans and the pasta and cook 10 minutes more.",
-      "Serve with grated parmesan and a drizzle of olive oil."
+      "Chop the onion, carrots and celeriac into small cubes and chop the garlic. Dice the potatoes and zucchini and shred the cabbage.",
+      { "text": "Heat {2 tbsp} of the olive oil in a large pot on medium heat. Add the onion, carrot and celeriac and cook for 10 minutes, stirring now and then, until soft.", "tip": "This slow start gives the soup its depth. Do not let it brown much." },
+      "Add the garlic and stir for a few seconds. Add the potatoes, zucchini, cabbage, tomatoes, the crumbled stock cube and {1500 ml} water. Bring to the boil and simmer for 20 minutes.",
+      { "text": "Drain and rinse the beans. Add them with the pasta and cook for 10 minutes more, until the pasta is soft.", "tip": "If the soup gets too thick, add a splash of water. Taste for salt now: the stock cube is already salty." },
+      { "text": "Serve in bowls with grated parmesan and a drizzle of the rest of the olive oil.", "tip": "The pasta keeps soaking up liquid, so leftovers get thicker. Add water when you reheat it." }
     ],
     "tags": ["vegetarian", "freezer-friendly", "one-pot", "cook-once-eat-twice"],
     "keepsDays": 4,
@@ -234,9 +235,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 210 °C. Cut the potatoes into small wedges, toss with 2 tbsp oil and half the salt and roast for 15 minutes.",
-      "Add the zucchini and tomatoes in chunks, the herbs and the rest of the oil and roast 10 more minutes.",
-      "Lay the salmon on top, season, add lemon slices and bake 10 to 12 minutes until it flakes."
+      "Heat the oven to 210 °C. Cut the potatoes into small wedges.",
+      "Toss the potatoes on a large baking tray with {2 tbsp} of the olive oil and half the salt and roast for 15 minutes.",
+      "Meanwhile cut the zucchini and tomatoes into chunks. Add them to the tray with the herbs and the rest of the oil, toss and roast 10 minutes more.",
+      "Season the salmon with the rest of the salt. Push the vegetables aside, lay the salmon in the middle and put lemon slices on top.",
+      { "text": "Bake for 10 to 12 minutes, until the salmon flakes easily but is still a little glossy in the middle.", "tip": "Thicker pieces need the longer time. Press the top: it should separate into flakes." },
+      "Serve straight from the tray, with the juice of any leftover lemon squeezed over."
     ],
     "tags": ["high-protein"],
     "keepsDays": 2,
@@ -407,10 +411,13 @@
       { "id": "bread", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Simmer the soaked beans in fresh water for 45 minutes until almost soft. Drain.",
-      "Heat the oven to 180 °C. Soften the onion and grated carrot in the oil for 10 minutes, add the garlic, tomatoes, paste, herbs, sugar and salt.",
-      "Mix the beans with the sauce in a baking dish, add water to just cover and bake for 50 to 60 minutes until thick.",
-      "Serve warm with bread."
+      "The night before, cover the beans with plenty of cold water and leave them to soak overnight.",
+      { "text": "Drain the beans, put them in a pot with fresh water and simmer for 45 minutes until almost soft. Drain, keeping a mug of the cooking water.", "tip": "They should be just soft but not falling apart. They finish cooking in the oven." },
+      "Meanwhile heat the oven to 180 °C. Chop the onions, grate the carrot and chop the garlic.",
+      "Heat the olive oil in a pan on medium heat and fry the onions and carrot for 10 minutes until soft and sweet. Add the garlic, tomatoes, tomato paste, dill, oregano, sugar and salt and simmer for 5 minutes.",
+      "Mix the beans with the sauce in a baking dish. Add enough of the bean water (or plain water) to just cover them.",
+      { "text": "Bake uncovered for 50 to 60 minutes, until the sauce is thick and the top is a little caramelised at the edges.", "tip": "Stir once halfway. If it looks dry before the beans are creamy, add a splash of water." },
+      { "text": "Let it rest for 10 minutes and serve warm with bread.", "tip": "In Greece this is eaten warm rather than hot, often with feta on the side. It tastes even better the next day." }
     ],
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice"],
     "keepsDays": 4,
@@ -442,10 +449,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Soften the chopped onion and carrot in the oil for 8 minutes. Add the finely chopped mushrooms and cook until dry.",
-      "Add the garlic, tomato paste, lentils, passata, oregano, salt and 600 ml water.",
-      "Simmer for 30 minutes, stirring now and then, until the lentils are soft. Add water if it gets too thick.",
-      "Serve with the cooked pasta."
+      { "text": "Chop the onion, carrots and mushrooms very finely and chop the garlic. Rinse the lentils.", "tip": "The smaller the pieces, the more it feels like a meat sauce. A food processor makes this quick." },
+      "Heat the olive oil in a large pot on medium heat and cook the onion and carrot for 8 minutes until soft.",
+      "Add the mushrooms and cook, stirring, for about 5 minutes until their juice has cooked away and they start to brown.",
+      "Add the garlic and tomato paste and stir for 1 minute. Add the lentils, passata, oregano, salt and {600 ml} water.",
+      { "text": "Simmer with the lid half on for 30 minutes, stirring now and then, until the lentils are soft. Add a splash of water if it gets too thick.", "tip": "Use brown or green lentils. Red lentils fall apart and make it mushy." },
+      { "text": "Near the end, cook the pasta in salted water as the packet says. Drain and serve with the sauce on top.", "tip": "The sauce keeps 4 days in the fridge, so it is worth making the whole pot." }
     ],
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice"],
     "keepsDays": 4,

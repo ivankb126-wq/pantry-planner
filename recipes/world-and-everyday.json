@@ -63,10 +63,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 210 °C. Cube the sweet potatoes, toss with oil, cumin, paprika and salt and roast 25 minutes.",
-      "Cook the rice. Warm the drained beans and corn in a pan with a splash of water.",
-      "Mash or slice the avocado with lime juice.",
-      "Fill bowls with rice, shredded lettuce, beans, corn, sweet potato, avocado and salsa."
+      "Heat the oven to 210 °C. Peel the sweet potatoes and cut them into 2 cm cubes.",
+      { "text": "Toss them on a baking tray with the olive oil, cumin, paprika and half the salt. Spread them out in one layer and roast for 25 minutes, turning once, until soft and browned at the edges.", "tip": "Use two trays if they are crowded. Crowded potatoes steam and stay pale instead of browning." },
+      { "text": "Meanwhile cook the rice: rinse it, put it in a pot with {450 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Drain and rinse the beans and drain the sweetcorn. Warm them in a pan with a splash of water and the rest of the salt for 5 minutes.",
+      "Halve the avocados, remove the stones and mash or slice the flesh with the lemon juice. Shred the lettuce.",
+      "Fill bowls with rice, then lettuce, beans and corn, sweet potato, avocado and a spoon of salsa."
     ],
     "tags": ["vegan", "vegetarian"],
     "keepsDays": 3,
@@ -368,10 +370,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Soften the chopped onions in the oil for 8 minutes. Add the garlic, ginger and spices.",
-      "Add the peeled pumpkin in chunks, the tomatoes, drained chickpeas, raisins, salt and 300 ml water.",
-      "Cover and simmer 25 minutes until the pumpkin is tender.",
-      "Pour 300 ml boiling water over the couscous, cover 5 minutes, fluff and serve with the tagine and parsley."
+      "Chop the onions, garlic and ginger. Peel the pumpkin, scoop out the seeds and cut it into 3 cm chunks. Drain and rinse the chickpeas.",
+      "Heat the olive oil in a large pot on medium heat and fry the onions for 8 minutes until soft and golden.",
+      "Add the garlic, ginger, cumin, cinnamon and paprika and stir for 1 minute until fragrant.",
+      { "text": "Add the pumpkin, tomatoes, chickpeas, raisins, salt and {300 ml} water. Bring to a bubble, then cover and simmer on low for 25 minutes, until the pumpkin is tender.", "tip": "Poke a chunk of pumpkin with a knife: it should be soft but still hold its shape." },
+      "Near the end, put the couscous in a bowl with a pinch of salt, pour over {300 ml} boiling water and cover with a plate for 5 minutes.",
+      { "text": "Fluff the couscous with a fork. Serve the tagine over it, scattered with chopped parsley.", "tip": "The tagine keeps 4 days and tastes better the next day. Make the couscous fresh each time." }
     ],
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,
