@@ -40,6 +40,8 @@ export interface PlanSettings {
   newDishEachWeek: boolean;
   energyTarget: number; // kcal per adult per day
   weekdayMaxMinutes: number;
+  /** Prefer one Croatian main (sarma, grah, pašticada...) each weekend, within the budget. */
+  weekendClassic?: boolean;
 }
 
 export const DEFAULT_SETTINGS: PlanSettings = {
@@ -47,6 +49,7 @@ export const DEFAULT_SETTINGS: PlanSettings = {
   newDishEachWeek: true,
   energyTarget: 2200,
   weekdayMaxMinutes: 45,
+  weekendClassic: true,
 };
 
 export interface PlanInput {

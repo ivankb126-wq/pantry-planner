@@ -116,7 +116,8 @@ export function SettingsScreen({ section }: { section?: string }) {
         <Stepper label="Energy per adult a day" value={s.energyTarget} min={1600} max={3200} step={100} onChange={(v) => set({ energyTarget: v })} format={(v) => `${v} kcal`} />
         <Stepper label="Weekday cooking time" value={s.weekdayMaxMinutes} min={15} max={120} step={5} onChange={(v) => set({ weekdayMaxMinutes: v })} format={(v) => `${v} min`} />
         <Toggle label="A new dish every week" hint="One recipe you have never cooked." checked={s.newDishEachWeek} onChange={(v) => set({ newDishEachWeek: v })} />
-        <Toggle label="Cook once, eat twice" hint="Lunch can be the last dinner's leftovers." checked={s.cookOnceEatTwice} onChange={(v) => set({ cookOnceEatTwice: v })} />
+        <Toggle label="Cook once, eat twice" hint="Lunch can be the last dinner's leftovers. A big pot like sarma or grah lasts two lunches." checked={s.cookOnceEatTwice} onChange={(v) => set({ cookOnceEatTwice: v })} />
+        <Toggle label="Croatian classic at weekends" hint="Sarma, grah, pašticada and more, when the budget allows." checked={s.weekendClassic} onChange={(v) => set({ weekendClassic: v })} />
       </Group>
 
       <BackupGroup />

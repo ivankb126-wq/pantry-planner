@@ -69,9 +69,12 @@ slow connection). App icons are drawn by `npm run icons`
 
 [src/planner/](src/planner) plans a week from the recipes, one store's prices
 and your settings. It buys whole packages (or loose produce by weight), uses
-the pantry first, lets lunch be yesterday's dinner, keeps to the budget and a
-healthy-eating check, avoids repeats, and prefers liked dishes, sale items
-and at least one new dish. Items a store does not list get a
+the pantry first, lets lunch be yesterday's dinner (a big pot such as sarma
+or grah feeds two lunches), keeps to the budget and a healthy-eating check,
+avoids repeats, and prefers liked dishes, sale items and at least one new
+dish. Long dishes get a nudge at weekends, and with "Croatian classic at
+weekends" on each plan aims for one Croatian main, new ones first, as long as
+the budget allows. Items a store does not list get a
 typical price from `data/reference-prices.json`, marked as an estimate.
 Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 

@@ -28,6 +28,7 @@ export interface Settings {
   weekdayMaxMinutes: number;
   newDishEachWeek: boolean;
   cookOnceEatTwice: boolean;
+  weekendClassic: boolean;
 }
 
 export interface SavedPlan {
@@ -103,6 +104,7 @@ export const DEFAULT_APP_SETTINGS: Settings = {
   weekdayMaxMinutes: 45,
   newDishEachWeek: true,
   cookOnceEatTwice: true,
+  weekendClassic: true,
 };
 
 export function emptyData(): AppData {
@@ -127,7 +129,7 @@ export function emptyData(): AppData {
 
 /** The settings that change what a plan looks like. */
 export function settingsKey(s: Settings): string {
-  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice]);
+  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice, ...(s.weekendClassic ? [] : ['no-weekend-classic'])]);
 }
 
 // ------------------------------------------------------------------ store

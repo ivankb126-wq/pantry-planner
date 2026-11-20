@@ -38,6 +38,7 @@ export function planInput(d: AppData, prices: PriceData, seed: number, startDate
     settings: {
       cookOnceEatTwice: s.cookOnceEatTwice,
       newDishEachWeek: s.newDishEachWeek,
+      weekendClassic: s.weekendClassic,
       energyTarget: s.energyTarget,
       weekdayMaxMinutes: s.weekdayMaxMinutes,
     },

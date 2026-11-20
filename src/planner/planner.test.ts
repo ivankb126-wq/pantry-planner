@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import content from '../generated/content.json';
 import type { IngredientInfo } from '../lib/nutrition';
 import { buildContext, evaluate } from './evaluate';
-import { generatePlan, swapMeal } from './planner';
+import { generatePlan, scorePlan, swapMeal } from './planner';
 import { cheapestPurchase } from './pricing';
 import { DEFAULT_SETTINGS, type Meal, type Offer, type PlanInput, type PlannerRecipe } from './types';
 
@@ -169,14 +169,47 @@ describe('ingredient reuse', () => {
     const leftovers = on.meals.filter((m) => m.source === 'leftover');
     for (const m of leftovers) {
       const src = on.meals[m.from!];
+      const r = RECIPES.find((x) => x.id === src.recipeId)!;
+      const bigPot = r.keepsDays >= 3 && r.servings >= 6;
       expect(m.slot).toBe('lunch');
       expect(src.slot).toBe('dinner');
-      expect(src.day).toBe(m.day - 1);
+      expect(bigPot ? [m.day - 1, m.day - 2] : [m.day - 1]).toContain(src.day);
       expect(src.recipeId).toBe(m.recipeId);
+      // A big pot feeds at most two lunches, anything else one.
+      expect(on.meals.filter((x) => x.source === 'leftover' && x.from === m.from).length).toBeLessThanOrEqual(bigPot ? 2 : 1);
     }
     expect(leftovers.length).toBeGreaterThan(0);
     const off = generatePlan(baseInput({ meals: ['lunch', 'dinner'], seed: 3, settings: { ...DEFAULT_SETTINGS, cookOnceEatTwice: false } }));
     expect(off.meals.some((m) => m.source === 'leftover')).toBe(false);
+  });
+
+  it('lets a big pot of sarma feed the next two lunches', () => {
+    const input = baseInput({ meals: ['lunch', 'dinner'] });
+    const pot = (id: string): Meal[] => [
+      { day: 4, slot: 'dinner', recipeId: id, source: 'cook' },
+      { day: 5, slot: 'lunch', recipeId: id, source: 'leftover', from: 0 },
+      { day: 6, slot: 'lunch', recipeId: id, source: 'leftover', from: 0 },
+    ];
+    expect(scorePlan(input, pot('sarma')).meals.filter((m) => m.source === 'leftover')).toHaveLength(2);
+    // An ordinary dinner only stretches to tomorrow's lunch, not the day after.
+    const curry: Meal[] = [
+      { day: 4, slot: 'dinner', recipeId: 'thai-green-curry', source: 'cook' },
+      { day: 6, slot: 'lunch', recipeId: 'thai-green-curry', source: 'leftover', from: 0 },
+    ];
+    expect(scorePlan(input, curry).meals.filter((m) => m.source === 'leftover')).toHaveLength(0);
+  });
+
+  it('aims for a Croatian classic each week, a different one per seed, new ones first', () => {
+    const picks = new Set<string>();
+    for (let seed = 1; seed <= 20; seed++) {
+      const c = buildContext(baseInput({ seed })).classic;
+      expect(RECIPES.find((r) => r.id === c)!.cuisine).toMatch(/^croatian/);
+      picks.add(c!);
+    }
+    expect(picks.size).toBeGreaterThan(5);
+    const tried = RECIPES.filter((r) => r.cuisine.startsWith('croatian') && r.id !== 'sarma').map((r) => r.id);
+    expect(buildContext(baseInput({ history: tried })).classic).toBe('sarma');
+    expect(buildContext(baseInput({ settings: { ...DEFAULT_SETTINGS, weekendClassic: false } })).classic).toBeNull();
   });
 });
 

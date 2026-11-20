@@ -1,7 +1,7 @@
 // Scores a plan. Lower is better. The score is in euros plus penalties, so
 // a 1 EUR saving and a 1 point nutrition improvement weigh about the same.
 
-import { type IngredientInfo, type ServingFacts, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
+import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
 import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe, ShoppingLine, Slot } from './types';
 
@@ -28,6 +28,8 @@ export interface Context {
   share: number; // total meal share planned per day
   history: Set<string>;
   historyCuisines: Set<string>;
+  /** This plan's "Croatian classic of the week", if that setting is on. */
+  classic: string | null;
   liked: Set<string>;
   hidden: Set<string>;
   purchaseCache: Map<string, Purchase>;
@@ -43,6 +45,32 @@ function isWeekday(iso: string): boolean {
   const [y, m, d] = iso.split('-').map(Number);
   const wd = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
   return wd >= 1 && wd <= 5;
+}
+
+/**
+ * One Croatian main to aim for this week. Dishes not cooked before come
+ * first, so the classics take turns; the seed picks among them, so
+ * "Regenerate" offers another one.
+ */
+function pickClassic(input: PlanInput, offers: Map<string, Offer[]>, hidden: Set<string>, history: Set<string>): string | null {
+  const dislikes = new Set(input.dislikes);
+  const ok = input.recipes.filter(
+    (r) =>
+      r.cuisine.startsWith('croatian') &&
+      (r.mealTypes.includes('lunch') || r.mealTypes.includes('dinner')) &&
+      !hidden.has(r.id) &&
+      dietAllows(input.diet, r.facts.diet) &&
+      r.ingredients.every((ri) => ri.optional || (!dislikes.has(ri.id) && (offers.has(ri.id) || input.ingredients[ri.id]?.category === 'spices'))),
+  );
+  const fresh = ok.filter((r) => !history.has(r.id));
+  const list = (fresh.length ? fresh : ok).map((r) => r.id).sort();
+  if (!list.length) return null;
+  // Mix the seed well, so nearby seeds pick different dishes.
+  let x = input.seed ^ 0x9e3779b9;
+  x = Math.imul(x ^ (x >>> 16), 0x85ebca6b);
+  x = Math.imul(x ^ (x >>> 13), 0xc2b2ae35);
+  x ^= x >>> 16;
+  return list[(x >>> 0) % list.length];
 }
 
 export function buildContext(input: PlanInput): Context {
@@ -73,7 +101,9 @@ export function buildContext(input: PlanInput): Context {
   const hidden = new Set(
     input.ratings.filter((r) => !r.up && (!r.until || r.until >= today)).map((r) => r.recipeId),
   );
+  const history = new Set(input.history);
   return {
+    classic: input.settings.weekendClassic ? pickClassic(input, offers, hidden, history) : null,
     input,
     portions,
     recipes,
@@ -84,7 +114,7 @@ export function buildContext(input: PlanInput): Context {
     dates,
     weekday: dates.map(isWeekday),
     share: input.meals.reduce((s, m) => s + MEAL_SHARE[m], 0),
-    history: new Set(input.history),
+    history,
     historyCuisines: new Set(input.history.map((id) => recipes.get(id)?.cuisine).filter((c): c is string => !!c)),
     liked: new Set(input.ratings.filter((r) => r.up).map((r) => r.recipeId)),
     hidden,
@@ -313,6 +343,23 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   }
   b.reuse = -reuse;
   b.waste = waste * 0.6;
+
+  // Weekends are the only time for long dishes (sarma, pašticada, lasagne),
+  // which would otherwise lose to quick dishes that fit any day. Croatian
+  // dishes get a small extra nudge: they are what this app is for.
+  let weekend = 0;
+  let classic = false;
+  meals.forEach((m) => {
+    if (m.source !== 'cook' || (m.slot !== 'lunch' && m.slot !== 'dinner')) return;
+    const r = ctx.recipes.get(m.recipeId)!;
+    if (!ctx.weekday[m.day] && r.facts.totalMinutes > input.settings.weekdayMaxMinutes) weekend += 3;
+    if (r.cuisine.startsWith('croatian')) weekend += 1;
+    if (m.recipeId === ctx.classic) classic = true;
+  });
+  // "A Croatian classic every week": worth spending a little more on, as long
+  // as the plan stays within the budget (the budget penalty is far stronger).
+  if (classic) weekend += 20;
+  b.weekend = -weekend;
 
   // Ratings, sales, new dishes, pantry
   let liked = 0;

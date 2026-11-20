@@ -105,6 +105,12 @@ function canCookOnce(ctx: Context, recipeId: string): boolean {
   return r.tags.includes('cook-once-eat-twice') || r.keepsDays >= 2;
 }
 
+/** A pot meant to be eaten over days: sarma, grah, goulash (serves 6 or more and keeps 3 days). */
+function isBigPot(ctx: Context, recipeId: string): boolean {
+  const r = ctx.recipes.get(recipeId)!;
+  return r.keepsDays >= 3 && r.servings >= 6;
+}
+
 /** Can meal i eat leftovers from meal j? */
 function leftoverAllowed(ctx: Context, meals: Meal[], i: number, j: number): boolean {
   const a = meals[i];
@@ -112,12 +118,16 @@ function leftoverAllowed(ctx: Context, meals: Meal[], i: number, j: number): boo
   if (!b || b.source !== 'cook' || b.day >= a.day) return false;
   const r = ctx.recipes.get(b.recipeId)!;
   if (a.slot === 'lunch') {
+    // A big pot (a stew that keeps 3 days or more) feeds the next two lunches;
+    // anything else that keeps feeds tomorrow's lunch.
+    const bigPot = isBigPot(ctx, b.recipeId);
+    const others = meals.filter((m, k) => k !== i && m.source === 'leftover' && m.from === j).length;
     return (
       ctx.input.settings.cookOnceEatTwice &&
       b.slot === 'dinner' &&
-      b.day === a.day - 1 &&
+      (b.day === a.day - 1 || (bigPot && b.day === a.day - 2)) &&
       canCookOnce(ctx, b.recipeId) &&
-      !meals.some((m, k) => k !== i && m.source === 'leftover' && m.from === j)
+      others < (bigPot ? 2 : 1)
     );
   }
   if (a.slot === b.slot && (a.slot === 'snack' || a.slot === 'dessert' || a.slot === 'breakfast')) {

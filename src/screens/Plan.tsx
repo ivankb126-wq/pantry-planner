@@ -376,7 +376,13 @@ function batchNote(plan: SavedPlan, i: number, result: PlanResult): string | nul
   const later = plan.meals.map((m, k) => ({ m, k })).filter(({ m }) => m.source === 'leftover' && m.from === i);
   if (!later.length) return null;
   const last = later.reduce((a, b) => (b.m.day > a.m.day ? b : a));
-  if (plan.meals[i].slot === 'dinner') return ' · also lunch tomorrow';
+  if (plan.meals[i].slot === 'dinner') {
+    // A big pot can feed two lunches: "also lunch tomorrow and Thursday".
+    const days = later
+      .sort((a, b) => a.m.day - b.m.day)
+      .map(({ m, k }) => (m.day === plan.meals[i].day + 1 ? 'tomorrow' : dayLong(result.views[k].date)));
+    return ` · also lunch ${days.join(' and ')}`;
+  }
   return ` · lasts until ${dayLong(result.views[last.k].date)}`;
 }
 
