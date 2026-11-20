@@ -328,7 +328,12 @@
       { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "kefir", "quantity": 300, "unit": "g" },
       { "id": "honey", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Rinse the buckwheat and simmer in 300 ml water for 12 minutes until soft.", "Add the diced apple and cinnamon for the last 3 minutes.", "Serve with kefir and a little honey."],
+    "steps": [
+      { "text": "Rinse the buckwheat in a sieve. Put it in a small pot with {300 ml} water and a pinch of salt and bring to the boil.", "tip": "Toasted buckwheat (dark brown) tastes nuttier; raw (pale green) is milder. Both work." },
+      { "text": "Turn the heat to low, cover and simmer for 12 minutes until the grains are soft and the water is gone.", "tip": "If the water is gone before it is soft, add a splash more." },
+      "Meanwhile core and dice the apple. Stir it in with the cinnamon for the last few minutes.",
+      "Spoon into bowls and pour over the kefir. Drizzle with a little honey."
+    ],
     "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
   },
   {
@@ -400,7 +405,13 @@
       { "id": "spinach", "quantity": 60, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
       { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Fry the onion and pepper in the oil for 4 minutes.", "Crumble in the tofu, add turmeric and salt and fry 4 minutes. Stir in the spinach.", "Serve on toast."],
+    "steps": [
+      { "text": "Drain the tofu and pat it dry with kitchen paper. Chop the onion and pepper.", "tip": "Firm tofu works best. The drier it is, the better it browns." },
+      "Heat the olive oil in a frying pan on medium heat and fry the onion and pepper for 4 minutes until soft.",
+      { "text": "Crumble the tofu into the pan with your fingers into egg-sized pieces and smaller. Add the turmeric and salt and fry for 4 minutes, stirring now and then, until golden in places.", "tip": "Turmeric gives the yellow egg colour. A pinch of black pepper helps it taste more savoury." },
+      "Stir in the spinach until it wilts. Meanwhile toast the bread.",
+      "Pile the scramble onto the toast and serve straight away."
+    ],
     "tags": ["vegan", "vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍳"
   },
   {
@@ -431,7 +442,11 @@
       { "id": "yogurt", "quantity": 350, "unit": "g" }, { "id": "muesli", "quantity": 80, "unit": "g" },
       { "id": "mandarin", "quantity": 2, "unit": "piece" }, { "id": "frozen-berries", "quantity": 80, "unit": "g" }
     ],
-    "steps": ["Layer yogurt, muesli and fruit in two glasses.", "Eat straight away or keep the muesli separate until morning so it stays crunchy."],
+    "steps": [
+      "Peel the mandarins and separate them into segments. Thaw the berries a little, or use them half frozen.",
+      { "text": "In two glasses, layer a spoon of yogurt, then muesli, then fruit, and repeat until everything is used, finishing with fruit on top.", "tip": "Glasses show off the layers, but any bowl works." },
+      { "text": "Eat straight away.", "tip": "For the next morning, layer only the yogurt and fruit and keep the muesli in a separate box so it stays crunchy." }
+    ],
     "tags": ["vegetarian", "no-cook", "make-ahead", "quick"], "keepsDays": 1, "equipment": ["2 glasses"], "illustration": "🍊"
   },
   {
@@ -481,7 +496,12 @@
       { "id": "smoked-salmon", "quantity": 100, "unit": "g" }, { "id": "cucumber", "quantity": 0.3, "unit": "piece" },
       { "id": "lemon", "quantity": 0.25, "unit": "piece" }, { "id": "dill", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Spread the bread with cream cheese.", "Top with salmon, thin cucumber slices, dill and a squeeze of lemon."],
+    "steps": [
+      "Toast the rye bread lightly if you like. Slice the cucumber very thinly.",
+      "Spread the bread with the cream cheese, right to the edges.",
+      { "text": "Lay the salmon on top in loose folds, then add the cucumber slices.", "tip": "Folding the salmon loosely makes it look generous and is easier to bite." },
+      "Sprinkle with dill and finish with a squeeze of lemon and a little black pepper."
+    ],
     "tags": ["quick", "no-cook", "high-protein"], "keepsDays": 0, "equipment": ["knife"], "illustration": "🐟"
   },
   {

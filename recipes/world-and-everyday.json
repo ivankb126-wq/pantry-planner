@@ -27,10 +27,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Fry the chopped onions and peppers in the oil for 8 minutes. Add the beef and brown it.",
-      "Stir in the garlic, spices and tomato paste for 1 minute.",
-      "Add the tomatoes, drained beans, salt and 200 ml water. Simmer 35 minutes until thick.",
-      "Serve with rice and a spoon of sour cream."
+      "Chop the onions, peppers and garlic. Drain and rinse the beans.",
+      "Heat the oil in a large pot on medium heat and fry the onions and peppers for 8 minutes until soft.",
+      { "text": "Turn the heat up, add the beef and cook for 6 minutes, breaking it up, until browned.", "tip": "Let it sit for a minute at a time so it browns rather than steams." },
+      "Stir in the garlic, cumin, paprika, chili flakes and tomato paste for 1 minute.",
+      { "text": "Add the tomatoes, beans, salt and {200 ml} water. Simmer for 35 minutes, stirring now and then, until thick.", "tip": "Taste and add more chili if you like it hotter. Chili keeps 4 days and freezes well." },
+      { "text": "Meanwhile cook the rice: rinse it, put it in a pot with {700 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Serve the chili with the rice and a spoon of sour cream."
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "high-protein", "one-pot"],
     "keepsDays": 4,
@@ -218,10 +221,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Blitz the drained chickpeas, onion, garlic, parsley, spices, flour and 1 tsp salt into a rough paste.",
-      "Shape into 20 small patties, brush with 2 tbsp oil and bake 25 minutes, turning once.",
-      "Pour 300 ml boiling water over the couscous with the rest of the salt and oil, cover for 5 minutes and fluff up.",
-      "Mix the yogurt, tahini and half the lemon juice. Serve the falafel on couscous with diced tomato and cucumber and the sauce."
+      "Heat the oven to 200 °C and line a baking tray with baking paper. Drain the chickpeas and dry them well on a towel.",
+      { "text": "Blend the chickpeas, onion, garlic, parsley, cumin, coriander, flour and {1 tsp} of the salt into a rough paste.", "tip": "Pulse rather than blend: it should look like coarse sand that holds together, not hummus." },
+      { "text": "Shape into small patties with wet hands, lay them on the tray and brush with {2 tbsp} of the olive oil. Bake for 25 minutes, turning once halfway.", "tip": "They are done when golden and crisp on both sides." },
+      "Meanwhile put the couscous in a bowl with the rest of the salt and oil, pour over {300 ml} boiling water, cover and leave for 5 minutes. Fluff with a fork.",
+      "Mix the yogurt, tahini and half the lemon juice with a spoon of water until smooth. Dice the tomatoes and cucumber.",
+      { "text": "Serve the falafel on the couscous with the tomato and cucumber and the tahini yogurt, and the rest of the lemon in wedges.", "tip": "Leftover falafel keep 3 days. Crisp them up in the oven." }
     ],
     "tags": ["vegetarian", "freezer-friendly"],
     "keepsDays": 3,
@@ -332,10 +337,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Pour 400 ml boiling water over the bulgur, cover and leave 15 minutes. Drain if needed.",
-      "Mix the beef with the grated onion, half the garlic, the spices and 1 tsp salt. Shape into 12 long kofta.",
-      "Grill or pan-fry the kofta for 10 to 12 minutes, turning.",
-      "Mix the bulgur with chopped parsley, tomato, cucumber, lemon juice, oil and the rest of the salt. Serve with the kofta and yogurt mixed with the rest of the garlic."
+      { "text": "Put the bulgur in a bowl, pour over {400 ml} boiling water, cover and leave for 15 minutes. Drain off any water left.", "tip": "Fine bulgur is quicker. Coarse bulgur may need a few minutes more." },
+      { "text": "Grate the onion and squeeze out the juice. Mix it with the beef, half the garlic (crushed), the cumin, coriander, cinnamon and {1 tsp} of the salt.", "tip": "Squeezing the onion keeps the kofta from falling apart." },
+      "With wet hands, shape the mix into {12} long sausages, like thick fingers.",
+      { "text": "Heat a grill pan or frying pan on medium-high with a little of the oil. Cook the kofta for 10 to 12 minutes, turning every few minutes, until browned all over and cooked through.", "tip": "Do not turn them too early, or they stick and break. Cut one to check: no pink inside." },
+      "Meanwhile chop the parsley finely and dice the tomatoes and cucumber. Mix them with the bulgur, the lemon juice, the rest of the oil and the rest of the salt.",
+      "Mix the yogurt with the rest of the garlic. Serve the kofta with the tabbouleh and garlic yogurt."
     ],
     "tags": ["high-protein"],
     "keepsDays": 3,
@@ -519,10 +526,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 210 °C. Toss the wings with paprika, garlic powder, 1 tbsp oil and half the salt and spread on a tray.",
-      "Toss potato wedges with the rest of the oil and salt on a second tray. Roast both for 40 minutes, turning once.",
-      "Mix the honey and soy, brush over the wings and roast 5 minutes more.",
-      "Shred the cabbage, grate the carrot and mix with the yogurt and mayonnaise."
+      "Heat the oven to 210 °C and line two baking trays with baking paper. Pat the wings dry with kitchen paper.",
+      { "text": "Toss the wings with the paprika, garlic powder, {1 tbsp} of the oil and half the salt and spread them on one tray.", "tip": "Dry wings crisp up. Wet wings steam." },
+      "Cut the potatoes into wedges and toss them with the rest of the oil and salt on the second tray.",
+      { "text": "Roast both trays for 40 minutes, turning everything once halfway, until golden and crisp.", "tip": "Swap the trays between shelves halfway so both brown evenly." },
+      "Meanwhile shred the cabbage finely and grate the carrots. Mix with the yogurt, mayonnaise and a pinch of salt.",
+      { "text": "Mix the honey and soy sauce, brush it over the wings and roast for 5 minutes more until sticky.", "tip": "Watch them: honey burns quickly." },
+      "Serve the wings with the wedges and coleslaw."
     ],
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
@@ -555,10 +565,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 220 °C. Cut the sweet potatoes into fries, toss with 2 tbsp oil and half the salt and bake 25 to 30 minutes.",
-      "Mix the turkey, breadcrumbs, egg, garlic, herbs and the rest of the salt and shape into 4 burgers.",
-      "Fry the burgers in the rest of the oil for 5 to 6 minutes a side until cooked through.",
-      "Serve in the buns with lettuce, tomato and ketchup, with the fries."
+      "Heat the oven to 220 °C and line a baking tray with baking paper.",
+      { "text": "Cut the sweet potatoes into fries about 1 cm thick. Toss them with {2 tbsp} of the oil and half the salt, spread them out in one layer and bake for 25 to 30 minutes, turning once.", "tip": "Give them space on the tray, or they go soft instead of crisp." },
+      { "text": "Mix the turkey, breadcrumbs, egg, crushed garlic, herbs and the rest of the salt. Shape into {4} burgers a little wider than the rolls.", "tip": "Press a dip into the middle of each with your thumb so they stay flat as they cook." },
+      { "text": "Heat the rest of the oil in a frying pan on medium. Fry the burgers for 5 to 6 minutes on each side until cooked through.", "tip": "Turkey must be cooked all the way: cut one open to check there is no pink." },
+      "Cut the rolls open and toast them in the pan for a moment. Slice the tomatoes.",
+      "Fill the rolls with lettuce, tomato, the burgers and ketchup, and serve with the fries."
     ],
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,

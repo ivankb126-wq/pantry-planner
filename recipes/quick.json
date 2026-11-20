@@ -55,10 +55,11 @@
       { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }
     ],
     "steps": [
-      "Heat the oil in a wok until very hot. Stir-fry the diced carrot and garlic for 2 minutes, then the peas.",
-      "Push everything aside, scramble the beaten eggs in the space, then mix in.",
-      "Add the cold rice and stir-fry 4 minutes, pressing it against the pan.",
-      "Season with soy sauce and sesame oil and toss with the spring onion."
+      { "text": "Cook the rice the day before and keep it in the fridge. Dice the carrots, chop the garlic, slice the spring onion and beat the eggs.", "tip": "Cold rice fries into separate grains. Freshly cooked rice turns mushy and sticky." },
+      "Heat the sunflower oil in a wok or large frying pan on high until very hot. Stir-fry the carrot and garlic for 2 minutes, then add the peas for 1 minute.",
+      "Push everything to one side, pour the eggs into the space and scramble them until just set, then mix everything together.",
+      { "text": "Add the cold rice, breaking up any lumps. Stir-fry for 4 minutes, pressing it against the hot pan, until hot and a little crisp.", "tip": "Keep the heat high and spread the rice out so it fries rather than steams." },
+      "Add the soy sauce and sesame oil, toss well and stir in the spring onion. Serve straight away."
     ],
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 2,
@@ -234,10 +235,13 @@
       { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }
     ],
     "steps": [
-      "Soak or cook the noodles as the packet says. Mix the soy, ketchup, sugar and lime juice.",
-      "Fry the cubed tofu in the oil until golden, push aside and scramble the eggs.",
-      "Add the shredded cabbage and carrot for 2 minutes, then the noodles and sauce. Toss until coated.",
-      "Serve with chopped peanuts and spring onion."
+      { "text": "Soak or cook the noodles as the packet says, then drain and rinse with cold water.", "tip": "Take them out while still a little firm: they finish cooking in the pan." },
+      "Mix the soy sauce, ketchup, sugar and lemon juice in a cup. Cut the tofu into cubes, shred the cabbage, cut the carrot into thin strips, slice the spring onion and chop the peanuts.",
+      { "text": "Heat the oil in a wok or large frying pan on medium-high. Fry the tofu for 5 minutes, turning, until golden.", "tip": "Pat the tofu dry first so it browns and does not stick." },
+      "Push the tofu to the side, add the beaten eggs and scramble them until just set.",
+      "Add the cabbage and carrot and stir-fry for 2 minutes.",
+      { "text": "Add the noodles and the sauce and toss for 2 minutes until everything is hot and coated.", "tip": "Use tongs or two spoons to lift and toss so the noodles do not break." },
+      "Serve topped with the peanuts and spring onion, with extra lemon to squeeze over."
     ],
     "tags": ["quick", "vegetarian"],
     "keepsDays": 1,
@@ -269,10 +273,11 @@
       { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Simmer 1.5 litres of water with the stock cube, sliced ginger, garlic and soy for 10 minutes. Poach the chicken in it for 10 minutes, then slice.",
-      "Boil the eggs for 6.5 minutes, cool in cold water and peel.",
-      "Add the sliced mushrooms and noodles to the broth and cook as the noodle packet says. Stir in the spinach.",
-      "Serve in bowls with the chicken, halved eggs, spring onion and a few drops of sesame oil."
+      "Slice the ginger and garlic. Bring {1500 ml} water to the boil with the stock cube, ginger, garlic and soy sauce, then simmer for 10 minutes.",
+      { "text": "Put the chicken in the broth and poach it on low heat for 10 minutes, until cooked through. Lift it out and slice it.", "tip": "Keep the broth just below a simmer so the chicken stays juicy." },
+      { "text": "Meanwhile boil the eggs in a separate pot for 6.5 minutes, then put them in cold water and peel them.", "tip": "This gives a soft, jammy yolk, like in a ramen shop." },
+      "Slice the mushrooms and spring onion. Add the mushrooms and noodles to the broth and cook as the noodle packet says. Stir in the spinach at the end.",
+      { "text": "Divide the noodles and broth between bowls. Top with the chicken, halved eggs and spring onion and a few drops of sesame oil.", "tip": "Taste the broth before serving and add a little more soy sauce if it needs salt." }
     ],
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
@@ -577,10 +582,11 @@
       { "id": "lemon", "quantity": 0.5, "unit": "piece" }
     ],
     "steps": [
-      "Slice the halloumi and dry-fry 2 minutes a side until golden.",
-      "Warm the flatbreads.",
-      "Spread with hummus and fill with lettuce, sliced tomato, peppers and halloumi.",
-      "Squeeze over a little lemon and roll up."
+      "Slice the halloumi about 1 cm thick and pat it dry. Slice the peppers and tomatoes, shred the lettuce.",
+      { "text": "Heat a dry non-stick frying pan on medium-high. Fry the halloumi for 2 minutes on each side until golden.", "tip": "No oil needed. Leave it alone until it lets go of the pan by itself." },
+      "Warm the flatbreads for a few seconds on each side in the same pan.",
+      "Spread each flatbread with hummus and fill with lettuce, tomato, peppers and the hot halloumi.",
+      { "text": "Squeeze over a little lemon and roll up.", "tip": "Eat the halloumi while it is warm: it turns rubbery as it cools." }
     ],
     "tags": ["quick", "vegetarian", "high-protein"],
     "keepsDays": 0,

@@ -25,10 +25,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Finely chop the onion, carrot and celeriac and soften them in the oil for 10 minutes.",
-      "Add the meat and garlic and cook until browned, breaking it up with a spoon.",
-      "Pour in the wine and let it bubble for 2 minutes, then add the passata, oregano, salt and 150 ml water. Simmer gently for 45 minutes.",
-      "Cook the spaghetti, toss with the sauce and serve with grated parmesan."
+      { "text": "Chop the onion, carrot and celeriac very finely, and chop the garlic.", "tip": "The finer the vegetables, the more they melt into the sauce." },
+      "Heat the olive oil in a large pot on medium heat and soften the vegetables for 10 minutes, stirring now and then.",
+      { "text": "Turn the heat up, add the meat and garlic and cook for about 8 minutes, breaking up the meat with a spoon, until browned.", "tip": "Let it sit for a minute at a time so it browns rather than steams." },
+      "Pour in the wine and let it bubble for 2 minutes. Add the passata, oregano, salt and {150 ml} water.",
+      { "text": "Simmer gently with the lid half on for 45 minutes, stirring now and then.", "tip": "Longer is better: the sauce gets richer. Add a splash of water if it gets too thick." },
+      { "text": "Near the end, cook the spaghetti in salted water until al dente. Keep a mug of the pasta water, drain and toss the spaghetti with the sauce.", "tip": "A splash of pasta water helps the sauce cling. The sauce keeps 4 days and freezes well." },
+      "Serve with grated parmesan."
     ],
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice"],
     "keepsDays": 4,
@@ -63,10 +66,13 @@
       { "id": "salt", "quantity": 2, "unit": "tsp" }
     ],
     "steps": [
-      "Make the meat sauce: soften the chopped onion and carrot in the oil, add the meat and garlic, then the passata and 1 tsp salt. Simmer 30 minutes.",
-      "Make the white sauce: melt the butter, stir in the flour for 1 minute, then whisk in the milk slowly. Simmer until thick and season with nutmeg and the rest of the salt.",
-      "Heat the oven to 190 °C. Layer meat sauce, pasta sheets and white sauce three times in a baking dish, finishing with white sauce.",
-      "Top with torn mozzarella and parmesan and bake for 40 minutes. Rest 10 minutes before cutting."
+      "Chop the onion, carrot and garlic finely. Heat the olive oil in a large pan on medium heat and soften the onion and carrot for 8 minutes.",
+      "Turn the heat up, add the meat and garlic and brown for about 8 minutes, breaking it up. Add the passata and {1 tsp} of the salt and simmer for 30 minutes.",
+      { "text": "Make the white sauce: melt the butter in a pot on medium heat, add the flour and stir for 1 minute.", "tip": "This paste is a roux. It should bubble but not brown." },
+      { "text": "Take the pot off the heat and whisk in the milk a little at a time. Put it back on the heat and simmer, whisking, for 5 minutes until thick. Season with the nutmeg and the rest of the salt.", "tip": "Adding the milk slowly while whisking keeps it smooth. It should coat the back of a spoon." },
+      "Heat the oven to 190 °C. Spread a little meat sauce in a baking dish, then a layer of pasta sheets, then meat sauce and white sauce. Repeat three times, finishing with white sauce.",
+      { "text": "Tear the mozzarella over the top and sprinkle with grated parmesan. Bake for 40 minutes until golden and bubbling.", "tip": "If the top browns too fast, cover it with foil." },
+      { "text": "Let it rest for 10 minutes before cutting, so the layers hold.", "tip": "Lasagne keeps 4 days and freezes well in portions." }
     ],
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice", "comfort"],
     "keepsDays": 4,
@@ -136,10 +142,14 @@
       { "id": "parsley", "quantity": 10, "unit": "g" }
     ],
     "steps": [
-      "Soak the porcini in 200 ml hot water for 10 minutes. Make 1 litre of stock with the cube and add the soaking water.",
-      "Fry the sliced mushrooms in the oil on high heat until golden. Add the chopped porcini and garlic, then set aside half.",
-      "Soften the onion in the pan, add the rice and stir 2 minutes. Add the wine, then the stock a ladle at a time for 18 minutes, stirring.",
-      "Stir in the reserved mushrooms, butter and parmesan. Rest 2 minutes, scatter with parsley and serve."
+      "Soak the porcini in {200 ml} hot water for 10 minutes. Lift them out, squeeze them and chop them. Keep the soaking water.",
+      { "text": "Crumble the stock cube into {1000 ml} hot water, pour in the soaking water (leave the last spoonful with any grit behind) and keep it warm on low heat.", "tip": "Hot stock keeps the rice cooking evenly." },
+      "Slice the mushrooms. Chop the onion, garlic and parsley.",
+      { "text": "Heat the olive oil in a wide pan on high and fry the mushrooms for 6 minutes until golden. Add the porcini and garlic for a few seconds, then lift half the mushrooms out onto a plate.", "tip": "Do not crowd the pan, or they stew instead of browning." },
+      "Turn the heat to medium, add the onion and soften it for 4 minutes. Add the rice and stir for 2 minutes until the grains look a little see-through at the edges.",
+      "Pour in the wine and stir until it has almost all bubbled away.",
+      { "text": "Add a ladle of hot stock and stir until it is almost absorbed, then add the next. Keep going for 18 minutes, stirring often.", "tip": "Taste a grain: soft with a tiny bite in the middle. You may not need all the stock." },
+      { "text": "Take the pan off the heat. Stir in the mushrooms you set aside, the butter and the grated parmesan, cover and leave for 2 minutes. Scatter with parsley and serve.", "tip": "Risotto should flow slowly on the plate. Add a splash of stock if it is too stiff." }
     ],
     "tags": ["vegetarian"],
     "keepsDays": 1,
@@ -203,10 +213,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Season the chicken and brown it skin side down in the oil for 8 minutes. Turn and brown the other side, then set aside.",
-      "Soften the sliced onion and peppers in the same pan for 8 minutes. Add the garlic and rosemary.",
-      "Add the wine, tomatoes and olives, return the chicken and simmer covered for 35 minutes.",
-      "Cook the polenta as the packet says and serve with the chicken and sauce."
+      "Pat the chicken dry and season with half the salt. Slice the onion and peppers, chop the garlic.",
+      { "text": "Heat the olive oil in a large pan with a lid on medium-high. Brown the chicken skin side down for 8 minutes without moving it, then turn and brown the other side for 3 minutes. Set it aside.", "tip": "Golden, crisp skin gives the sauce its flavour. Leave it alone so it does not stick." },
+      "Pour off some of the fat, leaving about a spoonful. Soften the onion and peppers in the pan for 8 minutes, then add the garlic and rosemary for a few seconds.",
+      "Pour in the wine and let it bubble for 1 minute, scraping up the brown bits. Add the tomatoes, olives and the rest of the salt.",
+      { "text": "Put the chicken back, skin side up, cover and simmer on low for 35 minutes.", "tip": "It is done when the meat pulls away from the bone easily." },
+      { "text": "Near the end, cook the polenta in salted water as the packet says. Serve with the chicken and plenty of sauce.", "tip": "Cacciatore keeps 3 days and tastes even better reheated." }
     ],
     "tags": ["high-protein", "freezer-friendly"],
     "keepsDays": 3,
@@ -271,10 +283,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Cook the pasta 2 minutes less than the packet says.",
-      "Warm the garlic in the oil, add the passata and salt and simmer 10 minutes. Wilt the spinach in the sauce.",
-      "Mix the pasta, sauce, spoonfuls of ricotta and nutmeg in a baking dish. Top with mozzarella and parmesan.",
-      "Bake for 20 minutes until bubbling."
+      "Heat the oven to 200 °C. Bring a large pot of salted water to the boil and chop the garlic. Thaw frozen spinach and squeeze out the water.",
+      { "text": "Cook the pasta 2 minutes less than the packet says, then drain.", "tip": "It finishes cooking in the oven. Fully cooked pasta turns soft and mushy in a bake." },
+      "Meanwhile warm the garlic in the olive oil in a large pan for 1 minute, add the passata and salt and simmer for 10 minutes. Stir in the spinach until it wilts or warms through.",
+      "Mix the pasta with the sauce and nutmeg in a baking dish. Dot spoonfuls of ricotta all over and push them in a little.",
+      "Tear the mozzarella over the top and sprinkle with the parmesan.",
+      { "text": "Bake for 20 minutes until bubbling and golden in spots.", "tip": "It keeps 3 days. Add a splash of water before reheating." }
     ],
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
@@ -306,10 +320,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Mix the meat, breadcrumbs, egg, half the parmesan, parsley, half the garlic and 1 tsp salt. Roll into 20 small balls.",
-      "Brown the meatballs in the oil, turning them carefully.",
-      "Add the rest of the garlic, the passata, basil and 100 ml water. Cover and simmer 20 minutes.",
-      "Serve over spaghetti with the rest of the parmesan."
+      "Chop the parsley and garlic finely. Grate the parmesan.",
+      { "text": "In a bowl mix the meat, breadcrumbs, egg, half the parmesan, the parsley, half the garlic and {1 tsp} of the salt with your hands until even. Roll into small balls, about the size of a walnut.", "tip": "Wet hands stop the mix sticking. Do not squeeze hard: gently rolled meatballs stay tender." },
+      { "text": "Heat the olive oil in a large pan with a lid on medium-high. Brown the meatballs for about 6 minutes, turning them carefully, until golden all over.", "tip": "They do not need to be cooked through yet. They finish cooking in the sauce." },
+      "Add the rest of the garlic for a few seconds, then the passata, basil, the rest of the salt and {100 ml} water. Cover and simmer gently for 20 minutes.",
+      { "text": "Meanwhile cook the spaghetti in salted water until al dente and drain.", "tip": "Shake the pan instead of stirring so the meatballs stay whole." },
+      { "text": "Serve the spaghetti with the meatballs and sauce, and the rest of the parmesan on top.", "tip": "They keep 3 days and freeze well in their sauce." }
     ],
     "tags": ["kid-friendly", "freezer-friendly", "high-protein"],
     "keepsDays": 3,

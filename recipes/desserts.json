@@ -69,7 +69,14 @@
       { "id": "gelatin", "quantity": 8, "unit": "g" }, { "id": "frozen-berries", "quantity": 300, "unit": "g" },
       { "id": "honey", "quantity": 1, "unit": "tbsp" }
     ],
-    "steps": ["Soak the gelatine in cold water for 5 minutes.", "Heat the cream, milk and sugars until steaming, take off the heat and stir in the squeezed gelatine.", "Pour into 6 glasses and chill for 4 hours.", "Simmer the berries with the honey for 5 minutes, cool and spoon over."],
+    "steps": [
+      { "text": "Put the gelatine in a bowl of cold water and leave it to soak for 5 minutes.", "tip": "Leaf gelatine turns soft and floppy. If you have powder, sprinkle it over a few spoons of cold water instead." },
+      { "text": "Heat the cream, milk, sugar and vanilla sugar in a pot until steaming with small bubbles at the edge. Do not let it boil.", "tip": "Boiling can stop the gelatine setting properly." },
+      "Take the pot off the heat. Squeeze the water out of the gelatine and stir it in until it has completely dissolved.",
+      { "text": "Pour into {6} glasses or small bowls, let them cool, then put them in the fridge until set.", "tip": "They need at least 4 hours, or overnight. Set means it wobbles but does not run when you tilt the glass." },
+      "Meanwhile simmer the berries with the honey in a small pan for 5 minutes until saucy. Let it cool.",
+      { "text": "Spoon the berry sauce over the panna cotta just before serving.", "tip": "Keeps 3 days in the fridge, covered." }
+    ],
     "tags": ["make-ahead"], "keepsDays": 3, "equipment": ["saucepan", "6 glasses"], "illustration": "🍮"
   },
   {
@@ -168,7 +175,15 @@
       { "id": "sugar", "quantity": 90, "unit": "g" }, { "id": "ladyfingers", "quantity": 200, "unit": "g" },
       { "id": "cocoa", "quantity": 2, "unit": "tbsp" }
     ],
-    "steps": ["Make 300 ml strong coffee and let it cool.", "Whisk the yolks with the sugar until pale, then beat in the mascarpone. Whisk the whites stiff and fold in.", "Dip the biscuits quickly in the coffee and layer with the cream in a dish, twice.", "Dust with cocoa and chill at least 6 hours."],
+    "steps": [
+      { "text": "Make {300 ml} strong coffee and let it cool completely in a wide, shallow bowl.", "tip": "Hot coffee makes the biscuits fall apart. Espresso or strong filter coffee both work." },
+      { "text": "Separate the eggs, putting the whites in a large, very clean bowl. Whisk the yolks with the sugar for 3 to 4 minutes until pale and thick.", "tip": "The smallest bit of yolk stops the whites whipping up." },
+      "Beat the mascarpone into the yolk mix until smooth.",
+      { "text": "Whisk the whites until stiff, then fold them gently into the mascarpone mix with a spatula until no white streaks remain.", "tip": "Stiff means the whites stay in the bowl when you tip it. Fold, do not stir, to keep the cream light." },
+      { "text": "Dip each biscuit very quickly in the coffee, one second per side, and lay them in a dish to make a single layer. Spread half the cream over them.", "tip": "Dip, do not soak. They keep soaking up coffee from the cream." },
+      "Make a second layer of dipped biscuits and cover with the rest of the cream. Smooth the top.",
+      { "text": "Dust with the cocoa through a sieve, cover and chill overnight.", "tip": "It needs at least 6 hours to set. It contains raw egg, so do not serve it to pregnant women or small children. Keeps 3 days." }
+    ],
     "tags": ["vegetarian", "make-ahead", "no-cook", "festive"], "keepsDays": 3, "equipment": ["dish", "whisk"], "illustration": "☕"
   },
   {
@@ -182,7 +197,14 @@
       { "id": "flour", "quantity": 100, "unit": "g" }, { "id": "cocoa", "quantity": 20, "unit": "g" },
       { "id": "walnuts", "quantity": 60, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 180 °C and line a 20 x 30 cm tin.", "Melt the chocolate and butter together. Whisk in the sugar, then the eggs one by one.", "Fold in the flour, cocoa and chopped walnuts, pour into the tin and bake 22 to 25 minutes. It should still be soft in the middle. Cool before cutting."],
+    "steps": [
+      "Heat the oven to 180 °C and line a 20 x 30 cm tin with baking paper. Chop the walnuts.",
+      "Break the chocolate into a pot, add the butter and melt them together on the lowest heat, stirring. Take off the heat and let it cool for 5 minutes.",
+      "Whisk in the sugar, then the eggs one at a time, whisking well after each until glossy.",
+      { "text": "Sift in the flour and cocoa and fold gently until just mixed. Fold in the walnuts.", "tip": "Stop as soon as there is no dry flour. Too much mixing makes them cakey instead of fudgy." },
+      { "text": "Pour into the tin, spread evenly and bake for 22 to 25 minutes.", "tip": "Take them out while the middle still looks slightly underdone. A skewer should come out with moist crumbs, not clean." },
+      { "text": "Let them cool completely in the tin before cutting into squares.", "tip": "They firm up as they cool. For neat squares, chill them first and wipe the knife between cuts. They keep 5 days in a tin." }
+    ],
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tin"], "illustration": "🍫"
   },
   {
@@ -217,7 +239,14 @@
       { "id": "whipping-cream", "quantity": 200, "unit": "ml" }, { "id": "sugar", "quantity": 80, "unit": "g" },
       { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "frozen-berries", "quantity": 250, "unit": "g" }
     ],
-    "steps": ["Crush the biscuits, mix with the melted butter and press into a 22 cm tin. Chill.", "Blend the cottage cheese smooth, then beat with the cream cheese, sugar and lemon juice.", "Whip the cream and fold it in. Spread over the base and chill at least 6 hours.", "Top with thawed berries before serving."],
+    "steps": [
+      "Melt the butter. Crush the biscuits into fine crumbs in a bag with a rolling pin, or in a food processor.",
+      { "text": "Mix the crumbs with the butter and press firmly into the bottom of a 22 cm tin with a removable base. Put it in the fridge.", "tip": "Press hard with the bottom of a glass so the base holds together when you cut it." },
+      { "text": "Blend the cottage cheese until smooth. Beat it with the cream cheese, sugar and lemon juice.", "tip": "Blending the cottage cheese first is what makes the filling silky instead of lumpy." },
+      "In another bowl whip the cream until it holds soft peaks, then fold it into the cheese mix.",
+      { "text": "Spread the filling over the base, smooth the top, cover and chill overnight.", "tip": "It needs at least 6 hours to set firm enough to cut." },
+      { "text": "Thaw the berries and spoon them over the top just before serving.", "tip": "Run a warm knife around the edge before opening the tin. Keeps 3 days in the fridge." }
+    ],
     "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["springform tin", "blender", "whisk"], "illustration": "🍰"
   },
   {
@@ -250,7 +279,13 @@
       { "id": "pomegranate", "quantity": 0.5, "unit": "piece", "optional": true }, { "id": "greek-yogurt", "quantity": 300, "unit": "g" },
       { "id": "honey", "quantity": 1, "unit": "tbsp" }, { "id": "almonds", "quantity": 30, "unit": "g" }
     ],
-    "steps": ["Peel and slice the fruit into a bowl.", "Mix the yogurt and honey.", "Serve the fruit with the yogurt and chopped almonds."],
+    "steps": [
+      "Peel the mandarins and separate them into segments. Peel the kiwis and slice them.",
+      { "text": "Core the apple and pear and cut them into bite-size pieces. Squeeze a few drops of mandarin juice over them.", "tip": "The juice stops the apple and pear going brown." },
+      { "text": "Take the seeds out of the pomegranate and add them to the fruit.", "tip": "Cut it in half and tap the back hard with a wooden spoon over a bowl: the seeds fall out." },
+      "Mix the yogurt and honey. Chop the almonds.",
+      "Serve the fruit with a spoon of honey yogurt and the almonds on top."
+    ],
     "tags": ["vegetarian", "no-cook", "light", "quick"], "keepsDays": 1, "equipment": ["bowl"], "illustration": "🥝"
   },
   {
@@ -263,7 +298,12 @@
       { "id": "frozen-berries", "quantity": 150, "unit": "g" }, { "id": "dark-chocolate", "quantity": 30, "unit": "g" },
       { "id": "almonds", "quantity": 30, "unit": "g" }
     ],
-    "steps": ["Mix the yogurt and honey and spread 1 cm thick on a lined tray.", "Scatter with berries, chopped chocolate and almonds.", "Freeze 3 hours, then break into pieces. Keep in the freezer."],
+    "steps": [
+      "Line a baking tray that fits in your freezer with baking paper.",
+      "Mix the yogurt and honey and spread it on the paper about 1 cm thick.",
+      "Chop the chocolate and almonds. Scatter them and the frozen berries over the yogurt and press them in lightly.",
+      { "text": "Freeze until completely firm, then break into pieces.", "tip": "It takes about 3 hours. Keep the pieces in a box in the freezer and eat them straight from frozen: they soften quickly." }
+    ],
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly", "no-cook"], "keepsDays": 14, "equipment": ["tray", "baking paper"], "illustration": "🍓"
   },
   {
