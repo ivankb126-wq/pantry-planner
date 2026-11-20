@@ -165,20 +165,25 @@ describe('ingredient reuse', () => {
     expect(a.breakdown.reuse).toBeLessThan(b.breakdown.reuse);
   });
   it('lets lunch be yesterday’s dinner when cook once, eat twice is on', () => {
-    const on = generatePlan(baseInput({ meals: ['lunch', 'dinner'], seed: 3 }));
-    const leftovers = on.meals.filter((m) => m.source === 'leftover');
-    for (const m of leftovers) {
-      const src = on.meals[m.from!];
-      const r = RECIPES.find((x) => x.id === src.recipeId)!;
-      const bigPot = r.keepsDays >= 3 && r.servings >= 6;
-      expect(m.slot).toBe('lunch');
-      expect(src.slot).toBe('dinner');
-      expect(bigPot ? [m.day - 1, m.day - 2] : [m.day - 1]).toContain(src.day);
-      expect(src.recipeId).toBe(m.recipeId);
-      // A big pot feeds at most two lunches, anything else one.
-      expect(on.meals.filter((x) => x.source === 'leftover' && x.from === m.from).length).toBeLessThanOrEqual(bigPot ? 2 : 1);
+    // Whether a given week uses leftovers depends on the seed, so look at a few weeks.
+    let total = 0;
+    for (const seed of [1, 2, 3]) {
+      const on = generatePlan(baseInput({ meals: ['lunch', 'dinner'], seed }));
+      const leftovers = on.meals.filter((m) => m.source === 'leftover');
+      total += leftovers.length;
+      for (const m of leftovers) {
+        const src = on.meals[m.from!];
+        const r = RECIPES.find((x) => x.id === src.recipeId)!;
+        const bigPot = r.keepsDays >= 3 && r.servings >= 6;
+        expect(m.slot).toBe('lunch');
+        expect(src.slot).toBe('dinner');
+        expect(bigPot ? [m.day - 1, m.day - 2] : [m.day - 1]).toContain(src.day);
+        expect(src.recipeId).toBe(m.recipeId);
+        // A big pot feeds at most two lunches, anything else one.
+        expect(on.meals.filter((x) => x.source === 'leftover' && x.from === m.from).length).toBeLessThanOrEqual(bigPot ? 2 : 1);
+      }
     }
-    expect(leftovers.length).toBeGreaterThan(0);
+    expect(total).toBeGreaterThan(0);
     const off = generatePlan(baseInput({ meals: ['lunch', 'dinner'], seed: 3, settings: { ...DEFAULT_SETTINGS, cookOnceEatTwice: false } }));
     expect(off.meals.some((m) => m.source === 'leftover')).toBe(false);
   });
