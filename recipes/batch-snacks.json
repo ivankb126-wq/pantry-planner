@@ -11,7 +11,14 @@
       { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" },
       { "id": "dried-cranberries", "quantity": 60, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 160 °C. Warm the honey and oil together.", "Mix with the oats, chopped nuts, seeds and cinnamon and spread on a lined tray.", "Bake 25 minutes, stirring halfway, until golden. Stir in the cranberries and cool completely before putting in a jar."],
+    "steps": [
+      "Heat the oven to 160 °C and line a large baking tray with baking paper.",
+      "Warm the honey and oil in a small pot on low heat until runny.",
+      "Chop the almonds and walnuts roughly. In a large bowl mix them with the oats, pumpkin seeds, sunflower seeds and cinnamon.",
+      "Pour the honey mix over and stir until everything is evenly coated.",
+      { "text": "Spread it out on the tray in a thin layer and bake for 25 minutes, stirring once halfway, until golden.", "tip": "Watch the edges near the end: they burn first. For big clusters, press it flat and do not stir." },
+      { "text": "Stir in the cranberries and let it cool completely on the tray. It crisps up as it cools.", "tip": "Kept in a closed jar, it stays crunchy for two weeks." }
+    ],
     "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray", "big jar"], "illustration": "🫙"
   },
   {
@@ -64,7 +71,12 @@
       { "id": "honey", "quantity": 60, "unit": "g" }, { "id": "chia", "quantity": 20, "unit": "g" },
       { "id": "chocolate-chips", "quantity": 40, "unit": "g" }
     ],
-    "steps": ["Mix everything in a bowl until it holds together.", "Chill 20 minutes, then roll into 20 balls.", "Keep in a box in the fridge. Two balls make a portion."],
+    "steps": [
+      { "text": "Put the oats, peanut butter, honey, chia and chocolate chips in a bowl and stir well until it holds together.", "tip": "Too dry? Add a little more honey or peanut butter. Too sticky? Add a spoon of oats." },
+      "Put the bowl in the fridge for 20 minutes so the mix firms up.",
+      "Roll it into walnut-size balls with slightly wet hands.",
+      { "text": "Keep them in a closed box in the fridge. Two balls make a portion.", "tip": "They keep a week in the fridge." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "no-cook", "freezer-friendly"], "keepsDays": 7, "equipment": ["bowl"], "illustration": "🥜"
   },
   {
@@ -122,7 +134,13 @@
       { "id": "carrot", "quantity": 3, "unit": "piece" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
       { "id": "bell-pepper", "quantity": 1, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
-    "steps": ["Drain the chickpeas, keeping a little of the liquid.", "Blend with the tahini, lemon juice, garlic, cumin, salt, 2 tbsp oil and 3 to 4 tbsp liquid until very smooth.", "Drizzle with the rest of the oil and serve with vegetable sticks. Keep in a closed box in the fridge."],
+    "steps": [
+      { "text": "Drain the chickpeas over a bowl and keep the liquid. Rinse them.", "tip": "For extra smooth hummus, rub off the skins between your hands. It takes a few minutes but is worth it." },
+      "Put the chickpeas, tahini, lemon juice, garlic, cumin, salt and {2 tbsp} of the olive oil in a food processor or blender.",
+      { "text": "Blend for 2 to 3 minutes, adding {4 tbsp} of the chickpea liquid a spoon at a time, until very smooth and creamy.", "tip": "Scrape down the sides a few times. Blending longer than you think is the secret to creamy hummus." },
+      "Taste and add more lemon or salt. Spoon it into a bowl, make a swirl with the back of the spoon and drizzle with the rest of the oil.",
+      { "text": "Cut the carrots, cucumber and pepper into sticks and serve with the hummus.", "tip": "Keep the hummus in a closed box in the fridge for up to 5 days." }
+    ],
     "tags": ["batch", "vegan", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🥕"
   },
   {
@@ -136,7 +154,13 @@
       { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
       { "id": "crackers", "quantity": 150, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
-    "steps": ["Blend the beetroot, drained chickpeas, tahini, lemon juice, garlic, salt and oil until smooth.", "Taste and add more lemon or salt.", "Serve with crackers. Keeps 5 days in the fridge."],
+    "steps": [
+      { "text": "Drain and rinse the chickpeas. Cut the beetroot into chunks.", "tip": "Beetroot stains, so wear gloves or wash your hands straight away." },
+      "Put the beetroot, chickpeas, tahini, lemon juice, garlic, salt and olive oil in a food processor or blender.",
+      "Blend for 2 to 3 minutes until smooth, scraping down the sides. Add a spoon of water if it is too thick.",
+      "Taste and add more lemon or salt.",
+      { "text": "Serve with crackers.", "tip": "It keeps 5 days in a closed box in the fridge." }
+    ],
     "tags": ["batch", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🩷"
   },
   {
@@ -167,7 +191,12 @@
       { "id": "yogurt", "quantity": 300, "unit": "g" }, { "id": "chia", "quantity": 30, "unit": "g" },
       { "id": "honey", "quantity": 2, "unit": "tbsp" }, { "id": "frozen-berries", "quantity": 300, "unit": "g" }
     ],
-    "steps": ["Divide the oats and chia between 4 jars.", "Mix the milk, yogurt and honey, pour over and stir.", "Top with the frozen berries, close and keep in the fridge. They are ready the next morning."],
+    "steps": [
+      "Get {4} jars or boxes with lids ready. Divide the oats and chia between them.",
+      { "text": "Whisk the milk, yogurt and honey in a jug and pour it over the oats. Stir well, right to the bottom.", "tip": "Stir again after a few minutes so the chia seeds do not form clumps." },
+      { "text": "Top with the frozen berries, close the jars and put them in the fridge.", "tip": "The berries thaw overnight and their juice runs into the oats." },
+      { "text": "They are ready the next morning. Eat them cold, with a splash of milk if they are too thick.", "tip": "They keep 4 days in the fridge." }
+    ],
     "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars"], "illustration": "🫙"
   },
   {
@@ -200,7 +229,14 @@
       { "id": "honey", "quantity": 120, "unit": "g" }, { "id": "sugar", "quantity": 40, "unit": "g" },
       { "id": "dried-apricots", "quantity": 80, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 170 °C and line a 20 x 20 cm tin.", "Melt the butter, honey and sugar together. Stir in the oats and chopped apricots.", "Press into the tin and bake 22 to 25 minutes until golden. Cut while warm, cool in the tin."],
+    "steps": [
+      "Heat the oven to 170 °C and line a 20 x 20 cm tin with baking paper. Chop the apricots.",
+      "Melt the butter, honey and sugar in a pot on low heat, stirring until the sugar dissolves.",
+      "Take it off the heat and stir in the oats and apricots until evenly coated.",
+      "Tip into the tin and press it down firmly and evenly with the back of a spoon.",
+      { "text": "Bake for 22 to 25 minutes until golden all over and a little darker at the edges.", "tip": "They are still soft when they come out and firm up as they cool." },
+      { "text": "Cut into squares while still warm, then let them cool completely in the tin before lifting them out.", "tip": "Cutting while warm stops them cracking. They keep a week in a closed tin." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🟨"
   },
   {
@@ -236,7 +272,14 @@
       { "id": "hard-cheese", "quantity": 120, "unit": "g" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
       { "id": "sweetcorn", "quantity": 150, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 190 °C and line a muffin tin.", "Mix the flour and baking powder. Whisk the eggs, milk and oil and stir in.", "Fold in the diced ham, grated cheese, spring onion and drained corn. Fill the cases and bake 20 to 22 minutes."],
+    "steps": [
+      "Heat the oven to 190 °C and line a 12-hole muffin tin with paper cases.",
+      "Dice the ham, grate the cheese, slice the spring onion and drain the sweetcorn.",
+      "In a large bowl mix the flour and baking powder. In a jug whisk the eggs, milk and oil.",
+      { "text": "Pour the wet mix into the flour and stir briefly. Fold in the ham, cheese, spring onion and corn until just mixed.", "tip": "Stop as soon as there is no dry flour. A lumpy batter makes light muffins." },
+      { "text": "Fill the cases and bake for 20 to 22 minutes, until risen and golden.", "tip": "A skewer pushed into the middle should come out clean." },
+      { "text": "Cool them on a rack, then keep them in a closed box in the fridge.", "tip": "They keep 3 days. Warm them for a few seconds in the microwave." }
+    ],
     "tags": ["batch", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["oven", "muffin tin"], "illustration": "🧀"
   },
   {
@@ -251,7 +294,13 @@
       { "id": "bell-pepper", "quantity": 1, "unit": "piece" }, { "id": "kohlrabi", "quantity": 1, "unit": "piece" },
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
-    "steps": ["Grate the cucumber, salt it and squeeze out the water after 5 minutes.", "Mix with the yogurt, crushed garlic, dill and oil.", "Cut the vegetables into sticks and keep them in a box of cold water in the fridge."],
+    "steps": [
+      "Grate the cucumber coarsely, mix it with the salt and leave it in a sieve for 5 minutes.",
+      { "text": "Squeeze the cucumber hard with your hands to get the water out.", "tip": "This stops the tzatziki going watery." },
+      { "text": "Mix the cucumber with the yogurt, crushed garlic, dill and olive oil. Taste and add salt if needed.", "tip": "It tastes even better after an hour in the fridge, once the garlic has spread through." },
+      "Peel the carrots and kohlrabi and cut them and the pepper into sticks.",
+      { "text": "Keep the sticks in a box of cold water in the fridge and the tzatziki in a closed box.", "tip": "In water the sticks stay crunchy for days." }
+    ],
     "tags": ["batch", "vegetarian", "no-cook", "light", "make-ahead"], "keepsDays": 4, "equipment": ["grater", "boxes"], "illustration": "🥒"
   },
   {
@@ -264,7 +313,12 @@
       { "id": "hazelnuts", "quantity": 60, "unit": "g" }, { "id": "pumpkin-seeds", "quantity": 40, "unit": "g" },
       { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "chocolate-chips", "quantity": 40, "unit": "g" }
     ],
-    "steps": ["Toast the nuts and seeds in a dry pan for 4 minutes and cool.", "Mix with the raisins and chocolate and keep in a jar."],
+    "steps": [
+      "Put the almonds, walnuts, hazelnuts and pumpkin seeds in a dry frying pan on medium heat.",
+      { "text": "Toast them for 4 minutes, shaking the pan often, until they smell toasty and start to brown.", "tip": "Tip them out of the pan straight away, or the hot pan keeps cooking them." },
+      { "text": "Spread them on a plate and let them cool completely.", "tip": "If they are still warm, the chocolate melts." },
+      { "text": "Mix with the raisins and chocolate chips and keep in a jar.", "tip": "A handful, about 30 g, is a portion." }
+    ],
     "tags": ["batch", "vegetarian", "no-cook"], "keepsDays": 14, "equipment": ["pan", "jar"], "illustration": "🥜"
   },
   {
@@ -321,7 +375,14 @@
       { "id": "chia", "quantity": 30, "unit": "g" }, { "id": "oats", "quantity": 60, "unit": "g" },
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "cottage-cheese", "quantity": 250, "unit": "g", "note": "to serve" }
     ],
-    "steps": ["Heat the oven to 160 °C. Mix everything except the cottage cheese with 250 ml water and leave 15 minutes to thicken.", "Spread very thinly on a lined tray and bake 30 minutes. Cut into squares and bake 25 to 30 minutes more until crisp.", "Cool and keep in a tin. Serve with cottage cheese."],
+    "steps": [
+      "Heat the oven to 160 °C. In a bowl mix all the seeds, the oats and the salt with {250 ml} water.",
+      "Leave it for 15 minutes, until the chia and flax have soaked up the water and it has turned into a sticky mass.",
+      { "text": "Spread it very thinly on a tray lined with baking paper, using a wet spatula or the back of a wet spoon.", "tip": "Make it as thin as you can, about 3 mm, without holes. Thin crackers bake crisp all the way through." },
+      "Bake for 30 minutes. Take the tray out and cut it into squares with a knife.",
+      { "text": "Pull the squares apart a little and bake for 25 to 30 minutes more, until dry and crisp.", "tip": "Turn off the oven and leave them inside to cool for extra crunch." },
+      { "text": "Let them cool and keep them in a tin. Serve with the cottage cheese.", "tip": "They keep two weeks in a closed tin." }
+    ],
     "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray"], "illustration": "🌻"
   },
   {

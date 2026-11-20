@@ -34,6 +34,8 @@ describe('recipe steps', () => {
     expect(stepMinutes('Stir 1 minute, then simmer 20 to 25 minutes.')).toBe(20);
     expect(stepMinutes('Chop the onion.')).toBeNull();
     expect(stepMinutes('Boil for 6.5 minutes.')).toBe(6.5);
+    expect(stepMinutes('Simmer for 1 hour 45 minutes.')).toBe(105);
+    expect(stepMinutes('Cook for 2.5 to 3 hours.')).toBe(150);
   });
 });
 

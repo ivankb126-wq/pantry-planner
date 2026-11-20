@@ -103,7 +103,12 @@
       { "id": "honey", "quantity": 2, "unit": "tsp" }, { "id": "frozen-berries", "quantity": 150, "unit": "g" },
       { "id": "almonds", "quantity": 20, "unit": "g" }
     ],
-    "steps": ["Mix the chia, milk and honey in two jars and stir again after 10 minutes.", "Leave in the fridge overnight.", "Top with berries and chopped almonds."],
+    "steps": [
+      "Put the chia, milk and honey in two jars and stir well.",
+      { "text": "Wait 10 minutes and stir again, breaking up any clumps.", "tip": "This second stir matters. Without it the seeds clump at the bottom." },
+      "Close the jars and leave them in the fridge overnight.",
+      "In the morning, thaw or gently warm the berries, chop the almonds and put both on top."
+    ],
     "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["2 jars"], "illustration": "🫙"
   },
   {
@@ -116,7 +121,12 @@
       { "id": "yogurt", "quantity": 250, "unit": "g" }, { "id": "oats", "quantity": 40, "unit": "g" },
       { "id": "pumpkin-seeds", "quantity": 20, "unit": "g" }
     ],
-    "steps": ["Blend the berries, one banana and the yogurt until thick.", "Pour into bowls and top with the other banana, oats and seeds."],
+    "steps": [
+      "Peel the bananas. Put the frozen berries, one banana and the yogurt in a blender.",
+      { "text": "Blend until thick and smooth, stopping to scrape down the sides.", "tip": "It should be thicker than a smoothie, like soft ice cream. Add only a little milk if the blender gets stuck." },
+      "Slice the other banana.",
+      "Pour into bowls and top with the banana slices, oats and pumpkin seeds. Eat straight away."
+    ],
     "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["blender"], "illustration": "🫐"
   },
   {

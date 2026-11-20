@@ -27,12 +27,15 @@
       { "id": "flour", "quantity": 20, "unit": "g" }
     ],
     "steps": [
-      "Rinse the cabbage leaves in cold water if they taste very sour, and cut out the thick part of each stem.",
-      "Fry the chopped onion and half the bacon in 1 tbsp oil for 5 minutes. Mix with the minced meat, rice, egg, crushed garlic, paprika and pepper.",
-      "Put a spoonful of filling on each leaf, fold in the sides and roll up tightly.",
-      "Line a large pot with chopped cabbage, layer the rolls with the ribs and the rest of the bacon, add the bay leaves and cover with water.",
-      "Simmer gently with the lid on for 2 hours. Do not stir; shake the pot now and then.",
-      "Fry the flour in the remaining oil until golden, stir in the paprika and tomato paste with a ladle of cooking water, and pour it over the rolls. Simmer 15 more minutes."
+      { "text": "Separate the sauerkraut leaves carefully. If they taste very sour or salty, rinse them in cold water. With a small knife, shave down the thick part of the stem on each leaf so it rolls easily. Chop the small and torn leaves.", "tip": "Shave the stem flat instead of cutting it out, so the leaf stays in one piece." },
+      "Chop the onion, crush the garlic and dice the bacon. Rinse the rice.",
+      "Heat {1 tbsp} of the oil in a pan on medium heat and fry the onion and half the bacon for 5 minutes until soft. Let it cool a little.",
+      { "text": "In a large bowl mix the minced meat, rice, egg, garlic, the fried onion and bacon, {1 tsp} of the paprika and the pepper. Knead with your hand until well mixed.", "tip": "Do not add salt: the sauerkraut and smoked meat bring plenty." },
+      { "text": "Lay a leaf flat with the stem end towards you. Put a heaped spoon of filling near the stem, fold the stem end over it, fold in the sides and roll up tightly. Repeat until the filling is used up.", "tip": "Do not overfill, because the rice swells. Roll firmly so the sarma does not open while it cooks." },
+      "Cover the bottom of a large pot with half the chopped cabbage. Lay the rolls in tightly, seam side down, in layers, tucking the ribs and the rest of the bacon between them. Add the bay leaves and put the rest of the chopped cabbage on top.",
+      { "text": "Pour in cold water until the rolls are just covered. Bring to a gentle simmer, put the lid on and cook on low for 2 hours.", "tip": "Never stir sarma, it breaks the rolls. Gently shake the pot now and then instead. Top up with hot water if the level drops below the rolls." },
+      { "text": "Make the zaprška (roux): heat the rest of the oil in a small pan, add the flour and stir on medium heat for 2 minutes until golden. Off the heat, stir in the rest of the paprika, the tomato paste and a ladle of the cooking water until smooth.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      { "text": "Pour it over the sarma, shake the pot to spread it and simmer for 15 minutes more.", "tip": "Sarma is famous for tasting better every day. It keeps 4 days in the fridge and freezes well. Serve it with mashed potatoes or bread." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "comfort", "festive"],
     "keepsDays": 4,
@@ -70,12 +73,15 @@
       { "id": "black-pepper", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Make small cuts in the beef and push in thin strips of bacon and slices of garlic. Rub with the vinegar, salt and pepper.",
-      "Brown the meat on all sides in the oil in a heavy pot, then take it out.",
-      "Fry the chopped onion, carrot and celeriac for 10 minutes. Add the tomato paste, cloves, nutmeg, bay leaves and prunes.",
-      "Put the meat back, pour in the wine and enough water to half cover it. Cover and simmer gently for 2.5 to 3 hours, turning the meat now and then.",
-      "Take out the meat and bay leaves, blend the sauce until smooth and simmer until thick. Slice the meat and warm it in the sauce.",
-      "Cook the gnocchi in salted water and serve with the meat and plenty of sauce."
+      { "text": "The day before if you can, make small deep cuts all over the beef with a thin knife. Cut the bacon into thin strips and the garlic into slices, and push them into the cuts.", "tip": "This is called špikanje. It keeps the meat juicy during the long cook." },
+      { "text": "Rub the meat with the vinegar, salt and pepper. Cover it and keep it in the fridge overnight, or at least while you chop the vegetables.", "tip": "Traditionally it marinates in vinegar for a day or more. One night is plenty." },
+      { "text": "Chop the onions, carrots and celeriac. Heat the olive oil in a heavy pot on medium-high and brown the meat well on all sides, about 10 minutes. Take it out.", "tip": "Take your time: the brown crust flavours the whole sauce." },
+      "Turn the heat to medium. Fry the onions, carrots and celeriac in the same pot for 10 minutes, until soft and golden.",
+      "Stir in the tomato paste, cloves, nutmeg, bay leaves and prunes and cook for 2 minutes.",
+      { "text": "Put the meat back, pour in the wine and enough water to come halfway up the meat. Bring to a simmer, cover and cook very gently for 2.5 to 3 hours, turning the meat every half hour.", "tip": "Add a little water whenever the liquid drops below a third of the way up the meat. It is done when a fork slides in with no resistance." },
+      { "text": "Lift out the meat and the bay leaves. Blend the sauce until smooth, then simmer it without a lid until thick and glossy.", "tip": "Taste it now. A little more vinegar, or a pinch of sugar, balances the sweet and sour." },
+      "Slice the meat across the grain into thick slices and warm them in the sauce.",
+      { "text": "Cook the gnocchi in salted water as the packet says. Serve with the meat and plenty of sauce.", "tip": "Pašticada is best made a day ahead: it slices neatly when cold and the flavour deepens. It keeps 4 days." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "festive", "high-protein"],
     "keepsDays": 4,
@@ -184,10 +190,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Slice the onions thinly and soften them in the oil with a splash of water for 15 minutes.",
-      "Stir in the paprika, chili and tomato paste, then the wine and 1 litre of water. Simmer for 15 minutes.",
-      "Add the fish in large pieces and the salt. Simmer gently for 10 minutes without stirring, just shake the pot.",
-      "Meanwhile cook the noodles. Serve the stew over the noodles."
+      { "text": "Slice the onions thinly. Cut the fish into large pieces, about 5 cm.", "tip": "In Slavonia it is made with river fish such as carp or catfish. Hake works well and has fewer bones." },
+      { "text": "Put the onions in a wide pot with the oil and a splash of water. Cook on medium-low with the lid on for 15 minutes, stirring now and then, until very soft.", "tip": "The onions melt into the sauce and thicken it. They should be soft, not brown." },
+      { "text": "Take the pot off the heat and stir in the paprika, chili and tomato paste. Pour in the wine and {1000 ml} water and put it back on the heat.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      "Bring to the boil and simmer for 15 minutes.",
+      { "text": "Add the fish and the salt. Simmer gently for 10 minutes without stirring, just shaking the pot now and then.", "tip": "Stirring breaks the fish into flakes. Shaking keeps the pieces whole." },
+      "Meanwhile cook the noodles in salted water as the packet says and drain them.",
+      "Serve the noodles in deep plates with the paprikaš ladled over."
     ],
     "tags": ["high-protein", "one-pot"],
     "keepsDays": 2,
@@ -222,11 +231,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Cut the meat into 3 cm cubes. Brown it in the lard in batches and set aside.",
-      "Fry the chopped onions slowly for 15 minutes until soft and golden.",
-      "Add the garlic, paprika, chili and tomato paste, then the meat, wine, bay leaves, salt and 1.5 litres of water.",
-      "Cover and simmer for 1.5 hours. Add the sliced carrot, pepper and potato and cook for 40 more minutes.",
-      "The stew should be thick; add a little water if needed. Serve with bread."
+      "Cut the beef and pork into 3 cm cubes and pat them dry. Chop the onions and garlic. Slice the carrots and pepper and cut the potatoes into chunks.",
+      { "text": "Melt the lard in a large heavy pot on medium-high. Brown the meat in batches, a few minutes per batch, and set it aside on a plate.", "tip": "Do not crowd the pot. Meat packed in tightly steams and turns grey instead of browning." },
+      "Turn the heat to medium-low and fry the onions slowly for 15 minutes, stirring now and then, until soft and golden.",
+      { "text": "Take the pot off the heat and stir in the garlic, paprika, chili and tomato paste. Add the meat with its juices, the wine, bay leaves, salt and {1500 ml} water.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      "Bring to a simmer, cover and cook gently for 1.5 hours, stirring now and then.",
+      "Add the carrots, pepper and potatoes and cook for 40 minutes more, until the meat is very tender and the potatoes are soft.",
+      { "text": "Čobanac should be thick like a stew, not a soup. Add a little water if it is too thick, or cook it uncovered for a while if it is thin. Serve with bread.", "tip": "In Slavonia it is cooked in a kotlić over a fire. It keeps 4 days in the fridge and tastes even better the next day." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "high-protein", "comfort"],
     "keepsDays": 4,
@@ -260,10 +271,13 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Cut the tops off the peppers and remove the seeds.",
-      "Mix the meat, rice, chopped onion, egg, paprika, 1 tsp salt and pepper. Fill the peppers loosely (the rice swells).",
-      "Stand them in a pot, pour over the passata with 300 ml water and the sugar, cover and simmer for 1 hour.",
-      "Boil the potatoes, mash with the milk, butter and a pinch of salt, and serve with the peppers and sauce."
+      "Cut the tops off the peppers and pull out the seeds and white ribs. Chop the onion and rinse the rice.",
+      "In a bowl mix the meat, rice, onion, egg, paprika, {1 tsp} of the salt and the pepper with your hand until even.",
+      { "text": "Fill the peppers loosely, pressing gently, up to about 1 cm from the top.", "tip": "Do not pack them tight: the rice swells as it cooks and can split the peppers. Roll any leftover filling into small meatballs and cook them alongside." },
+      "Stand the peppers upright in a pot in which they fit snugly. Mix the passata with {300 ml} water, the sugar and a pinch of salt and pour it over.",
+      { "text": "Bring to a simmer, cover and cook on low for 1 hour.", "tip": "Shake the pot now and then. They are done when the peppers are soft and the rice in the filling is tender." },
+      "Meanwhile peel the potatoes, cut them into chunks and boil them in salted water for 20 minutes until soft.",
+      { "text": "Drain the potatoes and mash them with the warm milk, butter and a pinch of salt. Serve with the peppers and plenty of sauce.", "tip": "They keep 3 days in the fridge and reheat well in their sauce." }
     ],
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice"],
     "keepsDays": 3,
@@ -291,10 +305,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Peel and cube the potatoes and boil them in salted water for 10 minutes. Add the chopped chard and cook 8 more minutes, then drain.",
-      "Warm 3 tbsp oil with the sliced garlic, add the potatoes and chard and crush them lightly with a fork. Season with salt.",
-      "Brush the cleaned fish with oil, season inside and out and grill or roast at 220 °C for 15 to 20 minutes, turning once.",
-      "Serve the fish with the chard and potatoes and a squeeze of lemon."
+      { "text": "Heat the oven to 220 °C. If the fish are not cleaned, ask at the fish counter to gut and scale them. Rinse them and pat dry.", "tip": "The fishmonger does this for free, and it saves a lot of mess at home." },
+      { "text": "Make 2 or 3 cuts on each side of the fish. Brush them with {1 tbsp} of the olive oil, season inside and out with half the salt and put a slice of lemon inside each.", "tip": "The cuts help the heat get in, so the thick part cooks as fast as the tail." },
+      { "text": "Lay the fish on a lined baking tray and roast for 15 to 20 minutes, turning once halfway, until the eyes are white and the flesh comes off the bone easily.", "tip": "Pull the back fin: if it comes out easily, the fish is done." },
+      "Meanwhile peel and cube the potatoes and boil them in salted water for 10 minutes. Wash and chop the chard, add it to the pot and cook for 8 minutes more. Drain well.",
+      { "text": "In the same pot, warm {3 tbsp} of the oil with the sliced garlic on low heat for 1 minute. Add the potatoes and chard and crush them roughly with a fork. Season with the rest of the salt.", "tip": "This is the classic Dalmatian side dish, blitva. Be generous with the olive oil." },
+      "Serve the fish with the chard and potatoes, the rest of the oil drizzled over and the rest of the lemon in wedges."
     ],
     "tags": ["high-protein"],
     "keepsDays": 1,
@@ -327,11 +343,13 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Soften the sliced onions in the oil for 10 minutes. Add the garlic and the squid cut into rings and cook 10 minutes.",
-      "Add the passata, wine, vinegar, salt, pepper and 200 ml water. Simmer 10 minutes.",
-      "Lay the fish pieces in the sauce, cover and cook gently for 10 minutes. Shake the pot instead of stirring.",
-      "Meanwhile stir the polenta into 1 litre of boiling salted water and cook as the packet says.",
-      "Scatter the brudet with parsley and serve with the polenta."
+      "Slice the onions and chop the garlic and parsley. Clean the squid and cut it into rings. Cut the fish into large pieces.",
+      "Heat the olive oil in a wide pot on medium heat and soften the onions for 10 minutes.",
+      "Add the garlic and squid and cook for 10 minutes, stirring now and then.",
+      { "text": "Add the passata, wine, vinegar, salt, pepper and {200 ml} water. Bring to a simmer and cook for 10 minutes.", "tip": "The vinegar is typical for Dalmatian brudet. It gives a gentle sour note." },
+      { "text": "Lay the fish pieces in the sauce, cover and cook gently for 10 minutes. Do not stir: shake the pot now and then instead.", "tip": "Stirring breaks up the fish. Shaking the pot is the traditional way." },
+      { "text": "Meanwhile bring {1000 ml} salted water to the boil. Pour in the polenta in a thin stream while whisking, then cook it on low as the packet says, stirring often.", "tip": "Instant polenta takes a few minutes, traditional much longer. Add a little hot water if it gets too stiff." },
+      "Scatter the brudet with parsley and serve it with the polenta."
     ],
     "tags": ["high-protein"],
     "keepsDays": 2,
@@ -360,10 +378,13 @@
       { "id": "bread", "quantity": 400, "unit": "g" }
     ],
     "steps": [
-      "Scrub the mussels and pull off the beards. Throw away any that stay open when tapped.",
-      "Warm the oil with the chopped garlic in a large pot for 1 minute, add the mussels and wine, cover and cook on high heat for 5 minutes, shaking the pot.",
-      "Throw away any mussels that did not open. Stir in the parsley, pepper and breadcrumbs and cook 2 more minutes until the juices thicken.",
-      "Serve straight from the pot with bread."
+      "Put the mussels in a sink of cold water. Scrub each one, pull the hairy beard off towards the hinge and throw away any with broken shells.",
+      { "text": "Tap any open mussels on the side of the sink. Throw away those that do not close within a few seconds.", "tip": "Open mussels that do not close are dead and not safe to eat." },
+      "Chop the garlic and parsley finely.",
+      "Warm the olive oil and garlic in a large pot on medium heat for 1 minute, without letting the garlic brown.",
+      "Turn the heat to high, add the mussels and wine, put the lid on and cook for 5 minutes, shaking the pot every minute, until the shells have opened.",
+      { "text": "Throw away any mussels that stayed closed. Stir in the parsley, pepper and breadcrumbs and cook for 2 minutes more, until the juices thicken slightly.", "tip": "The breadcrumbs thicken the sauce, which is typical for buzara." },
+      { "text": "Serve straight from the pot with bread to dip in the sauce.", "tip": "Use an empty shell as tweezers to pick out the other mussels." }
     ],
     "tags": ["high-protein"],
     "keepsDays": 0,
@@ -394,10 +415,14 @@
       { "id": "lemon", "quantity": 0.5, "unit": "piece" }
     ],
     "steps": [
-      "Dissolve the stock cube in 1.2 litres of hot water and keep it warm.",
-      "Soften the chopped onion and garlic in the oil for 5 minutes. Add the rice and stir for 2 minutes.",
-      "Pour in the wine and let it bubble away. Add the stock a ladle at a time, stirring, for 18 minutes.",
-      "Add the prawns and cook 3 to 4 minutes until pink. Stir in the butter, parsley and a squeeze of lemon, cover and rest 2 minutes."
+      { "text": "Crumble the stock cube into {1200 ml} hot water in a pot and keep it warm on low heat.", "tip": "Hot stock keeps the rice cooking evenly. Cold stock stops it every time you add a ladle." },
+      "Chop the onion, garlic and parsley. If the prawns are frozen, thaw them in cold water and pat them dry.",
+      "Heat the olive oil in a wide pan on medium heat and soften the onion and garlic for 5 minutes.",
+      { "text": "Add the rice and stir for 2 minutes, until the grains look a little see-through at the edges.", "tip": "Toasting the rice first helps it keep a slight bite." },
+      "Pour in the wine and stir until it has almost all bubbled away.",
+      { "text": "Add a ladle of hot stock and stir until it is almost absorbed, then add the next. Keep going for 18 minutes, stirring often.", "tip": "Taste a grain: it should be soft with a tiny bite in the middle. You may not need all the stock." },
+      "Add the prawns and cook for 3 to 4 minutes, stirring, until they are pink.",
+      { "text": "Take the pan off the heat. Stir in the butter, parsley and a squeeze of lemon, cover and leave for 2 minutes.", "tip": "Risotto should flow slowly on the plate, like lava. Add a splash of stock if it is too stiff." }
     ],
     "tags": ["high-protein"],
     "keepsDays": 1,
@@ -611,10 +636,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Boil the cubed potatoes for 10 minutes, add the chard and cook 8 minutes more. Drain and dress with 2 tbsp oil, half the garlic and salt.",
-      "Clean the squid, pat dry, brush with oil and season.",
-      "Grill on a very hot grill pan for 2 to 3 minutes a side.",
-      "Mix the rest of the oil with the remaining garlic, parsley and lemon juice and spoon over the squid."
+      { "text": "Clean the squid if needed: pull out the head and the clear quill and rinse the tube inside and out. Cut off the tentacles just below the eyes and keep them.", "tip": "Ask at the fish counter to clean them for you. Frozen cleaned squid works well too; thaw it in the fridge." },
+      "Peel and cube the potatoes and boil them in salted water for 10 minutes. Wash and chop the chard, add it to the pot and cook for 8 minutes more. Drain well.",
+      "Dress the potatoes and chard with {2 tbsp} of the olive oil, half the garlic (chopped) and a pinch of the salt, and crush them lightly with a fork. Keep warm.",
+      "Mix the rest of the garlic, the chopped parsley, the lemon juice and most of the rest of the oil in a small bowl.",
+      { "text": "Pat the squid very dry, brush it with the last of the oil and season with the rest of the salt.", "tip": "Dry squid chars nicely. Wet squid steams and turns rubbery." },
+      { "text": "Heat a grill pan or heavy frying pan on high until smoking. Grill the squid for 2 to 3 minutes on each side, pressing it down, until charred in places.", "tip": "Squid needs either a very short or a very long cook. More than a few minutes on high heat makes it tough." },
+      "Slice the tubes into rings, spoon the garlic and parsley oil over and serve with the chard and potatoes."
     ],
     "tags": ["high-protein", "light"],
     "keepsDays": 1,
@@ -647,11 +675,13 @@
       { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Brown the cubed beef in the oil in batches. Set aside.",
-      "Cook the chopped onions in the same pot for 15 minutes until soft and sweet.",
-      "Add the garlic, grated carrot, paprika and tomato paste, then the beef, wine, bay leaves, salt, pepper and 1 litre of water.",
-      "Cover and simmer for 1 hour 45 minutes until the meat is very tender.",
-      "Cook the polenta in 1.4 litres of salted water as the packet says, and serve with the goulash."
+      "Cut the beef into 3 cm cubes and pat them dry. Chop the onions and garlic and grate the carrot.",
+      { "text": "Heat the oil in a heavy pot on medium-high. Brown the beef in batches, a few minutes per batch, and set it aside.", "tip": "Do not crowd the pot, or the meat steams instead of browning." },
+      { "text": "Turn the heat to medium-low and cook the onions in the same pot for 15 minutes, stirring now and then, until soft and sweet.", "tip": "Plenty of slowly cooked onion is what makes goulash thick and rich." },
+      { "text": "Take the pot off the heat and stir in the garlic, carrot, paprika and tomato paste. Add the beef with its juices, the wine, bay leaves, salt, pepper and {1000 ml} water.", "tip": "Paprika burns easily, which is why it goes in off the heat." },
+      { "text": "Bring to a simmer, cover and cook gently for 1 hour 45 minutes, stirring now and then, until the meat is very tender.", "tip": "It is done when a cube breaks apart easily with a spoon. Add a little water if it gets too thick." },
+      { "text": "Near the end, bring {1400 ml} salted water to the boil. Pour in the polenta in a thin stream while whisking, then cook on low as the packet says, stirring often.", "tip": "Add a little hot water if the polenta gets too stiff." },
+      { "text": "Serve the goulash over the polenta.", "tip": "Goulash keeps 4 days in the fridge and tastes even better the next day." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "high-protein", "comfort"],
     "keepsDays": 4,

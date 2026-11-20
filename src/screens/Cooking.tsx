@@ -18,6 +18,11 @@ import { fold } from './pickers';
  */
 export function stepMinutes(text: string): number | null {
   let best: number | null = null;
+  // "1 hour 45 minutes" counts as one time.
+  for (const m of text.matchAll(/(\d+)\s*hours?\s*(?:and\s*)?(\d+)\s*min(?:ute)?s?\b/gi)) {
+    const mins = Number(m[1]) * 60 + Number(m[2]);
+    if (mins <= 360 && (best == null || mins > best)) best = mins;
+  }
   for (const m of text.matchAll(/(\d+(?:[.,]\d+)?)(?:\s*(?:to|-|–)\s*\d+(?:[.,]\d+)?)?\s*(minutes?|mins?|hours?|hrs?|h)\b/gi)) {
     const n = Number(m[1].replace(',', '.'));
     const mins = /^h/i.test(m[2]) ? n * 60 : n;

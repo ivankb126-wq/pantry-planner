@@ -367,10 +367,12 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
     ],
     "steps": [
-      "Cook the noodles as the packet says and rinse with cold water.",
-      "Brown the pork in the oil in a wok for 5 minutes. Add the ginger and garlic.",
-      "Add the shredded cabbage and carrot and stir-fry 4 minutes.",
-      "Add the noodles, soy and hoisin sauce and toss until hot. Top with spring onion."
+      "Cook the noodles as the packet says, drain and rinse them with cold water so they do not stick together.",
+      { "text": "Shred the cabbage, cut the carrots into thin matchsticks, grate the ginger and garlic and slice the spring onion. Mix the soy sauce and hoisin sauce in a cup.", "tip": "Have everything ready before you start: a stir-fry moves fast." },
+      "Heat the oil in a wok or large frying pan on high. Add the pork and fry for 5 minutes, breaking it up, until browned and a little crisp.",
+      "Add the ginger and garlic and stir for a few seconds, then add the cabbage and carrots. Stir-fry for 4 minutes until softened but still a little crunchy.",
+      { "text": "Add the noodles and the sauce and toss for 2 minutes until everything is hot and coated.", "tip": "Lift and toss the noodles with two spoons or tongs so they mix without breaking." },
+      "Serve topped with the spring onion."
     ],
     "tags": ["kid-friendly"],
     "keepsDays": 2,

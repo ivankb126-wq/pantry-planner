@@ -363,7 +363,15 @@
       { "id": "butter", "quantity": 60, "unit": "g" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
       { "id": "powdered-sugar", "quantity": 20, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 190 °C. Toast the breadcrumbs in 20 g butter until golden.", "Lay out half the pastry sheets, brushing each with melted butter. Sprinkle with breadcrumbs, then the drained cherries, sugar and cinnamon.", "Roll up, repeat with the rest, and bake 30 to 35 minutes until crisp.", "Dust with icing sugar and serve warm."],
+    "steps": [
+      { "text": "Heat the oven to 190 °C and line a baking tray with baking paper. Drain the cherries well in a sieve.", "tip": "Wet cherries make the pastry soggy, so let them drip for a while." },
+      "Melt the butter. Fry the breadcrumbs in {20 g} of it on medium heat for 3 minutes, stirring, until golden. Mix the sugar and cinnamon.",
+      { "text": "Lay a clean tea towel on the table. Put one filo sheet on it and brush it lightly with butter. Repeat with half the sheets, stacking them.", "tip": "Keep the filo you are not using under a damp towel: it dries out and cracks quickly." },
+      { "text": "Sprinkle half the breadcrumbs over the pastry, leaving a 3 cm edge. Spread half the cherries over the crumbs along one long side and sprinkle with half the sugar mix.", "tip": "The breadcrumbs soak up the cherry juice so the pastry stays crisp." },
+      "Fold in the short ends, then use the towel to roll the strudel up from the cherry side. Lift it onto the tray, seam side down. Make a second strudel with the rest.",
+      "Brush the tops with the rest of the butter and bake for 30 to 35 minutes until deep golden and crisp.",
+      { "text": "Let it cool for 10 minutes, dust with the powdered sugar and cut into slices.", "tip": "Cut with a serrated knife. Best on the day; crisp up leftovers in the oven." }
+    ],
     "tags": ["vegetarian", "festive"], "keepsDays": 2, "equipment": ["oven", "baking tray", "pastry brush"], "illustration": "🍒"
   }
 ]
