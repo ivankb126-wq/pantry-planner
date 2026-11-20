@@ -315,10 +315,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Mix the cubed chicken with the yogurt, half the curry powder, the paprika and half the garlic. Leave for 15 minutes (or overnight in the fridge).",
-      "Cook the rice. Fry the onion in the oil for 8 minutes, add the rest of the garlic, the ginger and curry powder.",
-      "Add the chicken with its marinade and cook 5 minutes, then the passata and salt. Simmer 15 minutes.",
-      "Stir in the cream and serve with rice."
+      { "text": "Cut the chicken into bite-size cubes. Grate the garlic and ginger. In a bowl mix the yogurt with half the curry powder, the paprika and half the garlic. Add the chicken, stir to coat and leave for 15 minutes.", "tip": "You can marinate it in the morning or the night before and keep it in the fridge. The yogurt makes the chicken tender." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Chop the onion finely. Heat the oil in a large pan on medium heat and fry the onion for 8 minutes until soft and golden.",
+      "Add the rest of the garlic, the ginger and the rest of the curry powder and stir for 1 minute until fragrant.",
+      { "text": "Add the chicken with all its marinade, turn the heat to medium-high and cook for 5 minutes, stirring, until the chicken is white on the outside.", "tip": "The yogurt may look split at first. That is fine, it comes together in the sauce." },
+      { "text": "Pour in the passata and add the salt. Bring to a bubble, then simmer on low for 15 minutes, stirring now and then, until the chicken is cooked through and the sauce has thickened.", "tip": "Cut a large piece in half to check: there should be no pink in the middle." },
+      "Stir in the cream and heat for 1 minute without letting it boil. Taste for salt and serve with the rice."
     ],
     "tags": ["high-protein", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,

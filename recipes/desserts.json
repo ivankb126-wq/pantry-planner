@@ -95,7 +95,16 @@
       { "id": "sugar", "quantity": 160, "unit": "g", "note": "100 g for the caramel" }, { "id": "vanilla-sugar", "quantity": 10, "unit": "g" },
       { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "zest only" }
     ],
-    "steps": ["Melt 100 g sugar in a pan until golden and pour into a baking dish or 6 small moulds.", "Warm the milk with the lemon zest. Whisk the eggs with the rest of the sugar and vanilla sugar, then whisk in the milk.", "Pour over the caramel, set the dish in a tray of hot water and bake at 160 °C for 45 to 50 minutes until just set.", "Chill overnight and turn out onto a plate."],
+    "steps": [
+      "Heat the oven to 160 °C. Get a baking dish of about 20 cm (or small heatproof moulds) ready, and boil a kettle of water.",
+      { "text": "Put the {100 g} sugar for the caramel in a small dry pan on medium heat. When it starts to melt at the edges, swirl the pan (do not stir) until it has all melted and turned amber, about 5 minutes.", "tip": "Watch closely: it goes from golden to burnt in seconds. Take it off when it is the colour of honey. Hot caramel burns badly, so do not touch or taste it." },
+      "Pour the caramel straight into the dish or moulds and tilt to coat the bottom. It sets hard, which is right.",
+      "Grate the lemon zest. Warm the milk with the zest in a pot until hot but not boiling, about 4 minutes.",
+      { "text": "Whisk the eggs with the rest of the sugar and the vanilla sugar until just smooth. Pour in the hot milk slowly while whisking.", "tip": "Whisk gently: lots of foam makes holes in the custard. Pour it through a sieve if you want it perfectly smooth." },
+      { "text": "Pour the custard over the caramel. Stand the dish in a deep roasting tray and pour hot water from the kettle into the tray until it comes halfway up the dish.", "tip": "The water bath keeps the heat gentle, so the custard sets silky instead of bubbly." },
+      { "text": "Bake for 45 to 50 minutes, until set at the edges with a slight wobble in the middle.", "tip": "A knife pushed in near the middle should come out clean. Small moulds need only about 30 minutes." },
+      { "text": "Let it cool, then put it in the fridge overnight. To serve, run a knife around the edge, put a plate on top and turn it over quickly. The caramel runs down as a sauce.", "tip": "Keeps 3 days in the fridge, covered." }
+    ],
     "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["oven", "baking dish", "roasting tray"], "illustration": "🍮"
   },
   {
@@ -111,7 +120,14 @@
       { "id": "sunflower-oil", "quantity": 150, "unit": "ml", "note": "for frying, some stays in the pan" },
       { "id": "powdered-sugar", "quantity": 40, "unit": "g" }
     ],
-    "steps": ["Mix the flour, yeast, sugar, eggs, yogurt, warm milk, lemon zest and raisins into a soft, sticky batter. Cover and leave to rise 1 hour.", "Heat the oil in a deep pan. Drop in small spoonfuls of batter and fry 3 minutes until golden, turning.", "Drain on paper and roll in icing sugar while warm."],
+    "steps": [
+      { "text": "Warm the milk until it feels just warm on your finger, not hot. Grate the lemon zest.", "tip": "Hot milk kills the yeast. Lukewarm, like a baby's bottle, is right." },
+      { "text": "In a large bowl mix the flour, yeast and sugar. Add the eggs, yogurt, warm milk, lemon zest and raisins and beat with a wooden spoon for a few minutes into a smooth, soft, sticky batter.", "tip": "It should be thicker than pancake batter and fall slowly from the spoon. Add a spoon of flour or milk to get there." },
+      "Cover the bowl with a towel and leave it somewhere warm for 1 hour, until bubbly and almost doubled.",
+      { "text": "Heat the oil in a small, deep pan on medium heat. Test it with a drop of batter: it should sizzle and rise straight away.", "tip": "If the fritule brown in seconds and stay raw inside, the oil is too hot, so turn it down. Never leave hot oil alone on the stove." },
+      { "text": "Dip a teaspoon in the oil, scoop a small spoonful of batter and push it into the oil with a second spoon. Fry 6 to 8 at a time for 3 minutes, turning, until golden all over.", "tip": "Dipping the spoon in oil first lets the batter slide off easily." },
+      { "text": "Lift them out with a slotted spoon onto kitchen paper. While they are still warm, roll them in the powdered sugar.", "tip": "Best on the day. Keep leftovers in a closed tin and warm them briefly in the oven." }
+    ],
     "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["deep pan", "bowl"], "illustration": "🍩"
   },
   {
@@ -152,7 +168,14 @@
       { "id": "sunflower-oil", "quantity": 100, "unit": "ml" }, { "id": "flour", "quantity": 250, "unit": "g" },
       { "id": "baking-powder", "quantity": 12, "unit": "g" }, { "id": "powdered-sugar", "quantity": 20, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 180 °C. Zest two mandarins and juice all four.", "Whisk the eggs and sugar until fluffy, then the yogurt, oil, zest and half the juice.", "Fold in the flour and baking powder, pour into a lined tin and bake 35 to 40 minutes.", "Drizzle the rest of the juice over the warm cake and dust with icing sugar when cool."],
+    "steps": [
+      "Heat the oven to 180 °C and line a cake tin of about 24 cm with baking paper. Grate the zest of half the mandarins, then squeeze the juice of all of them.",
+      "Whisk the eggs and sugar for 3 to 4 minutes until pale and fluffy.",
+      "Whisk in the yogurt, oil, zest and half the juice.",
+      { "text": "Mix the baking powder into the flour, then fold it into the batter with a spatula until there are no dry streaks.", "tip": "Stop as soon as it is mixed. Too much stirring makes the cake tough." },
+      { "text": "Pour into the tin and bake for 35 to 40 minutes, until golden and a skewer in the middle comes out clean.", "tip": "Do not open the oven in the first half of the baking time, or the cake may sink." },
+      { "text": "While the cake is still warm, poke it all over with a skewer and spoon the rest of the juice over it. Let it cool in the tin, then dust with the powdered sugar.", "tip": "Keeps 4 days in a closed box." }
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin"], "illustration": "🍊"
   },
   {

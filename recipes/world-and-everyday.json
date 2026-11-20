@@ -99,10 +99,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Shred the cabbage and grate the carrot. Mix with half the lime juice and a pinch of salt.",
-      "Mix the yogurt with the rest of the lime juice.",
-      "Rub the fish with the spices and salt and fry in the oil for 3 minutes a side. Break into chunks.",
-      "Warm the tortillas and fill with slaw, fish, avocado and yogurt sauce."
+      { "text": "Shred the cabbage very thinly and grate the carrot. Mix them in a bowl with half the lemon juice and a pinch of the salt and leave while you cook.", "tip": "Squeeze the slaw with your hands for a few seconds. It softens and tastes better." },
+      "Mix the yogurt with the rest of the lemon juice. Halve the avocado, remove the stone and slice it.",
+      "Pat the fish dry with kitchen paper. Mix the paprika, cumin, garlic powder and the rest of the salt and rub it all over the fish.",
+      { "text": "Heat the oil in a frying pan on medium-high. Fry the fish for 3 minutes on each side until it is white all through and flakes easily.", "tip": "Do not move the fish while the first side cooks, so it gets a crust. Frozen hake works: thaw it in the fridge overnight and dry it well." },
+      "Break the fish into chunks. Warm the tortillas for a few seconds on each side in a dry pan.",
+      "Fill each tortilla with slaw, fish and avocado, and top with the yogurt sauce."
     ],
     "tags": ["high-protein"],
     "keepsDays": 1,
@@ -288,10 +290,12 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Mix 100 g yogurt with the spices, half the garlic, the lemon juice, oil and salt. Coat the chicken and leave 10 minutes or overnight.",
-      "Heat the oven to 220 °C. Spread the chicken and onion wedges on a tray and roast 30 to 35 minutes until charred at the edges.",
-      "Cook the rice. Mix the rest of the yogurt with the rest of the garlic.",
-      "Slice the chicken and serve with rice, chopped tomato and cucumber, and the garlic yogurt."
+      "In a large bowl mix {100 g} of the yogurt with the cumin, paprika, turmeric, cinnamon, half the garlic (grated), the lemon juice, oil and salt.",
+      { "text": "Make a few cuts in the chicken legs down to the bone and rub the marinade all over and into the cuts. Leave for 10 minutes, or covered in the fridge overnight.", "tip": "The cuts let the spices in and help the legs cook evenly." },
+      "Heat the oven to 220 °C. Cut the onions into wedges. Spread the chicken and onion on a large baking tray in one layer, skin side up.",
+      { "text": "Roast for 30 to 35 minutes until the chicken is deep golden and charred at the edges.", "tip": "It is done when the juices run clear when you pierce the thickest part near the bone." },
+      { "text": "Meanwhile cook the rice: rinse it, put it in a pot with {450 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Mix the rest of the yogurt with the rest of the garlic, and chop the tomatoes and cucumber.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Pull the chicken off the bones or slice it, and serve with the rice, tomato and cucumber, the roast onions and the garlic yogurt. Spoon the tray juices over the rice."
     ],
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
@@ -397,10 +401,13 @@
       { "id": "salt", "quantity": 2, "unit": "tsp" }
     ],
     "steps": [
-      "Put the chicken in 3 litres of cold water, bring slowly to a simmer and skim off the foam.",
-      "Add the whole vegetables and onion, salt and pepper. Simmer very gently for 1.5 hours.",
-      "Strain the soup. Slice the carrots back into it and take the meat off the bones.",
-      "Cook the noodles in the soup for a few minutes. Serve with parsley and some of the chicken."
+      { "text": "Put the chicken in a big pot with {3000 ml} cold water and bring it slowly to a simmer on medium heat.", "tip": "Starting in cold water and heating slowly gives a clearer, tastier soup." },
+      "As it starts to bubble, grey foam rises to the top. Skim it off with a spoon until mostly gone.",
+      { "text": "Peel the carrots, parsnip, celeriac and onion and add them whole, with the salt and pepper. Turn the heat to low and simmer very gently, lid half on, for 1.5 hours.", "tip": "Only a few small bubbles should rise. Hard boiling makes the soup cloudy and the meat tough." },
+      "Lift out the chicken and vegetables. Pour the soup through a sieve into another pot.",
+      "When the chicken is cool enough to touch, pull the meat off the bones and tear it into pieces. Slice the carrots.",
+      { "text": "Bring the soup back to the boil, add the noodles and cook for 3 to 5 minutes until soft. Add the carrots and some of the chicken.", "tip": "Taste for salt now. Keep the rest of the chicken for sandwiches or a salad, or add it all." },
+      { "text": "Serve sprinkled with chopped parsley.", "tip": "It keeps 4 days in the fridge. For leftovers, cook fresh noodles in the soup each time so they do not go soft." }
     ],
     "tags": ["cook-once-eat-twice", "kid-friendly", "comfort", "freezer-friendly"],
     "keepsDays": 4,
@@ -432,10 +439,13 @@
       { "id": "bread", "quantity": 250, "unit": "g" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Roast the peeled pumpkin and potato chunks with 2 tbsp oil for 30 minutes.",
-      "Toss the drained chickpeas with paprika and the rest of the oil and roast on another tray for 20 minutes until crisp.",
-      "Soften the onion and garlic in a pot, add the roasted vegetables, the stock cube and 1 litre of water, simmer 5 minutes and blend.",
-      "Serve topped with the chickpeas, crumbled feta and a few drops of pumpkin seed oil, with bread."
+      { "text": "Heat the oven to 200 °C. Peel the pumpkin and potato, scoop out the pumpkin seeds and cut both into chunks of about 3 cm.", "tip": "Hokkaido pumpkin does not need peeling: the skin goes soft and blends in." },
+      "Toss the pumpkin and potato with {2 tbsp} of the olive oil and a pinch of salt on a baking tray. Roast for 30 minutes until soft and browned at the edges.",
+      { "text": "Drain, rinse and dry the chickpeas well with a towel. Toss them with the paprika, the rest of the oil and a pinch of salt on a second tray, and roast them for the last 20 minutes of the pumpkin's time.", "tip": "Dry chickpeas get crunchy. Shake the tray once halfway." },
+      "Meanwhile chop the onion and garlic and soften them in a little oil in a large pot on medium heat for 5 minutes.",
+      "Add the roasted pumpkin and potato, crumble in the stock cube and pour in {1000 ml} water. Simmer for 5 minutes.",
+      { "text": "Blend until smooth with a stick blender, or in batches in a blender. Taste and add salt if needed.", "tip": "In a blender, fill it only half full with hot soup and hold the lid down with a towel. Too thick? Add water. Too thin? Simmer a few minutes without a lid." },
+      "Serve in bowls topped with the crispy chickpeas, crumbled feta and a few drops of pumpkin seed oil, with bread."
     ],
     "tags": ["vegetarian", "freezer-friendly"],
     "keepsDays": 3,

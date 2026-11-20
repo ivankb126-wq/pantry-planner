@@ -122,10 +122,12 @@
       { "id": "lettuce", "quantity": 0.5, "unit": "piece" }
     ],
     "steps": [
-      "Mash the drained beans with the cumin. Dice the pepper.",
-      "Spread beans on half of each tortilla, add corn, pepper and grated cheese and fold over.",
-      "Toast in a dry pan 2 to 3 minutes a side until crisp and melted.",
-      "Chop the tomato and onion with lemon juice and a pinch of salt and serve with the quesadillas and salad."
+      { "text": "Drain and rinse the beans and drain the sweetcorn. Mash the beans with the cumin and a pinch of salt using a fork until mostly smooth. Dice the pepper and grate the cheese.", "tip": "A little texture is fine. The mashed beans hold everything together." },
+      { "text": "Spread the beans over one half of each tortilla. Top with sweetcorn, pepper and cheese, then fold the other half over and press gently.", "tip": "Keep the filling a finger's width from the edge so the cheese does not leak into the pan." },
+      "Make the salsa salad: chop the tomatoes and onion finely and mix with the lemon juice and a pinch of salt. Shred the lettuce.",
+      { "text": "Heat a large dry frying pan on medium. Cook the quesadillas two at a time for 2 to 3 minutes until golden and crisp underneath.", "tip": "No oil needed. Press with a spatula so the filling sticks together as the cheese melts." },
+      "Flip them carefully with a wide spatula and cook the other side for 2 to 3 minutes until the cheese has melted. Keep the cooked ones warm under a clean towel while you do the rest.",
+      "Cut each quesadilla into wedges and serve with the tomato salsa and lettuce."
     ],
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 1,
@@ -158,10 +160,11 @@
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Slice the chicken, peppers and onion into strips and toss with the spices, salt and oil.",
-      "Fry in a very hot pan for 8 to 10 minutes until the chicken is cooked and the vegetables are charred.",
-      "Squeeze over the lemon and warm the tortillas.",
-      "Wrap the filling with sour cream and salsa."
+      { "text": "Slice the chicken into thin strips. Cut the peppers and onion into strips of the same thickness.", "tip": "Strips of the same size cook in the same time." },
+      "In a large bowl mix the paprika, cumin, garlic powder, salt and oil. Add the chicken and vegetables and toss until everything is coated.",
+      { "text": "Heat a large frying pan on high until very hot. Add half the mixture in one layer and fry for 5 minutes, stirring only every minute or so, until the chicken is cooked and the vegetables are charred at the edges. Repeat with the rest.", "tip": "A crowded pan steams instead of charring, so cook in two batches. The chicken is done when there is no pink inside." },
+      "Squeeze the lemon over the filling. Warm the tortillas for a few seconds on each side in a dry pan.",
+      "Spread each tortilla with sour cream, add the filling and a spoon of salsa, roll up and eat."
     ],
     "tags": ["quick", "kid-friendly", "high-protein"],
     "keepsDays": 2,
@@ -296,10 +299,11 @@
       { "id": "parmesan", "quantity": 30, "unit": "g" }
     ],
     "steps": [
-      "Fry the gnocchi in the oil for 6 to 8 minutes until golden.",
-      "Add the garlic, then the passata, basil and spinach, and simmer 5 minutes.",
-      "Tear the mozzarella over the top, cover and cook 3 minutes until melted.",
-      "Serve with grated parmesan."
+      "Chop the garlic. Drain the mozzarella and tear it into pieces. Grate the parmesan.",
+      { "text": "Heat the oil in a large frying pan with a lid on medium-high. Add the gnocchi straight from the packet in one layer and fry for 6 to 8 minutes, turning now and then, until golden and crisp outside.", "tip": "Do not boil them first: packet gnocchi fry well as they are. Fry in two batches if they do not fit in one layer." },
+      "Add the garlic and stir for a few seconds, then pour in the passata and add the basil, spinach and a pinch of salt. Simmer for 5 minutes until the spinach has wilted.",
+      "Scatter the mozzarella over the top, cover with the lid and cook on low for 3 minutes until melted.",
+      "Serve with the parmesan grated over the top."
     ],
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 1,
@@ -365,10 +369,12 @@
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
     "steps": [
-      "Fry the chopped onion in the oil for 5 minutes, add the garlic and curry powder.",
-      "Add the tomatoes, coconut milk, drained chickpeas and salt and simmer 8 minutes.",
-      "Stir in the spinach until wilted.",
-      "Serve with warm flatbread."
+      "Chop the onion and garlic. Drain and rinse the chickpeas.",
+      "Heat the oil in a large pan on medium heat and fry the onion for 5 minutes until soft.",
+      { "text": "Add the garlic and curry powder and stir for 1 minute until fragrant.", "tip": "If the spices start sticking, add a spoon of the coconut milk." },
+      { "text": "Pour in the tomatoes and coconut milk, add the chickpeas and salt and bring to a bubble. Simmer for 8 minutes, stirring now and then, until slightly thickened.", "tip": "Shake the coconut milk can well before opening, because the cream separates from the liquid." },
+      "Meanwhile warm the flatbreads for a few seconds on each side in a dry pan.",
+      "Stir the spinach into the curry a handful at a time until it wilts, about 2 minutes. Taste, add salt if needed and serve with the flatbread."
     ],
     "tags": ["quick", "vegan", "vegetarian", "one-pot"],
     "keepsDays": 3,
@@ -629,10 +635,11 @@
       { "id": "bread", "quantity": 300, "unit": "g" }
     ],
     "steps": [
-      "Slice the onion thinly and soak it in the vinegar for 5 minutes.",
-      "Whisk the mustard and oil into the vinegar.",
-      "Mix the drained beans, tuna, chopped tomatoes, onion and parsley with the dressing.",
-      "Serve with bread."
+      { "text": "Slice the onion as thinly as you can. Put it in a large bowl with the vinegar and a pinch of salt, mix and leave for 5 minutes.", "tip": "The vinegar softens the sharp taste of raw onion and turns red onion bright pink." },
+      "Meanwhile drain and rinse the beans, drain the tuna and chop the tomatoes and parsley.",
+      "Whisk the mustard and olive oil into the vinegar and onion in the bowl to make the dressing.",
+      "Add the beans, tomatoes and parsley and toss gently. Add the tuna in big flakes and fold it in carefully so it does not break up too much. Taste and add salt if needed.",
+      { "text": "Serve with bread.", "tip": "It makes a good lunch the next day. Keep it in the fridge, and if you can, add the tomatoes just before eating." }
     ],
     "tags": ["quick", "no-cook", "high-protein", "make-ahead"],
     "keepsDays": 2,

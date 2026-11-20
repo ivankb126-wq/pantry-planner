@@ -41,7 +41,12 @@
       { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "tomato", "quantity": 1, "unit": "piece" },
       { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "black-pepper", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Beat the eggs with salt and pepper.", "Melt the butter on low heat, add the eggs and stir slowly until just set.", "Serve on toast with sliced tomato."],
+    "steps": [
+      "Crack the eggs into a bowl, add the salt and pepper and beat with a fork until smooth. Slice the tomato.",
+      "Melt the butter in a non-stick pan on low heat. Pour in the eggs and leave them for a few seconds.",
+      { "text": "Stir slowly with a spatula, pushing the eggs from the edges to the middle, for 3 to 4 minutes until soft curds form. Toast the bread meanwhile.", "tip": "Low heat and slow stirring make creamy eggs. Take them off while they still look a little wet: they finish cooking in their own heat." },
+      "Spoon the eggs onto the toast and serve with the sliced tomato."
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["non-stick pan", "toaster"], "illustration": "🍳"
   },
   {
@@ -126,7 +131,12 @@
       { "id": "tomato", "quantity": 1, "unit": "piece" }, { "id": "cucumber", "quantity": 0.3, "unit": "piece" },
       { "id": "olive-oil", "quantity": 1, "unit": "tsp" }, { "id": "black-pepper", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Toast the bread.", "Spread with cottage cheese and top with sliced tomato and cucumber, oil and pepper."],
+    "steps": [
+      "Toast the bread until golden.",
+      "Slice the tomato and cucumber thinly.",
+      "Spread the cottage cheese thickly on the toast and lay the tomato and cucumber on top.",
+      { "text": "Drizzle with the olive oil and finish with black pepper and a pinch of salt.", "tip": "A little dried oregano or chopped chives on top is good too." }
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍅"
   },
   {
@@ -292,7 +302,13 @@
       { "id": "spinach", "quantity": 80, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
       { "id": "parmesan", "quantity": 15, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Simmer the oats in 350 ml water with the stock cube for 5 minutes. Stir in the spinach.", "Fry the eggs in the oil.", "Serve the oats topped with the eggs and grated parmesan."],
+    "steps": [
+      "Bring {350 ml} water to the boil in a small pot and crumble in the stock cube. Stir in the oats.",
+      { "text": "Turn the heat to low and simmer for 5 minutes, stirring often, until thick and creamy.", "tip": "Like risotto, it should be loose enough to spread on the plate. Add a splash of water if it gets stiff." },
+      "Stir in the spinach until it wilts, then cover and take off the heat.",
+      "Heat the oil in a frying pan on medium and fry the eggs for 3 to 4 minutes, until the whites are set and the yolks still runny.",
+      { "text": "Spoon the oats into bowls, put an egg on each and grate over the parmesan.", "tip": "Break the yolk into the oats. It makes a rich sauce." }
+    ],
     "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "frying pan"], "illustration": "🥬"
   },
   {
@@ -305,7 +321,12 @@
       { "id": "oats", "quantity": 50, "unit": "g" }, { "id": "peanut-butter", "quantity": 20, "unit": "g" },
       { "id": "cinnamon", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Blend everything until smooth.", "Drink straight away or keep in the fridge until morning."],
+    "steps": [
+      { "text": "Peel the bananas and break them into pieces.", "tip": "Frozen banana pieces make it thick and cold, like a milkshake." },
+      "Put the bananas, kefir, oats, peanut butter and cinnamon in a blender.",
+      { "text": "Blend for about a minute until completely smooth.", "tip": "Too thick? Add a splash of milk or water and blend again." },
+      { "text": "Pour into glasses and drink straight away, or keep in a closed jar in the fridge until the morning.", "tip": "It thickens overnight as the oats soak. Shake or stir before drinking." }
+    ],
     "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 1, "equipment": ["blender"], "illustration": "🥤"
   },
   {
@@ -346,7 +367,13 @@
       { "id": "butter", "quantity": 15, "unit": "g" }, { "id": "parsley", "quantity": 5, "unit": "g" },
       { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "bread", "quantity": 120, "unit": "g" }
     ],
-    "steps": ["Fry the sliced mushrooms in the butter on high heat for 6 minutes, add the garlic and parsley.", "Poach or fry the eggs.", "Pile the mushrooms on toast and top with the eggs."],
+    "steps": [
+      { "text": "Wipe the mushrooms clean and slice them. Chop the garlic and parsley.", "tip": "Do not wash mushrooms under the tap. They soak up water and then will not brown." },
+      "Melt the butter in a large frying pan on high heat. Add the mushrooms in one layer and leave them for a moment before stirring.",
+      { "text": "Fry for 6 minutes, stirring now and then, until golden brown and their juice has cooked away. Add the garlic, parsley and a pinch of salt at the end and stir for a few seconds.", "tip": "Mushrooms first let out water, then brown. Salt them at the end, or they let out water too early and stew." },
+      "Meanwhile fry the eggs in a second pan for 3 to 4 minutes and toast the bread.",
+      "Pile the mushrooms on the toast and put an egg on top."
+    ],
     "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["frying pan", "toaster"], "illustration": "🍄"
   },
   {
@@ -431,7 +458,13 @@
       { "id": "garlic", "quantity": 3, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
       { "id": "bread", "quantity": 100, "unit": "g" }
     ],
-    "steps": ["Heat the oven to 200 °C. Wilt the spinach with the garlic in the oil and spread in a small dish with the diced tomato.", "Make hollows, crack in the eggs and scatter with feta.", "Bake 10 to 12 minutes until the whites set. Serve with bread."],
+    "steps": [
+      "Heat the oven to 200 °C. Chop the garlic and dice the tomato.",
+      { "text": "Heat the oil in an ovenproof frying pan on medium. Add the garlic and spinach and stir until wilted, about 2 minutes.", "tip": "No ovenproof pan? Wilt the spinach in any pan, then spread it in a small baking dish." },
+      "Spread the spinach out and scatter over the tomato. Make {4} hollows and crack an egg into each. Crumble the feta around the eggs.",
+      { "text": "Bake for 10 to 12 minutes, until the whites are set and the yolks are still soft.", "tip": "The eggs keep cooking in the hot pan, so take it out when the whites are just set." },
+      "Serve straight from the pan with bread or toast for dipping."
+    ],
     "tags": ["vegetarian", "high-protein"], "keepsDays": 0, "equipment": ["oven", "small baking dish"], "illustration": "🥚"
   },
   {

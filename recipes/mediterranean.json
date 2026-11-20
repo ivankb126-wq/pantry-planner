@@ -370,10 +370,11 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Cut the chicken into cubes and marinate with the juice of half the lemon, 2 tbsp oil, oregano, half the garlic and salt for 15 minutes.",
-      "Cook the rice. Mix the yogurt with the rest of the garlic and a pinch of salt.",
-      "Thread the chicken onto skewers (or not) and grill or pan-fry for 10 to 12 minutes.",
-      "Fill bowls with rice, chicken, diced cucumber, tomato, onion and crumbled feta. Top with the yogurt and the rest of the lemon."
+      { "text": "Cut the chicken into cubes of about 3 cm. In a bowl mix the juice of half the lemon, {2 tbsp} of the olive oil, the oregano, half the garlic (grated) and the salt. Add the chicken, mix well and leave for 15 minutes.", "tip": "You can do this in the morning and keep it in the fridge. Not longer than a day, though: the lemon makes chicken mushy." },
+      { "text": "Meanwhile rinse the rice and put it in a pot with {450 ml} water and a pinch of salt. Bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      { "text": "Mix the yogurt with the rest of the garlic and a pinch of salt. Dice the cucumber and tomatoes, slice the onion thinly and crumble the feta.", "tip": "Red onion is milder. With a regular onion, soak the slices in cold water for a few minutes to take away the sharpness." },
+      { "text": "Heat the rest of the oil in a large frying pan or grill pan on medium-high. Add the chicken in one layer and cook for 10 to 12 minutes, turning every few minutes, until golden on all sides.", "tip": "Cut the biggest piece open: it is done when it is white all the way through. Fry in two batches if the pan is crowded, or it steams instead of browning." },
+      "Fill bowls with rice, then the chicken, cucumber, tomato, onion and feta. Top with the garlic yogurt and squeeze over the other lemon half."
     ],
     "tags": ["high-protein"],
     "keepsDays": 3,

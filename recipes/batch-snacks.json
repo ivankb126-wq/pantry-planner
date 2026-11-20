@@ -66,7 +66,14 @@
       { "id": "flour", "quantity": 150, "unit": "g" }, { "id": "baking-powder", "quantity": 10, "unit": "g" },
       { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Heat the oven to 180 °C and line a 12-hole muffin tin.", "Mash the bananas and whisk in the eggs, yogurt, honey and oil.", "Fold in the oats, flour, baking powder and cinnamon. Fill the cases and bake 20 to 22 minutes."],
+    "steps": [
+      "Heat the oven to 180 °C and line a 12-hole muffin tin with paper cases.",
+      { "text": "Mash the bananas in a large bowl with a fork until mostly smooth. Whisk in the eggs, yogurt, honey and oil.", "tip": "The riper the bananas, the better. Black-spotted bananas make the sweetest muffins." },
+      { "text": "In another bowl mix the oats, flour, baking powder and cinnamon. Tip them into the wet mix and fold with a spatula until just combined.", "tip": "Stop when you see no dry flour. A lumpy batter makes light muffins; over-mixing makes them tough." },
+      "Divide the batter between the cases, filling them almost to the top.",
+      { "text": "Bake for 20 to 22 minutes until risen and golden.", "tip": "A skewer pushed into the middle of a muffin should come out clean." },
+      { "text": "Let them cool in the tin for 5 minutes, then on a rack. Keep in a closed box.", "tip": "They keep 4 days. You can also freeze them and take one out the night before." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🧁"
   },
   {
@@ -122,7 +129,12 @@
       { "id": "paprika-powder", "quantity": 1.5, "unit": "tsp" }, { "id": "garlic-powder", "quantity": 0.5, "unit": "tsp" },
       { "id": "salt", "quantity": 0.5, "unit": "tsp" }
     ],
-    "steps": ["Heat the oven to 200 °C. Drain the chickpeas and dry them well on a towel.", "Toss with the oil, spices and salt and spread on a tray.", "Roast 30 to 35 minutes, shaking twice, until crunchy. Cool and keep in a jar."],
+    "steps": [
+      { "text": "Heat the oven to 200 °C. Drain and rinse the chickpeas, then dry them really well by rolling them in a clean towel.", "tip": "This is the secret to crunch. Throw away any loose skins that come off." },
+      "Toss the chickpeas on a baking tray with the oil, paprika, garlic powder and salt, and spread them out in one layer.",
+      { "text": "Roast for 30 to 35 minutes, shaking the tray every 10 minutes, until deep golden and crunchy.", "tip": "Bite one: it should be crisp all the way through. If it is soft in the middle, give them a few more minutes." },
+      { "text": "Let them cool completely on the tray, then keep them in a jar with the lid slightly open.", "tip": "A closed jar traps moisture and makes them soft. If they soften, crisp them for a few minutes in the oven." }
+    ],
     "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray"], "illustration": "🫘"
   },
   {
@@ -182,7 +194,14 @@
       { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "raisins", "quantity": 80, "unit": "g" },
       { "id": "baking-soda", "quantity": 0.5, "unit": "tsp" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Heat the oven to 180 °C. Beat the soft butter and sugar, then the egg.", "Mix in the flour, oats, soda, cinnamon and raisins.", "Put walnut-size balls on lined trays, flatten a little and bake 10 to 12 minutes. Two cookies make a portion."],
+    "steps": [
+      { "text": "Take the butter out of the fridge early so it is soft. Heat the oven to 180 °C and line two baking trays with baking paper.", "tip": "Soft butter dents easily when you press it. In a hurry, cut it into small cubes and leave it near the warm oven." },
+      "Beat the butter and sugar in a bowl with a wooden spoon or mixer until pale and creamy, then beat in the egg.",
+      "Add the flour, oats, baking soda, cinnamon and raisins and mix until no dry bits are left. The dough is thick and sticky.",
+      { "text": "Roll walnut-size balls with your hands, put them on the trays with space between them and flatten each one a little.", "tip": "They spread in the oven, so leave about 5 cm between them. Wet hands stop the dough sticking." },
+      { "text": "Bake for 10 to 12 minutes until golden at the edges but still soft in the middle.", "tip": "They look underdone when you take them out. They firm up as they cool." },
+      { "text": "Leave them on the tray for 5 minutes, then move them to a rack or plate to cool completely. Two cookies make a portion.", "tip": "They keep a week in a closed tin." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "2 baking trays"], "illustration": "🍪"
   },
   {
@@ -239,7 +258,14 @@
       { "id": "flour", "quantity": 220, "unit": "g" }, { "id": "baking-soda", "quantity": 1, "unit": "tsp" },
       { "id": "walnuts", "quantity": 50, "unit": "g" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" }
     ],
-    "steps": ["Heat the oven to 175 °C and line a loaf tin.", "Mash the bananas and mix in the melted butter, sugar and eggs.", "Fold in the flour, soda, cinnamon and chopped walnuts, pour into the tin and bake 50 to 55 minutes until a skewer comes out clean."],
+    "steps": [
+      "Heat the oven to 175 °C and line a loaf tin with baking paper. Melt the butter and leave it to cool a little.",
+      { "text": "Mash the bananas in a large bowl with a fork. Mix in the melted butter, sugar and eggs.", "tip": "The browner the bananas, the sweeter and moister the bread." },
+      { "text": "Chop the walnuts roughly. Add the flour, baking soda, cinnamon and walnuts and fold together until just mixed.", "tip": "Stop when you see no dry flour. Over-mixing makes it dense." },
+      "Pour the batter into the tin and smooth the top.",
+      { "text": "Bake for 50 to 55 minutes, until a skewer pushed into the middle comes out clean.", "tip": "If the top browns too fast before the middle is done, cover it loosely with foil." },
+      { "text": "Cool in the tin for 10 minutes, then lift it out and let it cool completely before slicing.", "tip": "Keeps 4 days wrapped. Slices are lovely toasted for breakfast." }
+    ],
     "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "loaf tin"], "illustration": "🍌"
   },
   {

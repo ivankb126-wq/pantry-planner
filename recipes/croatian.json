@@ -144,11 +144,14 @@
       { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }
     ],
     "steps": [
-      "Simmer the soaked beans with the ribs and bay leaves in 2.5 litres of water for 50 minutes.",
-      "Add the diced potato, carrot and celeriac and cook for 25 minutes.",
-      "Chop the bacon, garlic and parsley very finely together into a paste (pešt) and fry it with the onion in 1 tbsp oil for 3 minutes.",
+      "The night before, put the beans in a big bowl and cover them with plenty of cold water. Leave them to soak overnight.",
+      { "text": "Drain the beans and put them in a large pot with the smoked ribs, bay leaves and {2500 ml} water. Bring to the boil, then simmer on low for 50 minutes.", "tip": "Do not add salt yet. The ribs are salty, and salt added early can keep beans hard." },
+      "Meanwhile peel the potatoes, carrots and celeriac and dice them into small cubes.",
+      "Add the vegetables to the pot and simmer for 25 minutes more, until the beans and vegetables are soft.",
+      { "text": "Make the pešt: chop the bacon, garlic and parsley together on a board until they turn into a paste. Chop the onion.", "tip": "Pešt is the Istrian secret. Chopping everything together releases the flavours into the bacon fat." },
+      "Heat {1 tbsp} of the olive oil in a small pan on medium heat and fry the pešt and onion for 3 minutes, until soft and fragrant.",
       "Stir the pešt and the drained sweetcorn into the soup and simmer for 10 minutes.",
-      "Take out the ribs, cut the meat off the bones and return it. Serve with a drizzle of olive oil."
+      { "text": "Lift out the ribs, cut the meat off the bones and put it back in the pot. Taste and add salt if needed. Serve with a drizzle of the rest of the olive oil.", "tip": "Maneštra is even better the next day. It keeps 4 days in the fridge; add a splash of water when you reheat it." }
     ],
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "comfort"],
     "keepsDays": 4,
