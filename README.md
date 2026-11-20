@@ -4,7 +4,7 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 6** (price pipeline, 262 ingredients, 200 recipes, planner
+Status: **milestone 6** (price pipeline, 262 ingredients, 225 recipes, planner
 engine, the app screens, the living pantry, works offline and installs on
 the iPhone home screen).
 
@@ -88,6 +88,12 @@ npx tsx scripts/try-plan.ts lidl 104 110 1   # chain, store, budget, seed
 Recipes live in [recipes/](recipes) as JSON (one recipe or a list per file),
 checked against [recipes/schema.json](recipes/schema.json). Nutrition is never
 typed in: it is calculated from [data/ingredients.yml](data/ingredients.yml).
+Every recipe has a `family`, the kind of dish (pasta, rice, soup, stew,
+curry, oven, pan-grill, salad, bread, eggs, pie, porridge, pancakes, baking,
+pudding, fruit, snacks). It drives the type filter, "Similar dishes" and
+variety in plans, and makes variations easy: copy a dish of the same family
+and change what makes it different. Recipes written from a cookbook or blog
+are in our own words and say so in the description ("Inspired by ...").
 After adding or changing recipes, run:
 
 ```bash
