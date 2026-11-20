@@ -134,10 +134,13 @@
       { "id": "salt", "quantity": 0.25, "unit": "tsp" }
     ],
     "steps": [
-      "Heat the oven to 200 °C. Fry the onion and pepper in the oil for 6 minutes, add the drained beans, corn, cumin and half the salt, and crush lightly.",
-      "Season the passata with chili and the rest of the salt and spread a third in a baking dish.",
-      "Fill and roll the tortillas, lay them in the dish, pour over the rest of the sauce and top with grated cheese.",
-      "Bake 20 minutes until bubbling."
+      "Heat the oven to 200 °C. Chop the onion and pepper. Drain and rinse the beans, drain the sweetcorn and grate the cheese.",
+      "Heat the oil in a large frying pan on medium and fry the onion and pepper for 6 minutes until soft.",
+      { "text": "Add the beans, sweetcorn, cumin and half the salt and cook for 2 minutes. Crush about half the beans with a fork or potato masher.", "tip": "Crushed beans hold the filling together so it does not fall out of the tortillas." },
+      "Stir the chili flakes and the rest of the salt into the passata. Spread about a third of it over the bottom of a baking dish.",
+      { "text": "Spoon the filling along the middle of each tortilla, roll it up tightly and lay it seam side down in the dish, close together.", "tip": "If the tortillas crack when you roll them, warm them for a few seconds in the microwave or a dry pan first." },
+      "Pour the rest of the passata over the top, making sure the ends are covered, then scatter over the cheese.",
+      { "text": "Bake for 20 minutes until the cheese is melted and bubbling at the edges.", "tip": "Let it stand for a few minutes before serving, so the enchiladas hold together when you lift them out." }
     ],
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
@@ -170,10 +173,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Soften the sliced onion and peppers in the oil for 10 minutes. Add the garlic and spices.",
-      "Add the tomatoes and salt and simmer 10 minutes until thick.",
-      "Make 8 hollows and crack in the eggs. Cover and cook gently 6 to 8 minutes until the whites set.",
-      "Scatter with feta and parsley and serve from the pan with bread."
+      "Slice the onion and peppers into thin strips and chop the garlic.",
+      "Heat the olive oil in a large frying pan with a lid on medium heat. Fry the onion and peppers for 10 minutes, stirring now and then, until soft and starting to brown.",
+      "Add the garlic, cumin and paprika and stir for 1 minute until fragrant.",
+      { "text": "Pour in the tomatoes and the salt, crush any big pieces with a spoon and simmer for 10 minutes until the sauce thickens.", "tip": "The sauce must be thick enough to hold the eggs in place. If it is watery, give it a few more minutes." },
+      { "text": "Make {8} small hollows in the sauce with a spoon and crack an egg into each. Turn the heat to low, cover and cook for 6 to 8 minutes.", "tip": "Done when the whites are white all the way through but the yolks still jiggle. For firm yolks, cook a few minutes longer." },
+      "Crumble the feta over the top, scatter with chopped parsley and bring the pan to the table. Serve with bread for dipping."
     ],
     "tags": ["vegetarian", "high-protein", "one-pot"],
     "keepsDays": 1,
@@ -242,10 +247,13 @@
       { "id": "salt", "quantity": 1.5, "unit": "tsp" }
     ],
     "steps": [
-      "Simmer the lentils in plenty of water for 15 minutes. Drain.",
-      "Slice the onions thinly and fry them slowly in the oil for 25 minutes until deep brown. Take out half for the top.",
-      "Add the rice, cumin, cinnamon, salt, lentils and 500 ml water to the pan. Cover and cook 18 minutes on low heat.",
-      "Mix the yogurt with the grated cucumber. Serve the lentils topped with the crispy onions and the yogurt."
+      { "text": "Rinse the lentils, put them in a pot with plenty of water and bring to the boil. Simmer for 15 minutes until just tender, then drain.", "tip": "They should still have a little bite. They cook again with the rice." },
+      "While the lentils cook, halve the onions and slice them thinly into half moons. Rinse the rice in a sieve until the water runs almost clear.",
+      { "text": "Heat the olive oil in a wide pan with a lid on medium heat. Add the onions with a pinch of the salt and fry for 25 minutes, stirring every few minutes, until deep brown and crisp at the edges.", "tip": "Be patient: the onions are the flavour of the dish. Turn the heat down if they brown in patches before softening. Dark brown is good, black is not." },
+      "Lift out about half of the onions with a slotted spoon and spread them on a plate, so they crisp up as they cool.",
+      { "text": "Add the rice, cumin and cinnamon to the onions left in the pan and stir for 1 minute. Add the lentils, the rest of the salt and {500 ml} water. Bring to the boil, cover, turn the heat to low and cook for 18 minutes.", "tip": "Do not lift the lid while it cooks. It is ready when the water has gone and you see little holes on the surface." },
+      "Turn off the heat and leave it covered for 5 minutes. Meanwhile grate the cucumber, squeeze out the water with your hands and mix it into the yogurt with a pinch of salt.",
+      "Fluff the rice and lentils with a fork, pile onto plates and top with the crispy onions. Serve the cucumber yogurt on the side."
     ],
     "tags": ["vegetarian", "cook-once-eat-twice"],
     "keepsDays": 3,
@@ -458,10 +466,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Boil the peeled potatoes 20 minutes, then mash with the warm milk, butter and a pinch of salt.",
-      "Fry the onion in 1 tbsp oil, add the rinsed sauerkraut, sugar, paprika and a splash of water and braise 20 minutes.",
-      "Season the chops with salt and fry in the rest of the oil 4 minutes a side. Rest 3 minutes.",
-      "Serve the chops with the mash and sauerkraut."
+      { "text": "Peel the potatoes, cut them into even chunks and put them in a pot of cold water with a pinch of the salt. Bring to the boil and cook for 20 minutes.", "tip": "They are done when a knife slides into a chunk with no resistance." },
+      { "text": "While they cook, chop the onion. Put the sauerkraut in a sieve, rinse it briefly under cold water and squeeze it out.", "tip": "Rinsing takes away some of the sourness and salt. Taste it first: if you like it sour, skip the rinse." },
+      { "text": "Heat {1 tbsp} of the oil in a pot on medium heat and fry the onion for 5 minutes until soft. Add the sauerkraut, sugar, paprika and {100 ml} water, cover and braise on low heat for 20 minutes, stirring now and then.", "tip": "Add a splash more water if it gets dry. It should be soft and juicy, not swimming." },
+      { "text": "Pat the pork chops dry. If they have a fat edge, snip it in a few places so they do not curl. Season both sides with salt.", "tip": "Dry meat browns well. Wet meat steams and turns grey." },
+      "Drain the potatoes and let them steam dry in the pot for a minute. Warm the milk, then mash the potatoes with the milk, butter and a pinch of salt until smooth. Cover to keep warm.",
+      { "text": "Heat the rest of the oil in a frying pan on medium-high. Fry the chops for 4 minutes on each side until golden.", "tip": "They are done when the middle is just white with clear juices. A thin line of pale pink is fine for pork loin." },
+      "Rest the chops on a plate for 3 minutes, then serve with the mash and sauerkraut, with any juices from the plate poured over."
     ],
     "tags": ["high-protein", "comfort"],
     "keepsDays": 2,

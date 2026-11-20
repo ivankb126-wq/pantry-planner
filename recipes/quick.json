@@ -19,10 +19,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp", "note": "for the pasta water" }
     ],
     "steps": [
-      "Cook the spaghetti in salted water. Fry the diced bacon in a dry pan until crisp.",
-      "Whisk the eggs with the grated parmesan and plenty of pepper.",
-      "Keep a cup of pasta water, drain, and toss the pasta with the bacon off the heat.",
-      "Pour in the egg mix with a splash of pasta water and stir quickly until creamy, not scrambled."
+      "Bring a large pot of water with the salt to the boil. Cut the bacon into small strips and grate the parmesan finely.",
+      { "text": "Whisk the eggs in a bowl with the parmesan and the black pepper until smooth. Leave the bowl near the stove.", "tip": "Take the eggs out of the fridge early if you can. Room-temperature eggs are less likely to scramble." },
+      { "text": "Put the bacon in a large cold frying pan without oil and set it on medium heat. Fry for 8 minutes, stirring now and then, until golden and crisp. Turn off the heat and leave the bacon and its fat in the pan.", "tip": "The fat that melts out is part of the sauce, so do not pour it away." },
+      { "text": "Cook the spaghetti until al dente, a little less than the packet says.", "tip": "Before you drain it, scoop out a mug of the pasta water." },
+      "Drain the spaghetti and tip it straight into the pan with the bacon, off the heat. Toss well so it gets coated in the fat.",
+      { "text": "Wait a moment until the pan has stopped sizzling. Pour in the egg mix with a splash of pasta water and toss quickly for 1 to 2 minutes until it turns into a glossy, creamy sauce.", "tip": "Runny? Keep tossing: the heat of the pasta thickens it. Starting to look grainy? Add a splash more pasta water right away, the egg is beginning to scramble." },
+      { "text": "Serve straight away with extra pepper on top.", "tip": "Carbonara does not wait. The sauce sets as it cools." }
     ],
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,
@@ -187,10 +190,13 @@
       { "id": "tomato", "quantity": 2, "unit": "piece", "note": "cherry tomatoes, halved" }
     ],
     "steps": [
-      "Cook the pasta in salted water.",
-      "Warm the sliced garlic and chili in the oil until just golden. Add the prawns and cook 3 minutes until pink.",
-      "Add the halved tomatoes, the lemon juice and a ladle of pasta water.",
-      "Toss with the drained pasta and parsley."
+      { "text": "If the prawns are frozen, thaw them in a bowl of cold water for 15 minutes, then drain and pat them dry.", "tip": "Dry prawns fry instead of boiling in their own water." },
+      "Bring a large pot of salted water to the boil. Slice the garlic thinly, halve the tomatoes and chop the parsley.",
+      { "text": "Cook the linguine until al dente, a little less than the packet says.", "tip": "Before you drain it, scoop out a mug of the pasta water." },
+      "Meanwhile put the olive oil, garlic and chili flakes in a large cold frying pan and warm on medium-low for 3 minutes, until the garlic is just golden.",
+      { "text": "Turn the heat up to medium-high, add the prawns and cook for 3 minutes, turning once, until they are pink and curled.", "tip": "Prawns go rubbery when overcooked. Take them off as soon as they are pink all over and shaped like a C. An O shape means overcooked." },
+      "Add the tomatoes, the lemon juice and a ladle of pasta water and let it bubble for 1 minute.",
+      "Add the drained linguine and the parsley and toss for 1 minute until the pasta is coated in the glossy sauce. Serve straight away."
     ],
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
@@ -322,10 +328,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp", "note": "for the pasta water" }
     ],
     "steps": [
-      "Cook the spaghetti in salted water.",
-      "Gently warm the sliced garlic and chili in 4 tbsp oil until pale golden. Add the spinach to wilt.",
-      "Fry the eggs in the rest of the oil.",
-      "Toss the pasta with the garlic oil, spinach, a splash of pasta water and parmesan. Top each plate with an egg."
+      { "text": "Bring a large pot of water with the salt to the boil. Peel the garlic and slice it as thinly as you can. Wash the spinach and grate the parmesan." },
+      { "text": "Add the spaghetti to the boiling water, stir so it does not stick together, and cook until al dente, a little less than the packet says.", "tip": "Before you drain it, keep a mug of the pasta water. You need it for the sauce." },
+      { "text": "Meanwhile put {4 tbsp} of the olive oil, the garlic and the chili flakes in a large cold frying pan. Warm on low heat for 4 to 5 minutes, stirring, until the garlic is pale golden.", "tip": "Go slowly: the garlic should sizzle gently, not fry hard. If the edges start to turn brown, take the pan off the heat at once." },
+      { "text": "Add the spinach to the garlic oil a handful at a time and stir until it wilts, about 2 minutes. Take the pan off the heat." },
+      { "text": "In a second pan, heat the rest of the oil on medium and fry the eggs for 3 to 4 minutes, until the whites are set and the yolks are still runny.", "tip": "If the whites on top stay clear and wobbly, put a lid on the pan for the last moment." },
+      { "text": "Drain the spaghetti and add it to the garlic and spinach with a good splash of the pasta water and half the parmesan. Toss over low heat for 1 minute until glossy.", "tip": "The oil, water and cheese make a light sauce that coats the pasta. Add more pasta water if it looks dry or oily." },
+      { "text": "Divide between plates, put an egg on top of each and sprinkle with the rest of the parmesan.", "tip": "Break the yolk over the pasta as you eat. It becomes part of the sauce." }
     ],
     "tags": ["quick", "vegetarian"],
     "keepsDays": 1,
@@ -456,10 +465,13 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Pour 300 ml boiling water over the couscous with half the salt and 1 tbsp oil. Cover for 5 minutes, then fluff with lemon juice and parsley.",
-      "Season the salmon and fry skin side down in 1 tbsp oil for 5 minutes, turn and cook 2 to 3 minutes more.",
-      "Wilt the spinach with the garlic in the rest of the oil.",
-      "Serve the salmon on the couscous with the spinach."
+      "Boil a kettle. Chop the parsley, slice the garlic and cut the lemon in half. Take the salmon out of the fridge.",
+      { "text": "Put the couscous in a bowl with half the salt and {1 tbsp} of the olive oil. Pour over {300 ml} boiling water, cover with a plate and leave for 5 minutes.", "tip": "Too much water makes couscous mushy, so measure it." },
+      "Pat the salmon dry with kitchen paper and sprinkle it with most of the rest of the salt.",
+      { "text": "Heat {1 tbsp} oil in a frying pan on medium-high. Lay the salmon in skin side down, press gently for a few seconds, then fry for 5 minutes without moving it.", "tip": "The skin is ready when it lets go of the pan by itself and the colour has turned pale two thirds of the way up the side." },
+      { "text": "Turn the salmon and cook 2 to 3 minutes more, then move it to a plate.", "tip": "Done when it flakes when pressed but is still a little glossy in the middle. Overcooked salmon gets dry." },
+      "In the same pan, heat the rest of the oil on medium. Add the garlic for a few seconds, then the spinach with a pinch of salt, and stir until it wilts, about 2 minutes.",
+      "Fluff the couscous with a fork and stir in the parsley and the juice of half the lemon. Serve with the salmon and spinach, and the other lemon half cut into wedges."
     ],
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
@@ -521,10 +533,12 @@
       { "id": "salt", "quantity": 0.25, "unit": "tsp" }
     ],
     "steps": [
-      "Beat the eggs with salt and the chopped parsley.",
-      "Melt half the butter in a pan, pour in half the eggs and stir gently until almost set.",
-      "Scatter with half the cheese, fold and slide onto a plate. Repeat.",
-      "Serve with sliced tomato and cucumber dressed with oil, and bread."
+      "Make the salad first: slice the tomatoes and cucumber, arrange them on two plates and drizzle with the olive oil and a pinch of the salt. Grate the cheese and chop the parsley.",
+      "Crack the eggs into a bowl, add the rest of the salt and the parsley and beat with a fork until no streaks of white are left.",
+      { "text": "Heat a small non-stick frying pan on medium. Add half the butter and wait until it foams.", "tip": "When the foam starts to settle the pan is hot enough. If the butter turns brown, lift the pan off the heat for a moment." },
+      { "text": "Pour in half the egg. Let it sit for a few seconds, then stir gently with a spatula, pulling the set edges into the middle, for about 1 minute.", "tip": "Stop stirring while the top still looks a little wet and creamy. It keeps cooking on the plate." },
+      "Scatter half the cheese over the omelette and leave it a few seconds to start melting. Fold it in half and slide it onto a plate next to the salad.",
+      { "text": "Make the second omelette the same way with the rest of the butter, egg and cheese. Serve with the bread.", "tip": "Keep the first omelette warm under an upturned bowl while you make the second." }
     ],
     "tags": ["quick", "vegetarian", "high-protein"],
     "keepsDays": 0,
@@ -647,10 +661,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Cook the penne in salted water.",
-      "Warm the garlic and chili in the oil, add the tomatoes and simmer 12 minutes.",
-      "Add the drained chickpeas and heat through.",
-      "Toss with the pasta and parsley."
+      { "text": "Fill a large pot with about {3000 ml} water, add the salt, cover and bring to the boil. Meanwhile slice the garlic thinly, drain and rinse the chickpeas and chop the parsley.", "tip": "The water should taste lightly salty. It is the only chance to season the pasta itself." },
+      { "text": "Put the olive oil, garlic and chili flakes in a large cold frying pan, then set it on medium-low heat. Cook for 2 to 3 minutes, stirring, until the garlic sizzles gently and turns pale gold.", "tip": "Starting in a cold pan stops the garlic burning. Brown garlic tastes bitter, so lift the pan off the heat if it colours too fast." },
+      { "text": "Pour in the canned tomatoes, crush any big pieces with a spoon and bring to a bubble. Simmer on medium-low for 12 minutes, stirring now and then, until the sauce thickens.", "tip": "It is thick enough when a spoon dragged across the pan leaves a gap that fills slowly." },
+      { "text": "While the sauce simmers, add the penne to the boiling water and stir once. Cook it until al dente, a little less than the packet says, stirring a couple of times.", "tip": "Al dente means it still has a slight bite in the middle. It finishes cooking in the sauce." },
+      { "text": "Add the chickpeas to the sauce and let them heat through for 3 minutes. Taste and add a pinch of salt if it needs it." },
+      { "text": "Scoop out a mug of the pasta water, then drain the penne. Tip it into the sauce with a splash of the pasta water and toss over the heat for 1 minute until every piece is coated. Scatter with the parsley and serve.", "tip": "The starchy pasta water helps the sauce cling to the pasta. Add more a little at a time if it looks dry." }
     ],
     "tags": ["quick", "vegan", "vegetarian"],
     "keepsDays": 3,

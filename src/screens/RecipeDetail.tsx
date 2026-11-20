@@ -10,7 +10,7 @@ import { planResult, portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type AppData, useApp } from '../app/state';
 import { formatAmount, formatEur } from '../lib/format';
-import { NUTRIENTS, stepText, stepTip } from '../lib/nutrition';
+import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
@@ -209,8 +209,8 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         <ol class="steps">
           {r.steps.map((s, i) => (
             <li key={i}>
-              {stepText(s)}
-              {stepTip(s) && <span class="step-tip small">Tip: {stepTip(s)}</span>}
+              {scaleStep(stepText(s), servings / r.servings)}
+              {stepTip(s) && <span class="step-tip small">Tip: {scaleStep(stepTip(s)!, servings / r.servings)}</span>}
             </li>
           ))}
         </ol>

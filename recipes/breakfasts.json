@@ -9,7 +9,13 @@
       { "id": "apple", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
       { "id": "walnuts", "quantity": 20, "unit": "g" }, { "id": "honey", "quantity": 1, "unit": "tsp", "optional": true }
     ],
-    "steps": ["Simmer the oats in the milk for 5 minutes, stirring.", "Grate in the apple, add the cinnamon and cook 2 minutes more.", "Top with chopped walnuts and a little honey if you like."],
+    "steps": [
+      "Put the oats and milk in a small pot and bring to a gentle simmer on medium heat.",
+      { "text": "Turn the heat to low and cook for 5 minutes, stirring often, until creamy.", "tip": "Stirring often makes it creamy and stops it sticking. Add a splash of water if it gets too thick." },
+      "Meanwhile chop the walnuts roughly and grate the apple, skin on, around the core.",
+      "Stir the apple and cinnamon into the porridge and cook 2 minutes more.",
+      "Spoon into bowls and top with the walnuts and a little honey."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥣"
   },
   {
@@ -101,7 +107,13 @@
       { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "lemon", "quantity": 0.25, "unit": "piece" },
       { "id": "chili-flakes", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Boil the eggs for 6.5 minutes and cool in cold water.", "Mash the avocado with lemon juice, salt and chili.", "Spread on toast and top with the halved eggs."],
+    "steps": [
+      { "text": "Bring a small pot of water to the boil. Lower in the eggs gently with a spoon and boil for 6.5 minutes.", "tip": "This gives a set white and a soft, jammy yolk. For a firm yolk, boil them about 9 minutes." },
+      "Lift the eggs into a bowl of cold water and leave them for 2 minutes so they are easy to peel.",
+      { "text": "Meanwhile halve the avocado, remove the stone and scoop the flesh into a bowl. Mash it with a fork with the lemon juice, salt and chili flakes.", "tip": "A ripe avocado gives a little when you press near the stem. Leave the mash a bit chunky." },
+      "Toast the bread. Peel the eggs and cut them in half.",
+      "Spread the avocado thickly on the toast and put the egg halves on top, with another tiny pinch of salt on the yolks."
+    ],
     "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "toaster"], "illustration": "🥑"
   },
   {
@@ -141,7 +153,12 @@
       { "id": "milk", "quantity": 100, "unit": "ml" }, { "id": "apple", "quantity": 1, "unit": "piece" },
       { "id": "raisins", "quantity": 20, "unit": "g" }, { "id": "hazelnuts", "quantity": 20, "unit": "g" }
     ],
-    "steps": ["Mix the oats, yogurt, milk, raisins and grated apple. Cover and chill overnight.", "Stir and top with chopped hazelnuts."],
+    "steps": [
+      { "text": "The evening before, grate the apple, skin on, into a bowl.", "tip": "Mix it with the yogurt straight away so it does not go brown." },
+      "Add the oats, yogurt, milk and raisins and stir well. Cover and put it in the fridge overnight.",
+      { "text": "In the morning, chop the hazelnuts roughly. If you like, toast them in a dry pan on medium heat for 3 minutes, shaking the pan.", "tip": "Toasted hazelnuts taste much nuttier. Take them off when they smell toasty and start to brown." },
+      "Stir the muesli, add a splash of milk if it is too thick, and top with the hazelnuts."
+    ],
     "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 2, "equipment": ["bowl"], "illustration": "🍎"
   },
   {
@@ -168,7 +185,13 @@
       { "id": "hard-cheese", "quantity": 50, "unit": "g" }, { "id": "butter", "quantity": 10, "unit": "g" },
       { "id": "cucumber", "quantity": 0.3, "unit": "piece" }
     ],
-    "steps": ["Fill the bread with ham and cheese and butter the outsides.", "Toast in a pan or sandwich maker 2 to 3 minutes a side until golden and melted.", "Serve with cucumber slices."],
+    "steps": [
+      "Slice the cheese thinly, or grate it so it melts faster.",
+      { "text": "Cover half the slices of bread with ham and cheese and put the other slices on top. Spread the butter thinly on the outsides.", "tip": "Butter on the outside, not inside, is what makes the crust golden and crisp." },
+      { "text": "Heat a frying pan on medium-low. Put in the sandwiches, press down with a spatula and cook for 3 minutes until golden underneath.", "tip": "Low heat gives the cheese time to melt before the bread burns. A sandwich maker works too: 3 to 4 minutes, closed." },
+      "Flip them and cook the other side for 2 to 3 minutes, pressing again, until golden and the cheese starts to melt out at the edges.",
+      "Cut them diagonally and serve with cucumber slices on the side."
+    ],
     "tags": ["quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan or sandwich maker"], "illustration": "🥪"
   },
   {
@@ -181,7 +204,12 @@
       { "id": "banana", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 1, "unit": "pinch" },
       { "id": "milk", "quantity": 300, "unit": "ml", "note": "a glass each" }
     ],
-    "steps": ["Toast the bread and spread with peanut butter.", "Top with sliced banana and a pinch of cinnamon. Serve with a glass of milk."],
+    "steps": [
+      "Toast the bread until golden.",
+      "Spread the peanut butter on the toast while it is still warm, so it softens and spreads easily.",
+      { "text": "Peel the banana, slice it into rounds and lay them on top.", "tip": "A ripe banana with a few brown spots is the sweetest." },
+      "Sprinkle with a pinch of cinnamon and serve with a glass of milk each."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍌"
   },
   {
@@ -195,7 +223,13 @@
       { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "bread", "quantity": 100, "unit": "g" },
       { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Fry the onion and pepper strips (and bacon) in the oil for 6 minutes.", "Add the beaten eggs and salt and stir until just set.", "Serve with bread."],
+    "steps": [
+      "Cut the pepper into thin strips, slice the onion and dice the bacon. Beat the eggs with the salt in a bowl.",
+      { "text": "Heat the oil in a frying pan on medium. Fry the bacon, onion and pepper for 6 minutes, stirring, until soft and lightly browned.", "tip": "For a vegetarian version, leave out the bacon and fry the vegetables in a little more oil." },
+      "Turn the heat to low and pour in the eggs. Let them sit for a few seconds, then stir slowly, folding from the edges to the middle.",
+      { "text": "Take the pan off the heat while the eggs still look slightly wet, after about 2 minutes.", "tip": "Kajgana should be soft and creamy. The eggs keep cooking in the hot pan for a moment." },
+      "Serve straight away with bread."
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🫑"
   },
   {
@@ -207,7 +241,14 @@
       { "id": "polenta", "quantity": 120, "unit": "g" }, { "id": "yogurt", "quantity": 400, "unit": "g" },
       { "id": "butter", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" }
     ],
-    "steps": ["Bring 500 ml salted water to the boil, pour in the cornmeal in one go and make a hole in the middle with a spoon handle.", "Cook 15 minutes on low heat, then pour off a little water and break into crumbs with a fork. Stir in the butter.", "Serve in bowls with cold yogurt."],
+    "steps": [
+      { "text": "Bring {500 ml} water with the salt to the boil in a medium pot with a lid.", "tip": "A pot with a heavy base helps: the cornmeal sits on the bottom for a while and should not burn." },
+      { "text": "Pour all the cornmeal (polenta) into the middle of the boiling water in one go. Do not stir. It forms a mound in the water.", "tip": "Not stirring is the trick for žganci: the mound cooks from the outside in and later breaks into crumbs instead of turning into smooth polenta." },
+      { "text": "Push the handle of a wooden spoon into the middle of the mound, right down to the bottom, to make a hole. Turn the heat to low, half cover the pot and cook for 15 minutes.", "tip": "The hole lets the water bubble up through the middle so the inside cooks too. Small bubbles are enough." },
+      { "text": "Carefully pour most of the cooking water into a cup and keep it. Break the cornmeal into small crumbs with a fork or wooden spoon, scraping the bottom of the pot.", "tip": "If it still looks wet and doughy, keep it on low heat for another minute while you break it up." },
+      { "text": "Add the butter, stir it through the crumbs and put the lid on. Leave on the lowest heat for 5 minutes so the crumbs dry out a little.", "tip": "Too dry or hard? Sprinkle back a spoon or two of the cooking water. They are ready when the crumbs are separate, soft and a little shiny." },
+      { "text": "Spoon the žganci into bowls and serve with the cold yogurt on the side or poured over.", "tip": "The traditional way: a spoon of warm žganci, then a sip of cold yogurt." }
+    ],
     "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["saucepan"], "illustration": "🌽"
   },
   {
@@ -220,7 +261,12 @@
       { "id": "sugar", "quantity": 2, "unit": "tsp" }, { "id": "cocoa", "quantity": 1, "unit": "tsp" },
       { "id": "frozen-berries", "quantity": 100, "unit": "g", "optional": true }
     ],
-    "steps": ["Bring the milk to a simmer, whisk in the semolina and stir 5 minutes until thick.", "Serve sprinkled with cocoa and sugar, or with berries."],
+    "steps": [
+      { "text": "Take the berries out of the freezer to thaw a little. Pour the milk into a pot and warm it on medium heat until small bubbles appear at the edge, about 4 minutes.", "tip": "Stay close: milk boils over quickly. Stir now and then so it does not catch on the bottom." },
+      { "text": "Turn the heat to low. Pour in the semolina in a thin stream while whisking all the time.", "tip": "Pouring slowly and whisking stops lumps. If a few form, press them against the side of the pot." },
+      { "text": "Keep stirring on low heat for 5 minutes until thick and creamy, like a soft pudding.", "tip": "It thickens more as it cools. If it gets too thick, stir in a splash of milk." },
+      "Spoon into bowls. Mix the sugar and cocoa and sprinkle it over the top, or top with the berries."
+    ],
     "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥛"
   },
   {
@@ -365,7 +411,13 @@
       { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 1, "unit": "pinch" },
       { "id": "bread", "quantity": 120, "unit": "g" }
     ],
-    "steps": ["Mix the yogurt with the grated garlic and spread on two plates.", "Poach the eggs in gently simmering water for 3 minutes.", "Melt the butter with paprika and chili. Put the eggs on the yogurt, pour over the butter and serve with bread."],
+    "steps": [
+      { "text": "Take the yogurt out of the fridge. Grate the garlic finely, mix it into the yogurt with a pinch of salt and spread it on two plates.", "tip": "Yogurt at room temperature is nicer under warm eggs, so leave it out while you do the rest." },
+      "Fill a medium pot with water about 8 cm deep and bring it to a gentle simmer, with small bubbles only. Crack each egg into its own cup.",
+      { "text": "Stir the water to make a gentle whirl and slide in the eggs one by one, close to the surface. Cook for 3 minutes.", "tip": "Very fresh eggs keep their shape best. They are done when the whites are set and the yolk wobbles when you lift an egg with a slotted spoon." },
+      { "text": "Meanwhile melt the butter in a small pan on low heat. Take it off the heat and stir in the paprika and chili flakes.", "tip": "Paprika burns quickly. Stirring it in off the heat turns the butter red without making it bitter." },
+      "Lift the eggs out with a slotted spoon, let the water drip off and set them on the yogurt. Pour the red butter over and serve with toasted bread."
+    ],
     "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["saucepan", "small pan"], "illustration": "🥚"
   },
   {

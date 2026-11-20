@@ -96,7 +96,11 @@ for unusual values.
 
 A step is plain text, or `{ "text": "...", "tip": "..." }` when it helps to
 say how to tell it is done ("Done when the onion is soft and golden").
-Cooking mode shows the tip under the step. A recipe can have a free photo:
+Cooking mode shows the tip under the step. Amounts in a step that should
+grow or shrink with the number of people go in braces: `{700 ml}`,
+`{2 tbsp}`, `{8}` (for 8 eggs). For 2 people a 4-serving recipe then reads
+"350 ml". The cooking timer uses the longest time a step mentions, so write
+the main wait as the longest. A recipe can have a free photo:
 `"photo"` (a URL or a file in `public/`) and `"photoCredit"` (author and
 licence). A photo you take in the app replaces it on your phone.
 

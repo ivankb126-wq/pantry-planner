@@ -238,10 +238,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Cook the rice. Fry the chopped onions in the oil for 10 minutes until golden.",
-      "Add the garlic, ginger and spices and stir 1 minute.",
-      "Add the tomatoes, chickpeas, salt and 200 ml water and simmer 15 minutes, crushing a few chickpeas to thicken.",
-      "Stir in the spinach until wilted, add a squeeze of lemon and serve with rice."
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat until you serve.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Chop the onions finely. Grate or finely chop the garlic and ginger. Drain and rinse the chickpeas.",
+      { "text": "Heat the sunflower oil in a large pan on medium heat. Fry the onions for 10 minutes, stirring now and then, until soft and golden brown.", "tip": "Golden onions give the sauce its sweet, deep taste. If they stick, add a spoon of water and scrape the pan." },
+      { "text": "Add the garlic, ginger, curry powder, cumin and turmeric and stir for 1 minute until it smells strongly of spice.", "tip": "Keep stirring so the spices do not burn. If the pan looks dry, add a spoon of water." },
+      { "text": "Add the tomatoes, chickpeas, salt and {200 ml} water. Bring to a bubble and simmer for 15 minutes, stirring now and then. Halfway through, crush a few chickpeas against the side of the pan with your spoon.", "tip": "The crushed chickpeas thicken the sauce. It is ready when it coats the back of a spoon." },
+      "Stir in the spinach a handful at a time until it wilts, about 2 minutes. Squeeze in the lemon juice, taste and add salt if needed. Serve with the rice."
     ],
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,
@@ -275,10 +277,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Rinse the lentils. Cook the rice.",
-      "Soften the onion in the oil for 6 minutes, add the garlic, ginger and spices for 1 minute.",
-      "Add the lentils, tomatoes, coconut milk, salt and 700 ml water. Simmer 20 minutes, stirring, until thick and soft.",
-      "Stir in the spinach and serve with the rice."
+      { "text": "Rinse the lentils in a sieve until the water runs clear. Start the rice: put it in a pot with {450 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy. Do not peek while it cooks." },
+      "Chop the onion finely, and grate or finely chop the garlic and ginger.",
+      "Heat the oil in a large pot on medium heat and fry the onion for 6 minutes until soft and golden at the edges.",
+      "Add the garlic, ginger, turmeric, cumin and curry powder and stir for 1 minute until fragrant.",
+      { "text": "Add the lentils, tomatoes, coconut milk, salt and {700 ml} water. Bring to the boil, then simmer on low for 20 minutes, stirring every few minutes so it does not stick.", "tip": "It is ready when the lentils have fallen apart into a thick, soft porridge. Add a splash of water if it gets too thick before then." },
+      { "text": "Stir in the spinach until it wilts, about 2 minutes. Taste and add salt if needed. Serve with the rice.", "tip": "Dal thickens as it stands. Loosen leftovers with a little water when you reheat them." }
     ],
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,

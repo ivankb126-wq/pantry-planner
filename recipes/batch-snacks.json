@@ -149,7 +149,13 @@
       { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "raisins", "quantity": 40, "unit": "g" },
       { "id": "peanut-butter", "quantity": 60, "unit": "g" }
     ],
-    "steps": ["Grate the apples and mix with the oats, cinnamon and raisins.", "Stir in the milk and kefir and divide between 4 jars.", "Top each with a spoon of peanut butter and chill overnight."],
+    "steps": [
+      { "text": "Get {4} jars or boxes with lids ready. Wash the apples and grate them coarsely, skin on, into a large bowl.", "tip": "Grate around the core and stop when you reach the seeds." },
+      "Add the oats, cinnamon and raisins and mix so the apple is spread through.",
+      "Pour in the milk and kefir and stir well. It looks very runny now, which is right: the oats soak it up overnight.",
+      { "text": "Divide between the jars, put a spoon of peanut butter on top of each, close them and put them in the fridge overnight.", "tip": "They keep 4 days in the fridge. Eat them cold, or warm one in the microwave." },
+      "To eat, stir the peanut butter through. Add a splash of milk if it is too thick."
+    ],
     "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars", "grater"], "illustration": "🍏"
   },
   {
@@ -275,7 +281,13 @@
       { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
       { "id": "butter", "quantity": 15, "unit": "g", "optional": true }
     ],
-    "steps": ["Heat the oil in a large pot with 3 kernels. When they pop, add the rest and cover.", "Shake the pot until the popping slows, about 3 minutes.", "Toss with paprika, salt and melted butter if you like. Keep leftovers in a closed bag."],
+    "steps": [
+      { "text": "Put the oil and {3} popcorn kernels in a large pot with a lid and set it on medium-high heat. Wait until those kernels pop.", "tip": "When the test kernels pop, the oil is at the right heat. It takes 2 to 3 minutes." },
+      { "text": "Add the rest of the kernels in one layer, put the lid on and take the pot off the heat for 30 seconds.", "tip": "This short pause warms all the kernels evenly, so more of them pop at the same time." },
+      "Put the pot back on the heat. Holding the lid on, shake it gently every few seconds while it pops, about 3 minutes.",
+      { "text": "When there are a few seconds between pops, take the pot off the heat and tip the popcorn into a big bowl.", "tip": "Do not wait for the last kernels: the popcorn at the bottom burns quickly." },
+      { "text": "Melt the butter and pour it over, then sprinkle with the paprika and salt and toss well. Once cool, keep it in a closed bag or tin.", "tip": "Without the butter it stays crisp for longer." }
+    ],
     "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["large pot with lid"], "illustration": "🍿"
   }
 ]

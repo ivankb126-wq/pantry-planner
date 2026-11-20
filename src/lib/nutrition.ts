@@ -51,6 +51,30 @@ export function stepTip(s: string | RecipeStep): string | null {
   return typeof s === 'string' ? null : (s.tip ?? null);
 }
 
+/** An amount in a step that grows with the servings: "{700 ml}", "{2 tbsp}", "{8}". */
+export const STEP_AMOUNT = /\{(\d+(?:\.\d+)?)(?:\s*(g|ml|tbsp|tsp))?\}/g;
+
+function kitchenAmount(n: number, unit: string | undefined): string {
+  const num = (x: number) => x.toLocaleString('en-GB', { maximumFractionDigits: x < 10 ? 1 : 0 });
+  if (unit === 'g' || unit === 'ml') {
+    const r = n >= 100 ? Math.round(n / 10) * 10 : n >= 20 ? Math.round(n / 5) * 5 : Math.max(1, Math.round(n));
+    return r >= 1000 ? `${num(r / 1000)} ${unit === 'g' ? 'kg' : 'l'}` : `${r} ${unit}`;
+  }
+  if (unit) {
+    const q = Math.max(0.25, Math.round(n * 4) / 4);
+    const whole = Math.floor(q);
+    const frac = q - whole;
+    const f = frac === 0.25 ? '¼' : frac === 0.5 ? '½' : frac === 0.75 ? '¾' : '';
+    return `${whole > 0 ? whole : ''}${f || (whole === 0 ? '0' : '')} ${unit}`;
+  }
+  return String(Math.max(1, Math.round(n)));
+}
+
+/** Step text for a number of servings: "{700 ml}" at half the servings reads "350 ml". */
+export function scaleStep(text: string, factor = 1): string {
+  return text.replace(STEP_AMOUNT, (_, n: string, unit?: string) => kitchenAmount(Number(n) * factor, unit));
+}
+
 export interface Recipe {
   id: string;
   title: string;

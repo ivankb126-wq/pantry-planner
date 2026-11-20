@@ -7,18 +7,23 @@ import { takenText } from '../app/pantry';
 import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type Amount, useApp } from '../app/state';
-import { stepText, stepTip } from '../lib/nutrition';
+import { scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { IconClose, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { Empty, Screen, Sheet } from '../ui/kit';
 import { fold } from './pickers';
 
-/** Minutes mentioned in a step ("Simmer for 20 to 25 minutes" -> 20). */
+/**
+ * The main wait in a step: the longest time it mentions ("Stir 1 minute, then
+ * simmer 20 to 25 minutes" -> 20).
+ */
 export function stepMinutes(text: string): number | null {
-  const m = /(\d+(?:[.,]\d+)?)(?:\s*(?:to|-|–)\s*\d+(?:[.,]\d+)?)?\s*(minutes?|mins?|hours?|hrs?|h)\b/i.exec(text);
-  if (!m) return null;
-  const n = Number(m[1].replace(',', '.'));
-  const mins = /^h/i.test(m[2]) ? n * 60 : n;
-  return mins > 0 && mins <= 360 ? mins : null;
+  let best: number | null = null;
+  for (const m of text.matchAll(/(\d+(?:[.,]\d+)?)(?:\s*(?:to|-|–)\s*\d+(?:[.,]\d+)?)?\s*(minutes?|mins?|hours?|hrs?|h)\b/gi)) {
+    const n = Number(m[1].replace(',', '.'));
+    const mins = /^h/i.test(m[2]) ? n * 60 : n;
+    if (mins > 0 && mins <= 360 && (best == null || mins > best)) best = mins;
+  }
+  return best;
 }
 
 function useWakeLock(): boolean {
@@ -164,10 +169,13 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   }
   const mealIndex = mealParam != null && d.plan?.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   const n = r.steps.length;
-  const text = stepText(r.steps[step]);
-  const tip = stepTip(r.steps[step]);
+  const portions = Math.max(1, Math.round(portionsFor(d.settings)));
+  const factor = portions / r.servings;
+  const text = scaleStep(stepText(r.steps[step]), factor);
+  const rawTip = stepTip(r.steps[step]);
+  const tip = rawTip && scaleStep(rawTip, factor);
   const mins = stepMinutes(text);
-  const ings = scaledIngredients(r, Math.max(1, Math.round(portionsFor(d.settings))));
+  const ings = scaledIngredients(r, portions);
   const lower = fold(text);
   const used = ings.filter((i) => {
     const words = fold(i.name).split(/[\s,()]+/).filter((w) => w.length > 3);
@@ -220,7 +228,7 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
       {step < n - 1 && (
         <div class="next-card">
           <small>NEXT</small>
-          <p>{stepText(r.steps[step + 1])}</p>
+          <p>{scaleStep(stepText(r.steps[step + 1]), factor)}</p>
         </div>
       )}
 

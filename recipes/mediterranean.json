@@ -165,10 +165,12 @@
       { "id": "salt", "quantity": 1, "unit": "tsp" }
     ],
     "steps": [
-      "Bring a big pot of salted water to the boil. Add the potato in small cubes and the pasta.",
-      "After 5 minutes add the green beans and cook until the pasta is done.",
-      "Keep a cup of the cooking water, then drain. Toss with the pesto and a little cooking water until creamy.",
-      "Serve with grated parmesan."
+      "Bring a large pot of water with the salt to the boil. Peel the potatoes and cut them into small cubes, about 1 cm. Trim the ends off the green beans and cut them in half.",
+      { "text": "Add the potato cubes and the pasta to the boiling water together and stir. Cook for 5 minutes.", "tip": "This suits pasta that cooks in 10 to 12 minutes. For quicker pasta, give the potatoes a few minutes on their own first." },
+      { "text": "Add the green beans and cook until the pasta is al dente, usually 5 to 7 minutes more. The potato should be soft.", "tip": "Squash a potato cube against the side of the pot with a spoon. If it breaks easily, it is ready." },
+      "Scoop out a mug of the cooking water, then drain everything and put it back into the warm pot, off the heat.",
+      { "text": "Add the pesto and a splash of the cooking water and stir well. The potato breaks up a little and makes the sauce creamy.", "tip": "Do not heat the pesto on the stove: the basil turns dark and loses its fresh taste. The heat of the pasta is enough." },
+      "Serve with the grated parmesan on top."
     ],
     "tags": ["vegetarian", "kid-friendly"],
     "keepsDays": 2,

@@ -16,9 +16,12 @@ import {
   type IngredientInfo,
   type Recipe,
   type RecipeFacts,
+  STEP_AMOUNT,
   UnitError,
   collectionOf,
   recipeFacts,
+  stepText,
+  stepTip,
   toIngredientUnit,
 } from '../src/lib/nutrition';
 
@@ -138,6 +141,12 @@ export function checkAll() {
         ok = false;
       }
     }
+    r.steps.forEach((s, n) => {
+      for (const part of [stepText(s), stepTip(s) ?? '']) {
+        const stray = part.replace(STEP_AMOUNT, '');
+        if (/[{}]/.test(stray)) errors.push(`${where}: step ${n + 1} has a "{...}" that is not an amount like {200 ml}, {2 tbsp} or {4}`);
+        if (part.includes('—')) errors.push(`${where}: step ${n + 1} uses a long dash; use a comma or full stop instead`);
+      }    });
     const dupes = r.ingredients.map((i) => i.id).filter((id, i, a) => a.indexOf(id) !== i);
     if (dupes.length) warnings.push(`${where}: ingredient listed twice: ${dupes.join(', ')}`);
     if (!ok) continue;
