@@ -38,6 +38,19 @@ export interface RecipeIngredient {
   note?: string;
 }
 
+export interface RecipeStep {
+  text: string;
+  tip?: string;
+}
+
+export function stepText(s: string | RecipeStep): string {
+  return typeof s === 'string' ? s : s.text;
+}
+
+export function stepTip(s: string | RecipeStep): string | null {
+  return typeof s === 'string' ? null : (s.tip ?? null);
+}
+
 export interface Recipe {
   id: string;
   title: string;
@@ -50,7 +63,8 @@ export interface Recipe {
   difficulty: 'easy' | 'medium' | 'hard';
   mainProtein: string;
   ingredients: RecipeIngredient[];
-  steps: string[];
+  /** A step is plain text, or text with a tip ("Done when the edges are golden"). */
+  steps: (string | RecipeStep)[];
   tags: string[];
   keepsDays: number;
   equipment: string[];

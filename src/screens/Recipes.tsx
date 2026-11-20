@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'preact/hooks';
 import { CUISINE_LABEL, INGREDIENTS, RECIPES } from '../app/catalog';
 import { priceIndex, saleIngredient, servingCost } from '../app/costs';
+import { photoFor, usePhotos } from '../app/photos';
 import { useApp } from '../app/state';
 import { formatEur, zagrebToday } from '../lib/format';
 import { dietAllows } from '../lib/nutrition';
@@ -42,6 +43,7 @@ const memory: { tab: Tab; filter: Filter; q: string; cuisine: string | null } = 
 
 export function RecipesScreen({ prices }: { prices: PriceState }) {
   const d = useApp();
+  usePhotos();
   const [tab, setTab] = useState<Tab>(memory.tab);
   const [filter, setFilter] = useState<Filter>(memory.filter);
   const [q, setQ] = useState(memory.q);
@@ -125,7 +127,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
             return (
               <li key={r.id}>
                 <a href={`#/recipe/${r.id}`} class="recipe-card">
-                  <DishArt emoji={r.illustration} height={84}>
+                  <DishArt emoji={r.illustration} height={84} photo={photoFor(r.id)?.src}>
                     <div class="art-badges">
                       {sale ? <span class="tag teal">On sale</span> : !cooked.has(r.id) && d.history.length >= 5 && <span class="tag purple">New</span>}
                     </div>

@@ -1,20 +1,21 @@
 // Recipe detail: ingredients with where to buy them, steps, nutrition,
 // ratings, notes, favourites, and adding it to this week.
 
-import { useState } from 'preact/hooks';
+import { useRef, useState } from 'preact/hooks';
 import { type HideFor, rate, ratingOf, setCooked, setNote, swap, toggleFavourite } from '../app/actions';
 import { CUISINE_LABEL, INGREDIENTS, RECIPE_BY_ID } from '../app/catalog';
 import { buyFor, priceIndex, saleIngredient, servingCost } from '../app/costs';
-import { lineQuantity } from './Shopping';
+import { lineQuantity, productLabel } from './Shopping';
 import { planResult, portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type AppData, useApp } from '../app/state';
 import { formatAmount, formatEur } from '../lib/format';
-import { NUTRIENTS } from '../lib/nutrition';
+import { NUTRIENTS, stepText, stepTip } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { takenText } from '../app/pantry';
+import { photoFor, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
 import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, minutes } from '../ui/words';
 import type { PriceState } from './Plan';
@@ -49,7 +50,7 @@ function sourceFor(id: string, need: number, d: AppData, result: PlanResult | nu
     const lines = result.shopping.filter((l) => l.ingredient === id);
     if (lines.length) {
       const l = lines[0];
-      const text = l.estimated ? 'Typical price, your store does not list it' : `${multi ? `${l.store} · ` : ''}${lineQuantity(l)} · ${l.product}`;
+      const text = l.estimated ? 'Typical price, your store does not list it' : `${multi ? `${l.store} · ` : ''}${lineQuantity(l)} · ${productLabel(l.product, l.brand, l.ingredient, l.loose)}`;
       return { kind: 'buy', text, price: lines.reduce((s, x) => s + x.cost, 0) };
     }
   }
@@ -61,7 +62,7 @@ function sourceFor(id: string, need: number, d: AppData, result: PlanResult | nu
       const o = p.lines[0].offer;
       const unit = INGREDIENTS[id]?.unit ?? 'g';
       const qty = o.loose ? `about ${formatAmount(p.bought, unit)}` : `${p.lines[0].count} × ${formatAmount(o.size, unit)}`;
-      const text = o.store === ESTIMATE ? `Typical price for ${qty}` : `${multi ? `${o.store} · ` : ''}${qty} · ${o.name}`;
+      const text = o.store === ESTIMATE ? `Typical price for ${qty}` : `${multi ? `${o.store} · ` : ''}${qty} · ${productLabel(o.name, o.brand, id, o.loose)}`;
       return { kind: 'buy', text, price: p.cost };
     }
   }
@@ -76,6 +77,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const [sheet, setSheet] = useState<null | 'down' | 'add'>(null);
   const [toast, setToast] = useToast<{ text: string; undo?: () => void }>(7000);
   const [note, setNoteText] = useState(d.notes[id] ?? '');
+  usePhotos();
 
   if (!r) {
     return (
@@ -98,12 +100,13 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const ings = scaledIngredients(r, servings);
   const f = r.facts.perServing;
 
+  const photo = photoFor(id);
   const planMeals = d.plan ? d.plan.meals.map((m, i) => ({ m, i })).filter(({ m }) => m.recipeId === id) : [];
 
   return (
     <Screen tabs={false} glow="orange">
       <div class="detail-hero">
-        <DishArt emoji={r.illustration} height={210} />
+        <DishArt emoji={r.illustration} height={210} photo={photo?.src} />
         <button class="hero-btn left" aria-label="Back" onClick={() => back('recipes')}>
           <IconBack />
         </button>
@@ -112,6 +115,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         </button>
       </div>
 
+      {photo && !photo.mine && photo.credit && <p class="photo-credit">Photo: {photo.credit}</p>}
       <div class="badges">
         {sale && <span class="tag teal">{sale} on sale</span>}
         <span class="tag outline">{CUISINE_LABEL[r.cuisine] ?? r.cuisine}</span>
@@ -204,7 +208,10 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         <h2>Steps</h2>
         <ol class="steps">
           {r.steps.map((s, i) => (
-            <li key={i}>{s}</li>
+            <li key={i}>
+              {stepText(s)}
+              {stepTip(s) && <span class="step-tip small">Tip: {stepTip(s)}</span>}
+            </li>
           ))}
         </ol>
         {r.equipment.length > 0 && <p class="sub">You need: {r.equipment.join(', ')}.</p>}
@@ -241,6 +248,8 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           aria-label="My notes"
         />
       </section>
+
+      <MyPhoto id={id} title={r.title} hasOwn={!!photo?.mine} onError={(text) => setToast({ text })} />
 
       {d.plan && (
         <button class="btn-ghost wide" onClick={() => setSheet('add')} disabled={!prices.data}>
@@ -327,6 +336,49 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         </Toast>
       )}
     </Screen>
+  );
+}
+
+/** Take or pick a photo of the dish (saved on the phone only). */
+function MyPhoto({ id, title, hasOwn, onError }: { id: string; title: string; hasOwn: boolean; onError: (text: string) => void }) {
+  const input = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+  return (
+    <section class="card">
+      <h2>My photo</h2>
+      <p class="sub">{hasOwn ? 'Your photo is shown for this dish.' : 'Add a photo of how yours turned out. It stays on your phone.'}</p>
+      <div class="photo-row">
+        <button class="btn-teal-outline" disabled={busy} onClick={() => input.current?.click()}>
+          {busy ? 'Saving...' : hasOwn ? 'Change photo' : 'Add a photo'}
+        </button>
+        {hasOwn && (
+          <button class="btn-ghost" onClick={() => removePhoto(id)}>
+            Remove
+          </button>
+        )}
+      </div>
+      <input
+        ref={input}
+        type="file"
+        accept="image/*"
+        hidden
+        aria-label={`Photo of ${title}`}
+        onChange={async (e) => {
+          const el = e.target as HTMLInputElement;
+          const file = el.files?.[0];
+          el.value = '';
+          if (!file) return;
+          setBusy(true);
+          try {
+            setPhoto(id, await shrinkPhoto(file));
+          } catch (err) {
+            onError((err as Error).message || 'This photo could not be saved.');
+          } finally {
+            setBusy(false);
+          }
+        }}
+      />
+    </section>
   );
 }
 

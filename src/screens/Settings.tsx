@@ -2,14 +2,16 @@
 
 import type { ComponentChildren } from 'preact';
 import { useRef, useState } from 'preact/hooks';
-import { type Settings, exportBackup, importBackup, resetData, update, useApp } from '../app/state';
-import { formatEur, zagrebToday } from '../lib/format';
+import { type Settings, importBackup, resetData, update, useApp } from '../app/state';
+import { formatEur, formatShortDate } from '../lib/format';
 import { IconChevron } from '../ui/icons';
 import { Chip, Screen, Sheet, Stepper, TitleBar, Toast, Toggle, useToast } from '../ui/kit';
 import { plural } from '../ui/words';
 import { DIET_OPTIONS, DietPicker, DislikesPicker, MEAL_OPTIONS, MealsPicker, StoreModePicker, StorePicker } from './pickers';
 import { InstallSteps, isInstalled } from './Install';
 import { storeSummary } from './Plan';
+import { setAllPhotos } from '../app/photos';
+import { saveBackup } from '../app/backup';
 
 function set(p: Partial<Settings>) {
   update((x) => {
@@ -179,33 +181,15 @@ function BackupGroup() {
   const [confirmReset, setConfirmReset] = useState(false);
 
   const download = async () => {
-    const name = `pantry-planner-backup-${zagrebToday()}.json`;
-    const file = new File([exportBackup()], name, { type: 'application/json' });
-    // On the iPhone the share sheet has "Save to Files", which also works
-    // from the home screen app (plain downloads do not always).
-    if (navigator.canShare?.({ files: [file] })) {
-      try {
-        await navigator.share({ files: [file], title: 'Pantry Planner backup' });
-        setToast('Backup ready. Keep the file somewhere safe, for example iCloud Drive.');
-      } catch (e) {
-        if ((e as Error).name !== 'AbortError') setToast('The backup could not be shared. Try again.');
-      }
-      return;
-    }
-    const url = URL.createObjectURL(file);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = name;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 2000);
-    setToast('Backup saved. Keep the file somewhere safe, for example iCloud Drive.');
+    const r = await saveBackup();
+    if (r === 'shared' || r === 'downloaded') setToast('Backup saved. Keep the file somewhere safe, for example iCloud Drive.');
+    if (r === 'failed') setToast('The backup could not be saved. Try again.');
   };
 
   const restore = async (f: File) => {
     try {
-      importBackup(await f.text());
+      const photos = importBackup(await f.text());
+      setAllPhotos(photos);
       setToast('Backup restored.');
     } catch (e) {
       setToast((e as Error).message);
@@ -219,7 +203,7 @@ function BackupGroup() {
           <span class="grow">
             Everything is saved on this phone only
             <small>
-              {plural(d.ratings.length, 'rating', 'ratings')}, {plural(d.favourites.length, 'favourite', 'favourites')}, {plural(d.pantry.length, 'pantry item', 'pantry items')}. Make a backup now and then, and before changing phones.
+              {plural(d.ratings.length, 'rating', 'ratings')}, {plural(d.favourites.length, 'favourite', 'favourites')}, {plural(d.pantry.length, 'pantry item', 'pantry items')}. {d.lastBackupOn ? ` Last backup ${formatShortDate(d.lastBackupOn)}.` : ' No backup yet.'} Make one now and then, and before changing phones.
             </small>
           </span>
         </div>

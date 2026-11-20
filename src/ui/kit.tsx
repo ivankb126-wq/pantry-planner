@@ -130,8 +130,16 @@ export function Sheet({ title, sub, onClose, children }: { title: string; sub?: 
   );
 }
 
-/** Sunset scene with the dish's emoji on a plate (no photos yet). */
-export function DishArt({ emoji, height = 104, children }: { emoji: string; height?: number; children?: ComponentChildren }) {
+/** The dish's photo, or a sunset scene with its emoji when there is none. */
+export function DishArt({ emoji, height = 104, photo, children }: { emoji: string; height?: number; photo?: string | null; children?: ComponentChildren }) {
+  if (photo) {
+    return (
+      <div class="dish-art has-photo" style={{ height: `${height}px` }}>
+        <img class="dish-photo" src={photo} alt="" loading="lazy" decoding="async" />
+        {children}
+      </div>
+    );
+  }
   return (
     <div class="dish-art" style={{ height: `${height}px` }}>
       <svg class="dish-scene" viewBox="0 0 200 84" preserveAspectRatio="xMidYMax meet" aria-hidden="true">

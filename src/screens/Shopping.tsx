@@ -29,6 +29,13 @@ export function lineQuantity(l: ShoppingLine): string {
   return `${l.packs} × ${formatAmount(l.size, unit)}`;
 }
 
+/** "Ajvar blagi · Kania", or the product alone with a note when the store lists no brand. */
+export function productLabel(product: string, brand?: string | null, ingredient?: string, loose?: boolean): string {
+  // Fresh and loose food rarely has a brand; only say so for packaged goods.
+  if (!brand) return loose || INGREDIENTS[ingredient ?? '']?.category === 'fruit-veg' ? product : `${product} · no brand listed`;
+  return product.toLowerCase().includes(brand.toLowerCase()) ? product : `${product} · ${brand}`;
+}
+
 function storeName(s: string): string {
   return s === ESTIMATE ? 'Any store (typical price)' : s;
 }
@@ -56,6 +63,7 @@ export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
         ingredient: id,
         store: l.offer.store,
         product: l.offer.name,
+        brand: l.offer.brand ?? null,
         size: l.offer.size,
         loose: !!l.offer.loose,
         packs: l.count,
@@ -173,7 +181,7 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
                           <span class="grow">
                             <strong>{ingName(l.ingredient)}</strong>
                             <small>
-                              {lineQuantity(l)} · {l.product}
+                              {lineQuantity(l)} · {l.estimated ? 'typical price' : productLabel(l.product, l.brand, l.ingredient, l.loose)}
                             </small>
                             {l.onSale && <span class="tag teal">On sale</span>}
                             {bought(l) && <span class="tag outline">In pantry</span>}

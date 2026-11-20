@@ -52,7 +52,21 @@
             }
           }
         },
-        "steps": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 5, "maxLength": 400 } },
+        "steps": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "oneOf": [
+              { "type": "string", "minLength": 5, "maxLength": 400 },
+              {
+                "type": "object", "additionalProperties": false, "required": ["text"],
+                "properties": {
+                  "text": { "type": "string", "minLength": 5, "maxLength": 600 },
+                  "tip": { "type": "string", "minLength": 5, "maxLength": 300 }
+                }
+              }
+            ]
+          }
+        },
         "tags": {
           "type": "array", "uniqueItems": true,
           "items": {
@@ -65,7 +79,8 @@
         "keepsDays": { "type": "integer", "minimum": 0, "maximum": 14, "description": "Days it keeps in the fridge once cooked" },
         "equipment": { "type": "array", "items": { "type": "string" } },
         "illustration": { "type": "string", "minLength": 1, "maxLength": 8, "description": "An emoji for now; photos later" },
-        "photo": { "type": ["string", "null"] }
+        "photoCredit": { "type": "string", "minLength": 3, "maxLength": 200 },
+        "photo":{ "type": ["string", "null"] }
       }
     }
   }

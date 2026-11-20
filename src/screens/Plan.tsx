@@ -4,17 +4,20 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { newPlan, restorePlan, saveLeftovers, swap } from '../app/actions';
 import { INGREDIENTS, RECIPE_BY_ID, ingName } from '../app/catalog';
 import { saleIngredient } from '../app/costs';
+import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
-import { type AppData, type Settings, update, useApp } from '../app/state';
+import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
 import { IconCheck, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
 import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
+import { BackupReminder } from './BackupReminder';
 import { InstallCard } from './Install';
 import { CHAIN_NAME, StoreModePicker } from './pickers';
+import { productLabel } from './Shopping';
 
 export interface PriceState {
   data: PriceData | null;
@@ -50,6 +53,7 @@ export function mealOnSale(recipeId: string, sale: Set<string>): string | null {
 
 export function PlanScreen({ prices }: { prices: PriceState }) {
   const d = useApp();
+  usePhotos();
   const data = prices.data;
   const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState<{ text: string; undo?: () => void } | null>(null);
@@ -166,6 +170,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
     <>
       <BudgetCard d={d} data={data} result={result} onStore={onStore} />
       <InstallCard />
+      <BackupReminder />
       <TodayCard d={d} result={result} t={t} sale={sale} onSwap={onSwap} />
       <CheckChips checks={result.checks} />
       <WeekList d={d} result={result} t={t} sale={sale} />
@@ -238,7 +243,7 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
   const from = v.leftover ? plan.meals[i].from : undefined;
   return (
     <section class="today-card" aria-label="Today">
-      <DishArt emoji={r.illustration} height={104}>
+      <DishArt emoji={r.illustration} height={104} photo={photoFor(r.id)?.src}>
         <div class="art-badges">
           <span class="tag light">Today, {dayLong(v.date)}</span>
           {saleName && <span class="tag teal">On sale</span>}
@@ -334,7 +339,8 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                           {cooked && <IconCheck size={15} />} {v.title}
                         </span>
                         <span class="meal-meta">
-                          {SLOT_LABEL[v.slot]} · {v.leftover ? 'leftovers' : minutes(v.minutes)} · {v.kcal} kcal
+                          {SLOT_LABEL[v.slot]} · {v.leftover ? leftoverNote(plan, i, result) : minutes(v.minutes)} · {v.kcal} kcal
+                          {!v.leftover && batchNote(plan, i, result)}
                           {v.newDish && d.history.length >= 5 && <span class="tag purple">New</span>}
                           {!v.leftover && mealOnSale(v.recipeId, sale) && <span class="tag teal">Sale</span>}
                         </span>
@@ -354,6 +360,24 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
       })}
     </section>
   );
+}
+
+/** "made Monday" for a meal eaten from an earlier batch. */
+function leftoverNote(plan: SavedPlan, i: number, result: PlanResult): string {
+  const from = plan.meals[i].from;
+  if (from == null || !result.views[from]) return 'leftovers';
+  const m = plan.meals[from];
+  if (m.slot === 'dinner') return `${dayLong(result.views[from].date).toLowerCase()}'s dinner`;
+  return `made ${dayLong(result.views[from].date)}`;
+}
+
+/** "lasts until Thursday" for a batch eaten on later days. */
+function batchNote(plan: SavedPlan, i: number, result: PlanResult): string | null {
+  const later = plan.meals.map((m, k) => ({ m, k })).filter(({ m }) => m.source === 'leftover' && m.from === i);
+  if (!later.length) return null;
+  const last = later.reduce((a, b) => (b.m.day > a.m.day ? b : a));
+  if (plan.meals[i].slot === 'dinner') return ' · also lunch tomorrow';
+  return ` · lasts until ${dayLong(result.views[last.k].date)}`;
 }
 
 const CHECK_UNIT: Record<string, (v: number) => string> = {
@@ -461,7 +485,7 @@ function DealsCard({ data }: { data: PriceData }) {
             <span class="grow">
               <strong>{ingName(it.ingredient)}</strong>
               <small>
-                {it.name}
+                {productLabel(it.name, it.brand, it.ingredient, it.loose)}
                 {multi ? ` · ${it.store}` : ''}
               </small>
             </span>

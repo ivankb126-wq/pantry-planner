@@ -94,6 +94,12 @@ It checks the format, that every ingredient exists and its unit fits, the
 quick/vegetarian/vegan labels, and prints nutrition per serving with warnings
 for unusual values.
 
+A step is plain text, or `{ "text": "...", "tip": "..." }` when it helps to
+say how to tell it is done ("Done when the onion is soft and golden").
+Cooking mode shows the tip under the step. A recipe can have a free photo:
+`"photo"` (a URL or a file in `public/`) and `"photoCredit"` (author and
+licence). A photo you take in the app replaces it on your phone.
+
 ## How it works
 
 - **Prices.** Croatian shops publish their price lists every working day. A

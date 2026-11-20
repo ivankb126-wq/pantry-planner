@@ -14,6 +14,7 @@ import { SettingsScreen } from '../screens/Settings';
 import { ShoppingScreen } from '../screens/Shopping';
 import { TabBar } from '../ui/kit';
 import { requestPersistence } from './db';
+import { loadPhotos } from './photos';
 import { usePriceData } from './prices';
 import { type Route as RouteInfo, useRoute } from './router';
 import { isLoaded, loadData, useApp } from './state';
@@ -24,7 +25,7 @@ export function Shell() {
   const [ready, setReady] = useState(isLoaded());
 
   useEffect(() => {
-    if (!ready) void loadData().then(() => setReady(true));
+    if (!ready) void Promise.all([loadData(), loadPhotos()]).then(() => setReady(true));
     void requestPersistence();
   }, []);
 

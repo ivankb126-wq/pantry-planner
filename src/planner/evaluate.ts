@@ -167,6 +167,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
         ingredient: id,
         store: l.offer.store,
         product: l.offer.name,
+        brand: l.offer.brand ?? null,
         size: l.offer.size,
         loose: !!l.offer.loose,
         packs: l.count,

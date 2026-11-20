@@ -7,6 +7,7 @@ import { takenText } from '../app/pantry';
 import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type Amount, useApp } from '../app/state';
+import { stepText, stepTip } from '../lib/nutrition';
 import { IconClose, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { Empty, Screen, Sheet } from '../ui/kit';
 import { fold } from './pickers';
@@ -163,7 +164,8 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   }
   const mealIndex = mealParam != null && d.plan?.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   const n = r.steps.length;
-  const text = r.steps[step];
+  const text = stepText(r.steps[step]);
+  const tip = stepTip(r.steps[step]);
   const mins = stepMinutes(text);
   const ings = scaledIngredients(r, Math.max(1, Math.round(portionsFor(d.settings))));
   const lower = fold(text);
@@ -197,9 +199,14 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
         ))}
       </div>
       <h1 class="cook-recipe">{r.title}</h1>
-      <p class="cook-step" aria-live="polite">
+      <p class={`cook-step${text.length > 160 ? ' long' : ''}`} aria-live="polite">
         {text}
       </p>
+      {tip && (
+        <p class="step-tip">
+          <strong>Tip</strong> {tip}
+        </p>
+      )}
       {used.length > 0 && (
         <div class="chip-wrap static">
           {used.map((i) => (
@@ -213,7 +220,7 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
       {step < n - 1 && (
         <div class="next-card">
           <small>NEXT</small>
-          <p>{r.steps[step + 1]}</p>
+          <p>{stepText(r.steps[step + 1])}</p>
         </div>
       )}
 

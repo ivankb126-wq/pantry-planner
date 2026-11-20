@@ -878,6 +878,35 @@ h1 {
   width: 100%;
   height: 100%;
 }
+.dish-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dish-art.has-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 11, 36, 0.35), transparent 40%);
+  pointer-events: none;
+}
+.dish-art.has-photo > :not(img) {
+  z-index: 1;
+}
+.photo-credit {
+  margin: -8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: right;
+}
+.photo-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
 .dish-emoji {
   position: absolute;
   left: 50%;
@@ -1559,6 +1588,29 @@ h1 {
   font-size: 28px;
   line-height: 1.25;
 }
+.cook-step.long {
+  font-size: 23px;
+}
+.step-tip {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(61, 227, 208, 0.1);
+  border: 1px solid rgba(61, 227, 208, 0.5);
+  font-size: 16px;
+}
+.step-tip strong {
+  color: var(--teal);
+  margin-right: 4px;
+}
+.step-tip.small {
+  display: block;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
 .timer {
   position: relative;
   display: flex;
@@ -1939,4 +1991,20 @@ h1 {
 .screen-inner .note {
   color: var(--muted);
   font-size: 13px;
+}
+
+/* ---------------------------------------------------------------- backup reminder */
+.backup-note {
+  align-items: center;
+}
+.backup-note small {
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.backup-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }

@@ -18,7 +18,10 @@ export function mulberry32(seed: number): () => number {
 }
 
 const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
-const MAX_BATCH_DAYS = 4;
+// Days one batch may cover (the cooking day included), and never longer
+// than the recipe keeps. Snacks and desserts (brownies, granola bars) can
+// last the week; a make-ahead breakfast at most 4 days, for variety.
+const MAX_BATCH_DAYS: Record<Slot, number> = { snack: 7, dessert: 7, breakfast: 4, lunch: 2, dinner: 1 };
 
 interface Pools {
   /** Recipe ids that may be cooked for a slot on a given day. */
@@ -120,7 +123,7 @@ function leftoverAllowed(ctx: Context, meals: Meal[], i: number, j: number): boo
   if (a.slot === b.slot && (a.slot === 'snack' || a.slot === 'dessert' || a.slot === 'breakfast')) {
     const span = a.day - b.day;
     const batchy = a.slot !== 'breakfast' || r.tags.includes('batch') || r.tags.includes('make-ahead');
-    return batchy && span <= Math.min(r.keepsDays, MAX_BATCH_DAYS - 1);
+    return batchy && span <= Math.min(r.keepsDays, MAX_BATCH_DAYS[a.slot] - 1);
   }
   return false;
 }

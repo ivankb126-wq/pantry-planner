@@ -102,6 +102,7 @@ export interface ShoppingLine {
   ingredient: string;
   store: string;
   product: string;
+  brand?: string | null; // as in the store's price list (often missing for store brands)
   size: number;
   loose: boolean;
   packs: number; // packages (or 1 for loose)

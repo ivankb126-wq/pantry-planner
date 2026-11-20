@@ -84,6 +84,8 @@ export interface AppData {
   lowDismissed: Record<string, string>;
   /** Last "Check my pantry". */
   pantryCheckedOn: string | null;
+  lastBackupOn: string | null;
+  backupSnoozedUntil: string | null;
 }
 
 export const DEFAULT_APP_SETTINGS: Settings = {
@@ -118,6 +120,8 @@ export function emptyData(): AppData {
     extras: [],
     lowDismissed: {},
     pantryCheckedOn: null,
+    lastBackupOn: null,
+    backupSnoozedUntil: null,
   };
 }
 
@@ -185,21 +189,23 @@ export function useApp(): AppData {
 
 // ------------------------------------------------------------------ backup
 
-export function exportBackup(): string {
-  return JSON.stringify({ app: 'pantry-planner', exportedAt: new Date().toISOString(), data }, null, 1);
+/** The backup file. photos (recipe id -> image) are kept outside AppData. */
+export function exportBackup(photos: Record<string, string> = {}): string {
+  return JSON.stringify({ app: 'pantry-planner', exportedAt: new Date().toISOString(), data, photos }, null, 1);
 }
 
-/** Replace everything with a backup file's contents. Throws a readable error. */
-export function importBackup(text: string): void {
+/** Replace everything with a backup file's contents. Returns the photos in it. Throws a readable error. */
+export function importBackup(text: string): Record<string, string> {
   let parsed: unknown;
   try {
     parsed = JSON.parse(text);
   } catch {
     throw new Error('This file is not a Pantry Planner backup.');
   }
-  const p = parsed as { app?: string; data?: AppData };
+  const p = parsed as { app?: string; data?: AppData; photos?: Record<string, string> };
   if (p.app !== 'pantry-planner' || !p.data || p.data.version !== 1 || typeof p.data.settings !== 'object') {
     throw new Error('This file is not a Pantry Planner backup.');
   }
   update(() => migrate(p.data!));
+  return p.photos && typeof p.photos === 'object' ? p.photos : {};
 }
