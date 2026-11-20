@@ -69,6 +69,8 @@ export interface PlanInput {
   pantry: PantryItem[];
   ratings: Rating[];
   history: string[]; // recipe ids cooked before
+  /** Recipe ids eaten in the last two weeks; the planner gives them a rest. */
+  recent?: string[];
   settings: PlanSettings;
   seed: number;
   /** Safety stop for the search in ms (the phone must stay under 2 s). */

@@ -62,8 +62,10 @@ function pickClassic(input: PlanInput, offers: Map<string, Offer[]>, hidden: Set
       dietAllows(input.diet, r.facts.diet) &&
       r.ingredients.every((ri) => ri.optional || (!dislikes.has(ri.id) && (offers.has(ri.id) || input.ingredients[ri.id]?.category === 'spices'))),
   );
+  const recent = new Set(input.recent ?? []);
   const fresh = ok.filter((r) => !history.has(r.id));
-  const list = (fresh.length ? fresh : ok).map((r) => r.id).sort();
+  const rested = ok.filter((r) => !recent.has(r.id));
+  const list = (fresh.length ? fresh : rested.length ? rested : ok).map((r) => r.id).sort();
   if (!list.length) return null;
   // Mix the seed well, so nearby seeds pick different dishes.
   let x = input.seed ^ 0x9e3779b9;
@@ -380,6 +382,9 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
       if (!ctx.historyCuisines.has(ctx.recipes.get(m.recipeId)!.cuisine)) rareNew = true;
     }
   });
+  // Give dishes from the last two weeks a rest, so cheap favourites take turns.
+  const recent = new Set(input.recent ?? []);
+  b.recent = meals.filter((m) => m.source === 'cook' && recent.has(m.recipeId)).length * 4;
   b.liked = -liked;
   b.sale = -sale;
   b.newDish = input.settings.newDishEachWeek && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;

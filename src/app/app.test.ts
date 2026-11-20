@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { stepMinutes } from '../screens/Cooking';
 import { RECIPE_BY_ID } from './catalog';
-import { addToPantry, planProblem, scaledIngredients } from './planning';
+import { addToPantry, planProblem, recentDishes, scaledIngredients } from './planning';
 import { parseHash } from './router';
 import { emptyData, exportBackup, getData, importBackup, migrate, settingsKey, update } from './state';
 
@@ -55,6 +55,24 @@ describe('plan state', () => {
     expect(planProblem(d)).toBe('settings');
     d.plan.startDate = '2020-01-01';
     expect(planProblem(d)).toBe('over');
+  });
+
+  it('remembers the last two weeks of dishes for the next plan', () => {
+    const d = emptyData();
+    d.history = [
+      { recipeId: 'sarma', date: '2026-11-10' },
+      { recipeId: 'grah-varivo', date: '2026-11-25' },
+    ];
+    d.plan = {
+      startDate: '2026-11-21', seed: 1, cooked: [], avoid: {}, settingsKey: '', createdAt: '', pantryAtStart: [],
+      meals: [
+        { day: 0, slot: 'dinner', recipeId: 'chana-masala', source: 'cook' },
+        { day: 1, slot: 'lunch', recipeId: 'chana-masala', source: 'leftover', from: 0 },
+        { day: 6, slot: 'dinner', recipeId: 'lasagne', source: 'cook' },
+      ],
+    };
+    // Sarma is older than two weeks; lasagne was planned for a day not reached yet.
+    expect(recentDishes(d, '2026-11-26').sort()).toEqual(['chana-masala', 'grah-varivo']);
   });
 });
 

@@ -45,6 +45,8 @@ export interface SavedPlan {
   leftoversSaved?: boolean;
   /** What "Mark cooked" took from the pantry, per meal (put back when unmarked). */
   taken?: Record<number, Amount[]>;
+  /** Dishes eaten in the two weeks before this plan (they get a rest). */
+  recent?: string[];
 }
 
 export interface Amount {

@@ -13,7 +13,28 @@ export function livePantry(d: AppData): PantryItem[] {
   return d.pantry.map((p) => ({ ingredient: p.ingredient, amount: p.amount, expiresOn: p.expiresOn }));
 }
 
-export function planInput(d: AppData, prices: PriceData, seed: number, startDate: string, pantry: PantryItem[]): PlanInput {
+/**
+ * Dishes from the two weeks before a new plan: what was marked cooked, and
+ * the meals of the plan it replaces (people do not always tap "Mark cooked").
+ */
+export function recentDishes(d: AppData, startDate: string): string[] {
+  const from = addDays(startDate, -14);
+  const ids = d.history.filter((h) => h.date >= from && h.date < startDate).map((h) => h.recipeId);
+  if (d.plan && d.plan.startDate >= from && d.plan.startDate < startDate) {
+    const days = Math.round((Date.parse(startDate) - Date.parse(d.plan.startDate)) / 86_400_000);
+    for (const m of d.plan.meals) if (m.source === 'cook' && m.day < days) ids.push(m.recipeId);
+  }
+  return [...new Set(ids)];
+}
+
+export function planInput(
+  d: AppData,
+  prices: PriceData,
+  seed: number,
+  startDate: string,
+  pantry: PantryItem[],
+  recent: string[] = d.plan?.recent ?? [],
+): PlanInput {
   const s = d.settings;
   const today = zagrebToday();
   return {
@@ -35,6 +56,7 @@ export function planInput(d: AppData, prices: PriceData, seed: number, startDate
       ...d.favourites.filter((id) => !d.ratings.some((r) => r.recipeId === id)).map((recipeId) => ({ recipeId, up: true })),
     ],
     history: [...new Set(d.history.map((h) => h.recipeId))],
+    recent,
     settings: {
       cookOnceEatTwice: s.cookOnceEatTwice,
       newDishEachWeek: s.newDishEachWeek,
@@ -49,7 +71,9 @@ export function planInput(d: AppData, prices: PriceData, seed: number, startDate
 export function makePlan(d: AppData, prices: PriceData, seed = Math.floor(Math.random() * 1e9)): { plan: SavedPlan; result: PlanResult } {
   const startDate = zagrebToday();
   const pantry = livePantry(d);
-  const result = generatePlan(planInput(d, prices, seed, startDate, pantry));
+  // Regenerating on the same day keeps the rest list of the plan it replaces.
+  const recent = d.plan && d.plan.startDate === startDate ? (d.plan.recent ?? []) : recentDishes(d, startDate);
+  const result = generatePlan(planInput(d, prices, seed, startDate, pantry, recent));
   return {
     plan: {
       startDate,
@@ -60,6 +84,7 @@ export function makePlan(d: AppData, prices: PriceData, seed = Math.floor(Math.r
       settingsKey: settingsKey(d.settings),
       createdAt: new Date().toISOString(),
       pantryAtStart: pantry,
+      recent,
     },
     result,
   };

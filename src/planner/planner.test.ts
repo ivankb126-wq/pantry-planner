@@ -199,6 +199,19 @@ describe('ingredient reuse', () => {
     expect(scorePlan(input, curry).meals.filter((m) => m.source === 'leftover')).toHaveLength(0);
   });
 
+  it('gives dishes from the last two weeks a rest', () => {
+    const meals: Meal[] = [
+      { day: 0, slot: 'breakfast', recipeId: 'pura-na-mlijeko', source: 'cook' },
+      { day: 0, slot: 'dinner', recipeId: 'pasta-carbonara', source: 'cook' },
+    ];
+    const fresh = evaluate(buildContext(baseInput()), meals);
+    const seen = evaluate(buildContext(baseInput({ recent: ['pura-na-mlijeko', 'pasta-carbonara'] })), meals);
+    expect(seen.breakdown.recent).toBe(8);
+    expect(seen.score - fresh.score).toBe(8);
+    const week = generatePlan(baseInput({ recent: fresh.meals.map((m) => m.recipeId), seed: 4 }));
+    expect(week.meals.filter((m) => ['pura-na-mlijeko', 'pasta-carbonara'].includes(m.recipeId)).length).toBeLessThanOrEqual(1);
+  });
+
   it('aims for a Croatian classic each week, a different one per seed, new ones first', () => {
     const picks = new Set<string>();
     for (let seed = 1; seed <= 20; seed++) {

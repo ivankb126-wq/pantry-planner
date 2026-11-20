@@ -4,7 +4,7 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 6** (price pipeline, 262 ingredients, 150 recipes, planner
+Status: **milestone 6** (price pipeline, 262 ingredients, 175 recipes, planner
 engine, the app screens, the living pantry, works offline and installs on
 the iPhone home screen).
 
@@ -72,7 +72,8 @@ and your settings. It buys whole packages (or loose produce by weight), uses
 the pantry first, lets lunch be yesterday's dinner (a big pot such as sarma
 or grah feeds two lunches), keeps to the budget and a healthy-eating check,
 avoids repeats, and prefers liked dishes, sale items and at least one new
-dish. Long dishes get a nudge at weekends, and with "Croatian classic at
+dish. Dishes from the last two weeks get a rest, so cheap favourites take
+turns. Long dishes get a nudge at weekends, and with "Croatian classic at
 weekends" on each plan aims for one Croatian main, new ones first, as long as
 the budget allows. Items a store does not list get a
 typical price from `data/reference-prices.json`, marked as an estimate.
