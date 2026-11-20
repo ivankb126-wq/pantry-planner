@@ -36,7 +36,10 @@
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice"],
     "keepsDays": 4,
     "equipment": ["large pan", "pot"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/spaghetti-bolognese.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2145112149"
   },
   {
     "id": "lasagne",
@@ -77,7 +80,10 @@
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice", "comfort"],
     "keepsDays": 4,
     "equipment": ["oven", "baking dish", "2 pans"],
-    "illustration": "🧀"
+    "illustration": "🧀",
+    "photo": "photos/lasagne.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2745932231"
   },
   {
     "id": "minestrone",
@@ -115,7 +121,10 @@
     "tags": ["vegetarian", "freezer-friendly", "one-pot", "cook-once-eat-twice"],
     "keepsDays": 4,
     "equipment": ["large pot"],
-    "illustration": "🥣"
+    "illustration": "🥣",
+    "photo": "photos/minestrone.jpg",
+    "photoCredit": "Katrin Gilger, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/26242865@N04/4309005328"
   },
   {
     "id": "mushroom-risotto",
@@ -223,7 +232,10 @@
     "tags": ["high-protein", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["deep pan", "saucepan"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/chicken-cacciatore.jpg",
+    "photoCredit": "TheCulinaryGeek, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/72949902@N00/4618397089"
   },
   {
     "id": "baked-salmon-vegetables",
@@ -330,7 +342,10 @@
     "tags": ["kid-friendly", "freezer-friendly", "high-protein"],
     "keepsDays": 3,
     "equipment": ["deep pan", "pot"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/polpette-al-sugo.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/14384813812"
   },
   {
     "id": "baked-hake-potatoes-olives",

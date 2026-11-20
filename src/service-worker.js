@@ -6,13 +6,15 @@
 //   the phone. The page itself is fetched fresh when online.
 // - Price data (data/...): fetched fresh when online; the last copy is used
 //   when offline or when the network is very slow.
-// - Fonts: saved the first time they load.
+// - Fonts and dish photos: saved the first time they load, and kept across
+//   app updates (photos are not re-downloaded after every update).
 
 const VERSION = '__VERSION__';
 const PRECACHE = JSON.parse('__PRECACHE__');
 const APP = `app-${VERSION}`;
 const DATA = 'data-v1';
 const FONTS = 'fonts-v1';
+const PHOTOS = 'photos-v1';
 const SLOW_MS = 4000;
 
 self.addEventListener('install', (event) => {
@@ -77,6 +79,10 @@ self.addEventListener('fetch', (event) => {
   const path = url.pathname.slice(scope.pathname.length);
   if (path.startsWith('data/')) {
     event.respondWith(networkFirst(event, DATA));
+    return;
+  }
+  if (path.startsWith('photos/')) {
+    event.respondWith(cacheFirst(event, PHOTOS));
     return;
   }
   event.respondWith(cacheFirst(event, APP));

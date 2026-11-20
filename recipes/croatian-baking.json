@@ -92,7 +92,10 @@
     "tags": ["vegetarian", "batch", "make-ahead", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["baking tin", "pastry brush"],
-    "illustration": "🥧"
+    "illustration": "🥧",
+    "photo": "photos/pita-sa-sirom.jpg",
+    "photoCredit": "erecepti.com, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/105392694@N02/10824706525"
   },
   {
     "id": "proja-sa-sirom",
@@ -188,7 +191,10 @@
     "tags": ["vegan", "batch"],
     "keepsDays": 2,
     "equipment": ["baking tray", "small knife"],
-    "illustration": "🌰"
+    "illustration": "🌰",
+    "photo": "photos/peceni-kesteni.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4589113944"
   },
   {
     "id": "bucnica",
@@ -295,7 +301,10 @@
     "tags": ["vegetarian", "festive"],
     "keepsDays": 2,
     "equipment": ["baking trays", "tin", "pot", "whisk"],
-    "illustration": "🍰"
+    "illustration": "🍰",
+    "photo": "photos/kremsnite.jpg",
+    "photoCredit": "seelensturm, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/61404197@N00/4865954563"
   },
   {
     "id": "paprenjaci",
@@ -404,7 +413,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly"],
     "keepsDays": 5,
     "equipment": ["bundt tin", "whisk"],
-    "illustration": "🍰"
+    "illustration": "🍰",
+    "photo": "photos/kuglof.jpg",
+    "photoCredit": "Mario Spann, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/39293910@N08/4052134295"
   },
   {
     "id": "kolac-s-visnjama",

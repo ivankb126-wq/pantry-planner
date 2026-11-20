@@ -35,7 +35,10 @@
       { "text": "Cook for 2 minutes until bubbles appear and the edges set, then flip and cook 2 minutes more. Repeat with the rest.", "tip": "Keep them small and the heat gentle: they have no flour, so big ones break when you flip them." },
       "Serve with a spoon of yogurt and the warm berries."
     ],
-    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞",
+    "photo": "photos/banana-oat-pancakes.jpg",
+    "photoCredit": "jblyberg, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/36813960@N00/1966907028"
   },
   {
     "id": "scrambled-eggs-toast", "title": "Scrambled eggs on toast",
@@ -53,7 +56,10 @@
       { "text": "Stir slowly with a spatula, pushing the eggs from the edges to the middle, for 3 to 4 minutes until soft curds form. Toast the bread meanwhile.", "tip": "Low heat and slow stirring make creamy eggs. Take them off while they still look a little wet: they finish cooking in their own heat." },
       "Spoon the eggs onto the toast and serve with the sliced tomato."
     ],
-    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["non-stick pan", "toaster"], "illustration": "🍳"
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["non-stick pan", "toaster"], "illustration": "🍳",
+    "photo": "photos/scrambled-eggs-toast.jpg",
+    "photoCredit": "ultrakml, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/34948727@N00/6850327577"
   },
   {
     "id": "vegetable-omelette", "title": "Vegetable omelette",
@@ -91,7 +97,10 @@
       "Spoon the yogurt into bowls and top with the pear, walnuts and oats.",
       "Drizzle with the honey."
     ],
-    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["bowl"], "illustration": "🍯"
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["bowl"], "illustration": "🍯",
+    "photo": "photos/greek-yogurt-honey-walnuts.jpg",
+    "photoCredit": "missmeng, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/41720539@N03/8126264276"
   },
   {
     "id": "chia-berry-pudding", "title": "Chia pudding with berries",
@@ -127,7 +136,10 @@
       "Slice the other banana.",
       "Pour into bowls and top with the banana slices, oats and pumpkin seeds. Eat straight away."
     ],
-    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["blender"], "illustration": "🫐"
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 0, "equipment": ["blender"], "illustration": "🫐",
+    "photo": "photos/berry-smoothie-bowl.jpg",
+    "photoCredit": "ella.o, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/155807330@N05/30276166867"
   },
   {
     "id": "avocado-egg-toast", "title": "Avocado toast with a soft egg",
@@ -146,7 +158,10 @@
       "Toast the bread. Peel the eggs and cut them in half.",
       "Spread the avocado thickly on the toast and put the egg halves on top, with another tiny pinch of salt on the yolks."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "toaster"], "illustration": "🥑"
+    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["saucepan", "toaster"], "illustration": "🥑",
+    "photo": "photos/avocado-egg-toast.jpg",
+    "photoCredit": "ultrakml, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/34948727@N00/8523648950"
   },
   {
     "id": "cottage-cheese-tomato-toast", "title": "Cottage cheese and tomato toast",
@@ -184,7 +199,10 @@
       { "text": "Fry for 2 to 3 minutes on each side until golden. Repeat with the rest, adding the rest of the butter.", "tip": "If the outside browns before the middle is set, turn the heat down a little." },
       "Serve the toast with the warm berries and a spoon of yogurt."
     ],
-    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍞"
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍞",
+    "photo": "photos/french-toast-berries.jpg",
+    "photoCredit": "ginnerobot, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/78011127@N00/3736676152"
   },
   {
     "id": "bircher-muesli", "title": "Bircher muesli",
@@ -241,7 +259,10 @@
       "Flip them and cook the other side for 2 to 3 minutes, pressing again, until golden and the cheese starts to melt out at the edges.",
       "Cut them diagonally and serve with cucumber slices on the side."
     ],
-    "tags": ["quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan or sandwich maker"], "illustration": "🥪"
+    "tags": ["quick", "kid-friendly"], "keepsDays": 0, "equipment": ["frying pan or sandwich maker"], "illustration": "🥪",
+    "photo": "photos/ham-cheese-toastie.jpg",
+    "photoCredit": "Abi Skipp, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/9557815@N05/3990506813"
   },
   {
     "id": "peanut-butter-banana-toast", "title": "Peanut butter and banana toast",
@@ -484,7 +505,10 @@
       { "text": "Cover and cook on low for 15 minutes, stirring now and then, until the seeds are soft and you can see little curly tails.", "tip": "If it dries out before it is soft, add a splash of milk." },
       "Spoon into bowls and top with sliced banana, a spoon of peanut butter and the sunflower seeds."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣",
+    "photo": "photos/quinoa-breakfast-bowl.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/6290234606"
   },
   {
     "id": "smoked-salmon-rye", "title": "Smoked salmon on rye with cream cheese",
@@ -542,7 +566,10 @@
       { "text": "Bake for 10 to 12 minutes, until the whites are set and the yolks are still soft.", "tip": "The eggs keep cooking in the hot pan, so take it out when the whites are just set." },
       "Serve straight from the pan with bread or toast for dipping."
     ],
-    "tags": ["vegetarian", "high-protein"], "keepsDays": 0, "equipment": ["oven", "small baking dish"], "illustration": "🥚"
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 0, "equipment": ["oven", "small baking dish"], "illustration": "🥚",
+    "photo": "photos/baked-eggs-spinach-feta.jpg",
+    "photoCredit": "razvan.orendovici, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/24468935@N03/6791068694"
   },
   {
     "id": "cottage-cheese-pancakes", "title": "Cottage cheese pancakes",

@@ -30,7 +30,10 @@
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["pot", "frying pan"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/pasta-carbonara.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/13726596053"
   },
   {
     "id": "egg-fried-rice",
@@ -64,7 +67,10 @@
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["wok or large pan"],
-    "illustration": "🍚"
+    "illustration": "🍚",
+    "photo": "photos/egg-fried-rice.jpg",
+    "photoCredit": "Annie Mole, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21309047@N00/6039447644"
   },
   {
     "id": "tuna-tomato-pasta",
@@ -135,7 +141,10 @@
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["frying pan"],
-    "illustration": "🌮"
+    "illustration": "🌮",
+    "photo": "photos/bean-cheese-quesadillas.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/6045328855"
   },
   {
     "id": "chicken-fajita-wraps",
@@ -207,7 +216,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["pot", "large pan"],
-    "illustration": "🦐"
+    "illustration": "🦐",
+    "photo": "photos/garlic-prawn-linguine.jpg",
+    "photoCredit": "goodiesfirst, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/49215102@N00/6395507217"
   },
   {
     "id": "pad-thai-noodles",
@@ -246,7 +258,10 @@
     "tags": ["quick", "vegetarian"],
     "keepsDays": 1,
     "equipment": ["wok or large pan"],
-    "illustration": "🍜"
+    "illustration": "🍜",
+    "photo": "photos/pad-thai-noodles.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2448169497"
   },
   {
     "id": "chicken-ramen",
@@ -315,7 +330,10 @@
     "tags": ["quick", "vegetarian", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["large pan with lid"],
-    "illustration": "🧀"
+    "illustration": "🧀",
+    "photo": "photos/gnocchi-tomato-mozzarella.jpg",
+    "photoCredit": "1la, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/81974988@N00/5558649555"
   },
   {
     "id": "spaghetti-aglio-olio-spinach",
@@ -350,7 +368,10 @@
     "tags": ["quick", "vegetarian"],
     "keepsDays": 1,
     "equipment": ["pot", "2 pans"],
-    "illustration": "🧄"
+    "illustration": "🧄",
+    "photo": "photos/spaghetti-aglio-olio-spinach.jpg",
+    "photoCredit": "Vassilis Online, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/42741557@N05/11422999135"
   },
   {
     "id": "chickpea-spinach-curry",
@@ -421,7 +442,10 @@
     "tags": ["quick", "vegetarian", "make-ahead", "no-cook"],
     "keepsDays": 3,
     "equipment": ["large bowl"],
-    "illustration": "🥗"
+    "illustration": "🥗",
+    "photo": "photos/couscous-feta-chickpea-salad.jpg",
+    "photoCredit": "Rooey202, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/50284194@N00/5955307155"
   },
   {
     "id": "turkey-pepper-wraps",
@@ -456,7 +480,10 @@
     "tags": ["quick", "high-protein", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["frying pan"],
-    "illustration": "🌯"
+    "illustration": "🌯",
+    "photo": "photos/turkey-pepper-wraps.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/57549422"
   },
   {
     "id": "salmon-couscous-spinach",
@@ -690,6 +717,9 @@
     "tags": ["quick", "vegan", "vegetarian"],
     "keepsDays": 3,
     "equipment": ["pot", "pan"],
-    "illustration": "🌶️"
+    "illustration": "🌶️",
+    "photo": "photos/penne-arrabbiata-chickpeas.jpg",
+    "photoCredit": "veritatem, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/66722164@N00/27338632534"
   }
 ]

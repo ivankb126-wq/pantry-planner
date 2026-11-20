@@ -79,8 +79,9 @@
         "keepsDays": { "type": "integer", "minimum": 0, "maximum": 14, "description": "Days it keeps in the fridge once cooked" },
         "equipment": { "type": "array", "items": { "type": "string" } },
         "illustration": { "type": "string", "minLength": 1, "maxLength": 8, "description": "An emoji for now; photos later" },
-        "photoCredit": { "type": "string", "minLength": 3, "maxLength": 200 },
-        "photo":{ "type": ["string", "null"] }
+        "photoCredit": { "type": "string", "minLength": 3, "maxLength": 200, "description": "Author and licence, e.g. \"Jane Doe, CC BY-SA 4.0\"" },
+        "photoSource": { "type": "string", "pattern": "^https://", "description": "Page of the photo and its licence (Wikimedia Commons, Flickr)" },
+        "photo": { "type": ["string", "null"], "description": "A file in public/photos/, e.g. \"photos/sarma.jpg\"" }
       }
     }
   }

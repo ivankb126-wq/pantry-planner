@@ -30,7 +30,10 @@
     "tags": ["vegetarian", "quick", "high-protein"],
     "keepsDays": 0,
     "equipment": ["frying pan", "2 small pans"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/huevos-rancheros.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/6009117580"
   },
   {
     "id": "apple-baked-oats",
@@ -191,7 +194,10 @@
     "tags": ["vegetarian", "batch"],
     "keepsDays": 14,
     "equipment": ["baking tray"],
-    "illustration": "🥜"
+    "illustration": "🥜",
+    "photo": "photos/honey-roasted-nuts.jpg",
+    "photoCredit": "Scarto, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/86155653@N00/3912065944"
   },
   {
     "id": "pumpkin-muffins",
@@ -228,7 +234,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly", "freezer-friendly"],
     "keepsDays": 4,
     "equipment": ["12-hole muffin tin", "grater"],
-    "illustration": "🧁"
+    "illustration": "🧁",
+    "photo": "photos/pumpkin-muffins.jpg",
+    "photoCredit": "Migle Seikyte, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/69668444@N03/10705092084"
   },
   {
     "id": "lemon-drizzle-cake",
@@ -262,7 +271,10 @@
     "tags": ["vegetarian", "batch"],
     "keepsDays": 5,
     "equipment": ["loaf tin", "mixing bowl"],
-    "illustration": "🍋"
+    "illustration": "🍋",
+    "photo": "photos/lemon-drizzle-cake.jpg",
+    "photoCredit": "sk8geek, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/26170836@N05/4027093223"
   },
   {
     "id": "pear-almond-cake",

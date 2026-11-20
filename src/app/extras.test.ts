@@ -3,6 +3,7 @@ import { scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { stepMinutes } from '../screens/Cooking';
 import { productLabel } from '../screens/Shopping';
 import { backupDue } from './backup';
+import { photoFor, setAllPhotos } from './photos';
 import { emptyData, exportBackup, importBackup } from './state';
 
 describe('brands', () => {
@@ -50,6 +51,17 @@ describe('backup reminder', () => {
     expect(backupDue(d, '2026-11-29')).toBe(true);
     d.backupSnoozedUntil = '2026-12-01';
     expect(backupDue(d, '2026-11-29')).toBe(false);
+  });
+
+  it('shows a free recipe photo with its credit, and your own photo first', () => {
+    const p = photoFor('sarma');
+    expect(p?.src).toMatch(/photos\/sarma\.jpg$/);
+    expect(p?.mine).toBe(false);
+    expect(p?.credit).toMatch(/CC0|CC BY|Public domain/);
+    expect(p?.source).toMatch(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    setAllPhotos({ sarma: 'data:image/jpeg;base64,AAAA' });
+    expect(photoFor('sarma')).toEqual({ src: 'data:image/jpeg;base64,AAAA', mine: true });
+    setAllPhotos({});
   });
 
   it('keeps photos in the backup file', () => {

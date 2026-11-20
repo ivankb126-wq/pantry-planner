@@ -38,7 +38,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "high-protein", "one-pot"],
     "keepsDays": 4,
     "equipment": ["large pan", "saucepan"],
-    "illustration": "🌶️"
+    "illustration": "🌶️",
+    "photo": "photos/chili-con-carne.jpg",
+    "photoCredit": "cyclonebill, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/23178876@N03/2222710953"
   },
   {
     "id": "sweet-potato-burrito-bowls",
@@ -190,7 +193,10 @@
     "tags": ["vegetarian", "high-protein", "one-pot"],
     "keepsDays": 1,
     "equipment": ["large pan with lid"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/shakshuka.jpg",
+    "photoCredit": "cyclonebill, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/23178876@N03/13037224413"
   },
   {
     "id": "baked-falafel-bowls",
@@ -423,7 +429,10 @@
     "tags": ["cook-once-eat-twice", "kid-friendly", "comfort", "freezer-friendly"],
     "keepsDays": 4,
     "equipment": ["large pot", "sieve"],
-    "illustration": "🍜"
+    "illustration": "🍜",
+    "photo": "photos/chicken-noodle-soup.jpg",
+    "photoCredit": "bobjudge, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8286199@N08/3079682439"
   },
   {
     "id": "pumpkin-chickpea-soup",
@@ -461,7 +470,10 @@
     "tags": ["vegetarian", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["oven", "2 baking trays", "pot", "blender"],
-    "illustration": "🎃"
+    "illustration": "🎃",
+    "photo": "photos/pumpkin-chickpea-soup.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/319266288"
   },
   {
     "id": "pork-chops-mash-sauerkraut",
@@ -498,7 +510,10 @@
     "tags": ["high-protein", "comfort"],
     "keepsDays": 2,
     "equipment": ["frying pan", "2 pots"],
-    "illustration": "🥩"
+    "illustration": "🥩",
+    "photo": "photos/pork-chops-mash-sauerkraut.jpg",
+    "photoCredit": "jakeprzespo, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/52507429@N00/6161717746"
   },
   {
     "id": "wings-wedges-coleslaw",
@@ -575,6 +590,9 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
     "equipment": ["oven", "baking tray", "frying pan"],
-    "illustration": "🍔"
+    "illustration": "🍔",
+    "photo": "photos/turkey-burgers-sweet-potato.jpg",
+    "photoCredit": "stupid_systemus, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/40750945@N06/31734855144"
   }
 ]

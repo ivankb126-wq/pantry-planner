@@ -46,15 +46,29 @@ export interface DishPhoto {
   src: string;
   mine: boolean;
   credit?: string;
+  /** The photo's page with its licence (Wikimedia Commons). */
+  source?: string;
+}
+
+/** "Wikimedia Commons", "Flickr" or the site's name, for the photo credit. */
+export function photoSite(url: string): string {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '');
+    if (host.endsWith('wikimedia.org')) return 'Wikimedia Commons';
+    if (host.endsWith('flickr.com')) return 'Flickr';
+    return host;
+  } catch {
+    return 'source';
+  }
 }
 
 /** The photo to show for a recipe, or null for the sunset picture. */
 export function photoFor(recipeId: string): DishPhoto | null {
   if (photos[recipeId]) return { src: photos[recipeId], mine: true };
-  const r = RECIPE_BY_ID.get(recipeId) as { photo?: string | null; photoCredit?: string } | undefined;
+  const r = RECIPE_BY_ID.get(recipeId);
   if (!r?.photo) return null;
   const src = /^https?:/.test(r.photo) ? r.photo : `${import.meta.env.BASE_URL}${r.photo.replace(/^\//, '')}`;
-  return { src, mine: false, credit: r.photoCredit };
+  return { src, mine: false, credit: r.photoCredit, source: r.photoSource };
 }
 
 export function usePhotos(): void {

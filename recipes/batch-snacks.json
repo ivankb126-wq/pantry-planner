@@ -19,7 +19,10 @@
       { "text": "Spread it out on the tray in a thin layer and bake for 25 minutes, stirring once halfway, until golden.", "tip": "Watch the edges near the end: they burn first. For big clusters, press it flat and do not stir." },
       { "text": "Stir in the cranberries and let it cool completely on the tray. It crisps up as it cools.", "tip": "Kept in a closed jar, it stays crunchy for two weeks." }
     ],
-    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray", "big jar"], "illustration": "🫙"
+    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray", "big jar"], "illustration": "🫙",
+    "photo": "photos/honey-nut-granola.jpg",
+    "photoCredit": "grongar, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70757891@N00/5537372504"
   },
   {
     "id": "oat-granola-bars", "title": "Chewy oat granola bars",
@@ -40,7 +43,10 @@
       "Bake for 18 to 20 minutes until golden at the edges. Scatter the chocolate chips over the top straight away so they melt a little.",
       { "text": "Let it cool completely in the tin, then lift it out and cut it into bars.", "tip": "Use a sharp knife and wait until it is fully cool, or they crumble. They keep a week in a closed tin." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🍫"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🍫",
+    "photo": "photos/oat-granola-bars.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/12328842433"
   },
   {
     "id": "date-cocoa-energy-balls", "title": "Date and cocoa energy balls",
@@ -99,7 +105,10 @@
       { "text": "Bake for 20 to 22 minutes until risen and golden.", "tip": "A skewer pushed into the middle of a muffin should come out clean." },
       { "text": "Let them cool in the tin for 5 minutes, then on a rack. Keep in a closed box.", "tip": "They keep 4 days. You can also freeze them and take one out the night before." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🧁"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🧁",
+    "photo": "photos/banana-oat-muffins.jpg",
+    "photoCredit": "oonhs, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/51903019@N05/15709014002"
   },
   {
     "id": "berry-yogurt-muffins", "title": "Berry yogurt muffins",
@@ -161,7 +170,10 @@
       "Taste and add more lemon or salt.",
       { "text": "Serve with crackers.", "tip": "It keeps 5 days in a closed box in the fridge." }
     ],
-    "tags": ["batch", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🩷"
+    "tags": ["batch", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🩷",
+    "photo": "photos/beetroot-hummus.jpg",
+    "photoCredit": "Bex.Walton, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7831824@N04/45555730184"
   },
   {
     "id": "roasted-chickpeas", "title": "Crunchy roasted chickpeas",
@@ -217,7 +229,10 @@
       { "text": "Divide between the jars, put a spoon of peanut butter on top of each, close them and put them in the fridge overnight.", "tip": "They keep 4 days in the fridge. Eat them cold, or warm one in the microwave." },
       "To eat, stir the peanut butter through. Add a splash of milk if it is too thick."
     ],
-    "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars", "grater"], "illustration": "🍏"
+    "tags": ["batch", "vegetarian", "make-ahead", "no-cook"], "keepsDays": 4, "equipment": ["4 jars", "grater"], "illustration": "🍏",
+    "photo": "photos/apple-peanut-overnight-oats.jpg",
+    "photoCredit": "healthiermi, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/54781600@N05/29028527064"
   },
   {
     "id": "flapjacks", "title": "Golden oat flapjacks",
@@ -237,7 +252,10 @@
       { "text": "Bake for 22 to 25 minutes until golden all over and a little darker at the edges.", "tip": "They are still soft when they come out and firm up as they cool." },
       { "text": "Cut into squares while still warm, then let them cool completely in the tin before lifting them out.", "tip": "Cutting while warm stops them cracking. They keep a week in a closed tin." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🟨"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "square tin"], "illustration": "🟨",
+    "photo": "photos/flapjacks.jpg",
+    "photoCredit": "Pam loves pie, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/73227523@N02/8012831056"
   },
   {
     "id": "oat-raisin-cookies", "title": "Oat and raisin cookies",
@@ -258,7 +276,10 @@
       { "text": "Bake for 10 to 12 minutes until golden at the edges but still soft in the middle.", "tip": "They look underdone when you take them out. They firm up as they cool." },
       { "text": "Leave them on the tray for 5 minutes, then move them to a rack or plate to cool completely. Two cookies make a portion.", "tip": "They keep a week in a closed tin." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "2 baking trays"], "illustration": "🍪"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 7, "equipment": ["oven", "2 baking trays"], "illustration": "🍪",
+    "photo": "photos/oat-raisin-cookies.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/4306068746"
   },
   {
     "id": "ham-cheese-muffins", "title": "Ham and cheese savoury muffins",
@@ -340,7 +361,10 @@
       { "text": "Bake for 50 to 55 minutes, until a skewer pushed into the middle comes out clean.", "tip": "If the top browns too fast before the middle is done, cover it loosely with foil." },
       { "text": "Cool in the tin for 10 minutes, then lift it out and let it cool completely before slicing.", "tip": "Keeps 4 days wrapped. Slices are lovely toasted for breakfast." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "loaf tin"], "illustration": "🍌"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "loaf tin"], "illustration": "🍌",
+    "photo": "photos/banana-bread.jpg",
+    "photoCredit": "ted_major, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/47429460@N00/5610175774"
   },
   {
     "id": "carrot-zucchini-muffins", "title": "Carrot and zucchini muffins",
@@ -383,7 +407,10 @@
       { "text": "Pull the squares apart a little and bake for 25 to 30 minutes more, until dry and crisp.", "tip": "Turn off the oven and leave them inside to cool for extra crunch." },
       { "text": "Let them cool and keep them in a tin. Serve with the cottage cheese.", "tip": "They keep two weeks in a closed tin." }
     ],
-    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray"], "illustration": "🌻"
+    "tags": ["batch", "vegetarian", "make-ahead"], "keepsDays": 14, "equipment": ["oven", "baking tray"], "illustration": "🌻",
+    "photo": "photos/seed-crackers.jpg",
+    "photoCredit": "trophygeek, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/65187097@N03/7309897160"
   },
   {
     "id": "paprika-popcorn", "title": "Smoky paprika popcorn",
@@ -402,6 +429,9 @@
       { "text": "When there are a few seconds between pops, take the pot off the heat and tip the popcorn into a big bowl.", "tip": "Do not wait for the last kernels: the popcorn at the bottom burns quickly." },
       { "text": "Melt the butter and pour it over, then sprinkle with the paprika and salt and toss well. Once cool, keep it in a closed bag or tin.", "tip": "Without the butter it stays crisp for longer." }
     ],
-    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["large pot with lid"], "illustration": "🍿"
+    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["large pot with lid"], "illustration": "🍿",
+    "photo": "photos/paprika-popcorn.jpg",
+    "photoCredit": "veggiefrog, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/72139255@N00/2145862702"
   }
 ]

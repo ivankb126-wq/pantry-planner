@@ -105,8 +105,10 @@ grow or shrink with the number of people go in braces: `{700 ml}`,
 `{2 tbsp}`, `{8}` (for 8 eggs). For 2 people a 4-serving recipe then reads
 "350 ml". The cooking timer uses the longest time a step mentions, so write
 the main wait as the longest. A recipe can have a free photo:
-`"photo"` (a URL or a file in `public/`) and `"photoCredit"` (author and
-licence). A photo you take in the app replaces it on your phone.
+`"photo"` (a file in `public/photos/`), `"photoCredit"` (author and licence)
+and `"photoSource"` (the photo's page). Only use photos whose licence allows
+reuse (public domain, CC0, CC BY, CC BY-SA). A photo you take in the app
+replaces it on your phone.
 
 ## How it works
 
@@ -146,6 +148,13 @@ python -m pytest pipeline
 ```
 
 ## Data and credits
+
+Dish photos come from [Wikimedia Commons](https://commons.wikimedia.org) and
+from Flickr (found through [Openverse](https://openverse.org)), and are public
+domain, CC0, CC BY or CC BY-SA. Each one is credited on its recipe page
+(author and licence, linked to the photo's own page), and
+the recipe file holds the same in `photoCredit` and `photoSource`. The
+photos in `public/photos/` are smaller copies (720 px wide) of the originals.
 
 Price data comes from the shops' official price lists, collected by
 [cijene.dev](https://github.com/senko/cijene-api) (free for non-commercial

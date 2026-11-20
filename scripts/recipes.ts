@@ -7,7 +7,7 @@
 // "quick" recipes take 30 minutes or less, vegetarian/vegan tags match the
 // ingredients, and nutrition per serving looks sensible for the meal type.
 
-import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv';
@@ -147,6 +147,10 @@ export function checkAll() {
         if (/[{}]/.test(stray)) errors.push(`${where}: step ${n + 1} has a "{...}" that is not an amount like {200 ml}, {2 tbsp} or {4}`);
         if (part.includes('—')) errors.push(`${where}: step ${n + 1} uses a long dash; use a comma or full stop instead`);
       }    });
+    if (r.photo) {
+      if (!r.photoCredit) errors.push(`${where}: a photo needs a photoCredit (author and licence)`);
+      if (!/^https?:/.test(r.photo) && !existsSync(join(ROOT, 'public', r.photo))) errors.push(`${where}: photo file public/${r.photo} is missing`);
+    }
     const dupes = r.ingredients.map((i) => i.id).filter((id, i, a) => a.indexOf(id) !== i);
     if (dupes.length) warnings.push(`${where}: ingredient listed twice: ${dupes.join(', ')}`);
     if (!ok) continue;

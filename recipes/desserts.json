@@ -16,7 +16,10 @@
       { "text": "Cook on the lowest heat for 30 minutes, stirring every few minutes and scraping the bottom, until the rice is very soft and the pudding is creamy.", "tip": "Stop while it still looks a little runny: it thickens a lot as it cools. If it catches on the bottom, do not scrape the burnt bits in." },
       { "text": "Take out the lemon peel. Serve warm, or pour into bowls or a box and chill. Dust with cinnamon just before eating.", "tip": "Keeps 3 days in the fridge, covered. Stir in a splash of milk if it is too thick the next day." }
     ],
-    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 3, "equipment": ["heavy saucepan"], "illustration": "🍚"
+    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 3, "equipment": ["heavy saucepan"], "illustration": "🍚",
+    "photo": "photos/rice-pudding.jpg",
+    "photoCredit": "RBerteig, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/51035786238@N01/481045627"
   },
   {
     "id": "apple-crumble", "title": "Apple and walnut crumble",
@@ -37,7 +40,10 @@
       { "text": "Bake for 35 minutes until golden on top and bubbling at the edges.", "tip": "Push a knife into the apples: they should be soft." },
       { "text": "Let it cool for 10 minutes and serve warm with the yogurt.", "tip": "Keeps 3 days in the fridge. Warm portions in the oven so the top crisps up again." }
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["oven", "baking dish"], "illustration": "🍎"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["oven", "baking dish"], "illustration": "🍎",
+    "photo": "photos/apple-crumble.jpg",
+    "photoCredit": "Burger Baroness, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/66787975@N00/2948627658"
   },
   {
     "id": "chocolate-mousse", "title": "Dark chocolate mousse",
@@ -56,7 +62,10 @@
       { "text": "Stir a spoon of cream into the chocolate to loosen it. Then gently fold in the rest of the cream, and after it the whites, with a spatula until no white streaks remain.", "tip": "Cut through the middle and lift from the bottom while you turn the bowl. Stirring knocks out the air that makes it light." },
       { "text": "Spoon into glasses and chill for a few hours, or overnight, until set.", "tip": "It needs at least 3 hours and keeps 2 days, covered. It contains raw egg, so do not serve it to pregnant women or small children." }
     ],
-    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["bowls", "whisk"], "illustration": "🍫"
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["bowls", "whisk"], "illustration": "🍫",
+    "photo": "photos/chocolate-mousse.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/4252722699"
   },
   {
     "id": "panna-cotta-berries", "title": "Panna cotta with berry sauce",
@@ -77,7 +86,10 @@
       "Meanwhile simmer the berries with the honey in a small pan for 5 minutes until saucy. Let it cool.",
       { "text": "Spoon the berry sauce over the panna cotta just before serving.", "tip": "Keeps 3 days in the fridge, covered." }
     ],
-    "tags": ["make-ahead"], "keepsDays": 3, "equipment": ["saucepan", "6 glasses"], "illustration": "🍮"
+    "tags": ["make-ahead"], "keepsDays": 3, "equipment": ["saucepan", "6 glasses"], "illustration": "🍮",
+    "photo": "photos/panna-cotta-berries.jpg",
+    "photoCredit": "grongar, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70757891@N00/8559268477"
   },
   {
     "id": "baked-apples-walnuts", "title": "Baked apples with walnuts and honey",
@@ -97,7 +109,10 @@
       { "text": "Bake for 30 to 35 minutes, until the apples are soft and the skins wrinkle.", "tip": "A knife should slide in easily. Spoon the juices from the dish over the apples once or twice while they bake." },
       "Serve warm with the juices from the dish."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🍏"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🍏",
+    "photo": "photos/baked-apples-walnuts.jpg",
+    "photoCredit": "erix!, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/68387408@N00/8430538384"
   },
   {
     "id": "palacinke", "title": "Palačinke with jam and walnuts",
@@ -118,7 +133,10 @@
       "Flip with a spatula and cook the other side for a few seconds, then stack on a plate. Wipe the pan with oil every couple of palačinke.",
       "Spread each one with jam, or sprinkle with the walnut sugar, and roll or fold it up."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["frying pan", "bowl"], "illustration": "🥞"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["frying pan", "bowl"], "illustration": "🥞",
+    "photo": "photos/palacinke.jpg",
+    "photoCredit": "erecepti.com, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/105392694@N02/12794619594"
   },
   {
     "id": "rozata", "title": "Rožata (Dubrovnik caramel custard)",
@@ -226,7 +244,10 @@
       { "text": "Pour into the tin and bake for 35 to 40 minutes, until golden and a skewer in the middle comes out clean.", "tip": "Do not open the oven in the first half of the baking time, or the cake may sink." },
       { "text": "While the cake is still warm, poke it all over with a skewer and spoon the rest of the juice over it. Let it cool in the tin, then dust with the powdered sugar.", "tip": "Keeps 4 days in a closed box." }
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin"], "illustration": "🍊"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin"], "illustration": "🍊",
+    "photo": "photos/mandarin-yogurt-cake.jpg",
+    "photoCredit": "easycooking, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/63585301@N08/8252728544"
   },
   {
     "id": "no-bake-cheesecake", "title": "No-bake cheesecake",
@@ -247,7 +268,10 @@
       { "text": "Spread the filling over the base, smooth the top, cover and chill overnight.", "tip": "It needs at least 6 hours to set firm enough to cut." },
       { "text": "Thaw the berries and spoon them over the top just before serving.", "tip": "Run a warm knife around the edge before opening the tin. Keeps 3 days in the fridge." }
     ],
-    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["springform tin", "blender", "whisk"], "illustration": "🍰"
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["springform tin", "blender", "whisk"], "illustration": "🍰",
+    "photo": "photos/no-bake-cheesecake.jpg",
+    "photoCredit": "quinn.anya, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/53326337@N00/3123106537"
   },
   {
     "id": "chocolate-pudding", "title": "Homemade chocolate pudding",
@@ -286,7 +310,10 @@
       "Mix the yogurt and honey. Chop the almonds.",
       "Serve the fruit with a spoon of honey yogurt and the almonds on top."
     ],
-    "tags": ["vegetarian", "no-cook", "light", "quick"], "keepsDays": 1, "equipment": ["bowl"], "illustration": "🥝"
+    "tags": ["vegetarian", "no-cook", "light", "quick"], "keepsDays": 1, "equipment": ["bowl"], "illustration": "🥝",
+    "photo": "photos/winter-fruit-salad.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/4087277820"
   },
   {
     "id": "frozen-yogurt-bark", "title": "Frozen yogurt bark",
@@ -348,7 +375,10 @@
       { "text": "Bake for 30 to 35 minutes until puffed, golden and set in the middle.", "tip": "It may wobble a little when you shake the dish but should not be liquid. It sinks as it cools, which is normal." },
       "Let it cool for 10 minutes, dust with the powdered sugar and serve warm."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🫐"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["oven", "baking dish"], "illustration": "🫐",
+    "photo": "photos/berry-clafoutis.jpg",
+    "photoCredit": ".Larry Page, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/96029422@N00/2782148513"
   },
   {
     "id": "banana-nice-cream", "title": "Banana and cocoa nice cream",
@@ -412,6 +442,9 @@
       "Brush the tops with the rest of the butter and bake for 30 to 35 minutes until deep golden and crisp.",
       { "text": "Let it cool for 10 minutes, dust with the powdered sugar and cut into slices.", "tip": "Cut with a serrated knife. Best on the day; crisp up leftovers in the oven." }
     ],
-    "tags": ["vegetarian", "festive"], "keepsDays": 2, "equipment": ["oven", "baking tray", "pastry brush"], "illustration": "🍒"
+    "tags": ["vegetarian", "festive"], "keepsDays": 2, "equipment": ["oven", "baking tray", "pastry brush"], "illustration": "🍒",
+    "photo": "photos/sour-cherry-strudel.jpg",
+    "photoCredit": "TopBudapestOrg, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/85465568@N02/9014575913"
   }
 ]

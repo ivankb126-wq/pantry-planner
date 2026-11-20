@@ -94,6 +94,8 @@ export interface Recipe {
   equipment: string[];
   illustration: string;
   photo?: string | null;
+  photoCredit?: string;
+  photoSource?: string;
 }
 
 /** Health facts per serving that the weekly Nutrition check uses. */

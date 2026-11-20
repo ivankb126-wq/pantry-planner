@@ -71,7 +71,10 @@
     "tags": ["vegetarian", "make-ahead"],
     "keepsDays": 3,
     "equipment": ["baking tin", "pastry brush"],
-    "illustration": "🥬"
+    "illustration": "🥬",
+    "photo": "photos/spanakopita.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2362986739"
   },
   {
     "id": "fish-plaki",
@@ -182,7 +185,10 @@
     "tags": ["vegetarian"],
     "keepsDays": 2,
     "equipment": ["large frying pan", "pot", "colander"],
-    "illustration": "🍆"
+    "illustration": "🍆",
+    "photo": "photos/pasta-alla-norma.jpg",
+    "photoCredit": "Stacy Spensley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21001756@N06/4859882829"
   },
   {
     "id": "egg-curry",
@@ -222,7 +228,10 @@
     "tags": ["vegetarian", "high-protein"],
     "keepsDays": 2,
     "equipment": ["pot", "frying pan"],
-    "illustration": "🥚"
+    "illustration": "🥚",
+    "photo": "photos/egg-curry.jpg",
+    "photoCredit": "Rameshng, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/39107352@N08/5931058622"
   },
   {
     "id": "aloo-gobi",
@@ -337,7 +346,10 @@
     "tags": ["high-protein", "one-pot"],
     "keepsDays": 3,
     "equipment": ["large pot"],
-    "illustration": "🌮"
+    "illustration": "🌮",
+    "photo": "photos/chicken-tortilla-soup.jpg",
+    "photoCredit": "elsie.hui, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/91188380@N05/10619389843"
   },
   {
     "id": "turkish-lentil-soup",
@@ -376,7 +388,10 @@
     "tags": ["vegan", "one-pot", "cook-once-eat-twice"],
     "keepsDays": 4,
     "equipment": ["pot", "stick blender"],
-    "illustration": "🍲"
+    "illustration": "🍲",
+    "photo": "photos/turkish-lentil-soup.jpg",
+    "photoCredit": "Charkrem, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/10069023@N00/14608616122"
   },
   {
     "id": "cottage-pie",
@@ -484,7 +499,10 @@
     "tags": ["one-pot", "comfort", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["wide pan with a lid"],
-    "illustration": "🌭"
+    "illustration": "🌭",
+    "photo": "photos/sausage-bean-casserole.jpg",
+    "photoCredit": "Girl Interrupted Eating, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/35468144810@N01/4069277079"
   },
   {
     "id": "tomato-egg-stir-fry",

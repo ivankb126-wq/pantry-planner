@@ -40,7 +40,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "comfort", "festive"],
     "keepsDays": 4,
     "equipment": ["large pot"],
-    "illustration": "🥬"
+    "illustration": "🥬",
+    "photo": "photos/sarma.jpg",
+    "photoCredit": "Gvjekoslav, CC0",
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Sarma_-_cabbage_rolls.jpg"
   },
   {
     "id": "pasticada",
@@ -86,7 +89,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "festive", "high-protein"],
     "keepsDays": 4,
     "equipment": ["heavy pot", "blender"],
-    "illustration": "🍷"
+    "illustration": "🍷",
+    "photo": "photos/pasticada.jpg",
+    "photoCredit": "LilKil, CC BY-SA 4.0",
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Dalmatinska_pa%C5%A1ticada.jpg"
   },
   {
     "id": "grah-varivo",
@@ -125,7 +131,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "high-protein", "comfort"],
     "keepsDays": 4,
     "equipment": ["large pot"],
-    "illustration": "🫘"
+    "illustration": "🫘",
+    "photo": "photos/grah-varivo.jpg",
+    "photoCredit": "erecepti.com, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/105392694@N02/10291425805"
   },
   {
     "id": "istarska-manestra",
@@ -201,7 +210,10 @@
     "tags": ["high-protein", "one-pot"],
     "keepsDays": 2,
     "equipment": ["wide pot"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/fis-paprikas.jpg",
+    "photoCredit": "Wikiuser100, CC BY-SA 4.0",
+    "photoSource": "https://commons.wikimedia.org/wiki/File:Pot_of_Hungarian_Fisherman%27s_Soup_(Hal%C3%A1szl%C3%A9,_Karpfensuppe).jpg"
   },
   {
     "id": "cobanac",
@@ -282,7 +294,10 @@
     "tags": ["freezer-friendly", "kid-friendly", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["large pot"],
-    "illustration": "🫑"
+    "illustration": "🫑",
+    "photo": "photos/punjene-paprike.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/7461795756"
   },
   {
     "id": "orada-s-blitvom",
@@ -315,7 +330,10 @@
     "tags": ["high-protein"],
     "keepsDays": 1,
     "equipment": ["grill pan or oven"],
-    "illustration": "🐠"
+    "illustration": "🐠",
+    "photo": "photos/orada-s-blitvom.jpg",
+    "photoCredit": "[cipher], CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/36521954194@N01/3261296197"
   },
   {
     "id": "brudet",
@@ -647,7 +665,10 @@
     "tags": ["high-protein", "light"],
     "keepsDays": 1,
     "equipment": ["grill pan"],
-    "illustration": "🦑"
+    "illustration": "🦑",
+    "photo": "photos/lignje-na-zaru.jpg",
+    "photoCredit": "Matt-Zimmerman, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/16725630@N00/5611351804"
   },
   {
     "id": "juneci-gulas-s-palentom",
@@ -686,7 +707,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "high-protein", "comfort"],
     "keepsDays": 4,
     "equipment": ["heavy pot", "saucepan"],
-    "illustration": "🥘"
+    "illustration": "🥘",
+    "photo": "photos/juneci-gulas-s-palentom.jpg",
+    "photoCredit": "Alessandra Cimatti, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/98493891@N00/4872291794"
   },
   {
     "id": "musaka-od-krumpira",
@@ -724,6 +748,9 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["oven", "baking dish", "frying pan"],
-    "illustration": "🥔"
+    "illustration": "🥔",
+    "photo": "photos/musaka-od-krumpira.jpg",
+    "photoCredit": "dogplusplus, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/96626920@N08/43128259612"
   }
 ]

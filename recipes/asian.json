@@ -34,7 +34,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["wok or large pan", "saucepan"],
-    "illustration": "🥢"
+    "illustration": "🥢",
+    "photo": "photos/chicken-vegetable-stir-fry.jpg",
+    "photoCredit": "AndyRobertsPhotos, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21372046@N00/5596019713"
   },
   {
     "id": "thai-green-curry",
@@ -72,7 +75,10 @@
     "tags": ["high-protein"],
     "keepsDays": 3,
     "equipment": ["deep pan", "saucepan"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/thai-green-curry.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4421557507"
   },
   {
     "id": "chicken-teriyaki-bowl",
@@ -110,7 +116,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["frying pan", "saucepan"],
-    "illustration": "🍱"
+    "illustration": "🍱",
+    "photo": "photos/chicken-teriyaki-bowl.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3470404176"
   },
   {
     "id": "salmon-teriyaki",
@@ -146,7 +155,10 @@
     "tags": ["high-protein"],
     "keepsDays": 2,
     "equipment": ["frying pan", "saucepan"],
-    "illustration": "🍣"
+    "illustration": "🍣",
+    "photo": "photos/salmon-teriyaki.jpg",
+    "photoCredit": "davidgiesberg, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/14588042@N06/5383084358"
   },
   {
     "id": "korean-beef-bowl",
@@ -224,7 +236,10 @@
     "tags": ["vegetarian"],
     "keepsDays": 2,
     "equipment": ["frying pan", "saucepan"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/vegetable-bibimbap.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/543866063"
   },
   {
     "id": "chana-masala",
@@ -263,7 +278,10 @@
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,
     "equipment": ["deep pan", "saucepan"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/chana-masala.jpg",
+    "photoCredit": "tobo, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/71239428@N00/4224645622"
   },
   {
     "id": "red-lentil-dal",
@@ -302,7 +320,10 @@
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,
     "equipment": ["saucepan", "pot"],
-    "illustration": "🥘"
+    "illustration": "🥘",
+    "photo": "photos/red-lentil-dal.jpg",
+    "photoCredit": "rovingI, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70522326@N00/1248298366"
   },
   {
     "id": "chicken-tikka-curry",
@@ -341,7 +362,10 @@
     "tags": ["high-protein", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["deep pan", "saucepan"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/chicken-tikka-curry.jpg",
+    "photoCredit": "secretlondon123, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/25834786@N03/2895455410"
   },
   {
     "id": "pork-cabbage-noodles",
@@ -415,7 +439,10 @@
     "tags": ["vegan", "vegetarian"],
     "keepsDays": 3,
     "equipment": ["deep pan", "saucepan"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/tofu-vegetable-curry.jpg",
+    "photoCredit": "Tobyotter, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/78428166@N00/8400614200"
   },
   {
     "id": "chicken-katsu-curry",
@@ -456,7 +483,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["frying pan", "saucepan", "blender"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/chicken-katsu-curry.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2278790425"
   },
   {
     "id": "sweet-sour-pork",
@@ -494,6 +524,9 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
     "equipment": ["wok or large pan", "saucepan"],
-    "illustration": "🍍"
+    "illustration": "🍍",
+    "photo": "photos/sweet-sour-pork.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4270833481"
   }
 ]

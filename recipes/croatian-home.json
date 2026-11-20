@@ -35,7 +35,10 @@
     "tags": ["comfort", "cook-once-eat-twice", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["wide pot", "pot"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/pileci-paprikas.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/5677533624"
   },
   {
     "id": "podvarak",
@@ -145,7 +148,10 @@
     "tags": ["light", "make-ahead"],
     "keepsDays": 2,
     "equipment": ["large pot", "pot"],
-    "illustration": "🐙"
+    "illustration": "🐙",
+    "photo": "photos/salata-od-hobotnice.jpg",
+    "photoCredit": "goodiesfirst, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/49215102@N00/4589206559"
   },
   {
     "id": "pastrva-s-krumpirom",
@@ -181,7 +187,10 @@
     "tags": ["high-protein"],
     "keepsDays": 1,
     "equipment": ["large frying pan", "pot"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/pastrva-s-krumpirom.jpg",
+    "photoCredit": "Kai Hendry, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/16105436@N00/8747349792"
   },
   {
     "id": "punjene-tikvice",
@@ -405,7 +414,10 @@
     "tags": ["one-pot", "comfort", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["large pot"],
-    "illustration": "🍲"
+    "illustration": "🍲",
+    "photo": "photos/pasta-fazol.jpg",
+    "photoCredit": "ci_polla, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/31433294@N08/9919406255"
   },
   {
     "id": "rizoto-s-piletinom",
@@ -441,6 +453,9 @@
     "tags": ["kid-friendly", "one-pot"],
     "keepsDays": 2,
     "equipment": ["wide pan with a lid"],
-    "illustration": "🍚"
+    "illustration": "🍚",
+    "photo": "photos/rizoto-s-piletinom.jpg",
+    "photoCredit": "Katrin Gilger, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/26242865@N04/4356295826"
   }
 ]

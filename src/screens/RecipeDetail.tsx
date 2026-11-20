@@ -15,7 +15,7 @@ import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { mealPortions, takenText } from '../app/pantry';
-import { photoFor, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
+import { photoFor, photoSite, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
 import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, minutes, plural } from '../ui/words';
 import type { PriceState } from './Plan';
@@ -118,7 +118,18 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         </button>
       </div>
 
-      {photo && !photo.mine && photo.credit && <p class="photo-credit">Photo: {photo.credit}</p>}
+      {photo && !photo.mine && photo.credit && (
+        <p class="photo-credit">
+          Photo:{' '}
+          {photo.source ? (
+            <a href={photo.source} target="_blank" rel="noopener noreferrer">
+              {photo.credit}, {photoSite(photo.source)}
+            </a>
+          ) : (
+            photo.credit
+          )}
+        </p>
+      )}
       <div class="badges">
         {sale && <span class="tag teal">{sale} on sale</span>}
         <span class="tag outline">{CUISINE_LABEL[r.cuisine] ?? r.cuisine}</span>
