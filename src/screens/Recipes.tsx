@@ -1,7 +1,7 @@
 // Recipes: search, meal type tabs, filters and a two-column grid.
 
 import { useMemo, useState } from 'preact/hooks';
-import { CUISINE_LABEL, INGREDIENTS, RECIPES } from '../app/catalog';
+import { CUISINE_LABEL, FAMILY_LABEL, INGREDIENTS, RECIPES } from '../app/catalog';
 import { priceIndex, saleIngredient, servingCost } from '../app/costs';
 import { photoFor, usePhotos } from '../app/photos';
 import { useApp } from '../app/state';
@@ -39,7 +39,13 @@ function inTab(r: PlannerRecipe, tab: Tab): boolean {
 }
 
 // Remember the browsing state while the app is open.
-const memory: { tab: Tab; filter: Filter; q: string; cuisine: string | null } = { tab: 'main', filter: 'foryou', q: '', cuisine: null };
+const memory: { tab: Tab; filter: Filter; q: string; cuisine: string | null; family: string | null } = {
+  tab: 'main',
+  filter: 'foryou',
+  q: '',
+  cuisine: null,
+  family: null,
+};
 
 export function RecipesScreen({ prices }: { prices: PriceState }) {
   const d = useApp();
@@ -49,7 +55,11 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
   const [q, setQ] = useState(memory.q);
   const [cuisine, setCuisine] = useState<string | null>(memory.cuisine);
   const [cuisineSheet, setCuisineSheet] = useState(false);
-  Object.assign(memory, { tab, filter, q, cuisine });
+  const [familyState, setFamily] = useState<string | null>(memory.family);
+  // Kinds of dish in this tab (pasta, soups... for dinner; porridge, eggs... for breakfast).
+  const families = Object.keys(FAMILY_LABEL).filter((f) => RECIPES.some((r) => r.family === f && inTab(r, tab)));
+  const family = familyState && families.includes(familyState) ? familyState : null;
+  Object.assign(memory, { tab, filter, q, cuisine, family });
 
   const idx = prices.data ? priceIndex(prices.data) : null;
   const today = zagrebToday();
@@ -62,10 +72,13 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
     const out = RECIPES.filter((r) => {
       if (!dietAllows(d.settings.diet, r.facts.diet)) return false;
       if (words.length) {
-        const hay = fold(`${r.title} ${r.ingredients.map((i) => INGREDIENTS[i.id]?.name ?? '').join(' ')} ${CUISINE_LABEL[r.cuisine] ?? ''}`);
+        const hay = fold(
+          `${r.title} ${r.ingredients.map((i) => INGREDIENTS[i.id]?.name ?? '').join(' ')} ${CUISINE_LABEL[r.cuisine] ?? ''} ${FAMILY_LABEL[r.family] ?? ''}`,
+        );
         if (!words.every((w) => hay.includes(w))) return false;
       } else if (!inTab(r, tab)) return false;
       if (cuisine && r.cuisine !== cuisine) return false;
+      if (family && !words.length && r.family !== family) return false;
       switch (filter) {
         case 'foryou':
           if (hidden.has(r.id)) return false;
@@ -88,7 +101,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
       out.sort((a, b) => rank(a) - rank(b));
     } else out.sort((a, b) => cost(a) - cost(b));
     return out;
-  }, [q, tab, filter, cuisine, idx, d.ratings, d.favourites, d.settings.diet, d.settings.dislikes]);
+  }, [q, tab, filter, cuisine, family, idx, d.ratings, d.favourites, d.settings.diet, d.settings.dislikes]);
 
   const cuisines = Object.keys(CUISINE_LABEL).filter((c) => RECIPES.some((r) => r.cuisine === c));
 
@@ -107,6 +120,19 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
       </label>
 
       {!q && <Segmented label="Meal type" options={TABS} value={tab} onChange={setTab} />}
+
+      {!q && families.length > 1 && (
+        <div class="filter-row family-row" role="group" aria-label="Kind of dish">
+          <Chip on={!family} onClick={() => setFamily(null)}>
+            All
+          </Chip>
+          {families.map((f) => (
+            <Chip key={f} on={family === f} onClick={() => setFamily(family === f ? null : f)}>
+              {FAMILY_LABEL[f]}
+            </Chip>
+          ))}
+        </div>
+      )}
 
       <div class="filter-row" role="group" aria-label="Filters">
         {FILTERS.map((f) => (

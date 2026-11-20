@@ -2,7 +2,7 @@
   {
     "id": "honey-nut-granola", "title": "Honey nut granola",
     "description": "Crunchy oven-baked granola with oats, nuts, seeds and honey. A big jar lasts two weeks.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 12, "prepMinutes": 10, "cookMinutes": 25,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 12, "prepMinutes": 10, "cookMinutes": 25,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "oats", "quantity": 300, "unit": "g" }, { "id": "almonds", "quantity": 80, "unit": "g" },
@@ -27,7 +27,7 @@
   {
     "id": "oat-granola-bars", "title": "Chewy oat granola bars",
     "description": "No-fuss bars of oats, peanut butter, honey, raisins and seeds. Cut into 12 and wrap for lunch boxes.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 20,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 20,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "oats", "quantity": 250, "unit": "g" }, { "id": "peanut-butter", "quantity": 120, "unit": "g" },
@@ -51,7 +51,7 @@
   {
     "id": "date-cocoa-energy-balls", "title": "Date and cocoa energy balls",
     "description": "Blended dates, nuts, oats and cocoa rolled into bite-size balls. No baking, no added sugar.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "dates", "quantity": 200, "unit": "g" }, { "id": "walnuts", "quantity": 80, "unit": "g" },
@@ -70,7 +70,7 @@
   {
     "id": "peanut-butter-energy-balls", "title": "Peanut butter oat bites",
     "description": "Oats, peanut butter, honey, chia and a few chocolate chips rolled into balls. Kids love making them.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 10, "prepMinutes": 15, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "oats", "quantity": 120, "unit": "g" }, { "id": "peanut-butter", "quantity": 120, "unit": "g" },
@@ -88,7 +88,7 @@
   {
     "id": "banana-oat-muffins", "title": "Banana oat muffins",
     "description": "Soft muffins sweetened mostly with ripe bananas, with oats and a little honey. 12 muffins.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "banana", "quantity": 3, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
@@ -113,7 +113,7 @@
   {
     "id": "berry-yogurt-muffins", "title": "Berry yogurt muffins",
     "description": "Light muffins with yogurt and frozen berries straight from the freezer. 12 muffins.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "flour", "quantity": 250, "unit": "g" }, { "id": "sugar", "quantity": 100, "unit": "g" },
@@ -134,7 +134,7 @@
   {
     "id": "homemade-hummus", "title": "Homemade hummus with veg sticks",
     "description": "Smooth chickpea hummus with tahini, lemon and garlic, with carrot, cucumber and pepper sticks.",
-    "mealTypes": ["snack"], "cuisine": "middle-eastern", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "middle-eastern", "family": "snacks", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "chickpeas", "quantity": 800, "unit": "g" }, { "id": "tahini", "quantity": 60, "unit": "g" },
@@ -155,7 +155,7 @@
   {
     "id": "beetroot-hummus", "title": "Beetroot hummus",
     "description": "Bright pink hummus with cooked beetroot, chickpeas and tahini. Great on crackers.",
-    "mealTypes": ["snack"], "cuisine": "middle-eastern", "servings": 6, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "middle-eastern", "family": "snacks", "servings": 6, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "beetroot", "quantity": 250, "unit": "g", "note": "cooked" }, { "id": "chickpeas", "quantity": 400, "unit": "g" },
@@ -178,7 +178,7 @@
   {
     "id": "roasted-chickpeas", "title": "Crunchy roasted chickpeas",
     "description": "Chickpeas roasted until crisp with smoked paprika and garlic. A salty snack with lots of protein.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 6, "prepMinutes": 5, "cookMinutes": 35,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 6, "prepMinutes": 5, "cookMinutes": 35,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "chickpeas", "quantity": 800, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
@@ -196,7 +196,7 @@
   {
     "id": "overnight-oats-jars", "title": "Overnight oats jars with berries",
     "description": "Four jars of oats soaked in milk and yogurt with chia and berries, ready to grab all week.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
@@ -214,7 +214,7 @@
   {
     "id": "apple-peanut-overnight-oats", "title": "Apple pie overnight oats",
     "description": "Overnight oats with grated apple, cinnamon, peanut butter and raisins. Four jars for the week.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },
@@ -237,7 +237,7 @@
   {
     "id": "flapjacks", "title": "Golden oat flapjacks",
     "description": "Buttery, chewy oat squares with honey and a few dried apricots. 16 small pieces.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 16, "prepMinutes": 10, "cookMinutes": 25,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 16, "prepMinutes": 10, "cookMinutes": 25,
     "difficulty": "easy", "mainProtein": "none",
     "ingredients": [
       { "id": "oats", "quantity": 300, "unit": "g" }, { "id": "butter", "quantity": 120, "unit": "g" },
@@ -260,7 +260,7 @@
   {
     "id": "oat-raisin-cookies", "title": "Oat and raisin cookies",
     "description": "Chewy cookies with oats, raisins and cinnamon. Makes about 20.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 12,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 10, "prepMinutes": 15, "cookMinutes": 12,
     "difficulty": "easy", "mainProtein": "none",
     "ingredients": [
       { "id": "oats", "quantity": 150, "unit": "g" }, { "id": "flour", "quantity": 120, "unit": "g" },
@@ -284,7 +284,7 @@
   {
     "id": "ham-cheese-muffins", "title": "Ham and cheese savoury muffins",
     "description": "Savoury muffins with ham, cheese, spring onion and a little sweetcorn. Great cold in lunch boxes.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
     "difficulty": "easy", "mainProtein": "pork",
     "ingredients": [
       { "id": "flour", "quantity": 250, "unit": "g" }, { "id": "baking-powder", "quantity": 12, "unit": "g" },
@@ -306,7 +306,7 @@
   {
     "id": "tzatziki-veg-sticks", "title": "Tzatziki with vegetable sticks",
     "description": "Thick garlic and cucumber yogurt dip with carrot, pepper and kohlrabi sticks. Make a big box.",
-    "mealTypes": ["snack"], "cuisine": "greek", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "greek", "family": "snacks", "servings": 6, "prepMinutes": 15, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "greek-yogurt", "quantity": 500, "unit": "g" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
@@ -327,7 +327,7 @@
   {
     "id": "trail-mix", "title": "Homemade trail mix",
     "description": "A jar of mixed nuts, seeds, raisins and a few chocolate drops. Portion into 30 g bags.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 12, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "almonds", "quantity": 100, "unit": "g" }, { "id": "walnuts", "quantity": 60, "unit": "g" },
@@ -345,7 +345,7 @@
   {
     "id": "banana-bread", "title": "Banana bread",
     "description": "Moist loaf made with very ripe bananas, a little sugar and walnuts. Cut into 10 slices.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "servings": 10, "prepMinutes": 15, "cookMinutes": 55,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "baking", "servings": 10, "prepMinutes": 15, "cookMinutes": 55,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "banana", "quantity": 4, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
@@ -369,7 +369,7 @@
   {
     "id": "carrot-zucchini-muffins", "title": "Carrot and zucchini muffins",
     "description": "Lightly sweet muffins hiding grated carrot and zucchini, with oats and cinnamon. 12 muffins.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 22,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "carrot", "quantity": 2, "unit": "piece" }, { "id": "zucchini", "quantity": 1, "unit": "piece" },
@@ -391,7 +391,7 @@
   {
     "id": "seed-crackers", "title": "Seed crackers",
     "description": "Thin, crisp crackers made only from seeds, oats and water, baked low and slow. Keep for two weeks.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 12, "prepMinutes": 15, "cookMinutes": 60,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 12, "prepMinutes": 15, "cookMinutes": 60,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "sunflower-seeds", "quantity": 80, "unit": "g" }, { "id": "pumpkin-seeds", "quantity": 80, "unit": "g" },
@@ -415,7 +415,7 @@
   {
     "id": "paprika-popcorn", "title": "Smoky paprika popcorn",
     "description": "Popcorn popped in a pot with a little oil, tossed with smoked paprika and salt. A big bowl for movie night.",
-    "mealTypes": ["snack"], "cuisine": "everyday", "servings": 6, "prepMinutes": 2, "cookMinutes": 6,
+    "mealTypes": ["snack"], "cuisine": "everyday", "family": "snacks", "servings": 6, "prepMinutes": 2, "cookMinutes": 6,
     "difficulty": "easy", "mainProtein": "none",
     "ingredients": [
       { "id": "popcorn", "quantity": 120, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },

@@ -2,7 +2,7 @@
   {
     "id": "apple-cinnamon-porridge", "title": "Apple and cinnamon porridge",
     "description": "Creamy oats cooked in milk with grated apple, cinnamon and a few walnuts on top.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 7,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 3, "cookMinutes": 7,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 100, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
@@ -21,7 +21,7 @@
   {
     "id": "banana-oat-pancakes", "title": "Banana oat pancakes",
     "description": "Three-ingredient pancakes from banana, eggs and oats, served with yogurt and berries.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "pancakes", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "banana", "quantity": 2, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
@@ -43,7 +43,7 @@
   {
     "id": "scrambled-eggs-toast", "title": "Scrambled eggs on toast",
     "description": "Soft, slow-scrambled eggs on wholegrain toast with sliced tomato.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 2, "cookMinutes": 6,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "eggs", "servings": 2, "prepMinutes": 2, "cookMinutes": 6,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "butter", "quantity": 10, "unit": "g" },
@@ -64,7 +64,7 @@
   {
     "id": "vegetable-omelette", "title": "Vegetable omelette",
     "description": "A folded omelette with pepper, spinach and onion and a little cheese.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "eggs", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 5, "unit": "piece" }, { "id": "bell-pepper", "quantity": 0.5, "unit": "piece" },
@@ -84,7 +84,7 @@
   {
     "id": "greek-yogurt-honey-walnuts", "title": "Greek yogurt with honey, walnuts and fruit",
     "description": "Thick yogurt with a drizzle of honey, toasted walnuts and a sliced pear or apple.",
-    "mealTypes": ["breakfast"], "cuisine": "greek", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "greek", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "greek-yogurt", "quantity": 300, "unit": "g" }, { "id": "honey", "quantity": 2, "unit": "tsp" },
@@ -105,7 +105,7 @@
   {
     "id": "chia-berry-pudding", "title": "Chia pudding with berries",
     "description": "Chia seeds soaked overnight in milk with vanilla, topped with berries. Make it the evening before.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "chia", "quantity": 60, "unit": "g" }, { "id": "milk", "quantity": 350, "unit": "ml" },
@@ -123,7 +123,7 @@
   {
     "id": "berry-smoothie-bowl", "title": "Berry smoothie bowl",
     "description": "A thick frozen berry and banana smoothie in a bowl, topped with oats, seeds and fruit.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 8, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 8, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "frozen-berries", "quantity": 250, "unit": "g" }, { "id": "banana", "quantity": 2, "unit": "piece" },
@@ -144,7 +144,7 @@
   {
     "id": "avocado-egg-toast", "title": "Avocado toast with a soft egg",
     "description": "Crushed avocado with lemon and chili on toast, topped with a soft-boiled egg.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 7,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 2, "prepMinutes": 5, "cookMinutes": 7,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "avocado", "quantity": 1, "unit": "piece" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
@@ -166,7 +166,7 @@
   {
     "id": "cottage-cheese-tomato-toast", "title": "Cottage cheese and tomato toast",
     "description": "Fresh cottage cheese on toast with tomato, cucumber, a little olive oil and black pepper.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 2,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "family": "bread", "servings": 2, "prepMinutes": 5, "cookMinutes": 2,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "cottage-cheese", "quantity": 250, "unit": "g" }, { "id": "bread", "quantity": 120, "unit": "g" },
@@ -184,7 +184,7 @@
   {
     "id": "french-toast-berries", "title": "French toast with berries",
     "description": "Bread soaked in egg and milk, fried golden and served with warm berries and yogurt.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "pancakes", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "bread", "quantity": 160, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
@@ -207,7 +207,7 @@
   {
     "id": "bircher-muesli", "title": "Bircher muesli",
     "description": "Oats soaked overnight in yogurt and milk with grated apple, raisins and hazelnuts.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 90, "unit": "g" }, { "id": "yogurt", "quantity": 200, "unit": "g" },
@@ -225,7 +225,7 @@
   {
     "id": "breakfast-burrito", "title": "Breakfast burrito",
     "description": "Scrambled eggs, beans, peppers and cheese wrapped in a warm tortilla. Good to take away.",
-    "mealTypes": ["breakfast"], "cuisine": "mexican", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "mexican", "family": "bread", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "tortillas", "quantity": 120, "unit": "g", "note": "2 large" }, { "id": "eggs", "quantity": 4, "unit": "piece" },
@@ -245,7 +245,7 @@
   {
     "id": "ham-cheese-toastie", "title": "Ham and cheese toastie",
     "description": "Crisp toasted sandwich with ham and melted cheese, served with a few slices of cucumber.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 6,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 2, "prepMinutes": 3, "cookMinutes": 6,
     "difficulty": "easy", "mainProtein": "pork",
     "ingredients": [
       { "id": "bread", "quantity": 160, "unit": "g" }, { "id": "ham", "quantity": 80, "unit": "g" },
@@ -267,7 +267,7 @@
   {
     "id": "peanut-butter-banana-toast", "title": "Peanut butter and banana toast",
     "description": "Wholegrain toast with peanut butter, sliced banana and a sprinkle of cinnamon.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 4, "cookMinutes": 2,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 2, "prepMinutes": 4, "cookMinutes": 2,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "bread", "quantity": 120, "unit": "g" }, { "id": "peanut-butter", "quantity": 40, "unit": "g" },
@@ -285,7 +285,7 @@
   {
     "id": "kajgana-s-paprikom", "title": "Kajgana with peppers and onion",
     "description": "Croatian-style scrambled eggs cooked with sweet pepper, onion and a little bacon, with fresh bread.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "family": "eggs", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
@@ -305,7 +305,7 @@
   {
     "id": "zganci-s-jogurtom", "title": "Žganci with yogurt",
     "description": "Old-fashioned breakfast of crumbly cornmeal žganci with cold yogurt or warm milk.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 2, "cookMinutes": 20,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "family": "porridge", "servings": 2, "prepMinutes": 2, "cookMinutes": 20,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "polenta", "quantity": 120, "unit": "g" }, { "id": "yogurt", "quantity": 400, "unit": "g" },
@@ -324,7 +324,7 @@
   {
     "id": "griz-na-mlijeku", "title": "Semolina porridge with cocoa",
     "description": "Smooth semolina cooked in milk, sprinkled with cocoa and a little sugar. A childhood classic.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 2, "cookMinutes": 8,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "family": "porridge", "servings": 2, "prepMinutes": 2, "cookMinutes": 8,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "semolina", "quantity": 70, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },
@@ -342,7 +342,7 @@
   {
     "id": "buckwheat-apple-porridge", "title": "Buckwheat porridge with apple and kefir",
     "description": "Nutty buckwheat simmered until soft, with stewed apple, cinnamon and a pour of kefir.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "buckwheat", "quantity": 100, "unit": "g" }, { "id": "apple", "quantity": 1, "unit": "piece" },
@@ -360,7 +360,7 @@
   {
     "id": "savoury-oats-egg", "title": "Savoury oats with spinach and egg",
     "description": "Oats cooked like a risotto with stock and spinach, topped with a fried egg and cheese.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 3, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "oats", "quantity": 80, "unit": "g" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
@@ -379,7 +379,7 @@
   {
     "id": "kefir-oat-smoothie", "title": "Kefir, banana and oat smoothie",
     "description": "A filling drink-and-go breakfast of kefir, banana, oats and a spoon of peanut butter.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "kefir", "quantity": 400, "unit": "g" }, { "id": "banana", "quantity": 2, "unit": "piece" },
@@ -397,7 +397,7 @@
   {
     "id": "zucchini-fritaja", "title": "Zucchini fritaja",
     "description": "Coastal-style fritaja: eggs baked slowly with zucchini, onion and a little cheese.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-istrian", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-istrian", "family": "eggs", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 8, "unit": "piece" }, { "id": "zucchini", "quantity": 2, "unit": "piece" },
@@ -418,7 +418,7 @@
   {
     "id": "tofu-scramble", "title": "Tofu scramble on toast",
     "description": "Crumbled tofu fried with turmeric, onion, pepper and spinach. A plant-based scrambled egg.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "eggs", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "tofu",
     "ingredients": [
       { "id": "tofu", "quantity": 250, "unit": "g" }, { "id": "turmeric", "quantity": 0.5, "unit": "tsp" },
@@ -438,7 +438,7 @@
   {
     "id": "mushroom-egg-toast", "title": "Garlic mushrooms and egg on toast",
     "description": "Buttery garlic mushrooms with parsley on toast, topped with a poached or fried egg.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 2, "prepMinutes": 5, "cookMinutes": 10,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "mushrooms", "quantity": 250, "unit": "g" }, { "id": "garlic", "quantity": 5, "unit": "g" },
@@ -457,7 +457,7 @@
   {
     "id": "yogurt-muesli-parfait", "title": "Yogurt and muesli parfait",
     "description": "Layers of yogurt, muesli and fruit in a glass. Make two the night before.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "yogurt", "quantity": 350, "unit": "g" }, { "id": "muesli", "quantity": 80, "unit": "g" },
@@ -473,7 +473,7 @@
   {
     "id": "millet-pear-porridge", "title": "Millet porridge with pear and almonds",
     "description": "Creamy millet cooked in milk with vanilla, topped with soft pear and toasted almonds.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 20,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 3, "cookMinutes": 20,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "millet", "quantity": 90, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
@@ -492,7 +492,7 @@
   {
     "id": "quinoa-breakfast-bowl", "title": "Warm quinoa breakfast bowl",
     "description": "Quinoa cooked in milk with cinnamon, topped with banana, peanut butter and seeds.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 3, "cookMinutes": 15,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "quinoa", "quantity": 90, "unit": "g" }, { "id": "milk", "quantity": 350, "unit": "ml" },
@@ -513,7 +513,7 @@
   {
     "id": "smoked-salmon-rye", "title": "Smoked salmon on rye with cream cheese",
     "description": "Dark rye bread with cream cheese, smoked salmon, cucumber and a squeeze of lemon.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "fish",
     "ingredients": [
       { "id": "bread", "quantity": 120, "unit": "g", "note": "rye bread" }, { "id": "cream-cheese", "quantity": 50, "unit": "g" },
@@ -531,7 +531,7 @@
   {
     "id": "turkish-eggs", "title": "Turkish eggs with garlic yogurt",
     "description": "Poached eggs on garlicky yogurt with paprika butter, eaten with warm bread.",
-    "mealTypes": ["breakfast"], "cuisine": "middle-eastern", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
+    "mealTypes": ["breakfast"], "cuisine": "middle-eastern", "family": "eggs", "servings": 2, "prepMinutes": 5, "cookMinutes": 8,
     "difficulty": "medium", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "greek-yogurt", "quantity": 200, "unit": "g" },
@@ -551,7 +551,7 @@
   {
     "id": "baked-eggs-spinach-feta", "title": "Baked eggs with spinach and feta",
     "description": "Eggs baked in a dish over garlicky spinach and tomatoes with crumbled feta.",
-    "mealTypes": ["breakfast"], "cuisine": "greek", "servings": 2, "prepMinutes": 5, "cookMinutes": 15,
+    "mealTypes": ["breakfast"], "cuisine": "greek", "family": "eggs", "servings": 2, "prepMinutes": 5, "cookMinutes": 15,
     "difficulty": "easy", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "spinach", "quantity": 200, "unit": "g" },
@@ -574,7 +574,7 @@
   {
     "id": "cottage-cheese-pancakes", "title": "Cottage cheese pancakes",
     "description": "Soft little pancakes made with fresh cottage cheese, eggs and a little flour, served with jam.",
-    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "servings": 2, "prepMinutes": 5, "cookMinutes": 12,
+    "mealTypes": ["breakfast"], "cuisine": "croatian-continental", "family": "pancakes", "servings": 2, "prepMinutes": 5, "cookMinutes": 12,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "cottage-cheese", "quantity": 250, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },

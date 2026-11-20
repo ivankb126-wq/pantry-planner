@@ -26,7 +26,7 @@ const ING: Record<string, IngredientInfo> = {
 
 function recipe(ingredients: Recipe['ingredients'], servings = 2, extra: Partial<Recipe> = {}): Recipe {
   return {
-    id: 't', title: 'Test', description: 'A test recipe', mealTypes: ['dinner'], cuisine: 'everyday', servings,
+    id: 't', title: 'Test', description: 'A test recipe', mealTypes: ['dinner'], cuisine: 'everyday', family: 'stew', servings,
     prepMinutes: 10, cookMinutes: 20, difficulty: 'easy', mainProtein: 'none', ingredients, steps: ['a', 'b'],
     tags: [], keepsDays: 2, equipment: [], illustration: '🍽', ...extra,
   };

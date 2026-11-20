@@ -1303,6 +1303,9 @@ h1 {
 }
 
 /* ---------------------------------------------------------------- recipes */
+.similar-grid {
+  margin-top: 12px;
+}
 .recipe-grid {
   list-style: none;
   margin: 0;

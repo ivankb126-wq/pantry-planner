@@ -93,6 +93,8 @@ export interface Recipe {
   keepsDays: number;
   equipment: string[];
   illustration: string;
+  /** The kind of dish (pasta, soup, stew...), see FAMILY_LABEL in app/catalog.ts. */
+  family: string;
   photo?: string | null;
   photoCredit?: string;
   photoSource?: string;

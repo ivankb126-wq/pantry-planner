@@ -3,7 +3,7 @@
 
 import { useRef, useState } from 'preact/hooks';
 import { type HideFor, rate, ratingOf, setCooked, setNote, swap, toggleFavourite } from '../app/actions';
-import { CUISINE_LABEL, INGREDIENTS, RECIPE_BY_ID } from '../app/catalog';
+import { CUISINE_LABEL, FAMILY_LABEL, INGREDIENTS, RECIPE_BY_ID, similarRecipes } from '../app/catalog';
 import { buyFor, priceIndex, saleIngredient, servingCost } from '../app/costs';
 import { lineQuantity, productLabel } from './Shopping';
 import { planResult, portionsFor, scaledIngredients } from '../app/planning';
@@ -268,6 +268,8 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         />
       </section>
 
+      <SimilarDishes id={id} />
+
       <MyPhoto id={id} title={r.title} hasOwn={!!photo?.mine} onError={(text) => setToast({ text })} />
 
       {d.plan && (
@@ -355,6 +357,32 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         </Toast>
       )}
     </Screen>
+  );
+}
+
+/** Other dishes of the same kind, sharing the most ingredients first. */
+function SimilarDishes({ id }: { id: string }) {
+  const r = RECIPE_BY_ID.get(id)!;
+  const list = similarRecipes(id, 4);
+  if (!list.length) return null;
+  return (
+    <section class="card">
+      <h2>Similar dishes</h2>
+      <p class="sub">More {(FAMILY_LABEL[r.family] ?? 'dishes').toLowerCase()}, handy if you are missing something for this one.</p>
+      <ul class="recipe-grid similar-grid">
+        {list.map((s) => (
+          <li key={s.id}>
+            <a href={`#/recipe/${s.id}`} class="recipe-card">
+              <DishArt emoji={s.illustration} height={72} photo={photoFor(s.id)?.src} />
+              <span class="rc-title">{s.title}</span>
+              <span class="rc-meta">
+                <span>{minutes(s.facts.totalMinutes)}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

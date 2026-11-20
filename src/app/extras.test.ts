@@ -3,6 +3,7 @@ import { scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { stepMinutes } from '../screens/Cooking';
 import { productLabel } from '../screens/Shopping';
 import { backupDue } from './backup';
+import { FAMILY_LABEL, RECIPES, similarRecipes } from './catalog';
 import { photoFor, setAllPhotos } from './photos';
 import { emptyData, exportBackup, importBackup } from './state';
 
@@ -11,6 +12,16 @@ describe('brands', () => {
     expect(productLabel('Ajvar blagi', 'Kania')).toBe('Ajvar blagi · Kania');
     expect(productLabel('Kania Ajvar', 'Kania')).toBe('Kania Ajvar');
     expect(productLabel('Slanutak', null)).toBe('Slanutak · no brand listed');
+  });
+});
+
+describe('dish families', () => {
+  it('gives every recipe a known family and finds similar dishes of the same kind', () => {
+    for (const r of RECIPES) expect(FAMILY_LABEL[r.family], r.id).toBeTruthy();
+    const similar = similarRecipes('pasta-carbonara', 4);
+    expect(similar).toHaveLength(4);
+    expect(similar.every((s) => s.family === 'pasta')).toBe(true);
+    expect(similar.map((s) => s.id)).not.toContain('pasta-carbonara');
   });
 });
 

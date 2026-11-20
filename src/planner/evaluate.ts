@@ -331,6 +331,14 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   }
   const mainCount = [...cookedMains.values()].reduce((a, n) => a + n, 0);
   for (const n of cuisineCount.values()) variety += Math.max(0, n - Math.max(2, Math.ceil(mainCount / 3))) * 2;
+  // Not three pasta (or three curry) dinners in one week.
+  const familyCount = new Map<string, number>();
+  meals.forEach((m) => {
+    if (m.source !== 'cook' || (m.slot !== 'lunch' && m.slot !== 'dinner')) return;
+    const f = ctx.recipes.get(m.recipeId)!.family;
+    if (f) familyCount.set(f, (familyCount.get(f) ?? 0) + 1);
+  });
+  for (const n of familyCount.values()) variety += Math.max(0, n - Math.max(2, Math.ceil(mainCount / 4))) * 3;
   b.variety = variety;
 
   // Ingredient reuse: an opened pack of fresh food shared by two or three
