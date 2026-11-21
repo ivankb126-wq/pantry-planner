@@ -12,6 +12,7 @@ import { RecipeDetail } from '../screens/RecipeDetail';
 import { RecipesScreen } from '../screens/Recipes';
 import { SettingsScreen } from '../screens/Settings';
 import { ShoppingScreen } from '../screens/Shopping';
+import { ShoppingMode } from '../screens/ShoppingMode';
 import { TabBar } from '../ui/kit';
 import { requestPersistence } from './db';
 import { loadPhotos } from './photos';
@@ -49,6 +50,8 @@ function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnT
       return <RecipeDetail key={route.param} id={route.param ?? ''} mealParam={route.query.get('meal')} prices={prices} />;
     case 'cook':
       return <Cooking key={route.param} id={route.param ?? ''} mealParam={route.query.get('meal')} />;
+    case 'shop':
+      return <ShoppingMode key={route.param} prices={prices} store={route.param} />;
     case 'settings':
       return <SettingsScreen section={route.param} />;
   }

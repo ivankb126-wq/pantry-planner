@@ -1,4 +1,5 @@
 // Shopping list: by store, then by aisle. Tick items as they go in the basket.
+// Shopping mode (ShoppingMode.tsx) is the big-print version for in the store.
 
 import { useState } from 'preact/hooks';
 import { AISLE_LABEL, AISLE_ORDER, INGREDIENTS, ingName } from '../app/catalog';
@@ -7,17 +8,17 @@ import { buyFor, priceIndex } from '../app/costs';
 import { stock } from '../app/pantry';
 import { planResult } from '../app/planning';
 import type { PriceData } from '../app/prices';
-import { update, useApp } from '../app/state';
+import { type AppData, update, useApp } from '../app/state';
 import { DEAL_LABEL, dealVerdict, isGoodSale } from '../lib/deals';
 import { formatAmount, formatEur } from '../lib/format';
 import { ESTIMATE } from '../planner/evaluate';
-import type { ShoppingLine } from '../planner/types';
+import type { PlanResult, ShoppingLine } from '../planner/types';
 import { IconCheck, IconClose } from '../ui/icons';
 import { Empty, Screen, Segmented, Toast, useToast } from '../ui/kit';
 import type { PriceState } from './Plan';
 import { RunningLow } from './RunningLow';
 
-type ShopLine = ShoppingLine & { extra?: boolean };
+export type ShopLine = ShoppingLine & { extra?: boolean };
 
 export function lineKey(l: ShopLine): string {
   return `${l.extra ? 'extra|' : ''}${l.store}|${l.ingredient}|${l.product}|${l.size}`;
@@ -37,7 +38,7 @@ export function productLabel(product: string, brand?: string | null, ingredient?
   return product.toLowerCase().includes(brand.toLowerCase()) ? product : `${product} · ${brand}`;
 }
 
-function storeName(s: string): string {
+export function storeName(s: string): string {
   return s === ESTIMATE ? 'Any store (typical price)' : s;
 }
 
@@ -80,17 +81,73 @@ export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
   return out;
 }
 
+export interface ShoppingData {
+  result: PlanResult;
+  all: ShopLine[];
+  extraKeys: Set<string>;
+  stores: string[];
+}
+
+/** Every line to buy (the plan plus running-low extras) and the stores, "Any store" last. */
+export function shoppingData(d: AppData, prices: PriceData): ShoppingData | null {
+  if (!d.plan) return null;
+  const result = planResult(d, prices);
+  if (!result) return null;
+  const extra = extraLines(d.extras, prices);
+  const all: ShopLine[] = [...result.shopping, ...extra];
+  const stores = [...new Set(all.map((l) => l.store))].sort((a, b) => (a === ESTIMATE ? 1 : b === ESTIMATE ? -1 : a.localeCompare(b)));
+  return { result, all, extraKeys: new Set(extra.map(lineKey)), stores };
+}
+
+/** Already put in the pantry from an earlier basket. */
+export function isBought(d: AppData, l: ShopLine): boolean {
+  return !!d.shoppingChecked[`bought|${lineKey(l)}`];
+}
+
+/** In the basket (ticked) or already bought. */
+export function isTicked(d: AppData, l: ShopLine): boolean {
+  return !!d.shoppingChecked[lineKey(l)] || isBought(d, l);
+}
+
+export function toggleLine(l: ShopLine): void {
+  update((x) => {
+    const k = lineKey(l);
+    if (x.shoppingChecked[k]) delete x.shoppingChecked[k];
+    else x.shoppingChecked[k] = true;
+  });
+}
+
+/** Puts ticked lines in the pantry and marks them bought. */
+export function basketToPantry(lines: ShopLine[]): void {
+  const items = lines.map((l) => ({ ingredient: l.ingredient, amount: l.loose ? l.amount : l.packs * l.size }));
+  update((x) => {
+    stock(x, items);
+    for (const l of lines) {
+      delete x.shoppingChecked[lineKey(l)];
+      x.shoppingChecked[`bought|${lineKey(l)}`] = true;
+    }
+  });
+}
+
+/** Lines grouped by aisle, in a typical shop walk (fresh first, frozen last). */
+export function byAisle(lines: ShopLine[]): { a: string; items: ShopLine[] }[] {
+  const groups = AISLE_ORDER.map((a) => ({ a, items: lines.filter((l) => (INGREDIENTS[l.ingredient]?.category ?? 'other') === a) })).filter((g) => g.items.length);
+  const other = lines.filter((l) => !AISLE_ORDER.includes(INGREDIENTS[l.ingredient]?.category ?? 'other'));
+  if (other.length) groups.push({ a: 'other', items: other });
+  return groups;
+}
+
 function tabName(s: string): string {
   return s === ESTIMATE ? 'Other' : s.split(' ')[0];
 }
 
 export function ShoppingScreen({ prices }: { prices: PriceState }) {
   const d = useApp();
-  const result = prices.data && d.plan ? planResult(d, prices.data) : null;
+  const sd = prices.data && d.plan ? shoppingData(d, prices.data) : null;
   const [tab, setTab] = useState('all');
   const [toast, setToast] = useToast<string>();
 
-  if (!d.plan || !result) {
+  if (!d.plan || !sd) {
     return (
       <Screen glow="teal">
         <header class="page-head">
@@ -110,38 +167,20 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
     );
   }
 
+  const { result, all, extraKeys, stores } = sd;
   const checked = d.shoppingChecked;
-  const extra = extraLines(d.extras, prices.data!);
-  const extraKeys = new Set(extra.map(lineKey));
-  const all: ShopLine[] = [...result.shopping, ...extra];
-  const stores = [...new Set(all.map((l) => l.store))].sort((a, b) => (a === ESTIMATE ? 1 : b === ESTIMATE ? -1 : a.localeCompare(b)));
   const shown = tab === 'all' ? stores : stores.filter((s) => s === tab);
   const lines = all.filter((l) => shown.includes(l.store));
   const inBasket = lines.filter((l) => checked[lineKey(l)]);
   const basketCost = inBasket.reduce((s, l) => s + l.cost, 0);
   const total = lines.reduce((s, l) => s + l.cost, 0);
   const pct = lines.length ? (inBasket.length / lines.length) * 100 : 0;
-
-  const toggle = (l: ShoppingLine) =>
-    update((x) => {
-      const k = lineKey(l);
-      if (x.shoppingChecked[k]) delete x.shoppingChecked[k];
-      else x.shoppingChecked[k] = true;
-    });
+  const bought = (l: ShopLine) => isBought(d, l);
 
   const addBasket = () => {
-    const items = inBasket.map((l) => ({ ingredient: l.ingredient, amount: l.loose ? l.amount : l.packs * l.size }));
-    update((x) => {
-      stock(x, items);
-      for (const l of inBasket) {
-        delete x.shoppingChecked[lineKey(l)];
-        x.shoppingChecked[`bought|${lineKey(l)}`] = true;
-      }
-    });
+    basketToPantry(inBasket);
     setToast(`${inBasket.length} items added to your pantry.`);
   };
-
-  const bought = (l: ShoppingLine) => !!checked[`bought|${lineKey(l)}`];
 
   return (
     <Screen glow="teal">
@@ -152,13 +191,15 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
         </p>
       </header>
 
+      <a class="btn-primary wide shop-mode-start" href={`#/shop${tab === 'all' ? '' : `/${encodeURIComponent(tab)}`}`}>
+        Start shopping mode
+      </a>
+
       {stores.length > 1 && <Segmented label="Store" options={[{ id: 'all', label: 'All' }, ...stores.map((s) => ({ id: s, label: tabName(s) }))]} value={tab} onChange={setTab} />}
 
       {shown.map((store) => {
         const sl = all.filter((l) => l.store === store);
-        const groups = AISLE_ORDER.map((a) => ({ a, items: sl.filter((l) => (INGREDIENTS[l.ingredient]?.category ?? 'other') === a) })).filter((g) => g.items.length);
-        const other = sl.filter((l) => !AISLE_ORDER.includes(INGREDIENTS[l.ingredient]?.category ?? 'other'));
-        if (other.length) groups.push({ a: 'other', items: other });
+        const groups = byAisle(sl);
         const storeTotal = sl.reduce((s, l) => s + l.cost, 0);
         return (
           <section key={store} class="card shop-store">
@@ -176,7 +217,7 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
                     return (
                       <li key={lineKey(l)}>
                         <label class={`shop-row${on ? ' done' : ''}`}>
-                          <input type="checkbox" checked={on} disabled={bought(l)} onChange={() => toggle(l)} />
+                          <input type="checkbox" checked={on} disabled={bought(l)} onChange={() => toggleLine(l)} />
                           <span class="box" aria-hidden="true">
                             {on && <IconCheck size={18} />}
                           </span>

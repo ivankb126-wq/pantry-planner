@@ -53,6 +53,10 @@ the phone, with a backup file you can export and restore), the hash router
 shared pieces (icons, sheets, steppers, switches) in the Sunset Night style.
 A plan remembers what was in the pantry when it was made, so adding shopping
 or cooking during the week does not change that week's list.
+Shopping mode (`#/shop`, [src/screens/ShoppingMode.tsx](src/screens/ShoppingMode.tsx))
+is the shopping list in big print for the store: items in aisle order,
+ticked items move into "In the basket" after a moment, a running total, the
+screen stays on, and "Add basket to my pantry" at the end.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a

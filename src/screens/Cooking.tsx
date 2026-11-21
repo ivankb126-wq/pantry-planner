@@ -10,6 +10,7 @@ import { type Amount, useApp } from '../app/state';
 import { scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { IconClose, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { Empty, Screen, Sheet } from '../ui/kit';
+import { useWakeLock } from '../ui/wakeLock';
 import { fold } from './pickers';
 
 /**
@@ -29,32 +30,6 @@ export function stepMinutes(text: string): number | null {
     if (mins > 0 && mins <= 360 && (best == null || mins > best)) best = mins;
   }
   return best;
-}
-
-function useWakeLock(): boolean {
-  const [on, setOn] = useState(false);
-  useEffect(() => {
-    let lock: WakeLockSentinel | null = null;
-    let live = true;
-    const get = async () => {
-      try {
-        lock = (await navigator.wakeLock?.request('screen')) ?? null;
-        if (live) setOn(!!lock);
-        lock?.addEventListener('release', () => live && setOn(false));
-      } catch {
-        if (live) setOn(false);
-      }
-    };
-    void get();
-    const vis = () => document.visibilityState === 'visible' && void get();
-    document.addEventListener('visibilitychange', vis);
-    return () => {
-      live = false;
-      document.removeEventListener('visibilitychange', vis);
-      void lock?.release().catch(() => undefined);
-    };
-  }, []);
-  return on;
 }
 
 function beep(): void {
