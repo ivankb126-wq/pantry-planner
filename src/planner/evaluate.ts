@@ -295,12 +295,14 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const over = cost - input.budget;
   b.budget = over > 0 ? 25 + 40 * over : 0;
   const eDev = Math.abs(perPersonDay.kcal - T) / Math.max(1, T);
-  b.energy = eDev > 0.1 ? (eDev - 0.1) * 60 : 0;
+  // Too little food is worse than spending a few euros more, so missing the
+  // energy range costs about 2.5 EUR per percent (it used to be 0.6 EUR).
+  b.energy = eDev > 0.1 ? (eDev - 0.1) * 250 : 0;
   b.protein = shortfall(perPersonDay.protein, 60 * s) * 25;
   b.fibre = shortfall(perPersonDay.fibre, 25 * s) * 15;
   b.veg = shortfall(perPersonDay.vegPortions, 3 * s) * 20;
   b.sugar = excess(perPersonDay.addedSugar, 30 * s) * 10;
-  b.salt = excess(perPersonDay.salt, 6 * s) * 12;
+  b.salt = excess(perPersonDay.salt, 6 * s) * 30;
   if (hasMains) {
     b.fish = Math.max(0, Math.ceil(weeks) - fishMeals) * 8;
     b.redMeat = Math.max(0, redMeals - Math.round(3 * weeks)) * 5;
@@ -339,6 +341,13 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
     if (f) familyCount.set(f, (familyCount.get(f) ?? 0) + 1);
   });
   for (const n of familyCount.values()) variety += Math.max(0, n - Math.max(2, Math.ceil(mainCount / 4))) * 3;
+  // Not pasta for lunch and another pasta for dinner on the same day.
+  for (let d = 0; d < days; d++) {
+    const both = meals.filter((m) => m.day === d && (m.slot === 'lunch' || m.slot === 'dinner'));
+    if (both.length !== 2 || both[0].recipeId === both[1].recipeId) continue;
+    const fams = both.map((m) => ctx.recipes.get(m.recipeId)!.family);
+    if (fams[0] && fams[0] === fams[1]) variety += 8;
+  }
   b.variety = variety;
 
   // Ingredient reuse: an opened pack of fresh food shared by two or three

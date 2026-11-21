@@ -146,6 +146,21 @@ describe('nutrition aggregation', () => {
 });
 
 // ------------------------------------------------------------------ reuse
+describe('variety within a day', () => {
+  it('prefers lunch and dinner of different kinds over two pastas', () => {
+    const ctx = buildContext(baseInput({ days: 1, meals: ['lunch', 'dinner'] }));
+    const twoPastas = evaluate(ctx, [
+      { day: 0, slot: 'lunch', recipeId: 'spaghetti-pomodoro', source: 'cook' },
+      { day: 0, slot: 'dinner', recipeId: 'pasta-puttanesca', source: 'cook' },
+    ]);
+    const pastaAndCurry = evaluate(ctx, [
+      { day: 0, slot: 'lunch', recipeId: 'spaghetti-pomodoro', source: 'cook' },
+      { day: 0, slot: 'dinner', recipeId: 'red-lentil-dal', source: 'cook' },
+    ]);
+    expect(twoPastas.breakdown.variety).toBeGreaterThan(pastaAndCurry.breakdown.variety);
+  });
+});
+
 describe('ingredient reuse', () => {
   it('prefers a second meal that uses up an opened pack', () => {
     const input = baseInput({ days: 2, meals: ['dinner'] });

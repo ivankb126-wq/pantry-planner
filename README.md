@@ -83,6 +83,14 @@ Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 npx tsx scripts/try-plan.ts lidl 104 110 1   # chain, store, budget, seed
 ```
 
+To try 24 households, budgets, diets and stores at once and list anything
+that looks wrong (over budget, a diet broken, the same kind of dish twice in
+a day):
+
+```bash
+npx tsx scripts/plan-matrix.ts
+```
+
 ## Recipes
 
 Recipes live in [recipes/](recipes) as JSON (one recipe or a list per file),
