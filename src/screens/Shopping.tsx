@@ -10,10 +10,10 @@ import { planResult } from '../app/planning';
 import type { PriceData } from '../app/prices';
 import { type AppData, update, useApp } from '../app/state';
 import { DEAL_LABEL, dealVerdict, isGoodSale } from '../lib/deals';
-import { formatAmount, formatEur } from '../lib/format';
+import { formatAmount, formatEur, formatShortDate } from '../lib/format';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlanResult, ShoppingLine } from '../planner/types';
-import { IconCheck, IconClose } from '../ui/icons';
+import { IconCheck, IconClose, IconShare } from '../ui/icons';
 import { Empty, Screen, Segmented, Toast, useToast } from '../ui/kit';
 import type { PriceState } from './Plan';
 import { RunningLow } from './RunningLow';
@@ -137,6 +137,50 @@ export function byAisle(lines: ShopLine[]): { a: string; items: ShopLine[] }[] {
   return groups;
 }
 
+/**
+ * The list as plain text for WhatsApp or Messages: by store, then aisle, with
+ * quantities and the product to look for. Lines already in the basket or the
+ * pantry are left out, so a helper only sees what is still to buy.
+ */
+export function shoppingText(lines: ShopLine[], stores: string[], weekStart?: string): string {
+  const out: string[] = [`Shopping list${weekStart ? `, week of ${formatShortDate(weekStart)}` : ''}`];
+  let total = 0;
+  for (const s of stores) {
+    const sl = lines.filter((l) => l.store === s);
+    if (!sl.length) continue;
+    const cost = sl.reduce((a, l) => a + l.cost, 0);
+    total += cost;
+    out.push('', `${storeName(s).toUpperCase()} (about ${formatEur(cost)})`);
+    for (const g of byAisle(sl)) {
+      out.push('', `${AISLE_LABEL[g.a] ?? 'Other'}:`);
+      for (const l of g.items) {
+        const product = l.estimated ? '' : ` (${productLabel(l.product, l.brand, l.ingredient, l.loose).replace(' · no brand listed', '')})`;
+        out.push(`- ${ingName(l.ingredient)}, ${lineQuantity(l)}${product}`);
+      }
+    }
+  }
+  out.push('', `${lines.length} ${lines.length === 1 ? 'item' : 'items'}, about ${formatEur(total)}`);
+  return out.join('\n');
+}
+
+/** Opens the phone's share sheet, or copies the text where sharing is not available. */
+async function shareText(text: string): Promise<'shared' | 'copied' | 'cancelled' | 'failed'> {
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: 'Shopping list', text });
+      return 'shared';
+    } catch (e) {
+      if ((e as Error).name === 'AbortError') return 'cancelled';
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    return 'copied';
+  } catch {
+    return 'failed';
+  }
+}
+
 function tabName(s: string): string {
   return s === ESTIMATE ? 'Other' : s.split(' ')[0];
 }
@@ -182,6 +226,14 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
     setToast(`${inBasket.length} items added to your pantry.`);
   };
 
+  // What is still to buy in the stores shown (not in the basket or pantry yet).
+  const toBuy = lines.filter((l) => !isTicked(d, l));
+  const share = async () => {
+    const how = await shareText(shoppingText(toBuy, shown, d.plan?.startDate));
+    if (how === 'copied') setToast('List copied. Paste it into WhatsApp or Messages.');
+    if (how === 'failed') setToast('Could not share the list on this device.');
+  };
+
   return (
     <Screen glow="teal">
       <header class="page-head">
@@ -191,9 +243,14 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
         </p>
       </header>
 
-      <a class="btn-primary wide shop-mode-start" href={`#/shop${tab === 'all' ? '' : `/${encodeURIComponent(tab)}`}`}>
-        Start shopping mode
-      </a>
+      <div class="shop-actions">
+        <a class="btn-primary grow" href={`#/shop${tab === 'all' ? '' : `/${encodeURIComponent(tab)}`}`}>
+          Start shopping mode
+        </a>
+        <button class="btn-teal-outline share-btn" onClick={share} disabled={!toBuy.length}>
+          <IconShare size={20} /> Share
+        </button>
+      </div>
 
       {stores.length > 1 && <Segmented label="Store" options={[{ id: 'all', label: 'All' }, ...stores.map((s) => ({ id: s, label: tabName(s) }))]} value={tab} onChange={setTab} />}
 

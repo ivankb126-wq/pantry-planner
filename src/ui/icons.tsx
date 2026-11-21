@@ -133,3 +133,9 @@ export const IconTag = (p: P) => (
     <circle cx="7.5" cy="8.5" r="1.5" />
   </S>
 );
+export const IconShare = (p: P) => (
+  <S {...p}>
+    <path d="M12 15V3M7.5 7.5 12 3l4.5 4.5" />
+    <path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8" />
+  </S>
+);

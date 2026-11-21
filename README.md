@@ -57,6 +57,9 @@ Shopping mode (`#/shop`, [src/screens/ShoppingMode.tsx](src/screens/ShoppingMode
 is the shopping list in big print for the store: items in aisle order,
 ticked items move into "In the basket" after a moment, a running total, the
 screen stays on, and "Add basket to my pantry" at the end.
+"Share" on the shopping list sends what is still to buy (by store and aisle,
+with amounts and products) through the phone's share sheet, or copies it
+where sharing is not available.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a
