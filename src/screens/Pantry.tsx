@@ -1,7 +1,8 @@
 // Pantry: Fridge, Shelves and Freezer, with items on glowing planks.
 
 import { useMemo, useRef, useState } from 'preact/hooks';
-import { removeFromPantry, restorePantry, setCooked } from '../app/actions';
+import { removeFromPantry, restorePantry, setCooked, throwAway, undoThrowAway } from '../app/actions';
+import { priceIndex } from '../app/costs';
 import { INGREDIENTS, INGREDIENT_LIST, RECIPE_BY_ID, ingName } from '../app/catalog';
 import { isExpiring, isLow, needsCheck, stock, takenText } from '../app/pantry';
 import { todayIndex } from '../app/planning';
@@ -13,6 +14,7 @@ import { Chip, Screen, Segmented, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, plural } from '../ui/words';
 import { fold } from './pickers';
 import { RunningLow } from './RunningLow';
+import type { PriceState } from './Plan';
 
 type Section = PantryEntry['storage'];
 const SECTIONS: { id: Section; label: string }[] = [
@@ -116,14 +118,14 @@ function expiryText(e: PantryEntry, today: string): string | null {
   return `use by ${formatShortDate(e.expiresOn)}`;
 }
 
-export function PantryScreen() {
+export function PantryScreen({ prices }: { prices: PriceState }) {
   const d = useApp();
   const today = zagrebToday();
   const [section, setSection] = useState<Section>('fridge');
   const [editing, setEditing] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
   const [checking, setChecking] = useState(false);
-  const [toast, setToast] = useToast<{ text: string; undo?: PantryEntry[] }>(6000);
+  const [toast, setToast] = useToast<{ text: string; undo?: () => void }>(6000);
 
   const soon = d.pantry.filter((p) => isExpiring(p, today)).sort((a, b) => a.expiresOn!.localeCompare(b.expiresOn!));
   const items = d.pantry.filter((p) => p.storage === section).sort((a, b) => ingName(a.ingredient).localeCompare(ingName(b.ingredient)));
@@ -134,7 +136,18 @@ export function PantryScreen() {
 
   const finish = (p: PantryEntry) => {
     const before = removeFromPantry(p.id);
-    setToast({ text: `${ingName(p.ingredient)} finished and removed.`, undo: before });
+    setToast({ text: `${ingName(p.ingredient)} finished and removed.`, undo: () => restorePantry(before) });
+  };
+
+  // Rough value of what is thrown away, from today's prices (0 while they load).
+  const valueOf = (p: PantryEntry): number => {
+    const o = prices.data ? priceIndex(prices.data).best.get(p.ingredient) : undefined;
+    if (!o) return 0;
+    return INGREDIENTS[p.ingredient]?.unit === 'piece' ? p.amount * o.unitPrice : (p.amount / 1000) * o.unitPrice;
+  };
+  const throwOut = (p: PantryEntry) => {
+    const was = throwAway(p.id, valueOf(p));
+    setToast({ text: `Noted as thrown away: ${ingName(p.ingredient)}. This counts in your weekly recap.`, undo: () => undoThrowAway(was) });
   };
 
   return (
@@ -228,6 +241,10 @@ export function PantryScreen() {
             setEditing(null);
             finish(edit);
           }}
+          onThrow={() => {
+            setEditing(null);
+            throwOut(edit);
+          }}
         />
       )}
       {checking && <CheckSheet onClose={() => setChecking(false)} />}
@@ -235,7 +252,7 @@ export function PantryScreen() {
         <Toast
           action={toast.undo ? 'Undo' : undefined}
           onAction={() => {
-            if (toast.undo) restorePantry(toast.undo);
+            toast.undo?.();
             setToast(null);
           }}
         >
@@ -395,7 +412,7 @@ function CheckSheet({ onClose }: { onClose: () => void }) {
   );
 }
 
-function EditSheet({ entry, onClose, onRemove }: { entry: PantryEntry; onClose: () => void; onRemove: () => void }) {
+function EditSheet({ entry, onClose, onRemove, onThrow }: { entry: PantryEntry; onClose: () => void; onRemove: () => void; onThrow: () => void }) {
   const ing = INGREDIENTS[entry.ingredient];
   const unit = ing?.unit ?? 'g';
   const step = stepFor(ing, entry.full);
@@ -433,6 +450,9 @@ function EditSheet({ entry, onClose, onRemove }: { entry: PantryEntry; onClose: 
         <span>Use by</span>
         <input type="date" value={entry.expiresOn ?? ''} onInput={(e) => set({ expiresOn: (e.target as HTMLInputElement).value || undefined })} />
       </label>
+      <button class="btn-ghost wide throw-btn" onClick={onThrow}>
+        I threw this away
+      </button>
       <div class="sheet-btns">
         <button class="btn-ghost" onClick={onRemove}>
           Finished, remove it

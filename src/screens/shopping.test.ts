@@ -14,6 +14,7 @@ const line = (over: Partial<ShopLine>): ShopLine => ({
   cost: 1.01,
   onSale: false,
   deal: null,
+  saving: 0,
   estimated: false,
   ...over,
 });

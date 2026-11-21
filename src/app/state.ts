@@ -93,6 +93,28 @@ export interface AppData {
   pantryCheckedOn: string | null;
   lastBackupOn: string | null;
   backupSnoozedUntil: string | null;
+  /** What went from the shopping list into the pantry (for the weekly recap). */
+  purchases: { date: string; ingredient: string; cost: number; saved: number }[];
+  /** "I threw this away" on a pantry item. */
+  thrown: { date: string; ingredient: string; amount: number; value: number }[];
+  /** Recaps of past weeks, newest last. */
+  recaps: WeekRecap[];
+}
+
+export interface WeekRecap {
+  startDate: string;
+  endDate: string;
+  budget: number;
+  spent: number;
+  saved: number;
+  bought: number; // shopping lines put in the pantry
+  cooked: number;
+  toCook: number;
+  thrownCount: number;
+  thrownValue: number;
+  thrownNames: string[];
+  newDishes: string[]; // recipe ids cooked for the first time
+  favourite: string | null; // a new dish you gave a thumbs up
 }
 
 export const DEFAULT_APP_SETTINGS: Settings = {
@@ -132,6 +154,9 @@ export function emptyData(): AppData {
     pantryCheckedOn: null,
     lastBackupOn: null,
     backupSnoozedUntil: null,
+    purchases: [],
+    thrown: [],
+    recaps: [],
   };
 }
 

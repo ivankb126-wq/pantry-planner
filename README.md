@@ -76,6 +76,14 @@ freezer for today's or tomorrow's meal, and pantry food that reaches its
 use-by date today or tomorrow. "Done" hides one for the day. There is no
 push server, so nothing pops up while the app is closed (that would need a
 small server, such as a free Cloudflare Worker, sending web push).
+The weekly recap (`#/recap`, [src/app/recap.ts](src/app/recap.ts)) adds up a
+plan's week: spent against the budget and saved on sales (both from what
+went into the pantry with "Add basket to my pantry"; a sale saving is
+against the 30-day low, or the usual price where the shop does not publish
+it), meals marked cooked, food marked "I threw this away" in the pantry
+(with its rough value), and the favourite new dish (a first-time dish with a
+thumbs up). When a new plan replaces the week, its recap is kept (last 12
+weeks); the plan shows last week's at the start and this week's near the end.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a

@@ -31,6 +31,19 @@ export function isGoodSale(o: { salePrice: number | null; best30?: number | null
   return v === 'real' || v === 'sale';
 }
 
+/**
+ * Euros saved on a purchase that cost `cost` at the sale price: against the
+ * lowest price of the last 30 days, or the usual price (anchor) when the shop
+ * does not publish that. 0 when not on sale or not really a deal.
+ */
+export function saleSaving(o: { salePrice: number | null; best30?: number | null; anchor?: number | null }, cost: number): number {
+  const v = dealVerdict(o);
+  if (v == null || v === 'not' || !(o.salePrice! > 0)) return 0;
+  const usual = o.best30 != null && o.best30 > 0 ? o.best30 : (o.anchor ?? 0);
+  if (!(usual > o.salePrice! + SAME)) return 0;
+  return Math.round(cost * (usual / o.salePrice! - 1) * 100) / 100;
+}
+
 /** Saving against the lowest price of the last 30 days (0.2 = 20% cheaper), or 0. */
 export function dealSaving(o: { salePrice: number | null; best30?: number | null }): number {
   if (dealVerdict(o) !== 'real') return 0;

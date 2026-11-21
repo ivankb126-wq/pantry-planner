@@ -7,6 +7,7 @@ import { saleIngredient } from '../app/costs';
 import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
 import { prepFor } from '../app/prep';
+import { lastRecap, weekRecap } from '../app/recap';
 import { type Reminder, dismissReminder, reminders } from '../app/reminders';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
@@ -185,6 +186,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
       <LeftAtHome d={d} result={result} />
       <DealsCard data={data} />
       <SeasonCard />
+      <RecapCard d={d} t={t} />
       <button class="btn-ghost wide" onClick={onNewPlan}>
         <IconSwap size={20} /> Make a new plan
       </button>
@@ -539,6 +541,33 @@ function RemindersCard({ d }: { d: AppData }) {
           </li>
         ))}
       </ul>
+    </section>
+  );
+}
+
+/** Weekly recap: last week's at the start of a plan, this week's near its end. */
+function RecapCard({ d, t }: { d: AppData; t: number }) {
+  const last = t <= 1 ? lastRecap(d) : null;
+  const r = last ?? (t >= 4 ? weekRecap(d, d.plan!) : null);
+  if (!r) {
+    return (
+      <a class="btn-ghost wide" href="#/recap">
+        Weekly recap
+      </a>
+    );
+  }
+  const parts = [
+    r.bought ? `spent ${formatEur(r.spent)} of ${formatEur(r.budget)}` : null,
+    r.saved > 0 ? `saved ${formatEur(r.saved)} on sales` : null,
+    `cooked ${r.cooked} of ${r.toCook} meals`,
+  ].filter(Boolean);
+  return (
+    <section class="card" aria-label="Weekly recap">
+      <h2>{last ? 'Last week' : 'Your week so far'}</h2>
+      <p class="sub">You {parts.join(', ').replace(/, ([^,]*)$/, ' and $1')}.</p>
+      <a class="btn-primary wide" href="#/recap">
+        See the recap
+      </a>
     </section>
   );
 }

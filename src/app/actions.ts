@@ -6,6 +6,7 @@ import type { PlanResult } from '../planner/types';
 import { INGREDIENTS, RECIPE_BY_ID } from './catalog';
 import { cookNeeds, mealPortions, stock, useFood } from './pantry';
 import { makePlan, portionsFor, swapInPlan } from './planning';
+import { keepRecap } from './recap';
 import type { PriceData } from './prices';
 import { type Amount, type AppData, type PantryEntry, type SavedPlan, getData, update } from './state';
 
@@ -13,6 +14,7 @@ export function newPlan(prices: PriceData): SavedPlan | null {
   const before = getData().plan;
   const { plan } = makePlan(getData(), prices);
   update((d) => {
+    keepRecap(d);
     d.plan = plan;
     d.shoppingChecked = {};
   });
@@ -128,6 +130,31 @@ export function removeFromPantry(id: string): PantryEntry[] {
     if (e && INGREDIENTS[e.ingredient]?.staple && !d.pantry.some((p) => p.ingredient === e.ingredient) && !d.ranOut.includes(e.ingredient)) d.ranOut.push(e.ingredient);
   });
   return before;
+}
+
+/**
+ * "I threw this away": takes the item out of the pantry and remembers it
+ * (with its rough value) for the weekly recap. Returns the state to undo.
+ */
+export function throwAway(id: string, value: number): { pantry: PantryEntry[]; thrown: AppData['thrown'] } {
+  const before = getData();
+  update((d) => {
+    const e = d.pantry.find((p) => p.id === id);
+    if (!e) return;
+    d.thrown.push({ date: zagrebToday(), ingredient: e.ingredient, amount: e.amount, value: Math.round(value * 100) / 100 });
+    d.pantry = d.pantry.filter((p) => p.id !== id);
+    if (INGREDIENTS[e.ingredient]?.staple && !d.pantry.some((p) => p.ingredient === e.ingredient) && !d.ranOut.includes(e.ingredient)) d.ranOut.push(e.ingredient);
+  });
+  return { pantry: before.pantry, thrown: before.thrown };
+}
+
+export function undoThrowAway(was: { pantry: PantryEntry[]; thrown: AppData['thrown'] }): void {
+  update((d) => {
+    d.pantry = was.pantry;
+    d.thrown = was.thrown;
+    const ids = new Set(was.pantry.map((p) => p.ingredient));
+    d.ranOut = d.ranOut.filter((x) => !ids.has(x));
+  });
 }
 
 export function restorePantry(pantry: PantryEntry[]): void {

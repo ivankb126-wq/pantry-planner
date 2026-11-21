@@ -119,6 +119,8 @@ export interface ShoppingLine {
   onSale: boolean; // on sale and not a fake sale (see lib/deals.ts)
   /** Real deal check: "real", "not" (cheaper in the last 30 days) or "sale" (cannot tell); null when not on sale. */
   deal: DealVerdict | null;
+  /** Euros cheaper than its usual price because of a sale (0 when not on sale). */
+  saving: number;
   estimated: boolean; // the store does not list it; typical price used
 }
 

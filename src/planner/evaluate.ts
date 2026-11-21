@@ -1,7 +1,7 @@
 // Scores a plan. Lower is better. The score is in euros plus penalties, so
 // a 1 EUR saving and a 1 point nutrition improvement weigh about the same.
 
-import { dealVerdict, isGoodSale } from '../lib/deals';
+import { dealVerdict, isGoodSale, saleSaving } from '../lib/deals';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { prepBonus } from './prep';
 import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
@@ -211,6 +211,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
         cost: l.cost,
         onSale: sale,
         deal: dealVerdict(l.offer),
+        saving: saleSaving(l.offer, l.cost),
         estimated: l.offer.store === ESTIMATE,
       });
     }

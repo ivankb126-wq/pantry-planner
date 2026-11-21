@@ -5,6 +5,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { Cooking } from '../screens/Cooking';
 import { DataStatus } from '../screens/DataStatus';
 import { MealPrep } from '../screens/MealPrep';
+import { Recap } from '../screens/Recap';
 import { OfflineBar } from '../screens/Install';
 import { Onboarding } from '../screens/Onboarding';
 import { PantryScreen } from '../screens/Pantry';
@@ -57,6 +58,8 @@ function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnT
       return <SettingsScreen section={route.param} />;
     case 'prep':
       return <MealPrep />;
+    case 'recap':
+      return <Recap />;
   }
 
   const tab = ['recipes', 'shopping', 'pantry'].includes(route.name) ? route.name : 'plan';
@@ -65,7 +68,7 @@ function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnT
       {tab === 'plan' && <PlanScreen prices={prices} />}
       {tab === 'recipes' && <RecipesScreen prices={prices} />}
       {tab === 'shopping' && <ShoppingScreen prices={prices} />}
-      {tab === 'pantry' && <PantryScreen />}
+      {tab === 'pantry' && <PantryScreen prices={prices} />}
       <TabBar active={tab} />
     </>
   );

@@ -9,8 +9,8 @@ import { stock } from '../app/pantry';
 import { planResult } from '../app/planning';
 import type { PriceData } from '../app/prices';
 import { type AppData, update, useApp } from '../app/state';
-import { DEAL_LABEL, dealVerdict, isGoodSale } from '../lib/deals';
-import { formatAmount, formatEur, formatShortDate } from '../lib/format';
+import { DEAL_LABEL, dealVerdict, isGoodSale, saleSaving } from '../lib/deals';
+import { formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlanResult, ShoppingLine } from '../planner/types';
 import { IconCheck, IconClose, IconShare } from '../ui/icons';
@@ -59,6 +59,7 @@ export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
         same.packs += l.count;
         same.amount += l.amount;
         same.cost = Math.round((same.cost + l.cost) * 100) / 100;
+        same.saving = Math.round((same.saving + saleSaving(l.offer, l.cost)) * 100) / 100;
         continue;
       }
       out.push({
@@ -73,6 +74,7 @@ export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
         cost: l.cost,
         onSale: isGoodSale(l.offer),
         deal: dealVerdict(l.offer),
+        saving: saleSaving(l.offer, l.cost),
         estimated: l.offer.store === ESTIMATE,
         extra: true,
       });
@@ -120,8 +122,11 @@ export function toggleLine(l: ShopLine): void {
 /** Puts ticked lines in the pantry and marks them bought. */
 export function basketToPantry(lines: ShopLine[]): void {
   const items = lines.map((l) => ({ ingredient: l.ingredient, amount: l.loose ? l.amount : l.packs * l.size }));
+  const date = zagrebToday();
   update((x) => {
     stock(x, items);
+    // Remembered for the weekly recap: what it cost and what the sales saved.
+    for (const l of lines) x.purchases.push({ date, ingredient: l.ingredient, cost: l.cost, saved: l.saving ?? 0 });
     for (const l of lines) {
       delete x.shoppingChecked[lineKey(l)];
       x.shoppingChecked[`bought|${lineKey(l)}`] = true;
