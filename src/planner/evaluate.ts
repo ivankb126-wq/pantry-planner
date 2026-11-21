@@ -2,6 +2,7 @@
 // a 1 EUR saving and a 1 point nutrition improvement weigh about the same.
 
 import { dealVerdict, isGoodSale } from '../lib/deals';
+import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
 import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe, ShoppingLine, Slot } from './types';
@@ -386,6 +387,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   // Ratings, sales, new dishes, pantry
   let liked = 0;
   let sale = 0;
+  let season = 0;
   let newMains = 0;
   let rareNew = false;
   meals.forEach((m, i) => {
@@ -397,6 +399,8 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
       .sort((a, b2) => b2.value - a.value)
       .slice(0, 2);
     if (main.some((x) => onSale.has(x.id))) sale += 0.8;
+    // Croatian seasonal produce: cheaper and tastier, so a small nudge.
+    if (seasonalIngredients(ctx.recipes.get(m.recipeId)!, input.ingredients, monthOf(ctx.dates[m.day])).length) season += 0.6;
     if ((m.slot === 'lunch' || m.slot === 'dinner') && !ctx.history.has(m.recipeId)) {
       newMains++;
       if (!ctx.historyCuisines.has(ctx.recipes.get(m.recipeId)!.cuisine)) rareNew = true;
@@ -407,6 +411,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   b.recent = meals.filter((m) => m.source === 'cook' && recent.has(m.recipeId)).length * 4;
   b.liked = -liked;
   b.sale = -sale;
+  b.season = -season;
   b.newDish = input.settings.newDishEachWeek && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;
   b.useSoon = [...ctx.useSoon].filter((id) => !need.has(id)).length * 2;
   b.stores = Math.max(0, stores.size - 1) * 1.5;

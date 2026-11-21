@@ -75,7 +75,10 @@ avoids repeats, and prefers liked dishes, sale items and at least one new
 dish. Dishes from the last two weeks get a rest, so cheap favourites take
 turns. Long dishes get a nudge at weekends, and with "Croatian classic at
 weekends" on each plan aims for one Croatian main, new ones first, as long as
-the budget allows. Sales get a real deal check ([src/lib/deals.ts](src/lib/deals.ts)): the
+the budget allows. Croatian seasonal produce ([src/lib/seasons.ts](src/lib/seasons.ts)) lists
+the months each fruit and vegetable is at its best; a dish with a good amount
+of one (60 g a serving) gets a small planner nudge and an "In season" chip,
+and the plan shows what is in season this month. Sales get a real deal check ([src/lib/deals.ts](src/lib/deals.ts)): the
 shops publish each sale item's lowest price in the last 30 days, so a sale
 below that is a "Real deal", one above it is "Not really a deal" (and earns
 no sale bonus in the planner), and Konzum, which does not publish it, shows

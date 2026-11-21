@@ -10,6 +10,7 @@ import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
 import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
 import { dealSaving } from '../lib/deals';
+import { inSeasonIn, monthOf } from '../lib/seasons';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
 import { IconCheck, IconClock, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
@@ -178,6 +179,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
       <NutritionCard checks={result.checks} />
       <LeftAtHome d={d} result={result} />
       <DealsCard data={data} />
+      <SeasonCard />
       <button class="btn-ghost wide" onClick={onNewPlan}>
         <IconSwap size={20} /> Make a new plan
       </button>
@@ -495,6 +497,29 @@ function LeftAtHome({ d, result }: { d: AppData; result: PlanResult }) {
 function roundLeft(n: number, unit: 'g' | 'ml' | 'piece'): number {
   if (unit === 'piece') return Math.round(n * 2) / 2;
   return n >= 100 ? Math.round(n / 10) * 10 : Math.round(n / 5) * 5;
+}
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function SeasonCard() {
+  const month = monthOf(zagrebToday());
+  const names = inSeasonIn(month)
+    .map((id) => INGREDIENTS[id]?.name.replace(/\s*\(.*\)$/, ''))
+    .filter((n): n is string => !!n);
+  if (!names.length) return null;
+  return (
+    <section class="card" aria-label="In season">
+      <h2>In season in {MONTHS[month - 1]}</h2>
+      <p class="sub">At their best and cheapest from Croatian fields and markets now. The planner gives dishes with these a small nudge.</p>
+      <div class="season-list">
+        {names.map((n) => (
+          <span key={n} class="tag season">
+            {n}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function DealsCard({ data }: { data: PriceData }) {

@@ -7,6 +7,7 @@ import { photoFor, usePhotos } from '../app/photos';
 import { useApp } from '../app/state';
 import { formatEur, zagrebToday } from '../lib/format';
 import { dietAllows } from '../lib/nutrition';
+import { monthOf, seasonalIngredients } from '../lib/seasons';
 import type { PlannerRecipe } from '../planner/types';
 import { IconHeart, IconSearch } from '../ui/icons';
 import { Chip, DishArt, Screen, Segmented, Sheet } from '../ui/kit';
@@ -16,7 +17,7 @@ import { storeSummary } from './Plan';
 import { fold } from './pickers';
 
 type Tab = 'main' | 'breakfast' | 'dessert' | 'snack';
-type Filter = 'foryou' | 'sale' | 'quick' | 'favourites' | 'vegetarian';
+type Filter = 'foryou' | 'sale' | 'season' | 'quick' | 'favourites' | 'vegetarian';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'main', label: 'Dinner' },
@@ -28,6 +29,7 @@ const TABS: { id: Tab; label: string }[] = [
 const FILTERS: { id: Filter; label: string }[] = [
   { id: 'foryou', label: 'For you' },
   { id: 'sale', label: 'On sale' },
+  { id: 'season', label: 'In season' },
   { id: 'quick', label: 'Under 30 min' },
   { id: 'favourites', label: 'Favourites' },
   { id: 'vegetarian', label: 'Vegetarian' },
@@ -63,6 +65,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
 
   const idx = prices.data ? priceIndex(prices.data) : null;
   const today = zagrebToday();
+  const month = monthOf(today);
   const hidden = new Set(d.ratings.filter((r) => !r.up && (r.until == null || r.until > today)).map((r) => r.recipeId));
   const liked = new Set([...d.ratings.filter((r) => r.up).map((r) => r.recipeId), ...d.favourites]);
   const cooked = new Set(d.history.map((h) => h.recipeId));
@@ -86,6 +89,8 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
           return true;
         case 'sale':
           return !!idx && !!saleIngredient(r, idx);
+        case 'season':
+          return seasonalIngredients(r, INGREDIENTS, month).length > 0;
         case 'quick':
           return r.facts.totalMinutes <= 30;
         case 'favourites':
@@ -97,7 +102,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
     });
     const cost = (r: PlannerRecipe) => (idx ? (servingCost(r, idx) ?? 99) : 0);
     if (filter === 'foryou') {
-      const rank = (r: PlannerRecipe) => (liked.has(r.id) ? -3 : 0) + (idx && saleIngredient(r, idx) ? -1 : 0) + cost(r) * 0.4;
+      const rank = (r: PlannerRecipe) => (liked.has(r.id) ? -3 : 0) + (idx && saleIngredient(r, idx) ? -1 : 0) + (seasonalIngredients(r, INGREDIENTS, month).length ? -0.5 : 0) + cost(r) * 0.4;
       out.sort((a, b) => rank(a) - rank(b));
     } else out.sort((a, b) => cost(a) - cost(b));
     return out;
@@ -155,7 +160,13 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
                 <a href={`#/recipe/${r.id}`} class="recipe-card">
                   <DishArt emoji={r.illustration} height={84} photo={photoFor(r.id)?.src}>
                     <div class="art-badges">
-                      {sale ? <span class="tag teal">On sale</span> : !cooked.has(r.id) && d.history.length >= 5 && <span class="tag purple">New</span>}
+                      {sale ? (
+                        <span class="tag teal">On sale</span>
+                      ) : seasonalIngredients(r, INGREDIENTS, month).length ? (
+                        <span class="tag season">In season</span>
+                      ) : (
+                        !cooked.has(r.id) && d.history.length >= 5 && <span class="tag purple">New</span>
+                      )}
                     </div>
                     {d.favourites.includes(r.id) && (
                       <span class="fav-dot" aria-label="Favourite">

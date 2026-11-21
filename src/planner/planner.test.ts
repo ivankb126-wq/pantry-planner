@@ -163,6 +163,16 @@ describe('real deal check in the shopping list', () => {
   });
 });
 
+describe('seasonal produce', () => {
+  it('gives a pumpkin dish a nudge in November but not in July', () => {
+    const meal: Meal[] = [{ day: 0, slot: 'dinner', recipeId: 'pumpkin-risotto', source: 'cook' }];
+    const nov = evaluate(buildContext(baseInput({ days: 1, meals: ['dinner'], startDate: '2026-11-23' })), meal);
+    const jul = evaluate(buildContext(baseInput({ days: 1, meals: ['dinner'], startDate: '2026-07-20' })), meal);
+    expect(nov.breakdown.season).toBeLessThan(0);
+    expect(jul.breakdown.season).toBeCloseTo(0);
+  });
+});
+
 describe('variety within a day', () => {
   it('prefers lunch and dinner of different kinds over two pastas', () => {
     const ctx = buildContext(baseInput({ days: 1, meals: ['lunch', 'dinner'] }));

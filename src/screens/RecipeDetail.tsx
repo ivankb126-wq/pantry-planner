@@ -9,7 +9,8 @@ import { lineQuantity, productLabel } from './Shopping';
 import { planResult, portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type AppData, useApp } from '../app/state';
-import { formatAmount, formatEur } from '../lib/format';
+import { formatAmount, formatEur, zagrebToday } from '../lib/format';
+import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
@@ -96,6 +97,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const view = mealIndex != null && result ? result.views[mealIndex] : null;
   const perPerson = view && !view.leftover && view.portions ? view.cost / view.portions : perServing;
   const sale = idx ? saleIngredient(r, idx) : null;
+  const seasonal = seasonalIngredients(r, INGREDIENTS, monthOf(zagrebToday()));
   const rating = ratingOf(d, id);
   const fav = d.favourites.includes(id);
   const cooked = mealIndex != null && d.plan!.cooked.includes(mealIndex);
@@ -132,6 +134,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
       )}
       <div class="badges">
         {sale && <span class="tag teal">{sale} on sale</span>}
+        {seasonal.length > 0 && <span class="tag season">In season: {seasonal.map((id) => INGREDIENTS[id].name.toLowerCase()).join(', ')}</span>}
         <span class="tag outline">{CUISINE_LABEL[r.cuisine] ?? r.cuisine}</span>
         {isNew && <span class="tag purple">New for you</span>}
         {r.facts.diet === 'vegan' ? <span class="tag outline">Vegan</span> : r.facts.diet === 'vegetarian' ? <span class="tag outline">Vegetarian</span> : null}
