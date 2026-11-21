@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { Cooking } from '../screens/Cooking';
 import { DataStatus } from '../screens/DataStatus';
+import { MealPrep } from '../screens/MealPrep';
 import { OfflineBar } from '../screens/Install';
 import { Onboarding } from '../screens/Onboarding';
 import { PantryScreen } from '../screens/Pantry';
@@ -54,6 +55,8 @@ function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnT
       return <ShoppingMode key={route.param} prices={prices} store={route.param} />;
     case 'settings':
       return <SettingsScreen section={route.param} />;
+    case 'prep':
+      return <MealPrep />;
   }
 
   const tab = ['recipes', 'shopping', 'pantry'].includes(route.name) ? route.name : 'plan';

@@ -43,6 +43,8 @@ export interface PlanSettings {
   weekdayMaxMinutes: number;
   /** Prefer one Croatian main (sarma, grah, pašticada...) each weekend, within the budget. */
   weekendClassic?: boolean;
+  /** Meal prep Sunday: prefer weeks where early meals share a pot of grains. */
+  mealPrep?: boolean;
 }
 
 export const DEFAULT_SETTINGS: PlanSettings = {

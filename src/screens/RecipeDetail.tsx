@@ -7,6 +7,7 @@ import { CUISINE_LABEL, FAMILY_LABEL, INGREDIENTS, RECIPE_BY_ID, similarRecipes 
 import { buyFor, priceIndex, saleIngredient, servingCost } from '../app/costs';
 import { lineQuantity, productLabel } from './Shopping';
 import { planResult, portionsFor, scaledIngredients } from '../app/planning';
+import { prepNote } from '../app/prep';
 import { back, go } from '../app/router';
 import { type AppData, useApp } from '../app/state';
 import { formatAmount, formatEur, zagrebToday } from '../lib/format';
@@ -101,6 +102,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const rating = ratingOf(d, id);
   const fav = d.favourites.includes(id);
   const cooked = mealIndex != null && d.plan!.cooked.includes(mealIndex);
+  const prepped = mealIndex != null && !cooked ? prepNote(d, mealIndex) : null;
   const isNew = d.history.length >= 5 && !d.history.some((h) => h.recipeId === id);
   const ings = scaledIngredients(r, servings);
   const f = r.facts.perServing;
@@ -148,6 +150,11 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
       {r.ahead && (
         <p class="ahead-note">
           <IconClock size={16} /> Start the day before: {r.ahead}.
+        </p>
+      )}
+      {prepped && (
+        <p class="ahead-note">
+          <IconCheck size={16} /> {prepped}
         </p>
       )}
 

@@ -61,6 +61,7 @@ export function planInput(
       cookOnceEatTwice: s.cookOnceEatTwice,
       newDishEachWeek: s.newDishEachWeek,
       weekendClassic: s.weekendClassic,
+      mealPrep: s.mealPrep,
       energyTarget: s.energyTarget,
       weekdayMaxMinutes: s.weekdayMaxMinutes,
     },

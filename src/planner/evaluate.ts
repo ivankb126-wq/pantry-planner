@@ -3,6 +3,7 @@
 
 import { dealVerdict, isGoodSale } from '../lib/deals';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
+import { prepBonus } from './prep';
 import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
 import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe, ShoppingLine, Slot } from './types';
@@ -412,6 +413,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   b.liked = -liked;
   b.sale = -sale;
   b.season = -season;
+  b.prep = input.settings.mealPrep ? -prepBonus(meals, input.startDate, days, (id) => ctx.recipes.get(id)) : 0;
   b.newDish = input.settings.newDishEachWeek && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;
   b.useSoon = [...ctx.useSoon].filter((id) => !need.has(id)).length * 2;
   b.stores = Math.max(0, stores.size - 1) * 1.5;

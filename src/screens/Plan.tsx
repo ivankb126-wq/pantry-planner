@@ -6,6 +6,7 @@ import { INGREDIENTS, RECIPE_BY_ID, ingName } from '../app/catalog';
 import { saleIngredient } from '../app/costs';
 import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
+import { prepFor } from '../app/prep';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
 import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
@@ -18,6 +19,7 @@ import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
 import { BackupReminder } from './BackupReminder';
 import { InstallCard } from './Install';
+import { prepRange } from './MealPrep';
 import { CHAIN_NAME, StoreModePicker } from './pickers';
 import { productLabel } from './Shopping';
 
@@ -174,6 +176,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
       <InstallCard />
       <BackupReminder />
       <TodayCard d={d} result={result} t={t} sale={sale} onSwap={onSwap} />
+      <PrepCard d={d} t={t} />
       <CheckChips checks={result.checks} />
       <WeekList d={d} result={result} t={t} sale={sale} />
       <NutritionCard checks={result.checks} />
@@ -497,6 +500,32 @@ function LeftAtHome({ d, result }: { d: AppData; result: PlanResult }) {
 function roundLeft(n: number, unit: 'g' | 'ml' | 'piece'): number {
   if (unit === 'piece') return Math.round(n * 2) / 2;
   return n >= 100 ? Math.round(n / 10) * 10 : Math.round(n / 5) * 5;
+}
+
+/** Meal prep Sunday, shown until the Sunday has passed (when it is switched on). */
+function PrepCard({ d, t }: { d: AppData; t: number }) {
+  const p = prepFor(d);
+  if (!p || t > Math.max(p.prepDay, 0)) return null;
+  const when = t >= p.prepDay ? 'Today' : `${dayLong(p.date)} ${formatShortDate(p.date)}`;
+  return (
+    <section class="card prep-card" aria-label="Meal prep Sunday">
+      <div class="prep-card-head">
+        <h2>Meal prep Sunday</h2>
+        <span class="tag teal">{when}</span>
+      </div>
+      <p class="sub">
+        About {p.minutes} minutes on Sunday takes about {p.saves} minutes off your evenings {prepRange(d, p)}.
+      </p>
+      <ul class="prep-mini">
+        {p.tasks.map((task) => (
+          <li key={task.id}>{task.title}</li>
+        ))}
+      </ul>
+      <a class="btn-primary wide" href="#/prep">
+        See the timeline
+      </a>
+    </section>
+  );
 }
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

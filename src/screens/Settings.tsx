@@ -118,6 +118,12 @@ export function SettingsScreen({ section }: { section?: string }) {
         <Toggle label="A new dish every week" hint="One recipe you have never cooked." checked={s.newDishEachWeek} onChange={(v) => set({ newDishEachWeek: v })} />
         <Toggle label="Cook once, eat twice" hint="Lunch can be the last dinner's leftovers. A big pot like sarma or grah lasts two lunches." checked={s.cookOnceEatTwice} onChange={(v) => set({ cookOnceEatTwice: v })} />
         <Toggle label="Croatian classic at weekends" hint="Sarma, grah, pašticada and more, when the budget allows." checked={s.weekendClassic} onChange={(v) => set({ weekendClassic: v })} />
+        <Toggle
+          label="Meal prep Sunday"
+          hint="One hour on Sunday: a pot of rice or potatoes, chopped onions and a soup or stew for the next days. Plans lean towards meals that share."
+          checked={s.mealPrep}
+          onChange={(v) => set({ mealPrep: v })}
+        />
       </Group>
 
       <BackupGroup />

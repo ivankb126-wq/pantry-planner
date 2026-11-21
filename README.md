@@ -60,6 +60,15 @@ screen stays on, and "Add basket to my pantry" at the end.
 "Share" on the shopping list sends what is still to buy (by store and aisle,
 with amounts and products) through the phone's share sheet, or copies it
 where sharing is not available.
+Meal prep Sunday (a switch in Settings, off by default;
+[src/planner/prep.ts](src/planner/prep.ts), screen `#/prep`) works out one
+hour on Sunday for the next three days: a pot of rice, lentils, quinoa,
+bulgur or potatoes shared by two or more meals (rice only for the next two
+days), the onions, carrots and peppers they share, and one soup, stew, curry
+or pasta sauce cooked whole (never fish). It shows a timeline you can tick
+off, and each recipe on the night says what is already done. When the
+switch is on, the planner leans a little towards weeks where early meals
+share a pot.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a
