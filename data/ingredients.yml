@@ -957,7 +957,7 @@ ingredients:
     shelf_life_days: 7
     nutrition: {kcal: 32, protein: 1.8, carbs: 4.7, sugar: 2.3, fat: 0.2, sat_fat: 0, fibre: 2.6, salt: 0.04}
     match:
-      include: ["MLADI LUK", "LUK MLADI", "LUK VLASAC*", "VLASAC*", "LUK MLADI VEZ*", "MLADI LUK VEZ*"]
+      include: ["MLADI LUK", "LUK MLADI", "LUK MLADI VEZ*", "MLADI LUK VEZ*"]
       exclude: [ZAC, SUSEN*, PRAH*, SIR*, NAMAZ*, CIPS*, OKUS*, UMAK*, KREKER*, ZACIN*, SMRZN*, KREM*, DIP*, VRHNJ*, MAJONEZ*, PRELJEV*, DRESING*, SJEME*, MIX*, ZAMRZN*, LIOFILIZ*, KISEL*]
 
   - id: parsley
