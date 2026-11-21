@@ -1,5 +1,6 @@
 """Pipeline dry run on a small fixture, including the fallback rules."""
 
+import gzip
 import json
 import shutil
 from pathlib import Path
@@ -126,3 +127,22 @@ def test_no_data_at_all_fails_loudly(tmp_path):
     (empty / "2026-11-19").mkdir(parents=True)
     with pytest.raises(SystemExit):
         build(tmp_path / "out", empty)
+
+
+def test_kept_data_is_matched_again_with_todays_rules(first_run, tmp_path):
+    out1, _ = first_run
+    # Yesterday's Spar data had a product that today's rules do not match
+    # (dried chives once counted as spring onion).
+    path = out1 / "bundle" / "spar.json.gz"
+    bundle = json.loads(gzip.decompress(path.read_bytes()))
+    items = bundle["prices"]["87005"]
+    items.append({**items[0], "ingredient": "spring-onion", "name": "VLASAC SJECKANI 5 G FINO VRECICA"})
+    path.write_bytes(gzip.compress(json.dumps(bundle).encode("utf-8")))
+    newer = tmp_path / "archives5"
+    shutil.copytree(FIXTURE / "2026-11-19" / "lidl", newer / "2026-11-20" / "lidl")
+    out = tmp_path / "site5"
+    meta = build(out, newer, previous=out1, today="2026-11-20")
+    assert meta["chains"]["spar"]["fallback"] is True
+    kept = read(out / "prices" / "spar" / "87005.json")
+    assert all("VLASAC" not in i["name"] for i in kept["items"])
+    assert any(i["ingredient"] == "chicken-breast" for i in kept["items"])

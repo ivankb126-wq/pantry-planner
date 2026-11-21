@@ -196,6 +196,32 @@ def process_chain(
     }
 
 
+def rematch(bundle: dict, matcher: Matcher) -> int:
+    """Data kept from an earlier day was matched with that day's rules. Drop
+    products today's rules no longer match (a rule was fixed), so a chain
+    that has not updated for a while does not keep a wrong match."""
+    cache: dict[str, set[str]] = {}
+
+    def ok(item: dict) -> bool:
+        name = item.get("name") or ""
+        if name not in cache:
+            cache[name] = {i.id for i in matcher.match(name)}
+        return item.get("ingredient") in cache[name]
+
+    dropped = 0
+    for key in ("prices", "deals"):
+        for sid, items in list(bundle.get(key, {}).items()):
+            kept = [i for i in items if ok(i)]
+            if key == "prices":
+                dropped += len(items) - len(kept)
+            if kept:
+                bundle[key][sid] = kept
+            else:
+                del bundle[key][sid]
+    bundle["stores"] = [s for s in bundle.get("stores", []) if s["id"] in bundle.get("prices", {})]
+    return dropped
+
+
 def carry_over_missing_stores(new: dict, prev: dict | None, today: str) -> int:
     """If a store disappeared from today's file (a partial upload), keep its
     recent previous prices instead of showing nothing."""
@@ -246,6 +272,8 @@ def build_chain(
     name = CHAINS.get(chain, chain)
     outcome = ChainOutcome(chain, None)
     prev_date = prev.get("date") if prev else None
+    if prev and (dropped := rematch(prev, matcher)):
+        log.info("%s: %d kept prices no longer match today's rules and were dropped", chain, dropped)
 
     def attempt(files: ChainFiles, date: str, source: str) -> dict | None:
         try:
