@@ -1,0 +1,193 @@
+[
+  {
+    "id": "korean-curry-rice", "title": "Korean-style curry rice with pork and vegetables",
+    "description": "A mild, glossy Korean home curry of small pork cubes, potato, onion and carrot over rice. Comfort food that kids love. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "butter", "quantity": 40, "unit": "g" }, { "id": "pork-loin", "quantity": 400, "unit": "g" },
+      { "id": "potato", "quantity": 3, "unit": "piece" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "carrot", "quantity": 1, "unit": "piece" }, { "id": "flour", "quantity": 30, "unit": "g" },
+      { "id": "curry-powder", "quantity": 2, "unit": "tbsp" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "honey", "quantity": 1, "unit": "tsp" }, { "id": "salt", "quantity": 0.75, "unit": "tsp" },
+      { "id": "rice", "quantity": 300, "unit": "g", "note": "short-grain if you can" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {550 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Cut the pork into small cubes. Brown it in half the butter in a pot for 3 minutes.",
+      "Add the potatoes in 2 cm cubes and stir-fry for 3 minutes, then the onion in 2 cm pieces and the carrot in small cubes for 3 minutes more.",
+      { "text": "Add the stock cube and {700 ml} water, cover and simmer for 12 minutes until the potato is soft.", "tip": "Small, even pieces cook quickly and feel right on a spoon with rice." },
+      { "text": "Melt the rest of the butter in a small pan, stir in the flour and curry powder for 1 minute, then whisk in a ladle of the cooking liquid until smooth. Stir it into the pot with the honey and salt and simmer for 3 minutes until glossy and thick.", "tip": "This homemade roux replaces the Korean instant curry mix. If you find the mix, use 100 g of it instead." },
+      "Spoon over the rice."
+    ],
+    "tags": ["kid-friendly", "comfort"], "keepsDays": 3, "equipment": ["pot", "small pan", "whisk"], "illustration": "🍛"
+  },
+  {
+    "id": "korean-spicy-pork-stir-fry", "title": "Spicy Korean pork stir-fry",
+    "description": "Thin slices of pork mixed raw with a sweet, hot pepper sauce, garlic, ginger and onion, then fried until caramelised. One pan, very fast. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "pork-neck", "quantity": 500, "unit": "g", "note": "thinly sliced" }, { "id": "chili-sauce", "quantity": 45, "unit": "ml" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" }, { "id": "chili-flakes", "quantity": 1, "unit": "tsp" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "honey", "quantity": 1.5, "unit": "tbsp" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "ginger", "quantity": 5, "unit": "g" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "sesame-oil", "quantity": 2, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tsp" }, { "id": "lettuce", "quantity": 1, "unit": "piece" },
+      { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Slice the pork very thinly. In a large cold frying pan, mix it with the chili sauce, paprika, chili flakes, soy sauce, honey, sliced onion, crushed garlic, grated ginger, chopped spring onion and pepper.", "tip": "The original uses Korean gochujang. Use 60 g of it instead of the chili sauce and paprika if you find it." },
+      { "text": "Put the pan on high heat and cook for 10 to 12 minutes, stirring and separating the slices, until the pork is cooked and the onion edges caramelise.", "tip": "Everything goes in raw together: no separate steps." },
+      "Stir in the sesame oil and scatter with sesame seeds.",
+      "Serve with the rice and lettuce leaves for wrapping."
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 2, "equipment": ["pot", "large frying pan"], "illustration": "🌶️"
+  },
+  {
+    "id": "zucchini-shrimp-korean", "title": "Korean sautéed zucchini and prawns with rice",
+    "description": "Salted zucchini quickly stir-fried with onion, garlic and prawns, seasoned with fish sauce and finished with chili and sesame oil. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "zucchini", "quantity": 3, "unit": "piece" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "shrimp", "quantity": 400, "unit": "g", "note": "raw, peeled" },
+      { "id": "fish-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "red" },
+      { "id": "sesame-oil", "quantity": 2, "unit": "tsp" }, { "id": "sesame", "quantity": 1, "unit": "tsp" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Cut the zucchini into bite-size half moons, toss with the salt and leave for 10 minutes. Pat dry.", "tip": "Salting draws out water so the dish does not turn soupy." },
+      "Fry the sliced onion and crushed garlic in the oil in a hot pan for 1 minute.",
+      { "text": "Add the zucchini, the prawns cut in half lengthwise and the fish sauce and stir-fry for 5 minutes until the prawns are pink and the zucchini just translucent.", "tip": "Do not overcook: the zucchini should keep a little bite." },
+      "Add the chopped chili, turn off the heat and stir in the sesame oil and seeds.",
+      "Fry the eggs and serve on the rice with the zucchini and prawns."
+    ],
+    "tags": ["high-protein", "quick", "light"], "keepsDays": 1, "equipment": ["pot", "large frying pan"], "illustration": "🦐"
+  },
+  {
+    "id": "korean-potato-pancakes", "title": "Gamjajeon (Korean potato pancakes) with egg salad",
+    "description": "Crisp-edged pancakes of finely grated potato and spring onion, chewy in the middle from their own starch, with a soy and vinegar dip. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pancakes", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "potato", "quantity": 1000, "unit": "g", "note": "floury" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "spring-onion", "quantity": 60, "unit": "g" }, { "id": "sunflower-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" }, { "id": "vinegar", "quantity": 20, "unit": "ml" },
+      { "id": "sesame", "quantity": 1, "unit": "tsp" }, { "id": "eggs", "quantity": 6, "unit": "piece" },
+      { "id": "cucumber", "quantity": 1, "unit": "piece" }, { "id": "lettuce", "quantity": 0.5, "unit": "piece" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel the potatoes and grate them very finely, or blend them with the salt and {120 ml} water.",
+      { "text": "Pour through a fine sieve into a bowl and leave the liquid for 5 minutes. Pour off the water but keep the white starch at the bottom.", "tip": "That starch is the secret: it gives the chewy middle." },
+      "Mix the starch back into the potato with the chopped spring onions.",
+      { "text": "Heat a little oil in a frying pan on medium-high and spoon in small rounds, flattening them. Fry for 2 minutes until golden underneath, turn and fry for 2 minutes more. Repeat, adding oil as needed.", "tip": "Thin is better: they crisp up instead of staying pale." },
+      "Meanwhile boil the eggs for 8 minutes and cool them. Toss the sliced cucumber and lettuce with the sesame oil and a pinch of salt and add the halved eggs.",
+      "Mix the soy sauce, vinegar and sesame seeds for dipping and serve with the pancakes and salad."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "fine sieve", "frying pan"], "illustration": "🥔"
+  },
+  {
+    "id": "seafood-scallion-pancake", "title": "Haemul-pajeon (seafood and spring onion pancake)",
+    "description": "A big, crisp Korean pancake packed with spring onions, with chopped squid and prawns pressed into the top, cut into pieces and dipped in soy and vinegar. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pancakes", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "medium", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" }, { "id": "vinegar", "quantity": 30, "unit": "ml" },
+      { "id": "flour", "quantity": 200, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "spring-onion", "quantity": 200, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 6, "unit": "tbsp" }, { "id": "squid", "quantity": 200, "unit": "g", "note": "cleaned" },
+      { "id": "shrimp", "quantity": 200, "unit": "g", "note": "raw, peeled" }, { "id": "chili-flakes", "quantity": 1, "unit": "pinch" },
+      { "id": "rice", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      "Mix the soy sauce, vinegar and chili flakes in a small bowl for dipping.",
+      { "text": "Start the rice: rinse it, put it in a pot with {350 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Whisk the flour, one egg, the salt and {360 ml} cold water into a smooth batter. Stir in the spring onions cut into 5 cm pieces.", "tip": "Ice-cold water makes the pancake crispier." },
+      { "text": "Heat {3 tbsp} of the oil in a large frying pan on medium-high. Spread half the batter thinly, press half the chopped squid and prawns into the top and drizzle with half the second beaten egg.", "tip": "Press the seafood in while the batter is still wet so it sticks." },
+      { "text": "Cook until golden underneath, about 4 minutes, turn and cook for 5 minutes, then turn again for 1 minute to crisp. Repeat with the rest.", "tip": "Turn it with the help of a plate if it is large. Press it flat with a spatula." },
+      "Cut into squares and serve hot with the dipping sauce and rice."
+    ],
+    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["large frying pan", "bowl", "whisk", "pot"], "illustration": "🥞"
+  },
+  {
+    "id": "korean-fried-chicken", "title": "Korean fried chicken with sweet chili glaze",
+    "description": "Chicken wings fried twice for a crunch that lasts, then tossed in a glossy sweet, garlicky, spicy sauce and sesame seeds. A weekend treat. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pan-grill", "servings": 4, "prepMinutes": 20, "cookMinutes": 50,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-wings", "quantity": 1000, "unit": "g" }, { "id": "cornstarch", "quantity": 60, "unit": "g" },
+      { "id": "flour", "quantity": 40, "unit": "g" }, { "id": "salt", "quantity": 0.75, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "baking-soda", "quantity": 1, "unit": "pinch" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 150, "unit": "ml", "note": "for frying, most stays in the pot" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "ketchup", "quantity": 80, "unit": "g" },
+      { "id": "honey", "quantity": 4, "unit": "tbsp" }, { "id": "chili-sauce", "quantity": 45, "unit": "ml" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "vinegar", "quantity": 10, "unit": "ml" },
+      { "id": "sesame", "quantity": 1, "unit": "tbsp" }, { "id": "cabbage", "quantity": 300, "unit": "g" },
+      { "id": "rice", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      "Pat the wings dry and cut them at the joints. Mix them with the cornstarch, flour, salt, pepper, baking soda and egg until coated.",
+      { "text": "Heat the oil about 4 cm deep in a deep pot to 175 °C. Fry the chicken in batches for 10 minutes. Drain on a rack.", "tip": "No thermometer? A cube of bread should turn golden in 30 seconds. Never leave hot oil alone." },
+      { "text": "Meanwhile start the rice and make the sauce: soften the crushed garlic in {1 tsp} of oil in a pan, add the ketchup, honey, chili sauce, paprika and vinegar and simmer for 5 minutes until shiny.", "tip": "The original uses Korean gochujang and rice syrup. The chili sauce and honey get close." },
+      { "text": "Bring the oil back to 175 °C and fry the chicken again for 8 to 10 minutes until very crisp and cooked through.", "tip": "The second frying is the trick: the crust stays crunchy even under the sauce." },
+      "Toss the hot chicken in the sauce and scatter with sesame seeds.",
+      "Serve with the rice and thinly shredded cabbage dressed with a splash of vinegar."
+    ],
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 1, "equipment": ["deep pot", "rack", "pan", "pot"], "illustration": "🍗"
+  },
+  {
+    "id": "bulgogi-lettuce-wraps", "title": "Bulgogi (Korean marinated beef) with rice and lettuce",
+    "description": "Very thin slices of beef marinated in grated pear, onion, garlic, soy and sesame, seared quickly and wrapped in lettuce with rice. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pan-grill", "servings": 4, "prepMinutes": 45, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "garlic", "quantity": 20, "unit": "g" }, { "id": "pear", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "ginger", "quantity": 5, "unit": "g" },
+      { "id": "beef", "quantity": 500, "unit": "g", "note": "sirloin or tender steak" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" }, { "id": "sesame-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "honey", "quantity": 1, "unit": "tbsp" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "lettuce", "quantity": 1, "unit": "piece" }, { "id": "chili-sauce", "quantity": 30, "unit": "ml" },
+      { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Grate or blend the garlic, peeled pear, half the onion and the ginger into a purée.", "tip": "The pear gently tenderises the beef and adds natural sweetness." },
+      { "text": "Slice the beef as thinly as you can across the grain, about 3 mm. Mix it with the purée, the rest of the onion sliced, the chopped spring onion, soy sauce, sesame oil, honey and pepper. Leave for at least 30 minutes.", "tip": "Freeze the beef for 30 minutes first to make thin slicing easy." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Heat a large frying pan with the oil until very hot and sear the beef in batches for 2 to 3 minutes, spreading it out.", "tip": "Very hot and in a thin layer, so it browns instead of stewing." },
+      "Scatter with sesame seeds and serve with the rice, lettuce leaves and a little chili sauce for wrapping."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "large frying pan", "pot"], "illustration": "🥩"
+  },
+  {
+    "id": "beef-tofu-patties-korean", "title": "Wanjajeon (beef and tofu patties)",
+    "description": "Little beef patties lightened with squeezed tofu, dipped in flour and egg and pan-fried golden, with a soy and vinegar dip. Inspired by Real Korean Cooking by Maangchi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "korean", "family": "pan-grill", "servings": 4, "prepMinutes": 25, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" }, { "id": "vinegar", "quantity": 20, "unit": "ml" },
+      { "id": "tofu", "quantity": 200, "unit": "g" }, { "id": "minced-beef", "quantity": 450, "unit": "g" },
+      { "id": "salt", "quantity": 0.75, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "onion", "quantity": 0.5, "unit": "piece" },
+      { "id": "sesame-oil", "quantity": 2, "unit": "tsp" }, { "id": "flour", "quantity": 40, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "rice", "quantity": 280, "unit": "g" }, { "id": "spinach", "quantity": 250, "unit": "g" },
+      { "id": "sesame", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Wrap the tofu in a clean towel and squeeze out as much water as you can. Crumble it and mix with the beef, salt, pepper, crushed garlic, finely chopped onion and half the sesame oil.", "tip": "Squeezed tofu makes the patties lighter and juicier." },
+      "Shape into about 20 thin little patties, 5 cm across.",
+      { "text": "Dust each in flour, dip in the beaten eggs and fry in the oil on medium for 3 minutes on each side until golden and cooked through.", "tip": "Medium heat: the egg coat browns quickly." },
+      "Blanch the spinach for 30 seconds, squeeze it and dress with the rest of the sesame oil, the sesame seeds and a pinch of salt.",
+      "Mix the soy sauce and vinegar for dipping. Serve the patties with the rice, spinach and dip."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["pot", "large frying pan", "clean towel"], "illustration": "🥩"
+  }
+]

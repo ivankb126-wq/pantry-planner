@@ -1,0 +1,246 @@
+[
+  {
+    "id": "oven-chicken-tikka", "title": "Oven-roasted chicken tikka with rice and raita",
+    "description": "Chicken pieces in a ginger, garlic and yogurt marinade with warm spices, roasted spread out on trays until browned. No tandoor needed. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "oven", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-breast", "quantity": 700, "unit": "g", "note": "or boneless thighs" }, { "id": "ginger", "quantity": 30, "unit": "g" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "yogurt", "quantity": 400, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "turmeric", "quantity": 0.5, "unit": "tsp" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "sugar", "quantity": 5, "unit": "g" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "curry-powder", "quantity": 1, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" }
+    ],
+    "steps": [
+      { "text": "Pound or blend the ginger, garlic, chili and {1 tsp} of the salt into a paste. Cut the chicken into 3 cm chunks and coat it in the paste, {150 g} of the yogurt and all the spices. Leave for at least 15 minutes.", "tip": "A few hours in the fridge makes it even more tender. The curry powder stands in for garam masala." },
+      { "text": "Heat the oven to 200 °C and oil two lined trays. Shake off the extra marinade and spread the chicken out with space between the pieces.", "tip": "Crowded chicken steams in its yogurt and never browns." },
+      { "text": "Roast for 20 minutes, turning halfway, until browned at the edges and cooked through.", "tip": "Cut the biggest piece: no pink inside." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Grate the cucumber, squeeze it and mix with the rest of the yogurt and salt. Serve the chicken with the rice and cucumber raita."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "grater"], "illustration": "🍢"
+  },
+  {
+    "id": "eggplant-tomato-curry", "title": "Eggplant and cherry tomato curry",
+    "description": "Thin slices of eggplant simmered until they collapse into a thick, gently spiced tomato sauce with ginger, garlic and cumin. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" }, { "id": "ginger", "quantity": 30, "unit": "g" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "tomato", "quantity": 300, "unit": "g", "note": "cherry tomatoes" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "turmeric", "quantity": 0.5, "unit": "tsp" },
+      { "id": "cumin", "quantity": 1.5, "unit": "tsp" }, { "id": "coriander-ground", "quantity": 1.5, "unit": "tsp" },
+      { "id": "tomato-paste", "quantity": 30, "unit": "g" }, { "id": "sugar", "quantity": 5, "unit": "g" },
+      { "id": "eggplant", "quantity": 2, "unit": "piece" }, { "id": "chickpeas", "quantity": 400, "unit": "g" },
+      { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" }, { "id": "yogurt", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      "Soften the chopped onion in the oil for 7 minutes. Add the chopped chili, grated ginger and crushed garlic and fry for 3 minutes more.",
+      { "text": "Add the halved tomatoes and salt and cook for 10 minutes until soft. Stir in the turmeric, cumin, coriander, tomato paste and sugar.", "tip": "Cherry tomatoes give a sweet sharpness that big tomatoes do not." },
+      { "text": "Add the eggplant, sliced into thin half moons, the drained chickpeas and {160 ml} warm water. Stir, cover and simmer gently for 20 minutes until the eggplant is completely soft.", "tip": "Chickpeas are our addition, to make it a full meal. Stir now and then so it does not stick." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Serve with the rice and yogurt."
+    ],
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "pot"], "illustration": "🍆"
+  },
+  {
+    "id": "pumpkin-garlic-tomato-curry", "title": "Roast pumpkin curry with garlic and tomato",
+    "description": "Pumpkin roasted until caramelised at the edges, then folded into a garlicky tomato curry with cumin and coriander. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "pumpkin", "quantity": 1000, "unit": "g", "note": "butternut or Hokkaido" }, { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1.25, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "ginger", "quantity": 20, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "sugar", "quantity": 3, "unit": "g" },
+      { "id": "coriander-ground", "quantity": 1.5, "unit": "tsp" }, { "id": "cumin", "quantity": 1.5, "unit": "tsp" },
+      { "id": "red-lentils", "quantity": 100, "unit": "g" }, { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 200 °C. Peel the pumpkin, cut it into 2 cm slices, toss with {2 tbsp} of the oil, half the salt and the pepper and roast on two trays for 30 minutes, turning once.", "tip": "Caramelised edges are the point, so give the slices room." },
+      "Meanwhile fry the finely chopped onion in the rest of the oil for 10 minutes until browned. Pound the ginger, garlic and chili and fry for 2 minutes.",
+      { "text": "Add the tomatoes, the rinsed lentils and {400 ml} water and simmer for 15 minutes until the lentils are soft. Stir in the sugar, coriander, cumin and the rest of the salt for 5 minutes.", "tip": "The red lentils are our addition: they melt into the sauce and add protein." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Fold the roasted pumpkin into the sauce gently, adding a splash of water if too thick. Serve with the rice and yogurt."
+    ],
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "pan", "pot"], "illustration": "🎃"
+  },
+  {
+    "id": "gujarati-potato-curry", "title": "Gujarati potato curry with eggs",
+    "description": "Potatoes cooked in a quick tomato sauce with cumin, coriander, turmeric and ginger, a simple everyday curry, served here with boiled eggs. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "potato", "quantity": 1200, "unit": "g" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "cumin", "quantity": 2.5, "unit": "tsp" }, { "id": "ginger", "quantity": 20, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "turmeric", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" },
+      { "id": "coriander-ground", "quantity": 2, "unit": "tsp" }, { "id": "sugar", "quantity": 5, "unit": "g" },
+      { "id": "salt", "quantity": 1.25, "unit": "tsp" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "eggs", "quantity": 6, "unit": "piece" }, { "id": "flatbread", "quantity": 4, "unit": "piece" }
+    ],
+    "steps": [
+      "Peel the potatoes and cut them into 2.5 cm cubes.",
+      { "text": "Heat the oil and add {0.5 tsp} of the cumin. When it sizzles, add the grated ginger and chopped chili for 1 minute.", "tip": "Mustard seeds crackling in the oil are the Gujarati touch, if you have some." },
+      "Add the tomatoes, crushed, and cook for 10 minutes until thick.",
+      { "text": "Stir in the turmeric, chili, coriander, the rest of the cumin, the sugar, salt, potatoes and {150 ml} warm water. Cover and cook for 15 minutes until a knife slides easily into the potatoes.", "tip": "Stir gently now and then and add a splash of water if it catches." },
+      "Meanwhile boil the eggs for 8 minutes, cool them in cold water and peel. Halve them and add to the curry.",
+      "Scatter with parsley and serve with warm flatbreads."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "small pot"], "illustration": "🥔"
+  },
+  {
+    "id": "mums-chicken-curry", "title": "Home-style chicken curry with almonds",
+    "description": "A family chicken curry: deep golden onions, ginger, garlic and tomato, softened with yogurt and thickened with ground almonds at the end. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "butter", "quantity": 25, "unit": "g" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "cumin", "quantity": 2.5, "unit": "tsp" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "ginger", "quantity": 45, "unit": "g" },
+      { "id": "garlic", "quantity": 20, "unit": "g" }, { "id": "chili-pepper", "quantity": 15, "unit": "g", "note": "green" },
+      { "id": "salt", "quantity": 1.25, "unit": "tsp" }, { "id": "passata", "quantity": 160, "unit": "g" },
+      { "id": "tomato-paste", "quantity": 30, "unit": "g" }, { "id": "turmeric", "quantity": 0.5, "unit": "tsp" },
+      { "id": "yogurt", "quantity": 150, "unit": "g" }, { "id": "chicken-legs", "quantity": 1200, "unit": "g", "note": "skin removed" },
+      { "id": "almonds", "quantity": 30, "unit": "g", "note": "ground" }, { "id": "curry-powder", "quantity": 1, "unit": "tsp" },
+      { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" }
+    ],
+    "steps": [
+      { "text": "Warm the butter and oil with {1 tsp} of the cumin and the cinnamon, then add the finely chopped onions and cook for 12 minutes until deep golden.", "tip": "A cinnamon stick is the original. Fish it out at the end if you use one." },
+      "Pound the ginger, garlic and chili into a paste and fry it for 2 minutes.",
+      { "text": "Add the passata, tomato paste, the rest of the cumin, the turmeric and salt and cook until thick and the oil separates.", "tip": "The base should look glossy and paste-like before the yogurt goes in." },
+      { "text": "Stir in the whisked yogurt a spoon at a time, then add the chicken. Cover and cook gently for 35 minutes, turning once.", "tip": "Adding yogurt slowly stops it from splitting." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Stir in the ground almonds and curry powder and cook for 5 minutes more until the chicken is cooked through. Serve with the rice."
+    ],
+    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "pot"], "illustration": "🍛"
+  },
+  {
+    "id": "fish-moilee", "title": "Fish moilee (light coconut fish curry)",
+    "description": "White fish fillets poached for a few minutes in a gentle coconut broth with ginger, garlic, onion, tomato and turmeric. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "ginger", "quantity": 35, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" }, { "id": "salt", "quantity": 1.25, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "tomato", "quantity": 2, "unit": "piece" }, { "id": "turmeric", "quantity": 0.75, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "coconut-milk", "quantity": 400, "unit": "ml" },
+      { "id": "hake", "quantity": 650, "unit": "g", "note": "4 fillets, skinless" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" }
+    ],
+    "steps": [
+      "Pound or blend the ginger, garlic, chili and a pinch of the salt into a paste.",
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Fry the thinly sliced onions in the oil in a wide pan for 8 minutes until soft and golden. Add the paste and fry for 2 minutes.",
+      "Add the quartered tomatoes, the rest of the salt, the turmeric and chili, cover and cook for 3 minutes.",
+      { "text": "Pour in the coconut milk with {120 ml} water and bring to a gentle bubble. Lower in the fish, cover and cook for 5 to 7 minutes until it flakes.", "tip": "A gentle bubble only: boiling hard breaks the fish." },
+      "Squeeze over some lemon and serve with the rice and lemon wedges."
+    ],
+    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["wide pan with a lid", "pot"], "illustration": "🐟"
+  },
+  {
+    "id": "salmon-spinach-curry", "title": "Salmon and spinach curry",
+    "description": "Golden onions and whole spices with tomato, ginger and garlic, a big pile of spinach, and chunks of salmon simmered in at the end. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "cloves", "quantity": 1, "unit": "pinch" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "sugar", "quantity": 3, "unit": "g" }, { "id": "tomato", "quantity": 2, "unit": "piece" },
+      { "id": "ginger", "quantity": 30, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "coriander-ground", "quantity": 1.5, "unit": "tsp" },
+      { "id": "turmeric", "quantity": 0.25, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" },
+      { "id": "salt", "quantity": 1.25, "unit": "tsp" }, { "id": "spinach", "quantity": 450, "unit": "g" },
+      { "id": "salmon", "quantity": 500, "unit": "g", "note": "skinless" }, { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" }
+    ],
+    "steps": [
+      "Warm the cinnamon, cloves and a few peppercorns if you have them in the oil for 1 minute.",
+      { "text": "Add the chopped onion and the sugar and cook for 12 minutes until golden.", "tip": "The pinch of sugar helps the onion caramelise." },
+      "Add the chopped tomatoes, cover and cook for 5 minutes. Stir in the grated ginger, crushed garlic and the rest of the spices and salt.",
+      { "text": "Add the spinach in handfuls and cook for 8 minutes until wilted and well mixed with the sauce. Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes.", "tip": "It looks like a mountain of spinach, but it shrinks right down." },
+      { "text": "Nestle the salmon, cut into chunks, into the sauce, cover and simmer for 5 to 7 minutes until just cooked. Serve with the rice.", "tip": "Stir gently or not at all once the salmon is in, so the pieces stay whole." }
+    ],
+    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["wide pan with a lid", "pot"], "illustration": "🐟"
+  },
+  {
+    "id": "bombay-eggs", "title": "Bombay eggs in spiced tomato and spinach",
+    "description": "Eggs gently cooked in a thick sauce of fresh tomato, onion, toasted cumin and coriander, on a bed of spinach, with yogurt on top. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["breakfast", "lunch", "dinner"], "cuisine": "indian", "family": "eggs", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "coriander-ground", "quantity": 2, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "ginger", "quantity": 20, "unit": "g" },
+      { "id": "tomato", "quantity": 1000, "unit": "g" }, { "id": "tomato-paste", "quantity": 20, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "sugar", "quantity": 5, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "turmeric", "quantity": 0.25, "unit": "tsp" },
+      { "id": "spinach", "quantity": 250, "unit": "g" }, { "id": "eggs", "quantity": 6, "unit": "piece" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "greek-yogurt", "quantity": 240, "unit": "g" },
+      { "id": "flatbread", "quantity": 4, "unit": "piece" }
+    ],
+    "steps": [
+      { "text": "Toast the cumin and coriander in a dry wide pan for 1 minute until fragrant.", "tip": "Whole seeds crushed after toasting are even better, if you have them." },
+      "Add the oil and the sliced onions and fry for 7 minutes, then the crushed garlic and grated ginger for 2 minutes.",
+      { "text": "Add the diced tomatoes and simmer for 15 minutes until thick. Stir in the tomato paste, salt, sugar, chili and turmeric.", "tip": "The sauce should be thick enough for a spoon to leave a trail." },
+      "Stir in the spinach until wilted, then make 6 hollows in the sauce.",
+      { "text": "Crack an egg into each, cover and cook on low for 8 to 10 minutes until the whites are set.", "tip": "Take it off the heat while the yolks still wobble if you like them runny." },
+      "Top with pepper, parsley and spoons of yogurt and serve from the pan with warm flatbreads."
+    ],
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 1, "equipment": ["wide pan with a lid"], "illustration": "🍳"
+  },
+  {
+    "id": "kidney-bean-curry", "title": "Quick kidney bean curry",
+    "description": "Kidney beans in a warm onion, ginger and tomato sauce scented with cinnamon and cumin. A fast, filling weeknight curry from the cupboard. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "ginger", "quantity": 30, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g", "note": "green" }, { "id": "tomato-paste", "quantity": 40, "unit": "g" },
+      { "id": "sugar", "quantity": 5, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "curry-powder", "quantity": 1, "unit": "tsp" }, { "id": "turmeric", "quantity": 0.25, "unit": "tsp" },
+      { "id": "kidney-beans", "quantity": 800, "unit": "g", "note": "2 cans" }, { "id": "rice", "quantity": 280, "unit": "g", "note": "basmati" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Warm the cinnamon and cumin in the oil for 1 minute.",
+      "Add the chopped onion and fry for 8 minutes until golden, then the grated ginger, crushed garlic and chopped chili for 2 minutes.",
+      { "text": "Stir in the tomato paste, sugar, salt, curry powder and turmeric for 2 minutes.", "tip": "Frying the paste and spices briefly gives the sauce its depth." },
+      { "text": "Add the drained beans and {200 ml} warm water and simmer for 5 to 8 minutes until saucy. Serve with the rice and yogurt.", "tip": "It keeps 3 days and freezes well." }
+    ],
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["pan", "pot"], "illustration": "🫘"
+  },
+  {
+    "id": "indian-fried-rice-eggs", "title": "Indian fried rice with peas and egg",
+    "description": "Leftover rice fried with golden onion, garlic, cumin, turmeric, peas and any cooked vegetables, finished with egg, spring onion and lemon. Inspired by Made in India by Meera Sodha.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "rice", "quantity": 300, "unit": "g", "note": "cooked the day before" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "turmeric", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "mixed-vegetables", "quantity": 300, "unit": "g", "note": "frozen, or leftovers" },
+      { "id": "peas", "quantity": 150, "unit": "g", "note": "frozen" }, { "id": "eggs", "quantity": 5, "unit": "piece" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "spring-onion", "quantity": 40, "unit": "g" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece" }, { "id": "yogurt", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "If you have no leftover rice, cook it ahead: rinse it, cook it in {550 ml} water with the lid on for 12 minutes, spread it out to cool and chill it.", "tip": "Cold rice fries into separate grains. Warm rice turns sticky." },
+      "Fry the chopped onion in the oil in a wok or large pan for 10 minutes until golden. Add the chopped garlic and cumin for 1 minute.",
+      "Stir in the turmeric and chili, then the vegetables, and cook for 5 minutes until hot.",
+      { "text": "Push everything to one side, pour the beaten eggs into the space and scramble them, then mix them in.", "tip": "Eggs are our addition, for protein." },
+      { "text": "Add the peas, rice and salt and fry for 6 to 8 minutes, stirring, until piping hot throughout.", "tip": "Go easy on the salt if your rice was already salted." },
+      "Scatter with spring onion, squeeze over the lemon and serve with yogurt."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["wok or large frying pan", "pot"], "illustration": "🍚"
+  }
+]

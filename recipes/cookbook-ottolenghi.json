@@ -1,0 +1,353 @@
+[
+  {
+    "id": "spicy-chickpea-bulgur-soup", "title": "Spicy chickpea and bulgur soup with feta cream",
+    "description": "A warming paprika and cumin soup of chickpeas, carrot, celeriac and bulgur, topped with a cool feta and herb cream. Inspired by Plenty More by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "soup", "servings": 4, "prepMinutes": 20, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "carrot", "quantity": 3, "unit": "piece" },
+      { "id": "celeriac", "quantity": 200, "unit": "g" }, { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "cumin", "quantity": 1, "unit": "tsp" },
+      { "id": "coriander-ground", "quantity": 1, "unit": "tsp" }, { "id": "tomato-paste", "quantity": 20, "unit": "g" },
+      { "id": "chickpeas", "quantity": 800, "unit": "g", "note": "2 cans" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "bulgur", "quantity": 100, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "feta", "quantity": 100, "unit": "g" }, { "id": "sour-cream", "quantity": 100, "unit": "g" },
+      { "id": "parsley", "quantity": 20, "unit": "g" }
+    ],
+    "steps": [
+      "Dice the onions, carrots and celeriac into 1 cm pieces. Soften the onions in the oil in a big pot for 5 minutes, then add the carrots, celeriac and crushed garlic and cook for 5 minutes more.",
+      { "text": "Stir in the paprika, chili, cumin, coriander and tomato paste for 1 minute.", "tip": "The original uses harissa paste. Use 2 tbsp of it instead of the paprika, chili and tomato paste if you have some." },
+      "Add the drained chickpeas, the stock cubes and {1200 ml} water and simmer for 20 minutes until the vegetables are soft.",
+      { "text": "Meanwhile pour boiling water over the bulgur, leave for 10 minutes and drain. Stir it into the soup with the salt.", "tip": "Adding the bulgur at the end keeps it from turning mushy." },
+      { "text": "Mash the feta with the sour cream and most of the chopped parsley. Serve the soup with a spoon of it on top and the rest of the parsley.", "tip": "The soup keeps 3 days. Keep the topping separate." }
+    ],
+    "tags": ["vegetarian", "freezer-friendly", "comfort"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲"
+  },
+  {
+    "id": "braised-eggs-leek-spinach", "title": "Braised eggs with leeks, spinach and feta",
+    "description": "Eggs gently cooked in a pan of soft buttery leeks and spinach with lemon and cumin, dotted with feta and sprinkled with oregano and sesame. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["breakfast", "lunch", "dinner"], "cuisine": "middle-eastern", "family": "eggs", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "butter", "quantity": 25, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "leek", "quantity": 2, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "cumin", "quantity": 1, "unit": "tsp" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "spinach", "quantity": 200, "unit": "g" }, { "id": "eggs", "quantity": 6, "unit": "piece" },
+      { "id": "feta", "quantity": 100, "unit": "g" }, { "id": "oregano", "quantity": 1, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tbsp" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      "Slice the leeks thinly and wash them well.",
+      { "text": "Melt the butter with {1 tbsp} of the oil in a large frying pan with a lid and soften the leeks with the salt and pepper for 5 minutes.", "tip": "They should be soft and sweet, not browned." },
+      { "text": "Add the cumin, the grated lemon peel and juice, and the stock cube dissolved in {300 ml} hot water. Simmer for 5 minutes until the liquid has reduced by half.", "tip": "The original uses preserved lemon: chop a quarter of one in if you have it." },
+      "Stir in the spinach until it wilts.",
+      { "text": "Make 6 hollows, crack an egg into each and dot the feta around. Cover and cook on medium-low for 4 to 5 minutes until the whites are set and the yolks still runny.", "tip": "Peek after 4 minutes: the yolks should still wobble." },
+      "Mix the oregano, sesame and the rest of the oil and spoon it over. Serve from the pan with bread."
+    ],
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["large frying pan with a lid"], "illustration": "🍳"
+  },
+  {
+    "id": "pea-feta-fritters", "title": "Pea and feta fritters with lemon",
+    "description": "Soft fritters of crushed peas, ricotta and egg with chunks of salty feta, oregano and lemon peel, fried golden. Great with yogurt and salad. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "pancakes", "servings": 4, "prepMinutes": 20, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "peas", "quantity": 500, "unit": "g", "note": "frozen, thawed" }, { "id": "ricotta", "quantity": 125, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "oregano", "quantity": 2, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tbsp" }, { "id": "flour", "quantity": 100, "unit": "g" },
+      { "id": "baking-powder", "quantity": 6, "unit": "g" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "feta", "quantity": 200, "unit": "g" }, { "id": "sunflower-oil", "quantity": 100, "unit": "ml", "note": "for frying" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }, { "id": "lettuce", "quantity": 0.5, "unit": "piece" }
+    ],
+    "steps": [
+      { "text": "Pulse the peas in a blender a few times so they are crushed but not puréed.", "tip": "Chunky peas give the fritters texture. No blender? Crush them with a potato masher." },
+      "Mix them with the ricotta, eggs, grated lemon peel, salt, oregano, sesame, flour and baking powder.",
+      { "text": "Gently fold in the chopped parsley and the feta broken into 2 cm pieces.", "tip": "Fold gently so the feta stays in chunks." },
+      { "text": "Heat the oil about 1 cm deep in a frying pan on medium. Fry heaped spoonfuls for 3 to 4 minutes, turning once, until golden and cooked through. Drain on kitchen paper.", "tip": "Fry a test one first to check the heat. Never leave hot oil alone." },
+      "Serve warm with yogurt, lemon wedges and a green salad."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["blender", "frying pan", "bowl"], "illustration": "🟢"
+  },
+  {
+    "id": "curried-lentil-coconut-soup", "title": "Curried red lentil, tomato and coconut soup",
+    "description": "Red lentils simmered with tomatoes, ginger, garlic and curry powder in coconut milk until thick and creamy. Quick and warming. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "soup", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "curry-powder", "quantity": 1, "unit": "tbsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "ginger", "quantity": 30, "unit": "g" },
+      { "id": "red-lentils", "quantity": 200, "unit": "g" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "parsley", "quantity": 20, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "coconut-milk", "quantity": 400, "unit": "ml" }, { "id": "bread", "quantity": 240, "unit": "g", "note": "or flatbread" }
+    ],
+    "steps": [
+      { "text": "Fry the chopped onion in the oil for 8 minutes until golden. Add the curry powder, chili, crushed garlic and chopped ginger and stir for 2 minutes.", "tip": "Golden onion gives the soup its sweet depth, so do not rush it." },
+      "Stir in the rinsed lentils, then the tomatoes, the chopped parsley stalks, the salt and {700 ml} water.",
+      { "text": "Whisk the coconut milk smooth and keep a few spoons aside. Pour the rest into the pot and simmer for 25 minutes, stirring now and then, until the lentils are soft.", "tip": "Add a splash of water if it gets too thick." },
+      { "text": "Serve with a swirl of the kept coconut milk, the parsley leaves and bread.", "tip": "It keeps 3 days and freezes well." }
+    ],
+    "tags": ["vegan", "vegetarian", "freezer-friendly", "one-pot"], "keepsDays": 3, "equipment": ["pot", "whisk"], "illustration": "🍲"
+  },
+  {
+    "id": "chickpeas-chard-roast-carrots", "title": "Chickpeas and chard with roast carrots and yogurt",
+    "description": "Cumin-fried onion with chickpeas, blitva and crunchy roast carrots, finished with lemon, yogurt and olive oil. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "stew", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "carrot", "quantity": 5, "unit": "piece" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "cumin", "quantity": 2, "unit": "tsp" },
+      { "id": "swiss-chard", "quantity": 500, "unit": "g" }, { "id": "chickpeas", "quantity": 800, "unit": "g", "note": "2 cans" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "greek-yogurt", "quantity": 200, "unit": "g" },
+      { "id": "parsley", "quantity": 10, "unit": "g" }, { "id": "bread", "quantity": 240, "unit": "g", "note": "or flatbread" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 220 °C. Cut the carrots into 2 cm chunks, toss with {2 tbsp} of the oil and half the salt and roast for 20 minutes until browned but still with a bite.", "tip": "The roast carrots stay a little crunchy next to the soft chickpeas." },
+      "Meanwhile fry the chopped onions in {2 tbsp} of the oil with the cumin for 10 minutes until golden.",
+      { "text": "Add the chard, sliced into strips, the drained chickpeas, the carrots and {150 ml} water and cook for 5 minutes until the greens wilt and the liquid is almost gone.", "tip": "Add the chard stalks first, chopped small, then the leaves a minute later." },
+      "Season with the rest of the salt, the pepper and the lemon juice.",
+      "Serve topped with yogurt, parsley and the rest of the oil, with bread."
+    ],
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["baking tray", "large frying pan"], "illustration": "🥕"
+  },
+  {
+    "id": "lentil-eggplant-stew", "title": "Lentil and eggplant stew with sour cream",
+    "description": "Charred eggplant and cherry tomatoes simmered with lentils, garlic, thyme and white wine until soft, with sour cream and oregano on top. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mediterranean", "family": "stew", "servings": 4, "prepMinutes": 20, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "onion", "quantity": 2, "unit": "piece", "note": "red if you can" }, { "id": "thyme", "quantity": 2, "unit": "tsp" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "eggplant", "quantity": 2, "unit": "piece" },
+      { "id": "tomato", "quantity": 400, "unit": "g", "note": "cherry tomatoes" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "lentils", "quantity": 300, "unit": "g" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "white-wine", "quantity": 120, "unit": "ml" }, { "id": "sour-cream", "quantity": 180, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "oregano", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      "Cook the sliced garlic, chopped onions and thyme in {2 tbsp} of the oil in a wide pot for 8 minutes until soft. Lift them out.",
+      { "text": "Turn the heat up, add the rest of the oil, the eggplant cut into chunks and the whole cherry tomatoes, and fry for 10 minutes, turning, until soft and charred in places.", "tip": "High heat gives the eggplant a smoky, charred taste." },
+      { "text": "Put the onions back with the rinsed lentils, the stock cubes, wine, salt, pepper and {1600 ml} water. Simmer gently for 40 minutes until the lentils are soft but still whole.", "tip": "Stir now and then and add a little water if it gets too thick." },
+      { "text": "Serve with a spoon of sour cream, chili flakes, oregano and a drizzle of olive oil.", "tip": "It keeps 3 days and tastes even better the next day." }
+    ],
+    "tags": ["vegetarian", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot"], "illustration": "🍆"
+  },
+  {
+    "id": "bulgur-mushrooms-feta", "title": "Bulgur with golden mushrooms, onion and feta",
+    "description": "Soaked bulgur tossed with crisp-fried onions, mushrooms browned with thyme and a splash of balsamic, dill and feta. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "rice", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "bulgur", "quantity": 250, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 6, "unit": "tbsp" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "mushrooms", "quantity": 800, "unit": "g" },
+      { "id": "thyme", "quantity": 2, "unit": "tsp" }, { "id": "vinegar", "quantity": 30, "unit": "ml", "note": "balsamic if you have it" },
+      { "id": "dill", "quantity": 1, "unit": "tsp" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "feta", "quantity": 150, "unit": "g" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" },
+      { "id": "chickpeas", "quantity": 400, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Rinse the bulgur, put it in a bowl with half the salt and {400 ml} boiling water, cover and leave for 20 minutes until soft.", "tip": "No cooking needed: the bulgur softens in the hot water." },
+      "Fry the thinly sliced onions in {2 tbsp} of the oil for 8 minutes until golden, add the cumin for 1 minute and lift them out.",
+      { "text": "Add the rest of the oil and fry the sliced mushrooms in two batches on high for 6 to 7 minutes until golden and dry.", "tip": "Too many at once and they steam instead of browning." },
+      "Put all the mushrooms back, add the thyme and vinegar and let it bubble away for 1 minute. Add the drained chickpeas to warm through.",
+      "Toss with the bulgur, onions, dill, chopped parsley, the rest of the salt, crumbled feta and chili flakes and serve warm."
+    ],
+    "tags": ["vegetarian"], "keepsDays": 2, "equipment": ["bowl", "large frying pan"], "illustration": "🍄"
+  },
+  {
+    "id": "baked-rice-tomato-garlic-confit", "title": "Baked rice with roasted tomatoes and garlic",
+    "description": "Cherry tomatoes, whole garlic and onions slow-roasted in olive oil with thyme and cinnamon, then rice steamed right in their juices. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "rice", "servings": 6, "prepMinutes": 15, "cookMinutes": 95,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "tomato", "quantity": 800, "unit": "g", "note": "cherry tomatoes" }, { "id": "garlic", "quantity": 80, "unit": "g", "note": "peeled cloves" },
+      { "id": "onion", "quantity": 3, "unit": "piece", "note": "small" }, { "id": "parsley", "quantity": 20, "unit": "g" },
+      { "id": "thyme", "quantity": 2, "unit": "tsp" }, { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 7, "unit": "tbsp" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "rice", "quantity": 400, "unit": "g", "note": "basmati" },
+      { "id": "greek-yogurt", "quantity": 400, "unit": "g" }, { "id": "feta", "quantity": 150, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Put the tomatoes, peeled garlic cloves, onions cut into chunks, parsley stalks, thyme and cinnamon in a deep ovenproof dish.",
+      { "text": "Pour over the oil, season with half the salt and the pepper and roast for 60 minutes until everything is very soft.", "tip": "The garlic turns sweet and spreadable after an hour in the oil." },
+      { "text": "Scatter the rinsed rice over the vegetables without stirring. Turn the oven up to 220 °C, pour over {800 ml} boiling water with the rest of the salt and seal the dish tightly with foil.", "tip": "A tight seal is the trick: the rice steams in the tomato juices." },
+      "Bake for 25 minutes, then leave it covered for 10 minutes more.",
+      { "text": "Fluff gently with a fork, scatter with chopped parsley leaves and serve with yogurt and crumbled feta.", "tip": "A fried egg on top is lovely too." }
+    ],
+    "tags": ["vegetarian", "comfort"], "keepsDays": 2, "equipment": ["deep ovenproof dish", "foil"], "illustration": "🍅"
+  },
+  {
+    "id": "pasta-chickpeas-lemon-anchovy", "title": "Pasta with crispy chickpeas, lemon and spinach",
+    "description": "Chickpeas fried with onion, cumin, thyme, lemon peel and anchovies that melt away, simmered in stock and tossed with pasta and spinach. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" }, { "id": "onion", "quantity": 0.5, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "cumin", "quantity": 2, "unit": "tsp" },
+      { "id": "thyme", "quantity": 1, "unit": "tsp" }, { "id": "anchovies", "quantity": 25, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "chickpeas", "quantity": 800, "unit": "g", "note": "2 cans" },
+      { "id": "sugar", "quantity": 5, "unit": "g" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "pasta", "quantity": 250, "unit": "g", "note": "short shapes" }, { "id": "spinach", "quantity": 100, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "oregano", "quantity": 1, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      "Fry the chopped onion, crushed garlic, cumin, thyme, chopped anchovies and the peel of half the lemon in strips in {3 tbsp} of the oil for 4 minutes.",
+      { "text": "Add the drained chickpeas and fry for 8 minutes, stirring now and then, until lightly browned.", "tip": "The anchovies melt away completely and just make it taste savoury." },
+      "Dissolve the stock cube in {400 ml} hot water. Add it with the sugar and simmer for 5 minutes until slightly reduced.",
+      "Meanwhile cook the pasta in salted water until just firm and drain.",
+      { "text": "Stir the spinach and parsley into the chickpeas, then the pasta and {2 tbsp} lemon juice.", "tip": "Taste before adding salt: the anchovies and stock are salty." },
+      "Serve sprinkled with the oregano and sesame mixed with the rest of the oil."
+    ],
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["large frying pan", "big pot"], "illustration": "🍝"
+  },
+  {
+    "id": "orzo-prawns-tomato-feta", "title": "Orzo with prawns, tomato and marinated feta",
+    "description": "Toasted orzo cooked in an orange-scented tomato broth until creamy, with prawns stirred in at the end and chili-marinated feta on top. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "greek", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "feta", "quantity": 200, "unit": "g" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "pasta", "quantity": 250, "unit": "g", "note": "orzo" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "orange", "quantity": 1, "unit": "piece", "note": "peel only" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "stock-cubes", "quantity": 5, "unit": "g" }, { "id": "shrimp", "quantity": 400, "unit": "g", "note": "raw, peeled" },
+      { "id": "basil", "quantity": 15, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Break the feta into pieces and mix with the chili flakes and {3 tbsp} of the oil. Leave to marinate.", "tip": "A pinch of crushed fennel seeds in the marinade is the original touch, if you have some." },
+      { "text": "Toast the dry orzo in the rest of the oil in a wide pan for 3 minutes until golden. Lift it out.", "tip": "Toasting gives it a nutty taste." },
+      "In the same pan fry the crushed garlic and 3 strips of orange peel for 1 minute. Add the tomatoes, the stock cube and {700 ml} water.",
+      { "text": "Bring to a simmer, stir in the orzo, cover and cook on low for 15 minutes, then uncover and cook for a few minutes until thick and creamy.", "tip": "Stir now and then so it does not stick." },
+      { "text": "Add the prawns and cook for 2 to 3 minutes until pink. Take out the orange peel and serve topped with the marinated feta and torn basil.", "tip": "Prawns are done as soon as they curl and turn pink." }
+    ],
+    "tags": ["high-protein", "one-pot"], "keepsDays": 1, "equipment": ["wide pan with a lid", "bowl"], "illustration": "🍤"
+  },
+  {
+    "id": "meatballs-lemon-celeriac", "title": "Beef meatballs in lemon broth with celeriac",
+    "description": "Tender beef meatballs simmered with slices of celeriac in a bright, lemony broth with turmeric, paprika and garlic. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "stew", "servings": 4, "prepMinutes": 25, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "minced-beef", "quantity": 500, "unit": "g" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "bread", "quantity": 120, "unit": "g", "note": "white, plus bread to serve" }, { "id": "parsley", "quantity": 25, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 0.25, "unit": "tsp" },
+      { "id": "cloves", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 1.25, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "celeriac", "quantity": 500, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "turmeric", "quantity": 0.5, "unit": "tsp" }, { "id": "paprika-powder", "quantity": 1, "unit": "tsp" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "lemon", "quantity": 1.5, "unit": "piece" },
+      { "id": "potato", "quantity": 500, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Blitz or finely tear the bread into crumbs. Mix with the beef, finely chopped onion, most of the parsley, the egg, cinnamon, cloves, {1 tsp} of the salt and the pepper. Shape into balls the size of a walnut.", "tip": "The original uses allspice: a pinch of cinnamon and ground cloves is a good stand-in." },
+      "Brown the meatballs in the oil in a wide pot for 5 minutes, turning. Lift them out.",
+      { "text": "Peel the celeriac and potatoes and cut them into 1 cm slices. Fry them in the pot with the garlic, turmeric and paprika for 2 minutes.", "tip": "Potato is our addition, to make it a full meal." },
+      { "text": "Dissolve the stock cubes in {600 ml} hot water. Add it with the juice of the lemons and the rest of the salt, put the meatballs back, cover and simmer for 30 minutes.", "tip": "Sharp and lemony is the point. Taste and add more juice if you like." },
+      "Uncover and simmer for 10 minutes to thicken the sauce a little. Scatter with the rest of the parsley and serve with bread."
+    ],
+    "tags": ["high-protein", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid"], "illustration": "🍋"
+  },
+  {
+    "id": "ricotta-oregano-meatballs", "title": "Ricotta and oregano meatballs in tomato sauce",
+    "description": "Big, very tender beef and ricotta meatballs with parmesan, simmered slowly in an oregano and tomato sauce. Serve with pasta or bread. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 4, "prepMinutes": 25, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "oregano", "quantity": 2, "unit": "tsp" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "minced-beef", "quantity": 500, "unit": "g" }, { "id": "bread", "quantity": 100, "unit": "g", "note": "white" },
+      { "id": "ricotta", "quantity": 250, "unit": "g" }, { "id": "parmesan", "quantity": 60, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "parsley", "quantity": 20, "unit": "g" },
+      { "id": "pasta", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      "Chop the onions finely. Cook half of them with half the garlic and half the oregano in {2 tbsp} of the oil for 8 minutes until soft.",
+      { "text": "Add the tomatoes and the stock cubes dissolved in {500 ml} hot water, season with half the salt and simmer for 15 minutes.", "tip": "Keep the sauce on a low simmer while you shape the meatballs." },
+      { "text": "Blitz or finely tear the bread into crumbs. Mix with the beef, ricotta, parmesan, egg, parsley, the rest of the onion, garlic, oregano and salt, and the pepper. Shape into 12 large balls.", "tip": "The mix is soft. Wet hands help, and chill the balls for 10 minutes if they will not hold." },
+      "Brown the meatballs in the rest of the oil in batches for 6 to 8 minutes, then add them to the sauce with a little water to almost cover.",
+      { "text": "Cover and simmer for 30 minutes, then uncover for the last 10 minutes to thicken. Rest for 10 minutes.", "tip": "The ricotta keeps them soft even after long cooking." },
+      "Cook the pasta and serve the meatballs and sauce over it."
+    ],
+    "tags": ["high-protein", "comfort", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "frying pan", "big pot"], "illustration": "🍝"
+  },
+  {
+    "id": "chicken-marbella", "title": "Chicken Marbella with olives, capers and dates",
+    "description": "Chicken legs marinated with garlic, oregano, vinegar, olives, capers and dates, then roasted until bronzed in a sweet, salty, sharp sauce. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mediterranean", "family": "oven", "servings": 4, "prepMinutes": 20, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-legs", "quantity": 1400, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "oregano", "quantity": 2, "unit": "tsp" }, { "id": "vinegar", "quantity": 45, "unit": "ml", "note": "red wine vinegar" },
+      { "id": "olive-oil", "quantity": 3, "unit": "tbsp" }, { "id": "olives", "quantity": 100, "unit": "g", "note": "green, pitted" },
+      { "id": "capers", "quantity": 50, "unit": "g" }, { "id": "dates", "quantity": 120, "unit": "g" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "white-wine", "quantity": 120, "unit": "ml" }, { "id": "honey", "quantity": 1, "unit": "tbsp" },
+      { "id": "couscous", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Cut a few slashes in the chicken skin. Mix the chicken with the crushed garlic, oregano, vinegar, oil, olives, capers with a splash of their brine, quartered dates, bay leaves and pepper in a big bowl. Cover and chill for 1 to 2 days, turning now and then.", "tip": "No time? A few hours still helps. No salt needed: the olives and capers bring it." },
+      "Heat the oven to 200 °C. Spread the chicken skin side up in a baking dish with all the marinade.",
+      "Whisk the wine with the honey and pour it around the chicken.",
+      { "text": "Roast for 50 minutes, spooning the juices over 2 or 3 times, until the chicken is bronzed and cooked through.", "tip": "The juices near the bone should run clear." },
+      "Meanwhile pour {300 ml} boiling water over the couscous with a pinch of salt, cover for 5 minutes and fluff. Serve with the chicken and plenty of sauce."
+    ],
+    "tags": ["high-protein", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["big bowl", "baking dish"], "illustration": "🫒"
+  },
+  {
+    "id": "pork-ginger-eggplant", "title": "Sticky ginger pork over soft steamed eggplant",
+    "description": "Minced pork stir-fried with ginger, garlic, chili and spring onion in a sweet soy sauce, spooned over silky steamed eggplant with peanuts. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "rice", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "eggplant", "quantity": 3, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "spring-onion", "quantity": 150, "unit": "g" },
+      { "id": "ginger", "quantity": 50, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g" }, { "id": "pork-mince", "quantity": 500, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 4, "unit": "tbsp" }, { "id": "honey", "quantity": 2, "unit": "tbsp" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }, { "id": "vinegar", "quantity": 20, "unit": "ml" },
+      { "id": "parsley", "quantity": 10, "unit": "g" }, { "id": "peanuts", "quantity": 50, "unit": "g" },
+      { "id": "sesame", "quantity": 1, "unit": "tbsp" }, { "id": "rice", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {450 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Cut the eggplants into 3 cm cubes, toss with the salt and steam them in a covered steamer or colander over boiling water for 12 minutes until very soft.", "tip": "Steaming makes eggplant silky without soaking up any oil." },
+      "Stir-fry the spring onions cut into 3 cm lengths, the ginger in thin strips, the sliced garlic and chili in the oil in a wok on high for 4 minutes. Lift them out.",
+      "Brown the pork in the same wok for 4 minutes, breaking it up.",
+      { "text": "Add the soy sauce, honey, sesame oil and vinegar, put the spring onion mix back and toss for 1 minute.", "tip": "Honey and soy stand in for the sweet soy and mirin in the original." },
+      "Spoon the pork over the eggplant and scatter with parsley, chopped peanuts and sesame seeds. Serve with the rice."
+    ],
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["pot", "steamer or colander", "wok or large frying pan"], "illustration": "🍆"
+  },
+  {
+    "id": "seeded-chicken-schnitzel", "title": "Seeded chicken schnitzel",
+    "description": "Chicken strips coated in a crunchy crust of breadcrumbs, sesame, sunflower seeds, coriander and turmeric, shallow-fried golden. Inspired by Ottolenghi Simple by Yotam Ottolenghi.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pan-grill", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-breast", "quantity": 600, "unit": "g" }, { "id": "flour", "quantity": 50, "unit": "g" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "breadcrumbs", "quantity": 80, "unit": "g" },
+      { "id": "sesame", "quantity": 70, "unit": "g" }, { "id": "sunflower-seeds", "quantity": 40, "unit": "g" },
+      { "id": "coriander-ground", "quantity": 2, "unit": "tsp" }, { "id": "turmeric", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 100, "unit": "ml", "note": "for frying" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "potato", "quantity": 800, "unit": "g" },
+      { "id": "cucumber", "quantity": 1, "unit": "piece" }, { "id": "yogurt", "quantity": 150, "unit": "g" }
+    ],
+    "steps": [
+      "Boil the potatoes in their skins in salted water for 20 minutes until soft. Meanwhile mix the sliced cucumber with the yogurt and a pinch of salt.",
+      { "text": "Cut each chicken breast into 3 long strips and flatten them between baking paper to about 1 cm thick.", "tip": "Even thickness means they cook through at the same time." },
+      { "text": "Set out three plates: flour with the salt and pepper, beaten eggs, and the breadcrumbs mixed with the seeds (sunflower seeds roughly chopped), coriander, turmeric and chili. Coat each strip in flour, egg, then the seed mix.", "tip": "Press the seed crust on firmly so it stays on in the pan." },
+      { "text": "Shallow-fry in the oil on medium for 5 to 6 minutes, turning halfway, until deep golden and cooked through. Drain on kitchen paper.", "tip": "Seeds brown faster than breadcrumbs, so keep the heat medium. Never leave hot oil alone." },
+      "Serve with lemon wedges, the potatoes and the cucumber yogurt."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "3 plates"], "illustration": "🍗"
+  }
+]

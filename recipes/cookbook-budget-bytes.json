@@ -1,0 +1,358 @@
+[
+  {
+    "id": "banana-bread-baked-oatmeal", "title": "Banana bread baked oatmeal",
+    "description": "Oats baked in a custard of ripe banana, egg and milk with walnuts and cinnamon. Make it once, reheat breakfasts all week. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 6, "prepMinutes": 10, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "banana", "quantity": 4, "unit": "piece", "note": "very ripe" }, { "id": "sugar", "quantity": 60, "unit": "g", "note": "brown if you have it" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "vanilla-sugar", "quantity": 8, "unit": "g" }, { "id": "baking-powder", "quantity": 5, "unit": "g" },
+      { "id": "milk", "quantity": 360, "unit": "ml" }, { "id": "oats", "quantity": 225, "unit": "g" },
+      { "id": "walnuts", "quantity": 60, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 190 °C and grease a 20 x 20 cm baking dish.",
+      { "text": "Mash the bananas well in a bowl, then whisk in the sugar, eggs, salt, spices, vanilla sugar and baking powder until smooth. Whisk in the milk.", "tip": "The spottier and browner the bananas, the sweeter it is." },
+      "Stir in the oats and chopped walnuts and pour into the dish.",
+      { "text": "Bake for 45 minutes until golden on top and no longer wet in the middle.", "tip": "It sets soft and creamy like a pudding, not dry like a flapjack." },
+      { "text": "Cut into 6 portions. Eat warm, with yogurt or a splash of milk.", "tip": "It keeps 5 days in the fridge. Reheat a portion in the microwave for 1 minute." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "batch", "kid-friendly", "freezer-friendly"], "keepsDays": 5, "equipment": ["20 x 20 cm baking dish", "bowl", "whisk"], "illustration": "🍌"
+  },
+  {
+    "id": "crustless-ham-spinach-quiche", "title": "Crustless ham, spinach and cheese quiche",
+    "description": "All the filling of a quiche with no pastry: ham, spinach and cheese baked in eggs and milk until puffed and golden. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["breakfast", "lunch", "dinner"], "cuisine": "everyday", "family": "eggs", "servings": 4, "prepMinutes": 15, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "ham", "quantity": 200, "unit": "g" }, { "id": "spinach", "quantity": 250, "unit": "g", "note": "frozen, thawed" },
+      { "id": "hard-cheese", "quantity": 100, "unit": "g", "note": "Emmental or Gouda" }, { "id": "eggs", "quantity": 6, "unit": "piece" },
+      { "id": "milk", "quantity": 200, "unit": "ml" }, { "id": "parmesan", "quantity": 25, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "tomato", "quantity": 1, "unit": "piece" },
+      { "id": "bread", "quantity": 160, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C and grease a 23 cm pie dish.",
+      { "text": "Fry the chopped onion in the oil for 5 minutes, add the ham strips and fry for 5 minutes more. Spread over the dish.", "tip": "Frying the ham first drives off its water, so the quiche does not go soggy." },
+      { "text": "Squeeze the spinach very dry, spread it on top and scatter with half the grated cheese.", "tip": "Squeeze it in your fists until no more water comes out." },
+      "Whisk the eggs, milk, parmesan and pepper and pour over. Lay tomato slices on top and finish with the rest of the cheese.",
+      { "text": "Bake for 40 minutes until puffed in the middle and golden at the edges. Rest for 5 minutes before cutting. Serve with bread.", "tip": "It keeps 3 days and is good cold for lunch." }
+    ],
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 3, "equipment": ["23 cm pie dish", "frying pan", "whisk"], "illustration": "🥧"
+  },
+  {
+    "id": "apple-french-toast-bake", "title": "Apple cinnamon French toast bake",
+    "description": "Thick slices of bread soaked in cinnamon custard, layered with apple and baked under a crunchy oat crumble. Can be put together the night before. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "bread", "servings": 6, "prepMinutes": 15, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 3, "unit": "piece" }, { "id": "milk", "quantity": 360, "unit": "ml" },
+      { "id": "sugar", "quantity": 75, "unit": "g", "note": "brown if you have it" }, { "id": "vanilla-sugar", "quantity": 8, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" },
+      { "id": "bread", "quantity": 350, "unit": "g", "note": "a day old" }, { "id": "apple", "quantity": 1, "unit": "piece", "note": "sour" },
+      { "id": "oats", "quantity": 25, "unit": "g" }, { "id": "butter", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      "Grease a 20 x 20 cm baking dish. Cut the bread into slices about 2.5 cm thick.",
+      "Whisk the eggs, milk, {25 g} of the sugar, the vanilla sugar, salt and half the cinnamon.",
+      { "text": "Dip each slice briefly in the custard and stand the slices in two rows in the dish, leaning like fallen dominoes. Tuck thin apple wedges between them and pour over any leftover custard.", "tip": "You can stop here, cover and keep it in the fridge overnight. Bake it in the morning." },
+      { "text": "Rub the oats, the rest of the sugar and cinnamon and the soft butter together into a crumble and scatter it over.", "tip": "The crumble makes a crunchy lid over the soft custardy bread." },
+      "Heat the oven to 180 °C and bake for 45 minutes until golden and crisp on top. Serve warm."
+    ],
+    "tags": ["vegetarian", "make-ahead", "kid-friendly"], "keepsDays": 2, "equipment": ["20 x 20 cm baking dish", "whisk"], "illustration": "🍞"
+  },
+  {
+    "id": "creamy-orzo-spinach-goat-cheese", "title": "Creamy orzo with spinach and goat cheese",
+    "description": "Orzo tossed with butter, garlic, chili and spinach, with tangy goat cheese melting into an instant creamy sauce. Like risotto with no stirring. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pasta", "servings": 4, "prepMinutes": 5, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "orzo" }, { "id": "butter", "quantity": 30, "unit": "g" },
+      { "id": "garlic-powder", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "spinach", "quantity": 450, "unit": "g", "note": "frozen, chopped" }, { "id": "goat-cheese", "quantity": 150, "unit": "g", "note": "or cream cheese" }
+    ],
+    "steps": [
+      "Thaw the spinach (a few minutes in the microwave works) and squeeze it dry.",
+      "Cook the orzo in salted water for 8 to 10 minutes until soft. Keep a cup of the water and drain.",
+      "Put the orzo back in the pot off the heat with the butter, garlic powder, chili, salt and pepper.",
+      { "text": "Stir in the spinach and crumbled goat cheese until it melts into a creamy sauce, loosening with splashes of the cooking water.", "tip": "Use chopped frozen spinach, not whole leaves, which turn stringy." }
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["pot"], "illustration": "🥬"
+  },
+  {
+    "id": "sesame-tahini-noodles", "title": "Sesame tahini noodles with egg and cucumber",
+    "description": "Thin noodles in a sweet, salty garlic, soy and tahini sauce, topped with a fried egg and fresh cucumber. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "noodles", "servings": 4, "prepMinutes": 5, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "pasta", "quantity": 350, "unit": "g", "note": "spaghettini or thin noodles" }, { "id": "butter", "quantity": 40, "unit": "g" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "soy-sauce", "quantity": 4, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 45, "unit": "ml" }, { "id": "sugar", "quantity": 30, "unit": "g" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "tahini", "quantity": 40, "unit": "g" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }
+    ],
+    "steps": [
+      "Cook the noodles in salted water until just soft and drain.",
+      { "text": "Melt the butter in a large pan on medium-low and soften the chopped garlic for 2 minutes. Mix the soy sauce, vinegar, sugar, sesame oil and chili.", "tip": "Low heat: garlic in butter burns easily." },
+      { "text": "Add the noodles and the sauce to the pan and toss, then stir in the tahini so the warmth melts it in.", "tip": "The tahini gives a smooth, nutty sauce without peanut butter." },
+      "Fry the eggs in the sunflower oil in another pan.",
+      "Serve the noodles topped with an egg, cucumber sticks and sliced spring onion."
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["big pot", "2 frying pans"], "illustration": "🍜"
+  },
+  {
+    "id": "carrot-sweet-potato-soup", "title": "Carrot, sweet potato and red lentil soup",
+    "description": "A bright, smooth soup of carrots and sweet potato warmed with ginger, cinnamon and allspice, with red lentils to make it a meal. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "soup", "servings": 6, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "ginger", "quantity": 20, "unit": "g" },
+      { "id": "carrot", "quantity": 6, "unit": "piece" }, { "id": "sweet-potato", "quantity": 600, "unit": "g" },
+      { "id": "red-lentils", "quantity": 150, "unit": "g" }, { "id": "stock-cubes", "quantity": 15, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "cloves", "quantity": 1, "unit": "pinch" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      "Soften the chopped onion and garlic in the oil on medium-low for 5 minutes, grating in the ginger.",
+      { "text": "Add the sliced carrots, cubed sweet potato, rinsed lentils, stock cubes, cinnamon, a pinch of ground cloves and {1600 ml} water. Bring to the boil, cover and simmer for 20 minutes until everything is soft.", "tip": "The red lentils are our addition: they melt into the soup and make it filling." },
+      { "text": "Blend until smooth with a stick blender. Season with the salt and pepper.", "tip": "Using a jug blender? Let it cool a little first and fill only halfway." },
+      { "text": "Serve with a swirl of yogurt and bread.", "tip": "It keeps 4 days and freezes well." }
+    ],
+    "tags": ["vegetarian", "freezer-friendly", "cook-once-eat-twice", "light"], "keepsDays": 4, "equipment": ["big pot", "stick blender"], "illustration": "🥕"
+  },
+  {
+    "id": "greek-lemon-chicken-orzo-soup", "title": "Greek lemon chicken soup with orzo",
+    "description": "Chicken and orzo in broth, turned silky by whisking in egg and lemon at the end, the Greek avgolemono way. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "greek", "family": "soup", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "lemon", "quantity": 2, "unit": "piece" },
+      { "id": "stock-cubes", "quantity": 15, "unit": "g" }, { "id": "chicken-breast", "quantity": 400, "unit": "g" },
+      { "id": "pasta", "quantity": 150, "unit": "g", "note": "orzo" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      "Soften the chopped onion and garlic in the oil for 5 minutes. Grate in the peel of one lemon.",
+      { "text": "Add the stock cubes and {1300 ml} water and bring to the boil. Add the whole chicken breasts and simmer gently for 12 minutes. Lift them out and shred them with two forks.", "tip": "Gentle simmering keeps the chicken tender." },
+      "Add the orzo to the broth and simmer for 10 minutes until soft. Take off the heat and put the chicken back.",
+      { "text": "Whisk the eggs with the juice of both lemons. Slowly whisk in a ladle of the hot soup, then pour the mix back into the pot, stirring all the time.", "tip": "Warming the eggs first with a little soup stops them from scrambling. The soup turns creamy." },
+      "Stir in the parsley and serve with bread."
+    ],
+    "tags": ["high-protein", "comfort", "light"], "keepsDays": 2, "equipment": ["pot", "whisk", "ladle"], "illustration": "🍋"
+  },
+  {
+    "id": "farmer-joes", "title": "Veggie-packed sloppy joes",
+    "description": "Saucy minced beef in a tangy tomato sauce, made with half the usual meat and lots of grated carrot, zucchini and pepper, piled into buns. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pan-grill", "servings": 6, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "carrot", "quantity": 2, "unit": "piece" }, { "id": "zucchini", "quantity": 1, "unit": "piece" },
+      { "id": "minced-beef", "quantity": 300, "unit": "g" }, { "id": "sweetcorn", "quantity": 150, "unit": "g" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "tomato-paste", "quantity": 140, "unit": "g" },
+      { "id": "vinegar", "quantity": 45, "unit": "ml" }, { "id": "sugar", "quantity": 20, "unit": "g" },
+      { "id": "mustard", "quantity": 1, "unit": "tbsp" }, { "id": "paprika-powder", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "bread-rolls", "quantity": 6, "unit": "piece" }
+    ],
+    "steps": [
+      "Soften the chopped onion and garlic in the oil for 5 minutes. Add the diced pepper, then the grated carrot and zucchini.",
+      { "text": "Cook on medium for 10 minutes until the vegetables are soft and the liquid has gone.", "tip": "Cooking off the water is what keeps the filling thick, not soupy." },
+      "Add the beef and brown it for 5 to 7 minutes, breaking it up. Stir in the sweetcorn.",
+      { "text": "Add the tomatoes, tomato paste, vinegar, sugar, mustard, paprika, chili and salt and simmer for 10 minutes until thick.", "tip": "Kids rarely notice the vegetables once they melt into the sauce." },
+      { "text": "Pile into split buns and serve.", "tip": "The filling keeps 4 days and freezes well." }
+    ],
+    "tags": ["kid-friendly", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 4, "equipment": ["large frying pan", "grater"], "illustration": "🍔"
+  },
+  {
+    "id": "chili-cheese-beef-mac", "title": "One-pot chili cheese beef and macaroni",
+    "description": "Minced beef, tomato and spices with macaroni cooked right in the sauce, finished with melted cheddar. A homemade family favourite in one pot. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pasta", "servings": 6, "prepMinutes": 5, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "minced-beef", "quantity": 500, "unit": "g" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "flour", "quantity": 15, "unit": "g" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "passata", "quantity": 300, "unit": "g" }, { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" },
+      { "id": "cumin", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "oregano", "quantity": 0.5, "unit": "tsp" }, { "id": "pasta", "quantity": 300, "unit": "g", "note": "macaroni" },
+      { "id": "cheddar", "quantity": 120, "unit": "g" }
+    ],
+    "steps": [
+      "Brown the beef in the oil in a deep pot for 6 minutes, add the chopped garlic and onion and cook for 5 minutes more.",
+      { "text": "Sprinkle in the flour and stir for 1 minute. Dissolve the stock cubes in {700 ml} hot water and pour it in slowly, scraping the bottom.", "tip": "The flour helps the sauce turn creamy around the cheese later." },
+      "Stir in the passata, paprika, cumin, chili, oregano and the dry macaroni.",
+      { "text": "Cover, bring to the boil and simmer on low for 15 minutes, stirring now and then, until the pasta is soft.", "tip": "Add a splash of water if it gets too dry before the pasta is done." },
+      "Off the heat, stir in the grated cheddar until melted."
+    ],
+    "tags": ["kid-friendly", "one-pot", "comfort", "high-protein"], "keepsDays": 3, "equipment": ["deep pot with a lid"], "illustration": "🧀"
+  },
+  {
+    "id": "coconut-chicken-curry", "title": "Easy coconut chicken curry",
+    "description": "Chicken in a mild, creamy coconut milk sauce with ginger, garlic, turmeric and curry powder, over rice. A gentle first curry. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 6, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "ginger", "quantity": 20, "unit": "g" },
+      { "id": "chicken-breast", "quantity": 700, "unit": "g" }, { "id": "paprika-powder", "quantity": 0.5, "unit": "tsp" },
+      { "id": "turmeric", "quantity": 0.5, "unit": "tsp" }, { "id": "curry-powder", "quantity": 2, "unit": "tsp" },
+      { "id": "coconut-milk", "quantity": 800, "unit": "ml" }, { "id": "salt", "quantity": 0.75, "unit": "tsp" },
+      { "id": "rice", "quantity": 400, "unit": "g" }, { "id": "parsley", "quantity": 10, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {700 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Soften the chopped onion and garlic in the oil on medium-low for 5 minutes, grating in the ginger.",
+      "Add the chicken, cut into chunks, turn up the heat and cook for 7 minutes until white all over.",
+      { "text": "Add the paprika, turmeric and curry powder and stir for 1 minute.", "tip": "Frying the spices briefly wakes up their flavour." },
+      { "text": "Pour in the coconut milk, scrape the pan and simmer gently for 10 minutes. Season with the salt and serve over the rice with parsley.", "tip": "Want it hotter? Add a pinch of chili flakes. It keeps 3 days and freezes well." }
+    ],
+    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot", "large frying pan"], "illustration": "🍛"
+  },
+  {
+    "id": "turkey-spinach-meatballs", "title": "Baked turkey and spinach meatballs with pasta",
+    "description": "Lean turkey meatballs kept moist with spinach, parmesan and nutmeg, baked instead of fried and served in tomato sauce over pasta. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 5, "prepMinutes": 20, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "turkey",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "spinach", "quantity": 250, "unit": "g", "note": "frozen, chopped" },
+      { "id": "turkey-mince", "quantity": 500, "unit": "g" }, { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "breadcrumbs", "quantity": 90, "unit": "g" }, { "id": "parmesan", "quantity": 50, "unit": "g" },
+      { "id": "nutmeg", "quantity": 0.5, "unit": "tsp" }, { "id": "oregano", "quantity": 1, "unit": "tsp" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "passata", "quantity": 700, "unit": "g" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "pasta", "quantity": 400, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 190 °C and line a tray with oiled baking paper.",
+      "Soften the chopped onion and garlic in the sunflower oil for 5 minutes. Thaw and squeeze the spinach very dry.",
+      { "text": "Mix the onion, spinach, turkey, egg, breadcrumbs, parmesan, nutmeg, oregano and half the salt with your hands, without overworking it. Roll into about 25 small balls.", "tip": "Wet hands stop the mix from sticking." },
+      { "text": "Bake for 25 to 30 minutes until golden and cooked through.", "tip": "Freeze some baked meatballs in portions for very quick dinners." },
+      "Meanwhile simmer the passata with the olive oil and the rest of the salt for 10 minutes, and cook the pasta in salted water.",
+      "Add the meatballs to the sauce and serve over the pasta."
+    ],
+    "tags": ["high-protein", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["baking tray", "frying pan", "pot", "big pot"], "illustration": "🍝"
+  },
+  {
+    "id": "chicken-tamale-pie", "title": "Chicken and bean tamale pie",
+    "description": "Chicken simmered in a homemade chili tomato sauce with beans and sweetcorn, baked under a golden cornbread lid. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mexican", "family": "pie", "servings": 6, "prepMinutes": 20, "cookMinutes": 60,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 100, "unit": "ml" }, { "id": "flour", "quantity": 135, "unit": "g" },
+      { "id": "paprika-powder", "quantity": 1.5, "unit": "tbsp" }, { "id": "cumin", "quantity": 1, "unit": "tsp" },
+      { "id": "oregano", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "tomato-paste", "quantity": 70, "unit": "g" }, { "id": "garlic-powder", "quantity": 0.5, "unit": "tsp" },
+      { "id": "chicken-breast", "quantity": 500, "unit": "g" }, { "id": "black-beans", "quantity": 400, "unit": "g" },
+      { "id": "sweetcorn", "quantity": 285, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "polenta", "quantity": 150, "unit": "g", "note": "fine cornmeal" }, { "id": "baking-powder", "quantity": 10, "unit": "g" },
+      { "id": "sugar", "quantity": 20, "unit": "g" }, { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "milk", "quantity": 250, "unit": "ml" }, { "id": "cheddar", "quantity": 60, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Make the sauce: heat {2 tbsp} of the oil with {15 g} of the flour and the paprika in a wide pan for 1 minute until bubbling. Whisk in the tomato paste, cumin, oregano, chili, garlic powder and {400 ml} water and simmer until slightly thick.", "tip": "Leave out the chili flakes for a mild, child-friendly version." },
+      { "text": "Add the chicken, cut into chunks, cover and simmer on low for 25 minutes. Shred it in the sauce with two forks.", "tip": "Cooking the chicken in the sauce makes it very tender." },
+      "Stir in the drained beans and sweetcorn and half the salt, and pour into a 20 x 30 cm baking dish. Heat the oven to 210 °C.",
+      { "text": "Make the cornbread: mix the polenta, the rest of the flour, the baking powder, sugar and the rest of the salt. Whisk the egg with the milk and the rest of the oil and stir it in just until combined. Fold in the grated cheese.", "tip": "Stir as little as possible: lumpy batter bakes fluffier." },
+      { "text": "Spread the batter over the filling and bake for 25 minutes until golden on top and bubbling at the edges.", "tip": "It keeps 3 days and freezes well in portions." }
+    ],
+    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["wide pan", "20 x 30 cm baking dish", "bowl"], "illustration": "🌽"
+  },
+  {
+    "id": "pork-lettuce-wraps", "title": "Ginger pork lettuce wraps with rice",
+    "description": "Minced pork with ginger, garlic and a sweet soy sauce, spooned with rice, carrot and crunchy kohlrabi into crisp lettuce leaves. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "rice", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "pork-mince", "quantity": 500, "unit": "g" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "ginger", "quantity": 20, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" }, { "id": "vinegar", "quantity": 30, "unit": "ml" },
+      { "id": "sugar", "quantity": 25, "unit": "g" }, { "id": "sesame-oil", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 1, "unit": "pinch" }, { "id": "kohlrabi", "quantity": 150, "unit": "g" },
+      { "id": "lettuce", "quantity": 1, "unit": "piece", "note": "iceberg" }, { "id": "rice", "quantity": 250, "unit": "g" },
+      { "id": "carrot", "quantity": 2, "unit": "piece" }, { "id": "spring-onion", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {450 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Brown the pork in the oil in a large pan for 6 minutes, breaking it up. Pour off any extra fat.",
+      "Add the grated garlic and ginger and cook for 2 minutes.",
+      { "text": "Stir in the soy sauce, vinegar, sugar, sesame oil and chili, then the finely diced kohlrabi, and cook for 2 minutes.", "tip": "Raw kohlrabi stays crunchy, like the water chestnuts in the original." },
+      { "text": "Separate the lettuce leaves. Grate the carrots and slice the spring onions.", "tip": "Iceberg gives the best crunch and makes sturdy little cups." },
+      "Put everything on the table and let everyone fill their own leaves with rice, pork, carrot and spring onion."
+    ],
+    "tags": ["high-protein", "quick", "kid-friendly"], "keepsDays": 2, "equipment": ["pot", "large frying pan", "grater"], "illustration": "🥬"
+  },
+  {
+    "id": "pineapple-prawn-fried-rice", "title": "Pineapple fried rice with prawns",
+    "description": "Day-old rice fried with egg, peas, pineapple and prawns in a sweet, salty soy sauce. A great way to use up cooked rice. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "thai", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "rice", "quantity": 300, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "shrimp", "quantity": 300, "unit": "g", "note": "raw, peeled" }, { "id": "peas", "quantity": 150, "unit": "g", "note": "frozen" },
+      { "id": "pineapple", "quantity": 300, "unit": "g", "note": "fresh or canned, drained" }, { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" },
+      { "id": "sugar", "quantity": 5, "unit": "g" }, { "id": "chili-flakes", "quantity": 1, "unit": "pinch" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }, { "id": "spring-onion", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Cook the rice the day before if you can: rinse it, cook it in {550 ml} water with the lid on for 12 minutes, spread it out to cool and keep it in the fridge.", "tip": "Cold, day-old rice stays in separate grains. Fresh rice turns mushy." },
+      "Heat half the oil in a wok or large pan on high and fry the prawns for 2 minutes until pink. Lift them out.",
+      "Add the rest of the oil and the chopped garlic, then the beaten eggs, and scramble them softly.",
+      "Add the peas and the pineapple, cut into small pieces, and stir-fry for 2 minutes.",
+      { "text": "Add the rice and the soy sauce mixed with the sugar and chili, and fry for 5 minutes until hot through. Put the prawns back.", "tip": "Press the rice against the hot pan and let it sit for a minute now and then for crispy bits." },
+      "Drizzle with sesame oil and scatter with spring onion."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🍍"
+  },
+  {
+    "id": "white-beans-spinach-bacon", "title": "White beans with spinach and crispy bacon",
+    "description": "Creamy white beans simmered in a reduced stock with bacon fat and onion, with wilted spinach and crispy bacon on top. Serve with bread. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "stew", "servings": 4, "prepMinutes": 10, "cookMinutes": 75,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "white-beans", "quantity": 300, "unit": "g", "note": "dried" }, { "id": "bacon", "quantity": 120, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "stock-cubes", "quantity": 5, "unit": "g" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "spinach", "quantity": 250, "unit": "g" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "The evening before, soak the beans in plenty of cold water. Drain, cover with fresh water and simmer for 50 to 60 minutes until soft. Drain.", "tip": "In a hurry? Use 2 cans of white beans instead and skip this step." },
+      "Fry the chopped bacon in a large pan until crisp. Lift it out onto kitchen paper.",
+      "Leave about {2 tbsp} of the fat in the pan and soften the chopped onion and garlic for 5 minutes.",
+      { "text": "Dissolve the stock cube in {300 ml} hot water. Add it with the beans and simmer for 10 minutes until the liquid has halved and turned creamy.", "tip": "Crush a few beans against the pan to thicken the sauce." },
+      "Stir in the spinach until wilted, season with pepper and scatter the bacon on top. Serve with bread for dipping."
+    ],
+    "tags": ["high-protein", "comfort"], "keepsDays": 3, "equipment": ["pot", "large frying pan"], "illustration": "🫘"
+  },
+  {
+    "id": "apricot-walnut-oat-bars", "title": "Apricot walnut oat bars",
+    "description": "Chewy oat bars held together with mashed banana, with dried apricots and walnuts. No butter or oil and very little sugar. Inspired by Budget Bytes by Beth Moncel.",
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "baking", "servings": 9, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "banana", "quantity": 3, "unit": "piece", "note": "ripe" }, { "id": "vanilla-sugar", "quantity": 8, "unit": "g" },
+      { "id": "sugar", "quantity": 25, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "dried-apricots", "quantity": 60, "unit": "g" }, { "id": "walnuts", "quantity": 40, "unit": "g" },
+      { "id": "oats", "quantity": 180, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C and line a 20 x 20 cm dish with baking paper.",
+      "Mash the bananas well and mix in the vanilla sugar, sugar and salt.",
+      { "text": "Stir in the chopped apricots and walnuts, then the oats.", "tip": "Any dried fruit or nuts work: raisins, figs, hazelnuts." },
+      { "text": "Press the mix firmly and evenly into the dish and bake for 30 minutes until golden at the edges.", "tip": "Press hard with the back of a spoon so the bars hold together." },
+      { "text": "Cool completely, then cut into 9 bars.", "tip": "They keep 4 days in a box and freeze well." }
+    ],
+    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["20 x 20 cm dish", "baking paper", "bowl"], "illustration": "🍪"
+  }
+]

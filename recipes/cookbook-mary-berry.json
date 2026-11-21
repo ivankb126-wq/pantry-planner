@@ -1,0 +1,271 @@
+[
+  {
+    "id": "victoria-sponge", "title": "Victoria sponge with jam and cream",
+    "description": "The classic British cake: two light, all-in-one butter sponges sandwiched with strawberry jam and whipped cream, sugar on top. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 10, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "butter", "quantity": 225, "unit": "g", "note": "soft" }, { "id": "sugar", "quantity": 235, "unit": "g" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "flour", "quantity": 225, "unit": "g" },
+      { "id": "baking-powder", "quantity": 14, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "jam", "quantity": 80, "unit": "g", "note": "strawberry" }, { "id": "whipping-cream", "quantity": 150, "unit": "ml" }
+    ],
+    "steps": [
+      "Heat the oven to 175 °C. Grease two 20 cm round tins and line the bases with baking paper.",
+      { "text": "Put the soft butter, {225 g} of the sugar, the eggs, flour, baking powder and salt in a big bowl and beat for 2 minutes until smooth and light.", "tip": "All in one go: no creaming and no separate steps. Soft butter is the key." },
+      "Divide evenly between the tins and smooth the tops.",
+      { "text": "Bake for 25 minutes until golden and springy when pressed, and a toothpick comes out clean.", "tip": "Do not open the oven in the first 20 minutes, or the sponges can sink." },
+      "Cool for 5 minutes in the tins, then turn out onto a rack and cool completely.",
+      { "text": "Spread one sponge with jam and the softly whipped cream, put the other on top and sprinkle with the rest of the sugar.", "tip": "Fill it only when completely cold, or the cream melts. Keep it in the fridge once filled." }
+    ],
+    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🍰"
+  },
+  {
+    "id": "walnut-sponge-cake", "title": "Walnut sponge cake with buttercream",
+    "description": "A tender butter sponge full of chopped walnuts, sandwiched and topped with a soft vanilla buttercream and walnut halves. Inspired by the coffee and walnut cake in Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 8, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "butter", "quantity": 190, "unit": "g", "note": "soft" }, { "id": "sugar", "quantity": 115, "unit": "g" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "flour", "quantity": 115, "unit": "g" },
+      { "id": "baking-powder", "quantity": 8, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "walnuts", "quantity": 70, "unit": "g" }, { "id": "milk", "quantity": 30, "unit": "ml" },
+      { "id": "powdered-sugar", "quantity": 225, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 8, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 175 °C. Grease two 20 cm round tins and line the bases with baking paper.",
+      { "text": "Beat {115 g} of the butter with the sugar, eggs, flour, baking powder, salt and {1 tbsp} of the milk until smooth. Fold in {55 g} of the walnuts, chopped.", "tip": "A spoon of strong coffee instead of the milk gives the classic coffee and walnut cake." },
+      { "text": "Divide between the tins and bake for 20 to 25 minutes until springy and golden. Cool on a rack.", "tip": "A toothpick in the middle should come out clean." },
+      "Beat the rest of the butter with the powdered sugar, vanilla sugar and the rest of the milk until pale and fluffy.",
+      { "text": "Sandwich the cakes with half the buttercream, spread the rest on top and decorate with the walnut halves.", "tip": "It keeps 3 days in a tin." }
+    ],
+    "tags": ["vegetarian", "festive"], "keepsDays": 3, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🌰"
+  },
+  {
+    "id": "sticky-honey-gingerbread", "title": "Sticky honey gingerbread",
+    "description": "A dark, moist gingerbread traybake made with honey, brown sugar, butter and plenty of ground ginger. Even better after a day or two. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert", "snack"], "cuisine": "everyday", "family": "baking", "servings": 16, "prepMinutes": 15, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "butter", "quantity": 225, "unit": "g" }, { "id": "sugar", "quantity": 150, "unit": "g", "note": "brown if you have it" },
+      { "id": "honey", "quantity": 20, "unit": "tbsp", "note": "about 300 g, dark if you can" }, { "id": "flour", "quantity": 225, "unit": "g" },
+      { "id": "wholemeal-flour", "quantity": 225, "unit": "g" }, { "id": "baking-powder", "quantity": 12, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "ground-ginger", "quantity": 4, "unit": "tsp" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "milk", "quantity": 300, "unit": "ml" }
+    ],
+    "steps": [
+      "Heat the oven to 165 °C and line a tin about 23 x 33 cm with baking paper.",
+      { "text": "Warm the butter, sugar and honey in a pot on low until melted and smooth. Do not let it boil. Cool for 5 minutes.", "tip": "The original uses golden syrup and black treacle. Dark honey gives a similar sticky depth." },
+      "Mix both flours, the baking powder, salt, ginger and cinnamon in a big bowl.",
+      { "text": "Whisk the eggs into the milk. Pour the warm honey mix and the milk mix into the flour and whisk until smooth. It will be runny.", "tip": "A thin batter is right: it bakes into a moist, sticky cake." },
+      { "text": "Pour into the tin and bake for 45 to 50 minutes until risen and firm to the touch.", "tip": "Check with a toothpick: it should come out clean." },
+      { "text": "Cool in the tin, then cut into 16 squares.", "tip": "Wrapped in foil it keeps a week and gets stickier every day." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 7, "equipment": ["23 x 33 cm tin", "pot", "big bowl", "whisk"], "illustration": "🍯"
+  },
+  {
+    "id": "iced-chocolate-traybake", "title": "Iced chocolate traybake",
+    "description": "A soft all-in-one cocoa sponge baked in a tray and covered with a glossy dark chocolate icing. Easy to cut into squares for a crowd. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 16, "prepMinutes": 20, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "cocoa", "quantity": 4, "unit": "tbsp" }, { "id": "butter", "quantity": 225, "unit": "g", "note": "soft" },
+      { "id": "sugar", "quantity": 225, "unit": "g" }, { "id": "flour", "quantity": 225, "unit": "g" },
+      { "id": "baking-powder", "quantity": 12, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "milk", "quantity": 15, "unit": "ml" },
+      { "id": "jam", "quantity": 60, "unit": "g", "note": "apricot" }, { "id": "dark-chocolate", "quantity": 150, "unit": "g" },
+      { "id": "powdered-sugar", "quantity": 250, "unit": "g" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      "Heat the oven to 175 °C and line a tin about 23 x 33 cm with baking paper.",
+      { "text": "Mix the cocoa with {4 tbsp} boiling water into a paste. Add the butter, sugar, flour, baking powder, salt, eggs and milk and beat for 2 minutes until smooth.", "tip": "Mixing the cocoa with boiling water first deepens the chocolate flavour." },
+      { "text": "Spread in the tin and bake for 35 to 40 minutes until springy and a toothpick comes out clean. Cool in the tin.", "tip": "Do not open the oven in the first 25 minutes." },
+      "Warm the jam and brush it thinly over the cold cake.",
+      { "text": "Melt the chocolate with {6 tbsp} water in a bowl over simmering water. Take off the heat and beat in the powdered sugar and oil until glossy. Pour over the cake and spread.", "tip": "The jam layer keeps the icing smooth and the sponge moist." },
+      { "text": "Leave to set, then cut into 16 squares.", "tip": "It keeps 4 days in a tin and freezes well." }
+    ],
+    "tags": ["vegetarian", "festive", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["23 x 33 cm tin", "mixer or whisk", "heatproof bowl", "pot"], "illustration": "🍫"
+  },
+  {
+    "id": "best-shortbread", "title": "Butter shortbread fingers",
+    "description": "Rich, crumbly shortbread of butter, flour, sugar and a little semolina for crunch, baked slowly and pale, cut into fingers. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert", "snack"], "cuisine": "everyday", "family": "baking", "servings": 15, "prepMinutes": 15, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "flour", "quantity": 225, "unit": "g" }, { "id": "semolina", "quantity": 115, "unit": "g" },
+      { "id": "butter", "quantity": 225, "unit": "g", "note": "soft, salted" }, { "id": "sugar", "quantity": 140, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 160 °C and grease a tin about 23 x 33 cm.",
+      { "text": "Rub the soft butter into the flour, semolina and {115 g} of the sugar with your fingertips, then press it together into a dough. Do not knead it much.", "tip": "The semolina gives a lovely crunch. Less handling means more crumbly shortbread." },
+      "Press it evenly into the tin with your knuckles and smooth the top. Prick all over with a fork.",
+      { "text": "Bake for 45 to 50 minutes until a very pale gold.", "tip": "Low and slow: it should stay pale, not brown." },
+      { "text": "Sprinkle with the rest of the sugar while warm and mark into 30 fingers. Cool in the tin, then cut through.", "tip": "Cut while warm: it breaks if you wait until it is cold. Keeps 2 weeks in a tin." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 14, "equipment": ["23 x 33 cm tin"], "illustration": "🍪"
+  },
+  {
+    "id": "double-chocolate-cookies", "title": "Double chocolate cookies",
+    "description": "Fudgy cookies made with melted dark chocolate and condensed milk, studded with chocolate drops. Chewy in the middle. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert", "snack"], "cuisine": "everyday", "family": "baking", "servings": 16, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "dark-chocolate", "quantity": 180, "unit": "g" }, { "id": "butter", "quantity": 55, "unit": "g" },
+      { "id": "condensed-milk", "quantity": 397, "unit": "g" }, { "id": "flour", "quantity": 225, "unit": "g" },
+      { "id": "baking-powder", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "chocolate-chips", "quantity": 100, "unit": "g", "note": "white or dark" }
+    ],
+    "steps": [
+      "Heat the oven to 175 °C and line two trays with baking paper.",
+      { "text": "Melt the dark chocolate and butter together in a bowl over simmering water. Take off the heat and stir in the condensed milk.", "tip": "Gentle heat: chocolate burns easily." },
+      "Stir in the flour, baking powder and salt, then the chocolate drops. Chill for 30 minutes until firm enough to roll.",
+      { "text": "Roll into 32 walnut-size balls and space them well apart on the trays. Flatten slightly with a fork.", "tip": "They spread, so leave room." },
+      { "text": "Bake for 12 to 15 minutes until the edges are firm. They will still feel soft in the middle.", "tip": "Take them out while soft: they firm up as they cool and stay chewy." },
+      "Cool on the trays for 5 minutes, then on a rack."
+    ],
+    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 5, "equipment": ["2 baking trays", "heatproof bowl", "pot"], "illustration": "🍪"
+  },
+  {
+    "id": "anzac-biscuits", "title": "Anzac oat and coconut biscuits",
+    "description": "Chewy, golden biscuits of oats and coconut bound with melted butter and honey. Simple, cheap and keep well in a tin. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["snack", "dessert"], "cuisine": "everyday", "family": "baking", "servings": 16, "prepMinutes": 10, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "butter", "quantity": 150, "unit": "g" }, { "id": "honey", "quantity": 1.5, "unit": "tbsp" },
+      { "id": "sugar", "quantity": 175, "unit": "g" }, { "id": "flour", "quantity": 75, "unit": "g" },
+      { "id": "baking-soda", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "coconut-flakes", "quantity": 75, "unit": "g" }, { "id": "oats", "quantity": 115, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 175 °C and line two trays with baking paper.",
+      { "text": "Melt the butter with the honey in a pot. Stir in the baking soda dissolved in {1 tbsp} hot water: it will foam.", "tip": "The foam is what gives Anzacs their light, crisp edge." },
+      "Mix the sugar, flour, salt, coconut and oats in a bowl and stir in the warm butter mix.",
+      { "text": "Put teaspoons of the mix on the trays, well apart, and flatten slightly.", "tip": "They spread a lot." },
+      { "text": "Bake for 8 to 10 minutes until golden at the edges. Cool on the trays for a few minutes, then on a rack.", "tip": "They keep a week in a tin. Two make one snack." }
+    ],
+    "tags": ["vegetarian", "batch", "make-ahead", "kid-friendly"], "keepsDays": 7, "equipment": ["2 baking trays", "pot", "bowl"], "illustration": "🍪"
+  },
+  {
+    "id": "classic-scones", "title": "Scones with jam and cream",
+    "description": "Tall, light scones made in minutes with very little handling, served warm with jam and whipped cream. A real British tea. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert", "breakfast"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "flour", "quantity": 450, "unit": "g" }, { "id": "baking-powder", "quantity": 25, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "butter", "quantity": 75, "unit": "g", "note": "soft" },
+      { "id": "sugar", "quantity": 55, "unit": "g" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "milk", "quantity": 225, "unit": "ml" }, { "id": "jam", "quantity": 150, "unit": "g" },
+      { "id": "whipping-cream", "quantity": 200, "unit": "ml" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C and lightly flour two baking trays.",
+      { "text": "Rub the butter into the flour, baking powder and salt with your fingertips until it looks like breadcrumbs. Stir in the sugar.", "tip": "Work quickly and lightly: warm hands make heavy scones." },
+      { "text": "Beat the eggs with the milk, keep {2 tbsp} aside for glazing, and stir the rest into the flour with a knife to make a soft, slightly sticky dough.", "tip": "Stop as soon as it comes together." },
+      { "text": "Pat it out on a floured surface to about 2 cm thick and cut rounds with a 5 cm cutter or glass. Press, do not twist.", "tip": "Twisting the cutter seals the edges and stops the scones rising tall." },
+      "Put them on the trays, brush the tops with the kept egg and bake for 10 to 15 minutes until risen and golden.",
+      "Cool a little on a rack, split and serve with jam and whipped cream."
+    ],
+    "tags": ["vegetarian", "freezer-friendly", "festive"], "keepsDays": 2, "equipment": ["2 baking trays", "bowl", "round cutter or glass"], "illustration": "🫓"
+  },
+  {
+    "id": "kefir-soda-bread", "title": "Kefir soda bread",
+    "description": "A crusty round loaf raised with baking soda and kefir, no yeast and no rising time. From flour to oven in 10 minutes. Inspired by the Irish soda bread in Mary Berry's Baking Bible.",
+    "mealTypes": ["breakfast", "snack"], "cuisine": "everyday", "family": "bread", "servings": 8, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "none",
+    "ingredients": [
+      { "id": "flour", "quantity": 450, "unit": "g" }, { "id": "baking-soda", "quantity": 5, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "kefir", "quantity": 350, "unit": "ml" }
+    ],
+    "steps": [
+      "Heat the oven to 200 °C and dust a baking tray with flour.",
+      { "text": "Mix the flour, baking soda and salt in a bowl. Pour in the kefir and mix with a knife into a soft, slightly sticky dough. Add a splash of water if it is dry.", "tip": "Kefir works just like buttermilk: its acid reacts with the soda to lift the bread." },
+      { "text": "Shape lightly into a round about 5 cm high on the tray. Cut a deep cross in the top.", "tip": "Be quick and gentle: the soda starts working as soon as it meets the kefir." },
+      { "text": "Bake for 30 to 35 minutes until golden and it sounds hollow when tapped underneath.", "tip": "Wrap it in a clean towel while it cools for a soft crust." },
+      "Eat warm with butter and jam, or with soup."
+    ],
+    "tags": ["vegetarian", "batch", "freezer-friendly"], "keepsDays": 2, "equipment": ["baking tray", "bowl"], "illustration": "🍞"
+  },
+  {
+    "id": "bread-butter-pudding", "title": "Bread and butter pudding",
+    "description": "Buttered strips of white bread layered with raisins, lemon and spice, soaked in an egg and cream custard and baked golden and crisp on top. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "pudding", "servings": 8, "prepMinutes": 20, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "butter", "quantity": 100, "unit": "g" }, { "id": "raisins", "quantity": 200, "unit": "g" },
+      { "id": "sugar", "quantity": 100, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece", "note": "grated peel" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "bread", "quantity": 300, "unit": "g", "note": "white, a day old" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "milk", "quantity": 300, "unit": "ml" }, { "id": "whipping-cream", "quantity": 150, "unit": "ml" }
+    ],
+    "steps": [
+      "Grease a 2 litre baking dish with a little of the butter. Melt the rest.",
+      { "text": "Mix the raisins, {75 g} of the sugar, the lemon peel, cinnamon and nutmeg.", "tip": "Soak the raisins in a little warm water for 10 minutes first and they turn plump." },
+      { "text": "Cut the crusts off the bread, cut it into strips and dip one side in the melted butter. Layer the strips buttered side up in the dish, scattering the raisin mix between the layers.", "tip": "Finish with a layer of bread on top so it goes crisp." },
+      { "text": "Whisk the eggs, milk and cream and pour it over. Sprinkle with the rest of the sugar and leave for 1 hour so the bread soaks it up.", "tip": "The soaking time is what makes it soft and custardy inside." },
+      "Heat the oven to 175 °C and bake for 40 minutes until puffed, set and golden on top. Serve warm."
+    ],
+    "tags": ["vegetarian", "comfort", "make-ahead"], "keepsDays": 2, "equipment": ["2 litre baking dish", "whisk"], "illustration": "🍮"
+  },
+  {
+    "id": "apple-tarte-tatin", "title": "Apple tarte tatin",
+    "description": "Apples cooked in a dark caramel under a lid of puff pastry, then turned out so the glossy fruit is on top. Impressive but simple. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "fruit", "servings": 6, "prepMinutes": 20, "cookMinutes": 45,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "sugar", "quantity": 175, "unit": "g" }, { "id": "butter", "quantity": 30, "unit": "g" },
+      { "id": "apple", "quantity": 6, "unit": "piece", "note": "firm, slightly sour" }, { "id": "puff-pastry", "quantity": 275, "unit": "g" },
+      { "id": "whipping-cream", "quantity": 100, "unit": "ml" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Peel, core and quarter the apples.",
+      { "text": "Put the sugar and {120 ml} water in a 24 cm ovenproof frying pan and heat, swirling but not stirring, until it turns a deep amber caramel. Stir in the butter.", "tip": "Watch it closely: caramel goes from golden to burnt in seconds. Use oven gloves, it is extremely hot." },
+      { "text": "Pack the apple quarters tightly into the caramel, rounded side down, and cook on low for 5 minutes.", "tip": "Pack them tight: they shrink as they cook." },
+      { "text": "Roll the pastry into a circle a little bigger than the pan, lay it over the apples and tuck the edges down inside. Prick a few times.", "tip": "Let the apples cool for a few minutes first so the pastry does not melt." },
+      "Bake for 30 to 35 minutes until the pastry is risen and deep golden.",
+      { "text": "Rest for 5 minutes, then put a large plate over the pan and carefully turn it over. Serve warm with whipped cream.", "tip": "Turn it while still warm, or the caramel sets and sticks to the pan." }
+    ],
+    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["24 cm ovenproof frying pan", "rolling pin", "large plate"], "illustration": "🍎"
+  },
+  {
+    "id": "jam-swiss-roll", "title": "Jam Swiss roll",
+    "description": "A light whisked sponge baked in ten minutes, rolled up warm around jam. A fat-free sponge and a childhood classic. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 8, "prepMinutes": 20, "cookMinutes": 10,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "sugar", "quantity": 130, "unit": "g" },
+      { "id": "flour", "quantity": 115, "unit": "g" }, { "id": "baking-powder", "quantity": 6, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "jam", "quantity": 120, "unit": "g", "note": "strawberry or raspberry" }
+    ],
+    "steps": [
+      "Heat the oven to 210 °C and line a tin about 23 x 33 cm with baking paper.",
+      { "text": "Whisk the eggs with {115 g} of the sugar for 5 to 8 minutes until pale, thick and tripled in volume.", "tip": "It is ready when the mix leaves a trail on the surface when you lift the whisk." },
+      { "text": "Sift in the flour, baking powder and salt and fold in gently with a big metal spoon.", "tip": "Fold slowly in a figure of eight so you keep all the air." },
+      "Pour into the tin, spread to the corners and bake for 8 to 10 minutes until golden and springy.",
+      { "text": "Sprinkle a sheet of baking paper with the rest of the sugar and turn the sponge out onto it. Peel off the lining paper, spread with warm jam and roll up tightly from a short side.", "tip": "Roll it while hot: a warm sponge bends, a cold one cracks." },
+      "Cool seam side down, then slice."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["23 x 33 cm tin", "mixer or whisk", "baking paper"], "illustration": "🍥"
+  },
+  {
+    "id": "lemon-meringue-pie", "title": "Lemon meringue pie",
+    "description": "Crisp pastry filled with a sharp lemon custard and piled with glossy, golden meringue. A showstopper worth the effort. Inspired by Mary Berry's Baking Bible.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "pie", "servings": 8, "prepMinutes": 40, "cookMinutes": 60,
+    "difficulty": "hard", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "flour", "quantity": 175, "unit": "g" }, { "id": "powdered-sugar", "quantity": 20, "unit": "g" },
+      { "id": "butter", "quantity": 75, "unit": "g", "note": "cold" }, { "id": "eggs", "quantity": 4, "unit": "piece" },
+      { "id": "cornstarch", "quantity": 30, "unit": "g" }, { "id": "lemon", "quantity": 2, "unit": "piece" },
+      { "id": "sugar", "quantity": 230, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Rub the cold butter into the flour and powdered sugar until it looks like breadcrumbs, then mix in one beaten egg to make a dough. Line a 23 cm tart tin and chill for 30 minutes.", "tip": "Cold butter and chilling stop the pastry shrinking in the oven." },
+      { "text": "Heat the oven to 200 °C. Line the pastry with baking paper and dried beans and bake for 15 minutes, then remove the paper and beans and bake for 5 minutes more.", "tip": "Pre-baking keeps the bottom crisp under the wet filling." },
+      { "text": "Separate the other 3 eggs. Mix the cornstarch with {200 ml} water in a pot, add the grated peel and juice of the lemons and stir on medium until very thick. Off the heat, beat in {55 g} of the sugar, then the yolks. Pour into the pastry.", "tip": "Keep stirring all the time or it goes lumpy." },
+      "Turn the oven down to 150 °C.",
+      { "text": "Whisk the whites to stiff peaks, then whisk in the rest of the sugar a spoon at a time until thick and glossy. Spread over the warm filling, right to the edges of the pastry.", "tip": "Sealing the meringue to the pastry edge stops it shrinking and weeping." },
+      { "text": "Bake for 35 to 40 minutes until pale gold and crisp on top. Cool for at least 1 hour before cutting.", "tip": "Best eaten the same day." }
+    ],
+    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["23 cm tart tin", "rolling pin", "pot", "mixer or whisk"], "illustration": "🍋"
+  }
+]

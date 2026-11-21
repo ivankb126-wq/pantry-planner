@@ -1,0 +1,230 @@
+[
+  {
+    "id": "cold-chicken-sichuan-sauce", "title": "Cold chicken in spicy Sichuan sauce with rice",
+    "description": "Poached or leftover chicken torn into strips with spring onion, dressed in a salty, sweet, sour and hot chili oil sauce with sesame. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "salad", "servings": 4, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-breast", "quantity": 600, "unit": "g" }, { "id": "ginger", "quantity": 15, "unit": "g" },
+      { "id": "spring-onion", "quantity": 60, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "sesame", "quantity": 1, "unit": "tbsp" }, { "id": "soy-sauce", "quantity": 4, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 15, "unit": "ml", "note": "dark or balsamic if you have it" }, { "id": "sugar", "quantity": 10, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 5, "unit": "tbsp" }, { "id": "chili-flakes", "quantity": 2, "unit": "tsp" },
+      { "id": "sesame-oil", "quantity": 2, "unit": "tsp" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Put the chicken in a pot with the sliced ginger and the white parts of the spring onions, cover with cold water, bring to a simmer and cook gently for 15 minutes. Cool in the water, then tear into strips.", "tip": "Leftover roast chicken or turkey is perfect here instead." },
+      { "text": "Make a quick chili oil: heat the sunflower oil until hot, pour it over the chili flakes in a heatproof bowl and let it cool.", "tip": "It should sizzle gently. Too hot and the chili burns and tastes bitter." },
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Toast the sesame seeds in a dry pan until golden.",
+      { "text": "Mix the soy sauce, vinegar, sugar, sesame oil, chili oil and {2 tbsp} of the chicken water into a sauce.", "tip": "Taste it like a salad dressing: salty, sweet, sour and hot should all be there." },
+      "Mix the chicken with the sliced spring onion greens and salt, pour the sauce over just before eating and scatter with sesame. Serve with the rice and cucumber slices."
+    ],
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["pot", "heatproof bowl", "frying pan"], "illustration": "🥢"
+  },
+  {
+    "id": "braised-pork-potatoes-chinese", "title": "Chinese braised pork with potatoes",
+    "description": "Chunks of pork simmered for an hour in a red, gently spicy broth with ginger and spring onion, then potatoes added to soak it all up. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "stew", "servings": 4, "prepMinutes": 15, "cookMinutes": 90,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "pork-neck", "quantity": 700, "unit": "g" }, { "id": "spring-onion", "quantity": 40, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "chili-sauce", "quantity": 30, "unit": "ml" },
+      { "id": "tomato-paste", "quantity": 20, "unit": "g" }, { "id": "paprika-powder", "quantity": 1, "unit": "tsp" },
+      { "id": "ginger", "quantity": 25, "unit": "g" }, { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" },
+      { "id": "white-wine", "quantity": 30, "unit": "ml" }, { "id": "potato", "quantity": 600, "unit": "g" },
+      { "id": "rice", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Cut the pork into 3 cm chunks and blanch them in boiling water for 2 minutes. Drain and rinse.", "tip": "Blanching first gives a cleaner, clearer sauce." },
+      { "text": "Heat the oil in a pot on medium and fry the chili sauce, tomato paste and paprika for 1 minute until the oil turns red. Add the sliced ginger and crushed spring onion whites.", "tip": "This stands in for Sichuan chili bean paste. Use 2.5 tbsp of that if you find it, and less soy." },
+      "Add the pork, soy sauce, wine and {900 ml} water. Bring to the boil, then simmer partly covered for 1 hour.",
+      { "text": "Add the potatoes, peeled and cut into chunks, and simmer for 20 minutes more until tender.", "tip": "The potatoes go in late so they stay whole and soak up the red broth." },
+      "Meanwhile cook the rice. Taste the stew before adding any salt, scatter with spring onion greens and serve with the rice."
+    ],
+    "tags": ["high-protein", "comfort", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["pot with a lid", "pot"], "illustration": "🥘"
+  },
+  {
+    "id": "cumin-beef-stir-fry", "title": "Cumin beef stir-fry with peppers",
+    "description": "Thin slices of beef stir-fried with peppers, ginger, garlic, lots of cumin and chili, like a Xinjiang street kebab. Every ingredient is easy to find. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "beef", "quantity": 500, "unit": "g", "note": "tender steak" }, { "id": "white-wine", "quantity": 10, "unit": "ml" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "soy-sauce", "quantity": 1, "unit": "tbsp" },
+      { "id": "cornstarch", "quantity": 1, "unit": "tbsp" }, { "id": "bell-pepper", "quantity": 2, "unit": "piece", "note": "red and green" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "ginger", "quantity": 15, "unit": "g" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "cumin", "quantity": 1, "unit": "tbsp" },
+      { "id": "chili-flakes", "quantity": 1, "unit": "tsp" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Slice the beef very thinly and mix with the wine, salt, soy sauce, cornstarch and {2 tbsp} water.", "tip": "Freeze the beef for 20 minutes first and it slices much more thinly." },
+      "Cut the peppers into bite-size diamonds.",
+      { "text": "Heat {3 tbsp} of the oil in a wok until very hot. Stir-fry the beef just until the slices separate and are still a little pink. Lift it out.", "tip": "Very hot and fast keeps the beef tender." },
+      "Add the rest of the oil, the chopped ginger and garlic and the peppers and stir-fry for 2 minutes. Put the beef back and add the cumin and chili.",
+      { "text": "When it smells toasty, toss in the spring onion and, off the heat, the sesame oil. Serve with the rice.", "tip": "Adjust the chili to taste: half the amount is still lively." }
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🌶️"
+  },
+  {
+    "id": "gong-bao-chicken", "title": "Gong bao chicken with peanuts",
+    "description": "The real takeaway favourite: chicken stir-fried with toasted chili, garlic, ginger and spring onion in a sweet-sour sauce, with peanuts. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-breast", "quantity": 600, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "white-wine", "quantity": 10, "unit": "ml" },
+      { "id": "cornstarch", "quantity": 1.5, "unit": "tbsp" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "ginger", "quantity": 15, "unit": "g" }, { "id": "spring-onion", "quantity": 60, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 1, "unit": "tsp", "note": "or 10 dried chilies" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "peanuts", "quantity": 100, "unit": "g", "note": "roasted, unsalted" }, { "id": "sugar", "quantity": 25, "unit": "g" },
+      { "id": "vinegar", "quantity": 25, "unit": "ml", "note": "dark or balsamic if you have it" }, { "id": "sesame-oil", "quantity": 1, "unit": "tsp" },
+      { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Cut the chicken into 1.5 cm cubes and mix with the salt, {2 tsp} of the soy sauce, the wine, {2 tsp} of the cornstarch and {1 tbsp} water.",
+      "Slice the garlic and ginger and cut the spring onions into short pieces. In a cup, mix the sugar, vinegar, the rest of the soy sauce and cornstarch, the sesame oil and {2 tbsp} water.",
+      { "text": "Heat the oil in a wok on high and sizzle the chili for a few seconds until fragrant and darker but not burnt.", "tip": "Have everything ready next to the wok: from here it takes 3 minutes. A pinch of Sichuan pepper here gives the famous tingle." },
+      "Add the chicken at once and stir-fry until the cubes separate, then add the garlic, ginger and spring onion and cook until the chicken is just done.",
+      { "text": "Stir the sauce, pour it in and toss until thick and shiny. Stir in the peanuts and serve with the rice.", "tip": "The sauce should taste like a balance of sweet and sour, called lychee flavour in Sichuan." }
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🥜"
+  },
+  {
+    "id": "steamed-fish-ginger-spring-onion", "title": "Steamed sea bass with ginger and spring onion",
+    "description": "A whole brancin steamed simply, then covered with slivers of ginger and spring onion and sizzled with hot oil and soy. Minimal fuss, very fresh. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 2, "prepMinutes": 20, "cookMinutes": 15,
+    "difficulty": "medium", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "spring-onion", "quantity": 60, "unit": "g" }, { "id": "ginger", "quantity": 50, "unit": "g" },
+      { "id": "sea-bream", "quantity": 700, "unit": "g", "note": "one whole brancin or orada, cleaned" }, { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "white-wine", "quantity": 15, "unit": "ml" }, { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "rice", "quantity": 140, "unit": "g" },
+      { "id": "broccoli", "quantity": 0.5, "unit": "piece" }
+    ],
+    "steps": [
+      "Cut most of the spring onions and the peeled ginger into fine long slivers. Keep the ginger peel and one spring onion for the fish.",
+      { "text": "Make 3 slanted cuts on each side of the fish, rub with the salt and wine, stuff the belly with the ginger peel and the kept spring onion and leave for 10 minutes.", "tip": "The cuts let the heat and flavour reach the middle." },
+      { "text": "Start the rice: rinse it, put it in a pot with {250 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Lay the fish on a heatproof plate and steam on high for 10 to 12 minutes, until the flesh lifts easily from the bone behind the head. Steam the broccoli alongside.", "tip": "No steamer? Use a rack in a wide covered pan with a little boiling water, or bake in a roasting tin sealed with foil at 200 °C." },
+      "Move the fish to a clean plate, throw away the juices and pile the ginger and spring onion slivers on top.",
+      { "text": "Heat the oil until smoking and pour it over so it sizzles, then pour the soy sauce mixed with {2 tbsp} hot water around the fish. Serve with the rice and broccoli.", "tip": "Careful: the hot oil spits. The sizzle releases all the perfume." }
+    ],
+    "tags": ["high-protein", "light", "festive"], "keepsDays": 1, "equipment": ["steamer or wide pan with a lid", "pot", "small pan"], "illustration": "🐟"
+  },
+  {
+    "id": "hangzhou-eggplant-pork", "title": "Silky eggplant with pork mince and sweet bean sauce",
+    "description": "Eggplant sticks roasted until silky, then glazed with a little stir-fried pork mince, ginger and a sweet, savoury sauce. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "rice", "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "eggplant", "quantity": 3, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 5, "unit": "tbsp" }, { "id": "pork-mince", "quantity": 300, "unit": "g" },
+      { "id": "ginger", "quantity": 15, "unit": "g" }, { "id": "hoisin-sauce", "quantity": 45, "unit": "ml" },
+      { "id": "white-wine", "quantity": 15, "unit": "ml" }, { "id": "soy-sauce", "quantity": 1, "unit": "tbsp" },
+      { "id": "sugar", "quantity": 5, "unit": "g" }, { "id": "cornstarch", "quantity": 1, "unit": "tsp" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 220 °C. Cut the eggplants into sticks about 2 cm thick and 6 cm long, toss with the salt and {4 tbsp} of the oil and roast on two trays for 25 minutes until golden and soft.", "tip": "Roasting instead of deep-frying, as the book allows, uses far less oil." },
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Stir-fry the pork in the rest of the oil in a wok until no longer pink. Add the chopped ginger, then the hoisin sauce, for 1 minute.",
+      { "text": "Add the wine, soy sauce, sugar and {100 ml} water, then the eggplant, and toss gently.", "tip": "Hoisin stands in for the Chinese sweet bean sauce in the original." },
+      "Mix the cornstarch with {2 tsp} water, stir it in to thicken the sauce, scatter with spring onion and serve with the rice."
+    ],
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "wok or large frying pan"], "illustration": "🍆"
+  },
+  {
+    "id": "green-pepper-pork-stir-fry", "title": "Stir-fried pork slivers with green peppers",
+    "description": "One of the most common Chinese suppers: silky slivers of pork with smoky dry-fried green peppers in a little sweet bean sauce and soy. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "pork-loin", "quantity": 500, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "white-wine", "quantity": 5, "unit": "ml" }, { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" },
+      { "id": "cornstarch", "quantity": 1, "unit": "tbsp" }, { "id": "eggs", "quantity": 1, "unit": "piece", "note": "white only" },
+      { "id": "bell-pepper", "quantity": 3, "unit": "piece", "note": "green, or babura" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "hoisin-sauce", "quantity": 15, "unit": "ml" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Cut the pork into fine slivers and mix with the salt, wine, {1 tsp} of the soy sauce, the cornstarch and the egg white.", "tip": "Egg white and starch keep the pork silky, the restaurant way." },
+      { "text": "Cut the peppers into matching slivers and dry-fry them in a hot wok with no oil for 3 minutes until supple and a little charred. Set aside.", "tip": "The dry-frying gives a slightly smoky taste." },
+      "Heat the oil in the wok and stir-fry the pork until the slivers separate and turn pale.",
+      "Add the hoisin sauce for a few seconds, then the peppers and the rest of the soy sauce, and toss together. Serve with the rice."
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🫑"
+  },
+  {
+    "id": "zhajiang-noodles", "title": "Zhajiang noodles with pork sauce and crunchy vegetables",
+    "description": "A rich, salty-sweet pork sauce over noodles with cool slivers of cucumber, carrot and cabbage, mixed at the table. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "noodles", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "pork-mince", "quantity": 400, "unit": "g" },
+      { "id": "ginger", "quantity": 20, "unit": "g" }, { "id": "white-wine", "quantity": 15, "unit": "ml" },
+      { "id": "hoisin-sauce", "quantity": 120, "unit": "ml" }, { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" },
+      { "id": "noodles", "quantity": 400, "unit": "g", "note": "wheat noodles" }, { "id": "cucumber", "quantity": 1, "unit": "piece" },
+      { "id": "carrot", "quantity": 2, "unit": "piece" }, { "id": "cabbage", "quantity": 200, "unit": "g", "note": "Chinese if you can" },
+      { "id": "peas", "quantity": 150, "unit": "g", "note": "frozen" }, { "id": "spring-onion", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Fry the pork in the oil in a wok, pressing it into small bits, until pale. Add the chopped ginger, the wine and the hoisin sauce and stir for 2 minutes.", "tip": "A star anise warmed in the oil first, then removed, adds the classic aroma." },
+      { "text": "Add the soy sauce and {250 ml} water and simmer for 15 minutes until dark and thick.", "tip": "On its own it should taste a little too salty: it seasons a whole bowl of noodles." },
+      "Meanwhile cut the cucumber, carrots and cabbage into fine slivers. Blanch the carrots, cabbage and peas in boiling water for 1 minute and cool them.",
+      "Cook the noodles as the packet says and drain.",
+      "Put the noodles in bowls, top with the vegetables and a big spoon of sauce, scatter with spring onion and mix at the table."
+    ],
+    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["wok or large frying pan", "big pot"], "illustration": "🍜"
+  },
+  {
+    "id": "dan-dan-noodles", "title": "Dan dan noodles",
+    "description": "Sichuan street noodles in a sour-hot soy and chili oil broth, topped with savoury fried pork mince, crunchy pickles and spring onion. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "noodles", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 6, "unit": "tbsp" }, { "id": "chili-flakes", "quantity": 2, "unit": "tsp" },
+      { "id": "pork-mince", "quantity": 300, "unit": "g" }, { "id": "white-wine", "quantity": 15, "unit": "ml" },
+      { "id": "hoisin-sauce", "quantity": 15, "unit": "ml" }, { "id": "soy-sauce", "quantity": 3, "unit": "tbsp" },
+      { "id": "noodles", "quantity": 400, "unit": "g", "note": "wheat noodles" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "vinegar", "quantity": 20, "unit": "ml", "note": "dark or balsamic if you have it" }, { "id": "spring-onion", "quantity": 60, "unit": "g" },
+      { "id": "pickles", "quantity": 80, "unit": "g", "note": "finely chopped" }, { "id": "spinach", "quantity": 200, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Make a quick chili oil: heat {4 tbsp} of the oil until hot and pour it over the chili flakes in a heatproof bowl. Let it cool.", "tip": "It should sizzle gently, not smoke, or the chili turns bitter." },
+      { "text": "Stir-fry the pork in the rest of the oil on medium until it changes colour. Add the wine, hoisin and {1 tbsp} of the soy sauce and cook until juicy and fragrant.", "tip": "Keep it slightly juicy, not dry." },
+      "Dissolve the stock cubes in {800 ml} hot water.",
+      { "text": "In each bowl put some of the rest of the soy sauce, the vinegar, chili oil, spring onion and chopped pickles.", "tip": "The original uses Sichuan preserved vegetable. Chopped gherkins give a similar salty crunch." },
+      "Cook the noodles, adding the spinach for the last minute. Drain.",
+      "Pour the hot stock into the bowls, add the noodles and spinach, top with the pork and stir well before eating."
+    ],
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "wok or frying pan", "heatproof bowl"], "illustration": "🍜"
+  },
+  {
+    "id": "dry-fried-green-beans-pork", "title": "Sichuan dry-fried green beans with pork",
+    "description": "Green beans blanched until tender, then stir-fried with toasted chili, garlic, ginger and a little pork mince until fragrant. With rice. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "green-beans", "quantity": 700, "unit": "g" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp", "note": "or 5 dried chilies" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "ginger", "quantity": 15, "unit": "g" }, { "id": "pork-mince", "quantity": 300, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "pickles", "quantity": 40, "unit": "g", "note": "finely chopped" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tsp" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Trim the beans, snap them in half and blanch them in salted water with a dash of oil for 4 minutes until just tender. Drain very well.", "tip": "Restaurants deep-fry them until wrinkled. Blanching gives a similar result with far less oil." },
+      "Stir-fry the pork in {1 tbsp} of the oil until crisp and browned, add half the soy sauce and lift it out.",
+      { "text": "Heat the rest of the oil and sizzle the chili for a few seconds, then add the sliced spring onion whites, garlic and ginger.", "tip": "A pinch of Sichuan pepper here gives the true numbing tingle." },
+      "Add the beans, pork, chopped pickles and the rest of the soy sauce and stir-fry for 2 minutes until coated and fragrant.",
+      "Add the salt if needed and the sesame oil, scatter with spring onion greens and serve with the rice."
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "big pot", "wok or large frying pan"], "illustration": "🫛"
+  }
+]

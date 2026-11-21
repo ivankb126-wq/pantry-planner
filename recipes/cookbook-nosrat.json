@@ -1,0 +1,162 @@
+[
+  {
+    "id": "white-bean-kale-soup", "title": "Tuscan white bean, kale and cabbage soup",
+    "description": "A thick soup of white beans, kale and cabbage in a tomato and vegetable base, with bacon and a parmesan rind for depth. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "servings": 6, "prepMinutes": 20, "cookMinutes": 105,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "white-beans", "quantity": 300, "unit": "g", "note": "dried" }, { "id": "olive-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "bacon", "quantity": 60, "unit": "g" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "celeriac", "quantity": 100, "unit": "g" }, { "id": "carrot", "quantity": 3, "unit": "piece" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "parmesan", "quantity": 40, "unit": "g" },
+      { "id": "kale", "quantity": 300, "unit": "g" }, { "id": "cabbage", "quantity": 400, "unit": "g", "note": "savoy if you can" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "The evening before, soak the beans. Drain, cover with fresh water and simmer for 50 to 60 minutes until creamy inside. Keep {500 ml} of their cooking water.", "tip": "Two cans of beans work too. Their cooking water makes the soup silkier than plain water." },
+      "Warm {2 tbsp} of the oil in a big pot and brown the diced bacon for 3 minutes.",
+      { "text": "Add the diced onion, celeriac and carrots and the bay leaves and cook on medium-low for 15 minutes until soft and sweet.", "tip": "This slow start is where most of the flavour comes from." },
+      "Add the sliced garlic for 30 seconds, then the tomatoes, and simmer for 8 minutes until thick.",
+      { "text": "Add the beans, their water, the stock cubes and {1000 ml} water, the parmesan rind if you have one, the thinly sliced kale and cabbage, salt and pepper. Simmer for 20 minutes until the greens are tender.", "tip": "Taste and add more salt at the end: beans need plenty." },
+      "Take out the bay leaves and rind. Serve with grated parmesan, a drizzle of the rest of the oil and bread."
+    ],
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["big pot", "pot"], "illustration": "🥬"
+  },
+  {
+    "id": "kuku-sabzi", "title": "Kuku sabzi (Persian herb and greens frittata)",
+    "description": "A thick frittata packed with buttery leek, chard, parsley and dill and just enough egg to hold it together. Good warm or cold. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["breakfast", "lunch", "dinner"], "cuisine": "middle-eastern", "family": "eggs", "servings": 4, "prepMinutes": 25, "cookMinutes": 45,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "swiss-chard", "quantity": 500, "unit": "g" }, { "id": "leek", "quantity": 1, "unit": "piece" },
+      { "id": "butter", "quantity": 60, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "parsley", "quantity": 60, "unit": "g" },
+      { "id": "dill", "quantity": 2, "unit": "tsp" }, { "id": "eggs", "quantity": 8, "unit": "piece" },
+      { "id": "yogurt", "quantity": 200, "unit": "g" }, { "id": "bread", "quantity": 160, "unit": "g", "note": "or flatbread" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Strip the chard leaves from the stalks.",
+      { "text": "Wilt the leaves in a pan with a splash of water for 4 minutes. Cool, squeeze very dry and chop.", "tip": "Squeeze hard: wet greens make a soggy kuku." },
+      { "text": "Slowly soften the sliced leek and chopped chard stalks in half the butter with a pinch of salt for 15 minutes.", "tip": "Low heat: they should melt, not brown." },
+      { "text": "Mix all the greens with the very finely chopped parsley, the dill, the rest of the salt and the beaten eggs.", "tip": "It should look like greens held together by egg, not egg with some greens in it." },
+      "Heat the rest of the butter with the oil in an ovenproof frying pan, pour in the mix and cook on low for 10 minutes until the bottom is set.",
+      { "text": "Bake for 10 to 12 minutes until the middle is just set. Cut into wedges and serve with yogurt and bread.", "tip": "It keeps 2 days and is lovely cold in a sandwich." }
+    ],
+    "tags": ["vegetarian", "high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["ovenproof frying pan", "frying pan"], "illustration": "🌿"
+  },
+  {
+    "id": "slow-roasted-salmon", "title": "Slow-roasted salmon with salsa verde and potatoes",
+    "description": "Salmon baked very gently on a bed of herbs, so it stays silky and tender, with a sharp parsley, caper and lemon salsa verde and potatoes. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 15, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "parsley", "quantity": 40, "unit": "g" }, { "id": "salmon", "quantity": 600, "unit": "g", "note": "one piece, skinless" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "olive-oil", "quantity": 7, "unit": "tbsp" },
+      { "id": "capers", "quantity": 15, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 3, "unit": "g" }, { "id": "vinegar", "quantity": 10, "unit": "ml" },
+      { "id": "potato", "quantity": 800, "unit": "g" }, { "id": "green-beans", "quantity": 400, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 110 °C. Boil the potatoes in salted water for 20 minutes, adding the green beans for the last 6 minutes.",
+      { "text": "Lay a bed of parsley stalks on a baking tray. Season the salmon on both sides with {1 tsp} of the salt, put it on the herbs and rub it with {1 tbsp} of the oil.", "tip": "Check for little bones with your fingers and pull them out." },
+      { "text": "Bake for 40 to 50 minutes until it flakes in the thickest part when pressed.", "tip": "It will still look slightly translucent and that is right: low heat keeps it juicy." },
+      { "text": "Meanwhile make the salsa verde: chop the parsley leaves very finely and mix with the chopped capers, the lemon peel and juice, the crushed garlic, vinegar, the rest of the salt and the rest of the oil.", "tip": "Add the lemon juice just before serving so the parsley stays bright green." },
+      "Break the salmon into big pieces and serve with the potatoes, beans and salsa verde."
+    ],
+    "tags": ["high-protein", "light"], "keepsDays": 2, "equipment": ["baking tray", "pot"], "illustration": "🐟"
+  },
+  {
+    "id": "chicken-lentil-rice", "title": "Chicken with lentil rice, raisins and dates",
+    "description": "Cumin-seasoned chicken cooked on top of rice with lentils, golden onions, raisins and dates, so the juices soak into the grains. A Persian classic. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "rice", "servings": 6, "prepMinutes": 25, "cookMinutes": 75,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-legs", "quantity": 1500, "unit": "g" }, { "id": "salt", "quantity": 2.5, "unit": "tsp" },
+      { "id": "cumin", "quantity": 4, "unit": "tsp" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "butter", "quantity": 40, "unit": "g" }, { "id": "onion", "quantity": 2, "unit": "piece" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "rice", "quantity": 450, "unit": "g", "note": "basmati" },
+      { "id": "raisins", "quantity": 100, "unit": "g" }, { "id": "dates", "quantity": 80, "unit": "g" },
+      { "id": "lentils", "quantity": 100, "unit": "g", "note": "brown or green" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "yogurt", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Season the chicken with {1.5 tsp} of the salt and {1 tsp} of the cumin, ideally the night before.", "tip": "Seasoning early lets the salt work all the way into the meat." },
+      "Simmer the lentils in water for 20 minutes until just soft and drain.",
+      "Brown the chicken skin side down in the oil in a large pot with a lid, about 8 minutes. Lift it out.",
+      { "text": "Pour off most of the fat, add the butter, the sliced onions, the rest of the cumin and the bay leaves and cook on medium-low for 20 minutes until golden.", "tip": "A pinch of saffron here is the traditional touch." },
+      { "text": "Stir in the rice for 2 minutes, then add the raisins, chopped dates, lentils, the rest of the salt and the stock cubes dissolved in {900 ml} hot water. Lay the chicken on top skin side up.", "tip": "Do not stir once the chicken is on." },
+      { "text": "Cover tightly and cook on the lowest heat for 40 minutes, then rest off the heat with the lid on for 10 minutes. Fluff the rice and serve with yogurt.", "tip": "A crisp golden layer may form on the bottom: that is the best bit, scrape it up." }
+    ],
+    "tags": ["high-protein", "festive", "one-pot"], "keepsDays": 3, "equipment": ["large pot with a lid", "pot"], "illustration": "🍚"
+  },
+  {
+    "id": "chicken-with-vinegar", "title": "Chicken with vinegar, onions and cream",
+    "description": "Floured chicken legs browned and braised with sweet golden onions, white wine and plenty of vinegar, finished with cream. Bright, not sour. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "stew", "servings": 4, "prepMinutes": 20, "cookMinutes": 75,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-legs", "quantity": 1400, "unit": "g" }, { "id": "salt", "quantity": 2, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "flour", "quantity": 60, "unit": "g" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "butter", "quantity": 40, "unit": "g" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "white-wine", "quantity": 175, "unit": "ml" },
+      { "id": "vinegar", "quantity": 90, "unit": "ml", "note": "white wine vinegar" }, { "id": "thyme", "quantity": 1, "unit": "tsp" },
+      { "id": "cooking-cream", "quantity": 125, "unit": "ml" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "potato", "quantity": 800, "unit": "g" }
+    ],
+    "steps": [
+      "Season the chicken with {1.5 tsp} of the salt and the pepper and dust it lightly with the flour.",
+      { "text": "Brown it in the oil in a wide pot for about 4 minutes on each side. Lift it out.", "tip": "Do it in two batches so the pieces brown instead of steaming." },
+      { "text": "Pour off the fat, add the butter and the sliced onions with a pinch of salt and cook on medium-low for 25 minutes until soft and golden.", "tip": "Sweet onions are what balance all that vinegar." },
+      "Add the wine, the vinegar and the thyme and scrape up the brown bits.",
+      { "text": "Put the chicken back skin side up, cover loosely and simmer for 35 to 40 minutes until tender. Meanwhile boil the potatoes.", "tip": "Tarragon is the classic herb here, if you can find it." },
+      "Lift out the chicken, stir the cream into the sauce and let it bubble for 2 minutes. Pour over the chicken, scatter with parsley and serve with the potatoes."
+    ],
+    "tags": ["high-protein", "comfort"], "keepsDays": 3, "equipment": ["wide pot with a lid", "pot"], "illustration": "🍗"
+  },
+  {
+    "id": "kefir-roast-chicken", "title": "Kefir-marinated roast chicken",
+    "description": "A whole chicken soaked overnight in salted kefir, then roasted deep brown. Tender and simple. Inspired by the buttermilk chicken in Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 15, "cookMinutes": 70,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "whole-chicken", "quantity": 1500, "unit": "g" }, { "id": "salt", "quantity": 2, "unit": "tsp" },
+      { "id": "kefir", "quantity": 500, "unit": "ml" }, { "id": "potato", "quantity": 1000, "unit": "g" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "cabbage", "quantity": 400, "unit": "g" },
+      { "id": "vinegar", "quantity": 20, "unit": "ml" }
+    ],
+    "steps": [
+      { "text": "The day before, rub the chicken all over with {1.5 tsp} of the salt. Stir {0.25 tsp} of the salt into the kefir, put the chicken in a large bag or bowl, pour the kefir over, close and chill overnight.", "tip": "Kefir works just like the buttermilk in the original: its gentle acid makes the meat very tender." },
+      "Take the chicken out an hour before cooking. Heat the oven to 220 °C. Wipe off most of the kefir and tie the legs together.",
+      { "text": "Put the chicken in a roasting tin and roast for 20 minutes. Turn the oven down to 200 °C and roast for 40 to 50 minutes more, turning the tin once.", "tip": "The skin browns quickly because of the kefir. Cover loosely with foil if it gets too dark." },
+      "Meanwhile toss the potato chunks with the oil and the rest of the salt on a tray and roast them alongside for 45 minutes.",
+      "Shred the cabbage thinly and mix with the vinegar and a pinch of salt.",
+      { "text": "Check the juices run clear at the thigh, rest the chicken for 10 minutes, then carve and serve with the potatoes and cabbage salad.", "tip": "Leftover meat makes great sandwiches." }
+    ],
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "large bag or bowl"], "illustration": "🍗"
+  },
+  {
+    "id": "sicilian-chicken-salad", "title": "Sicilian chicken salad with raisins and almonds",
+    "description": "Leftover chicken in a garlicky lemon mayonnaise with pickled onion, raisins, toasted almonds, fennel and celeriac, on toast or lettuce. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "salad", "servings": 4, "prepMinutes": 25, "cookMinutes": 5,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "onion", "quantity": 0.5, "unit": "piece", "note": "red if you can" }, { "id": "vinegar", "quantity": 50, "unit": "ml" },
+      { "id": "raisins", "quantity": 60, "unit": "g" }, { "id": "chicken-breast", "quantity": 600, "unit": "g", "note": "or leftover roast chicken" },
+      { "id": "mayonnaise", "quantity": 150, "unit": "g" }, { "id": "garlic", "quantity": 3, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "almonds", "quantity": 50, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "celeriac", "quantity": 80, "unit": "g" },
+      { "id": "fennel", "quantity": 0.5, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "lettuce", "quantity": 1, "unit": "piece" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Poach the chicken: put it in a pot of cold salted water, bring to a simmer, cook gently for 15 minutes and cool in the water. Shred it.", "tip": "Leftover roast chicken is even better. Skip this step." },
+      "Mix the finely diced onion with the vinegar and leave for 15 minutes. Pour boiling water over the raisins and leave for 15 minutes, then drain.",
+      { "text": "Toast the almonds in a dry pan for 4 minutes and chop them roughly.", "tip": "Pine nuts are the Sicilian choice if you have them." },
+      { "text": "Mix the mayonnaise with the crushed garlic and the lemon peel and juice. Fold in the chicken, the drained onion, raisins, almonds, chopped parsley and the finely diced celeriac and fennel.", "tip": "Taste: it should be bright and tangy. Add a splash of the onion vinegar if it needs it." },
+      "Serve in lettuce leaves or on toasted bread."
+    ],
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["pot", "frying pan", "bowl"], "illustration": "🥗"
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "id": "soy-honey-salmon-traybake", "title": "Sticky soy and honey salmon traybake",
+    "description": "Salmon glazed with soy and honey, roasted on broccoli, green beans and peas, with a ginger and lemon dressing. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 5, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "broccoli", "quantity": 1, "unit": "piece" }, { "id": "green-beans", "quantity": 200, "unit": "g" },
+      { "id": "peas", "quantity": 200, "unit": "g", "note": "frozen" }, { "id": "sesame-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "salmon", "quantity": 500, "unit": "g", "note": "4 fillets" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "honey", "quantity": 1, "unit": "tbsp" },
+      { "id": "ginger", "quantity": 20, "unit": "g" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" }, { "id": "peanuts", "quantity": 25, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 200 °C. Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Cut the broccoli into small florets and trim the beans. Toss them with the frozen peas, {1 tbsp} of the sesame oil and the salt in a large roasting tin.",
+      { "text": "Nestle the salmon among the vegetables. Mix {1 tbsp} of the soy sauce, the honey and {0.5 tbsp} of the sesame oil and brush it over the fish.", "tip": "Leave the fish skin side down and uncovered so the glaze turns sticky." },
+      { "text": "Roast for 20 to 25 minutes until the salmon flakes in the thickest part and the greens are tender.", "tip": "Check after 18 minutes: thin fillets cook faster." },
+      "Meanwhile mix the grated ginger, lemon juice, the rest of the soy sauce and the rest of the sesame oil.",
+      "Spoon the dressing over the tin and scatter with sliced spring onion, chopped peanuts and chili. Serve with the rice."
+    ],
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["large roasting tin", "pot"], "illustration": "🐟"
+  },
+  {
+    "id": "leek-mushroom-pasta-bake", "title": "Crispy leek and mushroom pasta bake",
+    "description": "Pasta and soft leeks in sour cream and thyme, topped with raw mushrooms, cheddar and breadcrumbs that roast crisp in the oven. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "pasta", "quantity": 300, "unit": "g", "note": "tagliatelle or penne" }, { "id": "leek", "quantity": 2, "unit": "piece" },
+      { "id": "mushrooms", "quantity": 300, "unit": "g" }, { "id": "sour-cream", "quantity": 400, "unit": "g" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "thyme", "quantity": 1, "unit": "tsp" }, { "id": "cheddar", "quantity": 100, "unit": "g" },
+      { "id": "breadcrumbs", "quantity": 60, "unit": "g" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Slice the leeks into thin half moons and wash them well.",
+      { "text": "Cook the pasta in salted water until just soft, adding the leeks for the last minute. Drain.", "tip": "One pot for both: the leeks soften in the pasta water." },
+      "Mix the pasta and leeks with the sour cream, {1 tbsp} of the oil, the thyme, salt and pepper in a baking dish.",
+      { "text": "Slice the mushrooms and lay them over the top, then scatter with the grated cheddar and breadcrumbs and drizzle with the rest of the oil.", "tip": "The mushrooms go on raw so they roast instead of stewing in the sauce." },
+      "Bake for 15 to 20 minutes until golden and crisp on top."
+    ],
+    "tags": ["vegetarian", "comfort", "kid-friendly"], "keepsDays": 2, "equipment": ["big pot", "baking dish"], "illustration": "🍄"
+  },
+  {
+    "id": "kerala-prawn-curry", "title": "Oven-baked Kerala prawn curry",
+    "description": "Tomatoes, pepper and onion roasted with spices into a curry base, then finished with coconut milk, prawns and spinach. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "tomato", "quantity": 300, "unit": "g", "note": "cherry tomatoes" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece", "note": "green" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "ginger", "quantity": 15, "unit": "g" },
+      { "id": "cumin", "quantity": 1, "unit": "tsp" }, { "id": "curry-powder", "quantity": 2, "unit": "tsp" },
+      { "id": "turmeric", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 1, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "coconut-milk", "quantity": 400, "unit": "ml" },
+      { "id": "shrimp", "quantity": 400, "unit": "g", "note": "raw, peeled" }, { "id": "spinach", "quantity": 125, "unit": "g" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Halve the tomatoes and slice the pepper and onion.",
+      { "text": "Toss them in a roasting tin with the grated ginger, all the spices, the oil and salt. Roast for 20 minutes until the tomatoes collapse and the edges colour.", "tip": "Roasting the spices with the vegetables gives a deep curry flavour without frying." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Stir the coconut milk, prawns and chopped spinach into the tin and bake for 8 to 10 minutes more, until the prawns are pink.", "tip": "The prawns go in at the end so they stay juicy." },
+      "Squeeze over the lemon, scatter with parsley and serve with the rice."
+    ],
+    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["roasting tin", "pot"], "illustration": "🍤"
+  },
+  {
+    "id": "chili-peanut-beef-traybake", "title": "Chili peanut beef traybake with peppers and sweetcorn",
+    "description": "Strips of beef roasted with peppers, green beans, sweetcorn, ginger and garlic, then tossed in a spicy peanut butter and soy dressing. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "beef", "quantity": 600, "unit": "g", "note": "rump steak" }, { "id": "green-beans", "quantity": 300, "unit": "g" },
+      { "id": "sweetcorn", "quantity": 285, "unit": "g" }, { "id": "bell-pepper", "quantity": 2, "unit": "piece" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "ginger", "quantity": 20, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "sesame-oil", "quantity": 2, "unit": "tbsp" }, { "id": "peanut-butter", "quantity": 80, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "vinegar", "quantity": 15, "unit": "ml" },
+      { "id": "spinach", "quantity": 100, "unit": "g" }, { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "peanuts", "quantity": 30, "unit": "g" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Slice the beef into 1.5 cm strips and the peppers thinly. Drain the sweetcorn.",
+      { "text": "Spread the beef, beans, sweetcorn and peppers in one layer in a large roasting tin with the grated ginger, garlic and chili, the sesame oil and salt. Keep the beef on top.", "tip": "Beef on top, uncovered, so it browns rather than steams." },
+      { "text": "Roast for 25 minutes until the beef is cooked and starting to char. Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Stir the peanut butter, soy sauce, vinegar and {2 tbsp} hot water into a smooth dressing.", "tip": "Crunchy peanut butter gives extra texture." },
+      "Toss the hot tin with the spinach and dressing so the leaves wilt. Scatter with spring onion and chopped peanuts and serve with the rice."
+    ],
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["large roasting tin", "pot"], "illustration": "🥜"
+  },
+  {
+    "id": "roast-cauliflower-curry", "title": "Roast cauliflower, chickpea and pea curry",
+    "description": "Cauliflower, tomato, onion and peas roasted with whole spices, then baked in coconut milk with spinach and chickpeas. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "indian", "family": "curry", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "cauliflower", "quantity": 1, "unit": "piece" }, { "id": "tomato", "quantity": 300, "unit": "g", "note": "cherry tomatoes" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "ginger", "quantity": 20, "unit": "g" }, { "id": "cumin", "quantity": 2, "unit": "tsp" },
+      { "id": "curry-powder", "quantity": 2, "unit": "tsp" }, { "id": "sesame", "quantity": 1, "unit": "tbsp" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "peas", "quantity": 300, "unit": "g", "note": "frozen" }, { "id": "chickpeas", "quantity": 400, "unit": "g" },
+      { "id": "spinach", "quantity": 100, "unit": "g" }, { "id": "coconut-milk", "quantity": 400, "unit": "ml" },
+      { "id": "lemon", "quantity": 0.5, "unit": "piece" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Cut the cauliflower into small florets (chop its leaves too), halve the tomatoes and cut the onion into wedges.",
+      { "text": "Toss them with the crushed garlic, grated ginger, cumin, curry powder, sesame seeds, oil, salt, peas and drained chickpeas in a large roasting tin. Roast for 20 minutes.", "tip": "Spread it out well so the cauliflower browns at the edges." },
+      { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Stir in the coconut milk and spinach and roast for 10 minutes more until the cauliflower is tender.", "tip": "The coconut milk goes in late so the vegetables roast first." },
+      "Squeeze over the lemon and serve with the rice."
+    ],
+    "tags": ["vegan", "vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["large roasting tin", "pot"], "illustration": "🥦"
+  },
+  {
+    "id": "baked-gnocchi-leek-chard", "title": "Crispy baked gnocchi with leeks, chard and goat cheese",
+    "description": "Gnocchi, leeks and chard soaked in boiling water, then baked in mustard cream under goat cheese and crunchy breadcrumbs. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "leek", "quantity": 2, "unit": "piece" }, { "id": "swiss-chard", "quantity": 300, "unit": "g" },
+      { "id": "gnocchi", "quantity": 1000, "unit": "g" }, { "id": "whipping-cream", "quantity": 250, "unit": "ml" },
+      { "id": "mustard", "quantity": 2, "unit": "tsp" }, { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "goat-cheese", "quantity": 125, "unit": "g" },
+      { "id": "breadcrumbs", "quantity": 50, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Slice the leeks into thin half moons and the chard into ribbons, and wash both well.",
+      { "text": "Put the leeks, chard and gnocchi in a big bowl, pour over boiling water to cover and leave for 2 minutes. Drain well.", "tip": "This quick soak half-cooks everything, so you need no extra pot." },
+      "Toss them in a baking dish with the cream, mustard, salt and pepper.",
+      { "text": "Crumble the goat cheese over, scatter the breadcrumbs and drizzle with the oil. Bake for 15 to 20 minutes until golden on top.", "tip": "Cream cheese or feta work instead of goat cheese." }
+    ],
+    "tags": ["vegetarian", "quick", "comfort"], "keepsDays": 1, "equipment": ["big bowl", "baking dish"], "illustration": "🥔"
+  },
+  {
+    "id": "roasted-pepper-orzotto", "title": "Oven-baked roasted pepper orzotto with feta",
+    "description": "Orzo baked in stock under sliced peppers, onion and rosemary until creamy, no stirring needed, finished with lemon, basil, almonds and feta. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mediterranean", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "pasta", "quantity": 300, "unit": "g", "note": "orzo" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "bell-pepper", "quantity": 3, "unit": "piece" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "rosemary", "quantity": 1, "unit": "tsp" }, { "id": "olive-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "almonds", "quantity": 30, "unit": "g" }, { "id": "basil", "quantity": 10, "unit": "g" },
+      { "id": "feta", "quantity": 150, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Dissolve the stock cubes in {650 ml} boiling water.",
+      { "text": "Put the orzo and hot stock in a roasting tin. Cover with the thinly sliced peppers and onion, the rosemary and {2 tbsp} of the oil.", "tip": "The peppers sit on top and roast while the orzo cooks underneath in the stock." },
+      { "text": "Bake for 25 minutes until the orzo has soaked up the stock and the peppers are soft.", "tip": "If it looks dry before the orzo is soft, add a splash of boiling water." },
+      "Meanwhile toast the almonds in a dry pan.",
+      "Stir in the lemon peel and juice, the rest of the oil and the pepper. Top with crumbled feta, torn basil and the almonds."
+    ],
+    "tags": ["vegetarian", "light"], "keepsDays": 2, "equipment": ["roasting tin", "frying pan"], "illustration": "🫑"
+  },
+  {
+    "id": "cinnamon-eggplant-bulgur-feta", "title": "Cinnamon eggplant with herby bulgur, olives and feta",
+    "description": "Eggplant and onion roasted with cinnamon and nutmeg beside a tray of bulgur and olives, then topped with feta and cranberries. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "salad", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "bulgur", "quantity": 250, "unit": "g" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "olives", "quantity": 100, "unit": "g", "note": "green, pitted" }, { "id": "eggplant", "quantity": 2, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece", "note": "red if you can" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" },
+      { "id": "nutmeg", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" }, { "id": "parsley", "quantity": 25, "unit": "g" },
+      { "id": "lettuce", "quantity": 0.5, "unit": "piece", "note": "or rocket" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "feta", "quantity": 200, "unit": "g" }, { "id": "dried-cranberries", "quantity": 40, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Dissolve the stock cubes in {500 ml} boiling water.",
+      "Rinse the bulgur and put it in a small tin or dish with the hot stock and the olives. Cover with foil.",
+      { "text": "Slice the eggplant into half moons and the onion thickly. Toss them in a second tin with the cinnamon, nutmeg, salt and {3 tbsp} of the oil.", "tip": "Two tins, so the eggplant roasts instead of steaming over the bulgur." },
+      { "text": "Bake both for 25 minutes, until the bulgur has soaked up the stock and the eggplant is soft and browned.", "tip": "Turn the eggplant once halfway for even colour." },
+      "Fluff the bulgur with a fork and stir in the chopped parsley, chopped leaves, lemon juice and the rest of the oil.",
+      { "text": "Pile the eggplant on the bulgur and top with crumbled feta and the cranberries.", "tip": "Pomegranate seeds are the original finish, when you can get them. It keeps 2 days for lunch boxes." }
+    ],
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["2 roasting tins", "foil"], "illustration": "🍆"
+  },
+  {
+    "id": "spiced-chicken-pepper-traybake", "title": "Spiced chicken traybake with peppers and eggplant",
+    "description": "Chicken breasts roasted on peppers, eggplant, tomato and onion with a warm spice mix, served with yogurt and couscous. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "middle-eastern", "family": "oven", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "eggplant", "quantity": 1, "unit": "piece" }, { "id": "bell-pepper", "quantity": 3, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "tomato", "quantity": 4, "unit": "piece" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "cumin", "quantity": 1, "unit": "tsp" },
+      { "id": "paprika-powder", "quantity": 2, "unit": "tsp" }, { "id": "coriander-ground", "quantity": 1, "unit": "tsp" },
+      { "id": "cinnamon", "quantity": 0.5, "unit": "tsp" }, { "id": "olive-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "chicken-breast", "quantity": 700, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "yogurt", "quantity": 200, "unit": "g" },
+      { "id": "couscous", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 200 °C. Cut the eggplant into 1.5 cm cubes, the peppers into strips, the onion into wedges and the tomatoes into quarters.",
+      { "text": "Mix the cumin, paprika, coriander and cinnamon. Toss the vegetables and whole garlic cloves in a wide roasting tin with {2 tbsp} of the oil, two thirds of the spice mix and {1 tsp} of the salt.", "tip": "This home spice mix stands in for ras el hanout. Use 4 tsp of that if you have it." },
+      { "text": "Lay the chicken on top, rub it with the rest of the oil, spices and salt and roast for 25 to 30 minutes until cooked through.", "tip": "Cut the thickest piece: no pink inside. Halve very large breasts so they cook evenly." },
+      { "text": "Meanwhile pour {300 ml} boiling water over the couscous with a pinch of salt, cover and leave for 5 minutes, then fluff with a fork.", "tip": "Squeeze the roasted garlic out of its skin into the couscous." },
+      "Scatter with parsley and serve with the couscous and yogurt."
+    ],
+    "tags": ["high-protein", "one-pot"], "keepsDays": 2, "equipment": ["wide roasting tin", "bowl"], "illustration": "🍗"
+  },
+  {
+    "id": "peanut-chicken-tomato-rice", "title": "One-tray peanut chili chicken with tomato rice",
+    "description": "Rice and cherry tomatoes baked in stock under chicken coated in a peanut, chili and soy paste, all in one covered tin. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "rice", "quantity": 250, "unit": "g", "note": "basmati" }, { "id": "tomato", "quantity": 300, "unit": "g", "note": "cherry tomatoes" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "peanut-butter", "quantity": 60, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 10, "unit": "g" }, { "id": "sesame-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "lemon", "quantity": 1, "unit": "piece" },
+      { "id": "chicken-breast", "quantity": 700, "unit": "g" }, { "id": "peanuts", "quantity": 20, "unit": "g" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" }, { "id": "parsley", "quantity": 10, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 220 °C. Dissolve the stock cubes in {450 ml} boiling water.",
+      { "text": "Rinse the rice and spread it in a deep roasting tin with the whole cherry tomatoes. Pour over the hot stock.", "tip": "The stock must be boiling so the rice starts cooking straight away." },
+      "Mix the peanut butter, chopped chili, {1 tbsp} of the sesame oil, {1 tbsp} of the soy sauce and half the lemon juice into a thick paste.",
+      { "text": "Cut the chicken into large pieces, lay them on the rice and spread the paste over. Cover the tin very tightly with foil and bake for 30 to 35 minutes.", "tip": "The tight foil traps the steam that cooks the rice. Peek once: if the rice is still hard, reseal and give it 5 minutes more." },
+      "Mix the rest of the soy sauce, sesame oil and lemon juice and drizzle it over. Scatter with chopped peanuts, spring onion and parsley."
+    ],
+    "tags": ["high-protein", "one-pot", "kid-friendly"], "keepsDays": 2, "equipment": ["deep roasting tin", "foil"], "illustration": "🍗"
+  },
+  {
+    "id": "oven-berry-pancake", "title": "Big oven pancake with berries and lemon butter",
+    "description": "One fluffy ricotta pancake baked in a tin with berries, served in slices with a quick whipped lemon butter. No standing at the pan. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "pancakes", "servings": 4, "prepMinutes": 10, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "butter", "quantity": 90, "unit": "g" }, { "id": "ricotta", "quantity": 250, "unit": "g" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "milk", "quantity": 200, "unit": "ml" },
+      { "id": "sugar", "quantity": 50, "unit": "g" }, { "id": "flour", "quantity": 150, "unit": "g" },
+      { "id": "baking-powder", "quantity": 6, "unit": "g" }, { "id": "frozen-berries", "quantity": 300, "unit": "g" },
+      { "id": "powdered-sugar", "quantity": 30, "unit": "g" }, { "id": "lemon", "quantity": 0.5, "unit": "piece" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 220 °C. Put {40 g} of the butter in a roasting tin, about 20 x 30 cm, and put it in the oven to melt.", "tip": "A hot buttery tin gives the pancake crisp edges." },
+      "Whisk the ricotta, eggs, milk and sugar, then whisk in the flour and baking powder until smooth.",
+      { "text": "Swirl the melted butter around the tin, pour in the batter and scatter the berries over. Bake for 25 minutes until risen and golden.", "tip": "Use the berries straight from the freezer." },
+      "Meanwhile beat the rest of the soft butter with most of the powdered sugar and the lemon peel and juice until fluffy.",
+      "Dust the pancake with the rest of the powdered sugar and serve in slices with the lemon butter."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["roasting tin", "whisk", "bowl"], "illustration": "🥞"
+  },
+  {
+    "id": "apple-crumble-cake", "title": "Apple crumble traybake cake",
+    "description": "A soft spiced sponge with sliced apples on top and an oat crumble scattered over, baked together in one tin. Inspired by The Quick Roasting Tin by Rukmini Iyer.",
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "apple", "quantity": 2, "unit": "piece" }, { "id": "lemon", "quantity": 0.5, "unit": "piece" },
+      { "id": "butter", "quantity": 250, "unit": "g", "note": "soft" }, { "id": "sugar", "quantity": 250, "unit": "g", "note": "brown if you have it" },
+      { "id": "eggs", "quantity": 4, "unit": "piece" }, { "id": "flour", "quantity": 275, "unit": "g" },
+      { "id": "baking-powder", "quantity": 14, "unit": "g" }, { "id": "cinnamon", "quantity": 1.5, "unit": "tsp" },
+      { "id": "oats", "quantity": 25, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 190 °C and line a tin about 20 x 30 cm with baking paper. Core and thinly slice the apples and toss them with the lemon juice.",
+      { "text": "Beat {225 g} of the butter with {225 g} of the sugar until pale and fluffy, then beat in the eggs one at a time.", "tip": "Add a spoon of the flour with each egg if the mix starts to look curdled." },
+      "Fold in {250 g} of the flour, the baking powder and the cinnamon. Spread it in the tin and lay the apple slices on top.",
+      { "text": "Rub the rest of the butter, sugar and flour with the oats into a rough crumble and scatter it over.", "tip": "Clumps are good: they bake into crunchy bits." },
+      { "text": "Bake for 30 to 35 minutes until golden and a toothpick comes out clean. Cool and cut into squares.", "tip": "It keeps 3 days in a box and freezes well." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["20 x 30 cm tin", "mixer or whisk", "bowl"], "illustration": "🍎"
+  }
+]
