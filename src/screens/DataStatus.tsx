@@ -12,6 +12,7 @@ import {
   loadStorePrices,
   loadStores,
 } from '../lib/data';
+import { DEAL_LABEL, dealVerdict } from '../lib/deals';
 import { daysBetween, formatAmount, formatEur, formatShortDate, formatUnitPrice, zagrebToday } from '../lib/format';
 import { readPref, writePref } from '../lib/prefs';
 import { Screen, TitleBar } from '../ui/kit';
@@ -262,7 +263,7 @@ function SamplePrices({ meta, ingredients }: { meta: Meta; ingredients: Record<s
               <li class="price-row" key={item.ingredient}>
                 <div class="ing-name">
                   {name}
-                  {item.salePrice != null && <span class="badge sale">On sale</span>}
+                  {dealVerdict(item) && <span class={dealVerdict(item) === 'not' ? 'badge notdeal' : 'badge sale'}>{DEAL_LABEL[dealVerdict(item)!]}</span>}
                   {item.loose && <span class="badge loose">per kg</span>}
                 </div>
                 <div class="price">{formatEur(item.price)}</div>

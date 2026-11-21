@@ -1,6 +1,7 @@
 // Scores a plan. Lower is better. The score is in euros plus penalties, so
 // a 1 EUR saving and a 1 point nutrition improvement weigh about the same.
 
+import { dealVerdict, isGoodSale } from '../lib/deals';
 import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
 import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe, ShoppingLine, Slot } from './types';
@@ -193,7 +194,8 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
     if (estimated) estimatedPrices.push(id);
     for (const l of p.lines) {
       if (l.offer.store !== ESTIMATE) stores.add(l.offer.store);
-      const sale = l.offer.salePrice != null;
+      // A fake sale (dearer than the lowest price of the last 30 days) earns no sale bonus.
+      const sale = isGoodSale(l.offer);
       if (sale) onSale.add(id);
       shopping.push({
         ingredient: id,
@@ -206,6 +208,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
         amount: round1(l.amount),
         cost: l.cost,
         onSale: sale,
+        deal: dealVerdict(l.offer),
         estimated: l.offer.store === ESTIMATE,
       });
     }

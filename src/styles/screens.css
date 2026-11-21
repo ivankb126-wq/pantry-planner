@@ -2040,3 +2040,16 @@ h1 {
   margin: 4px 4px 6px;
   font-size: 13px;
 }
+
+/* Real deal check: a "sale" that was cheaper in the last 30 days */
+.tag.notdeal {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background: transparent;
+}
+.deal-off {
+  display: block;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+}

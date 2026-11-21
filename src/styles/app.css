@@ -330,3 +330,7 @@ h3 {
   color: var(--muted);
   padding: 12px 0 0;
 }
+.badge.notdeal {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}

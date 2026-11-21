@@ -9,6 +9,7 @@ import { planProblem, planResult, todayIndex } from '../app/planning';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
 import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
+import { dealSaving } from '../lib/deals';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
 import { IconCheck, IconClock, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
@@ -499,20 +500,24 @@ function roundLeft(n: number, unit: 'g' | 'ml' | 'piece'): number {
 function DealsCard({ data }: { data: PriceData }) {
   const multi = data.stores.length > 1;
   const deals = useMemo(() => {
+    // Only real deals: cheaper than the lowest price of the last 30 days.
     const best = new Map<string, PriceData['deals'][number]>();
     for (const it of data.deals) {
-      if (it.salePrice == null || !(it.price > it.salePrice)) continue;
+      const saving = dealSaving(it);
+      if (saving < 0.03) continue;
       const cur = best.get(it.ingredient);
-      const pct = 1 - it.salePrice / it.price;
-      if (!cur || pct > 1 - cur.salePrice! / cur.price) best.set(it.ingredient, it);
+      if (!cur || saving > dealSaving(cur)) best.set(it.ingredient, it);
     }
-    return [...best.values()].sort((a, b) => a.salePrice! / a.price - b.salePrice! / b.price).slice(0, 6);
+    return [...best.values()].sort((a, b) => dealSaving(b) - dealSaving(a)).slice(0, 6);
   }, [data]);
   if (!deals.length) return null;
   return (
-    <section class="card" aria-label="Deals today">
-      <h2>Deals today</h2>
-      <p class="sub">On sale in your {multi ? 'stores' : 'store'} right now. The planner already prefers these.</p>
+    <section class="card" aria-label="Real deals today">
+      <h2>Real deals today</h2>
+      <p class="sub">
+        Cheaper in your {multi ? 'stores' : 'store'} than at any time in the last 30 days. The crossed-out price is that 30-day low. The planner
+        already prefers these.
+      </p>
       <ul class="deals">
         {deals.map((it) => (
           <li key={`${it.store}${it.ingredient}`}>
@@ -525,7 +530,8 @@ function DealsCard({ data }: { data: PriceData }) {
             </span>
             <span class="deal-price">
               <strong>{formatEur(it.salePrice!)}</strong>
-              <s>{formatEur(it.price)}</s>
+              <s>{formatEur(it.best30!)}</s>
+              <small class="deal-off">−{Math.round(dealSaving(it) * 100)}%</small>
             </span>
           </li>
         ))}

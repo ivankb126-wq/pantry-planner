@@ -75,7 +75,11 @@ avoids repeats, and prefers liked dishes, sale items and at least one new
 dish. Dishes from the last two weeks get a rest, so cheap favourites take
 turns. Long dishes get a nudge at weekends, and with "Croatian classic at
 weekends" on each plan aims for one Croatian main, new ones first, as long as
-the budget allows. Items a store does not list get a
+the budget allows. Sales get a real deal check ([src/lib/deals.ts](src/lib/deals.ts)): the
+shops publish each sale item's lowest price in the last 30 days, so a sale
+below that is a "Real deal", one above it is "Not really a deal" (and earns
+no sale bonus in the planner), and Konzum, which does not publish it, shows
+a plain "On sale". Items a store does not list get a
 typical price from `data/reference-prices.json`, marked as an estimate.
 Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 

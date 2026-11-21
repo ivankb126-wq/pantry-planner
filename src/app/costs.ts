@@ -1,5 +1,6 @@
 // Quick price lookups for browsing (recipe cards, recipe detail).
 
+import { isGoodSale } from '../lib/deals';
 import { toIngredientUnit } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from '../planner/pricing';
 import type { Offer, PlannerRecipe } from '../planner/types';
@@ -22,7 +23,7 @@ export function priceIndex(prices: PriceData): PriceIndex {
   for (const o of prices.offers) {
     const cur = best.get(o.ingredient);
     if (!cur || o.unitPrice < cur.unitPrice) best.set(o.ingredient, o);
-    if (o.salePrice != null) sale.add(o.ingredient);
+    if (isGoodSale(o)) sale.add(o.ingredient);
   }
   for (const o of prices.reference) if (!best.has(o.ingredient)) best.set(o.ingredient, o);
   const all = indexOffers(prices.offers);

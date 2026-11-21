@@ -146,6 +146,23 @@ describe('nutrition aggregation', () => {
 });
 
 // ------------------------------------------------------------------ reuse
+describe('real deal check in the shopping list', () => {
+  it('does not count a sale dearer than the 30-day low as on sale', () => {
+    const fake = fakeOffers().map((o) => (o.ingredient === 'rice' ? { ...o, salePrice: o.price, best30: o.price - 0.3 } : o));
+    const res = evaluate(buildContext(baseInput({ offers: fake })), [{ day: 0, slot: 'dinner', recipeId: 'red-lentil-dal', source: 'cook' }]);
+    const rice = res.shopping.find((s) => s.ingredient === 'rice')!;
+    expect(rice.deal).toBe('not');
+    expect(rice.onSale).toBe(false);
+  });
+  it('marks a sale below the 30-day low as a real deal', () => {
+    const real = fakeOffers().map((o) => (o.ingredient === 'rice' ? { ...o, salePrice: o.price, best30: o.price + 0.5 } : o));
+    const res = evaluate(buildContext(baseInput({ offers: real })), [{ day: 0, slot: 'dinner', recipeId: 'red-lentil-dal', source: 'cook' }]);
+    const rice = res.shopping.find((s) => s.ingredient === 'rice')!;
+    expect(rice.deal).toBe('real');
+    expect(rice.onSale).toBe(true);
+  });
+});
+
 describe('variety within a day', () => {
   it('prefers lunch and dinner of different kinds over two pastas', () => {
     const ctx = buildContext(baseInput({ days: 1, meals: ['lunch', 'dinner'] }));

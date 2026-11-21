@@ -8,6 +8,7 @@ import { stock } from '../app/pantry';
 import { planResult } from '../app/planning';
 import type { PriceData } from '../app/prices';
 import { update, useApp } from '../app/state';
+import { DEAL_LABEL, dealVerdict, isGoodSale } from '../lib/deals';
 import { formatAmount, formatEur } from '../lib/format';
 import { ESTIMATE } from '../planner/evaluate';
 import type { ShoppingLine } from '../planner/types';
@@ -69,7 +70,8 @@ export function extraLines(extras: string[], prices: PriceData): ShopLine[] {
         packs: l.count,
         amount: l.amount,
         cost: l.cost,
-        onSale: l.offer.salePrice != null,
+        onSale: isGoodSale(l.offer),
+        deal: dealVerdict(l.offer),
         estimated: l.offer.store === ESTIMATE,
         extra: true,
       });
@@ -183,7 +185,7 @@ export function ShoppingScreen({ prices }: { prices: PriceState }) {
                             <small>
                               {lineQuantity(l)} · {l.estimated ? 'typical price' : productLabel(l.product, l.brand, l.ingredient, l.loose)}
                             </small>
-                            {l.onSale && <span class="tag teal">On sale</span>}
+                            {l.deal && <span class={l.deal === 'not' ? 'tag notdeal' : 'tag teal'}>{DEAL_LABEL[l.deal]}</span>}
                             {bought(l) && <span class="tag outline">In pantry</span>}
                             {extraKeys.has(lineKey(l)) && <span class="tag orange">Running low</span>}
                           </span>

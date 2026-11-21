@@ -1,6 +1,7 @@
 // Planner types. The planner is pure TypeScript with no browser APIs, so it
 // runs the same in the app, in tests and (later) in a web worker.
 
+import type { DealVerdict } from '../lib/deals';
 import type { Diet, IngredientInfo, Recipe, RecipeFacts, ServingFacts } from '../lib/nutrition';
 
 export type Slot = 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'dessert';
@@ -113,7 +114,9 @@ export interface ShoppingLine {
   packs: number; // packages (or 1 for loose)
   amount: number; // bought, ingredient unit
   cost: number;
-  onSale: boolean;
+  onSale: boolean; // on sale and not a fake sale (see lib/deals.ts)
+  /** Real deal check: "real", "not" (cheaper in the last 30 days) or "sale" (cannot tell); null when not on sale. */
+  deal: DealVerdict | null;
   estimated: boolean; // the store does not list it; typical price used
 }
 
