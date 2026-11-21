@@ -9,7 +9,7 @@ import { todayIndex } from '../app/planning';
 import { type Amount, type PantryEntry, update, useApp } from '../app/state';
 import { daysBetween, formatAmount, formatShortDate, zagrebToday } from '../lib/format';
 import type { IngredientInfo } from '../lib/nutrition';
-import { IconCheck, IconClose, IconPlus, IconSearch } from '../ui/icons';
+import { IconBarcode, IconCheck, IconClose, IconPlus, IconSearch } from '../ui/icons';
 import { Chip, Screen, Segmented, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, plural } from '../ui/words';
 import { fold } from './pickers';
@@ -157,9 +157,14 @@ export function PantryScreen({ prices }: { prices: PriceState }) {
           <p class="kicker">{plural(d.pantry.length, 'item', 'items')} at home</p>
           <h1>Pantry</h1>
         </div>
-        <button class="icon-btn big pink" aria-label="Add to pantry" onClick={() => setAdding(true)}>
-          <IconPlus />
-        </button>
+        <div class="head-btns">
+          <a class="icon-btn big" href="#/scan" aria-label="Scan a barcode">
+            <IconBarcode />
+          </a>
+          <button class="icon-btn big pink" aria-label="Add to pantry" onClick={() => setAdding(true)}>
+            <IconPlus />
+          </button>
+        </div>
       </header>
 
       <Segmented label="Pantry section" options={SECTIONS.map((s) => ({ id: s.id, label: `${s.label} ${count(s.id) ? count(s.id) : ''}`.trim() }))} value={section} onChange={setSection} />

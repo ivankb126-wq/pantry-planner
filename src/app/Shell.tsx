@@ -6,6 +6,7 @@ import { Cooking } from '../screens/Cooking';
 import { DataStatus } from '../screens/DataStatus';
 import { MealPrep } from '../screens/MealPrep';
 import { Recap } from '../screens/Recap';
+import { Scan } from '../screens/Scan';
 import { OfflineBar } from '../screens/Install';
 import { Onboarding } from '../screens/Onboarding';
 import { PantryScreen } from '../screens/Pantry';
@@ -60,6 +61,8 @@ function Route({ route, prices, onboarded }: { route: RouteInfo; prices: ReturnT
       return <MealPrep />;
     case 'recap':
       return <Recap />;
+    case 'scan':
+      return <Scan />;
   }
 
   const tab = ['recipes', 'shopping', 'pantry'].includes(route.name) ? route.name : 'plan';

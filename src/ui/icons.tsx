@@ -144,3 +144,8 @@ export const IconSnow = (p: P) => (
     <path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2" />
   </S>
 );
+export const IconBarcode = (p: P) => (
+  <S {...p} strokeWidth={2}>
+    <path d="M3 7V4h3M18 4h3v3M21 17v3h-3M6 20H3v-3M7 8v8M10 8v8M13 8v8M17 8v8" />
+  </S>
+);

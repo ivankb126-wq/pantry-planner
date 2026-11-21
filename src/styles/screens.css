@@ -2503,3 +2503,78 @@ h1 {
 .swap-row small.have {
   color: var(--teal);
 }
+
+/* Barcode scan */
+.head-btns {
+  display: flex;
+  gap: 10px;
+}
+.scan-view {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background: #000;
+  aspect-ratio: 3 / 4;
+  max-height: 56vh;
+  width: 100%;
+}
+.scan-view video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.scan-frame {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 30%;
+  bottom: 30%;
+  border: 3px solid var(--teal);
+  border-radius: 16px;
+  box-shadow: 0 0 0 999px rgba(20, 11, 36, 0.45);
+}
+.scan-hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+.scan-type {
+  margin-bottom: 16px;
+}
+.scan-type label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.scan-type-row {
+  display: flex;
+  gap: 10px;
+}
+.scan-type-row input {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card, rgba(255, 255, 255, 0.04));
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+.scan-found h2 {
+  margin: 2px 0 4px;
+}
+.scan-found .stepper-row {
+  margin-top: 14px;
+}

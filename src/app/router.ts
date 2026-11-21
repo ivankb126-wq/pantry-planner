@@ -1,7 +1,7 @@
 // Hash routes, so GitHub Pages never needs server rewrites:
 // #/plan, #/recipes, #/recipe/<id>, #/cook/<id>, #/shopping, #/shop[/<store>]
 // (shopping mode), #/pantry,
-// #/prep (meal prep Sunday), #/recap (weekly recap), #/settings, #/settings/<section>, #/onboarding, #/data
+// #/prep (meal prep Sunday), #/recap (weekly recap), #/scan (barcode), #/settings, #/settings/<section>, #/onboarding, #/data
 
 import { useEffect, useState } from 'preact/hooks';
 

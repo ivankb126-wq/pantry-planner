@@ -90,6 +90,15 @@ which lists swaps from [src/lib/substitutes.ts](src/lib/substitutes.ts)
 at home first) and "Leave it out" for garnishes and spices. From the plan,
 the swap is saved on the meal (`subs` on the cooked meal, leftovers follow),
 so the shopping list, plan cost, cooking mode and "Mark cooked" all use it.
+Barcode scan (`#/scan`, the barcode button in the Pantry) reads EAN/UPC
+codes with the camera using [zxing-wasm](https://github.com/Sec-ant/zxing-wasm)
+(MIT); its .wasm file is bundled with the app and loaded only on the scan
+screen, so it works offline and nothing goes to a CDN. `npm run build` runs
+[scripts/barcodes.ts](scripts/barcodes.ts), which turns the store price files
+in public/data into `data/barcodes.json` (barcode -> ingredient, package
+size, product name; weighed in-store labels and bad check digits are left
+out). A barcode not in the list can be taught once and is remembered on the
+phone. The number can also be typed in.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a

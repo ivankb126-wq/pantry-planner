@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "pantry-planner",
   "private": true,
   "version": "0.1.0",
@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "predev": "npm run content",
-    "build": "npm run content && tsc --noEmit && vite build",
+    "build": "npm run content && tsx scripts/barcodes.ts && tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "typecheck": "npm run content && tsc --noEmit",
@@ -17,7 +17,8 @@
     "icons": "tsx scripts/make-icons.ts"
   },
   "dependencies": {
-    "preact": "^11.2.0"
+    "preact": "^11.2.0",
+    "zxing-wasm": "3.1.7"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
