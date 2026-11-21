@@ -337,7 +337,7 @@
   },
   {
     "id": "apricot-walnut-oat-bars", "title": "Apricot walnut oat bars",
-    "description": "Chewy oat bars held together with mashed banana, with dried apricots and walnuts. No butter or oil and very little sugar. Inspired by Budget Bytes by Beth Moncel.",
+    "description": "Chewy oat bars held together with mashed banana, with dried apricots and walnuts. Just a spoon of sugar and no fat at all. Inspired by Budget Bytes by Beth Moncel.",
     "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "baking", "servings": 9, "prepMinutes": 10, "cookMinutes": 30,
     "difficulty": "easy", "mainProtein": "none",
     "ingredients": [

@@ -140,7 +140,7 @@
   },
   {
     "id": "green-pepper-pork-stir-fry", "title": "Stir-fried pork slivers with green peppers",
-    "description": "One of the most common Chinese suppers: silky slivers of pork with smoky dry-fried green peppers in a little sweet bean sauce and soy. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
+    "description": "An everyday Chinese home supper: silky slivers of pork with smoky dry-fried green peppers in a little sweet bean sauce and soy. Inspired by Every Grain of Rice by Fuchsia Dunlop.",
     "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "pan-grill", "servings": 4, "prepMinutes": 15, "cookMinutes": 15,
     "difficulty": "easy", "mainProtein": "pork",
     "ingredients": [
