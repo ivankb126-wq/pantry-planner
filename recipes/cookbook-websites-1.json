@@ -1,0 +1,224 @@
+[
+  {
+    "id": "segedin-gulas", "title": "Segedin gulaš (pork and sauerkraut goulash)",
+    "description": "Pork and sauerkraut slowly stewed with bacon, onion and lots of paprika, finished with sour cream. A continental Croatian winter favourite. Inspired by Serious Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "croatian-continental", "family": "stew", "servings": 6, "prepMinutes": 20, "cookMinutes": 150,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "bacon", "quantity": 100, "unit": "g" }, { "id": "pork-neck", "quantity": 1000, "unit": "g" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "tomato-paste", "quantity": 20, "unit": "g" }, { "id": "paprika-powder", "quantity": 3, "unit": "tbsp" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" },
+      { "id": "sauerkraut", "quantity": 1000, "unit": "g" }, { "id": "flour", "quantity": 10, "unit": "g" },
+      { "id": "sour-cream", "quantity": 180, "unit": "g" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "bread", "quantity": 360, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Fry the diced bacon in a big heavy pot on medium for 8 minutes until the fat runs out. Lift it out.", "tip": "The bacon fat is the cooking fat for the whole stew, so no oil is needed." },
+      { "text": "Cut the pork into 2 cm thick slices, season with a little pepper and brown them well in the bacon fat, in two batches. Lift out and cut into 4 cm cubes.", "tip": "Browning whole slices and cutting them after keeps the meat juicier than browning small cubes." },
+      "Add the sliced onions to the pot and cook for 12 minutes until soft and starting to brown.",
+      { "text": "Stir in the garlic, tomato paste and paprika for 30 seconds, then add the meat, bacon, bay leaves and {1000 ml} water. Cover and simmer gently for 1 hour.", "tip": "A teaspoon of caraway seeds is the classic touch here, if you have some." },
+      { "text": "Drain the sauerkraut and squeeze it lightly. Stir it in and simmer for 45 to 60 minutes more until the pork is very tender.", "tip": "Rinse the sauerkraut once in cold water: it takes away some salt and sourness. Adding it later keeps it from going mushy." },
+      { "text": "Mix the flour into the sour cream with a few spoons of the hot sauce, stir it into the pot and simmer for 3 minutes. Serve with bread and extra sour cream.", "tip": "It keeps 4 days and tastes even better reheated." }
+    ],
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "high-protein"], "keepsDays": 4, "equipment": ["big heavy pot"], "illustration": "🥘"
+  },
+  {
+    "id": "pasta-e-ceci", "title": "Pasta e ceci (creamy chickpea pasta soup)",
+    "description": "Small pasta cooked right in a garlicky, rosemary-scented chickpea broth, part of the chickpeas mashed to make it creamy. Cheap, fast and comforting. Inspired by Serious Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "chickpeas", "quantity": 800, "unit": "g", "note": "2 cans" }, { "id": "pasta", "quantity": 225, "unit": "g", "note": "small shapes" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "olive-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "rosemary", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "tomato-paste", "quantity": 30, "unit": "g" },
+      { "id": "white-wine", "quantity": 100, "unit": "ml" }, { "id": "parmesan", "quantity": 50, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Dissolve the stock cubes in {1000 ml} hot water. Drain and rinse the chickpeas.",
+      { "text": "Warm {3 tbsp} of the oil in a pot on low with the sliced garlic and rosemary for 3 minutes, until the garlic is pale gold. Add the chili and tomato paste and stir for 1 minute.", "tip": "Gentle heat: brown garlic turns bitter." },
+      "Pour in the wine and let it bubble for 2 minutes.",
+      { "text": "Mash a third of the chickpeas with a fork or a stick blender and a little stock. Add them to the pot with the whole chickpeas and the rest of the stock and simmer for 10 minutes.", "tip": "The mashed chickpeas make it creamy without any cream." },
+      { "text": "Add the pasta and cook, stirring often, until just soft, about 10 minutes. Add a splash of water if it gets too thick.", "tip": "It should be like a thick soup, between a stew and a pasta dish." },
+      "Off the heat, stir in most of the grated parmesan and the pepper. Serve with the rest of the cheese and a drizzle of olive oil."
+    ],
+    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 2, "equipment": ["pot"], "illustration": "🍲"
+  },
+  {
+    "id": "chicken-piccata", "title": "Crispy chicken piccata with lemon caper butter",
+    "description": "Thin chicken cutlets in a parmesan breadcrumb crust, with a quick lemon, caper and white wine butter sauce and potatoes. Inspired by Serious Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pan-grill", "servings": 4, "prepMinutes": 20, "cookMinutes": 25,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-breast", "quantity": 700, "unit": "g" }, { "id": "flour", "quantity": 60, "unit": "g" },
+      { "id": "eggs", "quantity": 2, "unit": "piece" }, { "id": "breadcrumbs", "quantity": 100, "unit": "g" },
+      { "id": "parmesan", "quantity": 40, "unit": "g" }, { "id": "sunflower-oil", "quantity": 80, "unit": "ml" },
+      { "id": "butter", "quantity": 50, "unit": "g" }, { "id": "white-wine", "quantity": 100, "unit": "ml" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "capers", "quantity": 20, "unit": "g" },
+      { "id": "parsley", "quantity": 10, "unit": "g" }, { "id": "potato", "quantity": 800, "unit": "g" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }
+    ],
+    "steps": [
+      "Boil the potatoes in their skins in salted water for 20 minutes until soft. Drain and keep warm.",
+      { "text": "Cut each chicken breast in half horizontally and flatten the pieces between baking paper with a rolling pin until about 1 cm thick. Season with half the salt.", "tip": "Even, thin cutlets cook through in minutes without drying out." },
+      { "text": "Set out three plates: flour, beaten eggs, and the breadcrumbs mixed with the grated parmesan. Coat each cutlet in flour, egg, then crumbs, pressing gently.", "tip": "Use one hand for dry and one for wet, so your fingers do not get breaded too." },
+      { "text": "Heat the oil in a large frying pan on medium-high and fry the cutlets in batches for 3 to 4 minutes each side until golden and cooked through. Drain on kitchen paper.", "tip": "The oil is hot enough when a breadcrumb sizzles at once. Never leave hot oil alone." },
+      { "text": "Pour the oil out of the pan and wipe it. Add the wine and boil for 1 minute, then turn the heat to low and swirl in the butter, the lemon juice, capers and chopped parsley.", "tip": "Keep the heat low once the butter goes in, so the sauce stays creamy instead of oily." },
+      "Spoon the sauce over the cutlets just before eating, so the crust stays crisp. Serve with the potatoes."
+    ],
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "rolling pin", "3 plates"], "illustration": "🍋"
+  },
+  {
+    "id": "gambas-al-ajillo", "title": "Gambas al ajillo (Spanish garlic prawns)",
+    "description": "Prawns sizzled in olive oil with lots of garlic and a little chili, finished with vinegar and parsley. Serve with bread for the garlic oil. Inspired by Serious Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mediterranean", "family": "pan-grill", "servings": 2, "prepMinutes": 10, "cookMinutes": 10,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "shrimp", "quantity": 400, "unit": "g", "note": "raw, peeled" }, { "id": "garlic", "quantity": 30, "unit": "g" },
+      { "id": "olive-oil", "quantity": 6, "unit": "tbsp" }, { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "baking-soda", "quantity": 1, "unit": "pinch" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "vinegar", "quantity": 8, "unit": "ml" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "bread", "quantity": 160, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Thaw the prawns if frozen and pat them dry. Mix them with a third of the garlic (finely chopped), {1 tbsp} of the oil, the salt and baking soda.", "tip": "The pinch of soda keeps prawns plump and snappy." },
+      { "text": "Slice the rest of the garlic thinly. Warm it with the rest of the oil and the chili in a frying pan on low for 4 minutes until pale gold.", "tip": "Watch it: once garlic turns brown it tastes bitter." },
+      { "text": "Turn the heat up to medium-high, add the prawns and toss for 2 minutes until pink all over.", "tip": "They are done the moment they turn pink and curl. Any longer and they go rubbery." },
+      "Take off the heat, stir in the vinegar and parsley and serve straight away in the pan, with bread to dip in the oil."
+    ],
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍤"
+  },
+  {
+    "id": "tuna-pasta-bake", "title": "Cheesy tuna and sweetcorn pasta bake",
+    "description": "Pasta in a homemade cheese sauce with tuna and sweetcorn, baked until bubbling and golden. A family classic from the cupboard. Inspired by BBC Good Food.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pasta", "servings": 6, "prepMinutes": 10, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "pasta", "quantity": 500, "unit": "g", "note": "penne or rigatoni" }, { "id": "butter", "quantity": 50, "unit": "g" },
+      { "id": "flour", "quantity": 50, "unit": "g" }, { "id": "milk", "quantity": 700, "unit": "ml" },
+      { "id": "cheddar", "quantity": 200, "unit": "g" }, { "id": "tuna-canned", "quantity": 320, "unit": "g" },
+      { "id": "sweetcorn", "quantity": 285, "unit": "g" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Heat the oven to 190 °C.",
+      { "text": "Cook the pasta in salted water for 2 minutes less than the packet says. Drain.", "tip": "It finishes cooking in the oven, so it stays firm instead of going soft." },
+      { "text": "Melt the butter in a pot, stir in the flour for 1 minute, then whisk in the milk a little at a time. Simmer for 5 minutes, whisking, until thick and smooth.", "tip": "Adding the milk slowly while whisking is how you get a sauce without lumps." },
+      "Off the heat, stir in three quarters of the grated cheese, the salt and pepper.",
+      "Mix the sauce with the pasta, drained tuna, drained sweetcorn and chopped parsley and tip it into a baking dish. Scatter the rest of the cheese on top.",
+      { "text": "Bake for 20 minutes until bubbling and golden.", "tip": "Gouda works instead of cheddar. It keeps 3 days and freezes well in portions." }
+    ],
+    "tags": ["kid-friendly", "comfort", "freezer-friendly", "high-protein"], "keepsDays": 3, "equipment": ["big pot", "pot", "whisk", "baking dish"], "illustration": "🐟"
+  },
+  {
+    "id": "mushroom-stroganoff", "title": "Mushroom stroganoff with rice",
+    "description": "Well-browned mushrooms in a paprika and sour cream sauce, ready in 30 minutes, over rice. Inspired by BBC Good Food.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "rice", "quantity": 280, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "paprika-powder", "quantity": 2, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "mushrooms", "quantity": 600, "unit": "g" },
+      { "id": "stock-cubes", "quantity": 5, "unit": "g" }, { "id": "soy-sauce", "quantity": 1, "unit": "tbsp" },
+      { "id": "sour-cream", "quantity": 200, "unit": "g" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Soften the chopped onions in the oil in a large frying pan for 5 minutes.",
+      { "text": "Stir in the paprika and garlic for 30 seconds, then add the sliced mushrooms. Turn the heat up and cook for 8 minutes until they are browned and their liquid has gone.", "tip": "Do not stir too often. Browned mushrooms taste meaty; pale ones taste watery." },
+      "Dissolve the stock cube in {300 ml} hot water. Add it with the soy sauce and simmer for 5 minutes.",
+      { "text": "Take the pan off the heat and stir in the sour cream and salt. Scatter with parsley and serve over the rice.", "tip": "Adding the sour cream off the heat keeps the sauce smooth instead of splitting." }
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["pot", "large frying pan"], "illustration": "🍄"
+  },
+  {
+    "id": "caldo-verde", "title": "Caldo verde (potato, kale and sausage soup)",
+    "description": "The Portuguese soup of potatoes, finely shredded kale and smoked sausage, part of the potato crushed to make it creamy. Inspired by Serious Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "mediterranean", "family": "soup", "servings": 6, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "butter", "quantity": 20, "unit": "g" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "garlic", "quantity": 15, "unit": "g" }, { "id": "olive-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "potato", "quantity": 800, "unit": "g" }, { "id": "stock-cubes", "quantity": 15, "unit": "g" },
+      { "id": "kale", "quantity": 300, "unit": "g", "note": "or Swiss chard" }, { "id": "sausages", "quantity": 400, "unit": "g", "note": "smoked, such as kranjska" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      "Soften the chopped onion and sliced garlic in the butter and {1 tbsp} of the oil in a big pot for 5 minutes.",
+      "Peel and thinly slice the potatoes. Add them with the stock cubes and {1500 ml} water and bring to a simmer.",
+      { "text": "Strip the kale leaves from the stems, roll them up and slice them into very thin ribbons. Add them to the pot and simmer for 25 minutes.", "tip": "Thin ribbons are the secret: they turn silky instead of chewy." },
+      { "text": "Crush some of the potatoes against the side of the pot with a spoon to thicken the soup, leaving the rest in pieces.", "tip": "Two textures make it creamy without blending." },
+      { "text": "Slice the sausages and add them for the last 5 minutes to warm through. Season with pepper and serve with a drizzle of the rest of the olive oil and bread.", "tip": "It keeps 3 days. Taste before adding salt: the sausage and stock are already salty." }
+    ],
+    "tags": ["comfort", "one-pot", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot"], "illustration": "🥬"
+  },
+  {
+    "id": "egg-roll-in-a-bowl", "title": "Egg roll in a bowl (turkey and cabbage stir-fry)",
+    "description": "All the flavours of a spring roll filling with no rolling or frying: minced turkey, mushrooms, cabbage and carrot in a ginger soy dressing, over rice. Inspired by Budget Bytes.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "chinese", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "turkey",
+    "ingredients": [
+      { "id": "turkey-mince", "quantity": 500, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "mushrooms", "quantity": 200, "unit": "g" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "ginger", "quantity": 15, "unit": "g" },
+      { "id": "cabbage", "quantity": 400, "unit": "g" }, { "id": "carrot", "quantity": 2, "unit": "piece" },
+      { "id": "soy-sauce", "quantity": 4, "unit": "tbsp" }, { "id": "vinegar", "quantity": 15, "unit": "ml" },
+      { "id": "sugar", "quantity": 20, "unit": "g" }, { "id": "sesame-oil", "quantity": 1, "unit": "tsp" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" }, { "id": "rice", "quantity": 280, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      { "text": "Chop the mushrooms very finely, shred the cabbage and grate the carrots.", "tip": "Finely chopped mushrooms melt into the meat and stretch it further." },
+      "Brown the turkey in the oil in a wok or large frying pan on high for 8 minutes, breaking it up.",
+      "Add the chopped onion, mushrooms, garlic and grated ginger and cook for 4 minutes until the mushroom water has gone.",
+      { "text": "Add the cabbage and carrot and stir-fry for 5 minutes until softened but still a little crunchy.", "tip": "Do not cook it until limp: a bit of crunch is the point." },
+      "Mix the soy sauce, vinegar, sugar and sesame oil, pour it in and toss for 2 minutes. Serve over the rice with sliced spring onion."
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 3, "equipment": ["pot", "wok or large frying pan", "grater"], "illustration": "🥢"
+  },
+  {
+    "id": "honey-garlic-salmon", "title": "Honey garlic salmon with rice and broccoli",
+    "description": "Salmon seared golden and glazed in a sticky honey, soy and garlic sauce in the last minute, with rice and broccoli. Ready in 20 minutes. Inspired by RecipeTin Eats.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "pan-grill", "servings": 2, "prepMinutes": 5, "cookMinutes": 15,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "salmon", "quantity": 400, "unit": "g", "note": "2 fillets" }, { "id": "honey", "quantity": 3, "unit": "tbsp" },
+      { "id": "soy-sauce", "quantity": 2, "unit": "tbsp" }, { "id": "vinegar", "quantity": 15, "unit": "ml" },
+      { "id": "garlic", "quantity": 5, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "rice", "quantity": 140, "unit": "g" },
+      { "id": "broccoli", "quantity": 0.5, "unit": "piece" }, { "id": "sesame", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Start the rice: rinse it, put it in a pot with {250 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
+      "Cut the broccoli into florets and steam or boil them for 4 minutes.",
+      "Pat the salmon dry and season with pepper. Whisk the honey, soy sauce, vinegar and finely chopped garlic in a cup.",
+      { "text": "Heat the oil in a frying pan on medium-high and fry the salmon for 3 to 4 minutes until golden, then turn and cook for 2 minutes more.", "tip": "Leave it alone while it browns. It releases from the pan by itself when it is ready to turn." },
+      { "text": "Pour in the sauce and let it bubble for 1 minute, spooning it over the fish until sticky.", "tip": "The glaze goes in only at the end: honey burns quickly." },
+      "Serve on the rice with the broccoli, sprinkled with sesame seeds."
+    ],
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["pot", "frying pan"], "illustration": "🍣"
+  },
+  {
+    "id": "basque-cheesecake", "title": "Basque burnt cheesecake",
+    "description": "A crustless cheesecake baked very hot, so the top turns dark and caramelised while the middle stays soft and creamy. Easier than it looks. Inspired by RecipeTin Eats.",
+    "mealTypes": ["dessert"], "cuisine": "mediterranean", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cream-cheese", "quantity": 750, "unit": "g" }, { "id": "sugar", "quantity": 200, "unit": "g" },
+      { "id": "whipping-cream", "quantity": 300, "unit": "ml" }, { "id": "flour", "quantity": 30, "unit": "g" },
+      { "id": "vanilla-sugar", "quantity": 8, "unit": "g" }, { "id": "eggs", "quantity": 4, "unit": "piece" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }
+    ],
+    "steps": [
+      { "text": "Take the cream cheese, cream and eggs out of the fridge an hour before. Heat the oven to 220 °C. Line a 20 cm deep round tin with two crumpled sheets of baking paper, sticking up well above the sides.", "tip": "Crumple the paper into a ball first, then flatten it: it fits the tin much better." },
+      { "text": "Beat the cream cheese with the sugar, vanilla sugar and salt until completely smooth. Beat in the eggs one at a time.", "tip": "Room-temperature cream cheese is the key to no lumps." },
+      "Whisk the flour into a little of the cream until smooth, then beat it in with the rest of the cream.",
+      { "text": "Pour into the tin and bake for 45 to 50 minutes, until the top is very dark brown and the middle still wobbles a lot when you shake the tin.", "tip": "The dark top is meant to be, it is not burnt. The wobbly middle sets as it cools." },
+      { "text": "Cool in the tin for 2 hours, then chill for at least 6 hours, ideally overnight, before cutting.", "tip": "It keeps 4 days in the fridge. Lovely with berries." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 4, "equipment": ["20 cm deep round tin", "baking paper", "mixer or whisk"], "illustration": "🍰"
+  }
+]

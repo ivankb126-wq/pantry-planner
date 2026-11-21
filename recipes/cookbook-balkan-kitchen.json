@@ -1,0 +1,342 @@
+[
+  {
+    "id": "priganice", "title": "Priganice (little yeast fritters)",
+    "description": "Puffy fried dough drops, crisp outside and soft inside, eaten warm with honey or jam. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["breakfast", "dessert"], "cuisine": "croatian-continental", "family": "baking", "servings": 4, "prepMinutes": 15, "cookMinutes": 20,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "dry-yeast", "quantity": 7, "unit": "g" }, { "id": "sugar", "quantity": 15, "unit": "g" },
+      { "id": "milk", "quantity": 75, "unit": "ml" }, { "id": "flour", "quantity": 175, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "salt", "quantity": 1, "unit": "pinch" },
+      { "id": "sunflower-oil", "quantity": 100, "unit": "ml", "note": "for frying, most stays in the pan" },
+      { "id": "honey", "quantity": 4, "unit": "tbsp", "note": "or jam, to serve" }
+    ],
+    "steps": [
+      { "text": "Warm the milk until it feels just warm on your finger. Stir in the sugar and yeast and leave for 10 minutes until foamy.", "tip": "No foam means the yeast is old, so start again with a fresh packet." },
+      { "text": "Beat in the flour, egg, salt and about {50 ml} warm water with a wooden spoon for 2 minutes, to a thick, sticky batter.", "tip": "Croatian grandmothers add a spoon of rakija here. It adds flavour and the fritters soak up less oil." },
+      "Cover the bowl and leave it somewhere warm for 30 minutes, until bubbly and risen.",
+      { "text": "Heat the oil about 3 cm deep in a small pot. Drop in teaspoons of batter, a few at a time, and fry for 2 to 3 minutes, turning, until puffed and golden.", "tip": "The oil is ready when a drop of batter rises and sizzles at once. Dip the spoon in water first and the batter slides off easily. Never leave hot oil alone." },
+      "Drain on kitchen paper and serve warm, drizzled with honey or with jam for dipping."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["bowl", "small pot", "slotted spoon"], "illustration": "🍩"
+  },
+  {
+    "id": "jabuke-u-slafroku", "title": "Jabuke u šlafroku (apple rings in batter)",
+    "description": "Apple rings dipped in a light vanilla and cinnamon batter, fried golden and dusted with sugar. Apples \"in a dressing gown\". Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["dessert", "breakfast"], "cuisine": "croatian-continental", "family": "fruit", "servings": 4, "prepMinutes": 15, "cookMinutes": 25,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "flour", "quantity": 125, "unit": "g" }, { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "milk", "quantity": 100, "unit": "ml" }, { "id": "butter", "quantity": 25, "unit": "g" },
+      { "id": "baking-powder", "quantity": 3, "unit": "g" }, { "id": "vanilla-sugar", "quantity": 8, "unit": "g" },
+      { "id": "cinnamon", "quantity": 1, "unit": "tsp" }, { "id": "lemon", "quantity": 0.5, "unit": "piece", "note": "grated peel" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "apple", "quantity": 3, "unit": "piece" },
+      { "id": "sunflower-oil", "quantity": 80, "unit": "ml", "note": "for frying" },
+      { "id": "powdered-sugar", "quantity": 20, "unit": "g" }
+    ],
+    "steps": [
+      "Melt the butter and let it cool a little.",
+      { "text": "Whisk the flour, egg, milk, melted butter, baking powder, vanilla sugar, half the cinnamon, the grated lemon peel and salt into a smooth batter. Rest it for 30 minutes.", "tip": "Resting makes the batter cling to the apples and puff up in the pan." },
+      { "text": "Peel the apples, cut out the cores and slice them across into rings 1 cm thick.", "tip": "An apple corer or a small glass makes neat holes. Firm, slightly sour apples hold their shape best." },
+      { "text": "Heat the oil about 1 cm deep in a frying pan on medium. Dip each ring in the batter and fry for 2 to 3 minutes on each side until puffed and golden.", "tip": "Fry a few at a time so the oil stays hot. Never leave hot oil alone." },
+      "Drain on kitchen paper. Mix the powdered sugar with the rest of the cinnamon and dust it over while they are warm."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["bowl", "frying pan", "whisk"], "illustration": "🍎"
+  },
+  {
+    "id": "soparnik", "title": "Soparnik (Poljica chard pie)",
+    "description": "The Dalmatian chard pie from Poljica: two thin sheets of dough around chard and spring onion, brushed with garlicky olive oil after baking. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "croatian-dalmatian", "family": "pie", "servings": 6, "prepMinutes": 35, "cookMinutes": 40,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "flour", "quantity": 400, "unit": "g" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 8, "unit": "tbsp" }, { "id": "swiss-chard", "quantity": 650, "unit": "g" },
+      { "id": "spring-onion", "quantity": 100, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Mix the flour, half the salt, {2 tbsp} of the oil and {200 ml} lukewarm water into a soft dough. Knead for 3 minutes, cover and rest for 30 minutes.", "tip": "A rested dough rolls out thin without shrinking back." },
+      { "text": "Wash the chard well. Chop the stalks and spring onions finely and the leaves roughly. Soften the stalks and onions in {2 tbsp} of the oil for 5 minutes, then mix them with the raw leaves, the rest of the salt and the pepper.", "tip": "Squeeze the leaves well after washing: wet chard makes a soggy pie." },
+      "Heat the oven to 200 °C with a second baking tray inside. Halve the dough and roll each half into a thin round, about 35 cm across, on baking paper.",
+      { "text": "Spread the chard over one round, leaving a 2 cm edge. Lay the second round on top and press and roll the edges together to seal.", "tip": "Prick the top a few times with a fork so steam can escape." },
+      { "text": "Slide it on its paper onto a tray, put the hot second tray on top and bake for 20 minutes. Remove the top tray and bake for 15 to 20 minutes more until golden and crisp.", "tip": "The hot tray on top copies the old way of baking soparnik under hot embers." },
+      { "text": "Crush the garlic and chop the parsley, mix with the rest of the olive oil and brush it all over the hot pie. Cut into squares.", "tip": "It is good warm or cold, keeps 3 days and freezes well." }
+    ],
+    "tags": ["vegan", "vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "rolling pin", "frying pan"], "illustration": "🥬"
+  },
+  {
+    "id": "gibanica", "title": "Gibanica (crumpled filo cheese bake)",
+    "description": "Filo sheets crumpled into an egg, milk and white cheese mix and baked until puffy and golden. The easy, airy Serbian cheese pie. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["breakfast", "lunch", "dinner"], "cuisine": "balkan", "family": "pie", "servings": 8, "prepMinutes": 15, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "eggs", "quantity": 3, "unit": "piece" }, { "id": "milk", "quantity": 200, "unit": "ml" },
+      { "id": "baking-powder", "quantity": 5, "unit": "g" }, { "id": "cottage-cheese", "quantity": 250, "unit": "g" },
+      { "id": "feta", "quantity": 200, "unit": "g" }, { "id": "sunflower-oil", "quantity": 60, "unit": "ml" },
+      { "id": "filo-pastry", "quantity": 500, "unit": "g" }, { "id": "sesame", "quantity": 1, "unit": "tbsp" },
+      { "id": "yogurt", "quantity": 500, "unit": "g", "note": "to serve" }
+    ],
+    "steps": [
+      { "text": "Whisk the eggs with the milk, {200 ml} sparkling or plain water and the baking powder. Crumble in the cottage cheese and feta and mix.", "tip": "Sparkling water makes it even lighter, if you have some." },
+      "Heat the oven to 190 °C and oil a deep baking dish, about 25 x 30 cm.",
+      "Line the dish with 3 sheets of filo, letting them hang over the sides, and brush with a little oil.",
+      { "text": "Dip the remaining sheets one at a time into the cheese mix, crumple them loosely and pack them into the dish. Pour any leftover mix over the top.", "tip": "Do not press them down: the air between the crumpled sheets is what makes it fluffy." },
+      "Fold the overhanging filo over the top, brush with the rest of the oil and sprinkle with sesame seeds. Leave for 15 minutes so the filo soaks up the liquid.",
+      { "text": "Bake for 40 to 50 minutes until puffed, deep golden and set in the middle. Rest for 15 minutes, cut and serve with yogurt.", "tip": "A knife pushed into the middle should come out without wet egg. It keeps 3 days and freezes well." }
+    ],
+    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["deep baking dish", "whisk", "pastry brush"], "illustration": "🥧"
+  },
+  {
+    "id": "krompirusa", "title": "Krompiruša (potato filo pie)",
+    "description": "The Bosnian potato pie: grated potato and onion rolled in filo, coiled and baked until crisp, with cold yogurt alongside. Inspired by The Balkan Kitchen by Irina Janakievska, made here with shop filo.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "pie", "servings": 6, "prepMinutes": 30, "cookMinutes": 45,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "filo-pastry", "quantity": 500, "unit": "g" }, { "id": "potato", "quantity": 800, "unit": "g" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 100, "unit": "ml" },
+      { "id": "vegeta", "quantity": 1, "unit": "tsp" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 1, "unit": "tsp" }, { "id": "butter", "quantity": 15, "unit": "g" },
+      { "id": "yogurt", "quantity": 500, "unit": "g", "note": "cold, to serve" }
+    ],
+    "steps": [
+      "Heat the oven to 200 °C and oil a round baking tin or tray.",
+      { "text": "Peel and coarsely grate the potatoes, then squeeze out as much water as you can with your hands. Mix with the finely chopped onion, Vegeta, salt, pepper and {2 tbsp} of the oil.", "tip": "Squeezing is the most important step. Wet potatoes make the filo soggy." },
+      { "text": "Lay 2 sheets of filo on top of each other and brush lightly with oil. Spread a line of filling along one long edge and roll up loosely into a long sausage.", "tip": "Keep the rest of the filo under a damp towel so it does not dry and crack." },
+      "Coil the first roll into a snail in the middle of the tin and keep adding rolls around it until all the filling is used.",
+      { "text": "Brush the top with the rest of the oil and bake for 25 minutes. Melt the butter in {50 ml} boiling water, pour it over and bake for 20 minutes more at 180 °C, until deep golden.", "tip": "The butter water softens the inner layers like a real Sarajevo pita while the top stays crisp." },
+      "Cover with a clean towel for 5 minutes, then cut and serve with cold yogurt."
+    ],
+    "tags": ["vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["round baking tin", "grater", "pastry brush"], "illustration": "🥔"
+  },
+  {
+    "id": "tavce-gravce", "title": "Tavče gravče (Macedonian baked beans)",
+    "description": "White beans cooked soft, then baked with a paprika and onion zaprška until a thin crust forms on top. Cheap, filling and even better the next day. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "stew", "servings": 6, "prepMinutes": 20, "cookMinutes": 120,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "white-beans", "quantity": 500, "unit": "g", "note": "dried" }, { "id": "baking-soda", "quantity": 1, "unit": "pinch" },
+      { "id": "onion", "quantity": 2, "unit": "piece" }, { "id": "bay-leaves", "quantity": 0.5, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "paprika-powder", "quantity": 2, "unit": "tbsp" },
+      { "id": "vegeta", "quantity": 1, "unit": "tsp" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "bread", "quantity": 360, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "The evening before, cover the beans with plenty of cold water and the baking soda and leave overnight.", "tip": "Soaking with a pinch of soda makes them cook soft and creamy." },
+      "Drain and rinse the beans. Put them in a pot with a halved onion, the bay leaves and fresh water to cover by 5 cm, and simmer for 45 to 60 minutes until soft but whole.",
+      "Heat the oven to 190 °C. Lift the beans into an ovenproof dish (a clay dish if you have one) with enough cooking water to just cover them.",
+      { "text": "Make the zaprška: fry the second onion, finely chopped, in the oil for 8 minutes until soft. Take it off the heat, stir in the paprika, Vegeta, salt and pepper, then mash in a spoon of beans and a splash of cooking water.", "tip": "Paprika burns in seconds in hot oil, so always add it off the heat." },
+      { "text": "Stir the zaprška into the beans and bake for 45 to 60 minutes, until a thin crust forms on top and the beans are thick but still juicy.", "tip": "Add a splash of hot water if it dries out. A pinch of dried mint is the Macedonian touch, if you have it." },
+      { "text": "Scatter with parsley and serve with bread.", "tip": "It keeps 4 days and freezes well. Lovely with a sausage on the side." }
+    ],
+    "tags": ["vegan", "vegetarian", "cook-once-eat-twice", "freezer-friendly", "comfort"], "keepsDays": 4, "equipment": ["big pot", "ovenproof dish", "frying pan"], "illustration": "🫘"
+  },
+  {
+    "id": "patlidzan-umak-od-oraha", "title": "Roasted eggplant with walnut sauce",
+    "description": "Soft roasted eggplant slices under a creamy garlic and walnut sauce, with quick-pickled chili and parsley. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "oven", "servings": 4, "prepMinutes": 20, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "eggplant", "quantity": 3, "unit": "piece" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "walnuts", "quantity": 100, "unit": "g" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "chili-pepper", "quantity": 30, "unit": "g" }, { "id": "vinegar", "quantity": 30, "unit": "ml" },
+      { "id": "chickpeas", "quantity": 400, "unit": "g" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 220 °C. Slice the eggplants 1 cm thick, brush both sides with {4 tbsp} of the oil, sprinkle with half the salt and roast on two trays for 25 to 30 minutes, turning once, until soft and golden.", "tip": "They are done when a fork goes in with no resistance. Undercooked eggplant is spongy and bitter." },
+      "Meanwhile slice the chili thinly, mix it with a pinch of salt and the vinegar and leave it to pickle.",
+      { "text": "Simmer the walnuts in {200 ml} water for 5 minutes. Blend them with the garlic, a pinch of salt and enough of their water to make a sauce as thick as yogurt.", "tip": "Simmering softens the walnuts, so the sauce turns creamy with no cream at all." },
+      "Drain the chickpeas and warm them in a dry pan with the rest of the oil and salt.",
+      "Lay the eggplant on a platter with the chickpeas, spoon the walnut sauce over and scatter with parsley and pickled chili. Serve with bread."
+    ],
+    "tags": ["vegan", "vegetarian"], "keepsDays": 2, "equipment": ["2 baking trays", "blender or stick blender", "small pot"], "illustration": "🍆"
+  },
+  {
+    "id": "juha-s-okruglicama", "title": "Meatball and barley soup",
+    "description": "A thick Balkan soup with little beef meatballs, barley, carrot, leek and tomato. A full meal in a bowl. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "soup", "servings": 6, "prepMinutes": 25, "cookMinutes": 65,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "minced-beef", "quantity": 400, "unit": "g" }, { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "breadcrumbs", "quantity": 40, "unit": "g" }, { "id": "baking-soda", "quantity": 1, "unit": "pinch" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "tomato-paste", "quantity": 40, "unit": "g" },
+      { "id": "oregano", "quantity": 1, "unit": "tsp" }, { "id": "parsley", "quantity": 30, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" }, { "id": "leek", "quantity": 1, "unit": "piece" },
+      { "id": "celeriac", "quantity": 100, "unit": "g" }, { "id": "carrot", "quantity": 3, "unit": "piece" },
+      { "id": "passata", "quantity": 200, "unit": "g" }, { "id": "barley", "quantity": 120, "unit": "g" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      "Rinse the barley and leave it in a bowl of boiling water while you get everything else ready.",
+      { "text": "Mix the beef with the egg, breadcrumbs, baking soda, half the onion (grated), half the tomato paste, the oregano, half the parsley and half the salt. Roll into small balls the size of a walnut.", "tip": "Wet hands stop the meat from sticking. The pinch of soda keeps the meatballs tender." },
+      "Heat half the oil in a big pot and brown the meatballs for 5 minutes, turning. Lift them out.",
+      { "text": "Add the rest of the oil, the other half of the onion (chopped), the sliced leek and diced celeriac and carrot. Cook gently for 15 minutes until soft.", "tip": "The brown bits from the meatballs flavour the vegetables, so do not wash the pot." },
+      { "text": "Add the passata, the rest of the tomato paste, the drained barley, the stock cubes, the rest of the salt, the pepper and {1500 ml} water. Put the meatballs back, cover and simmer for 40 minutes until the barley is soft.", "tip": "The barley thickens the soup as it cooks. Add a little water if it gets too thick." },
+      { "text": "Stir in the rest of the parsley and serve with bread.", "tip": "It keeps 3 days and freezes well." }
+    ],
+    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲"
+  },
+  {
+    "id": "comlek", "title": "Čomlek (slow beef with onions and garlic)",
+    "description": "Beef baked slowly for hours with whole small onions, lots of garlic and paprika until it falls apart. An Ohrid speciality. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "stew", "servings": 6, "prepMinutes": 25, "cookMinutes": 220,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "beef", "quantity": 900, "unit": "g", "note": "shin or other stewing cut" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" }, { "id": "bay-leaves", "quantity": 0.5, "unit": "g" },
+      { "id": "thyme", "quantity": 1, "unit": "tsp" }, { "id": "cumin", "quantity": 0.25, "unit": "tsp" },
+      { "id": "onion", "quantity": 8, "unit": "piece", "note": "small ones" }, { "id": "garlic", "quantity": 60, "unit": "g", "note": "about 2 bulbs" },
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "vinegar", "quantity": 60, "unit": "ml" },
+      { "id": "red-wine", "quantity": 125, "unit": "ml" }, { "id": "bread", "quantity": 360, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 160 °C. Cut the beef into large chunks, about 5 cm, and season with the salt and pepper.", "tip": "Big chunks stay juicy over the long baking." },
+      "Heat the oil in a heavy ovenproof pot with a lid and brown the beef well on all sides, in two batches. Put it all back and stir in the paprika with a splash of water.",
+      { "text": "Peel the small onions but leave them whole. Peel the garlic cloves. Add both to the pot with the bay leaves, thyme and cumin.", "tip": "Pour boiling water over the onions for a minute and the skins slip off easily." },
+      "Dissolve the stock cubes in {500 ml} hot water and pour it in with the wine and vinegar. Bring to a simmer.",
+      { "text": "Cover tightly and bake for 3.5 hours, until the beef breaks apart with a spoon and the garlic is soft and sweet.", "tip": "Check once or twice and add a little hot water if it looks dry. The long, slow heat turns all that garlic mild and buttery." },
+      { "text": "Serve with plenty of bread for the sauce.", "tip": "It keeps 4 days and tastes even better reheated. It freezes well." }
+    ],
+    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly", "festive"], "keepsDays": 4, "equipment": ["heavy ovenproof pot with a lid"], "illustration": "🧄"
+  },
+  {
+    "id": "piletina-s-mlincima", "title": "Roast chicken with mlinci and cabbage salad",
+    "description": "Roast chicken legs with homemade mlinci baked in the juices, and a cabbage salad. Inspired by the duck with mlinci in The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "croatian-continental", "family": "oven", "servings": 4, "prepMinutes": 30, "cookMinutes": 90,
+    "difficulty": "medium", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-legs", "quantity": 1200, "unit": "g" }, { "id": "salt", "quantity": 2, "unit": "tsp" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tsp" }, { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "flour", "quantity": 300, "unit": "g" }, { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "cabbage", "quantity": 500, "unit": "g" }, { "id": "vinegar", "quantity": 30, "unit": "ml" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Make the mlinci: mix the flour, {0.5 tsp} of the salt, {1 tbsp} of the oil and about {150 ml} lukewarm water into a firm dough. Knead for 3 minutes and rest for 20 minutes.", "tip": "Shop-bought mlinci work too if you are short of time. Skip to step 4." },
+      { "text": "Heat the oven to 200 °C. Roll the dough out as thin as you can, in 3 or 4 pieces, lay them on trays and bake for 8 to 10 minutes until dry and spotted golden.", "tip": "They should snap like crackers. Let them cool, then break into rough pieces." },
+      { "text": "Turn the oven down to 190 °C. Rub the chicken with {1 tsp} of the salt, the paprika, pepper and {1 tbsp} of the oil and roast in a tin for 60 minutes, until golden and the juices run clear.", "tip": "Add {100 ml} water to the tin after 30 minutes so the juices do not burn. Those juices flavour the mlinci." },
+      "Meanwhile shred the cabbage very thinly. Mix it with the vinegar, the rest of the oil and salt and squeeze it with your hands for a minute.",
+      { "text": "Put the mlinci in a bowl, pour over boiling water to cover, wait 2 minutes and drain well.", "tip": "Do not leave them longer: they should be soft but not mushy." },
+      { "text": "Lift out the chicken, toss the mlinci with the juices in the tin and the butter, put the chicken on top and bake for 15 minutes more until the edges of the mlinci crisp.", "tip": "The crispy corners are everyone's favourite part." },
+      "Serve the chicken and mlinci with the cabbage salad."
+    ],
+    "tags": ["festive", "comfort", "high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "roasting tin", "rolling pin"], "illustration": "🍗"
+  },
+  {
+    "id": "cufte-na-luku", "title": "Ćufte baked on onions",
+    "description": "Paprika and parsley meatballs baked on a thick bed of slowly softened onions, which turn sweet and become the sauce. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "oven", "servings": 4, "prepMinutes": 25, "cookMinutes": 65,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "onion", "quantity": 6, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "butter", "quantity": 25, "unit": "g" },
+      { "id": "tomato-paste", "quantity": 40, "unit": "g" }, { "id": "cumin", "quantity": 0.25, "unit": "tsp" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "minced-beef", "quantity": 500, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "oregano", "quantity": 1, "unit": "tsp" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" }, { "id": "breadcrumbs", "quantity": 40, "unit": "g" },
+      { "id": "parsley", "quantity": 20, "unit": "g" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "potato", "quantity": 800, "unit": "g" }, { "id": "milk", "quantity": 100, "unit": "ml" }
+    ],
+    "steps": [
+      { "text": "Slice 5 of the onions thinly. Cook them in half the oil with {0.5 tsp} of the salt in a wide pan on low heat for 25 minutes, stirring now and then, until soft and sweet.", "tip": "Low heat and patience: they should melt, not brown quickly." },
+      "Stir in half the butter, half the tomato paste, the cumin, bay leaves and {100 ml} water, then spread the onions in a baking dish. Heat the oven to 190 °C.",
+      { "text": "Grate the last onion and mix it with the beef, egg, oregano, paprika, breadcrumbs, most of the parsley, the rest of the tomato paste, {0.5 tsp} of the salt and the pepper. Knead for 1 minute and shape 16 small balls.", "tip": "Kneading makes them hold together without being dense." },
+      "Brown the meatballs quickly in the rest of the oil in the same pan, then sit them on the onions.",
+      { "text": "Bake uncovered for 35 minutes until the meatballs are cooked and the onions brown at the edges.", "tip": "Cut one in half: no pink in the middle." },
+      "Meanwhile boil the peeled potatoes in salted water for 20 minutes and mash them with the warm milk, the rest of the butter and salt. Serve with the meatballs and onions, scattered with parsley."
+    ],
+    "tags": ["high-protein", "comfort", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide frying pan", "baking dish", "pot"], "illustration": "🧅"
+  },
+  {
+    "id": "pastrva-s-blitvom-i-limunom", "title": "Trout with lemon egg sauce and blitva",
+    "description": "Crisp-skinned trout fillets with a silky lemon and egg sauce, served on Dalmatian blitva of chard, potato, garlic and olive oil. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "pan-grill", "servings": 4, "prepMinutes": 25, "cookMinutes": 25,
+    "difficulty": "medium", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "trout", "quantity": 800, "unit": "g", "note": "4 fillets, skin on" }, { "id": "eggs", "quantity": 2, "unit": "piece" },
+      { "id": "lemon", "quantity": 2, "unit": "piece" }, { "id": "stock-cubes", "quantity": 5, "unit": "g", "note": "fish or vegetable" },
+      { "id": "dill", "quantity": 1, "unit": "tsp" }, { "id": "potato", "quantity": 500, "unit": "g" },
+      { "id": "swiss-chard", "quantity": 650, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel the potatoes, cut them into chunks and boil them in salted water for 12 minutes until soft.",
+      { "text": "Meanwhile chop the chard stalks finely and the leaves roughly. Fry the stalks in {2 tbsp} of the oil for 4 minutes, add the crushed garlic and the leaves and cook for 5 minutes until soft.", "tip": "Wash chard in a sink of water: grit hides at the bottom of the stalks." },
+      "Drain the potatoes and roughly crush them into the chard with {1 tbsp} of the oil and half the salt.",
+      { "text": "Make the sauce: dissolve the stock cube in {300 ml} hot water. Whisk the eggs with the juice of one lemon in a small pot, then slowly whisk in the warm stock. Stir on low heat for 5 to 8 minutes until it thickens like thin custard. Add the dill.", "tip": "Never let it boil, or the eggs scramble. If it starts to look grainy, take it off the heat and whisk hard." },
+      { "text": "Pat the trout dry and season with the rest of the salt and the pepper. Fry skin side down in the rest of the oil on medium-high for 3 to 4 minutes until crisp, then turn and cook for 1 minute more.", "tip": "Press the fillets flat with a spatula for the first 20 seconds so the skin crisps evenly." },
+      "Serve the trout on the blitva with the warm sauce spooned over and lemon wedges."
+    ],
+    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["pot", "frying pan", "small pot", "whisk"], "illustration": "🐟"
+  },
+  {
+    "id": "spanac-s-rizom", "title": "Paprika spinach rice with eggs and yogurt",
+    "description": "Creamy rice cooked like a risotto with spinach, spring onion and sweet paprika, topped with fried eggs and cool yogurt. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" }, { "id": "spring-onion", "quantity": 100, "unit": "g" },
+      { "id": "tomato-paste", "quantity": 20, "unit": "g" }, { "id": "paprika-powder", "quantity": 1, "unit": "tbsp" },
+      { "id": "risotto-rice", "quantity": 250, "unit": "g" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "spinach", "quantity": 450, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "eggs", "quantity": 4, "unit": "piece" },
+      { "id": "yogurt", "quantity": 400, "unit": "g" }
+    ],
+    "steps": [
+      "Dissolve the stock cubes in {1200 ml} hot water and keep it warm.",
+      "Soften the sliced spring onions in {3 tbsp} of the oil for 5 minutes. Stir in the tomato paste and paprika with a splash of the stock.",
+      { "text": "Add the rice and stir for 1 minute, then add the stock a ladle at a time, stirring, for about 18 minutes, until the rice is almost soft.", "tip": "Like a risotto: add the next ladle when the last one is nearly gone." },
+      { "text": "Fold in the spinach in handfuls and cook for 5 minutes until wilted and the rice is creamy with a slight bite. Season with the salt and pepper.", "tip": "Frozen spinach works too: add it straight from the freezer and cook a few minutes longer." },
+      "Fry the eggs in the rest of the oil. Serve the rice with an egg on top and a big spoon of yogurt."
+    ],
+    "tags": ["vegetarian", "comfort"], "keepsDays": 1, "equipment": ["wide pot", "ladle", "frying pan"], "illustration": "🍚"
+  },
+  {
+    "id": "tufahije", "title": "Tufahije (poached apples with walnuts)",
+    "description": "The Bosnian dessert: whole apples poached in lemon and cinnamon syrup, filled with walnuts and raisins, with a spoon of whipped cream. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["dessert"], "cuisine": "balkan", "family": "fruit", "servings": 4, "prepMinutes": 15, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "apple", "quantity": 4, "unit": "piece" }, { "id": "sugar", "quantity": 120, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "cinnamon", "quantity": 1, "unit": "tsp" },
+      { "id": "walnuts", "quantity": 60, "unit": "g" }, { "id": "raisins", "quantity": 20, "unit": "g" },
+      { "id": "whipping-cream", "quantity": 100, "unit": "ml" }
+    ],
+    "steps": [
+      "Peel the lemon in a few wide strips with a vegetable peeler, then squeeze its juice.",
+      "Put {750 ml} water, the sugar, lemon peel, lemon juice and half the cinnamon in a pot just wide enough for the apples and bring to the boil.",
+      { "text": "Peel the apples neatly and cut out the cores from the top, leaving them whole. Lower them into the syrup and simmer gently for 10 to 14 minutes, turning once, until a knife slides in but they still hold their shape.", "tip": "Firm apples are best. Soft ones fall apart in the syrup." },
+      "Lift the apples out. Boil the syrup for 10 minutes more until it thickens slightly. Soak the raisins in a spoon of it.",
+      "Chop the walnuts and mix them with the raisins and the rest of the cinnamon. Fill the cooled apples with it.",
+      { "text": "Whip the cream. Serve each apple in a bowl with syrup poured over and a spoon of cream on top.", "tip": "They keep 3 days in the fridge in their syrup. Add the cream just before serving." }
+    ],
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 3, "equipment": ["pot", "apple corer or small knife", "whisk"], "illustration": "🍏"
+  },
+  {
+    "id": "kolac-s-marelicama", "title": "Light apricot sponge cake",
+    "description": "A fluffy sponge made with whipped egg whites and oil, with halved apricots pressed in partway through baking so they do not sink. Inspired by The Balkan Kitchen by Irina Janakievska.",
+    "mealTypes": ["dessert"], "cuisine": "croatian-continental", "family": "baking", "servings": 12, "prepMinutes": 20, "cookMinutes": 50,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 120, "unit": "ml" }, { "id": "flour", "quantity": 250, "unit": "g" },
+      { "id": "eggs", "quantity": 5, "unit": "piece" }, { "id": "sugar", "quantity": 220, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "milk", "quantity": 60, "unit": "ml" },
+      { "id": "vanilla-sugar", "quantity": 8, "unit": "g" }, { "id": "baking-powder", "quantity": 5, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "pinch" }, { "id": "apricots", "quantity": 400, "unit": "g" },
+      { "id": "powdered-sugar", "quantity": 10, "unit": "g" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Oil a baking tin about 25 x 30 cm and dust it with flour.",
+      { "text": "Separate the eggs. Whisk the whites with a pinch of salt until foamy, then add the sugar a spoon at a time and whisk to stiff, glossy peaks. Whisk in {2 tbsp} lemon juice.", "tip": "The bowl must be completely clean and dry, or the whites will not whip." },
+      "On low speed, whisk in the yolks one at a time, then the milk, oil, vanilla sugar and grated lemon peel.",
+      { "text": "Mix the flour and baking powder and fold them in gently with a spatula until no dry flour is left. Pour into the tin.", "tip": "Fold, do not stir: you want to keep the air from the whites." },
+      { "text": "Bake for 20 minutes. Meanwhile halve and stone the apricots. Quickly lay them cut side up on the cake and bake for 30 minutes more until golden.", "tip": "Putting the fruit on later is the trick that stops it sinking to the bottom. Plums or cherries work the same way." },
+      { "text": "Check with a toothpick: it should come out clean. Cool, then dust with powdered sugar and cut into squares.", "tip": "It keeps 3 days and freezes well, without the sugar." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["25 x 30 cm baking tin", "mixer or whisk", "2 bowls"], "illustration": "🍑"
+  }
+]

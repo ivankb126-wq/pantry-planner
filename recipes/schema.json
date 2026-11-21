@@ -27,7 +27,7 @@
           "enum": [
             "croatian-dalmatian", "croatian-slavonian", "croatian-istrian", "croatian-continental",
             "mediterranean", "italian", "greek", "chinese", "thai", "japanese", "korean", "indian",
-            "mexican", "middle-eastern", "everyday"
+            "mexican", "middle-eastern", "balkan", "everyday"
           ]
         },
         "family": {

@@ -30,6 +30,7 @@ export const CUISINE_LABEL: Record<string, string> = {
   indian: 'Indian',
   mexican: 'Mexican',
   'middle-eastern': 'Middle Eastern',
+  balkan: 'Balkan',
   everyday: 'Everyday',
 };
 
