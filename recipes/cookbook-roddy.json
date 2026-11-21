@@ -1,0 +1,296 @@
+[
+  {
+    "id": "stuffed-shells-ricotta-spinach", "title": "Baked pasta shells with ricotta and spinach",
+    "description": "Big pasta shells filled with ricotta, spinach and parmesan, baked in tomato sauce under béchamel and mozzarella. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 30, "cookMinutes": 40,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "pasta", "quantity": 300, "unit": "g", "note": "conchiglioni, or cannelloni" }, { "id": "spinach", "quantity": 450, "unit": "g", "note": "fresh or frozen" },
+      { "id": "ricotta", "quantity": 250, "unit": "g" }, { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "parmesan", "quantity": 60, "unit": "g" }, { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }, { "id": "passata", "quantity": 500, "unit": "g" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "milk", "quantity": 400, "unit": "ml" }, { "id": "butter", "quantity": 30, "unit": "g" },
+      { "id": "flour", "quantity": 30, "unit": "g" }, { "id": "mozzarella", "quantity": 125, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Wilt the spinach in a pan with a splash of water, cool it, squeeze it very dry and chop it. Mix with the ricotta, egg, half the parmesan, the nutmeg and half the salt.", "tip": "Squeeze the spinach hard, or the filling goes watery." },
+      "Simmer the passata with the oil, crushed garlic and the rest of the salt for 10 minutes.",
+      { "text": "Cook the shells in salted water for 3 minutes less than the packet says. Drain and lay them out on a tray so they do not stick.", "tip": "They finish cooking in the oven, so keep them firm." },
+      "Make a béchamel: melt the butter, stir in the flour for 1 minute, whisk in the milk and simmer for 4 minutes until thick.",
+      "Heat the oven to 190 °C. Spread the tomato sauce in a baking dish, fill each shell with a spoon of filling and sit them in the sauce.",
+      { "text": "Spoon the béchamel over, scatter with torn mozzarella and the rest of the parmesan and bake for 25 minutes until golden and bubbling.", "tip": "It can be assembled a day ahead and baked when you need it." }
+    ],
+    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot", "2 pots", "baking dish"], "illustration": "🐚"
+  },
+  {
+    "id": "pasta-lentils", "title": "Small pasta with lentils",
+    "description": "Brown lentils simmered with onion, carrot, celery, garlic and bay into a thick soup, with small pasta cooked in at the end. Cheap and filling. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "lentils", "quantity": 300, "unit": "g" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "celeriac", "quantity": 50, "unit": "g" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "pasta", "quantity": 200, "unit": "g", "note": "small shapes" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      "Chop the onion, carrot and celeriac very finely.",
+      { "text": "Soften them in {4 tbsp} of the oil in a deep pot on low for 10 minutes, add the garlic and bay leaves for 1 minute.", "tip": "Slowly softened vegetables are the flavour base here, so take your time." },
+      { "text": "Add the rinsed lentils and {1500 ml} water and simmer for 25 minutes until the lentils are almost soft.", "tip": "Salt now, not at the start, so the lentils soften well." },
+      { "text": "Add the salt, chili and pasta and cook, stirring often, until the pasta is soft, about 10 minutes. Add a splash of water if it gets too thick.", "tip": "It should be a thick soup you can almost eat with a fork." },
+      "Serve with a drizzle of the rest of the oil and grated parmesan."
+    ],
+    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 3, "equipment": ["deep pot"], "illustration": "🍲"
+  },
+  {
+    "id": "pasta-pumpkin-puree", "title": "Pasta with creamy pumpkin, garlic and chili",
+    "description": "Pumpkin cooked down in olive oil and butter with garlic and chili into a silky purée that clings to small pasta. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "pumpkin", "quantity": 1000, "unit": "g", "note": "Hokkaido or butternut" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "butter", "quantity": 20, "unit": "g" }, { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "small shapes" }, { "id": "parmesan", "quantity": 50, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Peel the pumpkin (Hokkaido can keep its skin) and cut it into small cubes.", "tip": "Small cubes cook faster and break down into a smoother sauce." },
+      { "text": "Warm the oil, butter, chopped garlic and chili in a wide pan, add the pumpkin and salt, cover and cook on medium-low for 25 minutes, stirring now and then, until it collapses into a purée.", "tip": "Add a splash of water if it starts to stick." },
+      "Meanwhile cook the pasta in salted water until just firm. Keep a cup of the water and drain.",
+      { "text": "Toss the pasta with the pumpkin, adding pasta water a little at a time until silky. Stir in the parsley.", "tip": "The starchy water is what turns the purée into a sauce." },
+      "Serve with grated parmesan and a pinch more chili."
+    ],
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["wide pan with a lid", "big pot"], "illustration": "🎃"
+  },
+  {
+    "id": "farfalle-smoked-salmon-mascarpone", "title": "Farfalle with smoked salmon, mascarpone and lemon",
+    "description": "A no-cook sauce of smoked salmon, mascarpone, butter and lemon peel, loosened with pasta water and finished with dill. Ready in 15 minutes. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 5, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "farfalle" }, { "id": "smoked-salmon", "quantity": 200, "unit": "g" },
+      { "id": "mascarpone", "quantity": 200, "unit": "g" }, { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }, { "id": "dill", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil.",
+      { "text": "Cut the salmon into strips. In a big serving bowl, mix it with the mascarpone, soft butter, grated lemon peel and pepper.", "tip": "Warm the bowl first with a little hot water so the sauce melts nicely." },
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Tip the hot pasta into the bowl with a splash of pasta water and toss until creamy. Squeeze in a little lemon juice and scatter with dill.", "tip": "No cooking for the salmon: the heat of the pasta is enough." }
+    ],
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "serving bowl"], "illustration": "🍝"
+  },
+  {
+    "id": "linguine-zucchini-egg", "title": "Linguine with zucchini, egg and parmesan",
+    "description": "Thin strips of zucchini softened in olive oil and tossed with pasta and a silky egg and parmesan coating, like a summer carbonara. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "zucchini", "quantity": 2, "unit": "piece" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "pasta", "quantity": 400, "unit": "g", "note": "linguine or spaghetti" },
+      { "id": "eggs", "quantity": 4, "unit": "piece", "note": "2 whole plus 2 yolks" }, { "id": "parmesan", "quantity": 70, "unit": "g" },
+      { "id": "basil", "quantity": 8, "unit": "g" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil. Cut the zucchini into thin matchsticks and slice the onion thinly.",
+      { "text": "Cook the onion and zucchini in the oil in a large pan on medium for 10 minutes until soft and lightly golden. Season with the salt.", "tip": "Thin strips melt into the pasta, so every bite has some." },
+      "Whisk 2 eggs and 2 yolks with the grated parmesan and the pepper.",
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Tip the pasta into the zucchini pan off the heat, pour in the egg mix and toss quickly with a splash of pasta water until creamy. Tear in the basil.", "tip": "Off the heat, so the eggs make a silky sauce and do not scramble." }
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "whisk"], "illustration": "🥒"
+  },
+  {
+    "id": "pasta-prawns-zucchini", "title": "Pasta with prawns and zucchini",
+    "description": "Zucchini sliced thin and grated, cooked in garlicky olive oil into a creamy sauce, with prawns added for the last two minutes. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "shrimp", "quantity": 300, "unit": "g", "note": "raw, peeled" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "olive-oil", "quantity": 6, "unit": "tbsp" }, { "id": "zucchini", "quantity": 3, "unit": "piece" },
+      { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" }, { "id": "salt", "quantity": 0.75, "unit": "tsp" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "penne or mezze maniche" }, { "id": "lemon", "quantity": 0.5, "unit": "piece" },
+      { "id": "parsley", "quantity": 10, "unit": "g" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil.",
+      { "text": "Slice two zucchini into thin rounds and grate the third on the large holes of a grater.", "tip": "Grated zucchini melts into a creamy sauce while the slices keep a bite." },
+      "Warm the oil with the crushed garlic cloves in a large pan, add all the zucchini, the chili and salt and cook on medium for 10 minutes until soft. Remove the garlic.",
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Add the prawns to the zucchini and cook for 2 minutes until just pink.", "tip": "Prawns go rubbery fast. Take them off as soon as they curl." },
+      "Toss in the pasta with a splash of pasta water, a squeeze of lemon and the parsley, and serve."
+    ],
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍤"
+  },
+  {
+    "id": "pasta-e-patate", "title": "Pasta e patate (Neapolitan pasta and potatoes)",
+    "description": "Potatoes cooked down with onion, carrot and celery until they break up and make the sauce, with pasta cooked in and lots of parmesan. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "celeriac", "quantity": 50, "unit": "g" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "potato", "quantity": 1000, "unit": "g" }, { "id": "bay-leaves", "quantity": 0.5, "unit": "g" },
+      { "id": "pasta", "quantity": 250, "unit": "g", "note": "small or mixed shapes" }, { "id": "parmesan", "quantity": 80, "unit": "g" },
+      { "id": "basil", "quantity": 8, "unit": "g" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Chop the onion, carrot and celeriac very finely. Peel the potatoes and cut them into 1 cm cubes.",
+      "Soften the vegetables in the oil in a deep pot for 8 minutes.",
+      { "text": "Add the potatoes, bay leaves, salt and {1000 ml} water and simmer for 15 minutes until the potatoes are soft and some start to fall apart.", "tip": "A parmesan rind dropped in here adds lots of flavour, if you have one." },
+      { "text": "Add the pasta and cook, stirring often, until soft, about 10 minutes. Add a little hot water if it gets too thick.", "tip": "Stir well: the potato starch makes it creamy, but it can catch on the bottom." },
+      "Off the heat, stir in most of the grated parmesan, the pepper and torn basil. Serve with the rest of the cheese."
+    ],
+    "tags": ["vegetarian", "one-pot", "comfort", "kid-friendly"], "keepsDays": 2, "equipment": ["deep pot"], "illustration": "🥔"
+  },
+  {
+    "id": "pasta-burst-tomatoes-crumbs", "title": "Pasta with burst tomatoes and anchovy crumbs",
+    "description": "Cherry tomatoes cooked in olive oil until they pop and make a juicy sauce, tossed with pasta and topped with crunchy anchovy breadcrumbs. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 20,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "olive-oil", "quantity": 6, "unit": "tbsp" },
+      { "id": "tomato", "quantity": 1000, "unit": "g", "note": "cherry tomatoes" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "oregano", "quantity": 0.5, "unit": "tsp" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "basil", "quantity": 8, "unit": "g" }, { "id": "anchovies", "quantity": 20, "unit": "g" },
+      { "id": "breadcrumbs", "quantity": 50, "unit": "g" }, { "id": "pasta", "quantity": 400, "unit": "g", "note": "orecchiette or fusilli" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil.",
+      { "text": "Warm {4 tbsp} of the oil with the crushed garlic cloves in a wide pan, add the whole cherry tomatoes, salt, oregano and chili. Cook on medium for 12 minutes, shaking the pan, until the skins burst and the juices thicken.", "tip": "Press a few with a spoon to help them along." },
+      { "text": "In a small pan, melt the chopped anchovies in the rest of the oil on low, add the breadcrumbs and toast for 4 minutes until golden and crunchy.", "tip": "Keep stirring: breadcrumbs go from golden to burnt quickly." },
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Toss the pasta with the tomatoes, torn basil and a splash of pasta water. Scatter the anchovy crumbs on top at the table.", "tip": "Add the crumbs only at the last moment so they stay crunchy." }
+    ],
+    "tags": ["quick"], "keepsDays": 1, "equipment": ["big pot", "wide pan", "small pan"], "illustration": "🍅"
+  },
+  {
+    "id": "chicken-orzo-one-pot", "title": "One-pot roast chicken with orzo and leek",
+    "description": "Chicken legs browned and baked in a covered pot with leek, celery and white wine, then orzo stirred into the juices to finish. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "oven", "servings": 4, "prepMinutes": 15, "cookMinutes": 75,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-legs", "quantity": 1200, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "leek", "quantity": 1, "unit": "piece" }, { "id": "celeriac", "quantity": 100, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "white-wine", "quantity": 200, "unit": "ml" }, { "id": "pasta", "quantity": 250, "unit": "g", "note": "orzo (rice-shaped pasta)" },
+      { "id": "lemon", "quantity": 1, "unit": "piece" }
+    ],
+    "steps": [
+      "Heat the oven to 180 °C. Season the chicken with half the salt.",
+      { "text": "Brown the chicken skin side down in the oil in a large ovenproof pot with a lid for 6 minutes until golden. Turn it over.", "tip": "Golden skin now means flavour in the orzo later." },
+      "Add the smashed garlic, chili, sliced leek, diced celeriac, half the parsley, the rest of the salt, the wine and {300 ml} water. Cover and bake for 50 minutes.",
+      { "text": "Stir the orzo into the juices around the chicken with {300 ml} boiling water, cover and bake for 20 minutes more, until the orzo is soft and has soaked up the juices.", "tip": "Check halfway and add a splash of water if it looks dry." },
+      "Grate over the lemon peel, squeeze in some juice, scatter with the rest of the parsley and rest for 10 minutes before serving."
+    ],
+    "tags": ["high-protein", "one-pot", "kid-friendly"], "keepsDays": 2, "equipment": ["large ovenproof pot with a lid"], "illustration": "🍗"
+  },
+  {
+    "id": "pasta-genovese-onion-beef", "title": "Pasta alla genovese (onion and beef sauce)",
+    "description": "Not pesto: the Neapolitan sauce of a kilo of onions and beef cooked slowly for two hours until the onions collapse into a sweet, glossy sauce. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 6, "prepMinutes": 15, "cookMinutes": 140,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "onion", "quantity": 7, "unit": "piece" }, { "id": "beef", "quantity": 500, "unit": "g", "note": "chuck or shoulder" },
+      { "id": "olive-oil", "quantity": 8, "unit": "tbsp" }, { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "white-wine", "quantity": 100, "unit": "ml" },
+      { "id": "pasta", "quantity": 500, "unit": "g", "note": "ziti, rigatoni or penne" }, { "id": "parmesan", "quantity": 50, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel, halve and thinly slice the onions. Cut the beef into 2 cm pieces and the carrot into small cubes.",
+      { "text": "Put the onions, beef, carrot, oil and salt into a heavy pot while it is still cold. Cover and cook on low for 1 hour, stirring now and then.", "tip": "It looks like far too many onions. Trust it: they shrink to a quarter." },
+      { "text": "Uncover and cook for another hour, adding a splash of wine every so often when it starts to stick, until the onions have melted into a thick, glossy, golden-brown sauce and the beef falls apart.", "tip": "Low and slow. If it browns too fast, add a little water." },
+      "Cook the pasta in salted water until just firm. Drain, keeping a little water.",
+      { "text": "Toss the pasta with the sauce, a splash of pasta water, the pepper and most of the parmesan. Serve with the rest.", "tip": "The sauce keeps 4 days and freezes well." }
+    ],
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "high-protein"], "keepsDays": 4, "equipment": ["heavy pot with a lid", "big pot"], "illustration": "🧅"
+  },
+  {
+    "id": "cacio-e-pepe-paski", "title": "Cacio e pepe with Paški sir",
+    "description": "The Roman three-ingredient pasta of sheep cheese, black pepper and pasta water whisked into a glossy sauce, made here with Croatian Paški sir. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 15,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "sheep-cheese", "quantity": 150, "unit": "g", "note": "hard, such as Paški sir or pecorino" }, { "id": "black-pepper", "quantity": 2, "unit": "tsp", "note": "freshly ground" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "spaghetti or tonnarelli" }, { "id": "lettuce", "quantity": 0.5, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "vinegar", "quantity": 10, "unit": "ml" }
+    ],
+    "steps": [
+      { "text": "Grate the cheese as finely as you can. Toast the pepper in a dry pan for 30 seconds until fragrant.", "tip": "Very fine cheese melts smoothly. Coarse cheese makes clumps." },
+      { "text": "Cook the pasta in a smaller amount of lightly salted water than usual, so it gets extra starchy. Keep two cups of the water.", "tip": "Go easy on the salt: the cheese is salty." },
+      { "text": "In a big bowl, mix the cheese with a few spoons of the warm (not boiling) pasta water into a thick cream.", "tip": "If the water is too hot the cheese goes stringy. Let it cool for a minute first." },
+      "Drain the pasta, add it with the pepper to the bowl and toss fast, adding more pasta water a little at a time until glossy.",
+      "Serve at once with a green salad dressed with the oil and vinegar."
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "big bowl", "fine grater"], "illustration": "🧀"
+  },
+  {
+    "id": "lemon-basil-pasta", "title": "Lemon, parmesan and basil pasta",
+    "description": "Pasta tossed with warm lemon butter, olive oil, lots of parmesan and fresh basil. Bright, fresh and ready in 15 minutes. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 5, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "lemon", "quantity": 2, "unit": "piece" }, { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "olive-oil", "quantity": 6, "unit": "tbsp" }, { "id": "parmesan", "quantity": 100, "unit": "g" },
+      { "id": "basil", "quantity": 10, "unit": "g" }, { "id": "pasta", "quantity": 400, "unit": "g", "note": "tagliatelle or linguine" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil.",
+      { "text": "Grate the peel of both lemons and squeeze the juice of one. Warm the peel, juice, butter and oil in a large pan on low for 2 minutes until fragrant.", "tip": "Just warm, never fry: you want the fresh lemon smell." },
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Off the heat, toss the pasta in the lemon pan with the grated parmesan, the pepper and a splash of pasta water until creamy. Tear in the basil.", "tip": "Add the cheese off the heat or it goes stringy. More lemon juice if you like it sharper." }
+    ],
+    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍋"
+  },
+  {
+    "id": "pasta-walnut-sauce", "title": "Pasta with creamy walnut sauce",
+    "description": "Walnuts blended with milk-soaked bread, garlic, parmesan and olive oil into an uncooked sauce from Liguria, loosened with pasta water. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "walnuts", "quantity": 150, "unit": "g" }, { "id": "bread", "quantity": 30, "unit": "g", "note": "white, no crust" },
+      { "id": "milk", "quantity": 40, "unit": "ml" }, { "id": "garlic", "quantity": 3, "unit": "g" },
+      { "id": "oregano", "quantity": 1, "unit": "pinch" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "parmesan", "quantity": 40, "unit": "g" }, { "id": "olive-oil", "quantity": 5, "unit": "tbsp" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "trofie, fusilli or tagliatelle" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil. Soak the bread in the milk for 5 minutes.",
+      { "text": "Blend the walnuts, soaked bread, garlic, oregano, salt and half the parmesan, then blend in the oil into a thick cream.", "tip": "Walnuts can taste bitter: pour boiling water over them for a minute and drain first if yours do." },
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Toss the pasta with the walnut sauce and enough pasta water to make it coat smoothly. Serve with the rest of the parmesan.", "tip": "The sauce is never cooked, so it keeps its fresh nutty taste. It keeps 2 days in the fridge." }
+    ],
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "blender or stick blender"], "illustration": "🌰"
+  },
+  {
+    "id": "pesto-trapanese-pasta", "title": "Pasta with Sicilian tomato and almond pesto",
+    "description": "A raw pesto from Trapani of tomatoes, almonds, basil and garlic blended with olive oil, tossed with hot pasta. A summer favourite. Inspired by An A-Z of Pasta by Rachel Roddy.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 15, "cookMinutes": 12,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "tomato", "quantity": 3, "unit": "piece", "note": "very ripe" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "almonds", "quantity": 100, "unit": "g" }, { "id": "basil", "quantity": 20, "unit": "g" },
+      { "id": "salt", "quantity": 0.75, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "olive-oil", "quantity": 7, "unit": "tbsp" }, { "id": "pasta", "quantity": 400, "unit": "g", "note": "fusilli" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" }
+    ],
+    "steps": [
+      "Put a big pot of salted water on to boil.",
+      { "text": "Toast the almonds in a dry pan for 4 minutes until they smell nutty. Cool them a little.", "tip": "Toasting deepens the flavour. Blanched almonds give a paler, creamier pesto." },
+      { "text": "Blend the almonds with the garlic, basil, salt and pepper until coarse, then add the chopped tomatoes and the oil and pulse to a rough pesto.", "tip": "Keep a little texture: it should not be a smooth purée." },
+      "Cook the pasta until just firm. Keep a cup of the water and drain.",
+      { "text": "Toss the hot pasta with the pesto and a splash of pasta water off the heat. Serve with grated parmesan.", "tip": "Never cook this pesto: the heat of the pasta is enough." }
+    ],
+    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "blender", "frying pan"], "illustration": "🌿"
+  }
+]

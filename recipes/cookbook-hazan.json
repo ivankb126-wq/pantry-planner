@@ -1,0 +1,551 @@
+[
+  {
+    "id": "pasta-tomato-butter-onion", "title": "Pasta with tomato, butter and onion sauce",
+    "description": "Just tomatoes, butter and a halved onion simmered slowly into the sweetest, roundest tomato sauce. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 5, "cookMinutes": 45,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "canned-tomatoes", "quantity": 800, "unit": "g" }, { "id": "butter", "quantity": 70, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "spaghetti, penne or rigatoni" }, { "id": "parmesan", "quantity": 50, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Put the tomatoes with their juice, the butter, the peeled and halved onion and the salt in a pot.", "tip": "That is all. No garlic, no herbs, no oil: the butter does the work." },
+      { "text": "Simmer uncovered on very low heat for 45 minutes, crushing the tomatoes against the side of the pot now and then, until the butter floats in little drops on top.", "tip": "Those drops of fat are how you know the sauce is ready." },
+      "Meanwhile cook the pasta in plenty of salted water until just firm. Drain.",
+      { "text": "Lift out the onion, taste the sauce for salt and toss it with the pasta. Serve with grated parmesan.", "tip": "Eat the soft onion on bread, or blend it into the sauce if you like. The sauce keeps 4 days and freezes well." }
+    ],
+    "tags": ["vegetarian", "kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["pot", "big pot"], "illustration": "🍝"
+  },
+  {
+    "id": "bucatini-amatriciana", "title": "Bucatini all'amatriciana",
+    "description": "Thick spaghetti in a tomato sauce with crisp bacon, sweet onion and a little chili, finished with parmesan and sheep cheese. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" }, { "id": "butter", "quantity": 15, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "bacon", "quantity": 120, "unit": "g", "note": "or pancetta" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "chili-flakes", "quantity": 0.25, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" }, { "id": "pasta", "quantity": 400, "unit": "g", "note": "bucatini or spaghetti" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" }, { "id": "sheep-cheese", "quantity": 30, "unit": "g", "note": "Paški sir or pecorino" }
+    ],
+    "steps": [
+      "Chop the onion finely and cut the bacon into short strips.",
+      { "text": "Soften the onion in the oil and butter on medium for 6 minutes until pale gold. Add the bacon and fry for 2 minutes.", "tip": "Sweet, soft onion balances the salty bacon and the chili." },
+      { "text": "Add the tomatoes, crushed with your hand, the chili and salt. Simmer uncovered for 25 minutes until thick.", "tip": "Taste before salting: the bacon is already salty." },
+      "Meanwhile cook the pasta in plenty of salted water until just firm. Drain.",
+      { "text": "Toss the pasta with the sauce, then with both grated cheeses, and serve.", "tip": "A hard sheep cheese like Paški sir is a lovely Croatian stand-in for pecorino." }
+    ],
+    "tags": ["kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["frying pan", "big pot"], "illustration": "🍝"
+  },
+  {
+    "id": "jota", "title": "Jota (bean and sauerkraut soup)",
+    "description": "The thick soup of Trieste and Istria: beans, sauerkraut, potato and smoked pork, with a little cornmeal for body. Better on day two. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "croatian-istrian", "family": "soup", "servings": 6, "prepMinutes": 20, "cookMinutes": 120,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "smoked-ribs", "quantity": 500, "unit": "g", "note": "or a smoked hock" }, { "id": "bacon", "quantity": 80, "unit": "g" },
+      { "id": "sauerkraut", "quantity": 500, "unit": "g" }, { "id": "cumin", "quantity": 0.5, "unit": "tsp" },
+      { "id": "kidney-beans", "quantity": 800, "unit": "g", "note": "or borlotti, canned" }, { "id": "potato", "quantity": 2, "unit": "piece" },
+      { "id": "bay-leaves", "quantity": 0.5, "unit": "g" }, { "id": "polenta", "quantity": 40, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "flour", "quantity": 10, "unit": "g" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Put the smoked ribs in a big pot with the peeled whole potatoes, bay leaves and {2000 ml} water. Simmer for 1 hour.", "tip": "The smoked meat seasons the whole soup, so add no salt until the end." },
+      { "text": "Meanwhile fry half the bacon, chopped, in a pan for 3 minutes. Add the drained sauerkraut, the cumin and {250 ml} water, cover and stew on low for 45 minutes.", "tip": "Rinse the sauerkraut once if it is very sour or salty." },
+      "Lift out the ribs and potatoes. Mash the potatoes and stir them back in. Take the meat off the bones in pieces and return it.",
+      "Add the drained beans and the sauerkraut and simmer for 30 minutes.",
+      { "text": "Whisk the polenta into {250 ml} cold water, stir it into the soup and simmer for 15 minutes more, stirring often.", "tip": "The cornmeal makes it thick and creamy, the way jota should be." },
+      { "text": "For the finish, fry the rest of the bacon and the finely chopped onion in the oil until golden, add the garlic and flour and stir for 1 minute. Stir into the soup and simmer for 10 minutes. Season with pepper and serve with bread.", "tip": "It keeps 4 days and tastes best the next day. It freezes well." }
+    ],
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "high-protein"], "keepsDays": 4, "equipment": ["big pot", "frying pan"], "illustration": "🍲"
+  },
+  {
+    "id": "white-bean-garlic-soup", "title": "White bean soup with garlic and parsley",
+    "description": "For bean lovers: soft white beans in olive oil and garlic, part of them mashed to thicken, poured over toasted bread. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "servings": 4, "prepMinutes": 10, "cookMinutes": 70,
+    "difficulty": "easy", "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "white-beans", "quantity": 400, "unit": "g", "note": "dried" }, { "id": "olive-oil", "quantity": 6, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "stock-cubes", "quantity": 5, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "The evening before, cover the beans with plenty of cold water and leave them overnight. Drain, cover with fresh water and simmer for 60 minutes until soft. Keep {300 ml} of their water.", "tip": "In a hurry? Use 3 cans of white beans, rinsed, and start at the next step." },
+      { "text": "Warm {5 tbsp} of the oil with the chopped garlic in a pot on low for 2 minutes until very pale gold.", "tip": "Gentle heat: the garlic should smell sweet, not brown." },
+      "Add the beans, salt and pepper, cover and cook for 6 minutes.",
+      { "text": "Dissolve the stock cube in the bean water. Mash a cupful of the beans and stir them back in with the stock. Simmer for 6 minutes more.", "tip": "The mashed beans make it creamy. Add a little water if you like it thinner." },
+      "Toast the bread. Stir the parsley into the soup and ladle it over the toast in bowls, with the rest of the oil drizzled on top."
+    ],
+    "tags": ["vegan", "vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot"], "illustration": "🫘"
+  },
+  {
+    "id": "rice-cabbage-soup", "title": "Rice and slow-cooked cabbage soup",
+    "description": "Cabbage cooked slowly with onion until sweet and soft, then simmered with rice and finished with butter and parmesan. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "servings": 4, "prepMinutes": 10, "cookMinutes": 75,
+    "difficulty": "easy", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cabbage", "quantity": 700, "unit": "g", "note": "savoy (kelj) if you can" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 3, "unit": "tbsp" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "vinegar", "quantity": 15, "unit": "ml" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "risotto-rice", "quantity": 150, "unit": "g" }, { "id": "butter", "quantity": 25, "unit": "g" },
+      { "id": "parmesan", "quantity": 60, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "bread", "quantity": 160, "unit": "g" }
+    ],
+    "steps": [
+      "Shred the cabbage into thin strips and chop the onion.",
+      { "text": "Soften the onion in the oil in a big pot for 5 minutes, add the garlic, then the cabbage and salt. Cover and cook on the lowest heat for 45 minutes, stirring now and then, until very soft and reduced to a third.", "tip": "Slow-cooked cabbage turns sweet and becomes the base of the soup. Add the vinegar halfway." },
+      "Dissolve the stock cubes in {1000 ml} hot water and add it. Bring to the boil.",
+      { "text": "Add the rice and simmer uncovered for 18 to 20 minutes until just soft, adding a little water if it gets too thick.", "tip": "It should be a thick soup, almost a loose risotto." },
+      { "text": "Off the heat, stir in the butter, the grated parmesan and the pepper. Let it rest in the bowls for 2 minutes and serve with bread.", "tip": "The cooked cabbage keeps 3 days on its own, so you can make it ahead." }
+    ],
+    "tags": ["vegetarian", "comfort", "light"], "keepsDays": 2, "equipment": ["big pot"], "illustration": "🥬"
+  },
+  {
+    "id": "penne-cauliflower-anchovy", "title": "Penne with cauliflower, garlic and chili",
+    "description": "Soft cauliflower broken into olive oil with melted anchovies, garlic and chili, part of it mashed into a creamy sauce. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pasta", "servings": 4, "prepMinutes": 10, "cookMinutes": 35,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "cauliflower", "quantity": 1, "unit": "piece" }, { "id": "olive-oil", "quantity": 6, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "anchovies", "quantity": 30, "unit": "g" },
+      { "id": "chili-flakes", "quantity": 0.5, "unit": "tsp" }, { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "pasta", "quantity": 400, "unit": "g", "note": "penne" }, { "id": "breadcrumbs", "quantity": 40, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Cut the cauliflower into large pieces and boil it in plenty of salted water for 12 to 15 minutes until very soft. Lift it out and keep the water for the pasta.", "tip": "Cooking the pasta in the cauliflower water adds flavour for free." },
+      "Toast the breadcrumbs in a dry pan with {1 tbsp} of the oil until golden. Set aside.",
+      { "text": "Warm the rest of the oil with the chopped garlic in a wide pan on low until pale gold. Take the pan off the heat and stir in the chopped anchovies until they melt.", "tip": "Off the heat, anchovies dissolve into the oil without frying, so they taste savoury, not fishy." },
+      { "text": "Put the pan back on medium, add the cauliflower, the chili and salt and break it into small pieces with a spoon, mashing some of it to a cream. Cook for 5 minutes.", "tip": "Taste before salting: anchovies are salty." },
+      "Meanwhile cook the pasta in the cauliflower water until just firm. Drain, keeping a cup of water.",
+      "Toss the pasta with the cauliflower, the parsley and a splash of pasta water. Serve topped with the crunchy breadcrumbs."
+    ],
+    "tags": ["light"], "keepsDays": 2, "equipment": ["big pot", "wide frying pan"], "illustration": "🥦"
+  },
+  {
+    "id": "zucchini-risotto", "title": "Golden zucchini risotto",
+    "description": "Zucchini cooked slowly until golden and melting, so they flavour the whole risotto, with butter and parmesan. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "rice", "servings": 4, "prepMinutes": 15, "cookMinutes": 50,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "zucchini", "quantity": 3, "unit": "piece" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "stock-cubes", "quantity": 10, "unit": "g" },
+      { "id": "butter", "quantity": 30, "unit": "g" }, { "id": "risotto-rice", "quantity": 300, "unit": "g" },
+      { "id": "parmesan", "quantity": 60, "unit": "g" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Cut the zucchini into 1 cm rounds. Dissolve the stock cubes in {1200 ml} hot water and keep it warm on a low heat.",
+      { "text": "Soften the chopped onion in the oil in a wide pot for 5 minutes, add the garlic, then the zucchini. Cook on medium-low for 25 minutes, stirring now and then, until golden and very soft. Salt after 10 minutes.", "tip": "Do not rush this: slow-cooked zucchini turn sweet and give the risotto its flavour." },
+      "Add half the butter, turn up the heat and stir in the rice for 1 minute until coated.",
+      { "text": "Add the stock a ladle at a time, stirring, and wait until it is almost absorbed before adding more. After about 18 minutes the rice should be soft with a little bite.", "tip": "Keep it a little runny at the end: risotto thickens on the plate." },
+      "Off the heat, stir in the pepper, the rest of the butter, the grated parmesan and the parsley. Rest for 1 minute and serve."
+    ],
+    "tags": ["vegetarian", "comfort"], "keepsDays": 1, "equipment": ["wide pot", "pot", "ladle"], "illustration": "🍚"
+  },
+  {
+    "id": "sausage-risotto", "title": "Sausage risotto",
+    "description": "Fresh sausage browned with onion and white wine, then cooked into a creamy parmesan risotto. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "rice", "servings": 4, "prepMinutes": 5, "cookMinutes": 35,
+    "difficulty": "medium", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "stock-cubes", "quantity": 10, "unit": "g" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "butter", "quantity": 30, "unit": "g" }, { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "sausages", "quantity": 300, "unit": "g", "note": "fresh, mild" }, { "id": "white-wine", "quantity": 60, "unit": "ml" },
+      { "id": "risotto-rice", "quantity": 300, "unit": "g" }, { "id": "parmesan", "quantity": 40, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "lettuce", "quantity": 0.5, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" }, { "id": "vinegar", "quantity": 10, "unit": "ml" }
+    ],
+    "steps": [
+      "Dissolve the stock cubes in {1200 ml} hot water and keep it warm on a low heat.",
+      { "text": "Soften the chopped onion in half the butter and the sunflower oil for 5 minutes. Slice the sausages into rounds, add them and brown on both sides.", "tip": "Croatian fresh kobasice work well. Squeeze the meat out of the skins if they are thick." },
+      "Pour in the wine and let it bubble away.",
+      { "text": "Add the rice and stir for 1 minute, then add the stock a ladle at a time, stirring, until the rice is soft with a little bite, about 18 minutes.", "tip": "No salt needed: the sausage and stock bring plenty." },
+      "Off the heat, stir in the pepper, the rest of the butter and the grated parmesan.",
+      "Serve with a green salad dressed with the olive oil and vinegar."
+    ],
+    "tags": ["comfort", "kid-friendly"], "keepsDays": 1, "equipment": ["wide pot", "pot", "ladle"], "illustration": "🍚"
+  },
+  {
+    "id": "gnocchi-alla-romana", "title": "Gnocchi alla romana (baked semolina rounds)",
+    "description": "Semolina cooked in milk, set, cut into rounds and baked golden with ham, butter and parmesan. Can be made two days ahead. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "oven", "servings": 4, "prepMinutes": 30, "cookMinutes": 40,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "milk", "quantity": 1000, "unit": "ml" }, { "id": "semolina", "quantity": 200, "unit": "g" },
+      { "id": "parmesan", "quantity": 100, "unit": "g" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "eggs", "quantity": 3, "unit": "piece", "note": "yolks only" }, { "id": "butter", "quantity": 50, "unit": "g" },
+      { "id": "ham", "quantity": 100, "unit": "g" }, { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "lettuce", "quantity": 0.5, "unit": "piece" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 10, "unit": "ml" }
+    ],
+    "steps": [
+      { "text": "Heat the milk in a heavy pot until small bubbles appear. Turn the heat down and pour in the semolina in a thin stream, whisking all the time.", "tip": "Pouring slowly while whisking is what stops lumps." },
+      { "text": "Switch to a wooden spoon and stir for 15 minutes until very thick and it pulls away from the sides of the pot.", "tip": "Cook it long enough, or the rounds melt into each other in the oven." },
+      "Off the heat, quickly beat in two thirds of the parmesan, the salt, nutmeg, the egg yolks and {20 g} of the butter.",
+      { "text": "Spread it 1 cm thick on a wet tray or worktop and leave it to cool completely, about 30 minutes.", "tip": "Wetting the surface stops it sticking." },
+      "Heat the oven to 200 °C. Cut rounds with a small glass and overlap them like roof tiles in a buttered baking dish. Scatter the chopped ham, the rest of the parmesan and small pieces of the rest of the butter on top.",
+      { "text": "Bake for 15 to 20 minutes until golden and bubbling. Rest for 5 minutes and serve with a green salad dressed with the oil and vinegar.", "tip": "Bake the leftover trimmings in a small dish too. Nothing is wasted." }
+    ],
+    "tags": ["comfort", "make-ahead", "kid-friendly"], "keepsDays": 2, "equipment": ["heavy pot", "whisk", "baking dish", "small glass"], "illustration": "🧀"
+  },
+  {
+    "id": "polenta-pasticciata", "title": "Baked polenta with meat sauce",
+    "description": "Slices of set polenta layered like lasagne with a beef ragù, béchamel and parmesan, baked until golden. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "oven", "servings": 6, "prepMinutes": 25, "cookMinutes": 75,
+    "difficulty": "medium", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "polenta", "quantity": 250, "unit": "g", "note": "instant" }, { "id": "minced-beef", "quantity": 400, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" }, { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "milk", "quantity": 600, "unit": "ml" }, { "id": "butter", "quantity": 50, "unit": "g" },
+      { "id": "flour", "quantity": 30, "unit": "g" }, { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "parmesan", "quantity": 60, "unit": "g" }, { "id": "salt", "quantity": 2, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Cook the polenta in {1000 ml} boiling salted water as the packet says, stirring, until thick. Spread it 1.5 cm thick on an oiled tray and leave to cool and set.", "tip": "Leftover polenta from another meal is perfect here." },
+      { "text": "Make the ragù: soften the finely chopped onion and carrot in the oil for 8 minutes, add the beef and brown it, breaking it up. Add {100 ml} of the milk and let it cook away, then add the tomatoes and half the remaining salt and simmer for 40 minutes.", "tip": "A splash of milk before the tomatoes makes the meat tender, the Bolognese way." },
+      { "text": "Make the béchamel: melt the butter, stir in the flour for 1 minute, then whisk in the rest of the milk. Simmer for 4 minutes until thick, with the nutmeg and the rest of the salt.", "tip": "Keep it a little runny: the polenta soaks some up." },
+      "Heat the oven to 220 °C. Cut the polenta into slices 1 cm thick.",
+      "In a buttered baking dish, layer polenta, ragù mixed with some béchamel, and parmesan. Repeat, ending with béchamel and parmesan.",
+      { "text": "Bake for 15 to 20 minutes until a golden crust forms. Rest for 5 minutes before cutting.", "tip": "It keeps 3 days and freezes well." }
+    ],
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["pot", "frying pan", "baking dish", "tray"], "illustration": "🌽"
+  },
+  {
+    "id": "pollo-al-limone", "title": "Roast chicken with two lemons",
+    "description": "A whole chicken with two pricked lemons inside and nothing else. The lemons steam it and the juices become the sauce. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "oven", "servings": 4, "prepMinutes": 15, "cookMinutes": 90,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "whole-chicken", "quantity": 1500, "unit": "g" }, { "id": "lemon", "quantity": 2, "unit": "piece", "note": "small" },
+      { "id": "salt", "quantity": 2, "unit": "tsp" }, { "id": "black-pepper", "quantity": 1, "unit": "tsp" },
+      { "id": "potato", "quantity": 1000, "unit": "g" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "rosemary", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Heat the oven to 180 °C. Dry the chicken very well inside and out with kitchen paper and rub it all over and inside with most of the salt and the pepper.", "tip": "A dry skin is what lets it puff up and turn golden." },
+      { "text": "Roll the lemons hard on the worktop, prick each one about 20 times with a fork and push both inside the chicken. Close the opening loosely with a toothpick and tie the legs together.", "tip": "Do not sew it airtight: a little steam has to escape." },
+      "Put the chicken breast side down in a roasting tin and roast for 30 minutes.",
+      { "text": "Turn it breast side up, carefully so the skin does not tear, and roast for 30 minutes more. Meanwhile toss the potato chunks with the oil, rosemary and the rest of the salt on a second tray and put them in the oven.", "tip": "The skin may puff up like a balloon. That is a good sign." },
+      { "text": "Turn the oven up to 200 °C and roast both for 20 minutes more, until the chicken is deep golden and the juices run clear.", "tip": "Pierce the thickest part of the thigh: the juice should be clear, not pink." },
+      "Bring the chicken to the table whole, carve it and spoon the lemony juices over each piece. Serve with the potatoes."
+    ],
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "kitchen string"], "illustration": "🍋"
+  },
+  {
+    "id": "turkey-pizzaiola", "title": "Turkey scaloppine pizzaiola",
+    "description": "Thin turkey slices browned and simmered briefly in a garlicky tomato sauce with oregano and capers, like a pizza topping. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "pan-grill", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "difficulty": "easy", "mainProtein": "turkey",
+    "ingredients": [
+      { "id": "turkey-breast", "quantity": 600, "unit": "g" }, { "id": "flour", "quantity": 30, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "white-wine", "quantity": 80, "unit": "ml" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "butter", "quantity": 15, "unit": "g" }, { "id": "oregano", "quantity": 1, "unit": "tsp" },
+      { "id": "capers", "quantity": 20, "unit": "g" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Cut the turkey into thin slices and flatten them between baking paper with a rolling pin until about 5 mm thick.", "tip": "Thin, even slices cook in a minute and stay tender." },
+      { "text": "Warm the oil with the peeled garlic cloves in a large frying pan until the garlic is nut brown, then throw the garlic away.", "tip": "The garlic only flavours the oil." },
+      "Dust the turkey with flour and brown it on high for 1 minute on each side, in batches. Lift it out and season with half the salt and the pepper.",
+      { "text": "Pour the wine into the pan and scrape up the brown bits. Add the tomatoes, crushed, the butter and the rest of the salt and simmer for 15 minutes until thick and the fat separates.", "tip": "When little drops of oil appear on the surface, the sauce is ready." },
+      "Stir in the oregano and capers, put the turkey and its juices back for 1 minute and serve with bread for the sauce."
+    ],
+    "tags": ["high-protein", "light"], "keepsDays": 2, "equipment": ["large frying pan", "rolling pin"], "illustration": "🍅"
+  },
+  {
+    "id": "beef-stew-red-wine-peas", "title": "Beef stew with red wine, carrots and peas",
+    "description": "Beef braised slowly in red wine and olive oil with small onions, carrots and peas added in stages. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 6, "prepMinutes": 25, "cookMinutes": 135,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "beef", "quantity": 900, "unit": "g", "note": "chuck, for stewing" },
+      { "id": "red-wine", "quantity": 375, "unit": "ml" }, { "id": "onion", "quantity": 6, "unit": "piece", "note": "small ones" },
+      { "id": "carrot", "quantity": 4, "unit": "piece" }, { "id": "celeriac", "quantity": 150, "unit": "g" },
+      { "id": "peas", "quantity": 400, "unit": "g", "note": "frozen" }, { "id": "olive-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" },
+      { "id": "polenta", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Cut the beef into 5 cm cubes. Brown them deeply in the sunflower oil in a heavy pot, in batches. Pour off the fat and pour in {125 ml} of the wine, scraping up the brown bits.", "tip": "Deep browning is where the flavour comes from. Do not crowd the pot." },
+      "Peel the small onions and leave them whole. Cut the carrots into thick sticks and the celeriac into cubes.",
+      { "text": "Put all the beef back with the onions, the olive oil and the rest of the wine. Cover tightly and cook on the lowest heat.", "tip": "Only wine, oil and vegetables: no stock, no tomato. That is why it tastes so clean." },
+      { "text": "After 15 minutes add the carrots, after 45 more add the celeriac. Cook for about 1 hour more until the beef is tender, adding a splash of water if it dries out. Season with the salt and pepper.", "tip": "Adding the vegetables in stages keeps each one from turning to mush." },
+      "Add the peas for the last 10 minutes.",
+      { "text": "Meanwhile cook the polenta in {1000 ml} boiling salted water as the packet says. Serve the stew on the soft polenta.", "tip": "The stew keeps 4 days and freezes well." }
+    ],
+    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["heavy pot with a lid", "pot"], "illustration": "🥩"
+  },
+  {
+    "id": "meatballs-savoy-cabbage", "title": "Meatballs with slow-cooked cabbage",
+    "description": "Parmesan meatballs finished in slow-cooked, sweet cabbage with a little tomato. Close to kelj s mesom. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 4, "prepMinutes": 25, "cookMinutes": 80,
+    "difficulty": "easy", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "milk", "quantity": 80, "unit": "ml" }, { "id": "bread", "quantity": 40, "unit": "g", "note": "plus bread to serve" },
+      { "id": "minced-beef", "quantity": 500, "unit": "g" }, { "id": "bacon", "quantity": 50, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" }, { "id": "parmesan", "quantity": 30, "unit": "g" },
+      { "id": "breadcrumbs", "quantity": 60, "unit": "g" }, { "id": "sunflower-oil", "quantity": 60, "unit": "ml" },
+      { "id": "cabbage", "quantity": 700, "unit": "g", "note": "savoy (kelj) if you can" }, { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "garlic", "quantity": 10, "unit": "g" }, { "id": "canned-tomatoes", "quantity": 200, "unit": "g" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Shred the cabbage into strips 5 mm wide. Warm the olive oil and chopped garlic in a big pot, add the cabbage and half the salt, cover and cook on the lowest heat for 45 minutes, stirring now and then, until very soft.", "tip": "It shrinks to a third. Slow cooking makes it sweet." },
+      { "text": "Meanwhile soak the bread (no crust) in the milk and mash it. Mix gently with the beef, the finely chopped bacon, egg, parsley, grated onion, parmesan, the rest of the salt and the pepper. Shape into 4 cm balls.", "tip": "The milky bread is what keeps the meatballs soft. Mix with a light hand." },
+      "Roll the meatballs in breadcrumbs and brown them in the sunflower oil in a frying pan for 5 minutes. Drain on kitchen paper.",
+      "Uncover the cabbage and cook on medium for 5 minutes until lightly browned. Add the tomatoes and cook for 15 minutes.",
+      { "text": "Add the meatballs, cover and simmer for 15 minutes, turning them once. Serve with bread.", "tip": "It keeps 3 days and tastes even better reheated." }
+    ],
+    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot with a lid", "frying pan"], "illustration": "🥬"
+  },
+  {
+    "id": "polpettone-porcini", "title": "Italian meatloaf in porcini and tomato sauce",
+    "description": "Beef meatloaf braised in white wine, porcini and tomato so every slice stays moist. With mash. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 4, "prepMinutes": 30, "cookMinutes": 70,
+    "difficulty": "medium", "mainProtein": "beef",
+    "ingredients": [
+      { "id": "dried-porcini", "quantity": 20, "unit": "g" }, { "id": "bread", "quantity": 40, "unit": "g" },
+      { "id": "milk", "quantity": 150, "unit": "ml" }, { "id": "minced-beef", "quantity": 600, "unit": "g" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" }, { "id": "ham", "quantity": 50, "unit": "g" },
+      { "id": "parmesan", "quantity": 40, "unit": "g" }, { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" }, { "id": "breadcrumbs", "quantity": 40, "unit": "g" },
+      { "id": "butter", "quantity": 40, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "white-wine", "quantity": 80, "unit": "ml" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "potato", "quantity": 800, "unit": "g" }, { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Soak the porcini in {200 ml} hot water for 20 minutes. Lift them out, chop them and keep the water, poured off its grit.", "tip": "Leave the last spoonful of soaking water in the cup: that is where the sand settles." },
+      { "text": "Soak the bread in {3 tbsp} of the milk and mash it. Mix with the beef, very finely chopped onion and ham, the parmesan, garlic, egg, {1 tsp} of the salt and the pepper. Shape into a log about 6 cm thick and roll it in breadcrumbs.", "tip": "Tap it on the worktop to push out air pockets, so it does not crack." },
+      "Brown the log carefully on all sides in half the butter and the oil in a pot that just fits it, turning with two spatulas. Pour in the wine and let it reduce by half.",
+      { "text": "Add the porcini, their water and the tomatoes. Cover and simmer for 30 minutes, then set the lid ajar and cook for 30 minutes more, turning and basting once.", "tip": "Braising instead of baking is what keeps it so juicy." },
+      "Meanwhile boil the peeled potatoes for 20 minutes and mash them with the rest of the milk, butter and salt.",
+      "Rest the meatloaf for 5 minutes, slice it 1 cm thick and serve with the mash and plenty of sauce."
+    ],
+    "tags": ["high-protein", "comfort", "festive"], "keepsDays": 3, "equipment": ["snug pot with a lid", "pot", "2 spatulas"], "illustration": "🍖"
+  },
+  {
+    "id": "maiale-al-latte", "title": "Pork braised in milk",
+    "description": "Pork neck cooked slowly in milk until the milk turns into nutty, golden clusters of sauce. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 6, "prepMinutes": 10, "cookMinutes": 170,
+    "difficulty": "medium", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "pork-neck", "quantity": 1000, "unit": "g", "note": "one piece, tied" }, { "id": "butter", "quantity": 15, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" }, { "id": "salt", "quantity": 2, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp" }, { "id": "milk", "quantity": 750, "unit": "ml" },
+      { "id": "potato", "quantity": 1000, "unit": "g" }, { "id": "green-beans", "quantity": 450, "unit": "g" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }
+    ],
+    "steps": [
+      { "text": "Brown the pork on all sides in the butter and sunflower oil in a heavy pot that just fits it, about 10 minutes. Season with {1.5 tsp} of the salt and the pepper.", "tip": "Do not trim the fat: it keeps the meat moist through the long cooking." },
+      { "text": "Slowly pour in {250 ml} of the milk. Let it bubble for 30 seconds, then turn the heat as low as it goes, set the lid ajar and cook for 1 hour, until the milk has thickened and turned light brown.", "tip": "The laziest simmer you can manage: a bubble here and there." },
+      "Add {250 ml} more milk, simmer for 10 minutes, then cover fully for 30 minutes. Set the lid ajar again.",
+      { "text": "When the milk is almost gone, add the rest. Keep cooking until the meat is very tender and the milk has become small nut-brown clusters, about 2.5 hours in all.", "tip": "The clusters look odd but they are the best part. Add a splash of water if it starts to catch." },
+      "Meanwhile boil the potatoes and the green beans in salted water until soft. Toss with the olive oil and the rest of the salt.",
+      { "text": "Slice the pork, spoon off the fat, stir {3 tbsp} water into the pot to loosen the brown bits and spoon them over the meat. Serve with the vegetables.", "tip": "It keeps 3 days. Cold slices make great sandwiches." }
+    ],
+    "tags": ["high-protein", "festive", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["heavy pot with a lid", "2 pots"], "illustration": "🥛"
+  },
+  {
+    "id": "sausages-onions-tomato", "title": "Sausages with slow onions, pepper and polenta",
+    "description": "Fresh sausages cooked in a sauce of deep golden onions, tomato and sweet pepper, served on soft polenta. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 4, "prepMinutes": 10, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "sunflower-oil", "quantity": 3, "unit": "tbsp" }, { "id": "onion", "quantity": 3, "unit": "piece" },
+      { "id": "canned-tomatoes", "quantity": 400, "unit": "g" }, { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "sausages", "quantity": 500, "unit": "g", "note": "fresh pork" }, { "id": "polenta", "quantity": 250, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Slice the onions very thinly. Cook them in the oil in a wide pan, covered, on medium for 10 minutes until wilted, then uncover and cook for 15 minutes more until deep gold.", "tip": "Golden onions are the sauce, so give them time." },
+      "Add the tomatoes, crushed, and half the salt and simmer uncovered for 20 minutes until the oil separates.",
+      { "text": "Cut the pepper into thin strips. Prick the sausages a few times with a fork. Add both to the pan, cover and cook for 20 minutes, turning the sausages now and then.", "tip": "Pricking lets the fat out so the sausages do not burst." },
+      "Meanwhile cook the polenta in {1000 ml} boiling water with the rest of the salt as the packet says.",
+      { "text": "Spoon off any fat from the sauce and serve the sausages and sauce on the polenta.", "tip": "Leftover sauce and sausage make a great pasta sauce the next day." }
+    ],
+    "tags": ["comfort", "kid-friendly"], "keepsDays": 2, "equipment": ["wide frying pan with a lid", "pot"], "illustration": "🌭"
+  },
+  {
+    "id": "squid-peas-tomato", "title": "Squid stewed with tomato and peas",
+    "description": "Squid rings simmered slowly in a garlicky tomato sauce until tender, with sweet peas. Close to Croatian lignje na tečo. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "stew", "servings": 4, "prepMinutes": 20, "cookMinutes": 60,
+    "difficulty": "easy", "mainProtein": "seafood",
+    "ingredients": [
+      { "id": "squid", "quantity": 800, "unit": "g", "note": "cleaned, fresh or frozen" }, { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" }, { "id": "garlic", "quantity": 10, "unit": "g" },
+      { "id": "parsley", "quantity": 15, "unit": "g" }, { "id": "canned-tomatoes", "quantity": 400, "unit": "g" },
+      { "id": "peas", "quantity": 400, "unit": "g", "note": "frozen" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }, { "id": "bread", "quantity": 300, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Thaw the squid if frozen. Cut the bodies into rings and the tentacles in halves.", "tip": "Pat them dry so they do not spit in the pan." },
+      "Soften the finely chopped onion in the oil for 6 minutes, add the garlic and most of the parsley, then the tomatoes. Simmer for 10 minutes.",
+      { "text": "Add the squid, cover and simmer very gently for 40 minutes until tender. Season with the salt and pepper.", "tip": "Squid is tender either very fast or very slow. Anything in between is rubbery, so be patient." },
+      "Add the peas and cook for 5 minutes more.",
+      { "text": "Scatter with the rest of the parsley and serve with bread.", "tip": "Leftovers, chopped, make a lovely pasta sauce." }
+    ],
+    "tags": ["high-protein", "light"], "keepsDays": 2, "equipment": ["pot with a lid"], "illustration": "🦑"
+  },
+  {
+    "id": "parmigiana-di-melanzane", "title": "Parmigiana di melanzane (eggplant parmesan)",
+    "description": "Layers of floured, fried eggplant, thick tomato sauce, mozzarella, parmesan and basil, baked until bubbling. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "oven", "servings": 6, "prepMinutes": 45, "cookMinutes": 60,
+    "difficulty": "medium", "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "eggplant", "quantity": 4, "unit": "piece" }, { "id": "salt", "quantity": 2, "unit": "tsp" },
+      { "id": "flour", "quantity": 60, "unit": "g" }, { "id": "sunflower-oil", "quantity": 150, "unit": "ml", "note": "for frying" },
+      { "id": "canned-tomatoes", "quantity": 800, "unit": "g" }, { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "mozzarella", "quantity": 250, "unit": "g" }, { "id": "basil", "quantity": 10, "unit": "g" },
+      { "id": "parmesan", "quantity": 70, "unit": "g" }, { "id": "butter", "quantity": 10, "unit": "g" },
+      { "id": "bread", "quantity": 240, "unit": "g" }
+    ],
+    "steps": [
+      { "text": "Slice the eggplants lengthwise 1 cm thick, sprinkle with {1.5 tsp} of the salt and leave in a colander for 30 minutes. Pat them very dry.", "tip": "Salting draws out water, so they fry crisp and soak up less oil." },
+      "Meanwhile simmer the tomatoes with the olive oil and the rest of the salt for 20 minutes, until reduced by half.",
+      { "text": "Dust the eggplant slices with flour just before frying and fry them in the sunflower oil, a few at a time, until golden on both sides. Drain on kitchen paper.", "tip": "Prefer less oil? Brush the slices with oil and roast them at 220 °C for 20 minutes instead." },
+      "Heat the oven to 200 °C. Slice the mozzarella thinly.",
+      "In a buttered baking dish, layer eggplant, tomato sauce, mozzarella, parmesan and torn basil. Repeat, ending with eggplant and parmesan.",
+      { "text": "Bake for 20 minutes, press it down gently and spoon off any extra liquid, then bake for 15 minutes more. Rest for 10 minutes and serve with bread.", "tip": "Pouring off the juices halfway keeps it from going watery. It is even better the next day." }
+    ],
+    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["colander", "frying pan", "pot", "baking dish"], "illustration": "🍆"
+  },
+  {
+    "id": "panzanella-tuna", "title": "Panzanella (Tuscan bread salad) with tuna",
+    "description": "Stale bread soaked in tomato juice, tossed with tomato, cucumber, pepper, anchovy dressing and tuna. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "salad", "servings": 4, "prepMinutes": 30, "cookMinutes": 5,
+    "difficulty": "easy", "mainProtein": "fish",
+    "ingredients": [
+      { "id": "bread", "quantity": 300, "unit": "g", "note": "stale, firm" }, { "id": "tomato", "quantity": 5, "unit": "piece" },
+      { "id": "cucumber", "quantity": 1, "unit": "piece" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece", "note": "red if you can" }, { "id": "garlic", "quantity": 3, "unit": "g" },
+      { "id": "anchovies", "quantity": 15, "unit": "g" }, { "id": "capers", "quantity": 10, "unit": "g" },
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "vinegar", "quantity": 15, "unit": "ml" },
+      { "id": "basil", "quantity": 8, "unit": "g" }, { "id": "tuna-canned", "quantity": 160, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }, { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Cut the bread into 2 cm cubes and toast them in a dry pan or the oven until crisp at the edges.",
+      { "text": "Grate one tomato over the bread in a bowl, throw away the skin, sprinkle with a little salt and leave for 15 minutes.", "tip": "Tomato juice instead of water flavours the bread without making it soggy." },
+      "Meanwhile slice the onion thinly and soak it in cold water for 10 minutes to soften its bite.",
+      { "text": "Mash the garlic, anchovies and capers with a fork into a paste in a big bowl, then whisk in the oil, vinegar and pepper.", "tip": "Taste before adding more salt: the anchovies and capers are salty." },
+      "Cut the other tomatoes, the cucumber and the pepper into bite-size pieces. Drain the onion and the tuna.",
+      { "text": "Toss everything together with the bread and torn basil and serve within the hour.", "tip": "A summer dish: it is only as good as your tomatoes." }
+    ],
+    "tags": ["light", "no-cook"], "keepsDays": 1, "equipment": ["big bowl", "grater", "frying pan"], "illustration": "🥗"
+  },
+  {
+    "id": "rice-chicken-salad", "title": "Italian rice salad with chicken",
+    "description": "Rice in a mustard dressing with small cubes of chicken, cheese, olives, pepper and gherkins. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "salad", "servings": 4, "prepMinutes": 25, "cookMinutes": 25,
+    "difficulty": "easy", "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "rice", "quantity": 250, "unit": "g" }, { "id": "chicken-breast", "quantity": 400, "unit": "g" },
+      { "id": "mustard", "quantity": 1, "unit": "tsp" }, { "id": "vinegar", "quantity": 15, "unit": "ml" },
+      { "id": "olive-oil", "quantity": 5, "unit": "tbsp" }, { "id": "hard-cheese", "quantity": 80, "unit": "g" },
+      { "id": "olives", "quantity": 80, "unit": "g" }, { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "pickles", "quantity": 60, "unit": "g" }, { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "salt", "quantity": 1, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Put the chicken in a pot of cold water with a pinch of salt, bring to a simmer and cook gently for 15 minutes. Leave it to cool in the water.", "tip": "Cooling in the water keeps it juicy. Leftover roast chicken works too." },
+      "Boil the rice in plenty of salted water for 12 minutes until tender but firm. Drain, rinse under cold water and drain well.",
+      "Whisk the mustard, salt and vinegar in a big bowl, then whisk in the oil.",
+      { "text": "Cut the chicken, cheese, olives, pepper and gherkins into small cubes, all about the same size.", "tip": "Small, even pieces are the point of this salad." },
+      { "text": "Toss the rice in the dressing, then add everything else and the parsley and toss well.", "tip": "Serve it cool, not fridge-cold: cold dulls the flavour. It keeps 2 days and is great for lunch boxes." }
+    ],
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["2 pots", "big bowl"], "illustration": "🥗"
+  },
+  {
+    "id": "sbrisolona", "title": "Sbrisolona (crumbly almond and cornmeal cake)",
+    "description": "Not pressed but crumbled into the tin, so it bakes into a crunchy, buttery slab you break into rough pieces. Perfect with coffee. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["dessert"], "cuisine": "italian", "family": "baking", "servings": 10, "prepMinutes": 20, "cookMinutes": 40,
+    "difficulty": "easy", "mainProtein": "nuts",
+    "ingredients": [
+      { "id": "almonds", "quantity": 115, "unit": "g" }, { "id": "flour", "quantity": 190, "unit": "g" },
+      { "id": "polenta", "quantity": 110, "unit": "g", "note": "fine" }, { "id": "sugar", "quantity": 125, "unit": "g" },
+      { "id": "lemon", "quantity": 1, "unit": "piece", "note": "grated peel" }, { "id": "eggs", "quantity": 2, "unit": "piece", "note": "yolks only" },
+      { "id": "butter", "quantity": 125, "unit": "g", "note": "soft" }
+    ],
+    "steps": [
+      "Heat the oven to 190 °C and butter a 28 to 30 cm round tin.",
+      { "text": "Grind the almonds to a coarse powder in a blender, in short pulses.", "tip": "Short pulses, or they turn into almond butter." },
+      "Mix the almonds with the flour, polenta, sugar and grated lemon peel. Work in the yolks with your fingers until it looks like small crumbs.",
+      { "text": "Knead in the soft butter until it all comes together into a crumbly dough.", "tip": "It seems impossible at first, then suddenly it works. Keep going." },
+      { "text": "Crumble the dough evenly into the tin through your fingers. Do not press it down.", "tip": "Leaving it loose is what makes it crunchy and craggy." },
+      { "text": "Bake for 35 to 40 minutes until golden. Cool completely, then break into rough pieces.", "tip": "It keeps a week in a tin." }
+    ],
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 7, "equipment": ["28 to 30 cm round tin", "blender"], "illustration": "🍪"
+  },
+  {
+    "id": "caramel-bread-pudding", "title": "Caramel bread pudding with raisins",
+    "description": "Stale bread, milk and raisins lightened with egg whites, baked in caramel and turned out like a flan. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["dessert"], "cuisine": "italian", "family": "pudding", "servings": 8, "prepMinutes": 30, "cookMinutes": 75,
+    "difficulty": "medium", "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "sugar", "quantity": 200, "unit": "g" }, { "id": "bread", "quantity": 150, "unit": "g", "note": "stale, no crust" },
+      { "id": "butter", "quantity": 60, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },
+      { "id": "raisins", "quantity": 80, "unit": "g" }, { "id": "walnuts", "quantity": 35, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" }
+    ],
+    "steps": [
+      { "text": "Make the caramel: melt {150 g} of the sugar with {3 tbsp} water in a loaf tin (about 2 litres) on the hob, swirling, until dark amber. Tilt the tin to coat the bottom and sides. Leave to cool.", "tip": "Use oven gloves: caramel is extremely hot. A small pan works too, then pour it into the tin." },
+      "Heat the oven to 190 °C. Toast the bread lightly and break it into pieces in a bowl with the butter.",
+      { "text": "Heat the milk until it starts to bubble and pour it over the bread. Leave until lukewarm, then beat into a soft mash.", "tip": "Soak the raisins in warm water meanwhile so they are plump." },
+      "Separate the eggs. Stir the drained raisins, chopped walnuts, the rest of the sugar and the yolks into the bread.",
+      { "text": "Whisk the whites to stiff peaks and fold them in gently. Pour into the caramel tin.", "tip": "The whites make it much lighter than an ordinary bread pudding." },
+      { "text": "Bake for 1 hour, then turn the oven down to 150 °C for 15 minutes. While warm, run a knife round the edge and turn it out onto a plate.", "tip": "A few spoons of rum poured over is the traditional finish, if you like." }
+    ],
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["2 litre loaf tin", "bowl", "whisk"], "illustration": "🍮"
+  },
+  {
+    "id": "piadina", "title": "Piadina with pršut, mozzarella and tomato",
+    "description": "Thin griddle flatbreads made without yeast or oven, filled with pršut, mozzarella and tomato. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "bread", "servings": 4, "prepMinutes": 25, "cookMinutes": 25,
+    "difficulty": "medium", "mainProtein": "pork",
+    "ingredients": [
+      { "id": "flour", "quantity": 400, "unit": "g" }, { "id": "lard", "quantity": 60, "unit": "g", "note": "or olive oil" },
+      { "id": "milk", "quantity": 60, "unit": "ml" }, { "id": "salt", "quantity": 1, "unit": "tsp" },
+      { "id": "baking-soda", "quantity": 1, "unit": "pinch" }, { "id": "prosciutto", "quantity": 100, "unit": "g" },
+      { "id": "mozzarella", "quantity": 250, "unit": "g" }, { "id": "tomato", "quantity": 2, "unit": "piece" },
+      { "id": "lettuce", "quantity": 0.5, "unit": "piece", "note": "or rocket" }
+    ],
+    "steps": [
+      { "text": "Melt the lard gently. Put the flour in a bowl, add the lard, milk, salt, baking soda and about {100 ml} lukewarm water and knead for 8 minutes into a smooth dough.", "tip": "You can rest it wrapped for up to 2 hours if you want to make it ahead." },
+      "Cut into 6 pieces and roll each into a very thin round, about 20 cm across.",
+      { "text": "Heat a heavy dry frying pan until a drop of water dances on it. Cook a round for 10 seconds, turn it, cook 10 seconds, then prick it with a fork and cook for 3 to 4 minutes more, turning often, until dry with brown spots.", "tip": "No oil at all: a very hot dry pan is the whole trick." },
+      "Stack the cooked piadine under a clean towel to keep them soft and warm.",
+      "Fill each one with pršut, sliced mozzarella, tomato and leaves, fold in half and eat warm."
+    ],
+    "tags": ["kid-friendly"], "keepsDays": 1, "equipment": ["heavy frying pan", "rolling pin"], "illustration": "🫓"
+  },
+  {
+    "id": "focaccia-onions", "title": "Focaccia with onions",
+    "description": "Soft Genoese focaccia with dimples full of olive oil brine and a topping of sweet sliced onion. Great as a snack or with soup. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["snack"], "cuisine": "italian", "family": "bread", "servings": 10, "prepMinutes": 40, "cookMinutes": 160,
+    "difficulty": "medium", "mainProtein": "none",
+    "ingredients": [
+      { "id": "dry-yeast", "quantity": 7, "unit": "g" }, { "id": "flour", "quantity": 750, "unit": "g" },
+      { "id": "olive-oil", "quantity": 8, "unit": "tbsp" }, { "id": "salt", "quantity": 2.5, "unit": "tsp" },
+      { "id": "onion", "quantity": 4, "unit": "piece" }
+    ],
+    "steps": [
+      { "text": "Stir the yeast into {120 ml} lukewarm water and leave for 10 minutes. Mix with the flour, {2 tbsp} of the oil, {2 tsp} of the salt and about {300 ml} more lukewarm water into a soft dough. Knead for 10 minutes.", "tip": "Slap the dough down hard on the worktop now and then: it makes it springy." },
+      "Oil a large baking tray with {2 tbsp} of the oil, put the dough on it, cover with a damp cloth and leave to rise for 1.5 hours.",
+      "Meanwhile cook the thinly sliced onions in {2 tbsp} of the oil for 10 minutes until soft but still with a little bite.",
+      "Stretch the dough to fill the tray, about 1 cm thick, and leave to rise for 45 minutes more. Heat the oven to 230 °C.",
+      { "text": "Press deep dimples all over with your fingertips. Whisk the rest of the oil with {2 tbsp} water and the rest of the salt and brush it on so it pools in the dimples. Scatter the onions over.", "tip": "The pools of oil and salty water are what give focaccia its soft crumb and crisp top." },
+      { "text": "Bake for 20 to 25 minutes until golden. Cool on a rack and cut into squares.", "tip": "It keeps 2 days wrapped, and freezes well." }
+    ],
+    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "freezer-friendly"], "keepsDays": 2, "equipment": ["large baking tray", "big bowl"], "illustration": "🫓"
+  }
+]
