@@ -202,7 +202,7 @@
   {
     "id": "overnight-oats-jars", "title": "Overnight oats jars with berries",
     "description": "Four jars of oats soaked in milk and yogurt with chia and berries, ready to grab all week.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "ahead": "make the oats", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 400, "unit": "ml" },
@@ -220,7 +220,7 @@
   {
     "id": "apple-peanut-overnight-oats", "title": "Apple pie overnight oats",
     "description": "Overnight oats with grated apple, cinnamon, peanut butter and raisins. Four jars for the week.",
-    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["snack", "breakfast"], "cuisine": "everyday", "family": "porridge", "ahead": "make the oats", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 200, "unit": "g" }, { "id": "milk", "quantity": 500, "unit": "ml" },

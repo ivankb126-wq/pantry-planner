@@ -117,7 +117,7 @@
   {
     "id": "tavce-gravce", "title": "Tavče gravče (Macedonian baked beans)",
     "description": "White beans cooked soft, then baked with a paprika and onion zaprška until a thin crust forms on top. Cheap, filling and even better the next day. Inspired by The Balkan Kitchen by Irina Janakievska.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "stew", "servings": 6, "prepMinutes": 20, "cookMinutes": 120,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "balkan", "family": "stew", "ahead": "soak the beans", "servings": 6, "prepMinutes": 20, "cookMinutes": 120,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "white-beans", "quantity": 500, "unit": "g", "note": "dried" }, { "id": "baking-soda", "quantity": 1, "unit": "pinch" },

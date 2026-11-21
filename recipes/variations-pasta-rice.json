@@ -341,7 +341,7 @@
     "title": "Prawn fried rice",
     "description": "Day-old rice fried hot with prawns, egg, peas and carrot, seasoned with soy, ginger and sesame.",
     "mealTypes": ["lunch", "dinner"],
-    "cuisine": "chinese", "family": "rice",
+    "cuisine": "chinese", "family": "rice", "ahead": "cook the rice and chill it",
     "servings": 4,
     "prepMinutes": 10,
     "cookMinutes": 15,

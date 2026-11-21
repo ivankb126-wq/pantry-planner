@@ -219,7 +219,7 @@
   {
     "id": "basque-cheesecake", "title": "Basque burnt cheesecake",
     "description": "A crustless cheesecake baked very hot, so the top turns dark and caramelised while the middle stays soft and creamy. Easier than it looks. Inspired by RecipeTin Eats.",
-    "mealTypes": ["dessert"], "cuisine": "mediterranean", "family": "baking", "servings": 12, "prepMinutes": 15, "cookMinutes": 45,
+    "mealTypes": ["dessert"], "cuisine": "mediterranean", "family": "baking", "ahead": "bake the cheesecake", "servings": 12, "prepMinutes": 15, "cookMinutes": 45,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "cream-cheese", "quantity": 750, "unit": "g" }, { "id": "sugar", "quantity": 200, "unit": "g" },

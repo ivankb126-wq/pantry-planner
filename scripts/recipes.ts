@@ -146,7 +146,11 @@ export function checkAll() {
         const stray = part.replace(STEP_AMOUNT, '');
         if (/[{}]/.test(stray)) errors.push(`${where}: step ${n + 1} has a "{...}" that is not an amount like {200 ml}, {2 tbsp} or {4}`);
         if (part.includes('—')) errors.push(`${where}: step ${n + 1} uses a long dash; use a comma or full stop instead`);
-      }    });
+      }
+    });
+    // A step that starts "The night before" needs an "ahead" note, so the plan can remind you in time.
+    if (!r.ahead && r.steps.some((s) => /^(the )?(night|evening|day) before\b/i.test(stepText(s))))
+      warnings.push(`${where}: a step starts the day before; add "ahead" (e.g. "soak the beans") so the plan reminds you`);
     if (r.photo) {
       if (!r.photoCredit) errors.push(`${where}: a photo needs a photoCredit (author and licence)`);
       if (!/^https?:/.test(r.photo) && !existsSync(join(ROOT, 'public', r.photo))) errors.push(`${where}: photo file public/${r.photo} is missing`);

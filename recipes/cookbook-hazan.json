@@ -71,7 +71,7 @@
   {
     "id": "white-bean-garlic-soup", "title": "White bean soup with garlic and parsley",
     "description": "For bean lovers: soft white beans in olive oil and garlic, part of them mashed to thicken, poured over toasted bread. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "servings": 4, "prepMinutes": 10, "cookMinutes": 70,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "ahead": "soak the beans", "servings": 4, "prepMinutes": 10, "cookMinutes": 70,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "white-beans", "quantity": 400, "unit": "g", "note": "dried" }, { "id": "olive-oil", "quantity": 6, "unit": "tbsp" },

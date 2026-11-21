@@ -2016,3 +2016,27 @@ h1 {
   align-items: center;
   gap: 2px;
 }
+
+/* "Tonight: soak the beans for tomorrow's Grah" */
+.ahead-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(61, 227, 208, 0.14);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.35;
+  list-style: none;
+}
+.ahead-note svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--teal);
+}
+.day-meals .ahead-note {
+  margin: 4px 4px 6px;
+  font-size: 13px;
+}

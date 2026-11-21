@@ -2,7 +2,7 @@
   {
     "id": "white-bean-kale-soup", "title": "Tuscan white bean, kale and cabbage soup",
     "description": "A thick soup of white beans, kale and cabbage in a tomato and vegetable base, with bacon and a parmesan rind for depth. Inspired by Salt, Fat, Acid, Heat by Samin Nosrat.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "servings": 6, "prepMinutes": 20, "cookMinutes": 105,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "italian", "family": "soup", "ahead": "soak the beans", "servings": 6, "prepMinutes": 20, "cookMinutes": 105,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "white-beans", "quantity": 300, "unit": "g", "note": "dried" }, { "id": "olive-oil", "quantity": 4, "unit": "tbsp" },
@@ -124,7 +124,7 @@
   {
     "id": "kefir-roast-chicken", "title": "Kefir-marinated roast chicken",
     "description": "A whole chicken soaked overnight in salted kefir, then roasted deep brown. Tender and simple. Inspired by the buttermilk chicken in Salt, Fat, Acid, Heat by Samin Nosrat.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "servings": 4, "prepMinutes": 15, "cookMinutes": 70,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "oven", "ahead": "put the chicken in its kefir marinade", "servings": 4, "prepMinutes": 15, "cookMinutes": 70,
     "difficulty": "easy", "mainProtein": "chicken",
     "ingredients": [
       { "id": "whole-chicken", "quantity": 1500, "unit": "g" }, { "id": "salt", "quantity": 2, "unit": "tsp" },

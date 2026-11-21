@@ -112,6 +112,13 @@ It checks the format, that every ingredient exists and its unit fits, the
 quick/vegetarian/vegan labels, and prints nutrition per serving with warnings
 for unusual values.
 
+A recipe that must be started the day before (soaking beans, a marinade,
+overnight oats, a dessert that sets) has an "ahead" note in lower case, like
+`"ahead": "soak the beans"`. The plan then shows "Tonight: soak the beans for
+tomorrow's Grah" the evening before, and the recipe page says "Start the day
+before". The recipe check warns when a step starts "The night before" but the
+recipe has no "ahead" note.
+
 A step is plain text, or `{ "text": "...", "tip": "..." }` when it helps to
 say how to tell it is done ("Done when the onion is soft and golden").
 Cooking mode shows the tip under the step. Amounts in a step that should

@@ -95,6 +95,8 @@ export interface Recipe {
   illustration: string;
   /** The kind of dish (pasta, soup, stew...), see FAMILY_LABEL in app/catalog.ts. */
   family: string;
+  /** What to do the day before ("soak the beans"); the plan reminds you the evening before. */
+  ahead?: string;
   photo?: string | null;
   photoCredit?: string;
   photoSource?: string;

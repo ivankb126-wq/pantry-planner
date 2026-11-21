@@ -325,7 +325,7 @@
   {
     "id": "pineapple-prawn-fried-rice", "title": "Pineapple fried rice with prawns",
     "description": "Day-old rice fried with egg, peas, pineapple and prawns in a sweet, salty soy sauce. A great way to use up cooked rice. Inspired by Budget Bytes by Beth Moncel.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "thai", "family": "rice", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "thai", "family": "rice", "ahead": "cook the rice and chill it", "servings": 4, "prepMinutes": 10, "cookMinutes": 30,
     "difficulty": "easy", "mainProtein": "seafood",
     "ingredients": [
       { "id": "rice", "quantity": 300, "unit": "g" }, { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
@@ -351,7 +351,7 @@
   {
     "id": "white-beans-spinach-bacon", "title": "White beans with spinach and crispy bacon",
     "description": "Creamy white beans simmered in a reduced stock with bacon fat and onion, with wilted spinach and crispy bacon on top. Serve with bread. Inspired by Budget Bytes by Beth Moncel.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "stew", "servings": 4, "prepMinutes": 10, "cookMinutes": 75,
+    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "stew", "ahead": "soak the beans", "servings": 4, "prepMinutes": 10, "cookMinutes": 75,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "white-beans", "quantity": 300, "unit": "g", "note": "dried" }, { "id": "bacon", "quantity": 120, "unit": "g" },

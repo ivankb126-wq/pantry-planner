@@ -439,7 +439,7 @@
     "title": "Greek baked beans (gigantes style)",
     "description": "White beans baked in a thick tomato sauce with dill, onion and plenty of olive oil. Great hot or cold.",
     "mealTypes": ["lunch", "dinner"],
-    "cuisine": "greek", "family": "oven",
+    "cuisine": "greek", "family": "oven", "ahead": "soak the beans",
     "servings": 4,
     "prepMinutes": 15,
     "cookMinutes": 105,

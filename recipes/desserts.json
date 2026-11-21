@@ -141,7 +141,7 @@
   {
     "id": "rozata", "title": "Rožata (Dubrovnik caramel custard)",
     "description": "Baked custard with a thin caramel layer, flavoured with lemon zest. Dubrovnik's favourite dessert.",
-    "mealTypes": ["dessert"], "cuisine": "croatian-dalmatian", "family": "pudding", "servings": 6, "prepMinutes": 15, "cookMinutes": 50,
+    "mealTypes": ["dessert"], "cuisine": "croatian-dalmatian", "family": "pudding", "ahead": "make the rožata", "servings": 6, "prepMinutes": 15, "cookMinutes": 50,
     "difficulty": "medium", "mainProtein": "eggs",
     "ingredients": [
       { "id": "eggs", "quantity": 5, "unit": "piece" }, { "id": "milk", "quantity": 700, "unit": "ml" },
@@ -189,7 +189,7 @@
   {
     "id": "tiramisu", "title": "Tiramisu",
     "description": "Coffee-soaked biscuits layered with mascarpone cream and cocoa. Make it a day ahead.",
-    "mealTypes": ["dessert"], "cuisine": "italian", "family": "pudding", "servings": 8, "prepMinutes": 25, "cookMinutes": 0,
+    "mealTypes": ["dessert"], "cuisine": "italian", "family": "pudding", "ahead": "make the tiramisu", "servings": 8, "prepMinutes": 25, "cookMinutes": 0,
     "difficulty": "medium", "mainProtein": "dairy",
     "ingredients": [
       { "id": "mascarpone", "quantity": 500, "unit": "g" }, { "id": "eggs", "quantity": 3, "unit": "piece" },
@@ -261,7 +261,7 @@
   {
     "id": "no-bake-cheesecake", "title": "No-bake cheesecake",
     "description": "Biscuit base with a creamy cottage cheese and cream cheese filling and berry topping. Sets in the fridge.",
-    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "servings": 10, "prepMinutes": 25, "cookMinutes": 0,
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "baking", "ahead": "make the cheesecake", "servings": 10, "prepMinutes": 25, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "biscuits", "quantity": 200, "unit": "g" }, { "id": "butter", "quantity": 80, "unit": "g" },
@@ -401,7 +401,7 @@
   {
     "id": "banana-nice-cream", "title": "Banana and cocoa nice cream",
     "description": "Frozen bananas blended into a creamy, ice-cream-like dessert with cocoa and peanut butter.",
-    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "fruit", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
+    "mealTypes": ["dessert"], "cuisine": "everyday", "family": "fruit", "ahead": "slice and freeze the bananas", "servings": 4, "prepMinutes": 10, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "banana", "quantity": 5, "unit": "piece", "note": "sliced and frozen" }, { "id": "cocoa", "quantity": 2, "unit": "tbsp" },

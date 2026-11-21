@@ -11,7 +11,7 @@ import { go } from '../app/router';
 import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
-import { IconCheck, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
+import { IconCheck, IconClock, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
 import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
 import { BackupReminder } from './BackupReminder';
@@ -275,6 +275,11 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
             <IconSwap />
           </button>
         </div>
+        {tonightNotes(d.plan!, result, t).map((note) => (
+          <p key={note} class="ahead-note">
+            <IconClock size={16} /> {note}
+          </p>
+        ))}
         {others.length > 0 && (
           <ul class="also-today">
             {others.map(({ x, j }) => (
@@ -341,6 +346,7 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                         <span class="meal-meta">
                           {SLOT_LABEL[v.slot]} · {v.leftover ? leftoverNote(plan, i, result) : minutes(v.minutes)} · {v.kcal} kcal
                           {!v.leftover && batchNote(plan, i, result)}
+                          {!v.leftover && RECIPE_BY_ID.get(v.recipeId)?.ahead && ' · start the day before'}
                           {v.newDish && d.history.length >= 5 && <span class="tag purple">New</span>}
                           {!v.leftover && mealOnSale(v.recipeId, sale) && <span class="tag teal">Sale</span>}
                         </span>
@@ -350,6 +356,11 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                   </li>
                 );
               })}
+              {tonightNotes(plan, result, day).map((note) => (
+                <li key={note} class="ahead-note">
+                  <IconClock size={15} /> {note}
+                </li>
+              ))}
               <li class="day-total">
                 <span class="grow">Day</span>
                 <span>{formatEur(dayCost)}</span>
@@ -360,6 +371,23 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
       })}
     </section>
   );
+}
+
+/**
+ * "Tonight: soak the beans for tomorrow's Grah" for each dish cooked the next
+ * day that needs starting the day before (its recipe has an "ahead" note).
+ */
+function tonightNotes(plan: SavedPlan, result: PlanResult, day: number): string[] {
+  const notes: string[] = [];
+  result.views.forEach((v, i) => {
+    if (v.day !== day + 1 || v.leftover || plan.cooked.includes(i)) return;
+    const ahead = RECIPE_BY_ID.get(v.recipeId)?.ahead;
+    if (!ahead) return;
+    const short = v.title.replace(/\s*\(.*\)$/, '');
+    const note = `Tonight: ${ahead} for tomorrow's ${short}.`;
+    if (!notes.includes(note)) notes.push(note);
+  });
+  return notes;
 }
 
 /** "made Monday" for a meal eaten from an earlier batch. */

@@ -13,7 +13,7 @@ import { formatAmount, formatEur } from '../lib/format';
 import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
 import { ESTIMATE } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
-import { IconBack, IconCheck, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
+import { IconBack, IconCheck, IconClock, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { mealPortions, takenText } from '../app/pantry';
 import { photoFor, photoSite, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
 import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
@@ -142,6 +142,11 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         {minutes(r.facts.totalMinutes)} · {f.kcal} kcal · {Math.round(f.protein)} g protein
         {perPerson != null && ` · ${formatEur(perPerson)} per person`}
       </p>
+      {r.ahead && (
+        <p class="ahead-note">
+          <IconClock size={16} /> Start the day before: {r.ahead}.
+        </p>
+      )}
 
       {mealIndex != null && view && (
         <section class="card in-plan">

@@ -40,7 +40,7 @@
     "title": "Egg fried rice with peas",
     "description": "Day-old rice fried hot with eggs, peas, carrot and spring onion. The best way to use leftover rice.",
     "mealTypes": ["lunch", "dinner"],
-    "cuisine": "chinese", "family": "rice",
+    "cuisine": "chinese", "family": "rice", "ahead": "cook the rice and chill it",
     "servings": 4,
     "prepMinutes": 10,
     "cookMinutes": 10,

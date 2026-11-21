@@ -119,7 +119,7 @@
     "title": "Octopus salad with potatoes",
     "description": "Tender boiled octopus with potatoes, onion, parsley, olive oil and vinegar. A Dalmatian summer favourite that gets better the next day.",
     "mealTypes": ["lunch", "dinner"],
-    "cuisine": "croatian-dalmatian", "family": "salad",
+    "cuisine": "croatian-dalmatian", "family": "salad", "ahead": "move the octopus to the fridge to thaw",
     "servings": 4,
     "prepMinutes": 20,
     "cookMinutes": 60,

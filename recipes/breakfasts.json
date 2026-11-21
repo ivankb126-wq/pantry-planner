@@ -108,7 +108,7 @@
   {
     "id": "chia-berry-pudding", "title": "Chia pudding with berries",
     "description": "Chia seeds soaked overnight in milk with vanilla, topped with berries. Make it the evening before.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "ahead": "make the chia pudding", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "nuts",
     "ingredients": [
       { "id": "chia", "quantity": 60, "unit": "g" }, { "id": "milk", "quantity": 350, "unit": "ml" },
@@ -210,7 +210,7 @@
   {
     "id": "bircher-muesli", "title": "Bircher muesli",
     "description": "Oats soaked overnight in yogurt and milk with grated apple, raisins and hazelnuts.",
-    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
+    "mealTypes": ["breakfast"], "cuisine": "everyday", "family": "porridge", "ahead": "soak the muesli", "servings": 2, "prepMinutes": 5, "cookMinutes": 0,
     "difficulty": "easy", "mainProtein": "dairy",
     "ingredients": [
       { "id": "oats", "quantity": 90, "unit": "g" }, { "id": "yogurt", "quantity": 200, "unit": "g" },

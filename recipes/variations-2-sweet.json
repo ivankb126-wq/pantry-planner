@@ -4,7 +4,7 @@
     "title": "Cocoa banana overnight oats",
     "description": "Oats soaked overnight in milk and yogurt with cocoa, mashed banana and chia. Tastes like chocolate pudding, ready when you wake up.",
     "mealTypes": ["breakfast", "snack"],
-    "cuisine": "everyday", "family": "porridge",
+    "cuisine": "everyday", "family": "porridge", "ahead": "make the oats",
     "servings": 4,
     "prepMinutes": 10,
     "cookMinutes": 0,
