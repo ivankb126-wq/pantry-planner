@@ -4,9 +4,11 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **milestone 6** (price pipeline, 262 ingredients, 405 recipes, planner
-engine, the app screens, the living pantry, works offline and installs on
-the iPhone home screen).
+Status: **all milestones done** (price pipeline, 262 ingredients, 405 recipes,
+331 of them with a photo, planner engine, the app screens, the living pantry,
+works offline and installs on the iPhone home screen, and the milestone 7
+extras: real deal check, seasonal produce, shopping mode, sharing the list,
+meal prep Sunday, reminders, weekly recap, "I don't have X" and barcode scan).
 
 Open it: **https://ivankb126-wq.github.io/pantry-planner/**
 
