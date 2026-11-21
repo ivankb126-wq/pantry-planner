@@ -31,6 +31,8 @@ export interface Settings {
   weekendClassic: boolean;
   /** Meal prep Sunday (off unless chosen). */
   mealPrep: boolean;
+  /** Reminders at the top of the plan, each kind off unless chosen. */
+  reminders: { ahead: boolean; defrost: boolean; expiry: boolean };
 }
 
 export interface SavedPlan {
@@ -110,6 +112,7 @@ export const DEFAULT_APP_SETTINGS: Settings = {
   cookOnceEatTwice: true,
   weekendClassic: true,
   mealPrep: false,
+  reminders: { ahead: false, defrost: false, expiry: false },
 };
 
 export function emptyData(): AppData {

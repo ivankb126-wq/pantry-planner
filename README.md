@@ -69,6 +69,13 @@ or pasta sauce cooked whole (never fish). It shows a timeline you can tick
 off, and each recipe on the night says what is already done. When the
 switch is on, the planner leans a little towards weeks where early meals
 share a pot.
+Reminders ([src/app/reminders.ts](src/app/reminders.ts)) show at the top of
+the plan when the app is opened, three kinds, each off until switched on in
+Settings: what to start the day before, meat or fish to take out of the
+freezer for today's or tomorrow's meal, and pantry food that reaches its
+use-by date today or tomorrow. "Done" hides one for the day. There is no
+push server, so nothing pops up while the app is closed (that would need a
+small server, such as a free Cloudflare Worker, sending web push).
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a

@@ -21,6 +21,13 @@ function set(p: Partial<Settings>) {
   });
 }
 
+/** One reminder kind on or off (read from the latest settings, so quick taps all count). */
+function setReminder(kind: keyof Settings['reminders'], on: boolean) {
+  update((x) => {
+    x.settings = { ...x.settings, reminders: { ...x.settings.reminders, [kind]: on } };
+  });
+}
+
 function Row({ href, label, value }: { href: string; label: string; value: string }) {
   return (
     <a class="list-row link" href={href}>
@@ -124,6 +131,13 @@ export function SettingsScreen({ section }: { section?: string }) {
           checked={s.mealPrep}
           onChange={(v) => set({ mealPrep: v })}
         />
+      </Group>
+
+      <Group title="Reminders">
+        <p class="group-note">Shown at the top of your plan when you open the app. Tap Done to hide one for the day.</p>
+        <Toggle label="Start the day before" hint="Soaking beans or making overnight oats for tomorrow's meal." checked={s.reminders.ahead} onChange={(v) => setReminder('ahead', v)} />
+        <Toggle label="Defrost" hint="Meat or fish in your freezer that today's or tomorrow's meal needs." checked={s.reminders.defrost} onChange={(v) => setReminder('defrost', v)} />
+        <Toggle label="Use it soon" hint="Pantry food that reaches its use-by date today or tomorrow." checked={s.reminders.expiry} onChange={(v) => setReminder('expiry', v)} />
       </Group>
 
       <BackupGroup />

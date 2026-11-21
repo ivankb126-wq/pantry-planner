@@ -139,3 +139,8 @@ export const IconShare = (p: P) => (
     <path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8" />
   </S>
 );
+export const IconSnow = (p: P) => (
+  <S {...p} strokeWidth={2}>
+    <path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2" />
+  </S>
+);

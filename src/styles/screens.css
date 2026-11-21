@@ -2328,3 +2328,56 @@ h1 {
   color: var(--muted);
   line-height: 1.4;
 }
+
+/* Reminders */
+.reminder-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.reminder-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.reminder-list li:first-child {
+  border-top: none;
+  padding-top: 4px;
+}
+.reminder-list a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.reminder-icon {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(61, 227, 208, 0.14);
+  color: var(--teal);
+}
+.reminder-icon.expiry {
+  background: rgba(255, 154, 60, 0.16);
+  color: var(--orange);
+}
+.group-note {
+  margin: 0;
+  padding: 12px 16px 4px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.reminder-list .btn-small {
+  flex: none;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  box-shadow: none;
+}

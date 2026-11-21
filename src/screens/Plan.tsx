@@ -7,6 +7,7 @@ import { saleIngredient } from '../app/costs';
 import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
 import { prepFor } from '../app/prep';
+import { type Reminder, dismissReminder, reminders } from '../app/reminders';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
 import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
@@ -14,7 +15,7 @@ import { dealSaving } from '../lib/deals';
 import { inSeasonIn, monthOf } from '../lib/seasons';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
-import { IconCheck, IconClock, IconDown, IconFlame, IconSettings, IconSwap } from '../ui/icons';
+import { IconCheck, IconClock, IconDown, IconFlame, IconPantry, IconSettings, IconSnow, IconSwap } from '../ui/icons';
 import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
 import { BackupReminder } from './BackupReminder';
@@ -172,6 +173,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
   const t = todayIndex(plan);
   return (
     <>
+      <RemindersCard d={d} />
       <BudgetCard d={d} data={data} result={result} onStore={onStore} />
       <InstallCard />
       <BackupReminder />
@@ -281,7 +283,8 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
             <IconSwap />
           </button>
         </div>
-        {tonightNotes(d.plan!, result, t).map((note) => (
+        {!d.settings.reminders.ahead &&
+          tonightNotes(d.plan!, result, t).map((note) => (
           <p key={note} class="ahead-note">
             <IconClock size={16} /> {note}
           </p>
@@ -500,6 +503,44 @@ function LeftAtHome({ d, result }: { d: AppData; result: PlanResult }) {
 function roundLeft(n: number, unit: 'g' | 'ml' | 'piece'): number {
   if (unit === 'piece') return Math.round(n * 2) / 2;
   return n >= 100 ? Math.round(n / 10) * 10 : Math.round(n / 5) * 5;
+}
+
+const REMINDER_ICON: Record<Reminder['kind'], () => preact.JSX.Element> = {
+  ahead: () => <IconClock size={18} />,
+  defrost: () => <IconSnow size={18} />,
+  expiry: () => <IconPantry size={18} />,
+};
+
+/** Reminders switched on in Settings, at the top of the plan. */
+function RemindersCard({ d }: { d: AppData }) {
+  const [, redraw] = useState(0);
+  const list = reminders(d);
+  if (!list.length) return null;
+  return (
+    <section class="card reminders-card" aria-label="Reminders">
+      <h2>Reminders</h2>
+      <ul class="reminder-list">
+        {list.map((r) => (
+          <li key={r.key}>
+            <span class={`reminder-icon ${r.kind}`}>{REMINDER_ICON[r.kind]()}</span>
+            <a class="grow" href={r.href}>
+              {r.text}
+            </a>
+            <button
+              class="btn-small"
+              aria-label={`Done: ${r.text}`}
+              onClick={() => {
+                dismissReminder(r.key);
+                redraw((n) => n + 1);
+              }}
+            >
+              Done
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }
 
 /** Meal prep Sunday, shown until the Sunday has passed (when it is switched on). */
