@@ -21,7 +21,10 @@
       "Heat the oven to 190 °C. Spread the tomato sauce in a baking dish, fill each shell with a spoon of filling and sit them in the sauce.",
       { "text": "Spoon the béchamel over, scatter with torn mozzarella and the rest of the parmesan and bake for 25 minutes until golden and bubbling.", "tip": "It can be assembled a day ahead and baked when you need it." }
     ],
-    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot", "2 pots", "baking dish"], "illustration": "🐚"
+    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot", "2 pots", "baking dish"], "illustration": "🐚",
+    "photo": "photos/stuffed-shells-ricotta-spinach.jpg",
+    "photoCredit": "ginnerobot, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/78011127@N00/3431670852"
   },
   {
     "id": "pasta-lentils", "title": "Small pasta with lentils",
@@ -83,7 +86,10 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Tip the hot pasta into the bowl with a splash of pasta water and toss until creamy. Squeeze in a little lemon juice and scatter with dill.", "tip": "No cooking for the salmon: the heat of the pasta is enough." }
     ],
-    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "serving bowl"], "illustration": "🍝"
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "serving bowl"], "illustration": "🍝",
+    "photo": "photos/farfalle-smoked-salmon-mascarpone.jpg",
+    "photoCredit": "WordRidden, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97844767@N00/173689697"
   },
   {
     "id": "linguine-zucchini-egg", "title": "Linguine with zucchini, egg and parmesan",
@@ -126,7 +132,10 @@
       { "text": "Add the prawns to the zucchini and cook for 2 minutes until just pink.", "tip": "Prawns go rubbery fast. Take them off as soon as they curl." },
       "Toss in the pasta with a splash of pasta water, a squeeze of lemon and the parsley, and serve."
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍤"
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍤",
+    "photo": "photos/pasta-prawns-zucchini.jpg",
+    "photoCredit": "sarahstierch, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7633518@N08/51431704500"
   },
   {
     "id": "pasta-e-patate", "title": "Pasta e patate (Neapolitan pasta and potatoes)",
@@ -231,7 +240,10 @@
       "Drain the pasta, add it with the pepper to the bowl and toss fast, adding more pasta water a little at a time until glossy.",
       "Serve at once with a green salad dressed with the oil and vinegar."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "big bowl", "fine grater"], "illustration": "🧀"
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "big bowl", "fine grater"], "illustration": "🧀",
+    "photo": "photos/cacio-e-pepe-paski.jpg",
+    "photoCredit": "whitneyinchicago, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/29298849@N05/5826057792"
   },
   {
     "id": "lemon-basil-pasta", "title": "Lemon, parmesan and basil pasta",
@@ -250,7 +262,10 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Off the heat, toss the pasta in the lemon pan with the grated parmesan, the pepper and a splash of pasta water until creamy. Tear in the basil.", "tip": "Add the cheese off the heat or it goes stringy. More lemon juice if you like it sharper." }
     ],
-    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍋"
+    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "grater"], "illustration": "🍋",
+    "photo": "photos/lemon-basil-pasta.jpg",
+    "photoCredit": "mastermaq, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/24311648@N00/3397167081"
   },
   {
     "id": "pasta-walnut-sauce", "title": "Pasta with creamy walnut sauce",
@@ -270,7 +285,10 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Toss the pasta with the walnut sauce and enough pasta water to make it coat smoothly. Serve with the rest of the parmesan.", "tip": "The sauce is never cooked, so it keeps its fresh nutty taste. It keeps 2 days in the fridge." }
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "blender or stick blender"], "illustration": "🌰"
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "blender or stick blender"], "illustration": "🌰",
+    "photo": "photos/pasta-walnut-sauce.jpg",
+    "photoCredit": "simpleprovisions, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/80665970@N03/9455455592"
   },
   {
     "id": "pesto-trapanese-pasta", "title": "Pasta with Sicilian tomato and almond pesto",

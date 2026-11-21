@@ -31,7 +31,10 @@
     "tags": ["vegetarian", "quick", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["large pot", "frying pan"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/spaghetti-pomodoro.jpg",
+    "photoCredit": "paPisc, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/20912428@N04/2400492179"
   },
   {
     "id": "pasta-puttanesca",
@@ -66,7 +69,10 @@
     "tags": ["quick"],
     "keepsDays": 1,
     "equipment": ["large pot", "frying pan"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/pasta-puttanesca.jpg",
+    "photoCredit": "Key West Wedding Photography, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58003213@N00/48817844888"
   },
   {
     "id": "creamy-mushroom-pasta",
@@ -103,7 +109,10 @@
     "tags": ["vegetarian", "quick"],
     "keepsDays": 1,
     "equipment": ["large pot", "large frying pan"],
-    "illustration": "🍄"
+    "illustration": "🍄",
+    "photo": "photos/creamy-mushroom-pasta.jpg",
+    "photoCredit": "bryan..., CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/91049143@N00/17135967157"
   },
   {
     "id": "pasta-broccoli-garlic",
@@ -137,7 +146,10 @@
     "tags": ["vegetarian", "quick"],
     "keepsDays": 1,
     "equipment": ["large pot", "frying pan"],
-    "illustration": "🥦"
+    "illustration": "🥦",
+    "photo": "photos/pasta-broccoli-garlic.jpg",
+    "photoCredit": "franksteiner, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21500897@N07/6808197675"
   },
   {
     "id": "salmon-spinach-pasta",
@@ -242,7 +254,10 @@
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["large pot", "large frying pan"],
-    "illustration": "🫛"
+    "illustration": "🫛",
+    "photo": "photos/pasta-piselli.jpg",
+    "photoCredit": "eekim, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/63669472@N00/3586973798"
   },
   {
     "id": "mac-and-cheese",
@@ -277,7 +292,10 @@
     "tags": ["vegetarian", "comfort", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["pot", "baking dish", "whisk"],
-    "illustration": "🧀"
+    "illustration": "🧀",
+    "photo": "photos/mac-and-cheese.jpg",
+    "photoCredit": "abbamouse, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/92329419@N00/260985307"
   },
   {
     "id": "duvec-s-piletinom",
@@ -353,7 +371,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["wok or large frying pan"],
-    "illustration": "🍤"
+    "illustration": "🍤",
+    "photo": "photos/prawn-fried-rice.jpg",
+    "photoCredit": "joegoauk73, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/95914901@N08/35435220144"
   },
   {
     "id": "risi-e-bisi",
@@ -387,6 +408,9 @@
     "tags": ["comfort", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["wide pan", "pot"],
-    "illustration": "🍚"
+    "illustration": "🍚",
+    "photo": "photos/risi-e-bisi.jpg",
+    "photoCredit": "Charles Haynes, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/87232391@N00/4959578587"
   }
 ]

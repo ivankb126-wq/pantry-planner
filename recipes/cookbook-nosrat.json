@@ -22,7 +22,10 @@
       { "text": "Add the beans, their water, the stock cubes and {1000 ml} water, the parmesan rind if you have one, the thinly sliced kale and cabbage, salt and pepper. Simmer for 20 minutes until the greens are tender.", "tip": "Taste and add more salt at the end: beans need plenty." },
       "Take out the bay leaves and rind. Serve with grated parmesan, a drizzle of the rest of the oil and bread."
     ],
-    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["big pot", "pot"], "illustration": "🥬"
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["big pot", "pot"], "illustration": "🥬",
+    "photo": "photos/white-bean-kale-soup.jpg",
+    "photoCredit": "Stacy Spensley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21001756@N06/6334189311"
   },
   {
     "id": "kuku-sabzi", "title": "Kuku sabzi (Persian herb and greens frittata)",
@@ -44,7 +47,10 @@
       "Heat the rest of the butter with the oil in an ovenproof frying pan, pour in the mix and cook on low for 10 minutes until the bottom is set.",
       { "text": "Bake for 10 to 12 minutes until the middle is just set. Cut into wedges and serve with yogurt and bread.", "tip": "It keeps 2 days and is lovely cold in a sandwich." }
     ],
-    "tags": ["vegetarian", "high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["ovenproof frying pan", "frying pan"], "illustration": "🌿"
+    "tags": ["vegetarian", "high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["ovenproof frying pan", "frying pan"], "illustration": "🌿",
+    "photo": "photos/kuku-sabzi.jpg",
+    "photoCredit": "AVID Vines, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/75921150@N00/47834986061"
   },
   {
     "id": "slow-roasted-salmon", "title": "Slow-roasted salmon with salsa verde and potatoes",
@@ -134,7 +140,10 @@
       "Shred the cabbage thinly and mix with the vinegar and a pinch of salt.",
       { "text": "Check the juices run clear at the thigh, rest the chicken for 10 minutes, then carve and serve with the potatoes and cabbage salad.", "tip": "Leftover meat makes great sandwiches." }
     ],
-    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "large bag or bowl"], "illustration": "🍗"
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "large bag or bowl"], "illustration": "🍗",
+    "photo": "photos/kefir-roast-chicken.jpg",
+    "photoCredit": "jamesdkirk, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/8355656@N04/3567534343"
   },
   {
     "id": "sicilian-chicken-salad", "title": "Sicilian chicken salad with raisins and almonds",

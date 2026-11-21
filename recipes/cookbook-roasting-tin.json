@@ -248,7 +248,10 @@
       "Meanwhile beat the rest of the soft butter with most of the powdered sugar and the lemon peel and juice until fluffy.",
       "Dust the pancake with the rest of the powdered sugar and serve in slices with the lemon butter."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["roasting tin", "whisk", "bowl"], "illustration": "🥞"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["roasting tin", "whisk", "bowl"], "illustration": "🥞",
+    "photo": "photos/oven-berry-pancake.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/3954299"
   },
   {
     "id": "apple-crumble-cake", "title": "Apple crumble traybake cake",
@@ -269,6 +272,9 @@
       { "text": "Rub the rest of the butter, sugar and flour with the oats into a rough crumble and scatter it over.", "tip": "Clumps are good: they bake into crunchy bits." },
       { "text": "Bake for 30 to 35 minutes until golden and a toothpick comes out clean. Cool and cut into squares.", "tip": "It keeps 3 days in a box and freezes well." }
     ],
-    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["20 x 30 cm tin", "mixer or whisk", "bowl"], "illustration": "🍎"
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["20 x 30 cm tin", "mixer or whisk", "bowl"], "illustration": "🍎",
+    "photo": "photos/apple-crumble-cake.jpg",
+    "photoCredit": "WordRidden, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97844767@N00/10100920"
   }
 ]

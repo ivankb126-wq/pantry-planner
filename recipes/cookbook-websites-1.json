@@ -44,7 +44,10 @@
       { "text": "Add the pasta and cook, stirring often, until just soft, about 10 minutes. Add a splash of water if it gets too thick.", "tip": "It should be like a thick soup, between a stew and a pasta dish." },
       "Off the heat, stir in most of the grated parmesan and the pepper. Serve with the rest of the cheese and a drizzle of olive oil."
     ],
-    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 2, "equipment": ["pot"], "illustration": "🍲"
+    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 2, "equipment": ["pot"], "illustration": "🍲",
+    "photo": "photos/pasta-e-ceci.jpg",
+    "photoCredit": "fugzu, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70253321@N00/5491882094"
   },
   {
     "id": "chicken-piccata", "title": "Crispy chicken piccata with lemon caper butter",
@@ -68,7 +71,10 @@
       { "text": "Pour the oil out of the pan and wipe it. Add the wine and boil for 1 minute, then turn the heat to low and swirl in the butter, the lemon juice, capers and chopped parsley.", "tip": "Keep the heat low once the butter goes in, so the sauce stays creamy instead of oily." },
       "Spoon the sauce over the cutlets just before eating, so the crust stays crisp. Serve with the potatoes."
     ],
-    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "rolling pin", "3 plates"], "illustration": "🍋"
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "rolling pin", "3 plates"], "illustration": "🍋",
+    "photo": "photos/chicken-piccata.jpg",
+    "photoCredit": "ralph and jenny, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/92269745@N00/6408123327"
   },
   {
     "id": "gambas-al-ajillo", "title": "Gambas al ajillo (Spanish garlic prawns)",
@@ -88,7 +94,10 @@
       { "text": "Turn the heat up to medium-high, add the prawns and toss for 2 minutes until pink all over.", "tip": "They are done the moment they turn pink and curl. Any longer and they go rubbery." },
       "Take off the heat, stir in the vinegar and parsley and serve straight away in the pan, with bread to dip in the oil."
     ],
-    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍤"
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍤",
+    "photo": "photos/gambas-al-ajillo.jpg",
+    "photoCredit": "juantiagues, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/14058263@N06/14163798971"
   },
   {
     "id": "tuna-pasta-bake", "title": "Cheesy tuna and sweetcorn pasta bake",
@@ -110,7 +119,10 @@
       "Mix the sauce with the pasta, drained tuna, drained sweetcorn and chopped parsley and tip it into a baking dish. Scatter the rest of the cheese on top.",
       { "text": "Bake for 20 minutes until bubbling and golden.", "tip": "Gouda works instead of cheddar. It keeps 3 days and freezes well in portions." }
     ],
-    "tags": ["kid-friendly", "comfort", "freezer-friendly", "high-protein"], "keepsDays": 3, "equipment": ["big pot", "pot", "whisk", "baking dish"], "illustration": "🐟"
+    "tags": ["kid-friendly", "comfort", "freezer-friendly", "high-protein"], "keepsDays": 3, "equipment": ["big pot", "pot", "whisk", "baking dish"], "illustration": "🐟",
+    "photo": "photos/tuna-pasta-bake.jpg",
+    "photoCredit": "GrahamPics1, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/76526364@N06/44498669310"
   },
   {
     "id": "mushroom-stroganoff", "title": "Mushroom stroganoff with rice",
@@ -153,7 +165,10 @@
       { "text": "Crush some of the potatoes against the side of the pot with a spoon to thicken the soup, leaving the rest in pieces.", "tip": "Two textures make it creamy without blending." },
       { "text": "Slice the sausages and add them for the last 5 minutes to warm through. Season with pepper and serve with a drizzle of the rest of the olive oil and bread.", "tip": "It keeps 3 days. Taste before adding salt: the sausage and stock are already salty." }
     ],
-    "tags": ["comfort", "one-pot", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot"], "illustration": "🥬"
+    "tags": ["comfort", "one-pot", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot"], "illustration": "🥬",
+    "photo": "photos/caldo-verde.jpg",
+    "photoCredit": "(Imagine) 2.0, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/99732909@N02/33228722492"
   },
   {
     "id": "egg-roll-in-a-bowl", "title": "Egg roll in a bowl (turkey and cabbage stir-fry)",
@@ -219,6 +234,9 @@
       { "text": "Pour into the tin and bake for 45 to 50 minutes, until the top is very dark brown and the middle still wobbles a lot when you shake the tin.", "tip": "The dark top is meant to be, it is not burnt. The wobbly middle sets as it cools." },
       { "text": "Cool in the tin for 2 hours, then chill for at least 6 hours, ideally overnight, before cutting.", "tip": "It keeps 4 days in the fridge. Lovely with berries." }
     ],
-    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 4, "equipment": ["20 cm deep round tin", "baking paper", "mixer or whisk"], "illustration": "🍰"
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 4, "equipment": ["20 cm deep round tin", "baking paper", "mixer or whisk"], "illustration": "🍰",
+    "photo": "photos/basque-cheesecake.jpg",
+    "photoCredit": "tedeytan, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/22526649@N03/52736608539"
   }
 ]

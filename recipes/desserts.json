@@ -158,7 +158,10 @@
       { "text": "Bake for 45 to 50 minutes, until set at the edges with a slight wobble in the middle.", "tip": "A knife pushed in near the middle should come out clean. Small moulds need only about 30 minutes." },
       { "text": "Let it cool, then put it in the fridge overnight. To serve, run a knife around the edge, put a plate on top and turn it over quickly. The caramel runs down as a sauce.", "tip": "Keeps 3 days in the fridge, covered." }
     ],
-    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["oven", "baking dish", "roasting tray"], "illustration": "🍮"
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["oven", "baking dish", "roasting tray"], "illustration": "🍮",
+    "photo": "photos/rozata.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4247062952"
   },
   {
     "id": "fritule", "title": "Fritule (little Christmas doughnuts)",
@@ -202,7 +205,10 @@
       "Make a second layer of dipped biscuits and cover with the rest of the cream. Smooth the top.",
       { "text": "Dust with the cocoa through a sieve, cover and chill overnight.", "tip": "It needs at least 6 hours to set. It contains raw egg, so do not serve it to pregnant women or small children. Keeps 3 days." }
     ],
-    "tags": ["vegetarian", "make-ahead", "no-cook", "festive"], "keepsDays": 3, "equipment": ["dish", "whisk"], "illustration": "☕"
+    "tags": ["vegetarian", "make-ahead", "no-cook", "festive"], "keepsDays": 3, "equipment": ["dish", "whisk"], "illustration": "☕",
+    "photo": "photos/tiramisu.jpg",
+    "photoCredit": "Key West Wedding Photography, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58003213@N00/52154674165"
   },
   {
     "id": "brownies", "title": "Fudgy brownies",
@@ -223,7 +229,10 @@
       { "text": "Pour into the tin, spread evenly and bake for 22 to 25 minutes.", "tip": "Take them out while the middle still looks slightly underdone. A skewer should come out with moist crumbs, not clean." },
       { "text": "Let them cool completely in the tin before cutting into squares.", "tip": "They firm up as they cool. For neat squares, chill them first and wipe the knife between cuts. They keep 5 days in a tin." }
     ],
-    "tags": ["vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tin"], "illustration": "🍫"
+    "tags": ["vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tin"], "illustration": "🍫",
+    "photo": "photos/brownies.jpg",
+    "photoCredit": "Stacy Spensley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21001756@N06/4489064762"
   },
   {
     "id": "mandarin-yogurt-cake", "title": "Mandarin yogurt cake",
@@ -290,7 +299,10 @@
       { "text": "Keep whisking for 2 minutes as it bubbles and thickens into a pudding.", "tip": "It must bubble properly, or the cornstarch does not set and it stays runny." },
       { "text": "Take it off the heat and stir in the chopped chocolate until melted. Pour into bowls.", "tip": "To stop a skin forming, press cling film onto the surface while it cools. Keeps 3 days in the fridge." }
     ],
-    "tags": ["vegetarian", "kid-friendly", "quick"], "keepsDays": 3, "equipment": ["saucepan", "whisk"], "illustration": "🍫"
+    "tags": ["vegetarian", "kid-friendly", "quick"], "keepsDays": 3, "equipment": ["saucepan", "whisk"], "illustration": "🍫",
+    "photo": "photos/chocolate-pudding.jpg",
+    "photoCredit": "ginnerobot, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/78011127@N00/4253843499"
   },
   {
     "id": "winter-fruit-salad", "title": "Winter fruit salad with honey yogurt",
@@ -331,7 +343,10 @@
       "Chop the chocolate and almonds. Scatter them and the frozen berries over the yogurt and press them in lightly.",
       { "text": "Freeze until completely firm, then break into pieces.", "tip": "It takes about 3 hours. Keep the pieces in a box in the freezer and eat them straight from frozen: they soften quickly." }
     ],
-    "tags": ["vegetarian", "kid-friendly", "freezer-friendly", "no-cook"], "keepsDays": 14, "equipment": ["tray", "baking paper"], "illustration": "🍓"
+    "tags": ["vegetarian", "kid-friendly", "freezer-friendly", "no-cook"], "keepsDays": 14, "equipment": ["tray", "baking paper"], "illustration": "🍓",
+    "photo": "photos/frozen-yogurt-bark.jpg",
+    "photoCredit": "eebrierley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/199005561@N04/53868172928"
   },
   {
     "id": "carrot-cake", "title": "Carrot cake with cream cheese frosting",
@@ -355,7 +370,10 @@
       { "text": "Let the cake cool completely, which takes at least an hour.", "tip": "Frosting on a warm cake melts and slides off." },
       { "text": "Beat the soft cream cheese with the powdered sugar until smooth and spread it over the top.", "tip": "Keep the frosted cake in the fridge. It keeps 4 days." }
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin", "grater"], "illustration": "🥕"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 4, "equipment": ["oven", "cake tin", "grater"], "illustration": "🥕",
+    "photo": "photos/carrot-cake.jpg",
+    "photoCredit": "Tracy Hunter, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/11121785@N00/110294233"
   },
   {
     "id": "berry-clafoutis", "title": "Berry clafoutis",

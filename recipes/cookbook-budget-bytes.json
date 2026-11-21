@@ -41,7 +41,10 @@
       "Whisk the eggs, milk, parmesan and pepper and pour over. Lay tomato slices on top and finish with the rest of the cheese.",
       { "text": "Bake for 40 minutes until puffed in the middle and golden at the edges. Rest for 5 minutes before cutting. Serve with bread.", "tip": "It keeps 3 days and is good cold for lunch." }
     ],
-    "tags": ["high-protein", "make-ahead"], "keepsDays": 3, "equipment": ["23 cm pie dish", "frying pan", "whisk"], "illustration": "🥧"
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 3, "equipment": ["23 cm pie dish", "frying pan", "whisk"], "illustration": "🥧",
+    "photo": "photos/crustless-ham-spinach-quiche.jpg",
+    "photoCredit": "Neeta Lind, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71132408@N00/11573482163"
   },
   {
     "id": "apple-french-toast-bake", "title": "Apple cinnamon French toast bake",
@@ -62,7 +65,10 @@
       { "text": "Rub the oats, the rest of the sugar and cinnamon and the soft butter together into a crumble and scatter it over.", "tip": "The crumble makes a crunchy lid over the soft custardy bread." },
       "Heat the oven to 180 °C and bake for 45 minutes until golden and crisp on top. Serve warm."
     ],
-    "tags": ["vegetarian", "make-ahead", "kid-friendly"], "keepsDays": 2, "equipment": ["20 x 20 cm baking dish", "whisk"], "illustration": "🍞"
+    "tags": ["vegetarian", "make-ahead", "kid-friendly"], "keepsDays": 2, "equipment": ["20 x 20 cm baking dish", "whisk"], "illustration": "🍞",
+    "photo": "photos/apple-french-toast-bake.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/4976062012"
   },
   {
     "id": "creamy-orzo-spinach-goat-cheese", "title": "Creamy orzo with spinach and goat cheese",
@@ -104,7 +110,10 @@
       "Fry the eggs in the sunflower oil in another pan.",
       "Serve the noodles topped with an egg, cucumber sticks and sliced spring onion."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["big pot", "2 frying pans"], "illustration": "🍜"
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["big pot", "2 frying pans"], "illustration": "🍜",
+    "photo": "photos/sesame-tahini-noodles.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/2760946054"
   },
   {
     "id": "carrot-sweet-potato-soup", "title": "Carrot, sweet potato and red lentil soup",
@@ -126,7 +135,10 @@
       { "text": "Blend until smooth with a stick blender. Season with the salt and pepper.", "tip": "Using a jug blender? Let it cool a little first and fill only halfway." },
       { "text": "Serve with a swirl of yogurt and bread.", "tip": "It keeps 4 days and freezes well." }
     ],
-    "tags": ["vegetarian", "freezer-friendly", "cook-once-eat-twice", "light"], "keepsDays": 4, "equipment": ["big pot", "stick blender"], "illustration": "🥕"
+    "tags": ["vegetarian", "freezer-friendly", "cook-once-eat-twice", "light"], "keepsDays": 4, "equipment": ["big pot", "stick blender"], "illustration": "🥕",
+    "photo": "photos/carrot-sweet-potato-soup.jpg",
+    "photoCredit": "jeremydeades, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/89705672@N00/3740880873"
   },
   {
     "id": "greek-lemon-chicken-orzo-soup", "title": "Greek lemon chicken soup with orzo",
@@ -147,7 +159,10 @@
       { "text": "Whisk the eggs with the juice of both lemons. Slowly whisk in a ladle of the hot soup, then pour the mix back into the pot, stirring all the time.", "tip": "Warming the eggs first with a little soup stops them from scrambling. The soup turns creamy." },
       "Stir in the parsley and serve with bread."
     ],
-    "tags": ["high-protein", "comfort", "light"], "keepsDays": 2, "equipment": ["pot", "whisk", "ladle"], "illustration": "🍋"
+    "tags": ["high-protein", "comfort", "light"], "keepsDays": 2, "equipment": ["pot", "whisk", "ladle"], "illustration": "🍋",
+    "photo": "photos/greek-lemon-chicken-orzo-soup.jpg",
+    "photoCredit": "sarahstierch, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7633518@N08/51331420654"
   },
   {
     "id": "farmer-joes", "title": "Veggie-packed sloppy joes",
@@ -172,7 +187,10 @@
       { "text": "Add the tomatoes, tomato paste, vinegar, sugar, mustard, paprika, chili and salt and simmer for 10 minutes until thick.", "tip": "Kids rarely notice the vegetables once they melt into the sauce." },
       { "text": "Pile into split buns and serve.", "tip": "The filling keeps 4 days and freezes well." }
     ],
-    "tags": ["kid-friendly", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 4, "equipment": ["large frying pan", "grater"], "illustration": "🍔"
+    "tags": ["kid-friendly", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 4, "equipment": ["large frying pan", "grater"], "illustration": "🍔",
+    "photo": "photos/farmer-joes.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/5634548313"
   },
   {
     "id": "chili-cheese-beef-mac", "title": "One-pot chili cheese beef and macaroni",
@@ -217,7 +235,10 @@
       { "text": "Add the paprika, turmeric and curry powder and stir for 1 minute.", "tip": "Frying the spices briefly wakes up their flavour." },
       { "text": "Pour in the coconut milk, scrape the pan and simmer gently for 10 minutes. Season with the salt and serve over the rice with parsley.", "tip": "Want it hotter? Add a pinch of chili flakes. It keeps 3 days and freezes well." }
     ],
-    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot", "large frying pan"], "illustration": "🍛"
+    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot", "large frying pan"], "illustration": "🍛",
+    "photo": "photos/coconut-chicken-curry.jpg",
+    "photoCredit": "TheCulinaryGeek, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/72949902@N00/4484943801"
   },
   {
     "id": "turkey-spinach-meatballs", "title": "Baked turkey and spinach meatballs with pasta",
@@ -241,7 +262,10 @@
       "Meanwhile simmer the passata with the olive oil and the rest of the salt for 10 minutes, and cook the pasta in salted water.",
       "Add the meatballs to the sauce and serve over the pasta."
     ],
-    "tags": ["high-protein", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["baking tray", "frying pan", "pot", "big pot"], "illustration": "🍝"
+    "tags": ["high-protein", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["baking tray", "frying pan", "pot", "big pot"], "illustration": "🍝",
+    "photo": "photos/turkey-spinach-meatballs.jpg",
+    "photoCredit": "Maggie Hoffman, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8830972@N08/3237536369"
   },
   {
     "id": "chicken-tamale-pie", "title": "Chicken and bean tamale pie",
@@ -266,7 +290,10 @@
       { "text": "Make the cornbread: mix the polenta, the rest of the flour, the baking powder, sugar and the rest of the salt. Whisk the egg with the milk and the rest of the oil and stir it in just until combined. Fold in the grated cheese.", "tip": "Stir as little as possible: lumpy batter bakes fluffier." },
       { "text": "Spread the batter over the filling and bake for 25 minutes until golden on top and bubbling at the edges.", "tip": "It keeps 3 days and freezes well in portions." }
     ],
-    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["wide pan", "20 x 30 cm baking dish", "bowl"], "illustration": "🌽"
+    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["wide pan", "20 x 30 cm baking dish", "bowl"], "illustration": "🌽",
+    "photo": "photos/chicken-tamale-pie.jpg",
+    "photoCredit": "TheLawleys, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/98894271@N00/7124954"
   },
   {
     "id": "pork-lettuce-wraps", "title": "Ginger pork lettuce wraps with rice",
@@ -290,7 +317,10 @@
       { "text": "Separate the lettuce leaves. Grate the carrots and slice the spring onions.", "tip": "Iceberg gives the best crunch and makes sturdy little cups." },
       "Put everything on the table and let everyone fill their own leaves with rice, pork, carrot and spring onion."
     ],
-    "tags": ["high-protein", "quick", "kid-friendly"], "keepsDays": 2, "equipment": ["pot", "large frying pan", "grater"], "illustration": "🥬"
+    "tags": ["high-protein", "quick", "kid-friendly"], "keepsDays": 2, "equipment": ["pot", "large frying pan", "grater"], "illustration": "🥬",
+    "photo": "photos/pork-lettuce-wraps.jpg",
+    "photoCredit": "Stacy Spensley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21001756@N06/4070654377"
   },
   {
     "id": "pineapple-prawn-fried-rice", "title": "Pineapple fried rice with prawns",
@@ -313,7 +343,10 @@
       { "text": "Add the rice and the soy sauce mixed with the sugar and chili, and fry for 5 minutes until hot through. Put the prawns back.", "tip": "Press the rice against the hot pan and let it sit for a minute now and then for crispy bits." },
       "Drizzle with sesame oil and scatter with spring onion."
     ],
-    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🍍"
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🍍",
+    "photo": "photos/pineapple-prawn-fried-rice.jpg",
+    "photoCredit": "Ruocaled, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/54063325@N07/7090014075"
   },
   {
     "id": "white-beans-spinach-bacon", "title": "White beans with spinach and crispy bacon",
@@ -353,6 +386,9 @@
       { "text": "Press the mix firmly and evenly into the dish and bake for 30 minutes until golden at the edges.", "tip": "Press hard with the back of a spoon so the bars hold together." },
       { "text": "Cool completely, then cut into 9 bars.", "tip": "They keep 4 days in a box and freeze well." }
     ],
-    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["20 x 20 cm dish", "baking paper", "bowl"], "illustration": "🍪"
+    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["20 x 20 cm dish", "baking paper", "bowl"], "illustration": "🍪",
+    "photo": "photos/apricot-walnut-oat-bars.jpg",
+    "photoCredit": "Rachel Tayse, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/11921146@N03/4405791985"
   }
 ]

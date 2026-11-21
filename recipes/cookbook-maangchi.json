@@ -20,7 +20,10 @@
       { "text": "Melt the rest of the butter in a small pan, stir in the flour and curry powder for 1 minute, then whisk in a ladle of the cooking liquid until smooth. Stir it into the pot with the honey and salt and simmer for 3 minutes until glossy and thick.", "tip": "This homemade roux replaces the Korean instant curry mix. If you find the mix, use 100 g of it instead." },
       "Spoon over the rice."
     ],
-    "tags": ["kid-friendly", "comfort"], "keepsDays": 3, "equipment": ["pot", "small pan", "whisk"], "illustration": "🍛"
+    "tags": ["kid-friendly", "comfort"], "keepsDays": 3, "equipment": ["pot", "small pan", "whisk"], "illustration": "🍛",
+    "photo": "photos/korean-curry-rice.jpg",
+    "photoCredit": "pelican, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/85936780@N00/23973213292"
   },
   {
     "id": "korean-spicy-pork-stir-fry", "title": "Spicy Korean pork stir-fry",
@@ -44,7 +47,10 @@
       "Stir in the sesame oil and scatter with sesame seeds.",
       "Serve with the rice and lettuce leaves for wrapping."
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 2, "equipment": ["pot", "large frying pan"], "illustration": "🌶️"
+    "tags": ["high-protein", "quick"], "keepsDays": 2, "equipment": ["pot", "large frying pan"], "illustration": "🌶️",
+    "photo": "photos/korean-spicy-pork-stir-fry.jpg",
+    "photoCredit": "Chun's Pictures, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/23203692@N03/5565877441"
   },
   {
     "id": "zucchini-shrimp-korean", "title": "Korean sautéed zucchini and prawns with rice",
@@ -90,7 +96,10 @@
       "Meanwhile boil the eggs for 8 minutes and cool them. Toss the sliced cucumber and lettuce with the sesame oil and a pinch of salt and add the halved eggs.",
       "Mix the soy sauce, vinegar and sesame seeds for dipping and serve with the pancakes and salad."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "fine sieve", "frying pan"], "illustration": "🥔"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "fine sieve", "frying pan"], "illustration": "🥔",
+    "photo": "photos/korean-potato-pancakes.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/4165311996"
   },
   {
     "id": "seafood-scallion-pancake", "title": "Haemul-pajeon (seafood and spring onion pancake)",
@@ -113,7 +122,10 @@
       { "text": "Cook until golden underneath, about 4 minutes, turn and cook for 5 minutes, then turn again for 1 minute to crisp. Repeat with the rest.", "tip": "Turn it with the help of a plate if it is large. Press it flat with a spatula." },
       "Cut into squares and serve hot with the dipping sauce and rice."
     ],
-    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["large frying pan", "bowl", "whisk", "pot"], "illustration": "🥞"
+    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["large frying pan", "bowl", "whisk", "pot"], "illustration": "🥞",
+    "photo": "photos/seafood-scallion-pancake.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/4025771789"
   },
   {
     "id": "korean-fried-chicken", "title": "Korean fried chicken with sweet chili glaze",
@@ -139,7 +151,10 @@
       "Toss the hot chicken in the sauce and scatter with sesame seeds.",
       "Serve with the rice and thinly shredded cabbage dressed with a splash of vinegar."
     ],
-    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 1, "equipment": ["deep pot", "rack", "pan", "pot"], "illustration": "🍗"
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 1, "equipment": ["deep pot", "rack", "pan", "pot"], "illustration": "🍗",
+    "photo": "photos/korean-fried-chicken.jpg",
+    "photoCredit": "arnold | inuyaki, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58819758@N00/1435410013"
   },
   {
     "id": "bulgogi-lettuce-wraps", "title": "Bulgogi (Korean marinated beef) with rice and lettuce",
@@ -163,7 +178,10 @@
       { "text": "Heat a large frying pan with the oil until very hot and sear the beef in batches for 2 to 3 minutes, spreading it out.", "tip": "Very hot and in a thin layer, so it browns instead of stewing." },
       "Scatter with sesame seeds and serve with the rice, lettuce leaves and a little chili sauce for wrapping."
     ],
-    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "large frying pan", "pot"], "illustration": "🥩"
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 1, "equipment": ["grater or blender", "large frying pan", "pot"], "illustration": "🥩",
+    "photo": "photos/bulgogi-lettuce-wraps.jpg",
+    "photoCredit": "KFoodaddict, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/61056459@N05/8634652350"
   },
   {
     "id": "beef-tofu-patties-korean", "title": "Wanjajeon (beef and tofu patties)",

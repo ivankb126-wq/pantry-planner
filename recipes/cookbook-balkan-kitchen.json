@@ -62,7 +62,10 @@
       { "text": "Slide it on its paper onto a tray, put the hot second tray on top and bake for 20 minutes. Remove the top tray and bake for 15 to 20 minutes more until golden and crisp.", "tip": "The hot tray on top copies the old way of baking soparnik under hot embers." },
       { "text": "Crush the garlic and chop the parsley, mix with the rest of the olive oil and brush it all over the hot pie. Cut into squares.", "tip": "It is good warm or cold, keeps 3 days and freezes well." }
     ],
-    "tags": ["vegan", "vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "rolling pin", "frying pan"], "illustration": "🥬"
+    "tags": ["vegan", "vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "rolling pin", "frying pan"], "illustration": "🥬",
+    "photo": "photos/soparnik.jpg",
+    "photoCredit": "tillwe, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/98652633@N00/3726597647"
   },
   {
     "id": "gibanica", "title": "Gibanica (crumpled filo cheese bake)",
@@ -106,7 +109,10 @@
       { "text": "Brush the top with the rest of the oil and bake for 25 minutes. Melt the butter in {50 ml} boiling water, pour it over and bake for 20 minutes more at 180 °C, until deep golden.", "tip": "The butter water softens the inner layers like a real Sarajevo pita while the top stays crisp." },
       "Cover with a clean towel for 5 minutes, then cut and serve with cold yogurt."
     ],
-    "tags": ["vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["round baking tin", "grater", "pastry brush"], "illustration": "🥔"
+    "tags": ["vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["round baking tin", "grater", "pastry brush"], "illustration": "🥔",
+    "photo": "photos/krompirusa.jpg",
+    "photoCredit": "young shanahan, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/14759783@N04/49279762432"
   },
   {
     "id": "tavce-gravce", "title": "Tavče gravče (Macedonian baked beans)",
@@ -176,7 +182,10 @@
       { "text": "Add the passata, the rest of the tomato paste, the drained barley, the stock cubes, the rest of the salt, the pepper and {1500 ml} water. Put the meatballs back, cover and simmer for 40 minutes until the barley is soft.", "tip": "The barley thickens the soup as it cooks. Add a little water if it gets too thick." },
       { "text": "Stir in the rest of the parsley and serve with bread.", "tip": "It keeps 3 days and freezes well." }
     ],
-    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲"
+    "tags": ["high-protein", "comfort", "freezer-friendly", "cook-once-eat-twice"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲",
+    "photo": "photos/juha-s-okruglicama.jpg",
+    "photoCredit": "Charles Haynes, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/87232391@N00/13950718122"
   },
   {
     "id": "comlek", "title": "Čomlek (slow beef with onions and garlic)",
@@ -200,7 +209,10 @@
       { "text": "Cover tightly and bake for 3.5 hours, until the beef breaks apart with a spoon and the garlic is soft and sweet.", "tip": "Check once or twice and add a little hot water if it looks dry. The long, slow heat turns all that garlic mild and buttery." },
       { "text": "Serve with plenty of bread for the sauce.", "tip": "It keeps 4 days and tastes even better reheated. It freezes well." }
     ],
-    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly", "festive"], "keepsDays": 4, "equipment": ["heavy ovenproof pot with a lid"], "illustration": "🧄"
+    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly", "festive"], "keepsDays": 4, "equipment": ["heavy ovenproof pot with a lid"], "illustration": "🧄",
+    "photo": "photos/comlek.jpg",
+    "photoCredit": "rovingI, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70522326@N00/401966637"
   },
   {
     "id": "piletina-s-mlincima", "title": "Roast chicken with mlinci and cabbage salad",
@@ -223,7 +235,10 @@
       { "text": "Lift out the chicken, toss the mlinci with the juices in the tin and the butter, put the chicken on top and bake for 15 minutes more until the edges of the mlinci crisp.", "tip": "The crispy corners are everyone's favourite part." },
       "Serve the chicken and mlinci with the cabbage salad."
     ],
-    "tags": ["festive", "comfort", "high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "roasting tin", "rolling pin"], "illustration": "🍗"
+    "tags": ["festive", "comfort", "high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "roasting tin", "rolling pin"], "illustration": "🍗",
+    "photo": "photos/piletina-s-mlincima.jpg",
+    "photoCredit": "JC Awe, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/96742741@N00/8151097503"
   },
   {
     "id": "cufte-na-luku", "title": "Ćufte baked on onions",

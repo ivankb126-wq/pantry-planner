@@ -63,7 +63,10 @@
     "tags": ["vegetarian", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["2 bowls", "frying pan", "ladle"],
-    "illustration": "🥞"
+    "illustration": "🥞",
+    "photo": "photos/blueberry-pancakes.jpg",
+    "photoCredit": "say_cheddar, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/29271559@N02/8320809251"
   },
   {
     "id": "potato-hash-eggs",
@@ -98,7 +101,10 @@
     "tags": ["high-protein"],
     "keepsDays": 1,
     "equipment": ["pot", "large frying pan with a lid"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/potato-hash-eggs.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/15690136739"
   },
   {
     "id": "banana-oat-cookies",
@@ -129,7 +135,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly", "make-ahead"],
     "keepsDays": 4,
     "equipment": ["baking tray", "baking paper", "bowl"],
-    "illustration": "🍪"
+    "illustration": "🍪",
+    "photo": "photos/banana-oat-cookies.jpg",
+    "photoCredit": "nvarchar, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/104166365@N06/11295031073"
   },
   {
     "id": "apple-cinnamon-muffins",
@@ -164,7 +173,10 @@
     "tags": ["vegetarian", "batch", "make-ahead", "freezer-friendly", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["12-hole muffin tin", "paper cases", "2 bowls"],
-    "illustration": "🧁"
+    "illustration": "🧁",
+    "photo": "photos/apple-cinnamon-muffins.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/3745329498"
   },
   {
     "id": "red-pepper-hummus",
@@ -263,6 +275,9 @@
     "tags": ["vegetarian", "comfort", "freezer-friendly"],
     "keepsDays": 2,
     "equipment": ["big pot", "wide frying pan", "rolling pin", "slotted spoon"],
-    "illustration": "🟣"
+    "illustration": "🟣",
+    "photo": "photos/knedle-sa-sljivama.jpg",
+    "photoCredit": "KLMircea, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/23317598@N05/9758854916"
   }
 ]

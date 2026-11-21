@@ -67,7 +67,10 @@
       "Add the rest of the oil, the chopped ginger and garlic and the peppers and stir-fry for 2 minutes. Put the beef back and add the cumin and chili.",
       { "text": "When it smells toasty, toss in the spring onion and, off the heat, the sesame oil. Serve with the rice.", "tip": "Adjust the chili to taste: half the amount is still lively." }
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🌶️"
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🌶️",
+    "photo": "photos/cumin-beef-stir-fry.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2267768617"
   },
   {
     "id": "gong-bao-chicken", "title": "Gong bao chicken with peanuts",
@@ -92,7 +95,10 @@
       "Add the chicken at once and stir-fry until the cubes separate, then add the garlic, ginger and spring onion and cook until the chicken is just done.",
       { "text": "Stir the sauce, pour it in and toss until thick and shiny. Stir in the peanuts and serve with the rice.", "tip": "The sauce should taste like a balance of sweet and sour, called lychee flavour in Sichuan." }
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🥜"
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🥜",
+    "photo": "photos/gong-bao-chicken.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3951774367"
   },
   {
     "id": "steamed-fish-ginger-spring-onion", "title": "Steamed sea bass with ginger and spring onion",
@@ -114,7 +120,10 @@
       "Move the fish to a clean plate, throw away the juices and pile the ginger and spring onion slivers on top.",
       { "text": "Heat the oil until smoking and pour it over so it sizzles, then pour the soy sauce mixed with {2 tbsp} hot water around the fish. Serve with the rice and broccoli.", "tip": "Careful: the hot oil spits. The sizzle releases all the perfume." }
     ],
-    "tags": ["high-protein", "light", "festive"], "keepsDays": 1, "equipment": ["steamer or wide pan with a lid", "pot", "small pan"], "illustration": "🐟"
+    "tags": ["high-protein", "light", "festive"], "keepsDays": 1, "equipment": ["steamer or wide pan with a lid", "pot", "small pan"], "illustration": "🐟",
+    "photo": "photos/steamed-fish-ginger-spring-onion.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2500744284"
   },
   {
     "id": "hangzhou-eggplant-pork", "title": "Silky eggplant with pork mince and sweet bean sauce",
@@ -136,7 +145,10 @@
       { "text": "Add the wine, soy sauce, sugar and {100 ml} water, then the eggplant, and toss gently.", "tip": "Hoisin stands in for the Chinese sweet bean sauce in the original." },
       "Mix the cornstarch with {2 tsp} water, stir it in to thicken the sauce, scatter with spring onion and serve with the rice."
     ],
-    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "wok or large frying pan"], "illustration": "🍆"
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "wok or large frying pan"], "illustration": "🍆",
+    "photo": "photos/hangzhou-eggplant-pork.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2403231552"
   },
   {
     "id": "green-pepper-pork-stir-fry", "title": "Stir-fried pork slivers with green peppers",
@@ -157,7 +169,10 @@
       "Heat the oil in the wok and stir-fry the pork until the slivers separate and turn pale.",
       "Add the hoisin sauce for a few seconds, then the peppers and the rest of the soy sauce, and toss together. Serve with the rice."
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🫑"
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "wok or large frying pan"], "illustration": "🫑",
+    "photo": "photos/green-pepper-pork-stir-fry.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/4423896316"
   },
   {
     "id": "zhajiang-noodles", "title": "Zhajiang noodles with pork sauce and crunchy vegetables",
@@ -179,7 +194,10 @@
       "Cook the noodles as the packet says and drain.",
       "Put the noodles in bowls, top with the vegetables and a big spoon of sauce, scatter with spring onion and mix at the table."
     ],
-    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["wok or large frying pan", "big pot"], "illustration": "🍜"
+    "tags": ["high-protein", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["wok or large frying pan", "big pot"], "illustration": "🍜",
+    "photo": "photos/zhajiang-noodles.jpg",
+    "photoCredit": "Allerina & Glen MacLarty, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97451431@N00/6278218226"
   },
   {
     "id": "dan-dan-noodles", "title": "Dan dan noodles",
@@ -202,7 +220,10 @@
       "Cook the noodles, adding the spinach for the last minute. Drain.",
       "Pour the hot stock into the bowls, add the noodles and spinach, top with the pork and stir well before eating."
     ],
-    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "wok or frying pan", "heatproof bowl"], "illustration": "🍜"
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["big pot", "wok or frying pan", "heatproof bowl"], "illustration": "🍜",
+    "photo": "photos/dan-dan-noodles.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2952433049"
   },
   {
     "id": "dry-fried-green-beans-pork", "title": "Sichuan dry-fried green beans with pork",
@@ -225,6 +246,9 @@
       "Add the beans, pork, chopped pickles and the rest of the soy sauce and stir-fry for 2 minutes until coated and fragrant.",
       "Add the salt if needed and the sesame oil, scatter with spring onion greens and serve with the rice."
     ],
-    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "big pot", "wok or large frying pan"], "illustration": "🫛"
+    "tags": ["high-protein", "quick"], "keepsDays": 1, "equipment": ["pot", "big pot", "wok or large frying pan"], "illustration": "🫛",
+    "photo": "photos/dry-fried-green-beans-pork.jpg",
+    "photoCredit": "Laurel Fan, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/18295242@N00/51342074"
   }
 ]

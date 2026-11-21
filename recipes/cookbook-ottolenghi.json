@@ -22,7 +22,10 @@
       { "text": "Meanwhile pour boiling water over the bulgur, leave for 10 minutes and drain. Stir it into the soup with the salt.", "tip": "Adding the bulgur at the end keeps it from turning mushy." },
       { "text": "Mash the feta with the sour cream and most of the chopped parsley. Serve the soup with a spoon of it on top and the rest of the parsley.", "tip": "The soup keeps 3 days. Keep the topping separate." }
     ],
-    "tags": ["vegetarian", "freezer-friendly", "comfort"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲"
+    "tags": ["vegetarian", "freezer-friendly", "comfort"], "keepsDays": 3, "equipment": ["big pot", "bowl"], "illustration": "🍲",
+    "photo": "photos/spicy-chickpea-bulgur-soup.jpg",
+    "photoCredit": "mava, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/62621566@N00/2404631798"
   },
   {
     "id": "braised-eggs-leek-spinach", "title": "Braised eggs with leeks, spinach and feta",
@@ -90,7 +93,10 @@
       { "text": "Whisk the coconut milk smooth and keep a few spoons aside. Pour the rest into the pot and simmer for 25 minutes, stirring now and then, until the lentils are soft.", "tip": "Add a splash of water if it gets too thick." },
       { "text": "Serve with a swirl of the kept coconut milk, the parsley leaves and bread.", "tip": "It keeps 3 days and freezes well." }
     ],
-    "tags": ["vegan", "vegetarian", "freezer-friendly", "one-pot"], "keepsDays": 3, "equipment": ["pot", "whisk"], "illustration": "🍲"
+    "tags": ["vegan", "vegetarian", "freezer-friendly", "one-pot"], "keepsDays": 3, "equipment": ["pot", "whisk"], "illustration": "🍲",
+    "photo": "photos/curried-lentil-coconut-soup.jpg",
+    "photoCredit": "bobjudge, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8286199@N08/3210281474"
   },
   {
     "id": "chickpeas-chard-roast-carrots", "title": "Chickpeas and chard with roast carrots and yogurt",
@@ -112,7 +118,10 @@
       "Season with the rest of the salt, the pepper and the lemon juice.",
       "Serve topped with yogurt, parsley and the rest of the oil, with bread."
     ],
-    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["baking tray", "large frying pan"], "illustration": "🥕"
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["baking tray", "large frying pan"], "illustration": "🥕",
+    "photo": "photos/chickpeas-chard-roast-carrots.jpg",
+    "photoCredit": "YoAmes, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/24013072@N05/4293776685"
   },
   {
     "id": "lentil-eggplant-stew", "title": "Lentil and eggplant stew with sour cream",
@@ -276,7 +285,10 @@
       { "text": "Cover and simmer for 30 minutes, then uncover for the last 10 minutes to thicken. Rest for 10 minutes.", "tip": "The ricotta keeps them soft even after long cooking." },
       "Cook the pasta and serve the meatballs and sauce over it."
     ],
-    "tags": ["high-protein", "comfort", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "frying pan", "big pot"], "illustration": "🍝"
+    "tags": ["high-protein", "comfort", "freezer-friendly", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "frying pan", "big pot"], "illustration": "🍝",
+    "photo": "photos/ricotta-oregano-meatballs.jpg",
+    "photoCredit": "WordRidden, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97844767@N00/4680044035"
   },
   {
     "id": "chicken-marbella", "title": "Chicken Marbella with olives, capers and dates",
@@ -348,6 +360,9 @@
       { "text": "Shallow-fry in the oil on medium for 5 to 6 minutes, turning halfway, until deep golden and cooked through. Drain on kitchen paper.", "tip": "Seeds brown faster than breadcrumbs, so keep the heat medium. Never leave hot oil alone." },
       "Serve with lemon wedges, the potatoes and the cucumber yogurt."
     ],
-    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "3 plates"], "illustration": "🍗"
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["large frying pan", "pot", "3 plates"], "illustration": "🍗",
+    "photo": "photos/seeded-chicken-schnitzel.jpg",
+    "photoCredit": "Christian Cable, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/67287915@N00/1277851411"
   }
 ]

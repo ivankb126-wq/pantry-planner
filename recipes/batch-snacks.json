@@ -83,7 +83,10 @@
       "Roll it into walnut-size balls with slightly wet hands.",
       { "text": "Keep them in a closed box in the fridge. Two balls make a portion.", "tip": "They keep a week in the fridge." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "no-cook", "freezer-friendly"], "keepsDays": 7, "equipment": ["bowl"], "illustration": "🥜"
+    "tags": ["batch", "vegetarian", "kid-friendly", "no-cook", "freezer-friendly"], "keepsDays": 7, "equipment": ["bowl"], "illustration": "🥜",
+    "photo": "photos/peanut-butter-energy-balls.jpg",
+    "photoCredit": "anasegota, CC0",
+    "photoSource": "https://www.flickr.com/photos/150121377@N03/34277553406"
   },
   {
     "id": "banana-oat-muffins", "title": "Banana oat muffins",
@@ -150,7 +153,10 @@
       "Taste and add more lemon or salt. Spoon it into a bowl, make a swirl with the back of the spoon and drizzle with the rest of the oil.",
       { "text": "Cut the carrots, cucumber and pepper into sticks and serve with the hummus.", "tip": "Keep the hummus in a closed box in the fridge for up to 5 days." }
     ],
-    "tags": ["batch", "vegan", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🥕"
+    "tags": ["batch", "vegan", "vegetarian", "no-cook", "make-ahead"], "keepsDays": 5, "equipment": ["blender"], "illustration": "🥕",
+    "photo": "photos/homemade-hummus.jpg",
+    "photoCredit": "Albertas Agejevas, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/74699799@N00/3122887625"
   },
   {
     "id": "beetroot-hummus", "title": "Beetroot hummus",
@@ -301,7 +307,10 @@
       { "text": "Fill the cases and bake for 20 to 22 minutes, until risen and golden.", "tip": "A skewer pushed into the middle should come out clean." },
       { "text": "Cool them on a rack, then keep them in a closed box in the fridge.", "tip": "They keep 3 days. Warm them for a few seconds in the microwave." }
     ],
-    "tags": ["batch", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["oven", "muffin tin"], "illustration": "🧀"
+    "tags": ["batch", "kid-friendly", "freezer-friendly"], "keepsDays": 3, "equipment": ["oven", "muffin tin"], "illustration": "🧀",
+    "photo": "photos/ham-cheese-muffins.jpg",
+    "photoCredit": "Nicola since 1972, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/15216811@N06/13467371415"
   },
   {
     "id": "tzatziki-veg-sticks", "title": "Tzatziki with vegetable sticks",
@@ -340,7 +349,10 @@
       { "text": "Spread them on a plate and let them cool completely.", "tip": "If they are still warm, the chocolate melts." },
       { "text": "Mix with the raisins and chocolate chips and keep in a jar.", "tip": "A handful, about 30 g, is a portion." }
     ],
-    "tags": ["batch", "vegetarian", "no-cook"], "keepsDays": 14, "equipment": ["pan", "jar"], "illustration": "🥜"
+    "tags": ["batch", "vegetarian", "no-cook"], "keepsDays": 14, "equipment": ["pan", "jar"], "illustration": "🥜",
+    "photo": "photos/trail-mix.jpg",
+    "photoCredit": "AmazingAlmonds, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71430589@N02/8596721536"
   },
   {
     "id": "banana-bread", "title": "Banana bread",

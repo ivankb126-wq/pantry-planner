@@ -196,7 +196,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["frying pan", "saucepan"],
-    "illustration": "🍚"
+    "illustration": "🍚",
+    "photo": "photos/korean-beef-bowl.jpg",
+    "photoCredit": "kimishowota, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/22598122@N03/3054698099"
   },
   {
     "id": "vegetable-bibimbap",

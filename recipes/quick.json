@@ -105,7 +105,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 2,
     "equipment": ["pot", "pan"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/tuna-tomato-pasta.jpg",
+    "photoCredit": "Kai Hendry, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/16105436@N00/3629848377"
   },
   {
     "id": "bean-cheese-quesadillas",
@@ -181,7 +184,10 @@
     "tags": ["quick", "kid-friendly", "high-protein"],
     "keepsDays": 2,
     "equipment": ["large frying pan"],
-    "illustration": "🌯"
+    "illustration": "🌯",
+    "photo": "photos/chicken-fajita-wraps.jpg",
+    "photoCredit": "kalleboo, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/82365211@N00/141661641"
   },
   {
     "id": "garlic-prawn-linguine",
@@ -297,7 +303,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["2 pots"],
-    "illustration": "🍜"
+    "illustration": "🍜",
+    "photo": "photos/chicken-ramen.jpg",
+    "photoCredit": "adactio, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/74105777@N00/15373483406"
   },
   {
     "id": "gnocchi-tomato-mozzarella",
@@ -407,7 +416,10 @@
     "tags": ["quick", "vegan", "vegetarian", "one-pot"],
     "keepsDays": 3,
     "equipment": ["deep pan"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/chickpea-spinach-curry.jpg",
+    "photoCredit": "Scott Teresi, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35903175@N02/4105752173"
   },
   {
     "id": "couscous-feta-chickpea-salad",
@@ -518,7 +530,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["frying pan", "bowl"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/salmon-couscous-spinach.jpg",
+    "photoCredit": "Navin75, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/23597588@N00/12626781125"
   },
   {
     "id": "cevapi-lepinja-ajvar",
@@ -551,7 +566,10 @@
     "tags": ["quick", "high-protein", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["grill pan"],
-    "illustration": "🥙"
+    "illustration": "🥙",
+    "photo": "photos/cevapi-lepinja-ajvar.jpg",
+    "photoCredit": "young shanahan, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/14759783@N04/49300049943"
   },
   {
     "id": "cheese-omelette-salad",
@@ -683,7 +701,10 @@
     "tags": ["quick", "no-cook", "high-protein", "make-ahead"],
     "keepsDays": 2,
     "equipment": ["bowl"],
-    "illustration": "🥗"
+    "illustration": "🥗",
+    "photo": "photos/tuna-white-bean-salad.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/10585910504"
   },
   {
     "id": "penne-arrabbiata-chickpeas",

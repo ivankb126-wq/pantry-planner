@@ -69,7 +69,10 @@
     "tags": ["vegetarian", "batch", "make-ahead", "kid-friendly"],
     "keepsDays": 4,
     "equipment": ["baking dish", "bowl"],
-    "illustration": "🍎"
+    "illustration": "🍎",
+    "photo": "photos/apple-baked-oats.jpg",
+    "photoCredit": "Burger Baroness, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/66787975@N00/2948627286"
   },
   {
     "id": "egg-muffins",
@@ -163,7 +166,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly"],
     "keepsDays": 5,
     "equipment": ["baking tray", "rolling pin"],
-    "illustration": "🥨"
+    "illustration": "🥨",
+    "photo": "photos/cheese-straws.jpg",
+    "photoCredit": "goblinbox_(queen_of_ad_hoc_bento), CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25977089@N00/15937882188"
   },
   {
     "id": "honey-roasted-nuts",
@@ -309,7 +315,10 @@
     "tags": ["vegetarian", "batch"],
     "keepsDays": 4,
     "equipment": ["round cake tin", "blender"],
-    "illustration": "🍐"
+    "illustration": "🍐",
+    "photo": "photos/pear-almond-cake.jpg",
+    "photoCredit": "yashima, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/44032042@N00/1458392811"
   },
   {
     "id": "one-bowl-chocolate-cake",
@@ -346,7 +355,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly"],
     "keepsDays": 5,
     "equipment": ["tin", "large bowl", "whisk"],
-    "illustration": "🍫"
+    "illustration": "🍫",
+    "photo": "photos/one-bowl-chocolate-cake.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/3663261219"
   },
   {
     "id": "revani",

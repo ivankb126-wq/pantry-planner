@@ -18,7 +18,10 @@
       "Cool for 5 minutes in the tins, then turn out onto a rack and cool completely.",
       { "text": "Spread one sponge with jam and the softly whipped cream, put the other on top and sprinkle with the rest of the sugar.", "tip": "Fill it only when completely cold, or the cream melts. Keep it in the fridge once filled." }
     ],
-    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🍰"
+    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🍰",
+    "photo": "photos/victoria-sponge.jpg",
+    "photoCredit": "gordonplant, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/17513385@N00/5003941627"
   },
   {
     "id": "walnut-sponge-cake", "title": "Walnut sponge cake with buttercream",
@@ -39,7 +42,10 @@
       "Beat the rest of the butter with the powdered sugar, vanilla sugar and the rest of the milk until pale and fluffy.",
       { "text": "Sandwich the cakes with half the buttercream, spread the rest on top and decorate with the walnut halves.", "tip": "It keeps 3 days in a tin." }
     ],
-    "tags": ["vegetarian", "festive"], "keepsDays": 3, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🌰"
+    "tags": ["vegetarian", "festive"], "keepsDays": 3, "equipment": ["2 x 20 cm round tins", "mixer or whisk", "rack"], "illustration": "🌰",
+    "photo": "photos/walnut-sponge-cake.jpg",
+    "photoCredit": "dichohecho, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8978957@N07/4330736172"
   },
   {
     "id": "sticky-honey-gingerbread", "title": "Sticky honey gingerbread",
@@ -62,7 +68,10 @@
       { "text": "Pour into the tin and bake for 45 to 50 minutes until risen and firm to the touch.", "tip": "Check with a toothpick: it should come out clean." },
       { "text": "Cool in the tin, then cut into 16 squares.", "tip": "Wrapped in foil it keeps a week and gets stickier every day." }
     ],
-    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 7, "equipment": ["23 x 33 cm tin", "pot", "big bowl", "whisk"], "illustration": "🍯"
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 7, "equipment": ["23 x 33 cm tin", "pot", "big bowl", "whisk"], "illustration": "🍯",
+    "photo": "photos/sticky-honey-gingerbread.jpg",
+    "photoCredit": "Salim Virji, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/44124427152@N01/8479288958"
   },
   {
     "id": "iced-chocolate-traybake", "title": "Iced chocolate traybake",
@@ -85,7 +94,10 @@
       { "text": "Melt the chocolate with {6 tbsp} water in a bowl over simmering water. Take off the heat and beat in the powdered sugar and oil until glossy. Pour over the cake and spread.", "tip": "The jam layer keeps the icing smooth and the sponge moist." },
       { "text": "Leave to set, then cut into 16 squares.", "tip": "It keeps 4 days in a tin and freezes well." }
     ],
-    "tags": ["vegetarian", "festive", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["23 x 33 cm tin", "mixer or whisk", "heatproof bowl", "pot"], "illustration": "🍫"
+    "tags": ["vegetarian", "festive", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["23 x 33 cm tin", "mixer or whisk", "heatproof bowl", "pot"], "illustration": "🍫",
+    "photo": "photos/iced-chocolate-traybake.jpg",
+    "photoCredit": "Teresa Trimm, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/7714612@N04/6981246275"
   },
   {
     "id": "best-shortbread", "title": "Butter shortbread fingers",
@@ -103,7 +115,10 @@
       { "text": "Bake for 45 to 50 minutes until a very pale gold.", "tip": "Low and slow: it should stay pale, not brown." },
       { "text": "Sprinkle with the rest of the sugar while warm and mark into 30 fingers. Cool in the tin, then cut through.", "tip": "Cut while warm: it breaks if you wait until it is cold. Keeps 2 weeks in a tin." }
     ],
-    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 14, "equipment": ["23 x 33 cm tin"], "illustration": "🍪"
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 14, "equipment": ["23 x 33 cm tin"], "illustration": "🍪",
+    "photo": "photos/best-shortbread.jpg",
+    "photoCredit": "Veganbaking.net, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/31104779@N02/16406242761"
   },
   {
     "id": "double-chocolate-cookies", "title": "Double chocolate cookies",
@@ -124,7 +139,10 @@
       { "text": "Bake for 12 to 15 minutes until the edges are firm. They will still feel soft in the middle.", "tip": "Take them out while soft: they firm up as they cool and stay chewy." },
       "Cool on the trays for 5 minutes, then on a rack."
     ],
-    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 5, "equipment": ["2 baking trays", "heatproof bowl", "pot"], "illustration": "🍪"
+    "tags": ["vegetarian", "kid-friendly", "make-ahead"], "keepsDays": 5, "equipment": ["2 baking trays", "heatproof bowl", "pot"], "illustration": "🍪",
+    "photo": "photos/double-chocolate-cookies.jpg",
+    "photoCredit": "thebittenword.com, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/22198928@N00/4013070232"
   },
   {
     "id": "anzac-biscuits", "title": "Anzac oat and coconut biscuits",
@@ -144,7 +162,10 @@
       { "text": "Put teaspoons of the mix on the trays, well apart, and flatten slightly.", "tip": "They spread a lot." },
       { "text": "Bake for 8 to 10 minutes until golden at the edges. Cool on the trays for a few minutes, then on a rack.", "tip": "They keep a week in a tin. Two make one snack." }
     ],
-    "tags": ["vegetarian", "batch", "make-ahead", "kid-friendly"], "keepsDays": 7, "equipment": ["2 baking trays", "pot", "bowl"], "illustration": "🍪"
+    "tags": ["vegetarian", "batch", "make-ahead", "kid-friendly"], "keepsDays": 7, "equipment": ["2 baking trays", "pot", "bowl"], "illustration": "🍪",
+    "photo": "photos/anzac-biscuits.jpg",
+    "photoCredit": "tristanf, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/89056504@N00/2409458305"
   },
   {
     "id": "classic-scones", "title": "Scones with jam and cream",
@@ -166,7 +187,10 @@
       "Put them on the trays, brush the tops with the kept egg and bake for 10 to 15 minutes until risen and golden.",
       "Cool a little on a rack, split and serve with jam and whipped cream."
     ],
-    "tags": ["vegetarian", "freezer-friendly", "festive"], "keepsDays": 2, "equipment": ["2 baking trays", "bowl", "round cutter or glass"], "illustration": "🫓"
+    "tags": ["vegetarian", "freezer-friendly", "festive"], "keepsDays": 2, "equipment": ["2 baking trays", "bowl", "round cutter or glass"], "illustration": "🫓",
+    "photo": "photos/classic-scones.jpg",
+    "photoCredit": "fred_v, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8514720@N04/6862029495"
   },
   {
     "id": "kefir-soda-bread", "title": "Kefir soda bread",
@@ -184,7 +208,10 @@
       { "text": "Bake for 30 to 35 minutes until golden and it sounds hollow when tapped underneath.", "tip": "Wrap it in a clean towel while it cools for a soft crust." },
       "Eat warm with butter and jam, or with soup."
     ],
-    "tags": ["vegetarian", "batch", "freezer-friendly"], "keepsDays": 2, "equipment": ["baking tray", "bowl"], "illustration": "🍞"
+    "tags": ["vegetarian", "batch", "freezer-friendly"], "keepsDays": 2, "equipment": ["baking tray", "bowl"], "illustration": "🍞",
+    "photo": "photos/kefir-soda-bread.jpg",
+    "photoCredit": "TheLizardQueen, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/50194168@N00/88663944"
   },
   {
     "id": "bread-butter-pudding", "title": "Bread and butter pudding",
@@ -205,7 +232,10 @@
       { "text": "Whisk the eggs, milk and cream and pour it over. Sprinkle with the rest of the sugar and leave for 1 hour so the bread soaks it up.", "tip": "The soaking time is what makes it soft and custardy inside." },
       "Heat the oven to 175 °C and bake for 40 minutes until puffed, set and golden on top. Serve warm."
     ],
-    "tags": ["vegetarian", "comfort", "make-ahead"], "keepsDays": 2, "equipment": ["2 litre baking dish", "whisk"], "illustration": "🍮"
+    "tags": ["vegetarian", "comfort", "make-ahead"], "keepsDays": 2, "equipment": ["2 litre baking dish", "whisk"], "illustration": "🍮",
+    "photo": "photos/bread-butter-pudding.jpg",
+    "photoCredit": "Annie Mole, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21309047@N00/2798851172"
   },
   {
     "id": "apple-tarte-tatin", "title": "Apple tarte tatin",
@@ -266,6 +296,9 @@
       { "text": "Whisk the whites to stiff peaks, then whisk in the rest of the sugar a spoon at a time until thick and glossy. Spread over the warm filling, right to the edges of the pastry.", "tip": "Sealing the meringue to the pastry edge stops it shrinking and weeping." },
       { "text": "Bake for 35 to 40 minutes until pale gold and crisp on top. Cool for at least 1 hour before cutting.", "tip": "Best eaten the same day." }
     ],
-    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["23 cm tart tin", "rolling pin", "pot", "mixer or whisk"], "illustration": "🍋"
+    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["23 cm tart tin", "rolling pin", "pot", "mixer or whisk"], "illustration": "🍋",
+    "photo": "photos/lemon-meringue-pie.jpg",
+    "photoCredit": "Sistak, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/94801434@N00/5134246283"
   }
 ]

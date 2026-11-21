@@ -174,7 +174,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "comfort"],
     "keepsDays": 4,
     "equipment": ["large pot"],
-    "illustration": "🌽"
+    "illustration": "🌽",
+    "photo": "photos/istarska-manestra.jpg",
+    "photoCredit": "emmadiscovery, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8174757@N02/6063498585"
   },
   {
     "id": "fis-paprikas",
@@ -407,7 +410,10 @@
     "tags": ["high-protein"],
     "keepsDays": 0,
     "equipment": ["large pot with lid"],
-    "illustration": "🦪"
+    "illustration": "🦪",
+    "photo": "photos/dagnje-na-buzaru.jpg",
+    "photoCredit": "Haydn Blackey, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/54549113@N00/15002033261"
   },
   {
     "id": "rizot-od-kozica",
@@ -445,7 +451,10 @@
     "tags": ["high-protein"],
     "keepsDays": 1,
     "equipment": ["wide pan"],
-    "illustration": "🦐"
+    "illustration": "🦐",
+    "photo": "photos/rizot-od-kozica.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/428015187"
   },
   {
     "id": "ricet",
@@ -557,7 +566,10 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
     "equipment": ["frying pan", "pot"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/pohani-pileci-file.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/12915607034"
   },
   {
     "id": "pecena-piletina-s-krumpirom",
@@ -593,7 +605,10 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 3,
     "equipment": ["oven", "baking tray"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/pecena-piletina-s-krumpirom.jpg",
+    "photoCredit": "prague.czech.photo, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/99424477@N04/15341412949"
   },
   {
     "id": "mahune-varivo",

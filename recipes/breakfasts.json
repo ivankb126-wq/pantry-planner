@@ -16,7 +16,10 @@
       "Stir the apple and cinnamon into the porridge and cook 2 minutes more.",
       "Spoon into bowls and top with the walnuts and a little honey."
     ],
-    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥣"
+    "tags": ["vegetarian", "quick", "kid-friendly"], "keepsDays": 0, "equipment": ["saucepan"], "illustration": "🥣",
+    "photo": "photos/apple-cinnamon-porridge.jpg",
+    "photoCredit": "WordRidden, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97844767@N00/92257433"
   },
   {
     "id": "banana-oat-pancakes", "title": "Banana oat pancakes",
@@ -220,7 +223,10 @@
       { "text": "In the morning, chop the hazelnuts roughly. If you like, toast them in a dry pan on medium heat for 3 minutes, shaking the pan.", "tip": "Toasted hazelnuts taste much nuttier. Take them off when they smell toasty and start to brown." },
       "Stir the muesli, add a splash of milk if it is too thick, and top with the hazelnuts."
     ],
-    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 2, "equipment": ["bowl"], "illustration": "🍎"
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 2, "equipment": ["bowl"], "illustration": "🍎",
+    "photo": "photos/bircher-muesli.jpg",
+    "photoCredit": "simpleprovisions, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/80665970@N03/10152805073"
   },
   {
     "id": "breakfast-burrito", "title": "Breakfast burrito",
@@ -240,7 +246,10 @@
       "Warm the tortillas for a few seconds in a dry pan so they fold without cracking.",
       { "text": "Spoon the eggs and beans down the middle of each tortilla, add the cheese and salsa, fold in the sides and roll up tightly.", "tip": "Toasting the rolled burrito seam side down in the dry pan seals it. Wrap it in foil to take with you." }
     ],
-    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🌯"
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🌯",
+    "photo": "photos/breakfast-burrito.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/1014114127"
   },
   {
     "id": "ham-cheese-toastie", "title": "Ham and cheese toastie",
@@ -355,7 +364,10 @@
       "Meanwhile core and dice the apple. Stir it in with the cinnamon for the last few minutes.",
       "Spoon into bowls and pour over the kefir. Drizzle with a little honey."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣"
+    "tags": ["vegetarian", "quick"], "keepsDays": 2, "equipment": ["saucepan"], "illustration": "🥣",
+    "photo": "photos/buckwheat-apple-porridge.jpg",
+    "photoCredit": "Rooey202, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/50284194@N00/6215131688"
   },
   {
     "id": "savoury-oats-egg", "title": "Savoury oats with spinach and egg",
@@ -392,7 +404,10 @@
       { "text": "Blend for about a minute until completely smooth.", "tip": "Too thick? Add a splash of milk or water and blend again." },
       { "text": "Pour into glasses and drink straight away, or keep in a closed jar in the fridge until the morning.", "tip": "It thickens overnight as the oats soak. Shake or stir before drinking." }
     ],
-    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 1, "equipment": ["blender"], "illustration": "🥤"
+    "tags": ["vegetarian", "quick", "no-cook"], "keepsDays": 1, "equipment": ["blender"], "illustration": "🥤",
+    "photo": "photos/kefir-oat-smoothie.jpg",
+    "photoCredit": "Migle Seikyte, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/69668444@N03/7689147482"
   },
   {
     "id": "zucchini-fritaja", "title": "Zucchini fritaja",
@@ -433,7 +448,10 @@
       "Stir in the spinach until it wilts. Meanwhile toast the bread.",
       "Pile the scramble onto the toast and serve straight away."
     ],
-    "tags": ["vegan", "vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍳"
+    "tags": ["vegan", "vegetarian", "quick", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🍳",
+    "photo": "photos/tofu-scramble.jpg",
+    "photoCredit": "rusvaplauke, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7440954@N05/2451696679"
   },
   {
     "id": "mushroom-egg-toast", "title": "Garlic mushrooms and egg on toast",
@@ -452,7 +470,10 @@
       "Meanwhile fry the eggs in a second pan for 3 to 4 minutes and toast the bread.",
       "Pile the mushrooms on the toast and put an egg on top."
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["frying pan", "toaster"], "illustration": "🍄"
+    "tags": ["vegetarian", "quick"], "keepsDays": 0, "equipment": ["frying pan", "toaster"], "illustration": "🍄",
+    "photo": "photos/mushroom-egg-toast.jpg",
+    "photoCredit": "ultrakml, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/34948727@N00/9698220861"
   },
   {
     "id": "yogurt-muesli-parfait", "title": "Yogurt and muesli parfait",
@@ -468,7 +489,10 @@
       { "text": "In two glasses, layer a spoon of yogurt, then muesli, then fruit, and repeat until everything is used, finishing with fruit on top.", "tip": "Glasses show off the layers, but any bowl works." },
       { "text": "Eat straight away.", "tip": "For the next morning, layer only the yogurt and fruit and keep the muesli in a separate box so it stays crunchy." }
     ],
-    "tags": ["vegetarian", "no-cook", "make-ahead", "quick"], "keepsDays": 1, "equipment": ["2 glasses"], "illustration": "🍊"
+    "tags": ["vegetarian", "no-cook", "make-ahead", "quick"], "keepsDays": 1, "equipment": ["2 glasses"], "illustration": "🍊",
+    "photo": "photos/yogurt-muesli-parfait.jpg",
+    "photoCredit": "Traveloscopy, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/67406666@N00/15041951715"
   },
   {
     "id": "millet-pear-porridge", "title": "Millet porridge with pear and almonds",
@@ -526,7 +550,10 @@
       { "text": "Lay the salmon on top in loose folds, then add the cucumber slices.", "tip": "Folding the salmon loosely makes it look generous and is easier to bite." },
       "Sprinkle with dill and finish with a squeeze of lemon and a little black pepper."
     ],
-    "tags": ["quick", "no-cook", "high-protein"], "keepsDays": 0, "equipment": ["knife"], "illustration": "🐟"
+    "tags": ["quick", "no-cook", "high-protein"], "keepsDays": 0, "equipment": ["knife"], "illustration": "🐟",
+    "photo": "photos/smoked-salmon-rye.jpg",
+    "photoCredit": "Red Moon Sanctuary, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71646105@N03/35680253654"
   },
   {
     "id": "turkish-eggs", "title": "Turkish eggs with garlic yogurt",
@@ -588,6 +615,9 @@
       { "text": "Flip carefully with a spatula and fry the other side for 2 to 3 minutes. Repeat with the rest of the batter, adding a little oil each time.", "tip": "Turn the heat down a little if they brown before the middle is cooked." },
       "Serve warm with the jam."
     ],
-    "tags": ["vegetarian", "quick", "kid-friendly", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞"
+    "tags": ["vegetarian", "quick", "kid-friendly", "high-protein"], "keepsDays": 1, "equipment": ["frying pan"], "illustration": "🥞",
+    "photo": "photos/cottage-cheese-pancakes.jpg",
+    "photoCredit": "KLGreenNYC, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/19479358@N00/3951107387"
   }
 ]

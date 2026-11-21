@@ -163,7 +163,10 @@
     "tags": ["vegetarian"],
     "keepsDays": 1,
     "equipment": ["wide pan"],
-    "illustration": "🍄"
+    "illustration": "🍄",
+    "photo": "photos/mushroom-risotto.jpg",
+    "photoCredit": "roolrool, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71317184@N00/4335679494"
   },
   {
     "id": "pasta-genovese",
@@ -195,7 +198,10 @@
     "tags": ["vegetarian", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["large pot"],
-    "illustration": "🌿"
+    "illustration": "🌿",
+    "photo": "photos/pasta-genovese.jpg",
+    "photoCredit": "emmadiscovery, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8174757@N02/6113031911"
   },
   {
     "id": "chicken-cacciatore",
@@ -269,7 +275,10 @@
     "tags": ["high-protein"],
     "keepsDays": 2,
     "equipment": ["oven", "baking tray"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/baked-salmon-vegetables.jpg",
+    "photoCredit": "jhegyessy, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/33805261@N00/7149794255"
   },
   {
     "id": "spinach-ricotta-pasta-bake",
@@ -305,7 +314,10 @@
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["oven", "baking dish", "pot"],
-    "illustration": "🥬"
+    "illustration": "🥬",
+    "photo": "photos/spinach-ricotta-pasta-bake.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4571026842"
   },
   {
     "id": "polpette-al-sugo",
@@ -417,7 +429,10 @@
     "tags": ["high-protein"],
     "keepsDays": 3,
     "equipment": ["grill pan", "saucepan"],
-    "illustration": "🥙"
+    "illustration": "🥙",
+    "photo": "photos/chicken-souvlaki-bowls.jpg",
+    "photoCredit": "oddharmonic, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/42528087@N00/52562504281"
   },
   {
     "id": "greek-baked-beans",

@@ -33,7 +33,10 @@
     "tags": ["vegetarian", "comfort", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["pot", "frying pan"],
-    "illustration": "🍅"
+    "illustration": "🍅",
+    "photo": "photos/juha-od-rajcice.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/5857257367"
   },
   {
     "id": "krem-juha-od-brokule",
@@ -68,7 +71,10 @@
     "tags": ["vegetarian", "light"],
     "keepsDays": 3,
     "equipment": ["pot", "stick blender"],
-    "illustration": "🥦"
+    "illustration": "🥦",
+    "photo": "photos/krem-juha-od-brokule.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/726057913"
   },
   {
     "id": "potato-leek-soup",
@@ -104,7 +110,10 @@
     "tags": ["comfort"],
     "keepsDays": 3,
     "equipment": ["pot", "frying pan", "stick blender"],
-    "illustration": "🥣"
+    "illustration": "🥣",
+    "photo": "photos/potato-leek-soup.jpg",
+    "photoCredit": "flippinyank, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/26326001@N08/4066711232"
   },
   {
     "id": "juha-od-gljiva",
@@ -141,7 +150,10 @@
     "tags": ["vegetarian", "comfort"],
     "keepsDays": 3,
     "equipment": ["pot"],
-    "illustration": "🍄"
+    "illustration": "🍄",
+    "photo": "photos/juha-od-gljiva.jpg",
+    "photoCredit": "Phoebe Lim, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/71837271@N00/8694315231"
   },
   {
     "id": "grasak-varivo",
@@ -329,7 +341,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["pot", "wok or large frying pan"],
-    "illustration": "🍜"
+    "illustration": "🍜",
+    "photo": "photos/chicken-chow-mein.jpg",
+    "photoCredit": "mastermaq, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/24311648@N00/2411270286"
   },
   {
     "id": "peanut-noodles",
@@ -367,7 +382,10 @@
     "tags": ["vegetarian", "quick"],
     "keepsDays": 2,
     "equipment": ["pot", "bowl"],
-    "illustration": "🥜"
+    "illustration": "🥜",
+    "photo": "photos/peanut-noodles.jpg",
+    "photoCredit": "Stacy Spensley, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21001756@N06/4670390624"
   },
   {
     "id": "spanish-tortilla",
@@ -401,7 +419,10 @@
     "tags": ["vegetarian", "make-ahead"],
     "keepsDays": 2,
     "equipment": ["non-stick frying pan", "large plate"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/spanish-tortilla.jpg",
+    "photoCredit": "jlastras, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/22662305@N04/3103616016"
   },
   {
     "id": "chicken-caesar-wrap",

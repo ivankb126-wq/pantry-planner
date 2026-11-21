@@ -28,7 +28,10 @@
     "tags": ["vegetarian", "quick", "high-protein"],
     "keepsDays": 0,
     "equipment": ["frying pan"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/fritaja-sa-sparogama.jpg",
+    "photoCredit": "wharman, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/96763131@N00/477554807"
   },
   {
     "id": "pura-na-mlijeko",
@@ -165,7 +168,10 @@
     "tags": ["vegetarian", "batch", "freezer-friendly", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["baking tray", "glass for cutting"],
-    "illustration": "🧀"
+    "illustration": "🧀",
+    "photo": "photos/sirne-pogacice.jpg",
+    "photoCredit": "psd, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/45581782@N00/10381340116"
   },
   {
     "id": "peceni-kesteni",
@@ -266,7 +272,10 @@
     "tags": ["vegetarian", "batch", "kid-friendly"],
     "keepsDays": 4,
     "equipment": ["baking tin", "rolling pin", "grater"],
-    "illustration": "🍎"
+    "illustration": "🍎",
+    "photo": "photos/pita-od-jabuka.jpg",
+    "photoCredit": "1lenore, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/80522246@N00/3063024748"
   },
   {
     "id": "kremsnite",
@@ -451,6 +460,9 @@
     "tags": ["vegetarian", "batch", "kid-friendly"],
     "keepsDays": 4,
     "equipment": ["tin", "whisk"],
-    "illustration": "🍒"
+    "illustration": "🍒",
+    "photo": "photos/kolac-s-visnjama.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4147125928"
   }
 ]

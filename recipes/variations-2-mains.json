@@ -65,7 +65,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["skewers", "grill pan or frying pan", "pot"],
-    "illustration": "🍢"
+    "illustration": "🍢",
+    "photo": "photos/raznjici-s-rizom.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4926660084"
   },
   {
     "id": "puretina-u-umaku-od-gljiva",
@@ -140,7 +143,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["pot", "large frying pan", "3 plates"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/pohani-oslic.jpg",
+    "photoCredit": "cultivar413, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/131880272@N06/31496156536"
   },
   {
     "id": "peceni-svinjski-vrat",
@@ -213,7 +219,10 @@
     "tags": ["kid-friendly", "one-pot", "high-protein"],
     "keepsDays": 3,
     "equipment": ["large baking tray"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/honey-mustard-chicken-traybake.jpg",
+    "photoCredit": "Rusty Clark ~ 100K Photos, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/23206546@N04/5976503798"
   },
   {
     "id": "greek-moussaka",
@@ -254,7 +263,10 @@
     "tags": ["festive", "comfort", "cook-once-eat-twice", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["2 baking trays", "frying pan", "pot", "baking dish"],
-    "illustration": "🍆"
+    "illustration": "🍆",
+    "photo": "photos/greek-moussaka.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4590367610"
   },
   {
     "id": "goveda-juha",
@@ -330,7 +342,10 @@
     "tags": ["light", "high-protein"],
     "keepsDays": 2,
     "equipment": ["pot"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/riblja-juha.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2121536293"
   },
   {
     "id": "burek-s-mesom",
@@ -363,7 +378,10 @@
     "tags": ["comfort", "freezer-friendly"],
     "keepsDays": 2,
     "equipment": ["round baking tin", "pastry brush"],
-    "illustration": "🥧"
+    "illustration": "🥧",
+    "photo": "photos/burek-s-mesom.jpg",
+    "photoCredit": "cocoinzenl, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/13953807@N08/2239932259"
   },
   {
     "id": "ham-leek-quiche",
@@ -436,7 +454,10 @@
     "tags": ["kid-friendly"],
     "keepsDays": 1,
     "equipment": ["2 baking trays", "large bowl", "baking paper"],
-    "illustration": "🍕"
+    "illustration": "🍕",
+    "photo": "photos/homemade-pizza.jpg",
+    "photoCredit": "ginnerobot, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/78011127@N00/3706297477"
   },
   {
     "id": "greek-salad-chickpeas",
@@ -471,7 +492,10 @@
     "tags": ["vegetarian", "quick", "no-cook", "light"],
     "keepsDays": 1,
     "equipment": ["large bowl"],
-    "illustration": "🥗"
+    "illustration": "🥗",
+    "photo": "photos/greek-salad-chickpeas.jpg",
+    "photoCredit": "Nicolas Lannuzel, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/79022843@N00/275312852"
   },
   {
     "id": "quinoa-roasted-veg-salad",
@@ -507,7 +531,10 @@
     "tags": ["vegetarian", "make-ahead"],
     "keepsDays": 3,
     "equipment": ["large baking tray", "pot", "sieve"],
-    "illustration": "🥗"
+    "illustration": "🥗",
+    "photo": "photos/quinoa-roasted-veg-salad.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/4677651827"
   },
   {
     "id": "lentil-feta-salad",
@@ -543,7 +570,10 @@
     "tags": ["vegetarian", "make-ahead"],
     "keepsDays": 3,
     "equipment": ["pot", "large bowl"],
-    "illustration": "🥗"
+    "illustration": "🥗",
+    "photo": "photos/lentil-feta-salad.jpg",
+    "photoCredit": "simpleprovisions, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/80665970@N03/8708930943"
   },
   {
     "id": "beef-broccoli",
@@ -580,7 +610,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["pot", "wok or large frying pan"],
-    "illustration": "🥦"
+    "illustration": "🥦",
+    "photo": "photos/beef-broccoli.jpg",
+    "photoCredit": "Thank You (23 Millions+) views, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/34128007@N04/51404850486"
   },
   {
     "id": "slane-palacinke",

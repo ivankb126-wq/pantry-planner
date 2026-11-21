@@ -15,7 +15,10 @@
       "Meanwhile cook the pasta in plenty of salted water until just firm. Drain.",
       { "text": "Lift out the onion, taste the sauce for salt and toss it with the pasta. Serve with grated parmesan.", "tip": "Eat the soft onion on bread, or blend it into the sauce if you like. The sauce keeps 4 days and freezes well." }
     ],
-    "tags": ["vegetarian", "kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["pot", "big pot"], "illustration": "🍝"
+    "tags": ["vegetarian", "kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["pot", "big pot"], "illustration": "🍝",
+    "photo": "photos/pasta-tomato-butter-onion.jpg",
+    "photoCredit": "jshj, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21559804@N00/824608884"
   },
   {
     "id": "bucatini-amatriciana", "title": "Bucatini all'amatriciana",
@@ -36,7 +39,10 @@
       "Meanwhile cook the pasta in plenty of salted water until just firm. Drain.",
       { "text": "Toss the pasta with the sauce, then with both grated cheeses, and serve.", "tip": "A hard sheep cheese like Paški sir is a lovely Croatian stand-in for pecorino." }
     ],
-    "tags": ["kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["frying pan", "big pot"], "illustration": "🍝"
+    "tags": ["kid-friendly", "comfort"], "keepsDays": 2, "equipment": ["frying pan", "big pot"], "illustration": "🍝",
+    "photo": "photos/bucatini-amatriciana.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/205441993"
   },
   {
     "id": "jota", "title": "Jota (bean and sauerkraut soup)",
@@ -80,7 +86,10 @@
       { "text": "Dissolve the stock cube in the bean water. Mash a cupful of the beans and stir them back in with the stock. Simmer for 6 minutes more.", "tip": "The mashed beans make it creamy. Add a little water if you like it thinner." },
       "Toast the bread. Stir the parsley into the soup and ladle it over the toast in bowls, with the rest of the oil drizzled on top."
     ],
-    "tags": ["vegan", "vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot"], "illustration": "🫘"
+    "tags": ["vegan", "vegetarian", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["pot"], "illustration": "🫘",
+    "photo": "photos/white-bean-garlic-soup.jpg",
+    "photoCredit": "emmadiscovery, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8174757@N02/6063498585"
   },
   {
     "id": "rice-cabbage-soup", "title": "Rice and slow-cooked cabbage soup",
@@ -169,7 +178,10 @@
       "Off the heat, stir in the pepper, the rest of the butter and the grated parmesan.",
       "Serve with a green salad dressed with the olive oil and vinegar."
     ],
-    "tags": ["comfort", "kid-friendly"], "keepsDays": 1, "equipment": ["wide pot", "pot", "ladle"], "illustration": "🍚"
+    "tags": ["comfort", "kid-friendly"], "keepsDays": 1, "equipment": ["wide pot", "pot", "ladle"], "illustration": "🍚",
+    "photo": "photos/sausage-risotto.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3242824038"
   },
   {
     "id": "gnocchi-alla-romana", "title": "Gnocchi alla romana (baked semolina rounds)",
@@ -236,7 +248,10 @@
       { "text": "Turn the oven up to 200 °C and roast both for 20 minutes more, until the chicken is deep golden and the juices run clear.", "tip": "Pierce the thickest part of the thigh: the juice should be clear, not pink." },
       "Bring the chicken to the table whole, carve it and spoon the lemony juices over each piece. Serve with the potatoes."
     ],
-    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "kitchen string"], "illustration": "🍋"
+    "tags": ["high-protein", "festive", "kid-friendly"], "keepsDays": 3, "equipment": ["roasting tin", "baking tray", "kitchen string"], "illustration": "🍋",
+    "photo": "photos/pollo-al-limone.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/5544705735"
   },
   {
     "id": "turkey-pizzaiola", "title": "Turkey scaloppine pizzaiola",
@@ -281,7 +296,10 @@
       "Add the peas for the last 10 minutes.",
       { "text": "Meanwhile cook the polenta in {1000 ml} boiling salted water as the packet says. Serve the stew on the soft polenta.", "tip": "The stew keeps 4 days and freezes well." }
     ],
-    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["heavy pot with a lid", "pot"], "illustration": "🥩"
+    "tags": ["high-protein", "comfort", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 4, "equipment": ["heavy pot with a lid", "pot"], "illustration": "🥩",
+    "photo": "photos/beef-stew-red-wine-peas.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/15707525894"
   },
   {
     "id": "meatballs-savoy-cabbage", "title": "Meatballs with slow-cooked cabbage",
@@ -331,7 +349,10 @@
       "Meanwhile boil the peeled potatoes for 20 minutes and mash them with the rest of the milk, butter and salt.",
       "Rest the meatloaf for 5 minutes, slice it 1 cm thick and serve with the mash and plenty of sauce."
     ],
-    "tags": ["high-protein", "comfort", "festive"], "keepsDays": 3, "equipment": ["snug pot with a lid", "pot", "2 spatulas"], "illustration": "🍖"
+    "tags": ["high-protein", "comfort", "festive"], "keepsDays": 3, "equipment": ["snug pot with a lid", "pot", "2 spatulas"], "illustration": "🍖",
+    "photo": "photos/polpettone-porcini.jpg",
+    "photoCredit": "chispita_666, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/12477719@N00/3378239797"
   },
   {
     "id": "maiale-al-latte", "title": "Pork braised in milk",
@@ -417,7 +438,10 @@
       "In a buttered baking dish, layer eggplant, tomato sauce, mozzarella, parmesan and torn basil. Repeat, ending with eggplant and parmesan.",
       { "text": "Bake for 20 minutes, press it down gently and spoon off any extra liquid, then bake for 15 minutes more. Rest for 10 minutes and serve with bread.", "tip": "Pouring off the juices halfway keeps it from going watery. It is even better the next day." }
     ],
-    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["colander", "frying pan", "pot", "baking dish"], "illustration": "🍆"
+    "tags": ["vegetarian", "comfort", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["colander", "frying pan", "pot", "baking dish"], "illustration": "🍆",
+    "photo": "photos/parmigiana-di-melanzane.jpg",
+    "photoCredit": "joebeone, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71753172@N00/337575412"
   },
   {
     "id": "panzanella-tuna", "title": "Panzanella (Tuscan bread salad) with tuna",
@@ -441,7 +465,10 @@
       "Cut the other tomatoes, the cucumber and the pepper into bite-size pieces. Drain the onion and the tuna.",
       { "text": "Toss everything together with the bread and torn basil and serve within the hour.", "tip": "A summer dish: it is only as good as your tomatoes." }
     ],
-    "tags": ["light", "no-cook"], "keepsDays": 1, "equipment": ["big bowl", "grater", "frying pan"], "illustration": "🥗"
+    "tags": ["light", "no-cook"], "keepsDays": 1, "equipment": ["big bowl", "grater", "frying pan"], "illustration": "🥗",
+    "photo": "photos/panzanella-tuna.jpg",
+    "photoCredit": "thefoodplace.co.uk, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/41930815@N02/4783195124"
   },
   {
     "id": "rice-chicken-salad", "title": "Italian rice salad with chicken",
@@ -463,7 +490,10 @@
       { "text": "Cut the chicken, cheese, olives, pepper and gherkins into small cubes, all about the same size.", "tip": "Small, even pieces are the point of this salad." },
       { "text": "Toss the rice in the dressing, then add everything else and the parsley and toss well.", "tip": "Serve it cool, not fridge-cold: cold dulls the flavour. It keeps 2 days and is great for lunch boxes." }
     ],
-    "tags": ["high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["2 pots", "big bowl"], "illustration": "🥗"
+    "tags": ["high-protein", "make-ahead"], "keepsDays": 2, "equipment": ["2 pots", "big bowl"], "illustration": "🥗",
+    "photo": "photos/rice-chicken-salad.jpg",
+    "photoCredit": "Rooey202, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/50284194@N00/6783274502"
   },
   {
     "id": "sbrisolona", "title": "Sbrisolona (crumbly almond and cornmeal cake)",
@@ -526,7 +556,10 @@
       "Stack the cooked piadine under a clean towel to keep them soft and warm.",
       "Fill each one with pršut, sliced mozzarella, tomato and leaves, fold in half and eat warm."
     ],
-    "tags": ["kid-friendly"], "keepsDays": 1, "equipment": ["heavy frying pan", "rolling pin"], "illustration": "🫓"
+    "tags": ["kid-friendly"], "keepsDays": 1, "equipment": ["heavy frying pan", "rolling pin"], "illustration": "🫓",
+    "photo": "photos/piadina.jpg",
+    "photoCredit": "Tanzen80, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/11376246@N03/3196674689"
   },
   {
     "id": "focaccia-onions", "title": "Focaccia with onions",
@@ -546,6 +579,9 @@
       { "text": "Press deep dimples all over with your fingertips. Whisk the rest of the oil with {2 tbsp} water and the rest of the salt and brush it on so it pools in the dimples. Scatter the onions over.", "tip": "The pools of oil and salty water are what give focaccia its soft crumb and crisp top." },
       { "text": "Bake for 20 to 25 minutes until golden. Cool on a rack and cut into squares.", "tip": "It keeps 2 days wrapped, and freezes well." }
     ],
-    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "freezer-friendly"], "keepsDays": 2, "equipment": ["large baking tray", "big bowl"], "illustration": "🫓"
+    "tags": ["vegan", "vegetarian", "batch", "make-ahead", "freezer-friendly"], "keepsDays": 2, "equipment": ["large baking tray", "big bowl"], "illustration": "🫓",
+    "photo": "photos/focaccia-onions.jpg",
+    "photoCredit": "axmai, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/17160135@N04/8422941144"
   }
 ]

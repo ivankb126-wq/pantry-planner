@@ -75,7 +75,10 @@
     "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly"],
     "keepsDays": 4,
     "equipment": ["ovenproof pot", "pot"],
-    "illustration": "🥬"
+    "illustration": "🥬",
+    "photo": "photos/podvarak.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2573049600"
   },
   {
     "id": "oslic-na-bijelo",
@@ -300,7 +303,10 @@
     "tags": ["vegetarian", "festive", "comfort"],
     "keepsDays": 2,
     "equipment": ["baking dish", "large bowl", "tablecloth"],
-    "illustration": "🧀"
+    "illustration": "🧀",
+    "photo": "photos/zagorski-strukli.jpg",
+    "photoCredit": "Marie Thérèse Hébert & Jean Robert Thibault, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/23128485@N06/45720798932"
   },
   {
     "id": "janjetina-s-krumpirom",
@@ -336,7 +342,10 @@
     "tags": ["festive", "cook-once-eat-twice", "high-protein"],
     "keepsDays": 3,
     "equipment": ["large roasting tin"],
-    "illustration": "🍖"
+    "illustration": "🍖",
+    "photo": "photos/janjetina-s-krumpirom.jpg",
+    "photoCredit": "goodiesfirst, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/49215102@N00/6469918499"
   },
   {
     "id": "srdele-na-savor",
@@ -375,7 +384,10 @@
     "tags": ["make-ahead", "high-protein"],
     "keepsDays": 4,
     "equipment": ["2 frying pans", "dish"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/srdele-na-savor.jpg",
+    "photoCredit": "Edsel L, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/27119975@N00/11473344934"
   },
   {
     "id": "pasta-fazol",

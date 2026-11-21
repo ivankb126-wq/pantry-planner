@@ -117,7 +117,10 @@
     "tags": ["high-protein"],
     "keepsDays": 1,
     "equipment": ["frying pan"],
-    "illustration": "🌮"
+    "illustration": "🌮",
+    "photo": "photos/fish-tacos.jpg",
+    "photoCredit": "jeffreyw, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7927684@N03/9641664708"
   },
   {
     "id": "bean-enchiladas",
@@ -273,7 +276,10 @@
     "tags": ["vegetarian", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["large pan with lid", "saucepan"],
-    "illustration": "🧅"
+    "illustration": "🧅",
+    "photo": "photos/mujaddara.jpg",
+    "photoCredit": "veritatem, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/66722164@N00/21935882919"
   },
   {
     "id": "chicken-shawarma-traybake",

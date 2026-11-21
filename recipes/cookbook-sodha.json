@@ -21,7 +21,10 @@
       { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
       "Grate the cucumber, squeeze it and mix with the rest of the yogurt and salt. Serve the chicken with the rice and cucumber raita."
     ],
-    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "grater"], "illustration": "🍢"
+    "tags": ["high-protein", "kid-friendly"], "keepsDays": 2, "equipment": ["2 baking trays", "pot", "grater"], "illustration": "🍢",
+    "photo": "photos/oven-chicken-tikka.jpg",
+    "photoCredit": "TheCulinaryGeek, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/72949902@N00/4705955437"
   },
   {
     "id": "eggplant-tomato-curry", "title": "Eggplant and cherry tomato curry",
@@ -93,7 +96,10 @@
       "Meanwhile boil the eggs for 8 minutes, cool them in cold water and peel. Halve them and add to the curry.",
       "Scatter with parsley and serve with warm flatbreads."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "small pot"], "illustration": "🥔"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "small pot"], "illustration": "🥔",
+    "photo": "photos/gujarati-potato-curry.jpg",
+    "photoCredit": "pelican, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/85936780@N00/10362720945"
   },
   {
     "id": "mums-chicken-curry", "title": "Home-style chicken curry with almonds",
@@ -119,7 +125,10 @@
       { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
       "Stir in the ground almonds and curry powder and cook for 5 minutes more until the chicken is cooked through. Serve with the rice."
     ],
-    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "pot"], "illustration": "🍛"
+    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot with a lid", "pot"], "illustration": "🍛",
+    "photo": "photos/mums-chicken-curry.jpg",
+    "photoCredit": "rovingI, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70522326@N00/1453447361"
   },
   {
     "id": "fish-moilee", "title": "Fish moilee (light coconut fish curry)",
@@ -143,7 +152,10 @@
       { "text": "Pour in the coconut milk with {120 ml} water and bring to a gentle bubble. Lower in the fish, cover and cook for 5 to 7 minutes until it flakes.", "tip": "A gentle bubble only: boiling hard breaks the fish." },
       "Squeeze over some lemon and serve with the rice and lemon wedges."
     ],
-    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["wide pan with a lid", "pot"], "illustration": "🐟"
+    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["wide pan with a lid", "pot"], "illustration": "🐟",
+    "photo": "photos/fish-moilee.jpg",
+    "photoCredit": "pelican, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/85936780@N00/2062513870"
   },
   {
     "id": "salmon-spinach-curry", "title": "Salmon and spinach curry",
@@ -217,7 +229,10 @@
       { "text": "Stir in the tomato paste, sugar, salt, curry powder and turmeric for 2 minutes.", "tip": "Frying the paste and spices briefly gives the sauce its depth." },
       { "text": "Add the drained beans and {200 ml} warm water and simmer for 5 to 8 minutes until saucy. Serve with the rice and yogurt.", "tip": "It keeps 3 days and freezes well." }
     ],
-    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["pan", "pot"], "illustration": "🫘"
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["pan", "pot"], "illustration": "🫘",
+    "photo": "photos/kidney-bean-curry.jpg",
+    "photoCredit": "andybullock77, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/94549249@N00/4047222887"
   },
   {
     "id": "indian-fried-rice-eggs", "title": "Indian fried rice with peas and egg",
@@ -241,6 +256,9 @@
       { "text": "Add the peas, rice and salt and fry for 6 to 8 minutes, stirring, until piping hot throughout.", "tip": "Go easy on the salt if your rice was already salted." },
       "Scatter with spring onion, squeeze over the lemon and serve with yogurt."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["wok or large frying pan", "pot"], "illustration": "🍚"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["wok or large frying pan", "pot"], "illustration": "🍚",
+    "photo": "photos/indian-fried-rice-eggs.jpg",
+    "photoCredit": "CandyTX, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/85177432@N00/4654399883"
   }
 ]
