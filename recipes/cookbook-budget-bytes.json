@@ -213,7 +213,10 @@
       { "text": "Cover, bring to the boil and simmer on low for 15 minutes, stirring now and then, until the pasta is soft.", "tip": "Add a splash of water if it gets too dry before the pasta is done." },
       "Off the heat, stir in the grated cheddar until melted."
     ],
-    "tags": ["kid-friendly", "one-pot", "comfort", "high-protein"], "keepsDays": 3, "equipment": ["deep pot with a lid"], "illustration": "🧀"
+    "tags": ["kid-friendly", "one-pot", "comfort", "high-protein"], "keepsDays": 3, "equipment": ["deep pot with a lid"], "illustration": "🧀",
+    "photo": "photos/chili-cheese-beef-mac.jpg",
+    "photoCredit": "DelishPlan, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/142840472@N04/31662782324"
   },
   {
     "id": "coconut-chicken-curry", "title": "Easy coconut chicken curry",

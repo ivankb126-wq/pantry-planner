@@ -604,7 +604,10 @@
     "tags": ["quick", "vegetarian", "high-protein"],
     "keepsDays": 0,
     "equipment": ["frying pan"],
-    "illustration": "🍳"
+    "illustration": "🍳",
+    "photo": "photos/cheese-omelette-salad.jpg",
+    "photoCredit": "Kent Wang, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/27454212@N00/3227896436"
   },
   {
     "id": "halloumi-pepper-flatbreads",
@@ -667,7 +670,10 @@
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["pot", "pan"],
-    "illustration": "🥟"
+    "illustration": "🥟",
+    "photo": "photos/tortellini-peas-ham.jpg",
+    "photoCredit": "Kelly Hunter, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/47149893@N07/6375459211"
   },
   {
     "id": "tuna-white-bean-salad",

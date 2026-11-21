@@ -48,7 +48,10 @@
       { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
       "Serve with the rice and yogurt."
     ],
-    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "pot"], "illustration": "🍆"
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pan with a lid", "pot"], "illustration": "🍆",
+    "photo": "photos/eggplant-tomato-curry.jpg",
+    "photoCredit": "nakashi, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/81497476@N00/32124290454"
   },
   {
     "id": "pumpkin-garlic-tomato-curry", "title": "Roast pumpkin curry with garlic and tomato",
@@ -72,7 +75,10 @@
       { "text": "Meanwhile start the rice: rinse it, put it in a pot with {500 ml} water and a pinch of salt, bring to the boil, then cover and cook on the lowest heat for 12 minutes. Leave it covered off the heat.", "tip": "Keeping the lid on is what makes rice fluffy." },
       "Fold the roasted pumpkin into the sauce gently, adding a splash of water if too thick. Serve with the rice and yogurt."
     ],
-    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "pan", "pot"], "illustration": "🎃"
+    "tags": ["vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["2 baking trays", "pan", "pot"], "illustration": "🎃",
+    "photo": "photos/pumpkin-garlic-tomato-curry.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4981913944"
   },
   {
     "id": "gujarati-potato-curry", "title": "Gujarati potato curry with eggs",

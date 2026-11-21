@@ -79,7 +79,10 @@
     "tags": ["vegan", "vegetarian"],
     "keepsDays": 3,
     "equipment": ["oven", "baking tray", "saucepan"],
-    "illustration": "🌯"
+    "illustration": "🌯",
+    "photo": "photos/sweet-potato-burrito-bowls.jpg",
+    "photoCredit": "sarahstierch, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/7633518@N08/52493469421"
   },
   {
     "id": "fish-tacos",
@@ -158,7 +161,10 @@
     "tags": ["vegetarian", "kid-friendly", "freezer-friendly"],
     "keepsDays": 3,
     "equipment": ["oven", "baking dish", "frying pan"],
-    "illustration": "🌯"
+    "illustration": "🌯",
+    "photo": "photos/bean-enchiladas.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/4657126071"
   },
   {
     "id": "shakshuka",
@@ -319,7 +325,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["oven", "baking tray", "saucepan"],
-    "illustration": "🥙"
+    "illustration": "🥙",
+    "photo": "photos/chicken-shawarma-traybake.jpg",
+    "photoCredit": "Shoshanah, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/68737200@N00/3856978749"
   },
   {
     "id": "kofta-with-tabbouleh",
@@ -399,7 +408,10 @@
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice", "one-pot"],
     "keepsDays": 4,
     "equipment": ["large pot"],
-    "illustration": "🎃"
+    "illustration": "🎃",
+    "photo": "photos/chickpea-pumpkin-tagine.jpg",
+    "photoCredit": "mild_swearwords, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/33008270@N00/14691251050"
   },
   {
     "id": "chicken-noodle-soup",
@@ -558,7 +570,10 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 2,
     "equipment": ["oven", "2 baking trays"],
-    "illustration": "🍗"
+    "illustration": "🍗",
+    "photo": "photos/wings-wedges-coleslaw.jpg",
+    "photoCredit": "rick, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034361412@N01/1429503146"
   },
   {
     "id": "turkey-burgers-sweet-potato",

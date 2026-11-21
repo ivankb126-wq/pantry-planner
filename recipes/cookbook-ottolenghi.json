@@ -143,7 +143,10 @@
       { "text": "Put the onions back with the rinsed lentils, the stock cubes, wine, salt, pepper and {1600 ml} water. Simmer gently for 40 minutes until the lentils are soft but still whole.", "tip": "Stir now and then and add a little water if it gets too thick." },
       { "text": "Serve with a spoon of sour cream, chili flakes, oregano and a drizzle of olive oil.", "tip": "It keeps 3 days and tastes even better the next day." }
     ],
-    "tags": ["vegetarian", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot"], "illustration": "🍆"
+    "tags": ["vegetarian", "cook-once-eat-twice", "freezer-friendly"], "keepsDays": 3, "equipment": ["wide pot"], "illustration": "🍆",
+    "photo": "photos/lentil-eggplant-stew.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/1222357676"
   },
   {
     "id": "bulgur-mushrooms-feta", "title": "Bulgur with golden mushrooms, onion and feta",
@@ -213,7 +216,10 @@
       { "text": "Stir the spinach and parsley into the chickpeas, then the pasta and {2 tbsp} lemon juice.", "tip": "Taste before adding salt: the anchovies and stock are salty." },
       "Serve sprinkled with the oregano and sesame mixed with the rest of the oil."
     ],
-    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["large frying pan", "big pot"], "illustration": "🍝"
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["large frying pan", "big pot"], "illustration": "🍝",
+    "photo": "photos/pasta-chickpeas-lemon-anchovy.jpg",
+    "photoCredit": "Thriving Vegetarian, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/90155432@N02/9616711653"
   },
   {
     "id": "orzo-prawns-tomato-feta", "title": "Orzo with prawns, tomato and marinated feta",
@@ -311,7 +317,10 @@
       { "text": "Roast for 50 minutes, spooning the juices over 2 or 3 times, until the chicken is bronzed and cooked through.", "tip": "The juices near the bone should run clear." },
       "Meanwhile pour {300 ml} boiling water over the couscous with a pinch of salt, cover for 5 minutes and fluff. Serve with the chicken and plenty of sauce."
     ],
-    "tags": ["high-protein", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["big bowl", "baking dish"], "illustration": "🫒"
+    "tags": ["high-protein", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["big bowl", "baking dish"], "illustration": "🫒",
+    "photo": "photos/chicken-marbella.jpg",
+    "photoCredit": "meganleigh, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/19511310@N00/5307082617"
   },
   {
     "id": "pork-ginger-eggplant", "title": "Sticky ginger pork over soft steamed eggplant",
@@ -336,7 +345,10 @@
       { "text": "Add the soy sauce, honey, sesame oil and vinegar, put the spring onion mix back and toss for 1 minute.", "tip": "Honey and soy stand in for the sweet soy and mirin in the original." },
       "Spoon the pork over the eggplant and scatter with parsley, chopped peanuts and sesame seeds. Serve with the rice."
     ],
-    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["pot", "steamer or colander", "wok or large frying pan"], "illustration": "🍆"
+    "tags": ["high-protein"], "keepsDays": 2, "equipment": ["pot", "steamer or colander", "wok or large frying pan"], "illustration": "🍆",
+    "photo": "photos/pork-ginger-eggplant.jpg",
+    "photoCredit": "insatiablemunch, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/48041244@N05/23697898365"
   },
   {
     "id": "seeded-chicken-schnitzel", "title": "Seeded chicken schnitzel",

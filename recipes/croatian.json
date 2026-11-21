@@ -257,7 +257,10 @@
     "tags": ["freezer-friendly", "cook-once-eat-twice", "one-pot", "high-protein", "comfort"],
     "keepsDays": 4,
     "equipment": ["large heavy pot"],
-    "illustration": "🍲"
+    "illustration": "🍲",
+    "photo": "photos/cobanac.jpg",
+    "photoCredit": "roolrool, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/71317184@N00/4109611429"
   },
   {
     "id": "punjene-paprike",
@@ -375,7 +378,10 @@
     "tags": ["high-protein"],
     "keepsDays": 2,
     "equipment": ["wide pot", "pan"],
-    "illustration": "🦑"
+    "illustration": "🦑",
+    "photo": "photos/brudet.jpg",
+    "photoCredit": "Smabs Sputzer (1956-2017), CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/10413717@N08/14180689188"
   },
   {
     "id": "dagnje-na-buzaru",
@@ -645,7 +651,10 @@
     "tags": ["one-pot", "freezer-friendly", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["large pot"],
-    "illustration": "🫛"
+    "illustration": "🫛",
+    "photo": "photos/mahune-varivo.jpg",
+    "photoCredit": "Tobyotter, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/78428166@N00/3732916395"
   },
   {
     "id": "lignje-na-zaru",

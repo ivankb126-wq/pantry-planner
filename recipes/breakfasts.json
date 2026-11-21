@@ -82,7 +82,10 @@
       { "text": "When the omelette is almost set but still a little wet on top, after about 2 minutes, scatter over the cheese.", "tip": "It keeps cooking after you fold it, so do not wait until the top is dry." },
       "Fold it in half, cut it in two and serve with bread."
     ],
-    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍳"
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["frying pan"], "illustration": "🍳",
+    "photo": "photos/vegetable-omelette.jpg",
+    "photoCredit": "Ken_Mayer, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/14529688@N08/9742060066"
   },
   {
     "id": "greek-yogurt-honey-walnuts", "title": "Greek yogurt with honey, walnuts and fruit",
@@ -121,7 +124,10 @@
       "Close the jars and leave them in the fridge overnight.",
       "In the morning, thaw or gently warm the berries, chop the almonds and put both on top."
     ],
-    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["2 jars"], "illustration": "🫙"
+    "tags": ["vegetarian", "make-ahead", "no-cook"], "keepsDays": 3, "equipment": ["2 jars"], "illustration": "🫙",
+    "photo": "photos/chia-berry-pudding.jpg",
+    "photoCredit": "epodrez, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/197996902@N06/52774529156"
   },
   {
     "id": "berry-smoothie-bowl", "title": "Berry smoothie bowl",
@@ -182,7 +188,10 @@
       "Spread the cottage cheese thickly on the toast and lay the tomato and cucumber on top.",
       { "text": "Drizzle with the olive oil and finish with black pepper and a pinch of salt.", "tip": "A little dried oregano or chopped chives on top is good too." }
     ],
-    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍅"
+    "tags": ["vegetarian", "quick", "high-protein"], "keepsDays": 0, "equipment": ["toaster"], "illustration": "🍅",
+    "photo": "photos/cottage-cheese-tomato-toast.jpg",
+    "photoCredit": "KFoodaddict, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/61056459@N05/6123389726"
   },
   {
     "id": "french-toast-berries", "title": "French toast with berries",
@@ -428,7 +437,10 @@
       { "text": "Put a large plate over the pan and turn it over quickly so the fritaja lands on the plate. Slide it back into the pan, cooked side up, and cook 2 minutes more.", "tip": "Not confident flipping? If your pan handle can go in the oven, finish it under the grill for a couple of minutes instead." },
       { "text": "Cut into wedges and serve warm or cold with bread.", "tip": "Cold wedges make a good packed lunch the next day." }
     ],
-    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["frying pan with lid"], "illustration": "🥒"
+    "tags": ["vegetarian", "high-protein"], "keepsDays": 2, "equipment": ["frying pan with lid"], "illustration": "🥒",
+    "photo": "photos/zucchini-fritaja.jpg",
+    "photoCredit": "WordRidden, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/97844767@N00/5195301082"
   },
   {
     "id": "tofu-scramble", "title": "Tofu scramble on toast",

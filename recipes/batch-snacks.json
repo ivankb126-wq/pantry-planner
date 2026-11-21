@@ -132,7 +132,10 @@
       { "text": "Fill the cases almost to the top and bake for 20 to 22 minutes until risen and golden.", "tip": "A skewer in the middle should come out clean, apart from a little berry juice." },
       { "text": "Cool them in the tin for 5 minutes, then on a rack.", "tip": "They keep 4 days in a closed box, and freeze well." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🫐"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin"], "illustration": "🫐",
+    "photo": "photos/berry-yogurt-muffins.jpg",
+    "photoCredit": "Steven Jackson Photography, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/79892177@N00/3733049190"
   },
   {
     "id": "homemade-hummus", "title": "Homemade hummus with veg sticks",
@@ -197,7 +200,10 @@
       { "text": "Roast for 30 to 35 minutes, shaking the tray every 10 minutes, until deep golden and crunchy.", "tip": "Bite one: it should be crisp all the way through. If it is soft in the middle, give them a few more minutes." },
       { "text": "Let them cool completely on the tray, then keep them in a jar with the lid slightly open.", "tip": "A closed jar traps moisture and makes them soft. If they soften, crisp them for a few minutes in the oven." }
     ],
-    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray"], "illustration": "🫘"
+    "tags": ["batch", "vegan", "vegetarian", "kid-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray"], "illustration": "🫘",
+    "photo": "photos/roasted-chickpeas.jpg",
+    "photoCredit": "jules:stonesoup, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/58367355@N00/5728960418"
   },
   {
     "id": "overnight-oats-jars", "title": "Overnight oats jars with berries",
@@ -398,7 +404,10 @@
       { "text": "Fill the cases and bake for 20 to 22 minutes until golden.", "tip": "A skewer pushed into the middle of a muffin should come out clean." },
       { "text": "Cool them in the tin for 5 minutes, then on a rack.", "tip": "They keep 4 days and are good in a lunch box." }
     ],
-    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin", "grater"], "illustration": "🥕"
+    "tags": ["batch", "vegetarian", "kid-friendly", "freezer-friendly"], "keepsDays": 4, "equipment": ["oven", "muffin tin", "grater"], "illustration": "🥕",
+    "photo": "photos/carrot-zucchini-muffins.jpg",
+    "photoCredit": "Korona Lacasse, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/15562978@N08/12367641814"
   },
   {
     "id": "seed-crackers", "title": "Seed crackers",

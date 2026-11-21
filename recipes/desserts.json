@@ -184,7 +184,10 @@
       { "text": "Dip a teaspoon in the oil, scoop a small spoonful of batter and push it into the oil with a second spoon. Fry 6 to 8 at a time for 3 minutes, turning, until golden all over.", "tip": "Dipping the spoon in oil first lets the batter slide off easily." },
       { "text": "Lift them out with a slotted spoon onto kitchen paper. While they are still warm, roll them in the powdered sugar.", "tip": "Best on the day. Keep leftovers in a closed tin and warm them briefly in the oven." }
     ],
-    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["deep pan", "bowl"], "illustration": "🍩"
+    "tags": ["vegetarian", "festive", "kid-friendly"], "keepsDays": 2, "equipment": ["deep pan", "bowl"], "illustration": "🍩",
+    "photo": "photos/fritule.jpg",
+    "photoCredit": "Janko Hoener, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/130450256@N03/41675867190"
   },
   {
     "id": "tiramisu", "title": "Tiramisu",
@@ -438,7 +441,10 @@
       { "text": "Beat the other egg and brush it over the roll. Bake for 40 to 45 minutes until deep golden.", "tip": "Tap the bottom: it sounds hollow when baked. If the top browns too fast, cover it with foil." },
       { "text": "Let it cool completely before slicing.", "tip": "Sliced warm, it falls apart. It keeps 5 days wrapped in a clean towel." }
     ],
-    "tags": ["vegetarian", "festive", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray", "rolling pin"], "illustration": "🌰"
+    "tags": ["vegetarian", "festive", "freezer-friendly"], "keepsDays": 5, "equipment": ["oven", "baking tray", "rolling pin"], "illustration": "🌰",
+    "photo": "photos/walnut-roll.jpg",
+    "photoCredit": "noricum, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/43437767@N00/3135202141"
   },
   {
     "id": "sour-cherry-strudel", "title": "Sour cherry strudel",

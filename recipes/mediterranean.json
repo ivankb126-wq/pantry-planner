@@ -392,7 +392,10 @@
     "tags": ["high-protein", "light"],
     "keepsDays": 2,
     "equipment": ["oven", "baking dish"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/baked-hake-potatoes-olives.jpg",
+    "photoCredit": "jakub_hla, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/20444618@N00/2223819827"
   },
   {
     "id": "chicken-souvlaki-bowls",
@@ -508,6 +511,9 @@
     "tags": ["vegan", "vegetarian", "freezer-friendly", "cook-once-eat-twice"],
     "keepsDays": 4,
     "equipment": ["large pan", "pot"],
-    "illustration": "🍝"
+    "illustration": "🍝",
+    "photo": "photos/lentil-bolognese.jpg",
+    "photoCredit": "jfl1066, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/65047661@N00/8654987617"
   }
 ]

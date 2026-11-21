@@ -111,7 +111,10 @@
       { "text": "Add the rice and simmer uncovered for 18 to 20 minutes until just soft, adding a little water if it gets too thick.", "tip": "It should be a thick soup, almost a loose risotto." },
       { "text": "Off the heat, stir in the butter, the grated parmesan and the pepper. Let it rest in the bowls for 2 minutes and serve with bread.", "tip": "The cooked cabbage keeps 3 days on its own, so you can make it ahead." }
     ],
-    "tags": ["vegetarian", "comfort", "light"], "keepsDays": 2, "equipment": ["big pot"], "illustration": "🥬"
+    "tags": ["vegetarian", "comfort", "light"], "keepsDays": 2, "equipment": ["big pot"], "illustration": "🥬",
+    "photo": "photos/rice-cabbage-soup.jpg",
+    "photoCredit": "Tony Austin, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/27948364@N00/4216154260"
   },
   {
     "id": "penne-cauliflower-anchovy", "title": "Penne with cauliflower, garlic and chili",
@@ -133,7 +136,10 @@
       "Meanwhile cook the pasta in the cauliflower water until just firm. Drain, keeping a cup of water.",
       "Toss the pasta with the cauliflower, the parsley and a splash of pasta water. Serve topped with the crunchy breadcrumbs."
     ],
-    "tags": ["light"], "keepsDays": 2, "equipment": ["big pot", "wide frying pan"], "illustration": "🥦"
+    "tags": ["light"], "keepsDays": 2, "equipment": ["big pot", "wide frying pan"], "illustration": "🥦",
+    "photo": "photos/penne-cauliflower-anchovy.jpg",
+    "photoCredit": "simpleprovisions, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/80665970@N03/15985620551"
   },
   {
     "id": "zucchini-risotto", "title": "Golden zucchini risotto",
@@ -323,7 +329,10 @@
       "Uncover the cabbage and cook on medium for 5 minutes until lightly browned. Add the tomatoes and cook for 15 minutes.",
       { "text": "Add the meatballs, cover and simmer for 15 minutes, turning them once. Serve with bread.", "tip": "It keeps 3 days and tastes even better reheated." }
     ],
-    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot with a lid", "frying pan"], "illustration": "🥬"
+    "tags": ["high-protein", "comfort", "freezer-friendly"], "keepsDays": 3, "equipment": ["big pot with a lid", "frying pan"], "illustration": "🥬",
+    "photo": "photos/meatballs-savoy-cabbage.jpg",
+    "photoCredit": "ernie_nh7l, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/37789131@N08/5615134851"
   },
   {
     "id": "polpettone-porcini", "title": "Italian meatloaf in porcini and tomato sauce",
@@ -394,7 +403,10 @@
       "Meanwhile cook the polenta in {1000 ml} boiling water with the rest of the salt as the packet says.",
       { "text": "Spoon off any fat from the sauce and serve the sausages and sauce on the polenta.", "tip": "Leftover sauce and sausage make a great pasta sauce the next day." }
     ],
-    "tags": ["comfort", "kid-friendly"], "keepsDays": 2, "equipment": ["wide frying pan with a lid", "pot"], "illustration": "🌭"
+    "tags": ["comfort", "kid-friendly"], "keepsDays": 2, "equipment": ["wide frying pan with a lid", "pot"], "illustration": "🌭",
+    "photo": "photos/sausages-onions-tomato.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/3339363311"
   },
   {
     "id": "squid-peas-tomato", "title": "Squid stewed with tomato and peas",
@@ -514,7 +526,10 @@
       { "text": "Crumble the dough evenly into the tin through your fingers. Do not press it down.", "tip": "Leaving it loose is what makes it crunchy and craggy." },
       { "text": "Bake for 35 to 40 minutes until golden. Cool completely, then break into rough pieces.", "tip": "It keeps a week in a tin." }
     ],
-    "tags": ["vegetarian", "make-ahead"], "keepsDays": 7, "equipment": ["28 to 30 cm round tin", "blender"], "illustration": "🍪"
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 7, "equipment": ["28 to 30 cm round tin", "blender"], "illustration": "🍪",
+    "photo": "photos/sbrisolona.jpg",
+    "photoCredit": "CarbonNYC [in SF!], CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/15923063@N00/3200680358"
   },
   {
     "id": "caramel-bread-pudding", "title": "Caramel bread pudding with raisins",
@@ -535,7 +550,10 @@
       { "text": "Whisk the whites to stiff peaks and fold them in gently. Pour into the caramel tin.", "tip": "The whites make it much lighter than an ordinary bread pudding." },
       { "text": "Bake for 1 hour, then turn the oven down to 150 °C for 15 minutes. While warm, run a knife round the edge and turn it out onto a plate.", "tip": "A few spoons of rum poured over is the traditional finish, if you like." }
     ],
-    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["2 litre loaf tin", "bowl", "whisk"], "illustration": "🍮"
+    "tags": ["vegetarian", "make-ahead", "festive"], "keepsDays": 3, "equipment": ["2 litre loaf tin", "bowl", "whisk"], "illustration": "🍮",
+    "photo": "photos/caramel-bread-pudding.jpg",
+    "photoCredit": "stu_spivack, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35034346243@N01/2407820729"
   },
   {
     "id": "piadina", "title": "Piadina with pršut, mozzarella and tomato",

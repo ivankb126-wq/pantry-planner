@@ -112,7 +112,10 @@
     "tags": ["one-pot"],
     "keepsDays": 2,
     "equipment": ["wide pot with a lid"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/oslic-na-bijelo.jpg",
+    "photoCredit": "ChodHound, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/21208051@N00/4549921273"
   },
   {
     "id": "salata-od-hobotnice",
@@ -268,7 +271,10 @@
     "tags": ["comfort", "one-pot", "cook-once-eat-twice", "kid-friendly"],
     "keepsDays": 3,
     "equipment": ["large pot"],
-    "illustration": "🥔"
+    "illustration": "🥔",
+    "photo": "photos/krumpir-gulas.jpg",
+    "photoCredit": "erecepti.com, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/105392694@N02/10958802175"
   },
   {
     "id": "zagorski-strukli",

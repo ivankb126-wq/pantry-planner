@@ -31,7 +31,10 @@
     "tags": ["high-protein", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["baking tray", "large frying pan"],
-    "illustration": "🍔"
+    "illustration": "🍔",
+    "photo": "photos/pljeskavica.jpg",
+    "photoCredit": "blizejdalej, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/129412214@N05/16736108661"
   },
   {
     "id": "raznjici-s-rizom",
@@ -183,7 +186,10 @@
     "tags": ["festive", "high-protein", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["roasting tin", "foil"],
-    "illustration": "🍖"
+    "illustration": "🍖",
+    "photo": "photos/peceni-svinjski-vrat.jpg",
+    "photoCredit": "eekim, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/63669472@N00/4790366977"
   },
   {
     "id": "honey-mustard-chicken-traybake",
@@ -303,7 +309,10 @@
     "tags": ["comfort", "festive", "cook-once-eat-twice"],
     "keepsDays": 4,
     "equipment": ["big pot", "sieve"],
-    "illustration": "🍲"
+    "illustration": "🍲",
+    "photo": "photos/goveda-juha.jpg",
+    "photoCredit": "jonolist, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/46635911@N00/726927729"
   },
   {
     "id": "riblja-juha",
@@ -418,7 +427,10 @@
     "tags": ["make-ahead"],
     "keepsDays": 2,
     "equipment": ["24 cm tart tin", "rolling pin", "whisk"],
-    "illustration": "🥧"
+    "illustration": "🥧",
+    "photo": "photos/ham-leek-quiche.jpg",
+    "photoCredit": "LoopZilla, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/24987280@N00/308939511"
   },
   {
     "id": "homemade-pizza",
@@ -647,6 +659,9 @@
     "tags": ["comfort", "kid-friendly"],
     "keepsDays": 2,
     "equipment": ["frying pan", "baking dish", "whisk"],
-    "illustration": "🥞"
+    "illustration": "🥞",
+    "photo": "photos/slane-palacinke.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/2287153261"
   }
 ]

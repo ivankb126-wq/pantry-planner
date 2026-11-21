@@ -255,7 +255,10 @@
       "Bake for 30 to 35 minutes until the pastry is risen and deep golden.",
       { "text": "Rest for 5 minutes, then put a large plate over the pan and carefully turn it over. Serve warm with whipped cream.", "tip": "Turn it while still warm, or the caramel sets and sticks to the pan." }
     ],
-    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["24 cm ovenproof frying pan", "rolling pin", "large plate"], "illustration": "🍎"
+    "tags": ["vegetarian", "festive"], "keepsDays": 1, "equipment": ["24 cm ovenproof frying pan", "rolling pin", "large plate"], "illustration": "🍎",
+    "photo": "photos/apple-tarte-tatin.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/564786837"
   },
   {
     "id": "jam-swiss-roll", "title": "Jam Swiss roll",
@@ -275,7 +278,10 @@
       { "text": "Sprinkle a sheet of baking paper with the rest of the sugar and turn the sponge out onto it. Peel off the lining paper, spread with warm jam and roll up tightly from a short side.", "tip": "Roll it while hot: a warm sponge bends, a cold one cracks." },
       "Cool seam side down, then slice."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["23 x 33 cm tin", "mixer or whisk", "baking paper"], "illustration": "🍥"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 2, "equipment": ["23 x 33 cm tin", "mixer or whisk", "baking paper"], "illustration": "🍥",
+    "photo": "photos/jam-swiss-roll.jpg",
+    "photoCredit": "Eljay, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/74534949@N00/22702973189"
   },
   {
     "id": "lemon-meringue-pie", "title": "Lemon meringue pie",

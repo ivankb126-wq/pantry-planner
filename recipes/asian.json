@@ -404,7 +404,10 @@
     "tags": ["kid-friendly"],
     "keepsDays": 2,
     "equipment": ["wok or large pan", "pot"],
-    "illustration": "🍜"
+    "illustration": "🍜",
+    "photo": "photos/pork-cabbage-noodles.jpg",
+    "photoCredit": "moonlightbulb, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/24532534@N02/4297044672"
   },
   {
     "id": "tofu-vegetable-curry",

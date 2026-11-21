@@ -220,7 +220,10 @@
     "tags": ["kid-friendly"],
     "keepsDays": 2,
     "equipment": ["large pot", "large frying pan"],
-    "illustration": "🌭"
+    "illustration": "🌭",
+    "photo": "photos/sausage-pepper-pasta.jpg",
+    "photoCredit": "sporkist, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/17879025@N00/3384456255"
   },
   {
     "id": "pasta-piselli",

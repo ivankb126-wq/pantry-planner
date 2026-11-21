@@ -41,7 +41,10 @@
       { "text": "Heat the oil about 1 cm deep in a frying pan on medium. Dip each ring in the batter and fry for 2 to 3 minutes on each side until puffed and golden.", "tip": "Fry a few at a time so the oil stays hot. Never leave hot oil alone." },
       "Drain on kitchen paper. Mix the powdered sugar with the rest of the cinnamon and dust it over while they are warm."
     ],
-    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["bowl", "frying pan", "whisk"], "illustration": "🍎"
+    "tags": ["vegetarian", "kid-friendly"], "keepsDays": 1, "equipment": ["bowl", "frying pan", "whisk"], "illustration": "🍎",
+    "photo": "photos/jabuke-u-slafroku.jpg",
+    "photoCredit": "Laurel L. Russwurm, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/45021273@N08/13656611574"
   },
   {
     "id": "soparnik", "title": "Soparnik (Poljica chard pie)",
@@ -286,7 +289,10 @@
       { "text": "Pat the trout dry and season with the rest of the salt and the pepper. Fry skin side down in the rest of the oil on medium-high for 3 to 4 minutes until crisp, then turn and cook for 1 minute more.", "tip": "Press the fillets flat with a spatula for the first 20 seconds so the skin crisps evenly." },
       "Serve the trout on the blitva with the warm sauce spooned over and lemon wedges."
     ],
-    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["pot", "frying pan", "small pot", "whisk"], "illustration": "🐟"
+    "tags": ["high-protein", "light"], "keepsDays": 1, "equipment": ["pot", "frying pan", "small pot", "whisk"], "illustration": "🐟",
+    "photo": "photos/pastrva-s-blitvom-i-limunom.jpg",
+    "photoCredit": "Edsel L, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/27119975@N00/8556486948"
   },
   {
     "id": "spanac-s-rizom", "title": "Paprika spinach rice with eggs and yogurt",
@@ -308,7 +314,10 @@
       { "text": "Fold in the spinach in handfuls and cook for 5 minutes until wilted and the rice is creamy with a slight bite. Season with the salt and pepper.", "tip": "Frozen spinach works too: add it straight from the freezer and cook a few minutes longer." },
       "Fry the eggs in the rest of the oil. Serve the rice with an egg on top and a big spoon of yogurt."
     ],
-    "tags": ["vegetarian", "comfort"], "keepsDays": 1, "equipment": ["wide pot", "ladle", "frying pan"], "illustration": "🍚"
+    "tags": ["vegetarian", "comfort"], "keepsDays": 1, "equipment": ["wide pot", "ladle", "frying pan"], "illustration": "🍚",
+    "photo": "photos/spanac-s-rizom.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4139673555"
   },
   {
     "id": "tufahije", "title": "Tufahije (poached apples with walnuts)",
@@ -352,6 +361,9 @@
       { "text": "Bake for 20 minutes. Meanwhile halve and stone the apricots. Quickly lay them cut side up on the cake and bake for 30 minutes more until golden.", "tip": "Putting the fruit on later is the trick that stops it sinking to the bottom. Plums or cherries work the same way." },
       { "text": "Check with a toothpick: it should come out clean. Cool, then dust with powdered sugar and cut into squares.", "tip": "It keeps 3 days and freezes well, without the sugar." }
     ],
-    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["25 x 30 cm baking tin", "mixer or whisk", "2 bowls"], "illustration": "🍑"
+    "tags": ["vegetarian", "make-ahead", "freezer-friendly"], "keepsDays": 3, "equipment": ["25 x 30 cm baking tin", "mixer or whisk", "2 bowls"], "illustration": "🍑",
+    "photo": "photos/kolac-s-marelicama.jpg",
+    "photoCredit": "Annie Mole, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/21309047@N00/4384527361"
   }
 ]

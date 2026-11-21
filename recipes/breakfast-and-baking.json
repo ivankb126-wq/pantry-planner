@@ -392,6 +392,9 @@
     "tags": ["vegetarian", "batch"],
     "keepsDays": 5,
     "equipment": ["pot", "tin", "whisk"],
-    "illustration": "🍊"
+    "illustration": "🍊",
+    "photo": "photos/revani.jpg",
+    "photoCredit": "fugzu, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/70253321@N00/3518427131"
   }
 ]

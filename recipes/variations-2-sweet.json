@@ -239,7 +239,10 @@
     "tags": ["vegetarian", "kid-friendly", "make-ahead", "quick"],
     "keepsDays": 3,
     "equipment": ["pot", "whisk", "small pan", "6 small bowls"],
-    "illustration": "🍮"
+    "illustration": "🍮",
+    "photo": "photos/vanilla-pudding-berries.jpg",
+    "photoCredit": "Tatiana12, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/98826299@N00/6983618192"
   },
   {
     "id": "knedle-sa-sljivama",

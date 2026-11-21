@@ -46,7 +46,10 @@
       { "text": "Add the salt, chili and pasta and cook, stirring often, until the pasta is soft, about 10 minutes. Add a splash of water if it gets too thick.", "tip": "It should be a thick soup you can almost eat with a fork." },
       "Serve with a drizzle of the rest of the oil and grated parmesan."
     ],
-    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 3, "equipment": ["deep pot"], "illustration": "🍲"
+    "tags": ["vegetarian", "one-pot", "comfort"], "keepsDays": 3, "equipment": ["deep pot"], "illustration": "🍲",
+    "photo": "photos/pasta-lentils.jpg",
+    "photoCredit": "paPisc, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/20912428@N04/2383677740"
   },
   {
     "id": "pasta-pumpkin-puree", "title": "Pasta with creamy pumpkin, garlic and chili",
@@ -110,7 +113,10 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Tip the pasta into the zucchini pan off the heat, pour in the egg mix and toss quickly with a splash of pasta water until creamy. Tear in the basil.", "tip": "Off the heat, so the eggs make a silky sauce and do not scramble." }
     ],
-    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "whisk"], "illustration": "🥒"
+    "tags": ["vegetarian", "quick"], "keepsDays": 1, "equipment": ["big pot", "large frying pan", "whisk"], "illustration": "🥒",
+    "photo": "photos/linguine-zucchini-egg.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3143290193"
   },
   {
     "id": "pasta-prawns-zucchini", "title": "Pasta with prawns and zucchini",
@@ -178,7 +184,10 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Toss the pasta with the tomatoes, torn basil and a splash of pasta water. Scatter the anchovy crumbs on top at the table.", "tip": "Add the crumbs only at the last moment so they stay crunchy." }
     ],
-    "tags": ["quick"], "keepsDays": 1, "equipment": ["big pot", "wide pan", "small pan"], "illustration": "🍅"
+    "tags": ["quick"], "keepsDays": 1, "equipment": ["big pot", "wide pan", "small pan"], "illustration": "🍅",
+    "photo": "photos/pasta-burst-tomatoes-crumbs.jpg",
+    "photoCredit": "goodiesfirst, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/49215102@N00/3928044126"
   },
   {
     "id": "chicken-orzo-one-pot", "title": "One-pot roast chicken with orzo and leek",
@@ -200,7 +209,10 @@
       { "text": "Stir the orzo into the juices around the chicken with {300 ml} boiling water, cover and bake for 20 minutes more, until the orzo is soft and has soaked up the juices.", "tip": "Check halfway and add a splash of water if it looks dry." },
       "Grate over the lemon peel, squeeze in some juice, scatter with the rest of the parsley and rest for 10 minutes before serving."
     ],
-    "tags": ["high-protein", "one-pot", "kid-friendly"], "keepsDays": 2, "equipment": ["large ovenproof pot with a lid"], "illustration": "🍗"
+    "tags": ["high-protein", "one-pot", "kid-friendly"], "keepsDays": 2, "equipment": ["large ovenproof pot with a lid"], "illustration": "🍗",
+    "photo": "photos/chicken-orzo-one-pot.jpg",
+    "photoCredit": "TheCulinaryGeek, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/72949902@N00/4611350135"
   },
   {
     "id": "pasta-genovese-onion-beef", "title": "Pasta alla genovese (onion and beef sauce)",
@@ -309,6 +321,9 @@
       "Cook the pasta until just firm. Keep a cup of the water and drain.",
       { "text": "Toss the hot pasta with the pesto and a splash of pasta water off the heat. Serve with grated parmesan.", "tip": "Never cook this pesto: the heat of the pasta is enough." }
     ],
-    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "blender", "frying pan"], "illustration": "🌿"
+    "tags": ["vegetarian", "quick", "light"], "keepsDays": 1, "equipment": ["big pot", "blender", "frying pan"], "illustration": "🌿",
+    "photo": "photos/pesto-trapanese-pasta.jpg",
+    "photoCredit": "sabotrax, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/68549265@N00/2220684472"
   }
 ]

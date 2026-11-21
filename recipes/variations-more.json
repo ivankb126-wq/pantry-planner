@@ -227,7 +227,10 @@
     "tags": ["one-pot", "comfort", "cook-once-eat-twice", "freezer-friendly"],
     "keepsDays": 4,
     "equipment": ["large pot", "small pan"],
-    "illustration": "🍲"
+    "illustration": "🍲",
+    "photo": "photos/varivo-od-lece.jpg",
+    "photoCredit": "rvacapinta, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/34427465953@N01/4432607854"
   },
   {
     "id": "chicken-korma",
@@ -266,7 +269,10 @@
     "tags": ["kid-friendly", "high-protein"],
     "keepsDays": 3,
     "equipment": ["pot", "large pan", "blender"],
-    "illustration": "🍛"
+    "illustration": "🍛",
+    "photo": "photos/chicken-korma.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3122165824"
   },
   {
     "id": "sweet-potato-chickpea-curry",
@@ -304,7 +310,10 @@
     "tags": ["vegan", "one-pot"],
     "keepsDays": 3,
     "equipment": ["pot", "large pan"],
-    "illustration": "🍠"
+    "illustration": "🍠",
+    "photo": "photos/sweet-potato-chickpea-curry.jpg",
+    "photoCredit": "cajsa.lilliehook, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/14514578@N08/38595023272"
   },
   {
     "id": "chicken-chow-mein",
@@ -458,7 +467,10 @@
     "tags": ["quick", "high-protein"],
     "keepsDays": 1,
     "equipment": ["frying pan", "bowl"],
-    "illustration": "🌯"
+    "illustration": "🌯",
+    "photo": "photos/chicken-caesar-wrap.jpg",
+    "photoCredit": "mdburnette, CC0",
+    "photoSource": "https://wordpress.org/photos/photo/146620f28c/"
   },
   {
     "id": "zapecene-palacinke",

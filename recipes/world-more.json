@@ -34,7 +34,10 @@
     "tags": ["high-protein", "cook-once-eat-twice"],
     "keepsDays": 3,
     "equipment": ["large roasting tin"],
-    "illustration": "🍋"
+    "illustration": "🍋",
+    "photo": "photos/greek-lemon-chicken-potatoes.jpg",
+    "photoCredit": "wdwSteve, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/33546659@N08/32875559160"
   },
   {
     "id": "spanakopita",
@@ -310,7 +313,10 @@
     "tags": ["quick", "high-protein", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["pot", "frying pan with a lid"],
-    "illustration": "🍚"
+    "illustration": "🍚",
+    "photo": "photos/oyakodon.jpg",
+    "photoCredit": "Kent Wang, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/27454212@N00/16049758530"
   },
   {
     "id": "chicken-tortilla-soup",
@@ -473,7 +479,10 @@
     "tags": ["quick", "kid-friendly"],
     "keepsDays": 1,
     "equipment": ["pot", "baking tray"],
-    "illustration": "🐟"
+    "illustration": "🐟",
+    "photo": "photos/fish-fingers-mash-peas.jpg",
+    "photoCredit": "hazelnicholson, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/10515323@N08/13818299623"
   },
   {
     "id": "sausage-bean-casserole",

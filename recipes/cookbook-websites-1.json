@@ -21,7 +21,10 @@
       { "text": "Drain the sauerkraut and squeeze it lightly. Stir it in and simmer for 45 to 60 minutes more until the pork is very tender.", "tip": "Rinse the sauerkraut once in cold water: it takes away some salt and sourness. Adding it later keeps it from going mushy." },
       { "text": "Mix the flour into the sour cream with a few spoons of the hot sauce, stir it into the pot and simmer for 3 minutes. Serve with bread and extra sour cream.", "tip": "It keeps 4 days and tastes even better reheated." }
     ],
-    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "high-protein"], "keepsDays": 4, "equipment": ["big heavy pot"], "illustration": "🥘"
+    "tags": ["comfort", "cook-once-eat-twice", "freezer-friendly", "high-protein"], "keepsDays": 4, "equipment": ["big heavy pot"], "illustration": "🥘",
+    "photo": "photos/segedin-gulas.jpg",
+    "photoCredit": "kimberlykv, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/87542849@N00/19596514269"
   },
   {
     "id": "pasta-e-ceci", "title": "Pasta e ceci (creamy chickpea pasta soup)",
@@ -214,7 +217,10 @@
       { "text": "Pour in the sauce and let it bubble for 1 minute, spooning it over the fish until sticky.", "tip": "The glaze goes in only at the end: honey burns quickly." },
       "Serve on the rice with the broccoli, sprinkled with sesame seeds."
     ],
-    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["pot", "frying pan"], "illustration": "🍣"
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["pot", "frying pan"], "illustration": "🍣",
+    "photo": "photos/honey-garlic-salmon.jpg",
+    "photoCredit": "OriginalJo, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/20081689@N00/7252612314"
   },
   {
     "id": "basque-cheesecake", "title": "Basque burnt cheesecake",

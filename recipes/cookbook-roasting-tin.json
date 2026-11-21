@@ -21,7 +21,10 @@
       "Meanwhile mix the grated ginger, lemon juice, the rest of the soy sauce and the rest of the sesame oil.",
       "Spoon the dressing over the tin and scatter with sliced spring onion, chopped peanuts and chili. Serve with the rice."
     ],
-    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["large roasting tin", "pot"], "illustration": "🐟"
+    "tags": ["quick", "high-protein"], "keepsDays": 1, "equipment": ["large roasting tin", "pot"], "illustration": "🐟",
+    "photo": "photos/soy-honey-salmon-traybake.jpg",
+    "photoCredit": "Maggie Hoffman, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/8830972@N08/3359690235"
   },
   {
     "id": "leek-mushroom-pasta-bake", "title": "Crispy leek and mushroom pasta bake",
@@ -67,7 +70,10 @@
       { "text": "Stir the coconut milk, prawns and chopped spinach into the tin and bake for 8 to 10 minutes more, until the prawns are pink.", "tip": "The prawns go in at the end so they stay juicy." },
       "Squeeze over the lemon, scatter with parsley and serve with the rice."
     ],
-    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["roasting tin", "pot"], "illustration": "🍤"
+    "tags": ["high-protein"], "keepsDays": 1, "equipment": ["roasting tin", "pot"], "illustration": "🍤",
+    "photo": "photos/kerala-prawn-curry.jpg",
+    "photoCredit": "Joegoaukfishcurry2, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/51547452@N02/37677963141"
   },
   {
     "id": "chili-peanut-beef-traybake", "title": "Chili peanut beef traybake with peppers and sweetcorn",
@@ -115,7 +121,10 @@
       { "text": "Stir in the coconut milk and spinach and roast for 10 minutes more until the cauliflower is tender.", "tip": "The coconut milk goes in late so the vegetables roast first." },
       "Squeeze over the lemon and serve with the rice."
     ],
-    "tags": ["vegan", "vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["large roasting tin", "pot"], "illustration": "🥦"
+    "tags": ["vegan", "vegetarian", "freezer-friendly"], "keepsDays": 3, "equipment": ["large roasting tin", "pot"], "illustration": "🥦",
+    "photo": "photos/roast-cauliflower-curry.jpg",
+    "photoCredit": "Scott Teresi, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/35903175@N02/4105752173"
   },
   {
     "id": "baked-gnocchi-leek-chard", "title": "Crispy baked gnocchi with leeks, chard and goat cheese",
@@ -135,7 +144,10 @@
       "Toss them in a baking dish with the cream, mustard, salt and pepper.",
       { "text": "Crumble the goat cheese over, scatter the breadcrumbs and drizzle with the oil. Bake for 15 to 20 minutes until golden on top.", "tip": "Cream cheese or feta work instead of goat cheese." }
     ],
-    "tags": ["vegetarian", "quick", "comfort"], "keepsDays": 1, "equipment": ["big bowl", "baking dish"], "illustration": "🥔"
+    "tags": ["vegetarian", "quick", "comfort"], "keepsDays": 1, "equipment": ["big bowl", "baking dish"], "illustration": "🥔",
+    "photo": "photos/baked-gnocchi-leek-chard.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/3241991271"
   },
   {
     "id": "roasted-pepper-orzotto", "title": "Oven-baked roasted pepper orzotto with feta",
@@ -157,7 +169,10 @@
       "Meanwhile toast the almonds in a dry pan.",
       "Stir in the lemon peel and juice, the rest of the oil and the pepper. Top with crumbled feta, torn basil and the almonds."
     ],
-    "tags": ["vegetarian", "light"], "keepsDays": 2, "equipment": ["roasting tin", "frying pan"], "illustration": "🫑"
+    "tags": ["vegetarian", "light"], "keepsDays": 2, "equipment": ["roasting tin", "frying pan"], "illustration": "🫑",
+    "photo": "photos/roasted-pepper-orzotto.jpg",
+    "photoCredit": "avlxyz, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/10559879@N00/4085343196"
   },
   {
     "id": "cinnamon-eggplant-bulgur-feta", "title": "Cinnamon eggplant with herby bulgur, olives and feta",
@@ -181,7 +196,10 @@
       "Fluff the bulgur with a fork and stir in the chopped parsley, chopped leaves, lemon juice and the rest of the oil.",
       { "text": "Pile the eggplant on the bulgur and top with crumbled feta and the cranberries.", "tip": "Pomegranate seeds are the original finish, when you can get them. It keeps 2 days for lunch boxes." }
     ],
-    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["2 roasting tins", "foil"], "illustration": "🍆"
+    "tags": ["vegetarian", "make-ahead"], "keepsDays": 2, "equipment": ["2 roasting tins", "foil"], "illustration": "🍆",
+    "photo": "photos/cinnamon-eggplant-bulgur-feta.jpg",
+    "photoCredit": "Jeffrey Tastes, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/92068436@N00/6796273902"
   },
   {
     "id": "spiced-chicken-pepper-traybake", "title": "Spiced chicken traybake with peppers and eggplant",
