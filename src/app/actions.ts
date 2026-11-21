@@ -59,7 +59,7 @@ export function setCooked(index: number, cooked: boolean): Amount[] {
       if (!d.history.some((h) => h.recipeId === meal.recipeId && h.date === date)) d.history.push({ recipeId: meal.recipeId, date });
       const r = RECIPE_BY_ID.get(meal.recipeId);
       if (r && !plan.taken[index]) {
-        taken = useFood(d, cookNeeds(r, mealPortions(plan, index, d.settings)));
+        taken = useFood(d, cookNeeds(r, mealPortions(plan, index, d.settings), meal.subs));
         plan.taken[index] = taken;
       }
     } else {
@@ -72,6 +72,23 @@ export function setCooked(index: number, cooked: boolean): Amount[] {
     }
   });
   return taken;
+}
+
+/**
+ * "I don't have X" for a planned meal: use `to` instead of `ingredient`
+ * ('' leaves it out, null goes back to the recipe). Swaps go on the meal
+ * that is cooked, so leftovers follow.
+ */
+export function setSub(index: number, ingredient: string, to: string | null): void {
+  update((d) => {
+    const m = d.plan?.meals[index];
+    if (!m || m.source !== 'cook') return;
+    const subs = { ...(m.subs ?? {}) };
+    if (to === null) delete subs[ingredient];
+    else subs[ingredient] = to;
+    if (Object.keys(subs).length) m.subs = subs;
+    else delete m.subs;
+  });
 }
 
 /** Cooked a recipe that is not in the plan (from the recipe page). */

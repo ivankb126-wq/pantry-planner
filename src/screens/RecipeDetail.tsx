@@ -2,14 +2,16 @@
 // ratings, notes, favourites, and adding it to this week.
 
 import { useRef, useState } from 'preact/hooks';
-import { type HideFor, rate, ratingOf, setCooked, setNote, swap, toggleFavourite } from '../app/actions';
+import { type HideFor, rate, ratingOf, setCooked, setNote, setSub, swap, toggleFavourite } from '../app/actions';
 import { CUISINE_LABEL, FAMILY_LABEL, INGREDIENTS, RECIPE_BY_ID, similarRecipes } from '../app/catalog';
 import { buyFor, priceIndex, saleIngredient, servingCost } from '../app/costs';
 import { lineQuantity, productLabel } from './Shopping';
 import { planResult, portionsFor, scaledIngredients } from '../app/planning';
 import { prepNote } from '../app/prep';
 import { back, go } from '../app/router';
-import { type AppData, useApp } from '../app/state';
+import { type AppData, getData, useApp } from '../app/state';
+import { SwapSheet, canSwap } from './SwapSheet';
+import type { MealSubs } from '../lib/substitutes';
 import { formatAmount, formatEur, zagrebToday } from '../lib/format';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
@@ -82,6 +84,10 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const [sheet, setSheet] = useState<null | 'down' | 'add'>(null);
   const [toast, setToast] = useToast<{ text: string; undo?: () => void }>(7000);
   const [note, setNoteText] = useState(d.notes[id] ?? '');
+  // "I don't have X": swaps are saved on the planned meal that is cooked
+  // (leftovers follow it); outside the plan they only change this page.
+  const [localSubs, setLocalSubs] = useState<MealSubs>({});
+  const [swapFor, setSwapFor] = useState<string | null>(null);
   usePhotos();
 
   if (!r) {
@@ -104,7 +110,26 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const cooked = mealIndex != null && d.plan!.cooked.includes(mealIndex);
   const prepped = mealIndex != null && !cooked ? prepNote(d, mealIndex) : null;
   const isNew = d.history.length >= 5 && !d.history.some((h) => h.recipeId === id);
-  const ings = scaledIngredients(r, servings);
+  const planMeal = mealIndex != null ? d.plan!.meals[mealIndex] : null;
+  const subsIndex = planMeal ? (planMeal.source === 'cook' ? mealIndex : (planMeal.from ?? null)) : null;
+  const subs: MealSubs = subsIndex != null ? (d.plan!.meals[subsIndex]?.subs ?? {}) : localSubs;
+  const ings = scaledIngredients(r, servings, subs);
+  const pickSwap = (orig: string, to: string | null) => {
+    setSwapFor(null);
+    if (subsIndex == null) {
+      const next = { ...localSubs };
+      if (to === null) delete next[orig];
+      else next[orig] = to;
+      setLocalSubs(next);
+      return;
+    }
+    const was = subs[orig];
+    const before = result?.cost;
+    setSub(subsIndex, orig, to);
+    const after = prices.data ? planResult(getData(), prices.data)?.cost : undefined;
+    const costText = before != null && after != null ? (Math.abs(after - before) < 0.005 ? ` The plan still costs ${formatEur(after)}.` : ` Plan cost ${formatEur(after)} (was ${formatEur(before)}).`) : '';
+    setToast({ text: `${to === null ? 'Back to the recipe.' : 'Swapped.'}${costText}`, undo: () => setSub(subsIndex, orig, was ?? null) });
+  };
   const f = r.facts.perServing;
 
   const photo = photoFor(id);
@@ -216,13 +241,20 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           {ings.map((i) => {
             const src = sourceFor(i.id, i.amount, d, result, mealIndex != null, prices);
             return (
-              <li key={i.id}>
-                <span class="ing-amount">{i.display}</span>
+              <li key={i.insteadOf ?? i.id} class={i.leftOut ? 'left-out' : undefined}>
+                <span class="ing-amount">{i.leftOut ? '' : i.display}</span>
                 <span class="grow">
-                  {i.name}
+                  {i.leftOut ? INGREDIENTS[i.insteadOf!]?.name : i.name}
                   {i.optional && <em> (optional)</em>}
-                  {i.note && <small class="ing-note">{i.note}</small>}
-                  {src.kind === 'have' ? (
+                  {i.insteadOf && !i.leftOut && <small class="swapped">instead of {INGREDIENTS[i.insteadOf]?.name.toLowerCase()}</small>}
+                  {i.leftOut && <small class="swapped">left out</small>}
+                  {!i.insteadOf && i.note && <small class="ing-note">{i.note}</small>}
+                  {canSwap(i.insteadOf ?? i.id, i.optional) && (
+                    <button class="ing-swap" onClick={() => setSwapFor(i.insteadOf ?? i.id)}>
+                      {i.insteadOf ? 'Change swap' : "Don't have it?"}
+                    </button>
+                  )}
+                  {i.leftOut ? null : src.kind === 'have' ? (
                     <small class="have">
                       <IconCheck size={14} /> You have it
                     </small>
@@ -230,7 +262,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
                     <small>{src.text}</small>
                   )}
                 </span>
-                {src.price != null && <span class="ing-price">{formatEur(src.price)}</span>}
+                {!i.leftOut && src.price != null && <span class="ing-price">{formatEur(src.price)}</span>}
               </li>
             );
           })}
@@ -318,6 +350,18 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
         </a>
       </div>
 
+      {swapFor && (
+        <SwapSheet
+          orig={swapFor}
+          amount={scaledIngredients(r, servings).find((x) => x.id === swapFor)?.amount ?? 0}
+          optional={!!r.ingredients.find((x) => x.id === swapFor)?.optional}
+          current={subs[swapFor]}
+          inPlan={subsIndex != null}
+          prices={prices}
+          onPick={(to) => pickSwap(swapFor, to)}
+          onClose={() => setSwapFor(null)}
+        />
+      )}
       {sheet === 'down' && (
         <ThumbsDownSheet
           title={r.title}

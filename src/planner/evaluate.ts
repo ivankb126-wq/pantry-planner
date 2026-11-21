@@ -3,6 +3,7 @@
 
 import { dealVerdict, isGoodSale, saleSaving } from '../lib/deals';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
+import { applySubs } from '../lib/substitutes';
 import { prepBonus } from './prep';
 import { type IngredientInfo, type ServingFacts, dietAllows, toIngredientUnit, zeroNutrition } from '../lib/nutrition';
 import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
@@ -127,6 +128,11 @@ export function buildContext(input: PlanInput): Context {
   };
 }
 
+/** One portion's ingredients for a planned meal, with its swaps. */
+function mealPortion(ctx: Context, m: Meal): { id: string; amount: number }[] {
+  return applySubs(ctx.perPortion.get(m.recipeId) ?? [], m.subs);
+}
+
 function purchase(ctx: Context, ing: IngredientInfo, need: number): Purchase {
   const key = `${ing.id}:${Math.round(need * 10)}`;
   let p = ctx.purchaseCache.get(key);
@@ -162,7 +168,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const usedBy = new Map<string, Set<number>>();
   meals.forEach((m, i) => {
     if (m.source !== 'cook') return;
-    for (const { id, amount } of ctx.perPortion.get(m.recipeId) ?? []) {
+    for (const { id, amount } of mealPortion(ctx, m)) {
       need.set(id, (need.get(id) ?? 0) + amount * cookedFor[i]);
       if (!usedBy.has(id)) usedBy.set(id, new Set());
       usedBy.get(id)!.add(i);
@@ -227,7 +233,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const recipeCost = meals.map((m, i) => {
     if (m.source !== 'cook') return 0;
     let c = 0;
-    for (const { id, amount } of ctx.perPortion.get(m.recipeId) ?? []) {
+    for (const { id, amount } of mealPortion(ctx, m)) {
       const total = need.get(id) ?? 0;
       const paidShare = total > 0 ? Math.max(0, total - (ctx.pantry.get(id) ?? 0)) / total : 0;
       c += amount * cookedFor[i] * paidShare * (unitCost.get(id) ?? 0);
@@ -396,7 +402,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
     if (m.source !== 'cook') return;
     if (ctx.liked.has(m.recipeId)) liked += 2.5;
     // Main ingredients = the two that cost the most in this meal
-    const main = (ctx.perPortion.get(m.recipeId) ?? [])
+    const main = (mealPortion(ctx, m))
       .map(({ id, amount }) => ({ id, value: amount * cookedFor[i] * (unitCost.get(id) ?? 0) }))
       .sort((a, b2) => b2.value - a.value)
       .slice(0, 2);

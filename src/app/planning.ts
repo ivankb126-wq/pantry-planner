@@ -2,6 +2,7 @@
 
 import { zagrebToday } from '../lib/format';
 import { toIngredientUnit } from '../lib/nutrition';
+import { type MealSubs, swapRatio } from '../lib/substitutes';
 import { CHILD_PORTION, addDays } from '../planner/evaluate';
 import { generatePlan, scorePlan, swapMeal } from '../planner/planner';
 import type { PantryItem, PlanInput, PlanResult, PlannerRecipe } from '../planner/types';
@@ -146,6 +147,10 @@ export interface ScaledIngredient {
   display: string; // "300 g", "2 tbsp"
   optional: boolean;
   note?: string;
+  /** "I don't have X": the recipe's own ingredient this row replaces. */
+  insteadOf?: string;
+  /** Left out ("I don't have X", nothing instead). */
+  leftOut?: boolean;
 }
 
 const num = (n: number) => n.toLocaleString('en-GB', { maximumFractionDigits: n < 10 ? 1 : 0 });
@@ -154,6 +159,7 @@ const num = (n: number) => n.toLocaleString('en-GB', { maximumFractionDigits: n 
 function friendly(n: number, unit: string): string {
   if (unit === 'g' || unit === 'ml') {
     const r = n >= 100 ? Math.round(n / 10) * 10 : n >= 20 ? Math.round(n / 5) * 5 : Math.round(n);
+    if (r === 0 && n > 0) return 'a pinch';
     if (r >= 1000) return `${num(r / 1000)} ${unit === 'g' ? 'kg' : 'l'}`;
     return `${r} ${unit}`;
   }
@@ -165,7 +171,7 @@ function friendly(n: number, unit: string): string {
 }
 
 /** A recipe's ingredients scaled to the number of portions. */
-export function scaledIngredients(r: PlannerRecipe, portions: number): ScaledIngredient[] {
+export function scaledIngredients(r: PlannerRecipe, portions: number, subs?: MealSubs): ScaledIngredient[] {
   const f = portions / r.servings;
   return r.ingredients.map((ri) => {
     const ing = INGREDIENTS[ri.id];
@@ -175,6 +181,15 @@ export function scaledIngredients(r: PlannerRecipe, portions: number): ScaledIng
       amount = toIngredientUnit(ing, qty, ri.unit);
     } catch {
       amount = 0;
+    }
+    const to = subs?.[ri.id];
+    if (to === '') {
+      return { id: ri.id, name: ing?.name ?? ri.id, amount: 0, unit: ing?.unit ?? 'g', display: friendly(qty, ri.unit), optional: !!ri.optional, leftOut: true, insteadOf: ri.id };
+    }
+    if (to && INGREDIENTS[to]) {
+      const sub = INGREDIENTS[to];
+      const subAmount = amount * swapRatio(ri.id, to);
+      return { id: to, name: sub.name, amount: subAmount, unit: sub.unit, display: friendly(subAmount, sub.unit), optional: !!ri.optional, insteadOf: ri.id };
     }
     return {
       id: ri.id,

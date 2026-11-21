@@ -338,3 +338,19 @@ describe('planner rules', () => {
     expect(res.meals.length).toBe(35);
   });
 });
+
+describe("I don't have X", () => {
+  it('puts the swap on the shopping list instead of the original', () => {
+    const input = baseInput();
+    const plan = generatePlan(input);
+    const i = plan.meals.findIndex((m) => m.source === 'cook' && RECIPES.find((r) => r.id === m.recipeId)!.ingredients.some((x) => x.id === 'onion' && !x.optional));
+    expect(i).toBeGreaterThanOrEqual(0);
+    const others = plan.meals.some((m, k) => k !== i && m.source === 'cook' && RECIPES.find((r) => r.id === m.recipeId)!.ingredients.some((x) => x.id === 'onion'));
+    const meals = plan.meals.map((m, k) => (k === i ? { ...m, subs: { onion: 'leek' } } : m));
+    const swapped = scorePlan(input, meals);
+    expect(swapped.shopping.some((l) => l.ingredient === 'leek')).toBe(true);
+    if (!others) expect(swapped.shopping.some((l) => l.ingredient === 'onion')).toBe(false);
+    const left = scorePlan(input, plan.meals.map((m, k) => (k === i ? { ...m, subs: { onion: '' } } : m)));
+    expect(left.cost).toBeLessThanOrEqual(scorePlan(input, plan.meals).cost);
+  });
+});

@@ -89,6 +89,8 @@ export interface Meal {
   recipeId: string;
   source: 'cook' | 'leftover';
   from?: number; // index of the cooking meal, for leftovers
+  /** "I don't have X": ingredient -> what is used instead ('' = left out). */
+  subs?: Record<string, string>;
 }
 
 export interface MealView {

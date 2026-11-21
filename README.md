@@ -84,6 +84,12 @@ it), meals marked cooked, food marked "I threw this away" in the pantry
 (with its rough value), and the favourite new dish (a first-time dish with a
 thumbs up). When a new plan replaces the week, its recap is kept (last 12
 weeks); the plan shows last week's at the start and this week's near the end.
+"I don't have X": each ingredient on a recipe page has "Don't have it?",
+which lists swaps from [src/lib/substitutes.ts](src/lib/substitutes.ts)
+(how much of what replaces it, filtered by diet and dislikes, what you have
+at home first) and "Leave it out" for garnishes and spices. From the plan,
+the swap is saved on the meal (`subs` on the cooked meal, leftovers follow),
+so the shopping list, plan cost, cooking mode and "Mark cooked" all use it.
 [src/app/pantry.ts](src/app/pantry.ts) has the living pantry rules: what a
 cooked meal takes (scaled to the people and any leftover meals), soonest
 use-by first, items that reach zero leave the shelf, and staples below a

@@ -2444,3 +2444,62 @@ h1 {
 .throw-btn {
   margin-top: 14px;
 }
+
+/* I don't have X */
+.ing-swap {
+  display: block;
+  margin-top: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--teal);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ing-list small.swapped {
+  display: block;
+  color: var(--orange);
+}
+.ing-list li.left-out > .grow {
+  color: var(--muted);
+}
+.swap-list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+}
+.swap-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.swap-row.on {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.swap-row strong {
+  display: block;
+  color: var(--text);
+}
+.swap-row small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.swap-row small.have {
+  color: var(--teal);
+}

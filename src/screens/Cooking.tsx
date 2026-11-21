@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { cookedOutsidePlan, rate, ratingOf, setCooked } from '../app/actions';
-import { RECIPE_BY_ID } from '../app/catalog';
+import { INGREDIENTS, RECIPE_BY_ID } from '../app/catalog';
 import { mealPortions, takenText } from '../app/pantry';
 import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
@@ -156,10 +156,14 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   const rawTip = stepTip(r.steps[step]);
   const tip = rawTip && scaleStep(rawTip, factor);
   const mins = stepMinutes(text);
-  const ings = scaledIngredients(r, portions);
+  // Swaps chosen with "Don't have it?" live on the meal that is cooked.
+  const planMeal = mealIndex != null ? d.plan!.meals[mealIndex] : null;
+  const cookMeal = planMeal?.source === 'leftover' && planMeal.from != null ? d.plan!.meals[planMeal.from] : planMeal;
+  const ings = scaledIngredients(r, portions, cookMeal?.subs).filter((i) => !i.leftOut);
   const lower = fold(text);
   const used = ings.filter((i) => {
-    const words = fold(i.name).split(/[\s,()]+/).filter((w) => w.length > 3);
+    // The step text names the recipe's own ingredient, so match that for swaps.
+    const words = fold(i.insteadOf ? (INGREDIENTS[i.insteadOf]?.name ?? i.name) : i.name).split(/[\s,()]+/).filter((w) => w.length > 3);
     return words.some((w) => lower.includes(w.replace(/s$/, '')));
   });
 
@@ -201,6 +205,7 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
           {used.map((i) => (
             <span key={i.id} class="pill static">
               {i.display} {i.name.toLowerCase()}
+              {i.insteadOf ? ` (instead of ${INGREDIENTS[i.insteadOf]?.name.toLowerCase()})` : ''}
             </span>
           ))}
         </div>

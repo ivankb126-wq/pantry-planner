@@ -4,6 +4,7 @@
 
 import { daysBetween, formatAmount } from '../lib/format';
 import { toIngredientUnit } from '../lib/nutrition';
+import { type MealSubs, applySubs } from '../lib/substitutes';
 import type { PlannerRecipe } from '../planner/types';
 import { INGREDIENTS, ingName } from './catalog';
 import { addToPantry, portionsFor } from './planning';
@@ -15,7 +16,7 @@ function crumbs(ingredient: string): number {
 }
 
 /** What one cooking of a recipe uses, in each ingredient's own unit. */
-export function cookNeeds(r: PlannerRecipe, portions: number): Amount[] {
+export function cookNeeds(r: PlannerRecipe, portions: number, subs?: MealSubs): Amount[] {
   const out: Amount[] = [];
   for (const ri of r.ingredients) {
     if (ri.optional) continue;
@@ -28,7 +29,8 @@ export function cookNeeds(r: PlannerRecipe, portions: number): Amount[] {
       // a unit that does not fit is caught by the recipe check
     }
   }
-  return out;
+  if (!subs) return out;
+  return applySubs(out.map((a) => ({ id: a.ingredient, amount: a.amount })), subs).map((a) => ({ ingredient: a.id, amount: a.amount }));
 }
 
 /** Portions a planned meal is cooked for: its eaters plus later leftover meals. */
