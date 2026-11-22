@@ -392,6 +392,10 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   if (classic) weekend += 20;
   b.weekend = -weekend;
 
+  // The plan starts today, so there was no evening before its first day to
+  // soak beans or make overnight oats: no "start the day before" dish then.
+  b.ahead = meals.filter((m) => m.source === 'cook' && m.day === 0 && ctx.recipes.get(m.recipeId)!.ahead).length * 60;
+
   // Ratings, sales, new dishes, pantry
   let liked = 0;
   let sale = 0;

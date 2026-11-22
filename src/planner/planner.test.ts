@@ -354,3 +354,13 @@ describe("I don't have X", () => {
     expect(left.cost).toBeLessThanOrEqual(scorePlan(input, plan.meals).cost);
   });
 });
+
+describe('start the day before', () => {
+  it('never plans a dish that needs the evening before on the first day', () => {
+    for (const seed of [1, 2, 3, 4, 5]) {
+      const plan = generatePlan(baseInput({ seed, meals: ['breakfast', 'lunch', 'dinner', 'snack'] }));
+      const first = plan.meals.filter((m) => m.day === 0 && m.source === 'cook').map((m) => RECIPES.find((r) => r.id === m.recipeId)!);
+      expect(first.filter((r) => r.ahead).map((r) => r.id)).toEqual([]);
+    }
+  });
+});
