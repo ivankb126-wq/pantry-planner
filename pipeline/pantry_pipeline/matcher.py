@@ -36,7 +36,9 @@ _TIN_WORDS = {
     "STERILIZIRANA",
     "STERILIZIRANI",
 }
-_TIN_BRANDS = {"BONDUELLE", "GIANA"}
+# Brands that only sell beans and lentils in tins and jars (Campo, Italdoro
+# and Senesi are the 400 g tins at Plodine).
+_TIN_BRANDS = {"BONDUELLE", "GIANA", "CAMPO", "ITALDORO", "SENESI"}
 
 
 def looks_tinned(name: str) -> bool:
