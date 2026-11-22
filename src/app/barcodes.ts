@@ -6,15 +6,26 @@ import { readPref, writePref } from '../lib/prefs';
 
 const MINE = 'my-barcodes';
 let list: Promise<BarcodeIndex> | null = null;
+let loaded = false;
 
 function loadList(): Promise<BarcodeIndex> {
   list ??= fetch(`${import.meta.env.BASE_URL}data/barcodes.json`)
-    .then((r) => (r.ok ? (r.json() as Promise<BarcodeIndex>) : {}))
+    .then(async (r) => {
+      if (!r.ok) throw new Error(String(r.status));
+      const index = (await r.json()) as BarcodeIndex;
+      loaded = true;
+      return index;
+    })
     .catch(() => {
       list = null; // try again next time (offline the first time)
       return {};
     });
   return list;
+}
+
+/** False when the barcode list could not be loaded (no internet the first time). */
+export function barcodeListLoaded(): boolean {
+  return loaded;
 }
 
 /** What a scanned barcode is: from your own list first, then the shops'. */

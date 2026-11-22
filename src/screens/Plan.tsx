@@ -183,7 +183,7 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
       <CheckChips checks={result.checks} />
       <WeekList d={d} result={result} t={t} sale={sale} />
       <NutritionCard checks={result.checks} />
-      <LeftAtHome d={d} result={result} />
+      <LeftAtHome d={d} result={result} t={t} />
       <DealsCard data={data} />
       <SeasonCard />
       <RecapCard d={d} t={t} />
@@ -474,10 +474,16 @@ function worthKeeping(l: { ingredient: string; amount: number }): boolean {
   return l.amount >= (ing.category === 'spices' ? 10 : 40);
 }
 
-function LeftAtHome({ d, result }: { d: AppData; result: PlanResult }) {
+function LeftAtHome({ d, result, t }: { d: AppData; result: PlanResult; t: number }) {
   const leftovers = result.leftovers.filter(worthKeeping);
   if (!leftovers.length) return null;
   const saved = !!d.plan?.leftoversSaved;
+  // Shopping put in the pantry with "Add basket" and meals marked cooked
+  // already leave exactly these leftovers in the pantry: adding them again
+  // would count them twice.
+  const tracked = Object.keys(d.shoppingChecked).some((k) => k.startsWith('bought|'));
+  // Before the last days the food is not even bought yet.
+  const early = t < 5;
   return (
     <section class="card" aria-label="Left at home">
       <h2>Left at home</h2>
@@ -493,6 +499,12 @@ function LeftAtHome({ d, result }: { d: AppData; result: PlanResult }) {
         <p class="saved-line">
           <IconCheck size={18} /> Saved to your pantry
         </p>
+      ) : tracked ? (
+        <p class="saved-line">
+          <IconCheck size={18} /> Already in your pantry: you added your shopping there, and cooking takes out what it uses.
+        </p>
+      ) : early ? (
+        <p class="fineprint">You can save them to your pantry at the end of the week.</p>
       ) : (
         <button class="btn-teal-outline wide" onClick={() => saveLeftovers({ ...result, leftovers })}>
           Save to pantry

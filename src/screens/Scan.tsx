@@ -3,7 +3,7 @@
 // Barcodes the shops do not list can be taught once and are remembered.
 
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import { lookupBarcode, rememberBarcode } from '../app/barcodes';
+import { barcodeListLoaded, lookupBarcode, rememberBarcode } from '../app/barcodes';
 import { INGREDIENTS, INGREDIENT_LIST, ingName } from '../app/catalog';
 import { stock } from '../app/pantry';
 import { go } from '../app/router';
@@ -250,8 +250,17 @@ function TeachCard({ code, onAdd, onAgain }: { code: string; onAdd: (ingredient:
   return (
     <section class="card scan-found">
       <p class="kicker">Barcode {code}</p>
-      <h2>Not in the shops' lists</h2>
-      <p class="sub">The price lists only have food the app uses in recipes. If it is one of those, say what it is.</p>
+      {barcodeListLoaded() ? (
+        <>
+          <h2>Not in the shops' lists</h2>
+          <p class="sub">The price lists only have food the app uses in recipes. If it is one of those, say what it is.</p>
+        </>
+      ) : (
+        <>
+          <h2>Could not check this barcode</h2>
+          <p class="sub">The barcode list needs the internet the first time. Try again when you are online, or say what it is.</p>
+        </>
+      )}
       <label class="search">
         <IconSearch size={20} />
         <input placeholder="What is it? (rice, milk...)" value={q} onInput={(e) => setQ((e.target as HTMLInputElement).value)} />
