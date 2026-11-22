@@ -126,6 +126,16 @@ def chain_files_from(container, chain: str) -> ChainFiles | None:
 # Official sites, through the cijene-api crawler (installed by the workflow)
 
 
+CRAWL_TIMEOUT_S = 20 * 60
+CRAWL_MEMORY_BYTES = 6 * 1024**3  # GitHub runners have 16 GB
+
+
+def _limit_memory() -> None:  # runs in the crawler process (Linux only)
+    import resource
+
+    resource.setrlimit(resource.RLIMIT_AS, (CRAWL_MEMORY_BYTES, CRAWL_MEMORY_BYTES))
+
+
 def crawl_official(chain: str, date: str, workdir: Path) -> ChainFiles | None:
     """Run the cijene-api crawler for one chain. Needs CIJENE_CRAWLER_DIR (a
     checkout of github.com/senko/cijene-api) and optionally
@@ -139,12 +149,27 @@ def crawl_official(chain: str, date: str, workdir: Path) -> ChainFiles | None:
     out.mkdir(parents=True, exist_ok=True)
     cmd = [python, "-m", "crawler.cli.crawl", str(out), "-d", date, "-c", chain, "-z", "false", "-v", "info"]
     log.info("Running official-site crawler: %s", " ".join(cmd))
+    # The crawler's output goes to a file, not into memory, and the crawler
+    # gets a memory cap and a time limit: a big chain (Konzum, 571 stores)
+    # could use so much memory that GitHub lost the whole machine and the site
+    # was not updated at all. Now only the crawler fails and the previous
+    # prices are kept.
+    log_path = workdir / f"crawl-{chain}-{date}.log"
     try:
-        proc = subprocess.run(cmd, cwd=crawler_dir, timeout=45 * 60, capture_output=True, text=True)
+        with open(log_path, "w", encoding="utf-8", errors="replace") as log_file:
+            proc = subprocess.run(
+                cmd,
+                cwd=crawler_dir,
+                timeout=CRAWL_TIMEOUT_S,
+                stdout=log_file,
+                stderr=subprocess.STDOUT,
+                text=True,
+                preexec_fn=_limit_memory if os.name == "posix" else None,
+            )
     except (OSError, subprocess.TimeoutExpired) as err:
         log.error("Crawler for %s failed to run: %s", chain, err)
         return None
-    tail = "\n".join((proc.stdout + proc.stderr).strip().splitlines()[-15:])
+    tail = "\n".join(log_path.read_text(encoding="utf-8", errors="replace").strip().splitlines()[-15:])
     if proc.returncode != 0:
         log.error("Crawler for %s exited with %s:\n%s", chain, proc.returncode, tail)
         return None

@@ -229,3 +229,10 @@ def test_cannellini_tin_is_canned_beans():
 )
 def test_ready_made_and_non_food_are_left_out(name, expected):
     assert ids(name) == expected
+
+
+def test_tiny_pack_of_a_piece_ingredient_is_skipped():
+    # 5 g of something counted in 200 g pieces rounds to 0 pieces; it used to
+    # crash Plodine's whole price list with a division by zero.
+    avocado = BY_ID["avocado"]
+    assert pack_for(avocado, "AVOKADO ULJE ARoma 5 g", "", "") is None

@@ -197,7 +197,9 @@ def pack_for(
         if size.amount > 0 and abs(ratio_amount - size.amount) / size.amount > 0.35 and abs(price - unit_price) > 0.011:
             size = Size(ratio_amount, size.kind)
     amount = _convert(ing, size)
-    if amount is None or amount <= 0:
+    # Rounded to 0 (a 10 g product of a 400 g-a-piece ingredient) it would
+    # divide by zero later.
+    if amount is None or round(amount, 1) <= 0:
         return None
     return PackInfo(amount=round(amount, 1), loose=loose)
 
