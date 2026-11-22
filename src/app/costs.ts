@@ -23,8 +23,11 @@ export function priceIndex(prices: PriceData): PriceIndex {
   for (const o of prices.offers) {
     const cur = best.get(o.ingredient);
     if (!cur || o.unitPrice < cur.unitPrice) best.set(o.ingredient, o);
-    if (isGoodSale(o)) sale.add(o.ingredient);
   }
+  // "On sale" only when the best value product, the one you would buy, is on
+  // a genuine sale. Some product of almost every common ingredient is on sale
+  // somewhere, which made the badge appear on nearly every recipe.
+  for (const [id, o] of best) if (isGoodSale(o)) sale.add(id);
   for (const o of prices.reference) if (!best.has(o.ingredient)) best.set(o.ingredient, o);
   const all = indexOffers(prices.offers);
   for (const [id, list] of indexOffers(prices.reference)) if (!all.has(id)) all.set(id, list);
