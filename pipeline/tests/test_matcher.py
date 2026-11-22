@@ -168,3 +168,59 @@ def test_pick_options_drops_misread_sizes():
     offers = [offer(f"RIŽA {i}", 1000, 2.0 + i / 10) for i in range(5)]
     offers.append(offer("RIŽA BAD", 100000, 2.0))  # 100 kg for 2 EUR is a parsing error
     assert "RIŽA BAD" not in [o.name for o in pick_options(rice, offers)]
+
+
+@pytest.mark.parametrize(
+    "name",
+    [
+        "GRAH BIJELI 400/240 g GUSTO SANO",
+        "GRAH BIJELI 230g LIM PODRAVKA",
+        "Bijeli grah, OM 240g",
+        "GRAH BIJELI NA PARI 310/250g BONDUELLE",
+        "LEĆA LIM.400g PODRAVKA",
+        "LEĆA DESPAR KUHANA 400 g",
+        "KLC.Leća smeđa 400 g/260 g",
+        "GRAH BIJELI CANNELLINI GARDEN GOOD 240g",
+    ],
+)
+def test_tins_are_not_dried_beans_or_lentils(name):
+    assert not ids(name) & {"white-beans", "lentils", "red-lentils", "chickpeas-dry"}
+
+
+@pytest.mark.parametrize(
+    "name, ingredient",
+    [
+        ("GRAH BIJELI", "white-beans"),
+        ("GRAH GARDEN GOOD BIJELI 500g", "white-beans"),
+        ("LEĆA ZELENA VEDRINI 500 g", "lentils"),
+        ("LEĆA CRVENA SPAR 500 g", "red-lentils"),
+        ("SLANUTAK SPAR 500 g", "chickpeas-dry"),
+    ],
+)
+def test_dried_packs_still_match(name, ingredient):
+    assert ingredient in ids(name)
+
+
+def test_dried_chickpeas_are_not_also_canned():
+    assert ids("SLANUTAK SPAR 500 g") == {"chickpeas-dry"}
+
+
+def test_cannellini_tin_is_canned_beans():
+    assert "kidney-beans" in ids("GRAH BIJELI CANNELLINI GARDEN GOOD 240g")
+
+
+@pytest.mark.parametrize(
+    "name, expected",
+    [
+        ("KLC.Prašak za puding od vanilije 37g", {"pudding-powder"}),
+        ("SD.KLC.Puding od slatk.vrh.vanil. 500g", set()),
+        ("RAHAT LOKUM ORAH 180g ADRIA", set()),
+        ("PAŠTETA PILEĆA S AJVAROM 95g PODRAVKA", set()),
+        ("SPECIAL DOG EX. MP SVJ TUNA 150g", set()),
+        ("Curry zalogaj SK1", set()),
+        ("Hamburger/Hot Dog peciva SK14", {"bread-rolls"}),
+        ("AJVAR BLAGI 700g ZVIJEZDA", {"ajvar"}),
+    ],
+)
+def test_ready_made_and_non_food_are_left_out(name, expected):
+    assert ids(name) == expected

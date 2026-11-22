@@ -11,12 +11,39 @@ Keyword rules (in data/ingredients.yml):
 
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 from statistics import median
 
 from .ingredients import Ingredient
 from .parsing import Size, fold, size_from_fields, size_from_name, tokens
+
+# Signs that a product is cooked beans or lentils in a tin or jar, not dried:
+# two weights ("400/240 g": the tin and the drained beans) or these words.
+_DRAINED = re.compile(r"\d\s*(G|ML|GR)?\s*/\s*\d")
+_TIN_WORDS = {
+    "LIM",
+    "LIMENKA",
+    "LIMENCI",
+    "CAN",
+    "OM",
+    "KUHAN",
+    "KUHANA",
+    "KUHANI",
+    "KUHANE",
+    "PARI",
+    "STERILIZIRANA",
+    "STERILIZIRANI",
+}
+_TIN_BRANDS = {"BONDUELLE", "GIANA"}
+
+
+def looks_tinned(name: str) -> bool:
+    """True for "GRAH BIJELI 400/240 g", "LEĆA LIM.400g", "Leća, OM 260g"."""
+    folded = fold(name)
+    words = set(tokens(name))
+    return bool(_DRAINED.search(folded)) or bool(words & _TIN_WORDS) or bool(words & _TIN_BRANDS)
 
 
 class Rule:
@@ -96,11 +123,16 @@ class Matcher:
                 continue
             if any(r.matches(toks, tset) for r in ci.exclude):
                 continue
+            if ci.ingredient.dried and looks_tinned(name):
+                continue
             if group_hits is None:
                 group_hits = {g for g, rules in self.groups.items() if any(r.matches(toks, tset) for r in rules)}
             if group_hits - set(ci.ingredient.allow):
                 continue
             found.append(ci.ingredient)
+        # A dried bag of chickpeas is not also "canned chickpeas".
+        if any(i.dried for i in found):
+            found = [i for i in found if i.dried or i.category != "legumes"]
         return found
 
 

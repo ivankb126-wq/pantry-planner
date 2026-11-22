@@ -54,6 +54,7 @@ class Ingredient:
     allow: list[str] = field(default_factory=list)  # exclude groups that do not apply
     diet: str = "vegan"  # strictest diet it fits: vegan, vegetarian, pescatarian, meat
     edible: float = 1.0  # part you eat (no bones, shells, peel)
+    dried: bool = False  # dried only: skip tins and jars (two weights, "LIM", "OM"...)
 
     def to_public(self) -> dict:
         """The fields the web app needs (no matching rules)."""
@@ -133,6 +134,7 @@ def _parse(item: dict) -> Ingredient:
         allow=[str(x) for x in match.get("allow", [])],
         diet=str(item.get("diet", "vegan")),
         edible=float(item.get("edible", 1.0)),
+        dried=bool(match.get("dried", False)),
     )
 
 
