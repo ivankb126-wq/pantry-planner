@@ -12,12 +12,19 @@ import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe
 /** Share of a day's food each meal stands for (targets shrink when fewer meals are planned). */
 export const MEAL_SHARE: Record<Slot, number> = { breakfast: 0.25, lunch: 0.33, dinner: 0.32, snack: 0.05, dessert: 0.05, starter: 0, side: 0 };
 export const CHILD_PORTION = 0.6;
-/** A main dish after a bowl of soup is a little smaller, so the day's food stays the same. */
-export const MAIN_AFTER_SOUP = 0.85;
+/**
+ * Nobody should leave the table hungry: a light main (a 450 kcal stew) is
+ * cooked bigger, so each adult gets at least this much, up to 1.4 portions.
+ * A bit left over is better than not enough.
+ */
+export const MAIN_MIN_KCAL = 600;
+const MAIN_MAX_SCALE = 1.4;
 /** A soup that is also a main dish, served as a starter: half a bowl. */
 export const STARTER_OF_MAIN = 0.5;
 /** Cooking a pot of soup is work: a new pot has to save at least this much. */
 const SOUP_POT_EFFORT = 3;
+/** A weekday lunch from last night's dinner saves an evening of cooking. */
+const WEEKDAY_LEFTOVER_BONUS = 2.5;
 /** Store name used for typical (estimated) prices. */
 export const ESTIMATE = 'estimate';
 
@@ -46,6 +53,11 @@ export interface Context {
   purchaseCache: Map<string, Purchase>;
 }
 
+/** Servings to cook: always whole, and rounded up, never down. */
+export function wholeServings(portions: number): number {
+  return Math.max(1, Math.ceil(portions - 0.1));
+}
+
 export function addDays(iso: string, n: number): string {
   const [y, m, d] = iso.split('-').map(Number);
   const t = new Date(Date.UTC(y, m - 1, d + n));
@@ -55,15 +67,23 @@ export function addDays(iso: string, n: number): string {
 /**
  * How big one person's portion of a planned meal is, as a share of the
  * recipe's serving: half a bowl when a main-dish soup is the starter, and a
- * smaller main after soup.
+ * bigger portion of a light main dish (see MAIN_MIN_KCAL). Soup and salad
+ * come on top of the main, never instead of part of it.
  */
-export function mealSize(meals: Meal[], i: number, recipeOf: (id: string) => { mealTypes: string[] } | undefined): number {
+export function mealSize(
+  meals: Meal[],
+  i: number,
+  recipeOf: (id: string) => { mealTypes: string[]; facts: { perServing: { kcal: number } } } | undefined,
+): number {
   const m = meals[i];
+  const r = recipeOf(m.recipeId);
   if (m.slot === 'starter' || m.slot === 'side') {
-    const r = recipeOf(m.recipeId);
     return r && r.mealTypes.some((t) => t === 'lunch' || t === 'dinner') ? STARTER_OF_MAIN : 1;
   }
-  if ((m.slot === 'lunch' || m.slot === 'dinner') && meals.some((x) => x.slot === 'starter' && x.day === m.day && x.with === m.slot)) return MAIN_AFTER_SOUP;
+  if ((m.slot === 'lunch' || m.slot === 'dinner') && r) {
+    const kcal = r.facts.perServing.kcal;
+    return kcal > 0 ? Math.min(MAIN_MAX_SCALE, Math.max(1, Math.round((MAIN_MIN_KCAL / kcal) * 20) / 20)) : 1;
+  }
   return 1;
 }
 
@@ -199,7 +219,7 @@ function cookingPlan(ctx: Context, meals: Meal[], sizes: number[]): { cookedFor:
     const need = ctx.portions * eaters[i].reduce((s, k) => s + sizes[k], 0);
     const r = ctx.recipes.get(m.recipeId)!;
     // Snacks and desserts are made as a whole batch (a tray of muffins, a cake).
-    return m.slot === 'snack' || m.slot === 'dessert' ? Math.max(r.servings, need) : need;
+    return m.slot === 'snack' || m.slot === 'dessert' ? Math.max(r.servings, need) : wholeServings(need);
   });
   return { cookedFor, eaters };
 }
@@ -333,7 +353,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const weeks = days / 7;
   const hasMains = mains.length > 0;
   const checks: Check[] = [
-    check('energy', 'Energy', perPersonDay.kcal, `${Math.round(T * 0.9)} to ${Math.round(T * 1.1)} kcal`, Math.abs(perPersonDay.kcal - T) <= 0.1 * T),
+    check('energy', 'Energy', perPersonDay.kcal, `${Math.round(T * 0.95)} to ${Math.round(T * 1.15)} kcal`, perPersonDay.kcal >= 0.95 * T && perPersonDay.kcal <= 1.15 * T),
     check('protein', 'Protein', perPersonDay.protein, `at least ${Math.round(60 * s)} g`, perPersonDay.protein >= 60 * s),
     check('fibre', 'Fibre', perPersonDay.fibre, `at least ${Math.round(25 * s)} g`, perPersonDay.fibre >= 25 * s),
     check('veg', 'Vegetables and fruit', perPersonDay.vegPortions, `at least ${round1(3 * s)} portions`, perPersonDay.vegPortions >= 3 * s),
@@ -352,10 +372,14 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const b: Record<string, number> = { cost };
   const over = cost - input.budget;
   b.budget = over > 0 ? 25 + 40 * over : 0;
-  const eDev = Math.abs(perPersonDay.kcal - T) / Math.max(1, T);
-  // Too little food is worse than spending a few euros more, so missing the
-  // energy range costs about 2.5 EUR per percent (it used to be 0.6 EUR).
-  b.energy = eDev > 0.1 ? (eDev - 0.1) * 250 : 0;
+  // Too little food is worse than a little too much: the plan aims for the
+  // full target (a few percent under at most) and may go 15 percent over.
+  const eUnder = (T - perPersonDay.kcal) / Math.max(1, T);
+  const eOver = (perPersonDay.kcal - T) / Math.max(1, T);
+  // Each percent under the target costs about 0.8 EUR, and 3 EUR more per
+  // percent below 95 percent; more than 15 percent over costs 2.5 EUR a percent.
+  b.energy =
+    (eUnder > 0 ? eUnder * 80 + Math.max(0, eUnder - 0.05) * 300 : 0) + (eOver > 0.15 ? (eOver - 0.15) * 250 : 0);
   b.protein = shortfall(perPersonDay.protein, 60 * s) * 25;
   b.fibre = shortfall(perPersonDay.fibre, 25 * s) * 15;
   b.veg = shortfall(perPersonDay.vegPortions, 3 * s) * 20;
@@ -490,6 +514,12 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const recent = new Set(input.recent ?? []);
   b.recent = meals.filter((m) => m.source === 'cook' && recent.has(m.recipeId)).length * 4;
   b.liked = -liked;
+  // "Cook once, eat twice": yesterday's dinner for a weekday lunch is one
+  // less meal to cook. Cooked meals earn small bonuses (sale, season) that
+  // leftovers cannot, so leftovers get a nudge of their own.
+  b.cookTwice = input.settings.cookOnceEatTwice
+    ? -meals.filter((m) => m.slot === 'lunch' && m.source === 'leftover' && ctx.weekday[m.day]).length * WEEKDAY_LEFTOVER_BONUS
+    : 0;
   b.sale = -sale;
   b.season = -season;
   b.prep = input.settings.mealPrep ? -prepBonus(meals, input.startDate, days, (id) => ctx.recipes.get(id)) : 0;

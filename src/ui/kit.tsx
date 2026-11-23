@@ -81,11 +81,11 @@ export function Stepper({ label, value, min, max, step = 1, onChange, format }: 
     <div class="stepper-row">
       <span>{label}</span>
       <div class="stepper2">
-        <button aria-label={`Less ${label.toLowerCase()}`} disabled={value <= min} onClick={() => onChange(Math.max(min, value - step))}>
+        <button aria-label={`Decrease ${label.toLowerCase()}`} disabled={value <= min} onClick={() => onChange(Math.max(min, value - step))}>
           −
         </button>
         <span aria-live="polite">{format ? format(value) : value}</span>
-        <button aria-label={`More ${label.toLowerCase()}`} disabled={value >= max} onClick={() => onChange(Math.min(max, value + step))}>
+        <button aria-label={`Increase ${label.toLowerCase()}`} disabled={value >= max} onClick={() => onChange(Math.min(max, value + step))}>
           +
         </button>
       </div>

@@ -8,6 +8,7 @@ import { portionsFor, scaledIngredients } from '../app/planning';
 import { back, go } from '../app/router';
 import { type Amount, useApp } from '../app/state';
 import { scaleStep, stepText, stepTip } from '../lib/nutrition';
+import { wholeServings } from '../planner/evaluate';
 import { IconClose, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { Empty, Screen, Sheet } from '../ui/kit';
 import { useWakeLock } from '../ui/wakeLock';
@@ -150,7 +151,7 @@ export function Cooking({ id, mealParam }: { id: string; mealParam: string | nul
   const mealIndex = mealParam != null && d.plan?.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   const n = r.steps.length;
   // A plan meal is cooked for its eaters plus any later leftover or batch meals.
-  const portions = Math.max(1, Math.round(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings)));
+  const portions = wholeServings(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings));
   const factor = portions / r.servings;
   const text = scaleStep(stepText(r.steps[step]), factor);
   const rawTip = stepTip(r.steps[step]);

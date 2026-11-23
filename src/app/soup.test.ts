@@ -17,10 +17,10 @@ describe('a pot of soup for the week', () => {
     expect(soupFreezer(week.filter((m) => m.day < 4))).toEqual([]);
   });
 
-  it('cooks one bowl a person for each day, and a smaller main after soup', () => {
+  it('cooks one bowl a person for each day, and a full main after soup', () => {
     const plan = { meals: week } as SavedPlan;
     const s = { ...emptyData().settings, adults: 2, children: 0 };
     expect(mealPortions(plan, 0, s)).toBe(14);
-    expect(mealPortions(plan, 1, s)).toBeCloseTo(1.7);
+    expect(mealPortions(plan, 1, s)).toBeGreaterThanOrEqual(2);
   });
 });

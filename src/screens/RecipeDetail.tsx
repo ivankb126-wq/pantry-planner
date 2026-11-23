@@ -15,7 +15,7 @@ import type { MealSubs } from '../lib/substitutes';
 import { formatAmount, formatEur, zagrebToday } from '../lib/format';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
-import { ESTIMATE, addDays } from '../planner/evaluate';
+import { ESTIMATE, addDays, wholeServings } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
 import { IconBack, IconCheck, IconClock, IconFlame, IconHeart, IconSnow, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { mealPortions, takenText } from '../app/pantry';
@@ -79,7 +79,8 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const r = RECIPE_BY_ID.get(id);
   const mealIndex = mealParam != null && d.plan && d.plan.meals[Number(mealParam)]?.recipeId === id ? Number(mealParam) : null;
   // A plan meal is cooked for its eaters plus any later leftover or batch meals.
-  const cookFor = Math.max(1, Math.round(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings)));
+  const cookFor = wholeServings(mealIndex != null ? mealPortions(d.plan!, mealIndex, d.settings) : portionsFor(d.settings));
+  const laterMeals = mealIndex != null ? d.plan!.meals.filter((m) => m.source === 'leftover' && m.from === mealIndex).length : 0;
   const [servings, setServings] = useState(cookFor);
   const maxServings = Math.max(12, cookFor);
   const [sheet, setSheet] = useState<null | 'down' | 'add'>(null);
@@ -193,7 +194,9 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           </p>
           {!view.leftover && cookFor > portionsFor(d.settings) + 0.5 && (
             <p class="sub">
-              Cook {cookFor} servings: this meal plus {plural(d.plan!.meals.filter((m) => m.source === 'leftover' && m.from === mealIndex).length, 'later meal', 'later meals')}. The amounts below are for all of it.
+              {laterMeals > 0
+                ? `Cook ${cookFor} servings: this meal plus ${plural(laterMeals, 'later meal', 'later meals')}. The amounts below are for all of it.`
+                : `Cook ${cookFor} servings: this dish is on the light side, so everyone gets a bigger plate.`}
             </p>
           )}
           {!view.leftover && freeze && (

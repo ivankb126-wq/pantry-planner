@@ -1,7 +1,7 @@
 // Things you can do in the app. Each one changes the saved state.
 
 import { zagrebToday } from '../lib/format';
-import { addDays } from '../planner/evaluate';
+import { addDays, wholeServings } from '../planner/evaluate';
 import type { PlanResult } from '../planner/types';
 import { INGREDIENTS, RECIPE_BY_ID } from './catalog';
 import { cookNeeds, mealPortions, stock, useFood } from './pantry';
@@ -59,7 +59,7 @@ export function setCooked(index: number, cooked: boolean): Amount[] {
       if (!d.history.some((h) => h.recipeId === meal.recipeId && h.date === date)) d.history.push({ recipeId: meal.recipeId, date });
       const r = RECIPE_BY_ID.get(meal.recipeId);
       if (r && !plan.taken[index]) {
-        taken = useFood(d, cookNeeds(r, mealPortions(plan, index, d.settings), meal.subs));
+        taken = useFood(d, cookNeeds(r, wholeServings(mealPortions(plan, index, d.settings)), meal.subs));
         plan.taken[index] = taken;
       }
     } else {

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { setCooked } from './actions';
+import { MAIN_MIN_KCAL } from '../planner/evaluate';
 import { RECIPE_BY_ID } from './catalog';
 import { cookNeeds, isLow, lowStaples, mealPortions, needsCheck, takeFromPantry, takenText } from './pantry';
 import { pantryEntry } from './planning';
@@ -67,7 +68,9 @@ describe('Mark cooked', () => {
   it('counts leftover meals in the portions cooked', () => {
     const d = emptyData();
     planWith(d, 'chana-masala', 1);
-    expect(mealPortions(d.plan!, 0, d.settings)).toBe(4); // 2 adults, cooked twice
+    // 2 adults, cooked twice, and a light dish gets bigger plates.
+    const big = Math.max(1, Math.round((MAIN_MIN_KCAL / RECIPE_BY_ID.get('chana-masala')!.facts.perServing.kcal) * 20) / 20);
+    expect(mealPortions(d.plan!, 0, d.settings)).toBeCloseTo(4 * big);
   });
 
   it('takes food out, and unmarking puts it back', () => {

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import content from '../generated/content.json';
 import type { IngredientInfo } from '../lib/nutrition';
-import { buildContext, evaluate } from './evaluate';
+import { MAIN_MIN_KCAL, buildContext, evaluate, mealSize } from './evaluate';
 import { generatePlan, scorePlan, swapMeal } from './planner';
 import { cheapestPurchase } from './pricing';
 import { DEFAULT_SETTINGS, type Meal, type Offer, type PlanInput, type PlannerRecipe } from './types';
@@ -136,8 +136,9 @@ describe('nutrition aggregation', () => {
     const meals: Meal[] = ids.map((id, i) => ({ day: Math.floor(i / 2), slot: i % 2 ? 'dinner' : 'lunch', recipeId: id, source: 'cook' }));
     const res = evaluate(buildContext(input), meals);
     const facts = ids.map((id) => RECIPES.find((r) => r.id === id)!.facts.perServing);
-    const kcal = facts.reduce((s, f) => s + f.kcal, 0) / 2;
-    const protein = facts.reduce((s, f) => s + f.protein, 0) / 2;
+    const size = meals.map((_, i) => mealSize(meals, i, (id) => RECIPES.find((r) => r.id === id)));
+    const kcal = facts.reduce((s, f, i) => s + f.kcal * size[i], 0) / 2;
+    const protein = facts.reduce((s, f, i) => s + f.protein * size[i], 0) / 2;
     expect(res.perPersonDay.kcal).toBeCloseTo(kcal, 0);
     expect(res.perPersonDay.protein).toBeCloseTo(protein, 0);
     expect(res.checks.find((c) => c.id === 'fish')?.value).toBe(1);
@@ -425,7 +426,7 @@ describe('soup to start and a side salad', () => {
     expect(cold).not.toContain('hladna-juha-od-krastavaca');
   });
 
-  it('counts the soup and salad in cost and food, with a smaller main after soup', () => {
+  it('counts the soup and salad in cost and food, and never makes the main smaller', () => {
     const input = soup();
     const plan = generatePlan(input);
     const plain = plan.meals.filter((m) => m.slot !== 'starter' && m.slot !== 'side').map((m) => ({ ...m, from: undefined, source: 'cook' as const }));
@@ -433,9 +434,26 @@ describe('soup to start and a side salad', () => {
     const without = scorePlan({ ...input, settings: { ...DEFAULT_SETTINGS } }, plain);
     expect(withExtras.cost).toBeGreaterThan(0);
     const lunch = plan.views.find((v, i) => v.slot === 'lunch' && !v.leftover && plan.meals[i].source === 'cook')!;
-    expect(lunch.kcal).toBe(Math.round(recipe(lunch.recipeId).facts.perServing.kcal * 0.85));
+    // A full main after soup (bigger when the dish is light).
+    const kcal = recipe(lunch.recipeId).facts.perServing.kcal;
+    expect(lunch.kcal).toBeGreaterThanOrEqual(kcal);
+    expect(lunch.kcal).toBeGreaterThanOrEqual(Math.min(MAIN_MIN_KCAL, Math.round(kcal * 1.4)) - 15);
     const sideNeeds = new Set(plan.meals.filter((m) => m.slot === 'side').flatMap((m) => recipe(m.recipeId).ingredients.filter((x) => !x.optional).map((x) => x.id)));
     expect([...sideNeeds].some((id) => withExtras.shopping.some((l) => l.ingredient === id))).toBe(true);
     expect(without.meals.length).toBeLessThan(withExtras.meals.length);
+  });
+});
+
+describe('a saved plan after an app update', () => {
+  it('keeps its leftovers as planned, even where a newer planner would not', () => {
+    const input = baseInput({ meals: ['snack'] });
+    const tray: Meal[] = [
+      { day: 0, slot: 'snack', recipeId: 'cupavci', source: 'cook' },
+      ...[1, 2, 3, 4, 5, 6].map((day): Meal => ({ day, slot: 'snack', recipeId: 'cupavci', source: 'leftover', from: 0 })),
+    ];
+    // Today's planner makes a tray last 4 days at most...
+    expect(scorePlan(input, tray).meals.filter((m) => m.source === 'leftover')).toHaveLength(3);
+    // ...but the week on the phone stays as it was planned.
+    expect(scorePlan(input, tray, true).meals.filter((m) => m.source === 'leftover')).toHaveLength(6);
   });
 });

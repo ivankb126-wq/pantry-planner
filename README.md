@@ -140,11 +140,15 @@ with `with` naming the main they go with), from recipes whose `mealTypes`
 include `starter` or `side`. A pot of soup feeds several days, one pot at a
 time; a soup that freezes can last the week, and the plan says when to
 freeze part of it and when to move it to the fridge. A main-dish soup served
-as a starter is half a bowl, and the main after soup is 85 percent of a
-portion, so the day's food stays about the same. No soup main on a soup day,
+as a starter is half a bowl; soup and salad come on top of a full main. No soup main on a soup day,
 no salad main next to a side salad, and summer starters and salads (tomato,
 cucumber, courgette) only in their season. `npx tsx scripts/extras-cost.ts`
 shows what they add to a week.
+Portions lean generous: a light main (under 600 kcal a serving) is cooked
+bigger, up to 1.4 servings a person, servings are always rounded up, and the
+plan aims for the full daily energy target (a little over is fine, under is
+not). With "Cook once, eat twice" on, weekday lunches from last night's dinner
+get a nudge, and a tray of snacks or a cake lasts at most 4 days.
 Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 
 ```bash

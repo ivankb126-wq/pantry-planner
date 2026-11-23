@@ -20,9 +20,10 @@ export function mulberry32(seed: number): () => number {
 
 const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
 // Days one batch may cover (the cooking day included), and never longer
-// than the recipe keeps. Snacks and desserts (brownies, granola bars) can
-// last the week; a make-ahead breakfast at most 4 days, for variety.
-const MAX_BATCH_DAYS: Record<Slot, number> = { snack: 7, dessert: 7, breakfast: 4, lunch: 2, dinner: 1, starter: 7, side: 3 };
+// than the recipe keeps. A tray of snacks or a cake lasts at most 4 days, so
+// the week has two of them rather than the same one every day; a make-ahead
+// breakfast at most 4 days too.
+const MAX_BATCH_DAYS: Record<Slot, number> = { snack: 4, dessert: 4, breakfast: 4, lunch: 2, dinner: 1, starter: 7, side: 3 };
 
 /** A cooked meal in the same place (day, slot, the meal it goes with) as `m`. */
 function cookAt(m: Meal, recipeId: string): Meal {
@@ -358,10 +359,23 @@ function mutate(ctx: Context, pools: Pools, meals: Meal[], rnd: () => number, ov
   return repair(ctx, next);
 }
 
-/** Re-score a plan after changes made outside the planner. */
-export function scorePlan(input: PlanInput, meals: Meal[]): PlanResult {
+/**
+ * Re-score a plan after changes made outside the planner. With `saved`
+ * (the plan on the phone), leftovers stay as they were planned, even if a
+ * newer version of the planner would not plan them that way, so an app
+ * update never changes a week mid-way; only a leftover whose cooked meal is
+ * gone or changed becomes a cook.
+ */
+export function scorePlan(input: PlanInput, meals: Meal[], saved = false): PlanResult {
   const ctx = buildContext(input);
-  return evaluate(ctx, repair(ctx, meals));
+  if (!saved) return evaluate(ctx, repair(ctx, meals));
+  const fixed = meals.map((m, i) => {
+    if (m.source !== 'leftover') return m;
+    const src = m.from != null ? meals[m.from] : undefined;
+    const ok = src && src.source === 'cook' && src.recipeId === m.recipeId && m.from! !== i && src.day <= m.day;
+    return ok ? m : cookAt(m, m.recipeId);
+  });
+  return evaluate(ctx, fixed);
 }
 
 /**

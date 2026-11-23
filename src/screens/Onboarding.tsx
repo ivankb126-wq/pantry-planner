@@ -6,9 +6,22 @@ import { type Settings, update, useApp } from '../app/state';
 import { formatEur } from '../lib/format';
 import { IconBack } from '../ui/icons';
 import { Chip, Screen, Stepper } from '../ui/kit';
+import { plural } from '../ui/words';
 import { DietPicker, DislikesPicker, MealsPicker, StoreModePicker, StorePicker } from './pickers';
 
 const STEPS = ['people', 'budget', 'meals', 'stores', 'diet'] as const;
+
+/**
+ * A rough guide to a comfortable week, from plans with real prices: about
+ * 80 EUR for two adults, a little more per person for one, less per person
+ * for a big family.
+ */
+export function typicalBudget(adults: number, children: number): [number, number] {
+  const eaters = adults + 0.6 * children;
+  const est = 30 + 25 * Math.min(eaters, 4) + 18 * Math.max(0, eaters - 4);
+  const five = (x: number) => Math.round(x / 5) * 5;
+  return [five(est * 0.9), five(est * 1.1)];
+}
 
 export function Onboarding() {
   const d = useApp();
@@ -65,6 +78,10 @@ export function Onboarding() {
         <section>
           <h1 class="onboard-h">Weekly food budget</h1>
           <p class="lead">The plan stays at or below this, for all the meals you plan.</p>
+          <p class="hint">
+            A comfortable week for {[plural(s.adults, 'adult', 'adults'), s.children ? plural(s.children, 'child', 'children') : ''].filter(Boolean).join(' and ')} is
+            about {typicalBudget(s.adults, s.children).join(' to ')} €. Less works too, with simpler meals.
+          </p>
           <div class="card tight">
             <Stepper label="Per week" value={s.budget} min={20} max={400} step={5} onChange={(v) => set({ budget: v })} format={(v) => formatEur(v)} />
           </div>
@@ -83,6 +100,20 @@ export function Onboarding() {
           <h1 class="onboard-h">Which meals should I plan?</h1>
           <p class="lead">Pick all you want in the plan. You can change this any time.</p>
           <MealsPicker meals={s.meals} onChange={(m) => set({ meals: m })} />
+          {(s.meals.includes('lunch') || s.meals.includes('dinner')) && (
+            <>
+              <p class="label">With the main meal</p>
+              <div class="chip-wrap">
+                <Chip on={s.soup !== 'off'} onClick={() => set({ soup: s.soup === 'off' ? 'daily' : 'off' })}>
+                  Soup to start
+                </Chip>
+                <Chip on={s.salad !== 'off'} onClick={() => set({ salad: s.salad === 'off' ? 'main' : 'off' })}>
+                  Side salad
+                </Chip>
+              </div>
+              <p class="hint">A small bowl of soup before lunch, a simple salad with it. Choose how often later in Settings, Soup and salad.</p>
+            </>
+          )}
         </section>
       )}
 

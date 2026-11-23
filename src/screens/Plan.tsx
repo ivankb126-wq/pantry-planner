@@ -229,15 +229,19 @@ function BudgetCard({ d, data, result, onStore }: { d: AppData; data: PriceData;
 }
 
 function featuredIndex(views: MealView[], t: number, cooked: number[]): number {
-  const today = views.map((v, i) => ({ v, i })).filter(({ v }) => v.day === t);
+  const today = views.map((v, i) => ({ v, i })).filter(({ v }) => v.day === t && v.slot !== 'starter' && v.slot !== 'side');
   if (!today.length) return -1;
-  const rank = { dinner: 0, lunch: 1, breakfast: 2, dessert: 3, snack: 4, starter: 5, side: 6 };
+  // The next meal by the clock: breakfast in the morning, lunch until mid
+  // afternoon, then dinner.
+  const hour = new Date().getHours();
+  const rank =
+    hour < 10
+      ? { breakfast: 0, lunch: 1, dinner: 2, dessert: 3, snack: 4, starter: 5, side: 6 }
+      : hour < 15
+        ? { lunch: 0, dinner: 1, breakfast: 2, dessert: 3, snack: 4, starter: 5, side: 6 }
+        : { dinner: 0, lunch: 1, breakfast: 2, dessert: 3, snack: 4, starter: 5, side: 6 };
   const open = today.filter(({ i }) => !cooked.includes(i));
-  const pick = (open.length ? open : today).sort((a, b) => {
-    // Prefer the next meal to cook, then dinner.
-    if (a.v.leftover !== b.v.leftover) return a.v.leftover ? 1 : -1;
-    return rank[a.v.slot] - rank[b.v.slot];
-  });
+  const pick = (open.length ? open : today).sort((a, b) => rank[a.v.slot] - rank[b.v.slot]);
   return pick[0].i;
 }
 

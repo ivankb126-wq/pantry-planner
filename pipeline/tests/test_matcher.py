@@ -225,6 +225,17 @@ def test_cannellini_tin_is_canned_beans():
         ("LECA 400 G CAMPO", set()),
         ("Hamburger/Hot Dog peciva SK14", {"bread-rolls"}),
         ("AJVAR BLAGI 700g ZVIJEZDA", {"ajvar"}),
+        ("SOFTY LIMUN RUCNICI 2 KOM 2 SL. 98 LISTICA", set()),
+        ("Limun 500g mrežica", {"lemon"}),
+        ("SOK TOCO LIMUN- KRASTAVAC 1,5 L", set()),
+        ("LIMUNOV SOK 200 ML LIVE", {"lemon-juice"}),
+        ("ŽV GUMA AIRWAVES GINGER LIME 14g", set()),
+        ("DJUMBIR USECERENI 125 G VEDRINI", set()),
+        ("Bio đumbir", {"ginger"}),
+        ("PERSIN USITNJEN 10 G FINO VRECICA", set()),
+        ("PERŠIN LIST 100 grama", {"parsley"}),
+        ("BUNDEVINE GOLICE 200 G EKOZONA", set()),
+        ("Hokkaido tikva", {"pumpkin"}),
     ],
 )
 def test_ready_made_and_non_food_are_left_out(name, expected):

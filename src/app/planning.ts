@@ -101,7 +101,7 @@ export function planResult(d: AppData, prices: PriceData): PlanResult | null {
   if (!d.plan) return null;
   const key = JSON.stringify([d.plan.meals, d.plan.startDate, d.plan.pantryAtStart, settingsKey(d.settings)]);
   if (memo && memo.key === key && memo.prices === prices) return memo.result;
-  const result = scorePlan(planInput(d, prices, d.plan.seed, d.plan.startDate, d.plan.pantryAtStart), d.plan.meals);
+  const result = scorePlan(planInput(d, prices, d.plan.seed, d.plan.startDate, d.plan.pantryAtStart), d.plan.meals, true);
   memo = { key, prices, result };
   return result;
 }
