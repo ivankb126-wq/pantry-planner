@@ -236,6 +236,9 @@ def test_cannellini_tin_is_canned_beans():
         ("PERŠIN LIST 100 grama", {"parsley"}),
         ("BUNDEVINE GOLICE 200 G EKOZONA", set()),
         ("Hokkaido tikva", {"pumpkin"}),
+        ("SOK ISO SPORT LIMUN GREJP 1,5 L", set()),
+        ("ĐUMBIR SUHI EUROCOMPANY 80g", set()),
+        ("Aleva Peršin list 7g", set()),
     ],
 )
 def test_ready_made_and_non_food_are_left_out(name, expected):
