@@ -37,6 +37,8 @@ export interface Settings {
   salad: 'off' | 'main' | 'both';
   /** Reminders at the top of the plan, each kind off unless chosen. */
   reminders: { ahead: boolean; defrost: boolean; expiry: boolean };
+  /** Roughly where you are, if you let the app find stores near you. Kept on this phone only. */
+  home: { lat: number; lon: number } | null;
 }
 
 export interface SavedPlan {
@@ -141,6 +143,7 @@ export const DEFAULT_APP_SETTINGS: Settings = {
   soup: 'off',
   salad: 'off',
   reminders: { ahead: false, defrost: false, expiry: false },
+  home: null,
 };
 
 export function emptyData(): AppData {

@@ -13,6 +13,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from .ingredients import Ingredient, load_ingredients
+from .locate import add_locations
 from .matcher import Matcher, Offer, PackInfo, pack_for, pick_options
 from .parsing import parse_decimal
 from .sources import (
@@ -353,7 +354,11 @@ def _dump(path: Path, data) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
+STORE_LOCATIONS = Path(__file__).resolve().parents[2] / "data" / "store-locations.json"
+
+
 def write_outputs(out: Path, outcomes: list[ChainOutcome], ingredients: list[Ingredient], today: str) -> dict:
+    locations = json.loads(STORE_LOCATIONS.read_text(encoding="utf-8")) if STORE_LOCATIONS.exists() else {}
     meta: dict = {
         "generatedAt": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "today": today,
@@ -382,7 +387,7 @@ def write_outputs(out: Path, outcomes: list[ChainOutcome], ingredients: list[Ing
                     "items": b["deals"].get(sid, []),
                 },
             )
-        _dump(out / "stores" / f"{chain}.json", b["stores"])
+        _dump(out / "stores" / f"{chain}.json", add_locations(b["stores"], chain, locations))
         bundle_path = out / "bundle" / f"{chain}.json.gz"
         bundle_path.parent.mkdir(parents=True, exist_ok=True)
         bundle_path.write_bytes(gzip.compress(json.dumps(b, ensure_ascii=False).encode("utf-8"), mtime=0))

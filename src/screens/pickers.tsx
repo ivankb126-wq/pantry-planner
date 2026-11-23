@@ -2,11 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { INGREDIENT_LIST, ingName } from '../app/catalog';
-import type { Settings, StoreChoice } from '../app/state';
+import { type Settings, type StoreChoice, update, useApp } from '../app/state';
 import { CHAIN_ORDER, type ChainId, type Meta, type Store, loadMeta, loadStores } from '../lib/data';
 import type { Diet } from '../lib/nutrition';
 import type { MainSlot } from '../planner/types';
-import { IconClose, IconSearch } from '../ui/icons';
+import { byDistance, formatDistance, roughPlace, uniqueStores } from '../lib/nearby';
+import { IconClose, IconPin, IconSearch } from '../ui/icons';
 import { Chip } from '../ui/kit';
 
 export const fold = (s: string) =>
@@ -36,13 +37,16 @@ function useMeta(): Meta | null {
   return meta;
 }
 
-/** Pick a chain, then search the store by city or street. Up to 3 stores. */
+/** Pick a chain, then search the store by city or street, or let the phone
+ * say where you are and pick from the nearest stores. Up to 3 stores. */
 export function StorePicker({ stores, onChange }: { stores: StoreChoice[]; onChange: (s: StoreChoice[]) => void }) {
   const meta = useMeta();
+  const home = useApp().settings.home;
   const [chain, setChain] = useState<ChainId | null>(null);
   const [list, setList] = useState<Store[]>([]);
   const [q, setQ] = useState('');
   const [failed, setFailed] = useState(false);
+  const [nearAll, setNearAll] = useState<(Store & { chain: ChainId; km: number | null })[]>([]);
 
   useEffect(() => {
     if (!chain) return;
@@ -50,26 +54,46 @@ export function StorePicker({ stores, onChange }: { stores: StoreChoice[]; onCha
     setList([]);
     setFailed(false);
     loadStores(chain)
-      .then((s) => live && setList(s))
+      .then((s) => live && setList(uniqueStores(s)))
       .catch(() => live && setFailed(true));
     return () => {
       live = false;
     };
   }, [chain]);
 
+  // With a location: the nearest stores of all chains, before a chain is chosen.
+  useEffect(() => {
+    if (!home) {
+      setNearAll([]);
+      return;
+    }
+    let live = true;
+    void Promise.all(
+      CHAIN_ORDER.map((c) =>
+        loadStores(c)
+          .then((l) => uniqueStores(l).map((s) => ({ ...s, chain: c })))
+          .catch(() => []),
+      ),
+    ).then((all) => live && setNearAll(byDistance(all.flat(), home).filter((s) => s.km != null && s.km < 30)));
+    return () => {
+      live = false;
+    };
+  }, [home?.lat, home?.lon]);
+
   const matches = useMemo(() => {
     const f = fold(q.trim());
     const out = f ? list.filter((s) => fold(`${s.city} ${s.address} ${s.zip}`).includes(f)) : list;
-    return out.slice(0, 40);
-  }, [list, q]);
+    return (home ? byDistance(out, home) : out.map((s) => ({ ...s, km: null }))).slice(0, 40);
+  }, [list, q, home?.lat, home?.lon]);
 
   const full = stores.length >= MAX_STORES;
-  const add = (s: Store) => {
-    if (!chain || full || stores.some((x) => x.chain === chain && x.storeId === s.id)) return;
-    onChange([...stores, { chain, storeId: s.id, label: `${CHAIN_NAME[chain]} ${s.city || s.address}`, address: s.address }]);
+  const add = (c: ChainId, s: Store) => {
+    if (full || stores.some((x) => x.chain === c && x.storeId === s.id)) return;
+    onChange([...stores, { chain: c, storeId: s.id, label: `${CHAIN_NAME[c]} ${s.city || s.address}`, address: s.address }]);
     setChain(null);
     setQ('');
   };
+  const nearby = nearAll.filter((s) => !stores.some((x) => x.chain === s.chain && x.storeId === s.id)).slice(0, 6);
 
   return (
     <div class="store-picker">
@@ -92,7 +116,28 @@ export function StorePicker({ stores, onChange }: { stores: StoreChoice[]; onCha
         <p class="hint">That is the most stores you can pick. Remove one to change it.</p>
       ) : (
         <>
-          <p class="label">{stores.length ? 'Add another store (optional)' : 'Which chain?'}</p>
+          <LocationLine />
+          {home && !chain && nearby.length > 0 && (
+            <>
+              <p class="label">Nearest to you</p>
+              <ul class="pick-list" aria-label="Nearest stores">
+                {nearby.map((s) => (
+                  <li key={`${s.chain}${s.id}`}>
+                    <button onClick={() => add(s.chain, s)}>
+                      <span class="pick-row">
+                        <strong>
+                          {CHAIN_NAME[s.chain]} {s.city}
+                        </strong>
+                        {s.km != null && <span class="km">{s.approx ? `about ${formatDistance(Math.max(1, s.km))}` : formatDistance(s.km)}</span>}
+                      </span>
+                      <small>{s.address}</small>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          <p class="label">{home && !chain && nearby.length ? 'Or pick a chain' : stores.length ? 'Add another store (optional)' : 'Which chain?'}</p>
           <div class="chip-wrap" role="group" aria-label="Chain">
             {CHAIN_ORDER.map((c) => {
               const available = !meta || meta.chains[c]?.available !== false;
@@ -112,8 +157,11 @@ export function StorePicker({ stores, onChange }: { stores: StoreChoice[]; onCha
               <ul class="pick-list" aria-label="Stores">
                 {matches.map((s) => (
                   <li key={s.id}>
-                    <button onClick={() => add(s)}>
-                      <strong>{s.city || 'Store'}</strong>
+                    <button onClick={() => add(chain, s)}>
+                      <span class="pick-row">
+                        <strong>{s.city || 'Store'}</strong>
+                        {s.km != null && <span class="km">{s.approx ? `about ${formatDistance(Math.max(1, s.km))}` : formatDistance(s.km)}</span>}
+                      </span>
                       <small>{s.address}</small>
                     </button>
                   </li>
@@ -126,6 +174,44 @@ export function StorePicker({ stores, onChange }: { stores: StoreChoice[]; onCha
           )}
         </>
       )}
+    </div>
+  );
+}
+
+/** "Find stores near me", or "Nearest stores first. Forget my location". */
+function LocationLine() {
+  const home = useApp().settings.home;
+  const [state, setState] = useState<'idle' | 'asking' | 'denied' | 'failed'>('idle');
+  const setHome = (h: { lat: number; lon: number } | null) => update((d) => ({ ...d, settings: { ...d.settings, home: h } }));
+  if (!('geolocation' in navigator)) return null;
+  if (home)
+    return (
+      <p class="location-line">
+        <IconPin size={16} /> Nearest stores first.{' '}
+        <button class="link-btn" onClick={() => setHome(null)}>
+          Forget my location
+        </button>
+      </p>
+    );
+  const ask = () => {
+    setState('asking');
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setHome(roughPlace(pos.coords.latitude, pos.coords.longitude));
+        setState('idle');
+      },
+      (err) => setState(err.code === err.PERMISSION_DENIED ? 'denied' : 'failed'),
+      { enableHighAccuracy: false, timeout: 20000, maximumAge: 600000 },
+    );
+  };
+  return (
+    <div class="location-line">
+      <button class="btn-teal-outline wide" onClick={ask} disabled={state === 'asking'}>
+        <IconPin size={18} /> {state === 'asking' ? 'Finding you...' : 'Find stores near me'}
+      </button>
+      <small>Your location stays on this phone. It is only used to sort the stores.</small>
+      {state === 'denied' && <small class="warn">Location is turned off for this app. You can still search by city below.</small>}
+      {state === 'failed' && <small class="warn">Could not find your location. Try again, or search by city below.</small>}
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 python -m pantry_pipeline build --out public/data
 python -m pantry_pipeline check-ingredients
+python -m pantry_pipeline locate-stores --stores public/data/stores
 python -m pantry_pipeline inspect --chain spar --ingredient eggs
 python -m pantry_pipeline search --chain spar JAJA
 """
@@ -16,6 +17,7 @@ from pathlib import Path
 
 from .build import CHAINS, run, zagreb_today
 from .ingredients import IngredientError, load_ingredients
+from .locate import run_locate
 from .matcher import Matcher, pack_for
 from .parsing import tokens
 from .sources import ArchiveSet, LocalArchiveSet, chain_files_from, list_archives
@@ -62,6 +64,12 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("check-ingredients", help="validate data/ingredients.yml")
 
+    loc = sub.add_parser("locate-stores", help="find each store on OpenStreetMap (writes data/store-locations.json)")
+    loc.add_argument(
+        "--stores", default=str(ROOT / "public" / "data" / "stores"), help="folder with <chain>.json store lists"
+    )
+    loc.add_argument("--out", default=str(ROOT / "data" / "store-locations.json"))
+
     i = sub.add_parser("inspect", help="show which products match an ingredient")
     i.add_argument("--chain", required=True)
     i.add_argument("--ingredient", action="append", help="ingredient id (repeatable); default: all")
@@ -85,6 +93,10 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         print(f"OK: {len(ings)} ingredients")
         print(Counter(i.category for i in ings).most_common())
+        return 0
+
+    if args.cmd == "locate-stores":
+        print(run_locate(Path(args.stores), Path(args.out)))
         return 0
 
     if args.cmd == "build":

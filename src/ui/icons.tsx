@@ -149,3 +149,9 @@ export const IconBarcode = (p: P) => (
     <path d="M3 7V4h3M18 4h3v3M21 17v3h-3M6 20H3v-3M7 8v8M10 8v8M13 8v8M17 8v8" />
   </S>
 );
+export const IconPin = (p: P) => (
+  <S {...p} strokeWidth={2}>
+    <path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z" />
+    <circle cx="12" cy="9.5" r="2.5" />
+  </S>
+);

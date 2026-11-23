@@ -2615,3 +2615,40 @@ h1 {
   color: var(--muted);
   margin-bottom: -4px;
 }
+
+/* Store picker: stores near me */
+.location-line {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 10px;
+}
+p.location-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+}
+.location-line button svg {
+  vertical-align: -3px;
+}
+.location-line small {
+  color: var(--muted);
+}
+.location-line .warn {
+  color: var(--orange);
+}
+.pick-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.pick-row strong {
+  flex: 1;
+}
+.pick-row .km {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}

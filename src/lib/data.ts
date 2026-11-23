@@ -29,6 +29,11 @@ export interface Store {
   address: string;
   city: string;
   zip: string;
+  /** Map position (the shop itself, or its town's centre when not found). */
+  lat?: number;
+  lon?: number;
+  /** Only the town is known, not the shop itself. */
+  approx?: boolean;
 }
 
 export interface PriceItem {
