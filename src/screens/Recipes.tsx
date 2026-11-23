@@ -1,4 +1,4 @@
-// Recipes: search, meal type tabs, filters and a two-column grid.
+// Recipes: search, meal type tabs, one Filters button and a two-column grid.
 
 import { useMemo, useState } from 'preact/hooks';
 import { CUISINE_LABEL, FAMILY_LABEL, INGREDIENTS, RECIPES } from '../app/catalog';
@@ -9,7 +9,7 @@ import { formatEur, zagrebToday } from '../lib/format';
 import { dietAllows } from '../lib/nutrition';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
 import type { PlannerRecipe } from '../planner/types';
-import { IconHeart, IconSearch } from '../ui/icons';
+import { IconClose, IconHeart, IconSearch } from '../ui/icons';
 import { Chip, DishArt, Screen, Segmented, Sheet } from '../ui/kit';
 import { minutes } from '../ui/words';
 import type { PriceState } from './Plan';
@@ -20,7 +20,7 @@ type Tab = 'main' | 'breakfast' | 'dessert' | 'snack' | 'sides';
 type Filter = 'foryou' | 'sale' | 'season' | 'quick' | 'favourites' | 'vegetarian';
 
 const TABS: { id: Tab; label: string }[] = [
-  { id: 'main', label: 'Dinner' },
+  { id: 'main', label: 'Mains' },
   { id: 'breakfast', label: 'Breakfast' },
   { id: 'dessert', label: 'Dessert' },
   { id: 'snack', label: 'Snacks' },
@@ -59,7 +59,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
   const [filter, setFilter] = useState<Filter>(memory.filter);
   const [q, setQ] = useState(memory.q);
   const [cuisine, setCuisine] = useState<string | null>(memory.cuisine);
-  const [cuisineSheet, setCuisineSheet] = useState(false);
+  const [filterSheet, setFilterSheet] = useState(false);
   const [familyState, setFamily] = useState<string | null>(memory.family);
   // Kinds of dish in this tab (pasta, soups... for dinner; porridge, eggs... for breakfast).
   const families = Object.keys(FAMILY_LABEL).filter((f) => RECIPES.some((r) => r.family === f && inTab(r, tab)));
@@ -112,6 +112,7 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
   }, [q, tab, filter, cuisine, family, idx, d.ratings, d.favourites, d.settings.diet, d.settings.dislikes]);
 
   const cuisines = Object.keys(CUISINE_LABEL).filter((c) => RECIPES.some((r) => r.cuisine === c));
+  const active = (filter !== 'foryou' ? 1 : 0) + (family && !q ? 1 : 0) + (cuisine ? 1 : 0);
 
   return (
     <Screen glow="purple">
@@ -129,28 +130,31 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
 
       {!q && <Segmented label="Meal type" options={TABS} value={tab} onChange={setTab} />}
 
-      {!q && families.length > 1 && (
-        <div class="filter-row family-row" role="group" aria-label="Kind of dish">
-          <Chip on={!family} onClick={() => setFamily(null)}>
-            All
-          </Chip>
-          {families.map((f) => (
-            <Chip key={f} on={family === f} onClick={() => setFamily(family === f ? null : f)}>
-              {FAMILY_LABEL[f]}
-            </Chip>
-          ))}
-        </div>
-      )}
-
+      {/* One row: the Filters button, then what is chosen (a tap removes it). */}
       <div class="filter-row" role="group" aria-label="Filters">
-        {FILTERS.map((f) => (
-          <Chip key={f.id} on={filter === f.id} onClick={() => setFilter(f.id)}>
-            {f.label}
+        <button class={`pill${active ? ' on' : ''}`} onClick={() => setFilterSheet(true)} aria-haspopup="dialog">
+          Filters{active ? ` · ${active}` : ''}
+        </button>
+        {filter !== 'foryou' && (
+          <button class="pill on removable" onClick={() => setFilter('foryou')} aria-label={`Remove filter ${FILTERS.find((f) => f.id === filter)?.label}`}>
+            {FILTERS.find((f) => f.id === filter)?.label} <IconClose size={14} />
+          </button>
+        )}
+        {family && !q && (
+          <button class="pill on removable" onClick={() => setFamily(null)} aria-label={`Remove filter ${FAMILY_LABEL[family]}`}>
+            {FAMILY_LABEL[family]} <IconClose size={14} />
+          </button>
+        )}
+        {cuisine && (
+          <button class="pill on removable" onClick={() => setCuisine(null)} aria-label={`Remove filter ${CUISINE_LABEL[cuisine]}`}>
+            {CUISINE_LABEL[cuisine]} <IconClose size={14} />
+          </button>
+        )}
+        {filter !== 'favourites' && (
+          <Chip onClick={() => setFilter('favourites')}>
+            <IconHeart size={14} /> Favourites
           </Chip>
-        ))}
-        <Chip on={!!cuisine} onClick={() => setCuisineSheet(true)}>
-          {cuisine ? CUISINE_LABEL[cuisine] : 'Cuisine'}
-        </Chip>
+        )}
       </div>
 
       {list.length ? (
@@ -195,30 +199,56 @@ export function RecipesScreen({ prices }: { prices: PriceState }) {
       )}
       <p class="fineprint">Prices are per serving: the value of the food it uses, from your store's best value products.</p>
 
-      {cuisineSheet && (
-        <Sheet title="Cuisine" onClose={() => setCuisineSheet(false)}>
+      {filterSheet && (
+        <Sheet title="Filters" onClose={() => setFilterSheet(false)}>
+          <h3 class="sheet-group">Show</h3>
           <div class="chip-wrap">
-            <Chip
-              on={!cuisine}
-              onClick={() => {
-                setCuisine(null);
-                setCuisineSheet(false);
-              }}
-            >
+            {FILTERS.map((f) => (
+              <Chip key={f.id} on={filter === f.id} onClick={() => setFilter(f.id)}>
+                {f.label}
+              </Chip>
+            ))}
+          </div>
+          {!q && families.length > 1 && (
+            <>
+              <h3 class="sheet-group">Kind of dish</h3>
+              <div class="chip-wrap">
+                <Chip on={!family} onClick={() => setFamily(null)}>
+                  All
+                </Chip>
+                {families.map((f) => (
+                  <Chip key={f} on={family === f} onClick={() => setFamily(family === f ? null : f)}>
+                    {FAMILY_LABEL[f]}
+                  </Chip>
+                ))}
+              </div>
+            </>
+          )}
+          <h3 class="sheet-group">Cuisine</h3>
+          <div class="chip-wrap">
+            <Chip on={!cuisine} onClick={() => setCuisine(null)}>
               All
             </Chip>
             {cuisines.map((c) => (
-              <Chip
-                key={c}
-                on={cuisine === c}
-                onClick={() => {
-                  setCuisine(c);
-                  setCuisineSheet(false);
-                }}
-              >
+              <Chip key={c} on={cuisine === c} onClick={() => setCuisine(cuisine === c ? null : c)}>
                 {CUISINE_LABEL[c]}
               </Chip>
             ))}
+          </div>
+          <div class="sheet-btns">
+            <button
+              class="btn-ghost"
+              onClick={() => {
+                setFilter('foryou');
+                setFamily(null);
+                setCuisine(null);
+              }}
+            >
+              Clear
+            </button>
+            <button class="btn-primary" onClick={() => setFilterSheet(false)}>
+              Show {list.length} {list.length === 1 ? 'recipe' : 'recipes'}
+            </button>
           </div>
         </Sheet>
       )}

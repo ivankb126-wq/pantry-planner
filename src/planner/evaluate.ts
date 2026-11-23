@@ -19,6 +19,14 @@ export const CHILD_PORTION = 0.6;
  */
 export const MAIN_MIN_KCAL = 600;
 const MAIN_MAX_SCALE = 1.4;
+/**
+ * The same for breakfast: one oat bar (157 kcal) is not a breakfast. A dish
+ * that is also a snack (bars, muffins, scones) is eaten in pieces, so two or
+ * three each is normal; a bowl or plate grows by half at most.
+ */
+export const BREAKFAST_MIN_KCAL = 380;
+const BREAKFAST_MAX_SCALE = 1.5;
+const BREAKFAST_PIECES_MAX_SCALE = 2.5;
 /** A soup that is also a main dish, served as a starter: half a bowl. */
 export const STARTER_OF_MAIN = 0.5;
 /** Cooking a pot of soup is work: a new pot has to save at least this much. */
@@ -67,7 +75,7 @@ export function addDays(iso: string, n: number): string {
 /**
  * How big one person's portion of a planned meal is, as a share of the
  * recipe's serving: half a bowl when a main-dish soup is the starter, and a
- * bigger portion of a light main dish (see MAIN_MIN_KCAL). Soup and salad
+ * bigger portion of a light main dish or breakfast (see MAIN_MIN_KCAL). Soup and salad
  * come on top of the main, never instead of part of it.
  */
 export function mealSize(
@@ -83,6 +91,11 @@ export function mealSize(
   if ((m.slot === 'lunch' || m.slot === 'dinner') && r) {
     const kcal = r.facts.perServing.kcal;
     return kcal > 0 ? Math.min(MAIN_MAX_SCALE, Math.max(1, Math.round((MAIN_MIN_KCAL / kcal) * 20) / 20)) : 1;
+  }
+  if (m.slot === 'breakfast' && r) {
+    const kcal = r.facts.perServing.kcal;
+    const max = r.mealTypes.includes('snack') ? BREAKFAST_PIECES_MAX_SCALE : BREAKFAST_MAX_SCALE;
+    return kcal > 0 ? Math.min(max, Math.max(1, Math.round((BREAKFAST_MIN_KCAL / kcal) * 20) / 20)) : 1;
   }
   return 1;
 }

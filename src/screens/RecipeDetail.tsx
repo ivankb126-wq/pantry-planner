@@ -196,7 +196,9 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
             <p class="sub">
               {laterMeals > 0
                 ? `Cook ${cookFor} servings: this meal plus ${plural(laterMeals, 'later meal', 'later meals')}. The amounts below are for all of it.`
-                : `Cook ${cookFor} servings: this dish is on the light side, so everyone gets a bigger plate.`}
+                : view.slot === 'breakfast' && r.mealTypes.includes('snack')
+                  ? `Cook ${cookFor} servings: one piece is a light breakfast, so everyone gets two or three.`
+                  : `Cook ${cookFor} servings: this dish is on the light side, so everyone gets a bigger plate.`}
             </p>
           )}
           {!view.leftover && freeze && (

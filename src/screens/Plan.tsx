@@ -258,7 +258,7 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
   const others = result.views
     .map((x, j) => ({ x, j }))
     .filter(({ x, j }) => x.day === t && j !== i)
-    .filter(({ x, j }, k, all) => !all.slice(0, k).some((o) => o.x.slot === x.slot && o.x.recipeId === x.recipeId && plan.meals[j].from === o.j));
+    .filter(({ x }, k, all) => !sharedBowl(x, all.slice(0, k).map((o) => o.x)));
   const from = v.leftover ? plan.meals[i].from : undefined;
   return (
     <section class="today-card" aria-label="Today">
@@ -344,10 +344,13 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
     <section class="card week" aria-label="The week">
       <h2>The week</h2>
       {days.map((day) => {
-        const meals = result.views.map((v, i) => ({ v, i })).filter(({ v }) => v.day === day);
-        if (!meals.length) return null;
+        const all = result.views.map((v, i) => ({ v, i })).filter(({ v }) => v.day === day);
+        if (!all.length) return null;
+        // One row for the salad bowl (or soup pot) shared by lunch and dinner.
+        const meals = all.filter(({ v }, k) => !sharedBowl(v, all.slice(0, k).map((o) => o.v)));
+        const both = (v: MealView) => sharedBowl(v, all.map((o) => o.v).filter((o) => o !== v));
         const date = meals[0].v.date;
-        const dayCost = meals.reduce((s, m) => s + m.v.cost, 0);
+        const dayCost = all.reduce((s, m) => s + m.v.cost, 0);
         return (
           <div key={day} class={`day-block${day === t ? ' today' : ''}${day < t ? ' past' : ''}`}>
             <div class="day-col" aria-label={dayLong(date)}>
@@ -366,7 +369,8 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                           {cooked && <IconCheck size={15} />} {v.title}
                         </span>
                         <span class="meal-meta">
-                          {SLOT_LABEL[v.slot]} · {v.leftover ? leftoverNote(plan, i, result) : minutes(v.minutes)} · {v.kcal} kcal
+                          {SLOT_LABEL[v.slot]}
+                          {both(v) && ' · lunch and dinner'} · {v.leftover ? leftoverNote(plan, i, result) : minutes(v.minutes)} · {v.kcal} kcal
                           {!v.leftover && batchNote(plan, i, result)}
                           {!v.leftover && RECIPE_BY_ID.get(v.recipeId)?.ahead && ' · start the day before'}
                           {v.newDish && d.history.length >= 5 && <span class="tag purple">New</span>}
@@ -425,6 +429,11 @@ function daysText(result: PlanResult, from: number, to: number): string {
   return from === to ? name(from) : `${name(from)} to ${name(to)}`;
 }
 
+/** A soup or salad from the same pot or bowl as one listed before it that day. */
+function sharedBowl(v: MealView, before: MealView[]): boolean {
+  return (v.slot === 'side' || v.slot === 'starter') && before.some((o) => o.slot === v.slot && o.recipeId === v.recipeId);
+}
+
 /** "made Monday" for a meal eaten from an earlier batch. */
 function leftoverNote(plan: SavedPlan, i: number, result: PlanResult): string {
   const from = plan.meals[i].from;
@@ -437,7 +446,10 @@ function leftoverNote(plan: SavedPlan, i: number, result: PlanResult): string {
 
 /** "lasts until Thursday" for a batch eaten on later days. */
 function batchNote(plan: SavedPlan, i: number, result: PlanResult): string | null {
-  const later = plan.meals.map((m, k) => ({ m, k })).filter(({ m }) => m.source === 'leftover' && m.from === i);
+  const extra = plan.meals[i].slot === 'starter' || plan.meals[i].slot === 'side';
+  const later = plan.meals
+    .map((m, k) => ({ m, k }))
+    .filter(({ m }) => m.source === 'leftover' && m.from === i && !(extra && m.day === plan.meals[i].day));
   if (!later.length) return null;
   const last = later.reduce((a, b) => (b.m.day > a.m.day ? b : a));
   if (plan.meals[i].slot === 'dinner') {
@@ -447,7 +459,6 @@ function batchNote(plan: SavedPlan, i: number, result: PlanResult): string | nul
       .map(({ m, k }) => (m.day === plan.meals[i].day + 1 ? 'tomorrow' : dayLong(result.views[k].date)));
     return ` · also lunch ${days.join(' and ')}`;
   }
-  if (last.m.day === plan.meals[i].day) return ` · also with ${last.m.with ?? 'dinner'}`;
   const frozen = soupFreezer(plan.meals).find((f) => f.cook === i);
   return ` · lasts until ${dayLong(result.views[last.k].date)}${frozen ? ', freeze part' : ''}`;
 }
@@ -502,6 +513,8 @@ function worthKeeping(l: { ingredient: string; amount: number }): boolean {
 }
 
 function LeftAtHome({ d, result, t }: { d: AppData; result: PlanResult; t: number }) {
+  // Early in the week the list is only for the curious: one line, opened on a tap.
+  const [open, setOpen] = useState(false);
   const leftovers = result.leftovers.filter(worthKeeping);
   if (!leftovers.length) return null;
   const saved = !!d.plan?.leftoversSaved;
@@ -514,14 +527,23 @@ function LeftAtHome({ d, result, t }: { d: AppData; result: PlanResult; t: numbe
   return (
     <section class="card" aria-label="Left at home">
       <h2>Left at home</h2>
-      <p class="sub">Shops sell whole packages, so after this week you will still have these. Save them and next week's plan uses them first.</p>
-      <div class="chip-wrap static">
-        {leftovers.map((l) => (
-          <span key={l.ingredient} class="pill static">
-            {ingName(l.ingredient)} <small>{formatAmount(roundLeft(l.amount, INGREDIENTS[l.ingredient]?.unit ?? 'g'), INGREDIENTS[l.ingredient]?.unit ?? 'g')}</small>
-          </span>
-        ))}
-      </div>
+      <p class="sub">
+        Shops sell whole packages, so after this week you will still have {plural(leftovers.length, 'thing', 'things')} left. Save them and next week's plan uses them
+        first.
+      </p>
+      {open || !early ? (
+        <div class="chip-wrap static">
+          {leftovers.map((l) => (
+            <span key={l.ingredient} class="pill static">
+              {ingName(l.ingredient)} <small>{formatAmount(roundLeft(l.amount, INGREDIENTS[l.ingredient]?.unit ?? 'g'), INGREDIENTS[l.ingredient]?.unit ?? 'g')}</small>
+            </span>
+          ))}
+        </div>
+      ) : (
+        <button class="link-btn" onClick={() => setOpen(true)}>
+          Show the list
+        </button>
+      )}
       {saved ? (
         <p class="saved-line">
           <IconCheck size={18} /> Saved to your pantry
