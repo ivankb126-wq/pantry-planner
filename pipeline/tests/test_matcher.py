@@ -240,6 +240,8 @@ def test_cannellini_tin_is_canned_beans():
         ("ĐUMBIR SUHI EUROCOMPANY 80g", set()),
         ("Aleva Peršin list 7g", set()),
         ("ĐUMBIR LISTIĆI NATURA 125g", set()),
+        ("Kozice u hrskavom tijestu SK1", set()),
+        ("KLC Repovi kozica smrznuti 225 g", {"shrimp"}),
     ],
 )
 def test_ready_made_and_non_food_are_left_out(name, expected):

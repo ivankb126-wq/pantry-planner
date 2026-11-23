@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { ESTIMATE } from '../planner/evaluate';
-import { type ShopLine, shoppingText } from './Shopping';
+import { lineQuantity, type ShopLine, shoppingText } from './Shopping';
 
 const line = (over: Partial<ShopLine>): ShopLine => ({
   ingredient: 'apple',
@@ -38,5 +38,12 @@ describe('shared shopping list text', () => {
     expect(text).toContain('ANY STORE (TYPICAL PRICE)');
     expect(text).toMatch(/- Tahini[^,]*, 1 × 250 g$/m);
     expect(text).toMatch(/3 items, about 5,98/);
+  });
+});
+
+describe('lineQuantity', () => {
+  it('shows a pack of flatbread by weight, not as 1,8 pieces', () => {
+    expect(lineQuantity(line({ ingredient: 'flatbread', loose: false, size: 160 / 90, packs: 1 }))).toBe('1 × 160 g');
+    expect(lineQuantity(line({ ingredient: 'eggs', loose: false, size: 10, packs: 1 }))).toBe('1 × 10 pcs');
   });
 });

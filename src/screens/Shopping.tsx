@@ -28,6 +28,9 @@ export function lineKey(l: ShopLine): string {
 export function lineQuantity(l: ShoppingLine): string {
   const unit = INGREDIENTS[l.ingredient]?.unit ?? 'g';
   if (l.loose) return `about ${formatAmount(Math.round(l.amount), unit)}`;
+  // A 160 g pack of flatbread is "1 × 160 g", not "1 × 1,8 pcs".
+  const pieceG = INGREDIENTS[l.ingredient]?.pieceG;
+  if (unit === 'piece' && pieceG && Math.abs(l.size - Math.round(l.size)) > 0.05) return `${l.packs} × ${formatAmount(Math.round(l.size * pieceG), 'g')}`;
   return `${l.packs} × ${formatAmount(l.size, unit)}`;
 }
 

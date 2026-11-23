@@ -254,7 +254,11 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
   const r = RECIPE_BY_ID.get(v.recipeId)!;
   const saleName = mealOnSale(v.recipeId, sale);
   const cooked = plan.cooked.includes(i);
-  const others = result.views.map((x, j) => ({ x, j })).filter(({ x, j }) => x.day === t && j !== i);
+  // The salad bowl shared by lunch and dinner is listed once.
+  const others = result.views
+    .map((x, j) => ({ x, j }))
+    .filter(({ x, j }) => x.day === t && j !== i)
+    .filter(({ x, j }, k, all) => !all.slice(0, k).some((o) => o.x.slot === x.slot && o.x.recipeId === x.recipeId && plan.meals[j].from === o.j));
   const from = v.leftover ? plan.meals[i].from : undefined;
   return (
     <section class="today-card" aria-label="Today">
@@ -427,7 +431,7 @@ function leftoverNote(plan: SavedPlan, i: number, result: PlanResult): string {
   if (from == null || !result.views[from]) return 'leftovers';
   const m = plan.meals[from];
   if (m.day === plan.meals[i].day) return `same bowl as ${m.with ?? 'lunch'}`;
-  if (m.slot === 'dinner') return `${dayLong(result.views[from].date).toLowerCase()}'s dinner`;
+  if (m.slot === 'dinner') return `${dayLong(result.views[from].date)}'s dinner`;
   return `made ${dayLong(result.views[from].date)}`;
 }
 

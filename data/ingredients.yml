@@ -400,7 +400,7 @@ ingredients:
     nutrition: {kcal: 85, protein: 19, carbs: 0.5, sugar: 0, fat: 1, sat_fat: 0.2, fibre: 0, salt: 1.0}
     match:
       include: ["KOZIC*", "SKAMP*", "REPOV* SKAMP*", "GAMBER*", "PRAWN*", "SHRIMP*"]
-      exclude: [PANZEROTT*, RAVIOL*, TORTEL*, PUNJ*, SURIMI*, TEMELJAC*, POKE*, BOWL*, CIPS*, CHIPS*, KREKER*, OKUS*, SALAT*, PASTET*, UMAK*, SUSHI*, RIZOT*, PAELL*, PIZZA*, POHAN*, PANIR*, NAMAZ*, KREM*]
+      exclude: [PANZEROTT*, RAVIOL*, TORTEL*, PUNJ*, SURIMI*, TEMELJAC*, POKE*, BOWL*, CIPS*, CHIPS*, KREKER*, OKUS*, SALAT*, PASTET*, UMAK*, SUSHI*, RIZOT*, PAELL*, PIZZA*, POHAN*, PANIR*, NAMAZ*, KREM*, HRSKAV*, TIJEST*, TEMPUR*, KROKET*, NUGGET*]
 
   - id: squid
     name: Squid
