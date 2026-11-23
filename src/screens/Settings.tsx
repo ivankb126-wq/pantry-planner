@@ -176,6 +176,14 @@ export function SettingsScreen({ section }: { section?: string }) {
           checked={s.mealPrep}
           onChange={(v) => set({ mealPrep: v })}
         />
+        {s.mealPrep && (
+          <Toggle
+            label="Prep the whole week"
+            hint="Two to two and a half hours on Sunday for Monday to Friday: up to three dishes cooked whole, the grains, and all the vegetables chopped. What would not keep goes in the freezer, with a note the evening before."
+            checked={s.mealPrepBig}
+            onChange={(v) => set({ mealPrepBig: v })}
+          />
+        )}
       </Group>
 
       <Group title="Reminders">

@@ -554,7 +554,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
     : 0;
   b.sale = -sale;
   b.season = -season;
-  b.prep = input.settings.mealPrep ? -prepBonus(meals, input.startDate, days, (id) => ctx.recipes.get(id)) : 0;
+  b.prep = input.settings.mealPrep ? -prepBonus(meals, input.startDate, days, (id) => ctx.recipes.get(id), !!input.settings.mealPrepBig) : 0;
   b.newDish = input.settings.newDishEachWeek && !input.settings.favourites && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;
   b.useSoon = [...ctx.useSoon].filter((id) => !need.has(id)).length * 2;
   b.stores = Math.max(0, stores.size - 1) * 1.5;

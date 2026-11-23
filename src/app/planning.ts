@@ -64,6 +64,7 @@ export function planInput(
       newDishEachWeek: s.newDishEachWeek,
       weekendClassic: s.weekendClassic,
       mealPrep: s.mealPrep,
+      mealPrepBig: s.mealPrepBig,
       soup: s.soup,
       salad: s.salad,
       energyTarget: s.energyTarget,

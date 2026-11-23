@@ -8,6 +8,7 @@ import { readPref, writePref } from '../lib/prefs';
 import { addDays } from '../planner/evaluate';
 import { dayLong } from '../ui/words';
 import { INGREDIENTS, RECIPE_BY_ID } from './catalog';
+import { prepThawNotes } from './prep';
 import { soupFreezer } from './soup';
 import type { AppData } from './state';
 
@@ -74,6 +75,8 @@ export function reminders(d: AppData, today = zagrebToday()): Reminder[] {
       if (f.fromDay === t + 1)
         out.push({ key: `thaw:${plan.createdAt}:${f.cook}`, kind: 'defrost', text: `Move the frozen ${name} to the fridge tonight, for tomorrow.`, href: `#/recipe/${r.id}?meal=${f.cook}` });
     }
+    // Sunday's whole-week prep: boxes for the end of the week wait in the freezer.
+    for (const text of prepThawNotes(d, t)) out.push({ key: `prep-thaw:${plan.createdAt}:${t}:${text}`, kind: 'defrost', text });
   }
 
   if (on.expiry) {

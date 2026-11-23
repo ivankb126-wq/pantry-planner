@@ -6,7 +6,7 @@ import { INGREDIENTS, RECIPE_BY_ID, ingName } from '../app/catalog';
 import { saleIngredient } from '../app/costs';
 import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
-import { prepFor } from '../app/prep';
+import { prepFor, prepThawNotes } from '../app/prep';
 import { lastRecap, weekRecap } from '../app/recap';
 import { soupFreezer } from '../app/soup';
 import { type Reminder, dismissReminder, reminders } from '../app/reminders';
@@ -296,7 +296,7 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
             <IconSwap />
           </button>
         </div>
-        {tonightNotes(d.plan!, result, t)
+        {[...tonightNotes(d.plan!, result, t), ...(d.settings.reminders.defrost ? [] : prepThawNotes(d, t).map((text) => ({ text, kind: 'freeze' as const })))]
           .filter((n) => (n.kind === 'ahead' ? !d.settings.reminders.ahead : !d.settings.reminders.defrost))
           .map(({ text, kind }) => (
             <p key={text} class="ahead-note">
@@ -384,7 +384,7 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                   </li>
                 );
               })}
-              {tonightNotes(plan, result, day).map(({ text, kind }) => (
+              {[...tonightNotes(plan, result, day), ...prepThawNotes(d, day).map((text) => ({ text, kind: 'freeze' as const }))].map(({ text, kind }) => (
                 <li key={text} class="ahead-note">
                   {kind === 'freeze' ? <IconSnow size={15} /> : <IconClock size={15} />} {text}
                 </li>

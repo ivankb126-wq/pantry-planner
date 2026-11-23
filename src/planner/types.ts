@@ -47,6 +47,8 @@ export interface PlanSettings {
   weekendClassic?: boolean;
   /** Meal prep Sunday: prefer weeks where early meals share a pot of grains. */
   mealPrep?: boolean;
+  /** Prep the whole week (Monday to Friday) on Sunday. */
+  mealPrepBig?: boolean;
   /** A small bowl of soup before the main meal (lunch, or dinner when no lunch is planned). */
   soup?: 'off' | 'weekend' | 'daily';
   /** A side salad with the main meal, or with lunch and dinner. */

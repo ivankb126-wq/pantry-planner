@@ -31,6 +31,8 @@ export interface Settings {
   weekendClassic: boolean;
   /** Meal prep Sunday (off unless chosen). */
   mealPrep: boolean;
+  /** With meal prep: prep the whole week, not just the next three evenings. */
+  mealPrepBig: boolean;
   /** A small bowl of soup before the main meal: never, at the weekend or every day. */
   soup: 'off' | 'weekend' | 'daily';
   /** A side salad with the main meal, or with lunch and dinner. */
@@ -142,6 +144,7 @@ export const DEFAULT_APP_SETTINGS: Settings = {
   cookOnceEatTwice: true,
   weekendClassic: true,
   mealPrep: false,
+  mealPrepBig: false,
   soup: 'off',
   salad: 'off',
   reminders: { ahead: false, defrost: false, expiry: false },
@@ -173,7 +176,7 @@ export function emptyData(): AppData {
 
 /** The settings that change what a plan looks like. */
 export function settingsKey(s: Settings): string {
-  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice, ...(s.weekendClassic ? [] : ['no-weekend-classic']), ...(s.mealPrep ? ['meal-prep'] : []), ...(s.soup !== 'off' ? [`soup-${s.soup}`] : []), ...(s.salad !== 'off' ? [`salad-${s.salad}`] : [])]);
+  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice, ...(s.weekendClassic ? [] : ['no-weekend-classic']), ...(s.mealPrep ? ['meal-prep'] : []), ...(s.mealPrep && s.mealPrepBig ? ['meal-prep-big'] : []), ...(s.soup !== 'off' ? [`soup-${s.soup}`] : []), ...(s.salad !== 'off' ? [`salad-${s.salad}`] : [])]);
 }
 
 // ------------------------------------------------------------------ store

@@ -58,3 +58,48 @@ describe('meal prep Sunday', () => {
     expect(prepBonus(shared, '2026-11-22', 7, recipe)).toBeGreaterThan(prepBonus(apart, '2026-11-22', 7, recipe));
   });
 });
+
+describe('prep the whole week', () => {
+  const week = [
+    cook(1, 'lunch', 'tomato-egg-stir-fry'),
+    cook(1, 'dinner', 'chana-masala'),
+    cook(2, 'lunch', 'raznjici-s-rizom'),
+    cook(2, 'dinner', 'turkish-lentil-soup'),
+    cook(3, 'dinner', 'chicken-korma'),
+    cook(4, 'lunch', 'tomato-egg-stir-fry'),
+    cook(4, 'dinner', 'mahune-varivo'),
+    cook(5, 'dinner', 'oslic-na-bijelo'),
+  ];
+  const big = (meals: Meal[]) => mealPrep({ meals, startDate: '2026-11-22', days: 7, recipe, ingredients: INGREDIENTS, portions: () => 2, big: true });
+
+  it('covers Monday to Friday in up to two and a half hours, with more done than the one-hour prep', () => {
+    const p = big(week)!;
+    const small = prep(week)!;
+    expect(p.days).toEqual([1, 2, 3, 4, 5]);
+    expect(p.minutes).toBeLessThanOrEqual(150);
+    expect(p.saves).toBeGreaterThan(small.saves);
+    expect(p.tasks.filter((t) => t.kind === 'dish').length).toBeGreaterThanOrEqual(1);
+    // Never fish, even with the time.
+    expect(p.tasks.some((t) => t.uses.some((u) => u.recipeId === 'oslic-na-bijelo' && t.kind === 'dish'))).toBe(false);
+  });
+
+  it('freezes the rice for the end of the week instead of keeping it four days', () => {
+    const p = big(week)!;
+    const rice = p.tasks.find((t) => t.id === 'grain:rice');
+    expect(rice).toBeTruthy();
+    const thursday = rice!.uses.find((u) => u.day === 4);
+    if (thursday) {
+      expect(rice!.frozen).toContain(thursday.meal);
+      expect(rice!.tip).toMatch(/Freeze the boxes for .*Thursday/);
+    }
+    // Monday and Tuesday's rice stays in the fridge.
+    for (const u of rice!.uses.filter((x) => x.day <= 2)) expect(rice!.frozen ?? []).not.toContain(u.meal);
+  });
+
+  it('chops vegetables only for the days they keep', () => {
+    const p = big(week)!;
+    const chop = p.tasks.find((t) => t.kind === 'chop');
+    expect(chop).toBeTruthy();
+    expect(chop!.uses.every((u) => u.day - p.prepDay <= 5)).toBe(true);
+  });
+});

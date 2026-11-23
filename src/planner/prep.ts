@@ -1,8 +1,13 @@
 // Meal prep Sunday: one hour on Sunday that takes work off the next three
 // weekday evenings. It batches what several planned meals share (a pot of
 // rice or lentils, the chopped onions and carrots) and, when one fits, cooks
-// a soup, stew or pasta sauce whole. Pure: no browser APIs, so it is tested
-// like the planner.
+// a soup, stew or pasta sauce whole.
+//
+// "Prep the whole week" (big) goes further: up to two and a half hours for
+// Monday to Friday, up to three dishes cooked whole, grains for every day and
+// all the vegetables that keep chopped. What would not keep in the fridge
+// until its day goes in the freezer and comes out the evening before.
+// Pure: no browser APIs, so it is tested like the planner.
 
 import { type IngredientInfo, type Recipe, stepText, toIngredientUnit } from '../lib/nutrition';
 import type { Meal, Slot } from './types';
@@ -27,6 +32,8 @@ export interface PrepTask {
   saves: number; // weekday minutes saved
   /** What is ready on the night, for the recipe: "the rice is cooked". */
   ready?: string;
+  /** Meals whose part goes in the freezer (moved to the fridge the evening before). */
+  frozen?: number[];
 }
 
 export interface PrepStep {
@@ -55,9 +62,14 @@ export interface PrepInput {
   portions: (mealIndex: number) => number;
   /** Meals already cooked; nothing is prepared for them. */
   cooked?: number[];
+  /** Prep the whole week (Monday to Friday) instead of the next three evenings. */
+  big?: boolean;
 }
 
 const MAX_MINUTES = 60;
+const MAX_MINUTES_BIG = 150;
+/** Cooked food is kept at most this many days in the fridge; later days come from the freezer. */
+const FRIDGE_DAYS = 4;
 const PACK_MINUTES = 3; // plus 2 a task
 
 interface Grain {
@@ -67,6 +79,8 @@ interface Grain {
   alone: RegExp;
   /** Days cooked it keeps well in the fridge. Rice is kept short to be safe. */
   keeps: number;
+  /** Freezes well once cooked (boiled potatoes do not). */
+  freezes: boolean;
   active: number;
   passive: number;
   how: (g: number) => string;
@@ -81,6 +95,7 @@ const GRAINS: Grain[] = [
     name: 'rice',
     alone: /\b(start|cook|boil) the rice\b|rinse the rice and put it in a pot|no leftover rice, cook it/i,
     keeps: 2,
+    freezes: true,
     active: 3,
     passive: 22,
     how: (g) =>
@@ -92,6 +107,7 @@ const GRAINS: Grain[] = [
     name: 'lentils',
     alone: /simmer (the lentils|them) in (plenty of )?water/i,
     keeps: 3,
+    freezes: true,
     active: 2,
     passive: 22,
     how: (g) => `Rinse ${grams(g)} lentils and simmer them in plenty of water for 20 minutes, until just soft. Drain.`,
@@ -102,6 +118,7 @@ const GRAINS: Grain[] = [
     name: 'quinoa',
     alone: /quinoa[^.]*simmer it in[^.]*water/i,
     keeps: 3,
+    freezes: true,
     active: 2,
     passive: 17,
     how: (g) => `Rinse ${grams(g)} quinoa and simmer it in ${ml(g * 2)} water with a pinch of salt for 15 minutes, until the water is gone.`,
@@ -112,6 +129,7 @@ const GRAINS: Grain[] = [
     name: 'bulgur',
     alone: /bulgur[^.]*boiling water|boiling water over the bulgur/i,
     keeps: 3,
+    freezes: true,
     active: 3,
     passive: 15,
     how: (g) => `Put ${grams(g)} bulgur in a bowl, pour over ${ml(g * 2)} boiling water, cover and leave for 15 minutes. Drain off any water left.`,
@@ -122,6 +140,7 @@ const GRAINS: Grain[] = [
     name: 'potatoes',
     alone: /boil (the )?(peeled )?potatoes|potatoes[^.]*boil them/i,
     keeps: 3,
+    freezes: false,
     active: 8,
     passive: 18,
     how: (g) => `Peel ${grams(g)} potatoes, cut them into chunks and boil them in salted water for 15 minutes, until just soft. Drain.`,
@@ -134,23 +153,36 @@ interface Veg {
   one: string;
   many: string;
   minutesEach: number;
+  /** Days it keeps chopped in a box in the fridge. */
+  keeps: number;
+  /** Only chopped ahead in a whole-week prep. */
+  big?: boolean;
+  /** Counted by weight, not pieces ("half a cabbage" is still one to cut). */
+  byWeight?: boolean;
 }
 
 const VEG: Veg[] = [
-  { id: 'onion', one: 'onion', many: 'onions', minutesEach: 2 },
-  { id: 'carrot', one: 'carrot', many: 'carrots', minutesEach: 1.5 },
-  { id: 'bell-pepper', one: 'pepper', many: 'peppers', minutesEach: 1.5 },
-  { id: 'leek', one: 'leek', many: 'leeks', minutesEach: 2 },
+  { id: 'onion', one: 'onion', many: 'onions', minutesEach: 2, keeps: 5 },
+  { id: 'carrot', one: 'carrot', many: 'carrots', minutesEach: 1.5, keeps: 5 },
+  { id: 'bell-pepper', one: 'pepper', many: 'peppers', minutesEach: 1.5, keeps: 4 },
+  { id: 'leek', one: 'leek', many: 'leeks', minutesEach: 2, keeps: 4 },
+  { id: 'cabbage', one: 'cabbage', many: 'cabbage', minutesEach: 4, keeps: 5, big: true, byWeight: true },
+  { id: 'celeriac', one: 'celeriac', many: 'celeriac', minutesEach: 3, keeps: 4, big: true, byWeight: true },
+  { id: 'broccoli', one: 'head of broccoli', many: 'heads of broccoli', minutesEach: 2, keeps: 4, big: true },
+  { id: 'cauliflower', one: 'cauliflower', many: 'cauliflowers', minutesEach: 3, keeps: 4, big: true },
+  { id: 'pumpkin', one: 'pumpkin', many: 'pumpkin', minutesEach: 5, keeps: 4, big: true, byWeight: true },
+  { id: 'zucchini', one: 'courgette', many: 'courgettes', minutesEach: 1.5, keeps: 3, big: true },
 ];
 const GARLIC_CLOVE_G = 5;
 
 const DISH_FAMILIES = new Set(['soup', 'stew', 'curry']);
 const SAUCE_HINT = new Set(['passata', 'canned-tomatoes', 'minced-beef', 'minced-mixed', 'pork-mince', 'turkey-mince', 'lentils', 'red-lentils']);
 
-/** The Sunday to prepare on and the plan days it prepares for (up to three). */
-export function prepWindow(startDate: string, planDays: number): { prepDay: number; days: number[] } {
+/** The Sunday to prepare on and the plan days it prepares for (up to three, or Monday to Friday). */
+export function prepWindow(startDate: string, planDays: number, big = false): { prepDay: number; days: number[] } {
   const prepDay = sundayIndex(startDate);
-  return { prepDay, days: [prepDay + 1, prepDay + 2, prepDay + 3].filter((d) => d >= 0 && d < planDays) };
+  const n = big ? 5 : 3;
+  return { prepDay, days: Array.from({ length: n }, (_, k) => prepDay + 1 + k).filter((d) => d >= 0 && d < planDays) };
 }
 
 const grainCache = new WeakMap<Recipe, Grain[]>();
@@ -163,12 +195,13 @@ function grainsOf(r: Recipe): Grain[] {
   return g;
 }
 
-/** Whether a dish can be cooked whole (or its sauce made) on Sunday. */
-function aheadKind(r: Recipe): 'whole' | 'sauce' | null {
+/** Whether a dish can be cooked whole (or its sauce made) on Sunday. A
+ * whole-week prep also takes the longer stews (it has the time). */
+function aheadKind(r: Recipe, big = false): 'whole' | 'sauce' | null {
   // Fish is best cooked on the day.
   if (r.mainProtein === 'fish' || r.mainProtein === 'seafood') return null;
   const total = r.prepMinutes + r.cookMinutes;
-  if (r.prepMinutes > 25 || total > 50 || total < 25) return null;
+  if (r.prepMinutes > (big ? 35 : 25) || total > (big ? 100 : 50) || total < 25) return null;
   const kind = DISH_FAMILIES.has(r.family) ? 'whole' : r.family === 'pasta' && r.cookMinutes >= 20 && r.ingredients.some((x) => SAUCE_HINT.has(x.id)) ? 'sauce' : null;
   // Worth it only when it takes a real chunk off the evening.
   return kind && dishSaves(r, kind) >= 25 ? kind : null;
@@ -185,26 +218,27 @@ function dishSaves(r: Recipe, kind: 'whole' | 'sauce'): number {
  * pot of grains, and one soup, stew or sauce that can be made on Sunday.
  * Returned as a bonus (higher is better).
  */
-export function prepBonus(meals: Meal[], startDate: string, planDays: number, recipe: (id: string) => Recipe | undefined): number {
-  const { prepDay, days } = prepWindow(startDate, planDays);
+export function prepBonus(meals: Meal[], startDate: string, planDays: number, recipe: (id: string) => Recipe | undefined, big = false): number {
+  const { prepDay, days } = prepWindow(startDate, planDays, big);
   if (days.length < 2) return 0;
   const count = new Map<string, number>();
-  let dish = false;
+  let dishes = 0;
   for (const m of meals) {
     if (m.source !== 'cook' || !days.includes(m.day) || (m.slot !== 'lunch' && m.slot !== 'dinner')) continue;
     const r = recipe(m.recipeId);
     if (!r) continue;
-    for (const g of grainsOf(r)) if (m.day - prepDay <= g.keeps) count.set(g.id, (count.get(g.id) ?? 0) + 1);
-    if (aheadKind(r) && r.keepsDays >= m.day - prepDay) dish = true;
+    for (const g of grainsOf(r)) if (m.day - prepDay <= g.keeps || (big && g.freezes)) count.set(g.id, (count.get(g.id) ?? 0) + 1);
+    if (aheadKind(r, big) && (r.keepsDays >= m.day - prepDay || (big && r.tags.includes('freezer-friendly')))) dishes++;
   }
-  let bonus = dish ? 2 : 0;
+  let bonus = Math.min(dishes, big ? 3 : 1) * 2;
   for (const n of count.values()) bonus += Math.min(n - 1, 2) * 5;
   return bonus;
 }
 
 export function mealPrep(input: PrepInput): PrepPlan | null {
   const { meals, startDate } = input;
-  const { prepDay, days } = prepWindow(startDate, input.days);
+  const big = !!input.big;
+  const { prepDay, days } = prepWindow(startDate, input.days, big);
   const date = addDays(startDate, prepDay);
   if (days.length < 2) return null;
   const cooked = new Set(input.cooked ?? []);
@@ -229,16 +263,20 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
 
   const tasks: PrepTask[] = [];
 
-  // 1. One dish cooked whole: the one that saves the most evening time.
-  let dishMeal = -1;
-  let best: { task: PrepTask; score: number } | null = null;
+  // 1. Dishes cooked whole: the one (or in a whole-week prep, up to three)
+  // that save the most evening time.
+  const dishMeals = new Set<number>();
+  const candidates: { task: PrepTask; score: number }[] = [];
   for (const w of window) {
     const r = input.recipe(w.m.recipeId);
     if (!r) continue;
-    // It has to keep until its last leftover meal is eaten.
-    const lastDay = Math.max(w.m.day, ...meals.filter((x) => x.source === 'leftover' && x.from === w.i).map((x) => x.day));
-    if (r.keepsDays < lastDay - prepDay) continue;
-    const kind = aheadKind(r);
+    // It has to keep until its last leftover meal is eaten, or go in the freezer.
+    const eaten = [w.m.day, ...meals.filter((x) => x.source === 'leftover' && x.from === w.i).map((x) => x.day)];
+    const lastDay = Math.max(...eaten);
+    const fridge = Math.min(r.keepsDays, FRIDGE_DAYS);
+    const freeze = lastDay - prepDay > fridge;
+    if (freeze && !(big && r.tags.includes('freezer-friendly'))) continue;
+    const kind = aheadKind(r, big);
     if (!kind) continue;
     const whole = kind === 'whole';
     const sauce = kind === 'sauce';
@@ -258,47 +296,56 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
             ? `Follow the recipe, but leave out the ${freshNames}. On ${day} cook the ${freshNames} fresh and warm the rest until it is steaming hot.`
             : `Follow the recipe all the way. On ${day} just warm it up until it is steaming hot.`,
           ready: fresh.length ? `the rest is made: just cook the ${freshNames} and warm it until steaming hot` : undefined,
-          tip: 'Let it cool with the lid off, then keep it in the fridge in its pot or a big box.',
+          tip: freeze
+            ? `Let it cool with the lid off, box it and put it in the freezer. On ${weekday(addDays(startDate, w.m.day - 1))} evening move it to the fridge.`
+            : 'Let it cool with the lid off, then keep it in the fridge in its pot or a big box.',
           uses: [use(w)],
           active,
           passive,
           saves,
+          ...(freeze ? { frozen: [w.i] } : {}),
         }
       : {
           id: `sauce:${r.id}`,
           kind: 'dish',
           title: `Make the sauce for ${day}'s ${shortTitle(r.title)}`,
           how: `Follow the recipe up to where the pasta goes in. On ${day} just boil the pasta and warm the sauce.`,
-          tip: 'Cool the sauce, then keep it in a box in the fridge.',
+          tip: freeze
+            ? `Cool the sauce, box it and freeze it. On ${weekday(addDays(startDate, w.m.day - 1))} evening move it to the fridge.`
+            : 'Cool the sauce, then keep it in a box in the fridge.',
           uses: [use(w)],
           active,
           passive,
           saves,
+          ...(freeze ? { frozen: [w.i] } : {}),
         };
-    if (!best || saves > best.score) best = { task, score: saves };
+    candidates.push({ task, score: saves });
   }
-  if (best) {
-    tasks.push(best.task);
-    dishMeal = best.task.uses[0].meal;
+  for (const c of candidates.sort((a, b) => b.score - a.score).slice(0, big ? 3 : 1)) {
+    tasks.push(c.task);
+    dishMeals.add(c.task.uses[0].meal);
   }
-  const rest = window.filter((w) => w.i !== dishMeal);
+  const rest = window.filter((w) => !dishMeals.has(w.i));
 
   // 2. Grains cooked once for two or more meals.
   for (const g of GRAINS) {
     const users = rest.filter(({ m }) => {
-      if (m.day - prepDay > g.keeps) return false;
+      if (m.day - prepDay > g.keeps && !(big && g.freezes)) return false;
       const r = input.recipe(m.recipeId);
       return !!r && grainsOf(r).includes(g);
     });
     if (users.length < 2) continue;
     const total = users.reduce((s, w) => s + amountOf(w.i, input.recipe(w.m.recipeId)!, g.id), 0);
     if (total <= 0) continue;
+    const frozen = users.filter(({ m }) => m.day - prepDay > g.keeps);
+    const frozenDays = list([...new Set(frozen.map(({ m }) => weekday(addDays(startDate, m.day))))]);
     tasks.push({
       id: `grain:${g.id}`,
       kind: 'grain',
       title: `Cook ${grams(total)} ${g.name}`,
       how: g.how(total),
-      tip: g.tip,
+      tip: frozen.length ? `${g.tip} Freeze the boxes for ${frozenDays}; move each to the fridge the evening before.` : g.tip,
+      ...(frozen.length ? { frozen: frozen.map(({ i }) => i) } : {}),
       uses: users.map(use),
       active: g.active,
       passive: g.passive,
@@ -312,20 +359,30 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
   const chopUses = new Map<number, PrepUse>();
   let chopMinutes = 0;
   let pieces = 0;
+  // A whole-week prep chops everything that keeps, even for one meal.
+  const need = big ? 1 : 2;
   for (const v of VEG) {
-    const users = rest.filter(({ m }) => input.recipe(m.recipeId)?.ingredients.some((x) => x.id === v.id && !x.optional));
-    if (users.length < 2) continue;
+    if (v.big && !big) continue;
+    const users = rest.filter(({ m }) => m.day - prepDay <= v.keeps && input.recipe(m.recipeId)?.ingredients.some((x) => x.id === v.id && !x.optional));
+    if (users.length < need) continue;
     const g = users.reduce((s, w) => s + amountOf(w.i, input.recipe(w.m.recipeId)!, v.id), 0);
-    const piece = input.ingredients[v.id]?.pieceG ?? 100;
-    const n = Math.max(1, Math.round(g / piece));
-    chopped.push(`${n} ${n === 1 ? v.one : v.many}`);
-    chopMinutes += n * v.minutesEach;
-    pieces += n;
+    if (g <= 0) continue;
+    if (v.byWeight) {
+      chopped.push(`${grams(g)} ${v.many}`);
+      chopMinutes += Math.max(1, g / 500) * v.minutesEach;
+      pieces += 1;
+    } else {
+      const piece = input.ingredients[v.id]?.pieceG ?? 100;
+      const n = Math.max(1, Math.round(g / piece));
+      chopped.push(`${n} ${n === 1 ? v.one : v.many}`);
+      chopMinutes += n * v.minutesEach;
+      pieces += n;
+    }
     for (const w of users) chopUses.set(w.i, use(w));
   }
-  const garlicUsers = rest.filter(({ m }) => input.recipe(m.recipeId)?.ingredients.some((x) => x.id === 'garlic' && !x.optional));
+  const garlicUsers = rest.filter(({ m }) => m.day - prepDay <= 5 && input.recipe(m.recipeId)?.ingredients.some((x) => x.id === 'garlic' && !x.optional));
   let cloves = 0;
-  if (garlicUsers.length >= 2) {
+  if (garlicUsers.length >= need) {
     cloves = Math.max(2, Math.round(garlicUsers.reduce((s, w) => s + amountOf(w.i, input.recipe(w.m.recipeId)!, 'garlic'), 0) / GARLIC_CLOVE_G));
     chopMinutes += cloves * 0.5;
     for (const w of garlicUsers) chopUses.set(w.i, use(w));
@@ -335,7 +392,7 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
       id: 'chop',
       kind: 'chop',
       title: `Chop ${list(chopped)}${cloves ? `, peel ${cloves} garlic cloves` : ''}`,
-      how: `Dice the ${list(chopped.map((c) => c.replace(/^\d+ /, '')))}${cloves ? ' and peel the garlic' : ''}. Keep each in its own box in the fridge.`,
+      how: `Dice the ${list(chopped.map((c) => c.replace(/^[\d,.]+ (k?g )?/, '')))}${cloves ? ' and peel the garlic' : ''}. Keep each in its own box in the fridge.`,
       tip: 'A box with a lid keeps the onion smell in. Diced works for recipes that say sliced too.',
       uses: [...chopUses.values()].sort((a, b) => a.meal - b.meal),
       active: Math.max(4, Math.round(chopMinutes)),
@@ -347,8 +404,9 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
 
   if (!tasks.length) return null;
   let plan = schedule(tasks);
-  // Keep it to about an hour: drop the slowest task until it fits.
-  while (plan.minutes > MAX_MINUTES && tasks.length > 1) {
+  // Keep it to about an hour (two and a half for the whole week): drop the slowest task until it fits.
+  const max = big ? MAX_MINUTES_BIG : MAX_MINUTES;
+  while (plan.minutes > max && tasks.length > 1) {
     const slow = tasks.reduce((a, b) => (b.active + b.passive > a.active + a.passive ? b : a));
     tasks.splice(tasks.indexOf(slow), 1);
     plan = schedule(tasks);
@@ -371,7 +429,14 @@ function schedule(tasks: PrepTask[]): { steps: PrepStep[]; minutes: number } {
     if (t.passive > 0) steps.push({ at: done, text: doneText(t) });
     end = Math.max(end, done, cursor);
   }
-  steps.push({ at: end, text: 'Box it all up', detail: 'Portion everything into boxes, write the day on each and put them in the fridge.' });
+  const freezer = tasks.some((t) => t.frozen?.length);
+  steps.push({
+    at: end,
+    text: 'Box it all up',
+    detail: freezer
+      ? 'Portion everything into boxes and write the day on each. The boxes for the end of the week go in the freezer, the rest in the fridge.'
+      : 'Portion everything into boxes, write the day on each and put them in the fridge.',
+  });
   steps.sort((a, b) => a.at - b.at);
   return { steps, minutes: end + PACK_MINUTES + 2 * tasks.length };
 }
@@ -383,7 +448,9 @@ function kindOrder(t: PrepTask): number {
 function doneText(t: PrepTask): string {
   const g = GRAINS.find((x) => `grain:${x.id}` === t.id);
   if (g) return `The ${g.name} ${g.name.endsWith('s') ? 'are' : 'is'} done: spread ${g.name.endsWith('s') ? 'them' : 'it'} out to cool`;
-  return `${t.id.startsWith('sauce') ? 'The sauce' : 'The pot'} is done: take it off the heat to cool`;
+  // "Cook Tuesday's Turkish red lentil soup" -> "The Turkish red lentil soup is done"
+  const dish = t.title.replace(/^(Cook|Make the sauce for) \w+'s /, '');
+  return `${t.id.startsWith('sauce') ? `The sauce for the ${dish}` : `The ${dish}`} is done: take it off the heat to cool`;
 }
 
 /** Plan day of the Sunday to prepare on: this week's, or the one before the plan
