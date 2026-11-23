@@ -51,6 +51,8 @@ export interface PlanSettings {
   soup?: 'off' | 'weekend' | 'daily';
   /** A side salad with the main meal, or with lunch and dinner. */
   salad?: 'off' | 'main' | 'both';
+  /** "A week of favourites": dishes you liked first, topped up with similar ones. */
+  favourites?: boolean;
 }
 
 export const DEFAULT_SETTINGS: PlanSettings = {

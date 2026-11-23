@@ -457,3 +457,20 @@ describe('a saved plan after an app update', () => {
     expect(scorePlan(input, tray, true).meals.filter((m) => m.source === 'leftover')).toHaveLength(6);
   });
 });
+
+// ------------------------------------------------------------------ a week of favourites
+describe('a week of favourites', () => {
+  const liked = ['pasta-carbonara', 'chana-masala', 'sarma', 'grah', 'pasta-walnut-sauce', 'oyakodon', 'rizoto-s-piletinom', 'mahune-varivo'].filter((id) => RECIPES.some((r) => r.id === id));
+  const ratings = liked.map((recipeId) => ({ recipeId, up: true }));
+  const mains = (meals: Meal[]) => meals.filter((m) => m.source === 'cook' && (m.slot === 'lunch' || m.slot === 'dinner'));
+
+  it('cooks nearly every liked dish (each once), and an ordinary week does not', () => {
+    // They were all eaten last week: an ordinary week gives them a rest, a week of favourites does not.
+    const fav = generatePlan(baseInput({ ratings, recent: liked, settings: { ...DEFAULT_SETTINGS, favourites: true } }));
+    const usual = generatePlan(baseInput({ ratings, recent: liked }));
+    const used = (meals: Meal[]) => new Set(mains(meals).map((m) => m.recipeId).filter((id) => liked.includes(id))).size;
+    expect(liked.length).toBeGreaterThanOrEqual(6);
+    expect(used(fav.meals)).toBeGreaterThanOrEqual(liked.length - 1);
+    expect(used(usual.meals)).toBeLessThan(used(fav.meals));
+  });
+});

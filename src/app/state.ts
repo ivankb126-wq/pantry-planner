@@ -57,6 +57,8 @@ export interface SavedPlan {
   taken?: Record<number, Amount[]>;
   /** Dishes eaten in the two weeks before this plan (they get a rest). */
   recent?: string[];
+  /** Made with "Plan a week of favourites". */
+  favourites?: boolean;
 }
 
 export interface Amount {

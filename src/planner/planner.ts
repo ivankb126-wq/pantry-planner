@@ -217,6 +217,15 @@ function pick<T>(list: T[], rnd: () => number): T {
   return list[Math.floor(rnd() * list.length)];
 }
 
+/** A recipe for a slot; in a week of favourites, mostly one you liked. */
+function pickRecipe(ctx: Context, pool: string[], slot: Slot, rnd: () => number): string {
+  if (ctx.input.settings.favourites && isMain(slot) && rnd() < 0.6) {
+    const liked = pool.filter((id) => ctx.liked.has(id));
+    if (liked.length) return pick(liked, rnd);
+  }
+  return pick(pool, rnd);
+}
+
 /** Plan a week. */
 export function generatePlan(input: PlanInput): PlanResult {
   const started = now();
@@ -250,7 +259,7 @@ export function generatePlan(input: PlanInput): PlanResult {
     const unused = isMain(slot) ? pool.filter((id) => !cookedAsMain(filled, id, i)) : pool;
     const fresh = unused.length ? unused : pool;
     const options: Meal[] = [];
-    for (let k = 0; k < Math.min(12, fresh.length); k++) options.push(cookAt(place as Meal, pick(fresh, rnd)));
+    for (let k = 0; k < Math.min(12, fresh.length); k++) options.push(cookAt(place as Meal, pickRecipe(ctx, fresh, slot, rnd)));
     // Leftover options: yesterday's dinner for lunch, or an earlier batch.
     filled.forEach((m, j) => {
       if (!m) return;
@@ -320,14 +329,14 @@ function mutate(ctx: Context, pools: Pools, meals: Meal[], rnd: () => number, ov
   if (move < 0.6) {
     // Replace with another recipe (a cheap one half the time when over budget)
     const pool = overBudget && rnd() < 0.5 ? pools.cheap(m.slot, m.day) : pools.get(m.slot, m.day);
-    const id = pick(pool, rnd);
+    const id = pickRecipe(ctx, pool, m.slot, rnd);
     if (id === m.recipeId && m.source === 'cook') return null;
     if (isMain(m.slot) && cookedAsMain(next, id, i)) return null; // no main dish twice a week
     next[i] = cookAt(m, id);
   } else if (move < 0.85) {
     // Turn leftovers on or off
     if (m.source === 'leftover') {
-      const id = pick(pools.get(m.slot, m.day), rnd);
+      const id = pickRecipe(ctx, pools.get(m.slot, m.day), m.slot, rnd);
       if (isMain(m.slot) && cookedAsMain(next, id, i)) return null;
       next[i] = cookAt(m, id);
     } else {

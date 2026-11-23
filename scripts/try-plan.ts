@@ -29,9 +29,9 @@ const res = generatePlan({
   diet: 'none',
   dislikes: [],
   pantry: [],
-  ratings: [],
+  ratings: (process.env.FAV ?? '').split(',').filter(Boolean).map((recipeId) => ({ recipeId, up: true })),
   history: [],
-  settings: { ...DEFAULT_SETTINGS, soup: (process.env.SOUP ?? 'off') as 'off', salad: (process.env.SALAD ?? 'off') as 'off' },
+  settings: { ...DEFAULT_SETTINGS, soup: (process.env.SOUP ?? 'off') as 'off', salad: (process.env.SALAD ?? 'off') as 'off', favourites: !!process.env.FAVWEEK },
   seed: Number(seed),
 });
 const ms = Math.round(performance.now() - t0);

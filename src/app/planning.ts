@@ -35,6 +35,7 @@ export function planInput(
   startDate: string,
   pantry: PantryItem[],
   recent: string[] = d.plan?.recent ?? [],
+  favourites = !!d.plan?.favourites,
 ): PlanInput {
   const s = d.settings;
   const today = zagrebToday();
@@ -67,17 +68,18 @@ export function planInput(
       salad: s.salad,
       energyTarget: s.energyTarget,
       weekdayMaxMinutes: s.weekdayMaxMinutes,
+      favourites,
     },
     seed,
   };
 }
 
-export function makePlan(d: AppData, prices: PriceData, seed = Math.floor(Math.random() * 1e9)): { plan: SavedPlan; result: PlanResult } {
+export function makePlan(d: AppData, prices: PriceData, seed = Math.floor(Math.random() * 1e9), favourites = false): { plan: SavedPlan; result: PlanResult } {
   const startDate = zagrebToday();
   const pantry = livePantry(d);
   // Regenerating on the same day keeps the rest list of the plan it replaces.
   const recent = d.plan && d.plan.startDate === startDate ? (d.plan.recent ?? []) : recentDishes(d, startDate);
-  const result = generatePlan(planInput(d, prices, seed, startDate, pantry, recent));
+  const result = generatePlan(planInput(d, prices, seed, startDate, pantry, recent, favourites));
   return {
     plan: {
       startDate,
@@ -89,6 +91,7 @@ export function makePlan(d: AppData, prices: PriceData, seed = Math.floor(Math.r
       createdAt: new Date().toISOString(),
       pantryAtStart: pantry,
       recent,
+      ...(favourites ? { favourites: true } : {}),
     },
     result,
   };
@@ -99,7 +102,7 @@ let memo: { key: string; prices: PriceData; result: PlanResult } | null = null;
 /** Costs, shopping list and nutrition of the saved plan (re-scored with today's prices). */
 export function planResult(d: AppData, prices: PriceData): PlanResult | null {
   if (!d.plan) return null;
-  const key = JSON.stringify([d.plan.meals, d.plan.startDate, d.plan.pantryAtStart, settingsKey(d.settings)]);
+  const key = JSON.stringify([d.plan.meals, d.plan.startDate, d.plan.pantryAtStart, settingsKey(d.settings), !!d.plan.favourites]);
   if (memo && memo.key === key && memo.prices === prices) return memo.result;
   const result = scorePlan(planInput(d, prices, d.plan.seed, d.plan.startDate, d.plan.pantryAtStart), d.plan.meals, true);
   memo = { key, prices, result };

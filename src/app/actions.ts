@@ -10,9 +10,9 @@ import { keepRecap } from './recap';
 import type { PriceData } from './prices';
 import { type Amount, type AppData, type PantryEntry, type SavedPlan, getData, update } from './state';
 
-export function newPlan(prices: PriceData): SavedPlan | null {
+export function newPlan(prices: PriceData, favourites = false): SavedPlan | null {
   const before = getData().plan;
-  const { plan } = makePlan(getData(), prices);
+  const { plan } = makePlan(getData(), prices, undefined, favourites);
   update((d) => {
     keepRecap(d);
     d.plan = plan;

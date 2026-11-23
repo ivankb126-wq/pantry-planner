@@ -504,18 +504,36 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   // Ratings, sales, new dishes, pantry
   let liked = 0;
   let sale = 0;
+  // A week of favourites: the dishes you liked come first; where there are not
+  // enough of them, dishes of the same kind (and cuisine) fill in.
+  const favWeek = !!input.settings.favourites;
+  const likedKinds = new Set<string>();
+  const likedCuisines = new Set<string>();
+  if (favWeek)
+    for (const id of ctx.liked) {
+      const r = ctx.recipes.get(id);
+      if (r && (r.mealTypes.includes('lunch') || r.mealTypes.includes('dinner'))) {
+        likedKinds.add(r.family);
+        likedCuisines.add(r.cuisine);
+      }
+    }
   let season = 0;
   let newMains = 0;
   let rareNew = false;
   meals.forEach((m, i) => {
     if (m.source !== 'cook') return;
-    if (ctx.liked.has(m.recipeId)) liked += 2.5;
+    const main = m.slot === 'lunch' || m.slot === 'dinner';
+    if (ctx.liked.has(m.recipeId)) liked += favWeek ? (main ? 25 : 6) : 2.5;
+    else if (favWeek && main) {
+      const r = ctx.recipes.get(m.recipeId)!;
+      if (likedKinds.has(r.family)) liked += likedCuisines.has(r.cuisine) ? 5 : 2;
+    }
     // Main ingredients = the two that cost the most in this meal
-    const main = (mealPortion(ctx, m))
+    const top = mealPortion(ctx, m)
       .map(({ id, amount }) => ({ id, value: amount * cookedFor[i] * (unitCost.get(id) ?? 0) }))
       .sort((a, b2) => b2.value - a.value)
       .slice(0, 2);
-    if (main.some((x) => onSale.has(x.id))) sale += 0.8;
+    if (top.some((x) => onSale.has(x.id))) sale += 0.8;
     // Croatian seasonal produce: cheaper and tastier, so a small nudge.
     if (seasonalIngredients(ctx.recipes.get(m.recipeId)!, input.ingredients, monthOf(ctx.dates[m.day])).length) season += 0.6;
     if ((m.slot === 'lunch' || m.slot === 'dinner') && !ctx.history.has(m.recipeId)) {
@@ -525,7 +543,8 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   });
   // Give dishes from the last two weeks a rest, so cheap favourites take turns.
   const recent = new Set(input.recent ?? []);
-  b.recent = meals.filter((m) => m.source === 'cook' && recent.has(m.recipeId)).length * 4;
+  // (Not in a week of favourites: you asked for them.)
+  b.recent = meals.filter((m) => m.source === 'cook' && recent.has(m.recipeId) && !(favWeek && ctx.liked.has(m.recipeId))).length * 4;
   b.liked = -liked;
   // "Cook once, eat twice": yesterday's dinner for a weekday lunch is one
   // less meal to cook. Cooked meals earn small bonuses (sale, season) that
@@ -536,7 +555,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   b.sale = -sale;
   b.season = -season;
   b.prep = input.settings.mealPrep ? -prepBonus(meals, input.startDate, days, (id) => ctx.recipes.get(id)) : 0;
-  b.newDish = input.settings.newDishEachWeek && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;
+  b.newDish = input.settings.newDishEachWeek && !input.settings.favourites && hasMains ? (newMains === 0 ? 6 : rareNew ? -1.5 : 0) : 0;
   b.useSoon = [...ctx.useSoon].filter((id) => !need.has(id)).length * 2;
   b.stores = Math.max(0, stores.size - 1) * 1.5;
   // Prefer what the chosen store actually lists (spices barely matter).

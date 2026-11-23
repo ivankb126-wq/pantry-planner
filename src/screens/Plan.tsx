@@ -12,12 +12,12 @@ import { soupFreezer } from '../app/soup';
 import { type Reminder, dismissReminder, reminders } from '../app/reminders';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
-import { type AppData, type SavedPlan, type Settings, update, useApp } from '../app/state';
+import { type AppData, type SavedPlan, type Settings, getData, update, useApp } from '../app/state';
 import { dealSaving } from '../lib/deals';
 import { inSeasonIn, monthOf } from '../lib/seasons';
 import { daysBetween, formatAmount, formatEur, formatShortDate, zagrebToday } from '../lib/format';
 import type { Check, MealView, PlanResult } from '../planner/types';
-import { IconCheck, IconClock, IconDown, IconFlame, IconPantry, IconSettings, IconSnow, IconSwap } from '../ui/icons';
+import { IconCheck, IconClock, IconDown, IconFlame, IconHeart, IconPantry, IconSettings, IconSnow, IconSwap } from '../ui/icons';
 import { DishArt, Screen, Sheet, Toast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, dayNum, dayShort, minutes, plural } from '../ui/words';
 import { BackupReminder } from './BackupReminder';
@@ -67,14 +67,15 @@ export function PlanScreen({ prices }: { prices: PriceState }) {
   const [storeSheet, setStoreSheet] = useState(false);
   const problem = planProblem(d);
 
-  const make = () => {
+  const make = (favourites = false) => {
     if (!data || busy) return;
     setBusy(true);
     // Let the "Planning your week" card paint before the planner runs.
     setTimeout(() => {
-      const before = newPlan(data);
+      const before = newPlan(data, favourites);
       setBusy(false);
-      if (before) setToast({ text: 'New plan made.', undo: () => restorePlan(before) });
+      const text = favourites ? favouritesNote(getData()) : 'New plan made.';
+      if (before) setToast({ text, undo: () => restorePlan(before) });
     }, 30);
   };
 
@@ -101,7 +102,7 @@ export function PlanScreen({ prices }: { prices: PriceState }) {
     <Screen glow="pink">
       <header class="plan-head">
         <div>
-          <p class="kicker">{d.plan ? `Week of ${formatShortDate(d.plan.startDate)}` : 'Your week'}</p>
+          <p class="kicker">{d.plan ? `Week of ${formatShortDate(d.plan.startDate)}${d.plan.favourites ? ' · favourites' : ''}` : 'Your week'}</p>
           <h1>This week</h1>
         </div>
         <a class="icon-btn big" href="#/settings" aria-label="Settings">
@@ -118,7 +119,7 @@ export function PlanScreen({ prices }: { prices: PriceState }) {
       {problem === 'settings' && !busy && data && (
         <div class="notice">
           <span class="grow">Your settings changed since this plan was made.</span>
-          <button class="btn-small" onClick={make}>
+          <button class="btn-small" onClick={() => make()}>
             New plan
           </button>
         </div>
@@ -126,7 +127,7 @@ export function PlanScreen({ prices }: { prices: PriceState }) {
       {problem === 'over' && !busy && data && (
         <div class="notice">
           <span class="grow">This week's plan is over.</span>
-          <button class="btn-small" onClick={make}>
+          <button class="btn-small" onClick={() => make()}>
             Plan next week
           </button>
         </div>
@@ -169,7 +170,7 @@ export function PlanScreen({ prices }: { prices: PriceState }) {
   );
 }
 
-function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData; data: PriceData; result: PlanResult; onSwap: (i: number) => void; onStore: () => void; onNewPlan: () => void }) {
+function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData; data: PriceData; result: PlanResult; onSwap: (i: number) => void; onStore: () => void; onNewPlan: (favourites?: boolean) => void }) {
   const plan = d.plan!;
   const sale = useMemo(() => saleSet(result), [result]);
   const t = todayIndex(plan);
@@ -188,9 +189,10 @@ function PlanBody({ d, data, result, onSwap, onStore, onNewPlan }: { d: AppData;
       <DealsCard data={data} />
       <SeasonCard />
       <RecapCard d={d} t={t} />
-      <button class="btn-ghost wide" onClick={onNewPlan}>
+      <button class="btn-ghost wide" onClick={() => onNewPlan()}>
         <IconSwap size={20} /> Make a new plan
       </button>
+      <FavouritesButton d={d} onPlan={() => onNewPlan(true)} />
       <p class="fineprint">
         Costs are what you pay for whole packages. Each meal's cost is the part of the food it uses. Orientation prices from the official daily price lists.
       </p>
@@ -427,6 +429,37 @@ function tonightNotes(plan: SavedPlan, result: PlanResult, day: number): { text:
 function daysText(result: PlanResult, from: number, to: number): string {
   const name = (day: number) => dayLong(result.views.find((v) => v.day === day)?.date ?? '');
   return from === to ? name(from) : `${name(from)} to ${name(to)}`;
+}
+
+/** Main dishes you gave a heart or a thumbs up. */
+function likedMains(d: AppData): Set<string> {
+  const ids = new Set([...d.favourites, ...d.ratings.filter((r) => r.up).map((r) => r.recipeId)]);
+  return new Set([...ids].filter((id) => RECIPE_BY_ID.get(id)?.mealTypes.some((t) => t === 'lunch' || t === 'dinner')));
+}
+
+function FavouritesButton({ d, onPlan }: { d: AppData; onPlan: () => void }) {
+  const n = likedMains(d).size;
+  return (
+    <div class="fav-plan">
+      <button class="btn-ghost wide" onClick={onPlan} disabled={n === 0}>
+        <IconHeart size={20} /> Plan a week of favourites
+      </button>
+      <p class="fineprint">
+        {n === 0
+          ? 'Tap the heart on dishes you like, or give them a thumbs up after cooking. Then the planner can build a week from them.'
+          : `From the ${plural(n, 'main dish', 'main dishes')} you liked, topped up with similar ones.`}
+      </p>
+    </div>
+  );
+}
+
+/** "8 of 10 main meals are dishes you liked." */
+function favouritesNote(d: AppData): string {
+  const liked = likedMains(d);
+  const mains = (d.plan?.meals ?? []).filter((m) => m.source === 'cook' && (m.slot === 'lunch' || m.slot === 'dinner'));
+  const fav = mains.filter((m) => liked.has(m.recipeId)).length;
+  if (!mains.length) return 'New plan made.';
+  return fav === mains.length ? 'A week of favourites: every main dish is one you liked.' : `A week of favourites: ${fav} of ${mains.length} main dishes are ones you liked, the rest are similar.`;
 }
 
 /** A soup or salad from the same pot or bowl as one listed before it that day. */
