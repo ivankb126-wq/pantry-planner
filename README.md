@@ -9,7 +9,8 @@ Status: **all milestones done** (price pipeline, 262 ingredients, 427 recipes,
 works offline and installs on the iPhone home screen, and the milestone 7
 extras: real deal check, seasonal produce, shopping mode, sharing the list,
 meal prep Sunday, reminders, weekly recap, "I don't have X" and barcode scan),
-plus soup to start and a side salad.
+plus soup to start and a side salad, stores near me, a week of favourites
+and a whole-week meal prep.
 
 Open it: **https://ivankb126-wq.github.io/pantry-planner/**
 
@@ -71,7 +72,21 @@ days), the onions, carrots and peppers they share, and one soup, stew, curry
 or pasta sauce cooked whole (never fish). It shows a timeline you can tick
 off, and each recipe on the night says what is already done. When the
 switch is on, the planner leans a little towards weeks where early meals
-share a pot.
+share a pot. "Prep the whole week" (a second switch) makes it up to two and a
+half hours for Monday to Friday: up to three dishes cooked whole, the grains
+for every day and every vegetable that keeps chopped (each only for the days
+it keeps). What would not keep until its day goes in the freezer, and the
+plan says "move it to the fridge tonight" the evening before.
+Stores near me: the store picker's "Find stores near me" asks the phone where
+it is (rounded to about 100 m, kept on the phone only) and lists the nearest
+stores of every chain with their distance. Store positions come from
+OpenStreetMap ([pipeline/pantry_pipeline/locate.py](pipeline/pantry_pipeline/locate.py)):
+`python -m pantry_pipeline locate-stores` matches each store by street and
+house number (or by town) and writes `data/store-locations.json`, which the
+price build adds to the store lists. Run it now and then; stores rarely move.
+A home-screen app left open in the background refreshes itself to a new
+version when it comes back, but never while cooking, shopping or prepping
+([src/app/update.ts](src/app/update.ts)).
 Reminders ([src/app/reminders.ts](src/app/reminders.ts)) show at the top of
 the plan when the app is opened, three kinds, each off until switched on in
 Settings: what to start the day before, meat or fish to take out of the
@@ -145,10 +160,14 @@ no salad main next to a side salad, and summer starters and salads (tomato,
 cucumber, courgette) only in their season. `npx tsx scripts/extras-cost.ts`
 shows what they add to a week.
 Portions lean generous: a light main (under 600 kcal a serving) is cooked
-bigger, up to 1.4 servings a person, servings are always rounded up, and the
+bigger, up to 1.4 servings a person (a breakfast under 380 kcal likewise, up
+to two and a half for bars and muffins), servings are always rounded up, and the
 plan aims for the full daily energy target (a little over is fine, under is
 not). With "Cook once, eat twice" on, weekday lunches from last night's dinner
 get a nudge, and a tray of snacks or a cake lasts at most 4 days.
+"Plan a week of favourites" builds the week from the main dishes with a heart
+or a thumbs up (each once, without their usual two-week rest), topped up with
+dishes of the same kind and cuisine; the budget still decides.
 Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 
 ```bash
