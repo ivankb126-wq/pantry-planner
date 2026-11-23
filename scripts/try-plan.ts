@@ -31,7 +31,7 @@ const res = generatePlan({
   pantry: [],
   ratings: [],
   history: [],
-  settings: DEFAULT_SETTINGS,
+  settings: { ...DEFAULT_SETTINGS, soup: (process.env.SOUP ?? 'off') as 'off', salad: (process.env.SALAD ?? 'off') as 'off' },
   seed: Number(seed),
 });
 const ms = Math.round(performance.now() - t0);

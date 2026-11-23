@@ -28,6 +28,41 @@ function setReminder(kind: keyof Settings['reminders'], on: boolean) {
   });
 }
 
+const SOUP_OPTIONS: { id: Settings['soup']; label: string; hint: string }[] = [
+  { id: 'off', label: 'No soup', hint: 'Just the main dish.' },
+  { id: 'weekend', label: 'At the weekend', hint: 'A Saturday and Sunday pot, like a Sunday lunch at home.' },
+  { id: 'daily', label: 'Every day', hint: 'One pot lasts 3 or 4 days. A soup that freezes well can last the week: freeze part of it the day you cook.' },
+];
+const SALAD_OPTIONS: { id: Settings['salad']; label: string; hint: string }[] = [
+  { id: 'off', label: 'No side salad', hint: '' },
+  { id: 'main', label: 'With the main meal', hint: 'With lunch, or with dinner if you do not plan lunch.' },
+  { id: 'both', label: 'With lunch and dinner', hint: 'A bowl of cabbage or beetroot salad lasts a few days.' },
+];
+
+export function soupSaladSummary(s: Settings): string {
+  const soup = s.soup === 'daily' ? 'Soup every day' : s.soup === 'weekend' ? 'Soup at weekends' : '';
+  const salad = s.salad === 'both' ? 'salad with lunch and dinner' : s.salad === 'main' ? 'side salad' : '';
+  if (!soup && !salad) return 'Off';
+  if (!soup) return salad.charAt(0).toUpperCase() + salad.slice(1);
+  return salad ? `${soup}, ${salad}` : soup;
+}
+
+function OptionList<T extends string>({ label, value, options, onChange }: { label: string; value: T; options: { id: T; label: string; hint: string }[]; onChange: (v: T) => void }) {
+  return (
+    <div class="option-list" role="radiogroup" aria-label={label}>
+      {options.map((o) => (
+        <button key={o.id} role="radio" aria-checked={value === o.id} class={`option${value === o.id ? ' on' : ''}`} onClick={() => onChange(o.id)}>
+          <span class="radio" />
+          <span class="grow">
+            {o.label}
+            {o.hint && <small>{o.hint}</small>}
+          </span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function Row({ href, label, value }: { href: string; label: string; value: string }) {
   return (
     <a class="list-row link" href={href}>
@@ -52,7 +87,7 @@ export function SettingsScreen({ section }: { section?: string }) {
   const s = d.settings;
 
   if (section) {
-    const titles: Record<string, string> = { people: 'People', budget: 'Weekly budget', stores: 'My stores', meals: 'Meals to plan', diet: 'Diet and dislikes' };
+    const titles: Record<string, string> = { people: 'People', budget: 'Weekly budget', stores: 'My stores', meals: 'Meals to plan', diet: 'Diet and dislikes', extras: 'Soup and salad' };
     return (
       <Screen glow="pink">
         <TitleBar title={titles[section] ?? 'Settings'} backTo="#/settings" />
@@ -89,6 +124,15 @@ export function SettingsScreen({ section }: { section?: string }) {
           </>
         )}
         {section === 'meals' && <MealsPicker meals={s.meals} onChange={(m) => set({ meals: m })} />}
+        {section === 'extras' && (
+          <>
+            <p class="label">A small bowl of soup before the main meal</p>
+            <OptionList label="Soup to start" value={s.soup} options={SOUP_OPTIONS} onChange={(v) => set({ soup: v })} />
+            <p class="label">A side salad</p>
+            <OptionList label="Side salad" value={s.salad} options={SALAD_OPTIONS} onChange={(v) => set({ salad: v })} />
+            <p class="hint">The main dish gets a little smaller on soup days, so you eat about the same in a day. Soup and salad are in the shopping list and the costs.</p>
+          </>
+        )}
         {section === 'diet' && (
           <>
             <DietPicker diet={s.diet} onChange={(v) => set({ diet: v })} />
@@ -120,6 +164,7 @@ export function SettingsScreen({ section }: { section?: string }) {
       <Group title="Planning">
         <Row href="#/settings/meals" label="Meals" value={meals} />
         <Row href="#/settings/diet" label="Diet and dislikes" value={s.dislikes.length ? `${diet}, ${s.dislikes.length} dislikes` : diet} />
+        <Row href="#/settings/extras" label="Soup and salad" value={soupSaladSummary(s)} />
         <Stepper label="Energy per adult a day" value={s.energyTarget} min={1600} max={3200} step={100} onChange={(v) => set({ energyTarget: v })} format={(v) => `${v} kcal`} />
         <Stepper label="Weekday cooking time" value={s.weekdayMaxMinutes} min={15} max={120} step={5} onChange={(v) => set({ weekdayMaxMinutes: v })} format={(v) => `${v} min`} />
         <Toggle label="A new dish every week" hint="One recipe you have never cooked." checked={s.newDishEachWeek} onChange={(v) => set({ newDishEachWeek: v })} />
@@ -136,7 +181,7 @@ export function SettingsScreen({ section }: { section?: string }) {
       <Group title="Reminders">
         <p class="group-note">Shown at the top of your plan when you open the app. Tap Done to hide one for the day.</p>
         <Toggle label="Start the day before" hint="Soaking beans or making overnight oats for tomorrow's meal." checked={s.reminders.ahead} onChange={(v) => setReminder('ahead', v)} />
-        <Toggle label="Defrost" hint="Meat or fish in your freezer that today's or tomorrow's meal needs." checked={s.reminders.defrost} onChange={(v) => setReminder('defrost', v)} />
+        <Toggle label="Defrost" hint="Meat or fish in your freezer that today's or tomorrow's meal needs, and when to freeze and thaw a week's pot of soup." checked={s.reminders.defrost} onChange={(v) => setReminder('defrost', v)} />
         <Toggle label="Use it soon" hint="Pantry food that reaches its use-by date today or tomorrow." checked={s.reminders.expiry} onChange={(v) => setReminder('expiry', v)} />
       </Group>
 

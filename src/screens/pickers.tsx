@@ -5,7 +5,7 @@ import { INGREDIENT_LIST, ingName } from '../app/catalog';
 import type { Settings, StoreChoice } from '../app/state';
 import { CHAIN_ORDER, type ChainId, type Meta, type Store, loadMeta, loadStores } from '../lib/data';
 import type { Diet } from '../lib/nutrition';
-import type { Slot } from '../planner/types';
+import type { MainSlot } from '../planner/types';
 import { IconClose, IconSearch } from '../ui/icons';
 import { Chip } from '../ui/kit';
 
@@ -157,7 +157,7 @@ export function StoreModePicker({ s, onChange }: { s: Settings; onChange: (p: Pa
   );
 }
 
-export const MEAL_OPTIONS: { id: Slot; label: string }[] = [
+export const MEAL_OPTIONS: { id: MainSlot; label: string }[] = [
   { id: 'breakfast', label: 'Breakfast' },
   { id: 'lunch', label: 'Lunch' },
   { id: 'dinner', label: 'Dinner' },
@@ -165,8 +165,8 @@ export const MEAL_OPTIONS: { id: Slot; label: string }[] = [
   { id: 'dessert', label: 'Dessert' },
 ];
 
-export function MealsPicker({ meals, onChange }: { meals: Slot[]; onChange: (m: Slot[]) => void }) {
-  const toggle = (id: Slot) => {
+export function MealsPicker({ meals, onChange }: { meals: MainSlot[]; onChange: (m: MainSlot[]) => void }) {
+  const toggle = (id: MainSlot) => {
     const next = meals.includes(id) ? meals.filter((m) => m !== id) : [...meals, id];
     if (next.length) onChange(MEAL_OPTIONS.map((o) => o.id).filter((m) => next.includes(m)));
   };

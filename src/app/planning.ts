@@ -63,6 +63,8 @@ export function planInput(
       newDishEachWeek: s.newDishEachWeek,
       weekendClassic: s.weekendClassic,
       mealPrep: s.mealPrep,
+      soup: s.soup,
+      salad: s.salad,
       energyTarget: s.energyTarget,
       weekdayMaxMinutes: s.weekdayMaxMinutes,
     },
@@ -164,7 +166,10 @@ function friendly(n: number, unit: string): string {
     return `${r} ${unit}`;
   }
   const q = Math.round(n * 4) / 4;
-  const txt = q === 0.25 ? '¼' : q === 0.5 ? '½' : q === 0.75 ? '¾' : num(q);
+  // 1.25 carrots reads "1¼", not "1.3".
+  const whole = Math.floor(q);
+  const part = ({ 0.25: '¼', 0.5: '½', 0.75: '¾' } as Record<number, string>)[q - whole] ?? '';
+  const txt = part ? `${whole || ''}${part}` : num(q);
   if (unit === 'piece') return txt;
   if (unit === 'pinch') return `${txt} ${q > 1 ? 'pinches' : 'pinch'}`;
   return `${txt} ${unit}`;

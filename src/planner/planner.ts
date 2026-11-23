@@ -3,6 +3,7 @@
 // Deterministic for a given seed, so "Regenerate" = same input, new seed.
 
 import { dietAllows } from '../lib/nutrition';
+import { SEASON, monthOf } from '../lib/seasons';
 import { type Context, buildContext, evaluate } from './evaluate';
 import { type Meal, type PlanInput, type PlanResult, SLOT_ORDER, type Slot } from './types';
 
@@ -21,7 +22,14 @@ const now = () => (typeof performance !== 'undefined' ? performance.now() : Date
 // Days one batch may cover (the cooking day included), and never longer
 // than the recipe keeps. Snacks and desserts (brownies, granola bars) can
 // last the week; a make-ahead breakfast at most 4 days, for variety.
-const MAX_BATCH_DAYS: Record<Slot, number> = { snack: 7, dessert: 7, breakfast: 4, lunch: 2, dinner: 1 };
+const MAX_BATCH_DAYS: Record<Slot, number> = { snack: 7, dessert: 7, breakfast: 4, lunch: 2, dinner: 1, starter: 7, side: 3 };
+
+/** A cooked meal in the same place (day, slot, the meal it goes with) as `m`. */
+function cookAt(m: Meal, recipeId: string): Meal {
+  return m.with ? { day: m.day, slot: m.slot, with: m.with, recipeId, source: 'cook' } : { day: m.day, slot: m.slot, recipeId, source: 'cook' };
+}
+
+const SUMMER_ONLY = new Set(['tomato', 'cucumber', 'zucchini', 'bell-pepper', 'eggplant', 'green-beans']);
 
 interface Pools {
   /** Recipe ids that may be cooked for a slot on a given day. */
@@ -58,12 +66,17 @@ export function buildPools(ctx: Context): Pools {
     }
     return true;
   });
+  // A cold cucumber soup or a tomato salad is for summer: starters and
+  // sides made mostly of summer vegetables are left out the rest of the year.
+  const month = monthOf(ctx.dates[0] ?? input.startDate);
+  const offSeason = (r: (typeof ok)[number]) =>
+    r.ingredients.some((ri) => !ri.optional && SUMMER_ONLY.has(ri.id) && !(SEASON[ri.id] ?? []).includes(month));
   const cache = new Map<string, string[]>();
   const cheapCache = new Map<string, string[]>();
   const costs = new Map(ok.map((r) => [r.id, portionCost(ctx, r.id)]));
   return {
     cheap(slot, day) {
-      const key = `${slot}:${ctx.weekday[day]}`;
+      const key = `${slot}:${day}`;
       let list = cheapCache.get(key);
       if (!list) {
         const all = this.get(slot, day).slice().sort((a, b) => costs.get(a)! - costs.get(b)!);
@@ -74,7 +87,12 @@ export function buildPools(ctx: Context): Pools {
     },
     get(slot, day) {
       const weekday = ctx.weekday[day];
-      const key = `${slot}:${weekday}`;
+      const { soupWith, soupDays, saladWith } = ctx.extras;
+      // Soup once a day is enough: no soup main on a day with a soup starter,
+      // and no salad main next to a side salad.
+      const noSoup = (slot === 'lunch' || slot === 'dinner') && soupDays[day] && soupWith != null;
+      const noSalad = (slot === 'lunch' || slot === 'dinner') && saladWith.includes(slot);
+      const key = `${slot}:${weekday}:${noSoup}:${noSalad}`;
       let list = cache.get(key);
       if (!list) {
         const max = input.settings.weekdayMaxMinutes;
@@ -85,11 +103,13 @@ export function buildPools(ctx: Context): Pools {
                 ? r.mealTypes.includes('lunch') || r.mealTypes.includes('dinner')
                 : r.mealTypes.includes(slot);
             if (!fits) return false;
+            if ((noSoup && r.family === 'soup') || (noSalad && r.family === 'salad')) return false;
+            if ((slot === 'starter' || slot === 'side') && offSeason(r)) return false;
             // Snacks: batch snacks only. Lunch/dinner: not desserts or snacks.
             if (slot === 'snack' && !r.tags.includes('batch')) return false;
             if (!weekday) return true;
             if (slot === 'breakfast') return r.facts.totalMinutes <= Math.min(max, 25);
-            if (slot === 'lunch' || slot === 'dinner') return r.facts.totalMinutes <= max;
+            if (slot === 'lunch' || slot === 'dinner' || slot === 'starter' || slot === 'side') return r.facts.totalMinutes <= max;
             return true;
           })
           .map((r) => r.id);
@@ -115,9 +135,26 @@ function isBigPot(ctx: Context, recipeId: string): boolean {
 function leftoverAllowed(ctx: Context, meals: Meal[], i: number, j: number): boolean {
   const a = meals[i];
   const b = meals[j];
-  if (!b || b.source !== 'cook' || b.day >= a.day) return false;
+  if (!b || b.source !== 'cook') return false;
   const r = ctx.recipes.get(b.recipeId)!;
+  if (a.slot === 'side' || a.slot === 'starter') {
+    if (b.slot !== a.slot) return false;
+    const span = a.day - b.day;
+    if (span < 0 || (span === 0 && (a.slot === 'starter' || j > i))) return false;
+    // One pot of soup (one bowl of salad) at a time: once a new one is made,
+    // the old one is finished.
+    if (meals.some((x, k) => k !== j && x.slot === a.slot && x.source === 'cook' && x.recipeId !== '' && (x.day > b.day || (x.day === b.day && k > j)) && (x.day < a.day || (x.day === a.day && k < i)))) return false;
+    // A bowl of cabbage salad made at lunch also does for dinner, and for
+    // the next days as long as it keeps.
+    if (a.slot === 'side') return span === 0 || span <= Math.min(r.keepsDays, MAX_BATCH_DAYS.side) - 1;
+    // A pot of soup keeps 3 or 4 days in the fridge; a soup that freezes can
+    // feed the whole week if part of it goes in the freezer on the first day.
+    return span <= (r.tags.includes('freezer-friendly') ? MAX_BATCH_DAYS.starter - 1 : Math.min(r.keepsDays, 4) - 1);
+  }
+  if (b.day >= a.day) return false;
   if (a.slot === 'lunch') {
+    // No soup for lunch on a day with a bowl of soup to start.
+    if (r.family === 'soup' && ctx.extras.soupDays[a.day] && ctx.extras.soupWith != null) return false;
     // A big pot (a stew that keeps 3 days or more) feeds the next two lunches;
     // anything else that keeps feeds tomorrow's lunch.
     const bigPot = isBigPot(ctx, b.recipeId);
@@ -144,14 +181,24 @@ function repair(ctx: Context, meals: Meal[]): Meal[] {
     if (m.source !== 'leftover') return m;
     const src = m.from != null ? meals[m.from] : undefined;
     if (src && src.source === 'cook' && leftoverAllowed(ctx, meals, i, m.from!)) return { ...m, recipeId: src.recipeId };
-    return { day: m.day, slot: m.slot, recipeId: m.recipeId, source: 'cook' };
+    return cookAt(m, m.recipeId);
   });
 }
 
-function slotsFor(input: PlanInput): { day: number; slot: Slot }[] {
-  const out: { day: number; slot: Slot }[] = [];
+type Place = { day: number; slot: Slot; with?: 'lunch' | 'dinner' };
+
+/** Every meal to plan, in the order of the day: a starter soup before its main, a side salad after it. */
+function slotsFor(ctx: Context): Place[] {
+  const { input } = ctx;
+  const { soupWith, soupDays, saladWith } = ctx.extras;
+  const out: Place[] = [];
   for (let day = 0; day < input.days; day++) {
-    for (const slot of SLOT_ORDER) if (input.meals.includes(slot)) out.push({ day, slot });
+    for (const slot of SLOT_ORDER) {
+      if (!input.meals.includes(slot)) continue;
+      if (slot === soupWith && soupDays[day]) out.push({ day, slot: 'starter', with: slot });
+      out.push({ day, slot });
+      if ((slot === 'lunch' || slot === 'dinner') && saladWith.includes(slot)) out.push({ day, slot: 'side', with: slot });
+    }
   }
   return out;
 }
@@ -178,9 +225,10 @@ export function generatePlan(input: PlanInput): PlanResult {
   const rnd = mulberry32(input.seed);
   const warnings: string[] = [];
 
-  const slots = slotsFor(input).filter(({ slot, day }) => {
+  const slots = slotsFor(ctx).filter(({ slot, day }) => {
     if (pools.get(slot, day).length) return true;
-    warnings.push(`No ${slot} recipe fits your settings and store, so ${slot} is left out.`);
+    const what = slot === 'starter' ? 'starter soup' : slot === 'side' ? 'side salad' : slot;
+    warnings.push(`No ${what} recipe fits your settings and store, so the ${what} is left out on some days.`);
     return false;
   });
   const uniq = [...new Set(warnings)];
@@ -195,18 +243,19 @@ export function generatePlan(input: PlanInput): PlanResult {
     .map((s, i) => ({ ...s, i }))
     .sort((a, b) => Number(a.slot !== 'lunch' && a.slot !== 'dinner') - Number(b.slot !== 'lunch' && b.slot !== 'dinner') || a.i - b.i);
   const filled: (Meal | null)[] = slots.map(() => null);
-  for (const { day, slot, i } of order) {
+  for (const { i, ...place } of order) {
+    const { day, slot } = place;
     const pool = pools.get(slot, day);
     const unused = isMain(slot) ? pool.filter((id) => !cookedAsMain(filled, id, i)) : pool;
     const fresh = unused.length ? unused : pool;
     const options: Meal[] = [];
-    for (let k = 0; k < Math.min(12, fresh.length); k++) options.push({ day, slot, recipeId: pick(fresh, rnd), source: 'cook' });
+    for (let k = 0; k < Math.min(12, fresh.length); k++) options.push(cookAt(place as Meal, pick(fresh, rnd)));
     // Leftover options: yesterday's dinner for lunch, or an earlier batch.
     filled.forEach((m, j) => {
       if (!m) return;
-      const tmp = filled.map((x, idx) => x ?? { day: slots[idx].day, slot: slots[idx].slot, recipeId: '', source: 'cook' as const });
-      tmp[i] = { day, slot, recipeId: m.recipeId, source: 'leftover', from: j };
-      if (m.source === 'cook' && leftoverAllowed(ctx, tmp, i, j)) options.push({ day, slot, recipeId: m.recipeId, source: 'leftover', from: j });
+      const tmp = filled.map((x, idx) => x ?? cookAt(slots[idx] as Meal, ''));
+      tmp[i] = { ...place, recipeId: m.recipeId, source: 'leftover', from: j };
+      if (m.source === 'cook' && leftoverAllowed(ctx, tmp, i, j)) options.push({ ...place, recipeId: m.recipeId, source: 'leftover', from: j });
     });
     let best: Meal | null = null;
     let bestScore = Infinity;
@@ -273,13 +322,13 @@ function mutate(ctx: Context, pools: Pools, meals: Meal[], rnd: () => number, ov
     const id = pick(pool, rnd);
     if (id === m.recipeId && m.source === 'cook') return null;
     if (isMain(m.slot) && cookedAsMain(next, id, i)) return null; // no main dish twice a week
-    next[i] = { day: m.day, slot: m.slot, recipeId: id, source: 'cook' };
+    next[i] = cookAt(m, id);
   } else if (move < 0.85) {
     // Turn leftovers on or off
     if (m.source === 'leftover') {
       const id = pick(pools.get(m.slot, m.day), rnd);
       if (isMain(m.slot) && cookedAsMain(next, id, i)) return null;
-      next[i] = { day: m.day, slot: m.slot, recipeId: id, source: 'cook' };
+      next[i] = cookAt(m, id);
     } else {
       const sources = next.map((_, j) => j).filter((j) => {
         const tmp = next.slice();
@@ -288,9 +337,12 @@ function mutate(ctx: Context, pools: Pools, meals: Meal[], rnd: () => number, ov
       });
       if (!sources.length) return null;
       const j = pick(sources, rnd);
-      // Nothing may depend on meal i any more once it eats leftovers.
-      if (next.some((x) => x.source === 'leftover' && x.from === i)) return null;
-      next[i] = { day: m.day, slot: m.slot, recipeId: next[j].recipeId, source: 'leftover', from: j };
+      // Meals that ate from meal i now eat from j too (two pots of the same
+      // soup become one), if j's batch can feed them.
+      const deps = next.map((x, k) => ({ x, k })).filter(({ x }) => x.source === 'leftover' && x.from === i);
+      next[i] = { ...cookAt(m, next[j].recipeId), source: 'leftover', from: j };
+      for (const { x, k } of deps) next[k] = { ...x, from: j, recipeId: next[j].recipeId };
+      if (deps.some(({ k }) => !leftoverAllowed(ctx, next, k, j))) return null;
     }
   } else {
     // Swap two cooked meals of the same slot on different days
@@ -338,11 +390,11 @@ export function swapMeal(
   const scored: { res: PlanResult; s: number }[] = [];
   for (const id of options) {
     const next = meals.map((m) => ({ ...m }));
-    next[index] = { day: target.day, slot: target.slot, recipeId: id, source: 'cook' };
+    next[index] = cookAt(target, id);
     // Meals that ate this meal's leftovers keep the old dish if the new one cannot feed them.
     const fixed = next.map((m, k) =>
       m.source === 'leftover' && m.from === index && !leftoverAllowed(ctx, next, k, index)
-        ? { day: m.day, slot: m.slot, recipeId: meals[k].recipeId, source: 'cook' as const }
+        ? cookAt(m, meals[k].recipeId)
         : m.source === 'leftover' && m.from === index
           ? { ...m, recipeId: id }
           : m,

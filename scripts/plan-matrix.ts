@@ -8,7 +8,7 @@ import { join } from 'node:path';
 import content from '../src/generated/content.json';
 import type { IngredientInfo } from '../src/lib/nutrition';
 import { generatePlan } from '../src/planner/planner';
-import { DEFAULT_SETTINGS, type Offer, type PlanInput, type PlannerRecipe, type Slot } from '../src/planner/types';
+import { DEFAULT_SETTINGS, type Offer, type PlanInput, type PlannerRecipe, type MainSlot } from '../src/planner/types';
 
 const RECIPES = content.recipes as unknown as PlannerRecipe[];
 const BY_ID = new Map(RECIPES.map((r) => [r.id, r]));
@@ -28,11 +28,11 @@ interface Case {
   budget: number;
   diet?: PlanInput['diet'];
   dislikes?: string[];
-  meals?: Slot[];
+  meals?: MainSlot[];
   seed?: number;
   settings?: Partial<PlanInput['settings']>;
 }
-const ALL: Slot[] = ['breakfast', 'lunch', 'dinner', 'snack'];
+const ALL: MainSlot[] = ['breakfast', 'lunch', 'dinner', 'snack'];
 const cases: Case[] = [
   { name: '2 adults 50 EUR', budget: 50 },
   { name: '2 adults 70 EUR', budget: 70 },
@@ -79,7 +79,7 @@ for (const c of cases) {
     pantry: [],
     ratings: [],
     history: [],
-    settings: { ...DEFAULT_SETTINGS, ...c.settings },
+    settings: { ...DEFAULT_SETTINGS, soup: (process.env.SOUP ?? 'off') as 'off', salad: (process.env.SALAD ?? 'off') as 'off', ...c.settings },
     seed: c.seed ?? 1,
   };
   const t0 = performance.now();

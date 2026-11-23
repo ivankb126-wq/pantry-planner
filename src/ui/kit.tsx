@@ -52,7 +52,13 @@ export function TabBar({ active }: { active: string }) {
 
 export function Segmented<T extends string>({ options, value, onChange, label }: { options: { id: T; label: string }[]; value: T; onChange: (v: T) => void; label: string }) {
   return (
-    <div class="segmented" role="tablist" aria-label={label} style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
+    <div
+      class={`segmented${options.length > 4 ? ' many' : ''}`}
+      role="tablist"
+      aria-label={label}
+      // Five tabs on a small phone: each as wide as its word, so none is cut off.
+      style={{ gridTemplateColumns: options.length > 4 ? `repeat(${options.length}, auto)` : `repeat(${options.length}, minmax(0, 1fr))` }}
+    >
       {options.map((o) => (
         <button key={o.id} role="tab" aria-selected={o.id === value} class={o.id === value ? 'on' : ''} onClick={() => onChange(o.id)}>
           {o.label}

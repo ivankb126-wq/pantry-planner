@@ -8,6 +8,7 @@ import { photoFor, usePhotos } from '../app/photos';
 import { planProblem, planResult, todayIndex } from '../app/planning';
 import { prepFor } from '../app/prep';
 import { lastRecap, weekRecap } from '../app/recap';
+import { soupFreezer } from '../app/soup';
 import { type Reminder, dismissReminder, reminders } from '../app/reminders';
 import { activeStores, type PriceData } from '../app/prices';
 import { go } from '../app/router';
@@ -230,7 +231,7 @@ function BudgetCard({ d, data, result, onStore }: { d: AppData; data: PriceData;
 function featuredIndex(views: MealView[], t: number, cooked: number[]): number {
   const today = views.map((v, i) => ({ v, i })).filter(({ v }) => v.day === t);
   if (!today.length) return -1;
-  const rank = { dinner: 0, lunch: 1, breakfast: 2, dessert: 3, snack: 4 };
+  const rank = { dinner: 0, lunch: 1, breakfast: 2, dessert: 3, snack: 4, starter: 5, side: 6 };
   const open = today.filter(({ i }) => !cooked.includes(i));
   const pick = (open.length ? open : today).sort((a, b) => {
     // Prefer the next meal to cook, then dinner.
@@ -285,12 +286,13 @@ function TodayCard({ d, result, t, sale, onSwap }: { d: AppData; result: PlanRes
             <IconSwap />
           </button>
         </div>
-        {!d.settings.reminders.ahead &&
-          tonightNotes(d.plan!, result, t).map((note) => (
-          <p key={note} class="ahead-note">
-            <IconClock size={16} /> {note}
-          </p>
-        ))}
+        {tonightNotes(d.plan!, result, t)
+          .filter((n) => (n.kind === 'ahead' ? !d.settings.reminders.ahead : !d.settings.reminders.defrost))
+          .map(({ text, kind }) => (
+            <p key={text} class="ahead-note">
+              {kind === 'freeze' ? <IconSnow size={16} /> : <IconClock size={16} />} {text}
+            </p>
+          ))}
         {others.length > 0 && (
           <ul class="also-today">
             {others.map(({ x, j }) => (
@@ -347,8 +349,9 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
             <ul class="day-meals">
               {meals.map(({ v, i }) => {
                 const cooked = plan.cooked.includes(i);
+                const extra = v.slot === 'starter' || v.slot === 'side';
                 return (
-                  <li key={i}>
+                  <li key={i} class={extra ? 'extra' : undefined}>
                     <a href={`#/recipe/${v.recipeId}?meal=${i}`} class={cooked ? 'cooked' : ''}>
                       <span class="grow">
                         <span class="meal-title">
@@ -367,9 +370,9 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
                   </li>
                 );
               })}
-              {tonightNotes(plan, result, day).map((note) => (
-                <li key={note} class="ahead-note">
-                  <IconClock size={15} /> {note}
+              {tonightNotes(plan, result, day).map(({ text, kind }) => (
+                <li key={text} class="ahead-note">
+                  {kind === 'freeze' ? <IconSnow size={15} /> : <IconClock size={15} />} {text}
                 </li>
               ))}
               <li class="day-total">
@@ -386,19 +389,32 @@ function WeekList({ d, result, t, sale }: { d: AppData; result: PlanResult; t: n
 
 /**
  * "Tonight: soak the beans for tomorrow's Grah" for each dish cooked the next
- * day that needs starting the day before (its recipe has an "ahead" note).
+ * day that needs starting the day before (its recipe has an "ahead" note),
+ * and the freezer steps for a pot of soup that lasts the whole week.
  */
-function tonightNotes(plan: SavedPlan, result: PlanResult, day: number): string[] {
-  const notes: string[] = [];
+function tonightNotes(plan: SavedPlan, result: PlanResult, day: number): { text: string; kind: 'ahead' | 'freeze' }[] {
+  const notes: { text: string; kind: 'ahead' | 'freeze' }[] = [];
   result.views.forEach((v, i) => {
     if (v.day !== day + 1 || v.leftover || plan.cooked.includes(i)) return;
     const ahead = RECIPE_BY_ID.get(v.recipeId)?.ahead;
     if (!ahead) return;
     const short = v.title.replace(/\s*\(.*\)$/, '');
-    const note = `Tonight: ${ahead} for tomorrow's ${short}.`;
-    if (!notes.includes(note)) notes.push(note);
+    const text = `Tonight: ${ahead} for tomorrow's ${short}.`;
+    if (!notes.some((n) => n.text === text)) notes.push({ text, kind: 'ahead' });
   });
+  for (const f of soupFreezer(plan.meals)) {
+    const name = result.views[f.cook]?.title.replace(/\s*\(.*\)$/, '').toLowerCase();
+    if (!name) continue;
+    if (f.cookDay === day) notes.push({ text: `Once the ${name} has cooled, freeze the bowls for ${daysText(result, f.fromDay, f.toDay)}.`, kind: 'freeze' });
+    if (f.fromDay === day + 1) notes.push({ text: `Tonight: move the frozen ${name} to the fridge for tomorrow.`, kind: 'freeze' });
+  }
   return notes;
+}
+
+/** "Thursday to Sunday", or "Sunday". */
+function daysText(result: PlanResult, from: number, to: number): string {
+  const name = (day: number) => dayLong(result.views.find((v) => v.day === day)?.date ?? '');
+  return from === to ? name(from) : `${name(from)} to ${name(to)}`;
 }
 
 /** "made Monday" for a meal eaten from an earlier batch. */
@@ -406,6 +422,7 @@ function leftoverNote(plan: SavedPlan, i: number, result: PlanResult): string {
   const from = plan.meals[i].from;
   if (from == null || !result.views[from]) return 'leftovers';
   const m = plan.meals[from];
+  if (m.day === plan.meals[i].day) return `same bowl as ${m.with ?? 'lunch'}`;
   if (m.slot === 'dinner') return `${dayLong(result.views[from].date).toLowerCase()}'s dinner`;
   return `made ${dayLong(result.views[from].date)}`;
 }
@@ -422,7 +439,9 @@ function batchNote(plan: SavedPlan, i: number, result: PlanResult): string | nul
       .map(({ m, k }) => (m.day === plan.meals[i].day + 1 ? 'tomorrow' : dayLong(result.views[k].date)));
     return ` · also lunch ${days.join(' and ')}`;
   }
-  return ` · lasts until ${dayLong(result.views[last.k].date)}`;
+  if (last.m.day === plan.meals[i].day) return ` · also with ${last.m.with ?? 'dinner'}`;
+  const frozen = soupFreezer(plan.meals).find((f) => f.cook === i);
+  return ` · lasts until ${dayLong(result.views[last.k].date)}${frozen ? ', freeze part' : ''}`;
 }
 
 const CHECK_UNIT: Record<string, (v: number) => string> = {

@@ -114,6 +114,8 @@ const KCAL_RANGE: Record<ReturnType<typeof collectionOf>, [number, number]> = {
   breakfast: [200, 750],
   dessert: [120, 650],
   'batch-snack': [60, 450],
+  starter: [50, 350],
+  side: [30, 300],
 };
 
 export function checkAll() {

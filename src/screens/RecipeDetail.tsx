@@ -15,10 +15,11 @@ import type { MealSubs } from '../lib/substitutes';
 import { formatAmount, formatEur, zagrebToday } from '../lib/format';
 import { monthOf, seasonalIngredients } from '../lib/seasons';
 import { NUTRIENTS, scaleStep, stepText, stepTip } from '../lib/nutrition';
-import { ESTIMATE } from '../planner/evaluate';
+import { ESTIMATE, addDays } from '../planner/evaluate';
 import type { PlannerRecipe, PlanResult, Slot } from '../planner/types';
-import { IconBack, IconCheck, IconClock, IconFlame, IconHeart, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
+import { IconBack, IconCheck, IconClock, IconFlame, IconHeart, IconSnow, IconSwap, IconThumbDown, IconThumbUp } from '../ui/icons';
 import { mealPortions, takenText } from '../app/pantry';
+import { fridgeDays, soupFreezer } from '../app/soup';
 import { photoFor, photoSite, removePhoto, setPhoto, shrinkPhoto, usePhotos } from '../app/photos';
 import { Chip, DishArt, Empty, Screen, Sheet, Toast, useToast } from '../ui/kit';
 import { SLOT_LABEL, dayLong, minutes, plural } from '../ui/words';
@@ -38,7 +39,7 @@ const NUTRIENT_LABEL: Record<string, string> = {
 };
 
 function slotsFor(r: PlannerRecipe): Slot[] {
-  return r.mealTypes.filter((m): m is Slot => ['breakfast', 'lunch', 'dinner', 'snack', 'dessert'].includes(m));
+  return r.mealTypes.filter((m): m is Slot => ['breakfast', 'lunch', 'dinner', 'snack', 'dessert', 'starter', 'side'].includes(m));
 }
 
 interface Source {
@@ -108,6 +109,7 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
   const rating = ratingOf(d, id);
   const fav = d.favourites.includes(id);
   const cooked = mealIndex != null && d.plan!.cooked.includes(mealIndex);
+  const freeze = mealIndex != null ? soupFreezer(d.plan!.meals).find((f) => f.cook === mealIndex) : undefined;
   const prepped = mealIndex != null && !cooked ? prepNote(d, mealIndex) : null;
   const isNew = d.history.length >= 5 && !d.history.some((h) => h.recipeId === id);
   const planMeal = mealIndex != null ? d.plan!.meals[mealIndex] : null;
@@ -192,6 +194,12 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
           {!view.leftover && cookFor > portionsFor(d.settings) + 0.5 && (
             <p class="sub">
               Cook {cookFor} servings: this meal plus {plural(d.plan!.meals.filter((m) => m.source === 'leftover' && m.from === mealIndex).length, 'later meal', 'later meals')}. The amounts below are for all of it.
+            </p>
+          )}
+          {!view.leftover && freeze && (
+            <p class="sub">
+              <IconSnow size={15} /> It keeps {fridgeDays(id)} days in the fridge: once it has cooled, freeze the bowls for {dayLong(addDays(d.plan!.startDate, freeze.fromDay))}
+              {freeze.toDay > freeze.fromDay ? ` to ${dayLong(addDays(d.plan!.startDate, freeze.toDay))}` : ''}, and move them to the fridge the evening before.
             </p>
           )}
           <div class="row-btns">
@@ -401,7 +409,13 @@ export function RecipeDetail({ id, mealParam, prices }: { id: string; mealParam:
                 </li>
               ))}
           </ul>
-          {!result.views.some((v) => slotsFor(r).includes(v.slot)) && <p class="hint">Your plan has no {r.mealTypes.join(' or ')} meals. Turn them on in Settings.</p>}
+          {!result.views.some((v) => slotsFor(r).includes(v.slot)) && (
+            <p class="hint">
+              {r.mealTypes.every((m) => m === 'starter' || m === 'side')
+                ? 'Your plan has no soup to start or side salad. Turn them on in Settings, Soup and salad.'
+                : `Your plan has no ${r.mealTypes.filter((m) => m !== 'starter' && m !== 'side').join(' or ')} meals. Turn them on in Settings.`}
+            </p>
+          )}
         </Sheet>
       )}
       {toast && (

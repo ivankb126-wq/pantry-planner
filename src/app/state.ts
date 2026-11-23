@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import type { ChainId } from '../lib/data';
 import type { Diet } from '../lib/nutrition';
-import type { Meal, PantryItem, Rating, Slot } from '../planner/types';
+import type { MainSlot, Meal, PantryItem, Rating } from '../planner/types';
 import { dbGet, dbSet } from './db';
 
 export interface StoreChoice {
@@ -18,7 +18,7 @@ export interface Settings {
   adults: number;
   children: number;
   budget: number;
-  meals: Slot[];
+  meals: MainSlot[];
   diet: Diet | 'none';
   dislikes: string[];
   stores: StoreChoice[];
@@ -31,6 +31,10 @@ export interface Settings {
   weekendClassic: boolean;
   /** Meal prep Sunday (off unless chosen). */
   mealPrep: boolean;
+  /** A small bowl of soup before the main meal: never, at the weekend or every day. */
+  soup: 'off' | 'weekend' | 'daily';
+  /** A side salad with the main meal, or with lunch and dinner. */
+  salad: 'off' | 'main' | 'both';
   /** Reminders at the top of the plan, each kind off unless chosen. */
   reminders: { ahead: boolean; defrost: boolean; expiry: boolean };
 }
@@ -134,6 +138,8 @@ export const DEFAULT_APP_SETTINGS: Settings = {
   cookOnceEatTwice: true,
   weekendClassic: true,
   mealPrep: false,
+  soup: 'off',
+  salad: 'off',
   reminders: { ahead: false, defrost: false, expiry: false },
 };
 
@@ -162,7 +168,7 @@ export function emptyData(): AppData {
 
 /** The settings that change what a plan looks like. */
 export function settingsKey(s: Settings): string {
-  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice, ...(s.weekendClassic ? [] : ['no-weekend-classic']), ...(s.mealPrep ? ['meal-prep'] : [])]);
+  return JSON.stringify([s.adults, s.children, s.budget, s.meals, s.diet, s.dislikes, s.stores.map((x) => x.chain + x.storeId), s.storeMode, s.activeStore, s.energyTarget, s.weekdayMaxMinutes, s.newDishEachWeek, s.cookOnceEatTwice, ...(s.weekendClassic ? [] : ['no-weekend-classic']), ...(s.mealPrep ? ['meal-prep'] : []), ...(s.soup !== 'off' ? [`soup-${s.soup}`] : []), ...(s.salad !== 'off' ? [`salad-${s.salad}`] : [])]);
 }
 
 // ------------------------------------------------------------------ store

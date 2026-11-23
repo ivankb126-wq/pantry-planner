@@ -21,7 +21,7 @@
         "description": { "type": "string", "minLength": 10, "maxLength": 200 },
         "mealTypes": {
           "type": "array", "minItems": 1, "uniqueItems": true,
-          "items": { "enum": ["breakfast", "lunch", "dinner", "dessert", "snack"] }
+          "items": { "enum": ["breakfast", "lunch", "dinner", "dessert", "snack", "starter", "side"] }
         },
         "cuisine": {
           "enum": [

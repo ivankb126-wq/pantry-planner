@@ -8,6 +8,7 @@ import { readPref, writePref } from '../lib/prefs';
 import { addDays } from '../planner/evaluate';
 import { dayLong } from '../ui/words';
 import { INGREDIENTS, RECIPE_BY_ID } from './catalog';
+import { soupFreezer } from './soup';
 import type { AppData } from './state';
 
 export type ReminderKind = 'ahead' | 'defrost' | 'expiry';
@@ -58,6 +59,20 @@ export function reminders(d: AppData, today = zagrebToday()): Reminder[] {
             : `Move the ${name} from the freezer to the fridge tonight, for tomorrow's ${short(r!.title)}.`;
         out.push({ key: `defrost:${plan!.createdAt}:${i}:${ri.id}`, kind: 'defrost', text, href: `#/recipe/${r!.id}?meal=${i}` });
       }
+    }
+  }
+
+  if (on.defrost && plan) {
+    // A pot of soup for the whole week: freeze part on the day, thaw the evening before.
+    for (const f of soupFreezer(plan.meals)) {
+      const r = RECIPE_BY_ID.get(plan.meals[f.cook].recipeId);
+      if (!r) continue;
+      const name = short(r.title).toLowerCase();
+      const days = f.fromDay === f.toDay ? capital(when(f.fromDay)) : `${capital(when(f.fromDay))} to ${dayLong(addDays(plan.startDate, f.toDay))}`;
+      if (f.cookDay === t)
+        out.push({ key: `freeze:${plan.createdAt}:${f.cook}`, kind: 'defrost', text: `Today's ${name}: once it has cooled, freeze the bowls for ${days}.`, href: `#/recipe/${r.id}?meal=${f.cook}` });
+      if (f.fromDay === t + 1)
+        out.push({ key: `thaw:${plan.createdAt}:${f.cook}`, kind: 'defrost', text: `Move the frozen ${name} to the fridge tonight, for tomorrow.`, href: `#/recipe/${r.id}?meal=${f.cook}` });
     }
   }
 

@@ -6,7 +6,7 @@
 export type Unit = 'g' | 'ml' | 'piece';
 export type RecipeUnit = Unit | 'tbsp' | 'tsp' | 'pinch';
 export type Diet = 'vegan' | 'vegetarian' | 'pescatarian' | 'meat';
-export type MealType = 'breakfast' | 'lunch' | 'dinner' | 'dessert' | 'snack';
+export type MealType = 'breakfast' | 'lunch' | 'dinner' | 'dessert' | 'snack' | 'starter' | 'side';
 
 export const NUTRIENTS = ['kcal', 'protein', 'carbs', 'sugar', 'fat', 'sat_fat', 'fibre', 'salt'] as const;
 export type Nutrient = (typeof NUTRIENTS)[number];
@@ -229,7 +229,9 @@ function round(v: number, digits: number): number {
 }
 
 /** Which of the spec's collections a recipe belongs to (for counting and browsing). */
-export function collectionOf(recipe: Recipe): 'quick' | 'batch-snack' | 'dessert' | 'breakfast' | 'main' {
+export function collectionOf(recipe: Recipe): 'quick' | 'batch-snack' | 'dessert' | 'breakfast' | 'main' | 'starter' | 'side' {
+  if (recipe.mealTypes.every((m) => m === 'starter')) return 'starter';
+  if (recipe.mealTypes.every((m) => m === 'side')) return 'side';
   if (recipe.mealTypes.includes('snack') && recipe.tags.includes('batch')) return 'batch-snack';
   if (recipe.mealTypes.includes('dessert')) return 'dessert';
   if (recipe.mealTypes.includes('breakfast') && !recipe.mealTypes.some((m) => m === 'lunch' || m === 'dinner'))

@@ -210,8 +210,8 @@ export function mealPrep(input: PrepInput): PrepPlan | null {
   const cooked = new Set(input.cooked ?? []);
   const window = meals
     .map((m, i) => ({ m, i }))
-    .filter(({ m, i }) => m.source === 'cook' && days.includes(m.day) && !cooked.has(i) && (m.slot === 'lunch' || m.slot === 'dinner'));
-  const label = (m: Meal) => `${weekday(addDays(startDate, m.day))} ${m.slot}`;
+    .filter(({ m, i }) => m.source === 'cook' && days.includes(m.day) && !cooked.has(i) && (m.slot === 'lunch' || m.slot === 'dinner' || m.slot === 'starter'));
+  const label = (m: Meal) => `${weekday(addDays(startDate, m.day))} ${m.slot === 'starter' ? 'soup' : m.slot}`;
   const use = ({ m, i }: { m: Meal; i: number }): PrepUse => ({ meal: i, day: m.day, slot: m.slot, recipeId: m.recipeId, label: label(m) });
   const amountOf = (i: number, r: Recipe, id: string) => {
     const ing = input.ingredients[id];

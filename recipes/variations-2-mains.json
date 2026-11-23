@@ -278,7 +278,7 @@
     "id": "goveda-juha",
     "title": "Goveđa juha (beef soup with noodles)",
     "description": "The Sunday beef soup: a clear, golden broth simmered for hours with root vegetables, served with fine noodles, and the beef with horseradish.",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": ["lunch", "dinner", "starter"],
     "cuisine": "croatian-continental", "family": "soup",
     "servings": 6,
     "prepMinutes": 15,

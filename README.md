@@ -4,11 +4,12 @@ A personal meal-planning web app for Croatia. It plans a week of meals for a
 number of people and a weekly budget, using real daily prices from Lidl,
 Kaufland, Konzum, Spar and Plodine. The full plan is in [SPEC.md](SPEC.md).
 
-Status: **all milestones done** (price pipeline, 262 ingredients, 405 recipes,
-331 of them with a photo, planner engine, the app screens, the living pantry,
+Status: **all milestones done** (price pipeline, 262 ingredients, 427 recipes,
+348 of them with a photo, planner engine, the app screens, the living pantry,
 works offline and installs on the iPhone home screen, and the milestone 7
 extras: real deal check, seasonal produce, shopping mode, sharing the list,
-meal prep Sunday, reminders, weekly recap, "I don't have X" and barcode scan).
+meal prep Sunday, reminders, weekly recap, "I don't have X" and barcode scan),
+plus soup to start and a side salad.
 
 Open it: **https://ivankb126-wq.github.io/pantry-planner/**
 
@@ -132,6 +133,18 @@ below that is a "Real deal", one above it is "Not really a deal" (and earns
 no sale bonus in the planner), and Konzum, which does not publish it, shows
 a plain "On sale". Items a store does not list get a
 typical price from `data/reference-prices.json`, marked as an estimate.
+Settings, Soup and salad adds a small bowl of soup before the main meal (at
+the weekend or every day) and a side salad (with the main meal, or with lunch
+and dinner). These are their own meals in the plan (`starter` and `side`,
+with `with` naming the main they go with), from recipes whose `mealTypes`
+include `starter` or `side`. A pot of soup feeds several days, one pot at a
+time; a soup that freezes can last the week, and the plan says when to
+freeze part of it and when to move it to the fridge. A main-dish soup served
+as a starter is half a bowl, and the main after soup is 85 percent of a
+portion, so the day's food stays about the same. No soup main on a soup day,
+no salad main next to a side salad, and summer starters and salads (tomato,
+cucumber, courgette) only in their season. `npx tsx scripts/extras-cost.ts`
+shows what they add to a week.
 Same seed, same plan; a new seed is "Regenerate". To try it on real data:
 
 ```bash

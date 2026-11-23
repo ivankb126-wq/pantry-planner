@@ -16,7 +16,7 @@ import type { PriceState } from './Plan';
 import { storeSummary } from './Plan';
 import { fold } from './pickers';
 
-type Tab = 'main' | 'breakfast' | 'dessert' | 'snack';
+type Tab = 'main' | 'breakfast' | 'dessert' | 'snack' | 'sides';
 type Filter = 'foryou' | 'sale' | 'season' | 'quick' | 'favourites' | 'vegetarian';
 
 const TABS: { id: Tab; label: string }[] = [
@@ -24,6 +24,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'breakfast', label: 'Breakfast' },
   { id: 'dessert', label: 'Dessert' },
   { id: 'snack', label: 'Snacks' },
+  { id: 'sides', label: 'Sides' },
 ];
 
 const FILTERS: { id: Filter; label: string }[] = [
@@ -37,6 +38,8 @@ const FILTERS: { id: Filter; label: string }[] = [
 
 function inTab(r: PlannerRecipe, tab: Tab): boolean {
   if (tab === 'main') return r.mealTypes.includes('lunch') || r.mealTypes.includes('dinner');
+  // Soups to start and side salads
+  if (tab === 'sides') return r.mealTypes.includes('starter') || r.mealTypes.includes('side');
   return r.mealTypes.includes(tab);
 }
 

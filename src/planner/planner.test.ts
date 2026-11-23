@@ -364,3 +364,78 @@ describe('start the day before', () => {
     }
   });
 });
+
+describe('soup to start and a side salad', () => {
+  const recipe = (id: string) => RECIPES.find((r) => r.id === id)!;
+  const soup = (over: Partial<PlanInput['settings']> = {}, extra: Partial<PlanInput> = {}) =>
+    baseInput({ settings: { ...DEFAULT_SETTINGS, soup: 'daily', salad: 'both', ...over }, ...extra });
+
+  it('puts a starter soup before lunch every day and a side salad after lunch and dinner', () => {
+    const plan = generatePlan(soup());
+    for (let day = 0; day < 7; day++) {
+      const slots = plan.meals.filter((m) => m.day === day).map((m) => (m.with ? `${m.slot}:${m.with}` : m.slot));
+      expect(slots).toEqual(['breakfast', 'starter:lunch', 'lunch', 'side:lunch', 'dinner', 'side:dinner']);
+    }
+    for (const m of plan.meals) {
+      const r = recipe(m.recipeId);
+      if (m.slot === 'starter') expect(r.mealTypes).toContain('starter');
+      if (m.slot === 'side') expect(r.mealTypes).toContain('side');
+      // No soup main on a soup day, no salad main next to a side salad.
+      if (m.slot === 'lunch' || m.slot === 'dinner') expect(r.family).not.toBe('soup');
+      if (m.slot === 'lunch' || m.slot === 'dinner') expect(r.family).not.toBe('salad');
+    }
+  });
+
+  it('cooks a pot of soup that lasts several days, one pot at a time, within what it keeps', () => {
+    for (const seed of [1, 2, 3]) {
+      const plan = generatePlan(soup({ salad: 'off' }, { seed }));
+      const starters = plan.meals.map((m, i) => ({ m, i })).filter(({ m }) => m.slot === 'starter');
+      const pots = starters.filter(({ m }) => m.source === 'cook');
+      expect(pots.length).toBeLessThan(5);
+      for (const { m } of starters) {
+        if (m.source !== 'leftover') continue;
+        const pot = plan.meals[m.from!];
+        const r = recipe(pot.recipeId);
+        const span = m.day - pot.day;
+        expect(span).toBeLessThanOrEqual(r.tags.includes('freezer-friendly') ? 6 : Math.min(r.keepsDays, 4) - 1);
+        // No other pot was started in between.
+        expect(pots.some(({ m: p }) => p.day > pot.day && p.day <= m.day)).toBe(false);
+      }
+    }
+  });
+
+  it('keeps one bowl of salad going at a time', () => {
+    for (const seed of [1, 2, 3]) {
+      const plan = generatePlan(soup({ soup: 'off', salad: 'both' }, { seed }));
+      const sides = plan.meals.map((m, i) => ({ m, i })).filter(({ m }) => m.slot === 'side');
+      for (const { m, i } of sides) {
+        if (m.source !== 'leftover') continue;
+        const between = sides.filter(({ m: x, i: k }) => x.source === 'cook' && k > m.from! && k < i);
+        expect(between).toEqual([]);
+      }
+    }
+  });
+
+  it('only plans soup at the weekend when asked, and only summer salads in summer', () => {
+    const plan = generatePlan(soup({ soup: 'weekend', salad: 'main' }));
+    const soupDays = [...new Set(plan.meals.filter((m) => m.slot === 'starter').map((m) => m.day))];
+    expect(soupDays).toEqual([5, 6]); // 23 Nov 2026 is a Monday
+    const cold = plan.meals.filter((m) => m.slot === 'side' || m.slot === 'starter').map((m) => m.recipeId);
+    expect(cold).not.toContain('sopska-salata');
+    expect(cold).not.toContain('hladna-juha-od-krastavaca');
+  });
+
+  it('counts the soup and salad in cost and food, with a smaller main after soup', () => {
+    const input = soup();
+    const plan = generatePlan(input);
+    const plain = plan.meals.filter((m) => m.slot !== 'starter' && m.slot !== 'side').map((m) => ({ ...m, from: undefined, source: 'cook' as const }));
+    const withExtras = scorePlan(input, plan.meals.map((m) => ({ ...m, from: m.from, source: m.source })));
+    const without = scorePlan({ ...input, settings: { ...DEFAULT_SETTINGS } }, plain);
+    expect(withExtras.cost).toBeGreaterThan(0);
+    const lunch = plan.views.find((v, i) => v.slot === 'lunch' && !v.leftover && plan.meals[i].source === 'cook')!;
+    expect(lunch.kcal).toBe(Math.round(recipe(lunch.recipeId).facts.perServing.kcal * 0.85));
+    const sideNeeds = new Set(plan.meals.filter((m) => m.slot === 'side').flatMap((m) => recipe(m.recipeId).ingredients.filter((x) => !x.optional).map((x) => x.id)));
+    expect([...sideNeeds].some((id) => withExtras.shopping.some((l) => l.ingredient === id))).toBe(true);
+    expect(without.meals.length).toBeLessThan(withExtras.meals.length);
+  });
+});

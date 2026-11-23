@@ -118,7 +118,7 @@
   {
     "id": "carrot-sweet-potato-soup", "title": "Carrot, sweet potato and red lentil soup",
     "description": "A bright, smooth soup of carrots and sweet potato warmed with ginger, cinnamon and allspice, with red lentils to make it a meal. Inspired by Budget Bytes by Beth Moncel.",
-    "mealTypes": ["lunch", "dinner"], "cuisine": "everyday", "family": "soup", "servings": 6, "prepMinutes": 15, "cookMinutes": 30,
+    "mealTypes": ["lunch", "dinner", "starter"], "cuisine": "everyday", "family": "soup", "servings": 6, "prepMinutes": 15, "cookMinutes": 30,
     "difficulty": "easy", "mainProtein": "legumes",
     "ingredients": [
       { "id": "olive-oil", "quantity": 2, "unit": "tbsp" }, { "id": "onion", "quantity": 1, "unit": "piece" },

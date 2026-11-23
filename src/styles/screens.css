@@ -368,6 +368,18 @@ h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.segmented.many {
+  gap: 2px;
+}
+.segmented.many button {
+  padding: 0 4px;
+}
+@media (max-width: 360px) {
+  .segmented.many button {
+    font-size: 13px;
+    padding: 0 3px;
+  }
+}
 .segmented button.on {
   background: var(--text);
   color: var(--on-accent);
@@ -2577,4 +2589,17 @@ h1 {
 }
 .scan-found .stepper-row {
   margin-top: 14px;
+}
+
+/* A starter soup or side salad, tucked under its main meal. */
+.day-meals li.extra a {
+  min-height: var(--tap);
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 3px solid var(--plank);
+  border-radius: 0 12px 12px 0;
+}
+.day-meals li.extra .meal-title {
+  font-weight: 500;
+  font-size: 14px;
 }

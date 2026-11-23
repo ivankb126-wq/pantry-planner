@@ -417,7 +417,7 @@
     "id": "chicken-noodle-soup",
     "title": "Chicken soup with noodles",
     "description": "Clear Sunday chicken soup with root vegetables and thin noodles. The chicken makes a second meal.",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": ["lunch", "dinner", "starter"],
     "cuisine": "croatian-continental", "family": "soup",
     "servings": 6,
     "prepMinutes": 15,

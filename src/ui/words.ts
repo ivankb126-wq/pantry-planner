@@ -8,6 +8,8 @@ export const SLOT_LABEL: Record<Slot, string> = {
   dinner: 'Dinner',
   snack: 'Snack',
   dessert: 'Dessert',
+  starter: 'Soup to start',
+  side: 'Side salad',
 };
 
 function utc(iso: string): Date {

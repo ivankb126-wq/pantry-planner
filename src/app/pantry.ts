@@ -6,7 +6,8 @@ import { daysBetween, formatAmount } from '../lib/format';
 import { toIngredientUnit } from '../lib/nutrition';
 import { type MealSubs, applySubs } from '../lib/substitutes';
 import type { PlannerRecipe } from '../planner/types';
-import { INGREDIENTS, ingName } from './catalog';
+import { INGREDIENTS, RECIPE_BY_ID, ingName } from './catalog';
+import { mealSize } from '../planner/evaluate';
 import { addToPantry, portionsFor } from './planning';
 import type { AppData, Amount, PantryEntry, SavedPlan, Settings } from './state';
 
@@ -35,8 +36,13 @@ export function cookNeeds(r: PlannerRecipe, portions: number, subs?: MealSubs): 
 
 /** Portions a planned meal is cooked for: its eaters plus later leftover meals. */
 export function mealPortions(plan: SavedPlan, index: number, s: Settings): number {
-  const extra = plan.meals.filter((m) => m.source === 'leftover' && m.from === index).length;
-  return portionsFor(s) * (1 + extra);
+  // A soup served as a starter is half a bowl, a main after soup a little smaller.
+  const size = (k: number) => mealSize(plan.meals, k, (id) => RECIPE_BY_ID.get(id));
+  let total = size(index);
+  plan.meals.forEach((m, k) => {
+    if (m.source === 'leftover' && m.from === index) total += size(k);
+  });
+  return portionsFor(s) * total;
 }
 
 /**

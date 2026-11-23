@@ -10,8 +10,14 @@ import { type Purchase, cheapestPurchase, indexOffers } from './pricing';
 import type { Check, Meal, MealView, Offer, PlanInput, PlanResult, PlannerRecipe, ShoppingLine, Slot } from './types';
 
 /** Share of a day's food each meal stands for (targets shrink when fewer meals are planned). */
-export const MEAL_SHARE: Record<Slot, number> = { breakfast: 0.25, lunch: 0.33, dinner: 0.32, snack: 0.05, dessert: 0.05 };
+export const MEAL_SHARE: Record<Slot, number> = { breakfast: 0.25, lunch: 0.33, dinner: 0.32, snack: 0.05, dessert: 0.05, starter: 0, side: 0 };
 export const CHILD_PORTION = 0.6;
+/** A main dish after a bowl of soup is a little smaller, so the day's food stays the same. */
+export const MAIN_AFTER_SOUP = 0.85;
+/** A soup that is also a main dish, served as a starter: half a bowl. */
+export const STARTER_OF_MAIN = 0.5;
+/** Cooking a pot of soup is work: a new pot has to save at least this much. */
+const SOUP_POT_EFFORT = 3;
 /** Store name used for typical (estimated) prices. */
 export const ESTIMATE = 'estimate';
 
@@ -34,6 +40,7 @@ export interface Context {
   historyCuisines: Set<string>;
   /** This plan's "Croatian classic of the week", if that setting is on. */
   classic: string | null;
+  extras: ReturnType<typeof extrasPlan>;
   liked: Set<string>;
   hidden: Set<string>;
   purchaseCache: Map<string, Purchase>;
@@ -43,6 +50,42 @@ export function addDays(iso: string, n: number): string {
   const [y, m, d] = iso.split('-').map(Number);
   const t = new Date(Date.UTC(y, m - 1, d + n));
   return t.toISOString().slice(0, 10);
+}
+
+/**
+ * How big one person's portion of a planned meal is, as a share of the
+ * recipe's serving: half a bowl when a main-dish soup is the starter, and a
+ * smaller main after soup.
+ */
+export function mealSize(meals: Meal[], i: number, recipeOf: (id: string) => { mealTypes: string[] } | undefined): number {
+  const m = meals[i];
+  if (m.slot === 'starter' || m.slot === 'side') {
+    const r = recipeOf(m.recipeId);
+    return r && r.mealTypes.some((t) => t === 'lunch' || t === 'dinner') ? STARTER_OF_MAIN : 1;
+  }
+  if ((m.slot === 'lunch' || m.slot === 'dinner') && meals.some((x) => x.slot === 'starter' && x.day === m.day && x.with === m.slot)) return MAIN_AFTER_SOUP;
+  return 1;
+}
+
+/** Which days have a starter soup, and which meals get a side salad. */
+export function extrasPlan(input: Pick<PlanInput, 'meals' | 'settings'>, weekday: boolean[]): {
+  soupWith: 'lunch' | 'dinner' | null;
+  soupDays: boolean[];
+  saladWith: ('lunch' | 'dinner')[];
+} {
+  const main = input.meals.includes('lunch') ? 'lunch' : input.meals.includes('dinner') ? 'dinner' : null;
+  const soup = input.settings.soup ?? 'off';
+  const salad = input.settings.salad ?? 'off';
+  return {
+    soupWith: soup === 'off' ? null : main,
+    soupDays: weekday.map((wd) => main != null && (soup === 'daily' || (soup === 'weekend' && !wd))),
+    saladWith:
+      salad === 'off' || !main
+        ? []
+        : salad === 'both'
+          ? (['lunch', 'dinner'] as const).filter((s) => input.meals.includes(s))
+          : [main],
+  };
 }
 
 function isWeekday(iso: string): boolean {
@@ -108,7 +151,9 @@ export function buildContext(input: PlanInput): Context {
     input.ratings.filter((r) => !r.up && (!r.until || r.until >= today)).map((r) => r.recipeId),
   );
   const history = new Set(input.history);
+  const weekday = dates.map(isWeekday);
   return {
+    extras: extrasPlan(input, weekday),
     classic: input.settings.weekendClassic ? pickClassic(input, offers, hidden, history) : null,
     input,
     portions,
@@ -118,7 +163,7 @@ export function buildContext(input: PlanInput): Context {
     pantry,
     useSoon,
     dates,
-    weekday: dates.map(isWeekday),
+    weekday,
     share: input.meals.reduce((s, m) => s + MEAL_SHARE[m], 0),
     history,
     historyCuisines: new Set(input.history.map((id) => recipes.get(id)?.cuisine).filter((c): c is string => !!c)),
@@ -144,14 +189,14 @@ function purchase(ctx: Context, ing: IngredientInfo, need: number): Purchase {
 }
 
 /** Portions each cooking meal makes, and the meals that eat from it. */
-function cookingPlan(ctx: Context, meals: Meal[]): { cookedFor: number[]; eaters: number[][] } {
+function cookingPlan(ctx: Context, meals: Meal[], sizes: number[]): { cookedFor: number[]; eaters: number[][] } {
   const eaters = meals.map((m, i) => (m.source === 'cook' ? [i] : []));
   meals.forEach((m, i) => {
     if (m.source === 'leftover' && m.from != null && eaters[m.from]) eaters[m.from].push(i);
   });
   const cookedFor = meals.map((m, i) => {
     if (m.source !== 'cook') return 0;
-    const need = ctx.portions * eaters[i].length;
+    const need = ctx.portions * eaters[i].reduce((s, k) => s + sizes[k], 0);
     const r = ctx.recipes.get(m.recipeId)!;
     // Snacks and desserts are made as a whole batch (a tray of muffins, a cake).
     return m.slot === 'snack' || m.slot === 'dessert' ? Math.max(r.servings, need) : need;
@@ -161,7 +206,8 @@ function cookingPlan(ctx: Context, meals: Meal[]): { cookedFor: number[]; eaters
 
 export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   const { input } = ctx;
-  const { cookedFor, eaters } = cookingPlan(ctx, meals);
+  const sizes = meals.map((_, i) => mealSize(meals, i, (id) => ctx.recipes.get(id)));
+  const { cookedFor, eaters } = cookingPlan(ctx, meals, sizes);
 
   // ---------------------------------------------------------------- ingredients and cost
   const need = new Map<string, number>();
@@ -252,7 +298,7 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
       title: r.title,
       illustration: r.illustration,
       minutes: m.source === 'leftover' ? 5 : r.facts.totalMinutes,
-      kcal: r.facts.perServing.kcal,
+      kcal: Math.round(r.facts.perServing.kcal * sizes[i]),
       cost: round2(share),
       leftover: m.source === 'leftover',
       portions: round1(ctx.portions),
@@ -263,10 +309,10 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
   // ---------------------------------------------------------------- nutrition per person per day
   const days = input.days;
   const sum: ServingFacts = { ...zeroNutrition(), addedSugar: 0, vegPortions: 0 };
-  for (const m of meals) {
+  meals.forEach((m, i) => {
     const f = ctx.recipes.get(m.recipeId)!.facts.perServing;
-    for (const k of Object.keys(sum) as (keyof ServingFacts)[]) sum[k] += f[k];
-  }
+    for (const k of Object.keys(sum) as (keyof ServingFacts)[]) sum[k] += f[k] * sizes[i];
+  });
   const perPersonDay = Object.fromEntries(
     Object.entries(sum).map(([k, v]) => [k, round1(v / days)]),
   ) as unknown as ServingFacts;
@@ -360,7 +406,29 @@ export function evaluate(ctx: Context, meals: Meal[]): PlanResult {
     const fams = both.map((m) => ctx.recipes.get(m.recipeId)!.family);
     if (fams[0] && fams[0] === fams[1]) variety += 8;
   }
+  // Soup to start and soup again for dinner is too much soup; and a soup
+  // served as a starter should not also be a main dish this week.
+  const mainIds = new Set(meals.filter((m) => m.slot === 'lunch' || m.slot === 'dinner').map((m) => m.recipeId));
+  const pots = new Set<string>();
+  meals.forEach((m) => {
+    if (m.slot !== 'starter') return;
+    if (m.source === 'cook' && mainIds.has(m.recipeId)) variety += 10;
+    // The same soup cooked twice in a week: one bigger pot is better.
+    if (m.source === 'cook' && pots.has(m.recipeId)) variety += 6;
+    if (m.source === 'cook') pots.add(m.recipeId);
+    if (meals.some((x) => x.day === m.day && (x.slot === 'lunch' || x.slot === 'dinner') && ctx.recipes.get(x.recipeId)!.family === 'soup')) variety += 6;
+  });
   b.variety = variety;
+
+  // A pot of soup feeds several days, but each pot is work, and the same
+  // soup more than four days running gets dull.
+  let soupPots = 0;
+  meals.forEach((m, i) => {
+    if (m.slot !== 'starter' || m.source !== 'cook') return;
+    soupPots++;
+    b.soupLong = (b.soupLong ?? 0) + Math.max(0, eaters[i].length - 4) * 2.5;
+  });
+  b.effort = soupPots * SOUP_POT_EFFORT;
 
   // Ingredient reuse: an opened pack of fresh food shared by two or three
   // meals (a 500 g chicken pack over two dinners). Meat, fish and dairy

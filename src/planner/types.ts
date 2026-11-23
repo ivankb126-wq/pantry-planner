@@ -4,8 +4,10 @@
 import type { DealVerdict } from '../lib/deals';
 import type { Diet, IngredientInfo, Recipe, RecipeFacts, ServingFacts } from '../lib/nutrition';
 
-export type Slot = 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'dessert';
-export const SLOT_ORDER: Slot[] = ['breakfast', 'lunch', 'dinner', 'snack', 'dessert'];
+export type Slot = 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'dessert' | 'starter' | 'side';
+/** The meals a person chooses to plan (a starter soup and a side salad go with lunch or dinner). */
+export type MainSlot = 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'dessert';
+export const SLOT_ORDER: MainSlot[] = ['breakfast', 'lunch', 'dinner', 'snack', 'dessert'];
 
 export type PlannerRecipe = Recipe & { facts: RecipeFacts };
 
@@ -45,6 +47,10 @@ export interface PlanSettings {
   weekendClassic?: boolean;
   /** Meal prep Sunday: prefer weeks where early meals share a pot of grains. */
   mealPrep?: boolean;
+  /** A small bowl of soup before the main meal (lunch, or dinner when no lunch is planned). */
+  soup?: 'off' | 'weekend' | 'daily';
+  /** A side salad with the main meal, or with lunch and dinner. */
+  salad?: 'off' | 'main' | 'both';
 }
 
 export const DEFAULT_SETTINGS: PlanSettings = {
@@ -66,7 +72,7 @@ export interface PlanInput {
   budget: number; // EUR for the whole plan
   days: number;
   startDate: string; // YYYY-MM-DD, the first planned day
-  meals: Slot[];
+  meals: MainSlot[];
   diet: Diet | 'none';
   dislikes: string[]; // ingredient ids to avoid
   pantry: PantryItem[];
@@ -89,6 +95,8 @@ export interface Meal {
   recipeId: string;
   source: 'cook' | 'leftover';
   from?: number; // index of the cooking meal, for leftovers
+  /** For a starter soup or a side salad: the meal it goes with. */
+  with?: 'lunch' | 'dinner';
   /** "I don't have X": ingredient -> what is used instead ('' = left out). */
   subs?: Record<string, string>;
 }

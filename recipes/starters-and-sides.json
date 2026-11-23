@@ -1,0 +1,727 @@
+[
+  {
+    "id": "povrtna-juha",
+    "title": "Vegetable soup with little pasta",
+    "description": "Povrtna juha: carrot, celeriac, potato and peas in a light broth with tiny pasta. The everyday starter before a Croatian lunch.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-continental", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "carrot", "quantity": 2, "unit": "piece" },
+      { "id": "celeriac", "quantity": 150, "unit": "g" },
+      { "id": "potato", "quantity": 300, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "peas", "quantity": 100, "unit": "g", "note": "frozen" },
+      { "id": "pasta", "quantity": 60, "unit": "g", "note": "small soup pasta" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel and dice the carrots, celeriac and potato into small cubes. Chop the onion finely.",
+      { "text": "Heat the oil in a large pot and soften the onion for 4 minutes. Add the carrot and celeriac and stir for 3 minutes more.", "tip": "Letting the vegetables sweat in oil first gives the broth a deeper taste." },
+      "Pour in {1500 ml} water, add the potato and the crumbled stock cube and simmer for 15 minutes with the lid half on.",
+      { "text": "Add the peas and the pasta and cook for 8 minutes more, until the pasta is soft. Season with pepper and stir in the chopped parsley.", "tip": "If you plan to freeze some, take those bowls out before adding the pasta and cook fresh pasta when you reheat them." }
+    ],
+    "tags": ["vegan", "vegetarian", "light", "freezer-friendly", "kid-friendly"],
+    "keepsDays": 4,
+    "equipment": ["large pot"],
+    "illustration": "🥕",
+    "photo": "photos/povrtna-juha.jpg",
+    "photoCredit": "waldopics, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/85056813@N00/3581699066"
+  },
+  {
+    "id": "prezgana-juha",
+    "title": "Browned flour soup with egg",
+    "description": "Prežgana juha: flour toasted in butter, simmered into a smooth soup with paprika and a swirled egg. Old, cheap and comforting.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-continental", "family": "soup",
+    "servings": 4,
+    "prepMinutes": 5,
+    "cookMinutes": 15,
+    "difficulty": "easy",
+    "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "butter", "quantity": 30, "unit": "g" },
+      { "id": "flour", "quantity": 40, "unit": "g" },
+      { "id": "paprika-powder", "quantity": 0.5, "unit": "tsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "eggs", "quantity": 1, "unit": "piece" },
+      { "id": "bread", "quantity": 80, "unit": "g", "optional": true, "note": "for croutons" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Melt the butter in a pot on medium heat, add the flour and stir for 4 to 5 minutes until it smells nutty and turns light brown.", "tip": "Keep stirring and do not let it go dark brown, or the soup turns bitter." },
+      "Take the pot off the heat, stir in the paprika, then whisk in {1000 ml} cold water a little at a time so no lumps form.",
+      "Add the crumbled stock cube, bring to the boil and simmer for 8 minutes, stirring now and then.",
+      { "text": "Beat the egg in a cup and pour it in a thin stream into the simmering soup while you stir, so it sets into soft threads. Season with pepper.", "tip": "Serve with small cubes of bread toasted in a dry pan, if you like." }
+    ],
+    "tags": ["vegetarian", "light", "quick"],
+    "keepsDays": 2,
+    "equipment": ["pot", "whisk"],
+    "illustration": "🥣"
+  },
+  {
+    "id": "krem-juha-od-cvjetace",
+    "title": "Cream of cauliflower soup",
+    "description": "Krem juha od cvjetače: cauliflower and a little potato blended smooth with a splash of cream and a pinch of nutmeg.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-continental", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 25,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cauliflower", "quantity": 700, "unit": "g" },
+      { "id": "potato", "quantity": 200, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "cooking-cream", "quantity": 100, "unit": "ml" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Cut the cauliflower into small florets. Peel and dice the potato and chop the onion.",
+      "Melt the butter in a pot and soften the onion for 4 minutes without browning.",
+      "Add the cauliflower, potato, crumbled stock cube and {1000 ml} water. Simmer with the lid on for 20 minutes, until the cauliflower is very soft.",
+      { "text": "Blend until smooth, stir in the cream and season with nutmeg and pepper. Warm through without boiling.", "tip": "Keep a few small florets aside before blending and drop them back in for some bite." }
+    ],
+    "tags": ["vegetarian", "light", "freezer-friendly"],
+    "keepsDays": 3,
+    "equipment": ["pot", "hand blender"],
+    "illustration": "🥣",
+    "photo": "photos/krem-juha-od-cvjetace.jpg",
+    "photoCredit": "valkyrieh116, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/54357435@N00/4360918562"
+  },
+  {
+    "id": "zucchini-pea-soup",
+    "title": "Courgette, pea and basil soup",
+    "description": "Courgettes and peas cooked briefly with plenty of garlic, then blended bright green with basil and lemon. Inspired by Yotam Ottolenghi.",
+    "mealTypes": ["starter"],
+    "cuisine": "mediterranean", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 15,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "zucchini", "quantity": 700, "unit": "g" },
+      { "id": "peas", "quantity": 250, "unit": "g", "note": "frozen" },
+      { "id": "garlic", "quantity": 15, "unit": "g" },
+      { "id": "olive-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "basil", "quantity": 1, "unit": "tsp" },
+      { "id": "lemon-juice", "quantity": 1, "unit": "tbsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Slice the courgettes thickly and peel the garlic cloves.",
+      { "text": "Warm the oil in a pot on medium heat and cook the whole garlic cloves for 3 minutes until golden at the edges.", "tip": "Whole cloves turn sweet and mild instead of sharp." },
+      "Add the courgettes, the crumbled stock cube and {900 ml} water. Simmer for 8 minutes, then add the peas and the basil and cook for 3 minutes more.",
+      { "text": "Blend until smooth, add the lemon juice and pepper and taste for salt.", "tip": "Short cooking keeps the soup green. Serve with a drizzle of olive oil." }
+    ],
+    "tags": ["vegan", "vegetarian", "light", "freezer-friendly", "quick"],
+    "keepsDays": 3,
+    "equipment": ["pot", "hand blender"],
+    "illustration": "🥒"
+  },
+  {
+    "id": "krem-juha-od-bundeve",
+    "title": "Pumpkin soup with ginger",
+    "description": "Krem juha od bundeve: pumpkin, carrot and a little ginger blended silky, with a few drops of Slavonian pumpkin seed oil on top.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-slavonian", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 25,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "pumpkin", "quantity": 900, "unit": "g" },
+      { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "ginger", "quantity": 15, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "pumpkin-seed-oil", "quantity": 2, "unit": "tbsp", "optional": true, "note": "to drizzle" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel the pumpkin, scoop out the seeds and cut it into cubes. Slice the carrot, chop the onion and grate the ginger.",
+      "Heat the oil in a pot and soften the onion for 4 minutes. Add the ginger and stir for 1 minute.",
+      "Add the pumpkin, carrot, crumbled stock cube and {900 ml} water. Simmer with the lid on for 20 minutes, until everything is soft.",
+      { "text": "Blend until smooth and season with pepper. Serve with a few drops of pumpkin seed oil.", "tip": "If it is too thick, loosen it with a splash of hot water." }
+    ],
+    "tags": ["vegan", "vegetarian", "light", "freezer-friendly"],
+    "keepsDays": 4,
+    "equipment": ["pot", "hand blender"],
+    "illustration": "🎃",
+    "photo": "photos/krem-juha-od-bundeve.jpg",
+    "photoCredit": "Le living and co., CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/89292944@N05/8182668947"
+  },
+  {
+    "id": "stracciatella",
+    "title": "Stracciatella, Roman egg drop soup",
+    "description": "Hot broth with eggs, parmesan and a little semolina stirred in so they set into soft rags. Ready in 15 minutes. Inspired by Samin Nosrat's Salt, Fat, Acid, Heat.",
+    "mealTypes": ["starter"],
+    "cuisine": "italian", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 5,
+    "cookMinutes": 10,
+    "difficulty": "easy",
+    "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "stock-cubes", "quantity": 12, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" },
+      { "id": "semolina", "quantity": 1, "unit": "tbsp" },
+      { "id": "parsley", "quantity": 5, "unit": "g" },
+      { "id": "nutmeg", "quantity": 1, "unit": "pinch" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Bring {1500 ml} water to the boil with the crumbled stock cubes.",
+      "In a bowl beat the eggs with the grated parmesan, semolina, nutmeg, pepper and chopped parsley.",
+      { "text": "Turn the broth down to a gentle simmer. Pour in the egg mixture slowly while you stir with a fork, then leave it for 1 minute until the egg sets into soft rags.", "tip": "If the broth boils hard the egg turns rubbery, so keep it just bubbling." },
+      "Taste for salt and serve at once with a little more parmesan."
+    ],
+    "tags": ["vegetarian", "light", "quick"],
+    "keepsDays": 2,
+    "equipment": ["pot", "fork"],
+    "illustration": "🥣",
+    "photo": "photos/stracciatella.jpg",
+    "photoCredit": "T.Tseng, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/68147320@N02/41226345782"
+  },
+  {
+    "id": "minestrina-tricolore",
+    "title": "Potato soup with carrot and celeriac",
+    "description": "A soft potato soup, half mashed in the pot, with tiny cubes of carrot and celeriac and parmesan. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["starter"],
+    "cuisine": "italian", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "potato", "quantity": 700, "unit": "g" },
+      { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "celeriac", "quantity": 60, "unit": "g" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" },
+      { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "parmesan", "quantity": 30, "unit": "g" },
+      { "id": "parsley", "quantity": 5, "unit": "g" }
+    ],
+    "steps": [
+      "Peel the potatoes and boil them whole in {1200 ml} water with the crumbled stock cube for 20 minutes, until soft. Keep the water.",
+      "Meanwhile chop the onion, carrot and celeriac into very small cubes and cook them gently in the butter and oil for 10 minutes, until soft.",
+      { "text": "Mash the potatoes roughly in their cooking water, so the soup turns creamy but still has some pieces.", "tip": "Do not blend it: a potato masher keeps the texture light, a blender makes it gluey." },
+      "Stir in the soft vegetables and simmer for 5 minutes. Take off the heat, stir in the grated parmesan and the chopped parsley."
+    ],
+    "tags": ["vegetarian", "light", "kid-friendly"],
+    "keepsDays": 3,
+    "equipment": ["pot", "frying pan", "potato masher"],
+    "illustration": "🥔",
+    "photo": "photos/minestrina-tricolore.jpg",
+    "photoCredit": "Average Jane, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/64401168@N00/2238550149"
+  },
+  {
+    "id": "pileca-juha",
+    "title": "Clear chicken soup with fine noodles",
+    "description": "Pileća juha: chicken wings and root vegetables simmered slowly into a golden broth, served with fine noodles. Inspired by Irina Janakievska's The Balkan Kitchen.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-continental", "family": "soup",
+    "servings": 8,
+    "prepMinutes": 15,
+    "cookMinutes": 90,
+    "difficulty": "easy",
+    "mainProtein": "chicken",
+    "ingredients": [
+      { "id": "chicken-wings", "quantity": 600, "unit": "g" },
+      { "id": "carrot", "quantity": 3, "unit": "piece" },
+      { "id": "celeriac", "quantity": 150, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "parsley", "quantity": 15, "unit": "g" },
+      { "id": "bay-leaves", "quantity": 1, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.5, "unit": "tsp", "note": "whole peppercorns if you have them" },
+      { "id": "salt", "quantity": 1.5, "unit": "tsp" },
+      { "id": "pasta", "quantity": 100, "unit": "g", "note": "fine soup noodles" }
+    ],
+    "steps": [
+      { "text": "Put the chicken wings in a large pot with {2500 ml} cold water and bring slowly to a simmer. Skim off the grey foam that rises.", "tip": "Starting in cold water and never boiling hard is what keeps the broth clear." },
+      "Add the peeled whole carrots, the celeriac in chunks, the halved onion with its skin, the parsley stalks, bay leaves, pepper and salt.",
+      "Simmer very gently with the lid half on for 1 hour 20 minutes.",
+      "Strain the broth. Slice the carrots back into it and pull the meat off the wings, if you like, for the bowls.",
+      { "text": "Cook the noodles in some of the broth for 4 minutes and serve with chopped parsley leaves.", "tip": "Broth without noodles freezes well for up to 3 months." }
+    ],
+    "tags": ["light", "freezer-friendly", "kid-friendly", "comfort"],
+    "keepsDays": 3,
+    "equipment": ["large pot", "sieve"],
+    "illustration": "🍲",
+    "photo": "photos/pileca-juha.jpg",
+    "photoCredit": "Debs (ò‿ó)♪, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/30223382@N06/3196431958"
+  },
+  {
+    "id": "tomato-egg-soup",
+    "title": "Tomato and egg drop soup",
+    "description": "Tomatoes fried until jammy, simmered into a quick broth and finished with ribbons of egg and spring onion. Inspired by Fuchsia Dunlop's Every Grain of Rice.",
+    "mealTypes": ["starter"],
+    "cuisine": "chinese", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 5,
+    "cookMinutes": 15,
+    "difficulty": "easy",
+    "mainProtein": "eggs",
+    "ingredients": [
+      { "id": "tomato", "quantity": 450, "unit": "g" },
+      { "id": "eggs", "quantity": 3, "unit": "piece" },
+      { "id": "spring-onion", "quantity": 30, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "spinach", "quantity": 100, "unit": "g", "optional": true },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Cut the tomatoes into wedges. Slice the spring onion. Beat the eggs in a jug.",
+      { "text": "Heat the oil in a pot on high heat and fry the tomatoes for 4 minutes, pressing them with a spoon, until they collapse.", "tip": "Frying the tomatoes first gives the soup its colour and sweetness." },
+      "Add {1200 ml} water and the crumbled stock cube, bring to the boil and simmer for 5 minutes. Add the spinach, if using.",
+      "Pour in the egg in a thin stream, stir once gently and turn off the heat. Season with pepper and scatter over the spring onion."
+    ],
+    "tags": ["vegetarian", "light", "quick"],
+    "keepsDays": 2,
+    "equipment": ["pot"],
+    "illustration": "🍅"
+  },
+  {
+    "id": "krem-juha-od-celera",
+    "title": "Celeriac and apple soup",
+    "description": "Krem juha od celera: celeriac, potato and a sour apple blended smooth with a spoon of cream. A cheap and gentle winter starter.",
+    "mealTypes": ["starter"],
+    "cuisine": "croatian-continental", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 25,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "celeriac", "quantity": 500, "unit": "g" },
+      { "id": "potato", "quantity": 200, "unit": "g" },
+      { "id": "apple", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "butter", "quantity": 20, "unit": "g" },
+      { "id": "cooking-cream", "quantity": 80, "unit": "ml" },
+      { "id": "stock-cubes", "quantity": 7, "unit": "g" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel and dice the celeriac, potato and apple. Chop the onion.",
+      "Melt the butter in a pot and soften the onion for 4 minutes. Add the celeriac and stir for 3 minutes.",
+      "Add the potato, apple, crumbled stock cube and {1000 ml} water. Simmer with the lid on for 20 minutes, until the celeriac is soft.",
+      { "text": "Blend until smooth, stir in the cream and season with pepper.", "tip": "A sour apple balances the earthy celeriac. A few toasted walnuts on top are lovely." }
+    ],
+    "tags": ["vegetarian", "light", "freezer-friendly"],
+    "keepsDays": 3,
+    "equipment": ["pot", "hand blender"],
+    "illustration": "🥣",
+    "photo": "photos/krem-juha-od-celera.jpg",
+    "photoCredit": "wonderyort, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/11112304@N00/5043594156"
+  },
+  {
+    "id": "hladna-juha-od-krastavaca",
+    "title": "Cold cucumber and yogurt soup",
+    "description": "Tarator: grated cucumber in chilled yogurt with garlic, dill and crushed walnuts. A no-cook summer starter. Inspired by Irina Janakievska's The Balkan Kitchen.",
+    "mealTypes": ["starter"],
+    "cuisine": "balkan", "family": "soup",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cucumber", "quantity": 500, "unit": "g" },
+      { "id": "yogurt", "quantity": 500, "unit": "g" },
+      { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "walnuts", "quantity": 40, "unit": "g" },
+      { "id": "dill", "quantity": 5, "unit": "g" },
+      { "id": "olive-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      "Grate the cucumber coarsely, mix it with the salt and leave it for 5 minutes.",
+      "Crush the garlic and chop the dill. Crush the walnuts roughly with the bottom of a glass.",
+      { "text": "Whisk the yogurt with {200 ml} cold water until smooth, then stir in the cucumber with its juice, the garlic, dill and most of the walnuts.", "tip": "Chill it for at least 30 minutes: the garlic mellows and the soup gets properly cold." },
+      "Serve with the rest of the walnuts and a few drops of olive oil on top."
+    ],
+    "tags": ["vegetarian", "light", "no-cook"],
+    "keepsDays": 2,
+    "equipment": ["bowl", "grater"],
+    "illustration": "🥒"
+  },
+  {
+    "id": "zelena-salata",
+    "title": "Green salad with oil and vinegar",
+    "description": "Zelena salata: crisp lettuce leaves, a little salt, vinegar and oil. The salad on every Croatian table at lunch.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-continental", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "lettuce", "quantity": 300, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 1, "unit": "tbsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "garlic", "quantity": 3, "unit": "g", "optional": true }
+    ],
+    "steps": [
+      { "text": "Tear the lettuce into pieces, wash it in cold water and dry it well in a salad spinner or a clean tea towel.", "tip": "Dry leaves hold the dressing; wet ones make it watery." },
+      "Just before eating, sprinkle with salt (and crushed garlic, if you like), then the vinegar and the oil, and toss."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook", "quick"],
+    "keepsDays": 1,
+    "equipment": ["bowl"],
+    "illustration": "🥬",
+    "photo": "photos/zelena-salata.jpg",
+    "photoCredit": "Trinity, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/34427465504@N01/43900"
+  },
+  {
+    "id": "salata-od-kupusa",
+    "title": "Cabbage salad",
+    "description": "Kupus salata: finely sliced cabbage rubbed with salt, then dressed with vinegar and oil. Cheap all winter and better on the second day.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-continental", "family": "salad",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "cabbage", "quantity": 600, "unit": "g" },
+      { "id": "salt", "quantity": 0.75, "unit": "tsp" },
+      { "id": "vinegar", "quantity": 2, "unit": "tbsp" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" },
+      { "id": "pumpkin-seed-oil", "quantity": 1, "unit": "tbsp", "optional": true }
+    ],
+    "steps": [
+      { "text": "Slice the cabbage as thinly as you can, sprinkle with the salt and squeeze it with your hands for 1 minute, until it softens and gives some juice.", "tip": "Squeezing with salt makes the cabbage tender without cooking it." },
+      "Add the vinegar, oil and pepper, toss and leave for 15 minutes before eating. A few drops of pumpkin seed oil on top make it Slavonian."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook", "make-ahead"],
+    "keepsDays": 3,
+    "equipment": ["bowl", "sharp knife"],
+    "illustration": "🥗",
+    "photo": "photos/salata-od-kupusa.jpg",
+    "photoCredit": "Symic, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/73344134@N00/4829928114"
+  },
+  {
+    "id": "salata-od-cikle",
+    "title": "Beetroot salad",
+    "description": "Cikla salata: boiled beetroot slices in a sweet and sour dressing. Make it once and it keeps for days in the fridge.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-continental", "family": "salad",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 45,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "beetroot", "quantity": 700, "unit": "g" },
+      { "id": "vinegar", "quantity": 3, "unit": "tbsp" },
+      { "id": "sugar", "quantity": 1, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "sunflower-oil", "quantity": 1, "unit": "tbsp" },
+      { "id": "horseradish", "quantity": 1, "unit": "tbsp", "optional": true }
+    ],
+    "steps": [
+      { "text": "Boil the beetroots whole, in their skins, for 40 to 50 minutes until a knife slides in easily. Cool them in cold water.", "tip": "Bought ready-cooked beetroot works too and saves the hour." },
+      "Peel and slice the beetroots thinly.",
+      "Mix the vinegar, sugar, salt, oil and {3 tbsp} water, pour over the beetroot and add the horseradish, if using. Leave for 30 minutes before eating."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "make-ahead"],
+    "keepsDays": 5,
+    "equipment": ["pot", "jar or bowl"],
+    "illustration": "🟣",
+    "photo": "photos/salata-od-cikle.jpg",
+    "photoCredit": "Mr Michael Phams, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/32003811@N04/4525219062"
+  },
+  {
+    "id": "krumpir-salata",
+    "title": "Dalmatian potato salad",
+    "description": "Krumpir salata: warm sliced potatoes soaked in olive oil and vinegar with onion and parsley. No mayonnaise, the Dalmatian way.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-dalmatian", "family": "salad",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 20,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "potato", "quantity": 800, "unit": "g" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "olive-oil", "quantity": 4, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 2, "unit": "tbsp" },
+      { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Boil the potatoes in their skins in salted water for 20 minutes, until just soft.",
+      "Slice the onion very thinly. Chop the parsley.",
+      { "text": "Peel the potatoes while still warm, slice them and toss at once with the onion, oil, vinegar, salt and pepper.", "tip": "Warm potatoes soak up the dressing; cold ones only get coated." },
+      "Stir in the parsley and leave for 10 minutes before eating."
+    ],
+    "tags": ["vegan", "vegetarian", "make-ahead"],
+    "keepsDays": 2,
+    "equipment": ["pot", "bowl"],
+    "illustration": "🥔",
+    "photo": "photos/krumpir-salata.jpg",
+    "photoCredit": "Cooking etc., CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/75467868@N07/6997025911"
+  },
+  {
+    "id": "sopska-salata",
+    "title": "Šopska salad with white cheese",
+    "description": "Tomato, cucumber, pepper and onion under a snow of grated white cheese. A summer side. Inspired by Irina Janakievska's The Balkan Kitchen.",
+    "mealTypes": ["side"],
+    "cuisine": "balkan", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "tomato", "quantity": 400, "unit": "g" },
+      { "id": "cucumber", "quantity": 300, "unit": "g" },
+      { "id": "bell-pepper", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 0.5, "unit": "piece" },
+      { "id": "feta", "quantity": 80, "unit": "g" },
+      { "id": "sunflower-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 1, "unit": "tbsp" },
+      { "id": "parsley", "quantity": 5, "unit": "g" }
+    ],
+    "steps": [
+      "Cut the tomatoes and cucumber into chunks, the pepper into strips and the onion into thin slices.",
+      "Toss with the oil, vinegar, a pinch of salt and the chopped parsley.",
+      { "text": "Grate or crumble the cheese thickly over the top just before serving.", "tip": "If you have a grilled or roasted pepper, use it instead of the raw one, as they do in Bulgaria." }
+    ],
+    "tags": ["vegetarian", "light", "no-cook", "quick"],
+    "keepsDays": 1,
+    "equipment": ["bowl", "grater"],
+    "illustration": "🍅",
+    "photo": "photos/sopska-salata.jpg",
+    "photoCredit": "Sharon Hahn Darlin, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/41980486@N07/51405742905"
+  },
+  {
+    "id": "carrot-lemon-salad",
+    "title": "Grated carrot salad with lemon",
+    "description": "Coarsely grated carrots dressed only with olive oil, lemon and salt. Sweet, crunchy and loved by children. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["side"],
+    "cuisine": "italian", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "carrot", "quantity": 500, "unit": "g" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "lemon-juice", "quantity": 1.5, "unit": "tbsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Peel the carrots and grate them on the largest holes of a grater.",
+      { "text": "Toss with the salt, lemon juice and oil, taste and add a little more lemon if it needs it.", "tip": "Dress it just before eating so the carrots stay crunchy." }
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook", "quick", "kid-friendly"],
+    "keepsDays": 2,
+    "equipment": ["grater", "bowl"],
+    "illustration": "🥕",
+    "photo": "photos/carrot-lemon-salad.jpg",
+    "photoCredit": "timsackton, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/43581314@N08/6661277761"
+  },
+  {
+    "id": "salata-od-krastavaca",
+    "title": "Cucumber salad with yogurt and garlic",
+    "description": "Krastavci s jogurtom: thin cucumber slices in a light garlic yogurt dressing with a pinch of paprika. Lovely with anything grilled.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-continental", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "dairy",
+    "ingredients": [
+      { "id": "cucumber", "quantity": 500, "unit": "g" },
+      { "id": "yogurt", "quantity": 150, "unit": "g" },
+      { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "vinegar", "quantity": 1, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "paprika-powder", "quantity": 1, "unit": "pinch" },
+      { "id": "dill", "quantity": 3, "unit": "g", "optional": true }
+    ],
+    "steps": [
+      { "text": "Slice the cucumbers thinly, mix with the salt and leave for 10 minutes, then pour off the water.", "tip": "Salting first stops the salad from turning watery." },
+      "Stir the crushed garlic and vinegar into the yogurt, mix with the cucumber and sprinkle with paprika and dill."
+    ],
+    "tags": ["vegetarian", "light", "no-cook", "quick"],
+    "keepsDays": 1,
+    "equipment": ["bowl"],
+    "illustration": "🥒",
+    "photo": "photos/salata-od-krastavaca.jpg",
+    "photoCredit": "AVID Vines, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/75921150@N00/4014360914"
+  },
+  {
+    "id": "cabbage-apple-slaw",
+    "title": "Cabbage, carrot and apple slaw",
+    "description": "Crunchy cabbage, carrot and apple in a sharp lemon and olive oil dressing with lots of parsley. Inspired by Samin Nosrat's Salt, Fat, Acid, Heat.",
+    "mealTypes": ["side"],
+    "cuisine": "everyday", "family": "salad",
+    "servings": 6,
+    "prepMinutes": 15,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "cabbage", "quantity": 400, "unit": "g" },
+      { "id": "carrot", "quantity": 1, "unit": "piece" },
+      { "id": "apple", "quantity": 1, "unit": "piece" },
+      { "id": "onion", "quantity": 0.25, "unit": "piece" },
+      { "id": "lemon-juice", "quantity": 2, "unit": "tbsp" },
+      { "id": "vinegar", "quantity": 1, "unit": "tbsp" },
+      { "id": "olive-oil", "quantity": 3, "unit": "tbsp" },
+      { "id": "parsley", "quantity": 10, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Slice the onion very thinly and leave it in the lemon juice for 10 minutes.", "tip": "The lemon takes the harsh bite out of raw onion." },
+      "Slice the cabbage finely, grate the carrot and cut the apple into thin matchsticks.",
+      "Toss everything with the onion and its lemon juice, the vinegar, oil, salt and chopped parsley. Taste: it should be bright and a little sharp."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook"],
+    "keepsDays": 2,
+    "equipment": ["bowl", "grater"],
+    "illustration": "🥗",
+    "photo": "photos/cabbage-apple-slaw.jpg",
+    "photoCredit": "Vegan Feast Catering, CC BY 2.0",
+    "photoSource": "https://www.flickr.com/photos/25128194@N02/3896654371"
+  },
+  {
+    "id": "tomato-garlic-salad",
+    "title": "Garlic tomato salad",
+    "description": "Ripe tomato slices with garlic steeped in vinegar, olive oil and basil. Best in high summer. Inspired by Marcella Hazan's Essentials of Classic Italian Cooking.",
+    "mealTypes": ["side"],
+    "cuisine": "italian", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 25,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "tomato", "quantity": 600, "unit": "g" },
+      { "id": "garlic", "quantity": 5, "unit": "g" },
+      { "id": "vinegar", "quantity": 1, "unit": "tbsp" },
+      { "id": "olive-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "basil", "quantity": 0.5, "unit": "tsp" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      { "text": "Crush the garlic with the salt and leave it in the vinegar for 20 minutes, then take out the garlic pieces.", "tip": "The vinegar gets the garlic taste without raw bits in your mouth." },
+      "Slice the tomatoes, pour the garlic vinegar and the oil over them and sprinkle with basil."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook"],
+    "keepsDays": 1,
+    "equipment": ["bowl"],
+    "illustration": "🍅",
+    "photo": "photos/tomato-garlic-salad.jpg",
+    "photoCredit": "Laurel Fan, CC BY-SA 2.0",
+    "photoSource": "https://www.flickr.com/photos/18295242@N00/250225446"
+  },
+  {
+    "id": "grah-salata",
+    "title": "Bean salad with onion and pumpkin seed oil",
+    "description": "Salata od graha: red beans with thinly sliced onion, vinegar and dark pumpkin seed oil, as they make it in northern Croatia.",
+    "mealTypes": ["side"],
+    "cuisine": "croatian-continental", "family": "salad",
+    "servings": 6,
+    "prepMinutes": 10,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "legumes",
+    "ingredients": [
+      { "id": "kidney-beans", "quantity": 800, "unit": "g", "note": "2 tins, drained" },
+      { "id": "onion", "quantity": 1, "unit": "piece" },
+      { "id": "vinegar", "quantity": 2, "unit": "tbsp" },
+      { "id": "pumpkin-seed-oil", "quantity": 2, "unit": "tbsp" },
+      { "id": "parsley", "quantity": 5, "unit": "g" },
+      { "id": "salt", "quantity": 0.25, "unit": "tsp" },
+      { "id": "black-pepper", "quantity": 0.25, "unit": "tsp" }
+    ],
+    "steps": [
+      "Drain and rinse the beans. Slice the onion as thinly as you can.",
+      { "text": "Mix the beans and onion with the vinegar, salt and pepper and leave for 15 minutes.", "tip": "The vinegar softens the onion and the beans soak up the taste." },
+      "Pour over the pumpkin seed oil and scatter with parsley. If you have no pumpkin seed oil, use sunflower oil."
+    ],
+    "tags": ["vegan", "vegetarian", "no-cook", "make-ahead"],
+    "keepsDays": 3,
+    "equipment": ["bowl"],
+    "illustration": "🫘",
+    "photo": "photos/grah-salata.jpg",
+    "photoCredit": "Manjil Aryal, CC0",
+    "photoSource": "https://wordpress.org/photos/photo/63695b92dc/"
+  },
+  {
+    "id": "kohlrabi-salad",
+    "title": "Kohlrabi salad with sesame oil",
+    "description": "Crisp kohlrabi matchsticks salted, then dressed with soy, vinegar, garlic and sesame oil. Inspired by Fuchsia Dunlop's Every Grain of Rice.",
+    "mealTypes": ["side"],
+    "cuisine": "chinese", "family": "salad",
+    "servings": 4,
+    "prepMinutes": 20,
+    "cookMinutes": 0,
+    "difficulty": "easy",
+    "mainProtein": "none",
+    "ingredients": [
+      { "id": "kohlrabi", "quantity": 500, "unit": "g" },
+      { "id": "salt", "quantity": 0.5, "unit": "tsp" },
+      { "id": "spring-onion", "quantity": 15, "unit": "g" },
+      { "id": "soy-sauce", "quantity": 1, "unit": "tsp" },
+      { "id": "garlic", "quantity": 3, "unit": "g" },
+      { "id": "vinegar", "quantity": 1, "unit": "tsp" },
+      { "id": "sugar", "quantity": 1, "unit": "pinch" },
+      { "id": "sesame-oil", "quantity": 1, "unit": "tbsp" }
+    ],
+    "steps": [
+      { "text": "Peel the kohlrabi and cut it into thin matchsticks. Mix with the salt and leave for 10 minutes, then squeeze out the water.", "tip": "Salting draws out water so the dressing clings and the kohlrabi stays crisp." },
+      "Mix with the soy sauce, vinegar, sugar, crushed garlic and sesame oil and scatter with sliced spring onion."
+    ],
+    "tags": ["vegan", "vegetarian", "light", "no-cook"],
+    "keepsDays": 2,
+    "equipment": ["bowl"],
+    "illustration": "🥗"
+  }
+]
